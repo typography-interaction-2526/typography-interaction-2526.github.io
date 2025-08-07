@@ -18,6 +18,10 @@ export default (eleventyConfig) => {
 	})
 	eleventyConfig.addGlobalData('layout', 'base.webc')
 
+	// Ignore drafts.
+	eleventyConfig.addPreprocessor('drafts', '*', (data, content) => (data.draft && process.env.ELEVENTY_RUN_MODE === 'build') ? false : undefined)
+
+	// Markdown stuff.
 	const markdownOptions = {
 		html: true,
 		breaks: true,
@@ -53,14 +57,15 @@ export default (eleventyConfig) => {
 		content.replace(/<!--\s*(\.(?:[\s\S]*?)|#(?:[\s\S]*?)|data(?:[\s\S]*?)|style(?:[\s\S]*?))\s*-->$/gm, '{ $1 }'),
 	)
 
-	eleventyConfig.setLibrary('md', markdown)
-
 	// Filter for component use.
 	eleventyConfig.addFilter('markdownInline', (content) =>
 		markdownIt(markdownOptions).use(markdownItAbbr)
 			.render(String(content + markdownAbbreviations)) // We can’t use `renderInline` if we want `abbr` inserted.
-			.replace('<p>', '').replace('</p>', '').replace('&amp;', '&').trim(),
+			.replace('<p>', '').replace('</p>', '').replace('&amp', '&').trim(),
 	)
+
+	// Overall Markdown use.
+	eleventyConfig.setLibrary('md', markdown)
 
 	// Remainder setup.
 	return {
