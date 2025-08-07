@@ -26,11 +26,8 @@ export default (eleventyConfig) => {
 	}
 
 	const markdown = markdownIt(markdownOptions)
-		// Fix name collision with global `abbreviations` data.
-		.use(md => {
-			const render = md.render
-			md.render = (src, env = {}) => (delete env.abbreviations, render.call(md, src, env))
-		})
+		// Fix name collision with global `abbreviations` data and `markdown-it-abbr`.
+		.use(md => md.render = (src, env = {}) => (delete env.abbreviations, md.constructor.prototype.render.call(md, src, env)))
 		.use(markdownItAbbr)
 		.use(markdownItDeflist)
 		.use(markdownItHeaderSections)
@@ -46,10 +43,8 @@ export default (eleventyConfig) => {
 			}
 		})
 
-	const markdownAbbr = markdownIt(markdownOptions).use(markdownItAbbr) // Just `abbr` for inline use.
-
 	// Append abbreviations for `markdownItAbbr`.
-	const markdownAbbreviations = '\n' + abbreviations.map(item => `*[${item.abbr}]: ${item.title}`).join('\n')
+	const markdownAbbreviations = abbreviations.map(item => `*[${item.abbr}]: ${item.title}`).join('\n')
 	eleventyConfig.addPreprocessor('abbreviations', '.md', (data, content) => content + markdownAbbreviations)
 
 	// Convert HTML comments to curly brackets for `markdownItAttrs` to pick up.
@@ -59,6 +54,13 @@ export default (eleventyConfig) => {
 	)
 
 	eleventyConfig.setLibrary('md', markdown)
+
+	// Filter for component use.
+	eleventyConfig.addFilter('markdownInline', (content) =>
+		markdownIt(markdownOptions).use(markdownItAbbr)
+			.render(String(content + markdownAbbreviations)) // We can’t use `renderInline` if we want `abbr` inserted.
+			.replace('<p>', '').replace('</p>', '').replace('&amp;', '&').trim(),
+	)
 
 	// Remainder setup.
 	return {
