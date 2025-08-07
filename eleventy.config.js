@@ -7,7 +7,7 @@ import markdownItAttrs from 'markdown-it-attrs'
 import markdownItDeflist from 'markdown-it-deflist'
 import markdownItHeaderSections from 'markdown-it-header-sections'
 
-import fs from 'fs'
+import abbreviations from './data/abbreviations.js'
 
 export default (eleventyConfig) => {
 	// Setup.
@@ -44,7 +44,7 @@ export default (eleventyConfig) => {
 	const markdownAbbr = markdownIt(markdownOptions).use(markdownItAbbr) // Just `abbr` for inline use.
 
 	// Append abbreviations for `markdownItAbbr`.
-	const markdownAbbreviations = '\n' + fs.readFileSync('data/abbreviations.md')
+	const markdownAbbreviations = '\n' + abbreviations.map(item => `*[${item.abbr}]: ${item.title}`).join('\n')
 	eleventyConfig.addPreprocessor('abbreviations', '.md', (data, content) => content + markdownAbbreviations)
 
 	// Convert HTML comments to curly brackets for `markdownItAttrs` to pick up.

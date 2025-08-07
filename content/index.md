@@ -6,4 +6,4 @@
 
 > This machine kills fascists.
 
-Are we ready to write some HTML?
+Are we ready to write some HTML? Or some CSS?
