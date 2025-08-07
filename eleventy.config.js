@@ -7,6 +7,8 @@ import markdownItAttrs from 'markdown-it-attrs'
 import markdownItDeflist from 'markdown-it-deflist'
 import markdownItHeaderSections from 'markdown-it-header-sections'
 
+import fs from 'fs'
+
 export default (eleventyConfig) => {
 	// Setup.
 	eleventyConfig.addPlugin(webC, { components: 'components/**/*.webc' })
@@ -39,6 +41,12 @@ export default (eleventyConfig) => {
 			}
 		})
 
+	const markdownAbbr = markdownIt(markdownOptions).use(markdownItAbbr) // Just `abbr` for inline use.
+
+	// Append abbreviations for `markdownItAbbr`.
+	const markdownAbbreviations = '\n' + fs.readFileSync('data/abbreviations.md')
+	eleventyConfig.addPreprocessor('abbreviations', '.md', (data, content) => content + markdownAbbreviations)
+
 	// Convert HTML comments to curly brackets for `markdownItAttrs` to pick up.
 	eleventyConfig.addPreprocessor('commentsToCurlies', '.md', (data, content) =>
 		// Only match `.class`…, `#id`…, `data`…, `style`… so example/other comments aren’t transformed.
@@ -54,6 +62,7 @@ export default (eleventyConfig) => {
 			output: '_site',
 
 			// Relative to `input`.
+			data: '../data',
 			layouts: '../layouts',
 		},
 		htmlTemplateEngine: 'webc',
