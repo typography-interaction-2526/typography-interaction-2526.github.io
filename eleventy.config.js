@@ -26,6 +26,11 @@ export default (eleventyConfig) => {
 	}
 
 	const markdown = markdownIt(markdownOptions)
+		// Fix name collision with global `abbreviations` data.
+		.use(md => {
+			const render = md.render
+			md.render = (src, env = {}) => (delete env.abbreviations, render.call(md, src, env))
+		})
 		.use(markdownItAbbr)
 		.use(markdownItDeflist)
 		.use(markdownItHeaderSections)
