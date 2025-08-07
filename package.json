@@ -12,8 +12,9 @@
 		}
 	],
 	"scripts": {
-		"build": "npx @11ty/eleventy",
-		"serve": "npx @11ty/eleventy --serve --port=80 --quiet"
+		"clean": "node -e \"import('fs').then(fs=>fs.rmSync('_site',{recursive:true,force:true}))\"",
+		"build": "npm run clean && npx @11ty/eleventy",
+		"serve": "npm run clean && npx @11ty/eleventy --serve --port=80 --quiet"
 	},
 	"dependencies": {
 		"@11ty/eleventy": ">=4.0.0-alpha.0 <5.0.0",
