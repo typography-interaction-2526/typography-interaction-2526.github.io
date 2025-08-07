@@ -4,7 +4,7 @@ export default (eleventyConfig) => {
 	// Setup.
 	eleventyConfig.addPlugin(webC, { components: 'components/**/*.webc' })
 	eleventyConfig.setFrontMatterParsingOptions({
-		delimiters: ['<!---', '--->'],
+		delimiters: ['<script front>', '</script>'],
 		language: 'js',
 	})
 	eleventyConfig.addGlobalData('layout', 'base.webc')
