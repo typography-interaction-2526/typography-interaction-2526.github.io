@@ -1,0 +1,33 @@
+name: Automatic build/deploy
+on:
+  push:
+    branches: [main]
+  # Allow manual triggering
+  workflow_dispatch:
+permissions:
+  contents: write
+  id-token: write
+  pages:    write
+jobs:
+  github-pages:
+    name:    GitHub Pages
+    environment:
+      name: github-pages
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+    - name: Setup Pages
+      id:   pages
+      uses: actions/configure-pages@v5
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+    - name: Install dependencies and build
+      run: |
+        npm ci
+        npm run build
+    - name: Upload output
+      uses: actions/upload-pages-artifact@v3
+    - name: Deploy Pages
+      uses: actions/deploy-pages@v4
