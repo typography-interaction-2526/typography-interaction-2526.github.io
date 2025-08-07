@@ -2,6 +2,7 @@ import webC from '@11ty/eleventy-plugin-webc'
 
 import markdownIt from 'markdown-it'
 import markdownItAbbr from 'markdown-it-abbr'
+import markdownItAnchor from 'markdown-it-anchor'
 import markdownItAttrs from 'markdown-it-attrs'
 import markdownItDeflist from 'markdown-it-deflist'
 import markdownItHeaderSections from 'markdown-it-header-sections'
@@ -26,6 +27,9 @@ export default (eleventyConfig) => {
 		.use(markdownItAbbr)
 		.use(markdownItDeflist)
 		.use(markdownItHeaderSections)
+		.use(markdownItAnchor, {
+			permalink: markdownItAnchor.permalink.linkInsideHeader({ class: '', space: ' '}),
+			slugify: eleventyConfig.getFilter('slugify'),
 		})
 		.use(markdownItAttrs)
 		.use(markdown => {
