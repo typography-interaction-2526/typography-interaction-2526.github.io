@@ -19,6 +19,12 @@
 	"dependencies": {
 		"@11ty/eleventy": ">=4.0.0-alpha.0 <5.0.0",
 		"@11ty/eleventy-plugin-webc": "github:11ty/eleventy-plugin-webc",
-		"@11ty/webc": "github:11ty/webc"
+		"@11ty/webc": "github:11ty/webc",
+		"markdown-it": "^14.1.0",
+		"markdown-it-abbr": "^2.0.0",
+		"markdown-it-anchor": "^9.2.0",
+		"markdown-it-attrs": "^4.3.1",
+		"markdown-it-deflist": "^3.0.0",
+		"markdown-it-header-sections": "^1.0.0"
 	}
 }
