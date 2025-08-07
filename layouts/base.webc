@@ -1,0 +1,13 @@
+<!---
+const pageClass = url => (url != '/') ? String(url).split('/').filter(part => part.length > 1)[0] : 'index'
+--->
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
+		<title>Hello, world.</title>
+	</head>
+	<body :class="pageClass(page.url)" @raw="content"></body>
+</html>
