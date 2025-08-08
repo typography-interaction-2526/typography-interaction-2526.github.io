@@ -2,7 +2,7 @@
 	const title = 'Testing!';
 </script>
 
-<style class="testing" aria-label="Should be first">
+<style class="testing" aria-label="Should be first" data-something-cool="Three">
 	h2 { background-color: tomato }
 
 	blockquote {
@@ -33,7 +33,7 @@ const foo = 'bar'
 | ------------ | ---- |
 | Cell         | Cell |
 
-<aside class="testing" aria-label="Should be first">
+<aside class="testing" aria-label="Should be first" data-something-cool="Three">
 
 *Markdown in an `aside`?*
 
