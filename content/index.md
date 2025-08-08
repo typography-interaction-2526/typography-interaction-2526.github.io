@@ -45,6 +45,13 @@ Will this markdown    be linted?
 
 </div>
 
+
+<div>
+
+What about just plain *markdown* in one?
+
+</div>
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis rutrum turpis. Aenean pellentesque iaculis massa, ut sagittis elit euismod rutrum. Sed sit amet leo lacinia, maximus neque ac, tincidunt dui. Pellentesque iaculis, nibh quis molestie iaculis, ligula nunc finibus dolor, sit amet tincidunt erat arcu ac eros. Morbi placerat aliquet nisl. Cras sit amet consectetur justo, a finibus nisl. Nulla varius egestas est eu vulputate. Nullam mattis felis et nunc convallis, at feugiat magna convallis. Suspendisse potenti. Nulla vel nisi pretium, rutrum odio eu, consectetur elit. Pellentesque ac dapibus sem. Donec a condimentum nisl. Proin vitae purus vitae tellus aliquam condimentum eget porttitor libero.
 
 <footer>
