@@ -63,6 +63,7 @@ export default [
 		languageOptions: { parser: htmlParser },
 		plugins: { '@html-eslint': htmlPlugin },
 		rules: {
+			'@html-eslint/attrs-newline': ['error', { 'closeStyle': 'newline', 'ifAttrsMoreThan': 1 }],
 			'@html-eslint/element-newline': 'error',
 			'@html-eslint/indent': ['error', 'tab'],
 			'@html-eslint/lowercase': 'error',
@@ -100,7 +101,9 @@ export default [
 		languageOptions: { parser: htmlParser },
 		plugins: { '@html-eslint': htmlPlugin },
 		rules: {
-			'@html-eslint/indent': 'off', // So we can use nested Markdown-in-HTML as content/slots.
+			// So we can use nested Markdown-within-HTML as content/slots.
+			// TODO The attributes aren’t indented though! `tagChildrenIndent` not working.
+			'@html-eslint/indent': 'off',
 		},
 	},
 ]
