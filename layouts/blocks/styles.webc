@@ -5,7 +5,7 @@
 	@layer reset, base, components, print;
 
 	@import url('/styles/reset.css') layer(reset);
-	@import url('${getBundleFileUrl('css', 'base')}')  layer(base);
+	@import url('${getBundleFileUrl('css', 'base')}') layer(base);
 	`"
 ></style>
 <style webc:keep @raw="`@layer components { ${getBundle('css')} }`"></style>

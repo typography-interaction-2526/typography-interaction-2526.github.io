@@ -14,7 +14,8 @@
 	"scripts": {
 		"clean": "node -e \"import('fs').then(fs => fs.rmSync('_site', { recursive: true, force: true }))\"",
 		"build": "npm run clean && npx @11ty/eleventy",
-		"serve": "npm run clean && npx @11ty/eleventy --serve --port=80 --quiet"
+		"serve": "npm run clean && npx @11ty/eleventy --serve --port=80 --quiet",
+		"lint": "eslint . --fix && dprint fmt && stylelint '**/*.{css,html,webc}' --fix"
 	},
 	"dependencies": {
 		"@11ty/eleventy": ">=4.0.0-alpha.0 <5.0.0",
@@ -28,5 +29,19 @@
 		"markdown-it-deflist": "^3.0.0",
 		"markdown-it-header-sections": "^1.0.0",
 		"striptags": "^3.2.0"
+	},
+	"devDependencies": {
+		"@html-eslint/eslint-plugin": "^0.44.0",
+		"@html-eslint/parser": "^0.44.0",
+		"@stylistic/stylelint-config": "^3.0.1",
+		"@stylistic/stylelint-plugin": "^4.0.0",
+		"dprint": "^0.50.1",
+		"eslint": "^9.32.0",
+		"eslint-plugin-vue": "^10.4.0",
+		"postcss-html": "^1.8.0",
+		"stylelint": "^16.23.1",
+		"stylelint-config-standard": "^39.0.0",
+		"stylelint-order": "^7.0.0",
+		"stylelint-plugin-logical-css": "^1.2.3"
 	}
 }

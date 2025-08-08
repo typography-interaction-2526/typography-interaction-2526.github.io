@@ -1,0 +1,22 @@
+{
+	"useTabs": true,
+	"excludes": [
+		"_site",
+		"content/topic/*/**",
+		"node_modules"
+	],
+	"markup": {
+		"associations": [
+			"*.webc"
+		],
+		"closingTagLineBreakForEmpty": "never",
+		"doctypeKeywordCase": "lower",
+		"printWidth": 256,
+		"scriptIndent": true,
+		"styleIndent": true
+	},
+	"plugins": [
+		"https://plugins.dprint.dev/json-0.19.4.wasm",
+		"https://plugins.dprint.dev/g-plane/markup_fmt-v0.15.1.wasm"
+	]
+}
