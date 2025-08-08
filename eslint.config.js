@@ -29,6 +29,12 @@ export default [
 				partitionByNewLine: true,
 				type: 'natural',
 			}],
+			'perfectionist/sort-objects': ['error', {
+				newlinesBetween: 'ignore',
+				order: 'asc',
+				partitionByNewLine: true,
+				type: 'natural',
+			}],
 			'prefer-const': 'error',
 			'quotes': ['error', 'single'],
 			'semi': ['error', 'never'],
