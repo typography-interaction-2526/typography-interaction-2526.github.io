@@ -1,8 +1,9 @@
-import htmlParser from '@html-eslint/parser'
 import htmlPlugin from '@html-eslint/eslint-plugin'
-import vueParser from 'vue-eslint-parser'
-import vuePlugin from 'eslint-plugin-vue'
+import htmlParser from '@html-eslint/parser'
+import perfectionist from 'eslint-plugin-perfectionist'
 import sortKeysPlus from 'eslint-plugin-sort-keys-plus'
+import vuePlugin from 'eslint-plugin-vue'
+import vueParser from 'vue-eslint-parser'
 
 export default [
 	{
@@ -13,6 +14,7 @@ export default [
 	},
 	{
 		plugins: {
+			perfectionist,
 			'sort-keys-plus': sortKeysPlus,
 		},
 	},
@@ -21,12 +23,19 @@ export default [
 			'comma-dangle': ['error', 'always-multiline'],
 			'indent': ['error', 'tab'],
 			'no-console': 'warn',
+			'perfectionist/sort-imports': ['error', {
+				newlinesBetween: 'ignore',
+				order: 'asc',
+				partitionByNewLine: true,
+				type: 'natural',
+			}],
 			'prefer-const': 'error',
 			'quotes': ['error', 'single'],
 			'semi': ['error', 'never'],
 			'sort-keys-plus/sort-keys': ['error', 'asc', { allowLineSeparatedGroups: true, natural: true }],
 		},
 	},
+
 	{
 		files: ['**/*.webc'],
 		languageOptions: { parser: vueParser },
