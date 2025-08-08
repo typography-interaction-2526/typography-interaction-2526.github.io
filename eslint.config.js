@@ -1,5 +1,6 @@
 import htmlPlugin from '@html-eslint/eslint-plugin'
 import htmlParser from '@html-eslint/parser'
+import jsonc from 'eslint-plugin-jsonc'
 import perfectionist from 'eslint-plugin-perfectionist'
 import sortKeysPlus from 'eslint-plugin-sort-keys-plus'
 import vuePlugin from 'eslint-plugin-vue'
@@ -8,12 +9,14 @@ import vueParser from 'vue-eslint-parser'
 export default [
 	{
 		ignores: [
-			'node_modules',
 			'_site',
+			'*package*',
+			'node_modules',
 		],
 	},
 	{
 		plugins: {
+			jsonc,
 			perfectionist,
 			'sort-keys-plus': sortKeysPlus,
 		},
@@ -41,7 +44,14 @@ export default [
 			'sort-keys-plus/sort-keys': ['error', 'asc', { allowLineSeparatedGroups: true, natural: true }],
 		},
 	},
-
+	{
+		files: ['**/*.json'],
+		languageOptions: { parser: (await import('jsonc-eslint-parser')).default },
+		plugins: { jsonc },
+		rules: {
+			'jsonc/sort-keys': ['error', 'asc', { 'natural': true }],
+		},
+	},
 	{
 		files: ['**/*.webc'],
 		languageOptions: { parser: vueParser },
