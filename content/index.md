@@ -1,5 +1,5 @@
 <script front>
-	const title = 'Testing!';
+const title = 'Testing!';
 </script>
 
 <style class="testing" aria-label="Should be first" data-something-cool="Three">
