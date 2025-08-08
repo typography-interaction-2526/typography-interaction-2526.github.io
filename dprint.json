@@ -7,12 +7,15 @@
 	],
 	"markup": {
 		"associations": [
+			"*.html",
 			"*.webc"
 		],
 		"closingTagLineBreakForEmpty": "never",
 		"doctypeKeywordCase": "lower",
+		"maxAttrsPerLine": 1,
 		"printWidth": 256,
 		"scriptIndent": true,
+		"singleAttrSameLine": true,
 		"styleIndent": true
 	},
 	"plugins": [
