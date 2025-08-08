@@ -15,6 +15,7 @@ import stripTags from 'striptags'
 
 export default (eleventyConfig) => {
 	// Setup.
+	eleventyConfig.addBundle('css', { toFileDirectory: 'styles' })
 	eleventyConfig.addGlobalData('layout', 'page.webc')
 	eleventyConfig.addPlugin(webC, { components: 'components/**/*.webc' })
 	eleventyConfig.setFrontMatterParsingOptions({
