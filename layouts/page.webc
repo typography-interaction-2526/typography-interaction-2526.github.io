@@ -1,4 +1,4 @@
-<script front>
+<script front-matter>
 	const layout = 'base'
 </script>
 

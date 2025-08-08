@@ -1,4 +1,4 @@
-<script front>
+<script front-matter>
 const title = 'Testing!';
 </script>
 

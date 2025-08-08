@@ -19,7 +19,7 @@ export default (eleventyConfig) => {
 	eleventyConfig.addGlobalData('layout', 'page.webc')
 	eleventyConfig.addPlugin(webC, { components: 'components/**/*.webc' })
 	eleventyConfig.setFrontMatterParsingOptions({
-		delimiters: ['<script front>', '</script>'],
+		delimiters: ['<script front-matter>', '</script>'],
 		language: 'js',
 	})
 	eleventyConfig.setDataFileSuffixes(['.config'])

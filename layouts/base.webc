@@ -1,4 +1,4 @@
-<script front>
+<script front-matter>
 	const pageClass = url => (url != '/') ? String(url).split('/').filter(part => part.length > 1)[0] : ''
 </script>
 
