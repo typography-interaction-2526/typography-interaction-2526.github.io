@@ -1,2 +1,2 @@
-*.md linguist-language="API Blueprint"
+*.md linguist-language=apib
 *.webc linguist-language=html
