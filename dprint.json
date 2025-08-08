@@ -11,12 +11,16 @@
 			"*.webc"
 		],
 		"closingTagLineBreakForEmpty": "never",
+		"component.selfClosing": false,
 		"doctypeKeywordCase": "lower",
+		"html.normal.selfClosing": false,
+		"html.void.selfClosing": false,
 		"maxAttrsPerLine": 1,
 		"printWidth": 256,
 		"scriptIndent": true,
 		"singleAttrSameLine": true,
-		"styleIndent": true
+		"styleIndent": true,
+		"svg.selfClosing": false
 	},
 	"plugins": [
 		"https://plugins.dprint.dev/json-0.20.0.wasm",
