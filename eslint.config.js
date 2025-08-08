@@ -54,10 +54,10 @@ export default [
 		},
 	},
 	{
-		files: ['**/*.html', '**/*.webc'],
+		files: ['**/*.html', '**/*.md', '**/*.webc'],
 		plugins: { html },
 		settings: {
-			'html/html-extensions': ['.html', '.webc'],
+			'html/html-extensions': ['.html', '.md', '.webc'],
 		},
 	},
 	{

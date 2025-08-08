@@ -1,18 +1,18 @@
 <script front>
-	const title = 'Testing!';
+	const title = 'Testing!'
 </script>
 
-<style class="testing" aria-label="Should be first">
+<style aria-label="Should be first" class="testing">
 	h2 { background-color: tomato }
 
 	blockquote {
-		margin-left:      1em;
 		background-color: dodgerblue;
+		margin-inline-start:      1em;
 	}
 </style>
 
 <script>
-	console.log("Testing!");
+	console.log('Testing!')
 </script>
 
 # Hello, world!
@@ -33,10 +33,10 @@ const foo = 'bar'
 | ------------ | ---- |
 | Cell         | Cell |
 
-<aside class="testing" aria-label="Should be first">
+<aside aria-label="Should be first" class="testing">
 
-*Markdown in an `aside`?*
+_Markdown in an `aside`?_
 
 </aside>
 
-Will this markdown    be linted?
+Will this markdown be linted?
