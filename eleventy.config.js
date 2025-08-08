@@ -15,12 +15,15 @@ import stripTags from 'striptags'
 
 export default (eleventyConfig) => {
 	// Setup.
+	eleventyConfig.addGlobalData('layout', 'page.webc')
 	eleventyConfig.addPlugin(webC, { components: 'components/**/*.webc' })
 	eleventyConfig.setFrontMatterParsingOptions({
 		delimiters: ['<script front>', '</script>'],
 		language: 'js',
 	})
-	eleventyConfig.addGlobalData('layout', 'page.webc')
+	eleventyConfig.setDataFileSuffixes(['.config'])
+
+	// Watch for changes.
 	eleventyConfig.addWatchTarget('**/*.css')
 	eleventyConfig.addWatchTarget('**/*.js')
 
@@ -28,6 +31,10 @@ export default (eleventyConfig) => {
 	eleventyConfig.addPassthroughCopy('styles/reset.css')
 	eleventyConfig.addPassthroughCopy('assets/**/*.(ico|js|pdf|png)')
 	eleventyConfig.addPassthroughCopy('content/**/*.(gif|jpg|png|svg)')
+
+	// Don’t render examples as if they’re real pages, but copy them to the output as is.
+	eleventyConfig.ignores.add('content/topic/*/*/*.*')
+	eleventyConfig.addPassthroughCopy('content/topic/*/*/*.*')
 
 	// Ignore drafts.
 	eleventyConfig.addPreprocessor('drafts', '*', (data, content) => (data.draft && process.env.ELEVENTY_RUN_MODE === 'build') ? false : undefined)
