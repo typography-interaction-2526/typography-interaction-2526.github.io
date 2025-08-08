@@ -61,12 +61,12 @@ export default [
 		},
 	},
 	{
-		files: ['**/*.html', '**/*.webc'],
+		files: ['**/*.html', '**/*.md', '**/*.webc'],
 		languageOptions: { parser: vueParser },
 		plugins: { vue: vuePlugin },
 	},
 	{
-		files: ['**/*.html', '**/*.webc'],
+		files: ['**/*.html', '**/*.md', '**/*.webc'],
 		languageOptions: { parser: htmlParser },
 		plugins: { '@html-eslint': htmlPlugin },
 		rules: {
@@ -100,6 +100,14 @@ export default [
 					'webc:scoped',
 				],
 			}],
+		},
+	},
+	{
+		files: ['**/*.md'],
+		languageOptions: { parser: htmlParser },
+		plugins: { '@html-eslint': htmlPlugin },
+		rules: {
+			'@html-eslint/indent': 'off', // So we can use nested Markdown-in-HTML as content/slots.
 		},
 	},
 ]
