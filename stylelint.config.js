@@ -1,4 +1,8 @@
 export default {
+	extends: [
+		'stylelint-config-standard',
+		'@stylistic/stylelint-config',
+	],
 	ignoreFiles: [
 		'_site/**',
 		'content/topic/*/**',
@@ -7,13 +11,9 @@ export default {
 	],
 	'overrides': [
 		{
-			'files': ['**/*.html', '**/*.webc'],
 			'customSyntax': 'postcss-html',
+			'files': ['**/*.html', '**/*.webc'],
 		},
-	],
-	extends: [
-		'stylelint-config-standard',
-		'@stylistic/stylelint-config',
 	],
 	plugins: ['@stylistic/stylelint-plugin', 'stylelint-order', 'stylelint-plugin-logical-css'],
 	rules: {
@@ -24,8 +24,6 @@ export default {
 				ignore: ['after-comment', 'first-nested'],
 			},
 		],
-		'custom-property-pattern': '^[a-z0-9]+(-{1,2}[a-z0-9]([a-zA-Z0-9]+)?)*$',
-		'custom-property-empty-line-before': null,
 		'comment-empty-line-before': [
 			'always',
 			{
@@ -33,6 +31,8 @@ export default {
 				ignore: ['after-comment', 'stylelint-commands'],
 			},
 		],
+		'custom-property-empty-line-before': null,
+		'custom-property-pattern': '^[a-z0-9]+(-{1,2}[a-z0-9]([a-zA-Z0-9]+)?)*$',
 		'declaration-block-no-redundant-longhand-properties': null,
 		'declaration-block-single-line-max-declarations': 1,
 		'media-feature-range-notation': null,
@@ -80,10 +80,9 @@ export default {
 		'@stylistic/number-no-trailing-zeros': null,
 		'@stylistic/selector-combinator-space-after': 'always',
 		'@stylistic/selector-combinator-space-before': 'always',
-		'@stylistic/selector-list-comma-space-after': 'always-single-line',
 		'@stylistic/selector-list-comma-newline-after': 'always-multi-line',
+		'@stylistic/selector-list-comma-space-after': 'always-single-line',
 		'@stylistic/string-quotes': 'single',
-
 		'order/order': [
 			'custom-properties',
 			'declarations',

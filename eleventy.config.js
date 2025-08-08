@@ -42,8 +42,8 @@ export default (eleventyConfig) => {
 
 	// Markdown stuff.
 	const markdownOptions = {
-		html: true,
 		breaks: true,
+		html: true,
 		linkify: true,
 		typographer: true,
 	}

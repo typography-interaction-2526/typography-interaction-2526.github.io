@@ -37,6 +37,7 @@
 		"@stylistic/stylelint-plugin": "^4.0.0",
 		"dprint": "^0.50.1",
 		"eslint": "^9.32.0",
+		"eslint-plugin-sort-keys-plus": "^1.5.0",
 		"eslint-plugin-vue": "^10.4.0",
 		"postcss-html": "^1.8.0",
 		"stylelint": "^16.23.1",

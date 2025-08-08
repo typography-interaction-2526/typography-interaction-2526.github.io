@@ -2,6 +2,7 @@ import htmlParser from '@html-eslint/parser'
 import htmlPlugin from '@html-eslint/eslint-plugin'
 import vueParser from 'vue-eslint-parser'
 import vuePlugin from 'eslint-plugin-vue'
+import sortKeysPlus from 'eslint-plugin-sort-keys-plus'
 
 export default [
 	{
@@ -11,6 +12,11 @@ export default [
 		],
 	},
 	{
+		plugins: {
+			'sort-keys-plus': sortKeysPlus,
+		},
+	},
+	{
 		rules: {
 			'comma-dangle': ['error', 'always-multiline'],
 			'indent': ['error', 'tab'],
@@ -18,6 +24,7 @@ export default [
 			'prefer-const': 'error',
 			'quotes': ['error', 'single'],
 			'semi': ['error', 'never'],
+			'sort-keys-plus/sort-keys': ['error', 'asc', { allowLineSeparatedGroups: true, natural: true }],
 		},
 	},
 	{
