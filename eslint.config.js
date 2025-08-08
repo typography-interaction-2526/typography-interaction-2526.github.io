@@ -4,8 +4,6 @@ import html from 'eslint-plugin-html'
 import jsonc from 'eslint-plugin-jsonc'
 import perfectionist from 'eslint-plugin-perfectionist'
 import sortKeysPlus from 'eslint-plugin-sort-keys-plus'
-import vuePlugin from 'eslint-plugin-vue'
-import vueParser from 'vue-eslint-parser'
 
 export default [
 	{
@@ -59,11 +57,6 @@ export default [
 		settings: {
 			'html/html-extensions': ['.html', '.md', '.webc'],
 		},
-	},
-	{
-		files: ['**/*.html', '**/*.md', '**/*.webc'],
-		languageOptions: { parser: vueParser },
-		plugins: { vue: vuePlugin },
 	},
 	{
 		files: ['**/*.html', '**/*.md', '**/*.webc'],
