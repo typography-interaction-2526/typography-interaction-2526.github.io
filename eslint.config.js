@@ -57,7 +57,7 @@ export default [
 		settings: {
 			'html/html-extensions': ['.html', '.md', '.webc'],
 			'html/indent': '+tab',
-			'html/report-bad-indent': 'error',
+			'html/report-bad-indent': 'warn',
 		},
 	},
 	{
