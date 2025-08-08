@@ -1,2 +1,2 @@
-*.md linguist-language=ecmarkup
+*.md linguist-language=bikeshed
 *.webc linguist-language=html
