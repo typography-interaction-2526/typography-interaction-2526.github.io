@@ -19,3 +19,9 @@ const foo = 'bar'
 | Heading here |      |
 | ------------ | ---- |
 | Cell         | Cell |
+
+<aside>
+
+*Markdown in an `aside`?*
+
+</aside>

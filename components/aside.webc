@@ -1,0 +1,3 @@
+<aside class="testing">
+	<slot></slot>
+</aside>

@@ -7,6 +7,8 @@ import markdownItAttrs from 'markdown-it-attrs'
 import markdownItDeflist from 'markdown-it-deflist'
 import markdownItHeaderSections from 'markdown-it-header-sections'
 
+import { componentPlugin } from '@mdit-vue/plugin-component' // Pretend we are Vue.
+
 import abbreviations from './data/abbreviations.js'
 
 export default (eleventyConfig) => {
@@ -40,6 +42,7 @@ export default (eleventyConfig) => {
 			slugify: eleventyConfig.getFilter('slugify'),
 		})
 		.use(markdownItAttrs)
+		.use(componentPlugin) // Allows custom HTML component names (otherwise made into strings).
 		.use(markdown => {
 			markdown.renderer.rules.fence = (tokens, idx, options, env, slf) => {
 				const token = tokens[idx]
