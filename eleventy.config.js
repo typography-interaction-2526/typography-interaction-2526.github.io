@@ -11,6 +11,8 @@ import { componentPlugin } from '@mdit-vue/plugin-component' // Pretend we are V
 
 import abbreviations from './data/abbreviations.js'
 
+import stripTags from 'striptags'
+
 export default (eleventyConfig) => {
 	// Setup.
 	eleventyConfig.addPlugin(webC, { components: 'components/**/*.webc' })
@@ -61,14 +63,20 @@ export default (eleventyConfig) => {
 	)
 
 	// Filter for component use.
-	eleventyConfig.addFilter('markdownInline', (content) =>
-		markdownIt(markdownOptions).use(markdownItAbbr)
-			.render(String(content + markdownAbbreviations)) // We can’t use `renderInline` if we want `abbr` inserted.
-			.replace('<p>', '').replace('</p>', '').replace('&amp', '&').trim(),
+	eleventyConfig.addFilter('markdownInline', (content) => markdownIt(markdownOptions)
+		.use(markdownItAbbr)
+		.render(String(content + markdownAbbreviations)) // We can’t use `renderInline` if we want `abbr` inserted.
+		.replace('<p>', '')
+		.replace('</p>', '')
+		.replace('&amp;', '&')
+		.trim(),
 	)
 
 	// Overall Markdown use.
 	eleventyConfig.setLibrary('md', markdown)
+
+	// Other filters.
+	eleventyConfig.addFilter('stripTags', (content) => stripTags(String(content)))
 
 	// Remainder setup.
 	return {
