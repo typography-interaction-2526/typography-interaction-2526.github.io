@@ -1,5 +1,6 @@
 import htmlPlugin from '@html-eslint/eslint-plugin'
 import htmlParser from '@html-eslint/parser'
+import html from 'eslint-plugin-html'
 import jsonc from 'eslint-plugin-jsonc'
 import perfectionist from 'eslint-plugin-perfectionist'
 import sortKeysPlus from 'eslint-plugin-sort-keys-plus'
@@ -53,12 +54,19 @@ export default [
 		},
 	},
 	{
-		files: ['**/*.webc'],
+		files: ['**/*.html', '**/*.webc'],
+		plugins: { html },
+		settings: {
+			'html/html-extensions': ['.html', '.webc'],
+		},
+	},
+	{
+		files: ['**/*.html', '**/*.webc'],
 		languageOptions: { parser: vueParser },
 		plugins: { vue: vuePlugin },
 	},
 	{
-		files: ['**/*.webc'],
+		files: ['**/*.html', '**/*.webc'],
 		languageOptions: { parser: htmlParser },
 		plugins: { '@html-eslint': htmlPlugin },
 		rules: {
