@@ -1,2 +1,2 @@
-*.md linguist-language=apib
+*.md linguist-language=ecmarkup
 *.webc linguist-language=html
