@@ -1,4 +1,4 @@
-<link href="../../styles/variables.css" rel="stylesheet" webc:bucket="base">
+<link webc:bucket="base" href="../../styles/variables.css" rel="stylesheet">
 <style
 	webc:keep
 	@raw="`
