@@ -1,2 +1,2 @@
-*.md linguist-language=bikeshed
+*.md linguist-language=mdsvex
 *.webc linguist-language=html
