@@ -71,7 +71,6 @@ export default [
 			'@html-eslint/no-duplicate-class': 'error',
 			'@html-eslint/no-duplicate-id': 'error',
 			'@html-eslint/no-extra-spacing-attrs': 'error',
-			'@html-eslint/no-extra-spacing-text': 'error',
 			'@html-eslint/no-invalid-entity': 'error',
 			'@html-eslint/no-multiple-empty-lines': ['error', { max: 1 }],
 			'@html-eslint/no-nested-interactive': 'error',
@@ -101,9 +100,14 @@ export default [
 		languageOptions: { parser: htmlParser },
 		plugins: { '@html-eslint': htmlPlugin },
 		rules: {
-			// So we can use nested Markdown-within-HTML as content/slots.
-			// TODO The attributes aren’t indented though! `tagChildrenIndent` not working.
-			'@html-eslint/indent': 'off',
+			// So we can use nested Markdown-within-HTML as content/slots (using patch)!
+			'@html-eslint/indent': ['error', 'tab', {
+				'Attribute': 1,
+				'tagChildrenIndent': {
+					'aside': 0,
+					'div': 0,
+				},
+			}],
 		},
 	},
 ]
