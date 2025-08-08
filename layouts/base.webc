@@ -11,7 +11,10 @@
 			name="viewport"
 		>
 		<title @text="stripTags(markdownInline(title || course.title))"></title>
-		<style webc:import="blocks/styles.webc"></style>
+		<template
+			webc:import="blocks/styles.webc"
+			webc:nokeep
+		></template>
 		<script
 			webc:keep
 			@raw="getBundle(`js`)"

@@ -6,15 +6,19 @@ export default {
 	ignoreFiles: [
 		'_site/**',
 		'content/topic/*/**',
-		'layouts/base.webc',
-		'layouts/blocks/styles.webc',
 	],
-	'overrides': [
-		{
-			'customSyntax': 'postcss-html',
-			'files': ['**/*.html', '**/*.webc'],
-		},
-	],
+	 'overrides': [
+	 	{
+	 		'customSyntax': 'postcss-html',
+	 		'files': ['**/*.html', '**/*.md', '**/*.webc'],
+	 	},
+	 	{
+	 		'files': ['layouts/blocks/styles.webc'],
+	 		'rules': {
+	 			'no-empty-source': null,
+	 		},
+	 	},
+	 ],
 	plugins: ['@stylistic/stylelint-plugin', 'stylelint-order', 'stylelint-plugin-logical-css'],
 	rules: {
 		'alpha-value-notation': 'percentage',
