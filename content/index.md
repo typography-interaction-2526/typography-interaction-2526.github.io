@@ -1,3 +1,20 @@
+<script front>
+	const title = 'Testing!';
+</script>
+
+<style class="testing" aria-label="Should be first">
+	h2 { background-color: tomato }
+
+	blockquote {
+		margin-left:      1em;
+		background-color: dodgerblue;
+	}
+</style>
+
+<script>
+	console.log("Testing!");
+</script>
+
 # Hello, world!
 
 > This machine kills fascists.
@@ -16,23 +33,10 @@ const foo = 'bar'
 | ------------ | ---- |
 | Cell         | Cell |
 
-<aside>
+<aside class="testing" aria-label="Should be first">
 
 *Markdown in an `aside`?*
 
 </aside>
 
-And some stuff we’d  want linted.
-
-<style class="testing" aria-label="Should be first">
-	h2 { background-color: tomato }
-
-	blockquote {
-		margin-left:      1em;
-		background-color: dodgerblue;
-	}
-</style>
-
-<script>
-	console.log("Testing!");
-</script>
+Will this markdown    be linted?
