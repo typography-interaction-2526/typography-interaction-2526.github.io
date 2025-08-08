@@ -9,5 +9,5 @@
 		<meta content="initial-scale=1, width=device-width, viewport-fit=cover" name="viewport">
 		<title @text="title"></title>
 	</head>
-	<body :class="pageClass(page.url)" @html="content"></body>
+	<body :class="pageClass(page.url)" @raw="content"></body>
 </html>

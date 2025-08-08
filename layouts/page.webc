@@ -1,0 +1,5 @@
+<script front>
+	const layout = 'base'
+</script>
+
+<main @html="content"></main>

@@ -18,7 +18,7 @@ export default (eleventyConfig) => {
 		delimiters: ['<script front>', '</script>'],
 		language: 'js',
 	})
-	eleventyConfig.addGlobalData('layout', 'base.webc')
+	eleventyConfig.addGlobalData('layout', 'page.webc')
 
 	// Ignore drafts.
 	eleventyConfig.addPreprocessor('drafts', '*', (data, content) => (data.draft && process.env.ELEVENTY_RUN_MODE === 'build') ? false : undefined)
