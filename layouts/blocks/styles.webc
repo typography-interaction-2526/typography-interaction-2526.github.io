@@ -1,0 +1,9 @@
+<style
+	webc:keep
+	@raw="`
+	@layer reset, base, components, print;
+
+	@import url('/styles/reset.css') layer(reset);
+	`"
+></style>
+<style webc:keep @raw="`@layer components { ${getBundle('css')} }`"></style>

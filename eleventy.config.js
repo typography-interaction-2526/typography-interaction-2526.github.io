@@ -21,6 +21,13 @@ export default (eleventyConfig) => {
 		language: 'js',
 	})
 	eleventyConfig.addGlobalData('layout', 'page.webc')
+	eleventyConfig.addWatchTarget('**/*.css')
+	eleventyConfig.addWatchTarget('**/*.js')
+
+	// Slide these on over.
+	eleventyConfig.addPassthroughCopy('styles/reset.css')
+	eleventyConfig.addPassthroughCopy('assets/**/*.(ico|js|pdf|png)')
+	eleventyConfig.addPassthroughCopy('content/**/*.(gif|jpg|png|svg)')
 
 	// Ignore drafts.
 	eleventyConfig.addPreprocessor('drafts', '*', (data, content) => (data.draft && process.env.ELEVENTY_RUN_MODE === 'build') ? false : undefined)
