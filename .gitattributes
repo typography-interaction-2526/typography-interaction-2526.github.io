@@ -1,2 +1,2 @@
-*.md linguist-language=mdsvex
+*.md linguist-language=mdx
 *.webc linguist-language=html
