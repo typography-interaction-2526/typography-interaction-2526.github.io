@@ -94,25 +94,16 @@ export default (eleventyConfig) => {
 	eleventyConfig.addFilter('stripTags', (content) => stripTags(String(content)))
 	eleventyConfig.addFilter('displayDate', (date) => new Date(date).toLocaleDateString('en-US', { day: 'numeric', month: 'long', timeZone: 'UTC' }))
 
-	// Set up collections.
-	eleventyConfig.addCollection('root', collection => collection
-		.getFilteredByGlob('content/*.{md,webc}')
-		.sort((a, b) => (a.data.order || 0) - (b.data.order || 0)),
-	)
-
+	// Set up the weeks for date logic.
 	eleventyConfig.addCollection('weeks', collection => collection
 		.getFilteredByGlob('content/week/*.md')
 		.sort((a, b) => a.inputPath.localeCompare(b.inputPath, undefined, { numeric: true })),
 	)
 
-	eleventyConfig.addCollection('projects', collection => collection
-		.getFilteredByGlob('content/project/*.md')
+	// The big combined collection.
+	eleventyConfig.addCollection('pages', collection => collection
+		.getFilteredByGlob('content/*/**/*.md')
 		.sort((a, b) => a.inputPath.localeCompare(b.inputPath, undefined, { numeric: true })),
-	)
-
-	eleventyConfig.addCollection('topics', collection => collection
-		.getFilteredByGlob('content/topic/**/index.md')
-		.sort((a, b) => (a.data.order || 0) - (b.data.order || 0)),
 	)
 
 	// Remainder setup.
