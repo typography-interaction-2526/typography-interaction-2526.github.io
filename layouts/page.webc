@@ -1,5 +1,7 @@
 <script front-matter>
 	const layout = 'base'
+
+	const sortPages = pages => [...pages].sort((a, b) => new Date(a.data.date) - new Date(b.data.date))
 </script>
 
 <header>
@@ -18,7 +20,7 @@
 	<li><a href="/">Home</a></li>
 	<li><a href="/syllabus">Syllabus</a></li>
 	<li><a href="/class">Class</a></li>
-	<li webc:for="item of collections.pages">
+	<li webc:for="item of sortPages(collections.pages)">
 		<a
 			:href="item.url"
 			@html="markdownInline(item.data.title)"

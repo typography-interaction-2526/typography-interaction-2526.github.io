@@ -100,11 +100,8 @@ export default (eleventyConfig) => {
 		.sort((a, b) => a.inputPath.localeCompare(b.inputPath, undefined, { numeric: true })),
 	)
 
-	// The big combined collection.
-	eleventyConfig.addCollection('pages', collection => collection
-		.getFilteredByGlob('content/*/**/*.md')
-		.sort((a, b) => a.inputPath.localeCompare(b.inputPath, undefined, { numeric: true })),
-	)
+	// Big, combined, non-root collection. (Sorting is template-side!)
+	eleventyConfig.addCollection('pages', collection => collection.getFilteredByGlob('content/*/**/*.md'))
 
 	// Remainder setup.
 	return {
