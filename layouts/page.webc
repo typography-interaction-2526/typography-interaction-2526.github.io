@@ -33,4 +33,10 @@
 			@html="markdownInline(item.data.title)"
 		></a>
 	</li>
+	<li webc:for="item of collections.topics">
+		<a
+			:href="item.url"
+			@html="markdownInline(item.data.title)"
+		></a>
+	</li>
 </ul>
