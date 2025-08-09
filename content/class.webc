@@ -3,6 +3,9 @@
 	const order = 1
 </script>
 
+<button id="shuffle">
+	<p>Shuffle</p>
+</button>
 <ul id="students">
 	<li webc:for="student of $data.class">
 		<a :href="`https://github.com/${student.github}`">
@@ -10,3 +13,10 @@
 		</a>
 	</li>
 </ul>
+<script>
+	const students = document.getElementById('students')
+	const shuffleStudents = () => students.append(...[...students.children].sort(() => Math.random() - 0.5))
+
+	shuffleStudents()
+	document.getElementById('shuffle').onclick = () => shuffleStudents()
+</script>
