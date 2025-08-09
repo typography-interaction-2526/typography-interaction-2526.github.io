@@ -1,15 +1,15 @@
 // Count up our dates.
 export function getWeekDate(data, week) {
-	if (data.collections.weeks && data.collections.weeks.length) {
-		let weekIndex = Number(week - 1)
+	const weeks = data.collections.weeks
 
-		if (weekIndex === -1) return
+	if (weeks?.length) {
+		let weekIndex = week - 1
 
-		let date = data.collections.weeks[weekIndex].data.date
+		let date = weeks[weekIndex].data.date
 		let weekOffset = 0
 
 		while (!date && weekIndex > 0) {
-			date = data.collections.weeks[weekIndex - 1].data.date
+			date = weeks[weekIndex - 1].data.date
 			weekOffset++
 			weekIndex--
 		}
