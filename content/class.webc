@@ -3,4 +3,10 @@
 	const order = 1
 </script>
 
-TKTKTK
+<ul id="students">
+	<li webc:for="student of $data.class">
+		<a :href="`https://github.com/${student.github}`">
+			<p @text="student.first"></p>
+		</a>
+	</li>
+</ul>

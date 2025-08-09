@@ -23,13 +23,24 @@
 </header>
 <main @html="content"></main>
 <ul>
-	<li><a href="/">Home</a></li>
-	<li><a href="/syllabus">Syllabus</a></li>
-	<li><a href="/class">Class</a></li>
+	<li>
+		<a href="/">
+			<p>Home</p>
+		</a>
+	</li>
+	<li>
+		<a href="/syllabus">
+			<p>Syllabus</p>
+		</a>
+	</li>
+	<li>
+		<a href="/class">
+			<p>Class</p>
+		</a>
+	</li>
 	<li webc:for="item of sortPages(collections.pages)">
-		<a
-			:href="item.url"
-			@html="markdownInline(item.data.title)"
-		></a>
+		<a :href="item.url">
+			<p @html="markdownInline(item.data.title)"></p>
+		</a>
 	</li>
 </ul>
