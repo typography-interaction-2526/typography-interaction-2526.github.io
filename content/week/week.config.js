@@ -5,6 +5,7 @@ export default {
 	eleventyComputed: {
 		date: data => getWeekDate(data, data.page.fileSlug),
 		title: data => `Week ${data.page.fileSlug}`,
+		type: 'Agenda',
 		unit: data => {
 			if (data.collections.weeks.length) {
 				let unit = data.unit

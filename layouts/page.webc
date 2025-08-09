@@ -1,7 +1,7 @@
 <script front-matter>
 	const layout = 'base'
 
-	const typeOrder = ['week', 'topic', 'project']
+	const typeOrder = ['Agenda', 'Topic', 'Project']
 
 	const sortPages = pages =>
 		[...pages]
@@ -28,7 +28,7 @@
 	<li webc:for="item of sortPages(collections.pages)">
 		<a
 			:href="item.url"
-			@html="markdownInline(item.data.title) + '—' + displayDate(item.data.date) + '—' + item.data.week"
+			@html="markdownInline(item.data.title)"
 		></a>
 	</li>
 </ul>
