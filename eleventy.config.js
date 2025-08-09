@@ -93,6 +93,27 @@ export default (eleventyConfig) => {
 	// Other filters.
 	eleventyConfig.addFilter('stripTags', (content) => stripTags(String(content)))
 
+	// Set up collections.
+	eleventyConfig.addCollection('root', collection => collection
+		.getFilteredByGlob('content/*.{md,webc}')
+		.sort((a, b) => (a.data.order || 0) - (b.data.order || 0)),
+	)
+
+	eleventyConfig.addCollection('weeks', collection => collection
+		.getFilteredByGlob('content/week/*.md')
+		.sort((a, b) => a.inputPath.localeCompare(b.inputPath, undefined, { numeric: true })),
+	)
+
+	eleventyConfig.addCollection('projects', collection => collection
+		.getFilteredByGlob('content/project/*.md')
+		.sort((a, b) => a.inputPath.localeCompare(b.inputPath, undefined, { numeric: true })),
+	)
+
+	eleventyConfig.addCollection('topics', collection => collection
+		.getFilteredByGlob('content/topic/**/index.md')
+		.sort((a, b) => (a.data.order || 0) - (b.data.order || 0)),
+	)
+
 	// Remainder setup.
 	return {
 		dir: {

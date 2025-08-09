@@ -2,4 +2,8 @@
 	const layout = 'base'
 </script>
 
+<header>
+	<h1 @html="markdownInline(title || course.title)"></h1>
+	<p webc:if="unitCombined" @html="markdownInline(unitCombined)"></p>
+</header>
 <main @html="content"></main>
