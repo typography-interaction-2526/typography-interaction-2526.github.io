@@ -66,7 +66,7 @@ export default [
 		plugins: { '@html-eslint': htmlPlugin },
 		rules: {
 			'@html-eslint/attrs-newline': ['error', { 'closeStyle': 'newline', 'ifAttrsMoreThan': 1 }],
-			'@html-eslint/element-newline': 'error',
+			'@html-eslint/element-newline': ['error', { 'inline': ['$inline'] }],
 			'@html-eslint/indent': ['error', 'tab'],
 			'@html-eslint/lowercase': 'error',
 			'@html-eslint/no-duplicate-attrs': 'error',
