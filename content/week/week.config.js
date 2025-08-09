@@ -9,7 +9,7 @@ export default {
 		unit: data => {
 			if (data.collections.weeks.length) {
 				let unit = data.unit
-				let weekIndex = data.collections.weeks.findIndex(week => week.url === data.page.url)
+				let weekIndex = data.page.fileSlug - 1
 
 				while (!unit) {
 					unit = data.collections.weeks[weekIndex].data.unit
@@ -22,7 +22,7 @@ export default {
 		unitCombined: data => `Unit ${data.unitNumber}: ${data.unit}`,
 		unitNumber: data => {
 			if (data.collections.weeks.length) {
-				const weekIndex = data.collections.weeks.findIndex(week => week.url === data.page.url)
+				const weekIndex = data.page.fileSlug - 1
 
 				let unit
 				let unitNumber = 0
