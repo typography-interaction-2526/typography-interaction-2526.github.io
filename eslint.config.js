@@ -61,13 +61,12 @@ export default [
 		},
 	},
 	{
-		files: ['**/*.html', '**/*.md', '**/*.webc'],
+		files: ['**/*.html', '**/*.md', '**/*.webc'], // Common rules.
 		languageOptions: { parser: htmlParser },
 		plugins: { '@html-eslint': htmlPlugin },
 		rules: {
-			'@html-eslint/attrs-newline': ['error', { 'closeStyle': 'newline', 'ifAttrsMoreThan': 1 }],
 			'@html-eslint/element-newline': ['error', { 'inline': ['$inline'] }],
-			'@html-eslint/indent': ['error', 'tab'],
+			'@html-eslint/id-naming-convention': ['error', 'kebab-case'],
 			'@html-eslint/lowercase': 'error',
 			'@html-eslint/no-duplicate-attrs': 'error',
 			'@html-eslint/no-duplicate-class': 'error',
@@ -77,10 +76,12 @@ export default [
 			'@html-eslint/no-multiple-empty-lines': ['error', { max: 1 }],
 			'@html-eslint/no-nested-interactive': 'error',
 			'@html-eslint/no-script-style-type': 'error',
+			'@html-eslint/no-trailing-spaces': 'error',
 			'@html-eslint/quotes': ['error', 'double'],
 			'@html-eslint/require-closing-tags': ['error', { 'selfClosing': 'never'}],
 			'@html-eslint/sort-attrs': ['error', {
 				'priority': [
+					'@*',
 					'webc:bucket',
 					'webc:for',
 					'webc:if',
@@ -98,7 +99,18 @@ export default [
 		},
 	},
 	{
-		files: ['**/*.md'],
+		files: ['**/*.html', '**/*.webc'], // Template/component-only.
+		languageOptions: { parser: htmlParser },
+		plugins: { '@html-eslint': htmlPlugin },
+		rules: {
+			'@html-eslint/attrs-newline': ['error', { 'closeStyle': 'newline', 'ifAttrsMoreThan': 1 }],
+			'@html-eslint/indent': ['error', 'tab'],
+			'@html-eslint/no-extra-spacing-text': 'error',
+			'@html-eslint/prefer-https': 'error',
+		},
+	},
+	{
+		files: ['**/*.md'], // Just Markdown.
 		languageOptions: { parser: htmlParser },
 		plugins: { '@html-eslint': htmlPlugin },
 		rules: {
@@ -110,6 +122,7 @@ export default [
 					'div': 0,
 				},
 			}],
+			'@html-eslint/prefer-https': 'warn',
 		},
 	},
 ]
