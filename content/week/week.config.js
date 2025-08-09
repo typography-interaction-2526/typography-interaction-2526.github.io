@@ -1,23 +1,9 @@
+
+import { getWeekDate } from '../../data/weeks.js'
+
 export default {
 	eleventyComputed: {
-		date: data => {
-			if (data.collections.weeks.length) {
-				let date = data.date
-				let weekOffset = 0
-				let weekIndex = data.collections.weeks.findIndex(week => week.url === data.page.url)
-
-				while (!date) {
-					date = data.collections.weeks[weekIndex - 1].data.date
-					weekOffset++
-					weekIndex--
-				}
-
-				date = new Date(date)
-				date.setDate(7 * weekOffset + date.getDate())
-
-				return date
-			}
-		},
+		date: data => getWeekDate(data),
 		title: data => `Week ${data.page.fileSlug}`,
 		unit: data => {
 			if (data.collections.weeks.length) {
