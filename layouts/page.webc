@@ -7,3 +7,11 @@
 	<p webc:if="unitCombined" @html="markdownInline(unitCombined)"></p>
 </header>
 <main @html="content"></main>
+<ul>
+	<li webc:for="item of collections.root">
+		<a :href="item.url" @html="markdownInline(item.data.title || 'Home')"></a>
+	</li>
+	<li webc:for="item of collections.weeks">
+		<a :href="item.url" @html="markdownInline(item.data.title)"></a>
+	</li>
+</ul>
