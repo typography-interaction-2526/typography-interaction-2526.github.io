@@ -92,6 +92,7 @@ export default (eleventyConfig) => {
 
 	// Other filters.
 	eleventyConfig.addFilter('stripTags', (content) => stripTags(String(content)))
+	eleventyConfig.addFilter('displayDate', (date) => new Date(date).toLocaleDateString('en-US', { day: 'numeric', month: 'long', timeZone: 'UTC' }))
 
 	// Set up collections.
 	eleventyConfig.addCollection('root', collection => collection

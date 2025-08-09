@@ -18,11 +18,7 @@ export default {
 				return date
 			}
 		},
-		title: data => {
-			const date = new Date(data.date).toLocaleDateString('en-US', { day: 'numeric', month: 'long', timeZone: 'UTC' })
-
-			return `Week ${data.page.fileSlug}, <nobr>${date}</nobr>`
-		},
+		title: data => `Week ${data.page.fileSlug}`,
 		unit: data => {
 			if (data.collections.weeks.length) {
 				let unit = data.unit

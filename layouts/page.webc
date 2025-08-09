@@ -4,14 +4,27 @@
 
 <header>
 	<h1 @html="markdownInline(title || course.title)"></h1>
-	<p webc:if="unitCombined" @html="markdownInline(unitCombined)"></p>
+	<p
+		webc:if="unit"
+		@html="markdownInline(unit)"
+	></p>
+	<p
+		webc:if="date"
+		@html="displayDate(date)"
+	></p>
 </header>
 <main @html="content"></main>
 <ul>
 	<li webc:for="item of collections.root">
-		<a :href="item.url" @html="markdownInline(item.data.title || 'Home')"></a>
+		<a
+			:href="item.url"
+			@html="markdownInline(item.data.title || 'Home')"
+		></a>
 	</li>
 	<li webc:for="item of collections.weeks">
-		<a :href="item.url" @html="markdownInline(item.data.title)"></a>
+		<a
+			:href="item.url"
+			@html="markdownInline(item.data.title)"
+		></a>
 	</li>
 </ul>
