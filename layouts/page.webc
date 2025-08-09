@@ -1,7 +1,7 @@
 <script front-matter>
 	const layout = 'base'
 
-	const typeOrder = ['Agenda', 'Topic', 'Project']
+	const typeOrder = ['Project', 'Agenda', 'Topic']
 
 	const sortPages = pages =>
 		[...pages]
