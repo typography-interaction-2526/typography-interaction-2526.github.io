@@ -37,8 +37,8 @@ export default (eleventyConfig) => {
 	eleventyConfig.ignores.add('content/topic/*/*/*.*')
 	eleventyConfig.addPassthroughCopy('content/topic/*/*/*.*')
 
-	// Ignore drafts.
-	eleventyConfig.addPreprocessor('drafts', '*', (data, content) => (data.draft && process.env.ELEVENTY_RUN_MODE === 'build') ? false : undefined)
+	// Don’t render out drafts—but this leaves them in the collections for date calculations.
+	process.env.ELEVENTY_RUN_MODE === 'build' && eleventyConfig.addGlobalData('eleventyComputed', { permalink: data => data.draft ? false : data.permalink })
 
 	// Markdown stuff.
 	const markdownOptions = {
