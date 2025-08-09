@@ -8,7 +8,7 @@
 	@raw="`
 	@layer reset, base, components, print;
 
-	@import url('/styles/reset.css') layer(reset);
+	/* @import url('/styles/reset.css') layer(reset); */
 	@import url('${getBundleFileUrl('css', 'base')}') layer(base);
 	`"
 ></style>
