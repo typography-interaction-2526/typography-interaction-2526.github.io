@@ -1,7 +1,10 @@
 <script front-matter>
 	const layout = 'base'
 
-	const sortPages = pages => [...pages].sort((a, b) => new Date(a.data.date) - new Date(b.data.date))
+	const sortPages = pages =>
+		[...pages]
+			.filter(page => page.data.week)
+			.sort((a, b) => a.data.week - b.data.week)
 </script>
 
 <header>
@@ -23,7 +26,7 @@
 	<li webc:for="item of sortPages(collections.pages)">
 		<a
 			:href="item.url"
-			@html="markdownInline(item.data.title)"
+			@html="markdownInline(item.data.title) + '—' + displayDate(item.data.date) + '—' + item.data.week"
 		></a>
 	</li>
 </ul>

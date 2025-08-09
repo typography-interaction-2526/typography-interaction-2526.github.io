@@ -1,7 +1,7 @@
-// Shared week date logic for Eleventy global data
+// Count up our dates.
 export function getWeekDate(data, week) {
 	if (data.collections.weeks && data.collections.weeks.length) {
-		let weekIndex = week ? week - 1 : data.collections.weeks.findIndex(week => week.url === data.page.url)
+		let weekIndex = Number(week - 1)
 
 		if (weekIndex === -1) return
 

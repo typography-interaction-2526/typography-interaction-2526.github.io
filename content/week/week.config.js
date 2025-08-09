@@ -3,7 +3,7 @@ import { getWeekDate } from '../../data/weeks.js'
 
 export default {
 	eleventyComputed: {
-		date: data => getWeekDate(data),
+		date: data => getWeekDate(data, data.page.fileSlug),
 		title: data => `Week ${data.page.fileSlug}`,
 		unit: data => {
 			if (data.collections.weeks.length) {
@@ -37,5 +37,6 @@ export default {
 				return unitNumber
 			}
 		},
+		week: data => Number(data.page.fileSlug),
 	},
 }
