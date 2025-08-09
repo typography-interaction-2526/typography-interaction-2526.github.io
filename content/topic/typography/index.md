@@ -1,6 +1,7 @@
 <script front-matter>
 	const draft = true
-	const title = 'Everything Is a Web Page'
+	const title = 'It’s All About Type'
+	const week = 2
 </script>
 
 TKTKTK

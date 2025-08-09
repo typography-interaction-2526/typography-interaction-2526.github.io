@@ -1,10 +1,12 @@
 <script front-matter>
 	const layout = 'base'
 
+	const typeOrder = ['week', 'topic', 'project']
+
 	const sortPages = pages =>
 		[...pages]
 			.filter(page => page.data.week)
-			.sort((a, b) => a.data.week - b.data.week)
+			.sort((a, b) => (a.data.week - b.data.week) || (typeOrder.indexOf(a.data.type) - typeOrder.indexOf(b.data.type)))
 </script>
 
 <header>
