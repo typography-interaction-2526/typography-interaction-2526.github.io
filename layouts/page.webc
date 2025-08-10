@@ -22,8 +22,8 @@
 			<header>
 				<h1 @html="markdownInline(title || course.title)"></h1>
 				<p
-					webc:if="unit"
-					@html="markdownInline(unit)"
+					webc:if="unitCombined"
+					@html="markdownInline(unitCombined)"
 				></p>
 				<p
 					webc:if="date"
