@@ -1,8 +1,14 @@
 <script webc:setup>
-	export const test = 'Working?!'
+	const typeOrder = ['Project', 'Agenda', 'Topic']
+
+	export const sortedPages = [...$data.collections.pages]
+		.filter(page => !page.data.draft || process.env.ELEVENTY_RUN_MODE == 'serve')
+		.filter(page => page.data.week)
+		.sort((a, b) => (a.data.week - b.data.week) || (typeOrder.indexOf(a.data.type) - typeOrder.indexOf(b.data.type)))
 </script>
+
 <ol>
-	<li webc:for="item of [...$data.collections.root, ...$data.collections.pages]">
+	<li webc:for="item of [...$data.collections.root, ...sortedPages]">
 		<a
 			webc:if="item.url != $data.page.url"
 			:href="item.url"
