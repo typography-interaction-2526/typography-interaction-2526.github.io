@@ -1,0 +1,32 @@
+<ul webc:root="override">
+	<li>
+		<a :href="$data.course.channel.submit">
+			<p>Submit</p>
+		</a>
+	</li>
+	<li>
+		<a :href="$data.course.channel.slack">
+			<p>Slack</p>
+		</a>
+	</li>
+	<li>
+		<a :href="$data.course.channel.figma">
+			<p>Figma</p>
+		</a>
+	</li>
+	<li>
+		<a :href="$data.course.channel.github">
+			<p>GitHub</p>
+		</a>
+	</li>
+	<li>
+		<a :href="$data.course.channel.google">
+			<p>Google</p>
+		</a>
+	</li>
+	<li>
+		<a :href="$data.course.channel.zoom">
+			<p>Zoom</p>
+		</a>
+	</li>
+</ul>
