@@ -1,7 +1,7 @@
 <script webc:setup>
 	export const test = 'Working?!'
 </script>
-<ol webc:root="override">
+<ol>
 	<li webc:for="item of [...$data.collections.root, ...$data.collections.pages]">
 		<a
 			webc:if="item.url != $data.page.url"
@@ -9,11 +9,6 @@
 		>
 			<p @html="markdownInline(item.data.title)"></p>
 		</a>
-		<template
-			webc:elseif="item.url === $data.page.url"
-			webc:nokeep
-		>
-			<slot></slot>
-		</template>
+		<slot webc:elseif="item.url === $data.page.url"></slot>
 	</li>
 </ol>

@@ -2,7 +2,7 @@
 	const layout = 'base'
 </script>
 
-<div webc:import="blocks/pages.webc">
+<block webc:import="blocks/pages.webc">
 	<article>
 		<header>
 			<h1 @html="markdownInline(title || course.title)"></h1>
@@ -17,4 +17,4 @@
 		</header>
 		<main @html="content"></main>
 	</article>
-</div>
+</block>

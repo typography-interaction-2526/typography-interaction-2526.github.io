@@ -1,4 +1,4 @@
-<ul webc:root="override">
+<ul>
 	<li>
 		<a :href="$data.course.channel.submit">
 			<p>Submit</p>
