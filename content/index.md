@@ -6,4 +6,4 @@
 
 We’ll be using this course site for our agendas, lectures, general class housekeeping, and anything else that comes up. It will be updated throughout the semester, so always check here first if you are looking for something.
 
-<template webc:import="blocks/channels.webc"></template>
+<template webc:import="channels.webc"></template>
