@@ -23,12 +23,7 @@
 </header>
 <main @html="content"></main>
 <ul>
-	<li webc:for="item of collections.root">
-		<a :href="item.url">
-			<p @html="markdownInline(item.data.title)"></p>
-		</a>
-	</li>
-	<li webc:for="item of sortPages(collections.pages)">
+	<li webc:for="item of [...collections.root, ...sortPages(collections.pages)]">
 		<a :href="item.url">
 			<p @html="markdownInline(item.data.title)"></p>
 		</a>
