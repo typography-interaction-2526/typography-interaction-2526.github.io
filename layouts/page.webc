@@ -10,22 +10,27 @@
 			.sort((a, b) => (a.data.week - b.data.week) || (typeOrder.indexOf(a.data.type) - typeOrder.indexOf(b.data.type)))
 </script>
 
-<header>
-	<h1 @html="markdownInline(title || course.title)"></h1>
-	<p
-		webc:if="unit"
-		@html="markdownInline(unit)"
-	></p>
-	<p
-		webc:if="date"
-		@html="displayDate(date)"
-	></p>
-</header>
-<main @html="content"></main>
-<ul>
+<ol>
 	<li webc:for="item of [...collections.root, ...sortPages(collections.pages)]">
-		<a :href="item.url">
+		<a
+			webc:if="item.url != $data.page.url"
+			:href="item.url"
+		>
 			<p @html="markdownInline(item.data.title)"></p>
 		</a>
+		<article webc:elseif="item.url === $data.page.url">
+			<header>
+				<h1 @html="markdownInline(title || course.title)"></h1>
+				<p
+					webc:if="unit"
+					@html="markdownInline(unit)"
+				></p>
+				<p
+					webc:if="date"
+					@html="displayDate(date)"
+				></p>
+			</header>
+			<main @html="content"></main>
+		</article>
 	</li>
-</ul>
+</ol>
