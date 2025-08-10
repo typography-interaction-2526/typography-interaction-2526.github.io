@@ -1,0 +1,6 @@
+<script webc:setup>
+	export const test = 'Working?!'
+</script>
+<nav>
+	<p @text="test"></p>
+</nav>

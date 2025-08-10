@@ -10,6 +10,7 @@
 			.sort((a, b) => (a.data.week - b.data.week) || (typeOrder.indexOf(a.data.type) - typeOrder.indexOf(b.data.type)))
 </script>
 
+<template webc:import="blocks/pages.webc"></template>
 <ol>
 	<li webc:for="item of [...collections.root, ...sortPages(collections.pages)]">
 		<a
