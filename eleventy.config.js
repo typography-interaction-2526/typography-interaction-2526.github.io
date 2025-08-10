@@ -100,6 +100,12 @@ export default (eleventyConfig) => {
 		.sort((a, b) => a.inputPath.localeCompare(b.inputPath, undefined, { numeric: true })),
 	)
 
+	// Root/admins stuff.
+	eleventyConfig.addCollection('root', collection => collection
+		.getFilteredByGlob('content/*.{md,webc}')
+		.sort((a, b) => (a.data.order || 0) - (b.data.order || 0)),
+	)
+
 	// Big, combined, non-root collection. (Sorting is template-side!)
 	eleventyConfig.addCollection('pages', collection => collection.getFilteredByGlob('content/*/**/*.md'))
 
