@@ -1,5 +1,6 @@
 // Count up our dates and units.
-export function getWeek(data, week) {
+export function getWeek(data) {
+	const week = data.week
 	const weeks = data.collections.weeks
 
 	if (weeks?.length) {

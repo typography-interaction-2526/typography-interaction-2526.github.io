@@ -3,12 +3,11 @@ import { getWeek } from '../../data/weeks.js'
 
 export default {
 	eleventyComputed: {
-		date: data => getWeek(data, data.page.fileSlug)?.date,
+		date: data => getWeek(data)?.date,
 		title: data => `Week ${data.page.fileSlug}`,
 		type: 'Agenda',
-		unit: data => getWeek(data, data.page.fileSlug)?.unit,
-		unitCombined: data => `Unit ${data.unitNumber}: ${data.unit}`,
-		unitNumber: data => getWeek(data, data.page.fileSlug)?.unitNumber,
+		unit: data => getWeek(data)?.unit,
+		unitNumber: data => getWeek(data)?.unitNumber,
 		week: data => Number(data.page.fileSlug),
 	},
 }
