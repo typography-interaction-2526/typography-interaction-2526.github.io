@@ -27,11 +27,9 @@ export function getWeek(data, week) {
 		}
 
 		const unitNumber = new Set(
-			(previousUnit =>
-				weeks.slice(0, weekIndex + 1)
-					.map(week => previousUnit = week.data.unit || previousUnit)
-					.filter(Boolean)
-			)(),
+			weeks.slice(0, weekIndex + 1)
+				.map(week => unit = week.data.unit || unit)
+				.filter(Boolean),
 		).size
 
 		return { date, unit, unitNumber }
