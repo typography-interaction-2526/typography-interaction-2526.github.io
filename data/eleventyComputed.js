@@ -6,7 +6,7 @@ const getWeek = (data) => {
 	if (weeks?.length) {
 		let weekIndex = week - 1, unitIndex = weekIndex
 
-		let date = weeks[weekIndex].data.date
+		let date = weeks[weekIndex]?.data.date
 		let weekOffset = 0
 
 		let unit = data.unit
@@ -22,7 +22,7 @@ const getWeek = (data) => {
 			date.setDate(7 * weekOffset + date.getDate())
 		}
 
-		while (!unit) {
+		while (!unit && unitIndex > 0) {
 			unit = weeks[unitIndex].data.unit
 			unitIndex--
 		}
@@ -35,7 +35,6 @@ const getWeek = (data) => {
 
 		return { date, unit, unitNumber }
 	}
-
 }
 
 export default {
