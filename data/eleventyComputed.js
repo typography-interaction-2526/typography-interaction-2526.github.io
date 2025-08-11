@@ -1,6 +1,6 @@
 // Count up our dates and units.
-export function getWeek(data) {
-	const week = data.week
+const getWeek = (data) => {
+	const week = data.week || data.page.fileSlug
 	const weeks = data.collections.weeks
 
 	if (weeks?.length) {
@@ -36,4 +36,10 @@ export function getWeek(data) {
 		return { date, unit, unitNumber }
 	}
 
+}
+
+export default {
+	date: data => getWeek(data)?.date,
+	unit: data => getWeek(data)?.unit,
+	unitNumber: data => getWeek(data)?.unitNumber,
 }
