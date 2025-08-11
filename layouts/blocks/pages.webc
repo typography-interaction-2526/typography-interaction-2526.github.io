@@ -21,25 +21,15 @@
 
 <ul>
 	<li webc:for="item of [...$data.collections.root]">
-		<a
-			webc:if="item.url != $data.page.url"
-			:href="item.url"
-		>
-			<p @html="markdownInline(item.data.title)"></p>
-		</a>
-		<slot webc:elseif="item.url === $data.page.url"></slot>
+		<block webc:import="page-link.webc"></block>
+		<slot webc:if="item.url === $data.page.url"></slot>
 	</li>
 	<li webc:for="unit of groupedPages">
 		<p><em><strong @text="unit[0].data.unit"></strong></em></p>
 		<ul>
 			<li webc:for="item of unit">
-				<a
-					webc:if="item.url != $data.page.url"
-					:href="item.url"
-				>
-					<p @html="markdownInline(item.data.title)"></p>
-				</a>
-				<slot webc:elseif="item.url === $data.page.url"></slot>
+				<block webc:import="page-link.webc"></block>
+				<slot webc:if="item.url === $data.page.url"></slot>
 			</li>
 		</ul>
 	</li>
