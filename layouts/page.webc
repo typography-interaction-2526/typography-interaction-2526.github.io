@@ -6,14 +6,6 @@
 	<article>
 		<header>
 			<h1 @html="markdownInline(title || course.title)"></h1>
-			<p
-				webc:if="unitCombined"
-				@html="markdownInline(unitCombined)"
-			></p>
-			<p
-				webc:if="date"
-				@html="displayDate(date)"
-			></p>
 		</header>
 		<main @html="content"></main>
 	</article>

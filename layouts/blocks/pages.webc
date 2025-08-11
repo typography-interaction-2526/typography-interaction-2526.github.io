@@ -1,13 +1,26 @@
 <script webc:setup>
 	const typeOrder = ['Project', 'Agenda', 'Topic']
 
-	export const sortedPages = [...$data.collections.pages]
-		.filter(page => page.data.week)
-		.sort((a, b) => (a.data.week - b.data.week) || (typeOrder.indexOf(a.data.type) - typeOrder.indexOf(b.data.type)))
+	export const groupedPages = (() => {
+		const typeOrder = ['Project', 'Agenda', 'Topic']
+
+		const pages = [...$data.collections.pages]
+			.filter(page => page.data.week)
+			.sort((a, b) => (a.data.week - b.data.week) || (typeOrder.indexOf(a.data.type) - typeOrder.indexOf(b.data.type)))
+
+		const map = new Map()
+
+		for (const page of pages) {
+			const unit = page.data.unitNumber
+			if (!map.has(unit)) map.set(unit, [])
+			map.get(unit).push(page)
+		}
+		return Array.from(map.values())
+	})()
 </script>
 
-<ol>
-	<li webc:for="item of [...$data.collections.root, ...sortedPages]">
+<ul>
+	<li webc:for="item of [...$data.collections.root]">
 		<a
 			webc:if="item.url != $data.page.url"
 			:href="item.url"
@@ -16,4 +29,18 @@
 		</a>
 		<slot webc:elseif="item.url === $data.page.url"></slot>
 	</li>
-</ol>
+	<li webc:for="unit of groupedPages">
+		<p><em><strong @text="unit[0].data.unit"></strong></em></p>
+		<ul>
+			<li webc:for="item of unit">
+				<a
+					webc:if="item.url != $data.page.url"
+					:href="item.url"
+				>
+					<p @html="markdownInline(item.data.title)"></p>
+				</a>
+				<slot webc:elseif="item.url === $data.page.url"></slot>
+			</li>
+		</ul>
+	</li>
+</ul>
