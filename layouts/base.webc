@@ -10,7 +10,7 @@
 			content="initial-scale=1, width=device-width, viewport-fit=cover"
 			name="viewport"
 		>
-		<title @text="stripTags(markdownInline(title || course.title))"></title>
+		<title @text="stripTags(markdown(title || course.title))"></title>
 		<template
 			webc:import="blocks/styles.webc"
 			webc:nokeep

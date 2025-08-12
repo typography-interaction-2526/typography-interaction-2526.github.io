@@ -69,6 +69,8 @@ export default (eleventyConfig) => {
 
 	// Append abbreviations for `markdownItAbbr`.
 	const markdownAbbreviations = abbreviations.map(item => `\n*[${item.abbr}]: ${item.title}`).join('\n')
+
+	// Append them for the plugin.
 	eleventyConfig.addPreprocessor('abbreviations', '.md', (data, content) => content + markdownAbbreviations)
 
 	// Convert HTML comments to curly brackets for `markdownItAttrs` to pick up.
@@ -78,7 +80,7 @@ export default (eleventyConfig) => {
 	)
 
 	// Filter for component use.
-	eleventyConfig.addFilter('markdownInline', (content) => markdownIt(markdownOptions)
+	eleventyConfig.addFilter('markdown', (content) => markdownIt(markdownOptions)
 		.use(markdownItAbbr)
 		.render(String(content + markdownAbbreviations)) // We can’t use `renderInline` if we want `abbr` inserted.
 		.replace('<p>', '')
