@@ -79,14 +79,28 @@ export default (eleventyConfig) => {
 		content.replace(/<!--\s*(\.(?:[\s\S]*?)|#(?:[\s\S]*?)|data(?:[\s\S]*?)|style(?:[\s\S]*?))\s*-->$/gm, '{ $1 }'),
 	)
 
+	// Wrap the worst offenders.
+	const kerningSpans = content =>
+		[
+			'Ty',
+			'ct',
+		]
+			.reduce((content, pair) =>
+				content.replace(new RegExp(pair, 'gm'), `<span class="kern--${pair}">${pair}</span>`), content)
+
+	eleventyConfig.addPreprocessor('kerningSpans', '.md', (data, content) => kerningSpans(content))
+
 	// Filter for component use.
-	eleventyConfig.addFilter('markdown', (content) => markdownIt(markdownOptions)
-		.use(markdownItAbbr)
-		.render(String(content + markdownAbbreviations)) // We can’t use `renderInline` if we want `abbr` inserted.
-		.replace('<p>', '')
-		.replace('</p>', '')
-		.replace('&amp;', '&')
-		.trim(),
+	eleventyConfig.addFilter('markdown', (content) =>
+		kerningSpans(
+			markdownIt(markdownOptions)
+				.use(markdownItAbbr)
+				.render(String(content + markdownAbbreviations))
+				.replace('<p>', '')
+				.replace('</p>', '')
+				.replace('&amp;', '&')
+				.trim(),
+		),
 	)
 
 	// Overall Markdown use.
