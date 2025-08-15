@@ -1,0 +1,12 @@
+:root {
+	font-size: 62.5%;
+
+	* {
+		font-kerning:             normal;
+		font-smooth:              always;
+		-moz-osx-font-smoothing:  grayscale;
+		-webkit-font-smoothing:   antialiased;
+		text-rendering:           optimizeLegibility;
+		-webkit-text-size-adjust: none;
+	}
+}

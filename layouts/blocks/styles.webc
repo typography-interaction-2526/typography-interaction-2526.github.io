@@ -3,13 +3,24 @@
 	href="../../styles/variables.css"
 	rel="stylesheet"
 >
+<link
+	webc:bucket="base"
+	href="../../styles/fonts.css"
+	rel="stylesheet"
+>
+<link
+	webc:bucket="base"
+	href="../../styles/typography.css"
+	rel="stylesheet"
+>
 <style
 	webc:keep
 	@raw="`
-	@layer reset, base, components, print;
+		@layer reset, base, components, print;
 
-	@import url('/styles/reset.css') layer(reset);
-	@import url('${getBundleFileUrl('css', 'base')}') layer(base);
+		@import url('/styles/reset.css') layer(reset);
+		@import url('${getBundleFileUrl('css', 'base')}') layer(base);
+		@import url('${getBundleFileUrl('css', 'print')}') layer(print) print;
 	`"
 ></style>
 <style
