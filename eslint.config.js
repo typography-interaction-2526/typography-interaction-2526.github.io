@@ -114,7 +114,7 @@ export default [
 		languageOptions: { parser: htmlParser },
 		plugins: { '@html-eslint': htmlPlugin },
 		rules: {
-			// So we can use nested Markdown-within-HTML as content/slots (using patch)!
+			// So we can use nested Markdown-within-HTML as content/slots.
 			'@html-eslint/indent': ['error', 'tab', {
 				'Attribute': 1,
 				'tagChildrenIndent': {
