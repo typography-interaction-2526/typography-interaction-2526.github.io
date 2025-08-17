@@ -38,7 +38,7 @@ export default (eleventyConfig) => {
 	eleventyConfig.addPassthroughCopy('content/topic/*/*/*.*')
 
 	// Don’t render out drafts—but this leaves them in the collections for date calculations.
-	process.env.ELEVENTY_RUN_MODE === 'build' && eleventyConfig.addGlobalData('eleventyComputed', { permalink: data => data.draft ? false : data.permalink })
+	process.env.ELEVENTY_RUN_MODE === 'build' && eleventyConfig.addGlobalData('eleventyComputed', { permalink: (data) => data.draft ? false : data.permalink })
 
 	// Markdown stuff.
 	const markdownOptions = {
@@ -50,7 +50,7 @@ export default (eleventyConfig) => {
 
 	const markdown = markdownIt(markdownOptions)
 		// Fix name collision with global `env.abbreviations` data and `markdown-it-abbr`.
-		.use(markdown => markdown.render = (src, env = {}) =>
+		.use((markdown) => markdown.render = (src, env = {}) =>
 			(delete env.abbreviations, markdown.constructor.prototype.render.call(markdown, src, env)))
 		.use(markdownItAbbr)
 		.use(markdownItDeflist)
@@ -61,14 +61,14 @@ export default (eleventyConfig) => {
 		})
 		.use(markdownItAttrs)
 		.use(componentPlugin) // Allows custom HTML component names (otherwise made into strings).
-		.use(markdown => markdown.renderer.rules.fence = (tokens, index, options, env, self) =>
+		.use((markdown) => markdown.renderer.rules.fence = (tokens, index, options, env, self) =>
 			`<pre ${self.renderAttrs(tokens[index])}>
 				<code class="language-${tokens[index].info.trim()}">${markdown.utils.escapeHtml(tokens[index].content)}</code>
-			</pre>`
+			</pre>`,
 		)
 
 	// Append abbreviations for `markdownItAbbr`.
-	const markdownAbbreviations = abbreviations.map(item => `\n*[${item.abbr}]: ${item.title}`).join('\n')
+	const markdownAbbreviations = abbreviations.map((item) => `\n*[${item.abbr}]: ${item.title}`).join('\n')
 
 	// Append them for the plugin.
 	eleventyConfig.addPreprocessor('abbreviations', '.md', (data, content) => content + markdownAbbreviations)
@@ -111,13 +111,13 @@ export default (eleventyConfig) => {
 	eleventyConfig.addFilter('displayDate', (date) => new Date(date).toLocaleDateString('en-US', { day: 'numeric', month: 'long', timeZone: 'UTC' }))
 
 	// Set up the weeks for date logic.
-	eleventyConfig.addCollection('weeks', collection => collection
+	eleventyConfig.addCollection('weeks', (collection) => collection
 		.getFilteredByGlob('content/week/*.md')
 		.sort((a, b) => a.inputPath.localeCompare(b.inputPath, undefined, { numeric: true })),
 	)
 
 	// Root/admins stuff.
-	eleventyConfig.addCollection('root', collection => collection
+	eleventyConfig.addCollection('root', (collection) => collection
 		.getFilteredByGlob('content/*.{md,webc}')
 		.sort((a, b) => (a.data.order || 0) - (b.data.order || 0)),
 	)

@@ -22,6 +22,7 @@ export default [
 	},
 	{
 		rules: {
+			'arrow-parens': ['error', 'always'],
 			'comma-dangle': ['error', 'always-multiline'],
 			'indent': ['error', 'tab'],
 			'no-console': 'warn',
