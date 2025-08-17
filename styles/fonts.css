@@ -1,5 +1,32 @@
+@font-face {
+	font-family: 'Gorton Digital';
+	font-weight: 300;
+	src:         url('../assets/fonts/gorton-digital--light.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Gorton Digital';
+	font-weight: 400;
+	src:         url('../assets/fonts/gorton-digital--regular.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Gorton Digital';
+	font-weight: 500;
+	src:         url('../assets/fonts/gorton-digital--medium.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Gorton Digital';
+	font-weight: 700;
+	src:         url('../assets/fonts/gorton-digital--heavy.otf') format('opentype');
+}
+
 :root {
-	font-size: 62.5%;
+	font-family:    'Gorton Digital', sans-serif;
+	font-size:      62.5%;
+	font-synthesis: none;
+	font-weight:    300;
 
 	* {
 		font-kerning:             normal;

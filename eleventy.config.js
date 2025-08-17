@@ -30,7 +30,7 @@ export default (eleventyConfig) => {
 
 	// Slide these on over.
 	eleventyConfig.addPassthroughCopy('styles/reset.css')
-	eleventyConfig.addPassthroughCopy('assets/**/*.(ico|js|pdf|png)')
+	eleventyConfig.addPassthroughCopy('assets/**/*.(ico|otf|pdf|png)')
 	eleventyConfig.addPassthroughCopy('content/**/*.(gif|jpg|png|svg)')
 
 	// Don’t render examples as if they’re real pages, but copy them to the output as is.
