@@ -1,4 +1,17 @@
 :is(caption, dd, dt, h1, h2, h3, h4, h5, h6, p, td, th) {
+	font-size:     calc(var(--size) * 0.1rem);
+	line-height:   calc(var(--leading) * 1em);
 	text-box-edge: cap alphabetic; /* 🥹 */
 	text-box-trim: trim-both;      /* 😭 */
+}
+
+:is(h1, h2, h3, h4, h5, h6) { text-transform: uppercase }
+
+em { font-style: italic }
+
+/* Temp spacing. */
+body {
+	margin-inline: 3cap;
+
+	* { margin-block-start: 1cap }
 }
