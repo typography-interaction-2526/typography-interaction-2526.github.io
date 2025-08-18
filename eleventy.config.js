@@ -48,6 +48,16 @@ export default (eleventyConfig) => {
 		typographer: true,
 	}
 
+	const addNbsp = (markdown) => {
+		markdown.core.ruler.after('inline', 'nbsp', (state) => {
+			state.tokens.forEach((token) => {
+				token.type === 'inline' && token.children?.forEach((child) => {
+					child.type === 'text' && (child.content = child.content.replace(/(\s|^)(a|an|at|in|it|the) (\S)/gi, '$1$2\u00A0$3'))
+				})
+			})
+		})
+	}
+
 	const markdown = markdownIt(markdownOptions)
 		// Fix name collision with global `env.abbreviations` data and `markdown-it-abbr`.
 		.use((markdown) => markdown.render = (src, env = {}) =>
@@ -60,21 +70,13 @@ export default (eleventyConfig) => {
 			slugify: eleventyConfig.getFilter('slugify'),
 		})
 		.use(markdownItAttrs)
-		.use(componentPlugin) // Allows custom HTML component names (otherwise made into strings).
 		.use((markdown) => markdown.renderer.rules.fence = (tokens, index, options, env, self) =>
 			`<pre ${self.renderAttrs(tokens[index])}>
 				<code class="language-${tokens[index].info.trim()}">${markdown.utils.escapeHtml(tokens[index].content)}</code>
 			</pre>`,
 		)
-		.use((markdown) => {
-			markdown.core.ruler.after('inline', 'nbsp', (state) => {
-				state.tokens.forEach((token) => {
-					token.type === 'inline' && token.children?.forEach((child) => {
-						child.type === 'text' && (child.content = child.content.replace(/(\s|^)(a|an|the) (\S)/gi, '$1$2\u00A0$3'))
-					})
-				})
-			})
-		})
+		.use(addNbsp)
+		.use(componentPlugin) // Allows custom HTML component names (otherwise made into strings).
 
 	// Append abbreviations for `markdownItAbbr`.
 	const markdownAbbreviations = abbreviations.map((item) => `\n*[${item.abbr}]: ${item.title}`).join('\n')
@@ -92,6 +94,7 @@ export default (eleventyConfig) => {
 	eleventyConfig.addFilter('markdown', (content) =>
 		markdownIt(markdownOptions)
 			.use(markdownItAbbr)
+			.use(addNbsp)
 			.render(String(content + markdownAbbreviations))
 			.replace('<p>', '')
 			.replace('</p>', '')
