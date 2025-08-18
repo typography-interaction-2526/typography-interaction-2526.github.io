@@ -57,21 +57,17 @@ export default (eleventyConfig) => {
 
 		const nbsp = '\u00A0'
 
-		markdown.core.ruler.after('inline', 'nbsp', (state) => {
-			state.tokens?.forEach((token) => {
-				if (token.type === 'inline' && token.children) {
-					token.children.forEach((child, index, children) => {
-						if (child.type === 'text') {
-							// Before next word…
-							child.content = child.content.replace(wordPattern, `$1$2${nbsp}$3`)
+		markdown.core.ruler.after('inline', 'nbsp', ({ tokens }) =>
+			tokens?.forEach(({ children, type }) =>
+				type === 'inline' && children?.forEach((child, index, children) => {
+					if (child.type === 'text') {
+						child.content = child.content.replace(wordPattern, `$1$2${nbsp}$3`)
 
-							// If followed by a node (emphasis, link).
-							children?.[index + 1] && (child.content = child.content.replace(endPattern, `$1$2${nbsp}`))
-						}
-					})
-				}
-			})
-		})
+						children?.[index + 1] && (child.content = child.content.replace(endPattern, `$1$2${nbsp}`))
+					}
+				}),
+			),
+		)
 	}
 
 	const markdown = markdownIt(markdownOptions)
