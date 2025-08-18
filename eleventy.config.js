@@ -67,6 +67,11 @@ export default (eleventyConfig) => {
 
 						// Adds a `&ZeroWidthSpace;` after every slash.
 						child.content = child.content.replace(/\//g, '/\u200B')
+
+						// Prevent orphans.
+						child.content = child.content.replace(/(\S+)\s+(\S+)(?=\s*$)/gm, (match, prevWord, lastWord) =>
+							prevWord.length + lastWord.length <= 16 ? `${prevWord}\u00A0${lastWord}` : match,
+						)
 					}
 				}),
 			),
