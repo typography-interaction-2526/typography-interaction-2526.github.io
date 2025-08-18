@@ -116,14 +116,21 @@ export default (eleventyConfig) => {
 		.sort((a, b) => a.inputPath.localeCompare(b.inputPath, undefined, { numeric: true })),
 	)
 
-	// Root/admins stuff.
+	// Root/admin stuff.
 	eleventyConfig.addCollection('root', (collection) => collection
 		.getFilteredByGlob('content/*.{md,webc}')
 		.sort((a, b) => (a.data.order || 0) - (b.data.order || 0)),
 	)
 
 	// Big, combined, non-root collection. (Sorting is template-side!)
-	eleventyConfig.addCollection('pages', collection => collection.getFilteredByGlob('content/*/**/*.md'))
+	eleventyConfig.addCollection('pages', (collection) => collection.getFilteredByGlob('content/*/**/*.md'))
+
+	// Transform words for faux-italics.
+	eleventyConfig.addTransform('italicSpans', function(html) {
+		return this.inputPath.endsWith('.md') && this.outputPath?.endsWith('.html')
+			? html.replace(/<em>([\s\S]*?)<\/em>/g, (match, inner) => `<em>${inner.replace(/(\S+)/g, '<span>$1</span>')}</em>` )
+			: html
+	})
 
 	// Remainder setup.
 	return {
