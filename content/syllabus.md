@@ -5,17 +5,14 @@
 
 ## Course Description
 
-*<span webc:nokeep @text="course.title"></span>* is a year-long course, divided into two classes, which will provide a rigorous foundation of typographic and interaction principles in the context of digital design. Over both classes, students will acquire and hone the skills they need for success in the field of interactive design.
-<!-- .bold .balance .scale--h4 .balance style="margin-inline-end: initial" -->
+*Typography & Interaction* is a year-long course, divided into two classes, which will provide a rigorous foundation of typographic and interaction principles in the context of digital design. Over both classes, students will acquire and hone the skills they need for success in the field of interactive design.
 
 ### Fall
 
 This first semester will focus on a mastery of type and layout concepts on the web.
-<!-- .bold .balance .scale--h4 -->
 
 - <a :href="course.syllabus.fall"><letter-bullet @bullet="V" @title="Submitted Version"></letter-bullet></a>
 - <a :href="course.catalog.fall"><letter-bullet @title="Course Catalog"></letter-bullet></a>
-<!-- .link-list .right style="--rows: 2" -->
 
 Typography is the infrastructure of communication in nearly any visual medium. It provides the very first shape and form to written content, and as designers, it is our responsibility to do this with intention and care. Whether towards goals of expression itself or in the service of ideas, the designer must understand type to use it successfully. In this way, we are stewards of meaning.
 
@@ -26,11 +23,9 @@ In this class, students will learn intermediate and advanced methods in typogra
 ### Spring
 
 Our second semester will build on the type and layout foundations from the first, moving into interface design and interactive experiences on the web.
-<!-- .bold .balance .scale--h4 -->
 
 - <a :href="course.syllabus.spring"><letter-bullet @bullet="V" @title="Submitted Version"></letter-bullet></a>
 - <a :href="course.catalog.spring"><letter-bullet @title="Course Catalog"></letter-bullet></a>
-<!-- .link-list .right -->
 
 Interaction, interactive, interface, product, UI, UX designers—we are known by many names. These are all monikers for a digitally-native design practice. It is our responsibility, as practitioners in this increasingly consequential and broadening field, to both understand existing paradigms and help manifest, refine, and sustain purposeful new ones.
 
@@ -55,7 +50,6 @@ In this class, students will learn to give form to and then work at these int
 - Give, receive, and respond productively to feedback in critiques.
 
 - Think critically and develop their own, distinct thoughts on the role of digital within the larger canon of design.
-<!-- .balance -->
 
 ### Spring
 
@@ -74,7 +68,6 @@ In this class, students will learn to give form to and then work at these int
 - Conceptualize a web project with an eye towards its complete implementation—balancing the tradeoffs between design, features, and practical build considerations or limitations.
 
 - Develop an understanding of how they want to practice as a designer within the larger context of the discipline.
-<!-- .balance -->
 
 ## Course Outline
 
@@ -85,7 +78,6 @@ The course is structured into thematic units, each bookended by readings on the
 #### Weeks 1–6
 
 We will focus on reviewing the core principles of typography, and introduce the web and its base technologies. Students will learn about HTML, semantic DOM, basic CSS, as well as type hierarchy and the use of custom typefaces for the web.
-<!-- .balance -->
 
 #### Readings
 
@@ -103,7 +95,6 @@ We will focus on reviewing the core principles of typography, and introduce th
 
 - [<letter-bullet @title="A Handmade Web"></letter-bullet>](http://luckysoap.com/statements/handmadeweb.html)
 	J.R. Carpenter, 2015
-<!-- .link-list -->
 
 #### Project 1: Manuscript
 
@@ -112,14 +103,12 @@ We will focus on reviewing the core principles of typography, and introduce th
 Students will choose a seminal design text from [readings.design](https://readings.design), read and respond to it, and typeset their selection and reply together as a web page. Other texts are also allowed on a case-by-case basis.
 
 We’ll be looking for the quality of responses, appropriate type selection and hierarchy, semantic HTML, and basic CSS.
-<!-- .secondary -->
 
 ### Unit 2: There Is No Perfect Layout
 
 #### Weeks 7–10
 
 Students will learn how to design and implement more complex, flexible layouts, while collaborating closely with a classmate. We’ll introduce responsive design, media query CSS, and advanced web type techniques.
-<!-- .balance -->
 
 #### Readings
 
@@ -137,7 +126,6 @@ Students will learn how to design and implement more complex, flexible layouts,
 
 - [<letter-bullet @bullet="D" @title="The Diminishing Marginal Value of Aesthetics"></letter-bullet>](https://subpixel.space/entries/diminishing-marginal-aesthetic-value/)
 	Toby Shorin, 2017
-<!-- .link-list -->
 
 #### Project 2: Spread
 
@@ -146,14 +134,12 @@ This unit concludes with Project 2, *Spread*, which students will present on N
 Students will work in pairs, with a new text from those selected by the class in *Manuscript*. Each duo will sketch collaboratively and then implement a new expression together, via pair programming. The final web page will be responsive for mobile, desktop, and print layouts.
 
 Here we’re looking for successful design and development collaboration, box-model layout design, and use of responsive media queries.
-<!-- .secondary -->
 
 ### Unit 3: Typography as Interface
 
 #### Weeks 11–15
 
 In our final unit, we will focus on creating advanced, multi-page layouts with grid systems, prototyping their flows, and exploring typography’s usage as interface elements for navigating a website.
-<!-- .balance -->
 
 #### Readings
 
@@ -171,7 +157,6 @@ In our final unit, we will focus on creating advanced, multi-page layouts with 
 
 - [<letter-bullet @bullet="S" @title="My website is a shifting house next to a river of knowledge. What could yours be?"></letter-bullet>](https://thecreativeindependent.com/essays/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/)
 	Laurel Schwulst, 2018
-<!-- .link-list -->
 
 #### Project 3: Binding
 
@@ -180,14 +165,12 @@ This unit, and the first semester, will culminate with Project 3, *Binding*, w
 Students will assemble a collection of texts from *Spread*, combined with their original selection, into a “book.” The book will be a multi-page website with a homepage (cover), navigation (table of contents), individual pages for each text, and an introduction (colophon)—with consistent styles applied across all pages.
 
 We want to see effective multi-page design and navigation, advanced layouts (flexbox, grid), consistency across the pages and content, and polish/nuance.
-<!-- .secondary -->
 
 ### Unit 4: Interface as Interface
 
 #### Weeks 16–21
 
 We will expand on our first-semester foundations in design, typography, HTML, and CSS—now incorporating images and other media while introducing JavaScript to enliven our work. Students will be introduced to a CMS and will work with an API.
-<!-- .balance -->
 
 #### Readings
 
@@ -205,7 +188,6 @@ We will expand on our first-semester foundations in design, typography, HTML, 
 
 - [<letter-bullet @title="Folk Interfaces"></letter-bullet>](https://maggieappleton.com/folk-interfaces)
 	Maggie Appleton, 2022
-<!-- .link-list -->
 
 #### Project 4: Links
 
@@ -214,14 +196,12 @@ The unit ends with Project 4, *Links*, which students will present on February
 Students will collaboratively assemble, connect, and present a collection using [Are.na](https://www.are.na) as a platform/CMS—designing and building an interface to explore and understand it.
 
 In addition to our previous project requirements, here we’ll be looking for the effective use of images/media, meaningful interactive interface functionality, and your use of JavaScript.
-<!-- .secondary -->
 
 ### Unit 5: If All You Have Is a Hammer, Everything Looks Like a Nail
 
 #### Weeks 22–30
 
 To wrap up the semester (and course), we’ll round out our knowledge of the web’s intricacies—handling user input, managing state, constructing metadata. We will examine how our projects participate in and live elsewhere on the web, and outline real-world processes to make them come together.
-<!-- .balance -->
 
 #### Readings
 
@@ -239,7 +219,6 @@ To wrap up the semester (and course), we’ll round out our knowledge of the w
 
 - [<letter-bullet @title="Why A.I. Isn’t Going to Make Art"></letter-bullet>](https://web.archive.org/web/20240831102229/https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art)
 	Ted Chiang, 2024
-<!-- .link-list -->
 
 &nbsp;
 
@@ -266,7 +245,6 @@ To wrap up the semester (and course), we’ll round out our knowledge of the w
 
 - [<letter-bullet @bullet="S" @title="i&thinsp;OS Human Interface Guidelines"></letter-bullet>](https://www.evl.uic.edu/datsoupi/420_14/docs/MobileHIG.pdf)
 	Apple, 2014
-<!-- .link-list -->
 
 &nbsp;
 
@@ -278,7 +256,6 @@ To wrap up the semester (and course), we’ll round out our knowledge of the w
 
 - [<letter-bullet @title="Fluent 2 Design System"></letter-bullet>](https://www.microsoft.com/design/fluent/)
 	Microsoft, 2023 (*ongoing*)
-<!-- .link-list -->
 
 #### Project 5: Functions
 
@@ -287,7 +264,6 @@ This unit, and the course, will culminate with Project 5, *Functions*, which w
 Students will identify a problem and conceptualize how to solve it on the web. They will plan, design, and implement a novel solution towards this problem—incorporating data and interaction with the tools, technologies, and techniques they’ve learned in this course.
 
 We’ll first be looking for strong concepts—not limited to or by existing conventions—that push the grain of interaction design in new and interesting directions. And as the capstone for this course, we’re expecting the highest level of nuance and polish in the organizational, aesthetic, and technical aspects of these final projects.
-<!-- .secondary -->
 
 ## Evaluation Criteria
 
@@ -341,7 +317,6 @@ In the open tradition of the early web, the only materials truly required are
 In class, we will demonstrate using [Figma](http://figma.com) for visual design and sketching, [Visual Studio Code](https://code.visualstudio.com) for programming, and [GitHub](https://github.com)&thinsp;/&thinsp;[GitHub Desktop](https://desktop.github.com) for version control and project hosting. All of these products are available for free, or offer free education licenses to New School emails.
 
 **We will use the following tools to organize our class:**
-<!-- .add-before--3 -->
 
 - <a :href="pkg.homepage"><letter-bullet @title="Course Site"></letter-bullet></a>
 	For housekeeping, agendas, and lectures<span> (you are here)</span>
@@ -363,7 +338,6 @@ In class, we will demonstrate using [Figma](http://figma.com) for visual design
 
 - <a :href="course.channel.zoom"><letter-bullet @title="Zoom Room"></letter-bullet></a>
 	For screen sharing and recording
-<!-- .link-list -->
 
 ## Class Policies
 
@@ -384,7 +358,6 @@ This agreement is intended to help us create and maintain a safe, empathetic,
 - We will [attribute](#attribution) our work when referencing other tools or examples.
 
 - We will have a short break, roughly halfway through the class.
-<!-- .balance -->
 
 <aside>
 
@@ -422,9 +395,9 @@ To expand on this: we are not saying you can’t incorporate other resources. If
 
 </aside>
 
-**An example:** <!-- style="grid-column: aside" -->
+**An example:**
 
-```css <!-- .add-after style="grid-column: aside" -->
+```css
 /* I wanted to treat large grids differently in my design! */
 /* I found this tool: https://css-tip.com/quantity-queries/ */
 /* The selector matches when the container has a sixth child. */
@@ -454,9 +427,7 @@ We will take screen recordings of our sessions for students to reference later
 ## Attendance, Grading, and Other Policies
 
 All CD classes adhere to the same [common program and university policies](https://docs.google.com/document/d/1Su2tPo8ZW-EUVQ8svhCEDHYyKi93ugLLB2h8gc86Eoc).
-<!-- .balance -->
 
 ## Acknowledgments
 
 We’d like to thank [Brendan Griffiths](https://brendangriffiths.com/), [Lynn Kiang](http://www.lynnkiang.com), [Andrew LeClair](https://andrewleclair.com), [Rijk van Zanten](https://github.com/rijkvanzanten), and the [extended MPS CD family](https://mpscd.parsons.edu/faculty/) for their support in planning this course. And thank you, for reading this far.
-<!-- .balance -->
