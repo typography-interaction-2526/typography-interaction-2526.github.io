@@ -66,6 +66,15 @@ export default (eleventyConfig) => {
 				<code class="language-${tokens[index].info.trim()}">${markdown.utils.escapeHtml(tokens[index].content)}</code>
 			</pre>`,
 		)
+		.use((markdown) => {
+			markdown.core.ruler.after('inline', 'nbsp', (state) => {
+				state.tokens.forEach((token) => {
+					token.type === 'inline' && token.children?.forEach((child) => {
+						child.type === 'text' && (child.content = child.content.replace(/(\s|^)(a|an|the) (\S)/gi, '$1$2\u00A0$3'))
+					})
+				})
+			})
+		})
 
 	// Append abbreviations for `markdownItAbbr`.
 	const markdownAbbreviations = abbreviations.map((item) => `\n*[${item.abbr}]: ${item.title}`).join('\n')
@@ -79,28 +88,15 @@ export default (eleventyConfig) => {
 		content.replace(/<!--\s*(\.(?:[\s\S]*?)|#(?:[\s\S]*?)|data(?:[\s\S]*?)|style(?:[\s\S]*?))\s*-->$/gm, '{ $1 }'),
 	)
 
-	// Wrap the worst offenders.
-	const kerningSpans = content =>
-		[
-			'Ty',
-			'ct',
-		]
-			.reduce((content, pair) =>
-				content.replace(new RegExp(pair, 'gm'), `<span class="kern--${pair}">${pair}</span>`), content)
-
-	eleventyConfig.addPreprocessor('kerningSpans', '.md', (data, content) => kerningSpans(content))
-
 	// Filter for component use.
 	eleventyConfig.addFilter('markdown', (content) =>
-		kerningSpans(
-			markdownIt(markdownOptions)
-				.use(markdownItAbbr)
-				.render(String(content + markdownAbbreviations))
-				.replace('<p>', '')
-				.replace('</p>', '')
-				.replace('&amp;', '&')
-				.trim(),
-		),
+		markdownIt(markdownOptions)
+			.use(markdownItAbbr)
+			.render(String(content + markdownAbbreviations))
+			.replace('<p>', '')
+			.replace('</p>', '')
+			.replace('&amp;', '&')
+			.trim(),
 	)
 
 	// Overall Markdown use.

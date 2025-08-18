@@ -10,8 +10,9 @@
 
 /* Faux-italics. */
 em {
-	font-style:     italic;
-	font-synthesis: none; /* Prevent Safari from doing it. */
+	font-style:        italic;
+	font-synthesis:    none; /* Prevent Safari from doing it. */
+	margin-inline-end: 0.15em;
 
 	span {
 		display:   inline-block;
