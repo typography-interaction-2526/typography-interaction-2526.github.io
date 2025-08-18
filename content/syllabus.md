@@ -5,7 +5,7 @@
 
 ## Course Description
 
-*<span @text=course.title webc:nokeep></span>* is a year-long course, divided into two classes, which will provide a rigorous foundation of typographic and interaction principles in the context of digital design. Over both classes, students will acquire and hone the skills they need for success in the field of interactive design.
+*<span webc:nokeep @text="course.title"></span>* is a year-long course, divided into two classes, which will provide a rigorous foundation of typographic and interaction principles in the context of digital design. Over both classes, students will acquire and hone the skills they need for success in the field of interactive design.
 <!-- .bold .balance .scale--h4 .balance style="margin-inline-end: initial" -->
 
 ### Fall
@@ -13,8 +13,8 @@
 This first semester will focus on a mastery of type and layout concepts on the web.
 <!-- .bold .balance .scale--h4 -->
 
-- <a :href=course.syllabus.fall><letter-bullet @bullet="V" @title="Submitted Version"></letter-bullet></a>
-- <a :href=course.catalog.fall><letter-bullet @title="Course Catalog"></letter-bullet></a>
+- <a :href="course.syllabus.fall"><letter-bullet @bullet="V" @title="Submitted Version"></letter-bullet></a>
+- <a :href="course.catalog.fall"><letter-bullet @title="Course Catalog"></letter-bullet></a>
 <!-- .link-list .right style="--rows: 2" -->
 
 Typography is the infrastructure of communication in nearly any visual medium. It provides the very first shape and form to written content, and as designers, it is our responsibility to do this with intention and care. Whether towards goals of expression itself or in the service of ideas, the designer must understand type to use it successfully. In this way, we are stewards of meaning.
@@ -28,8 +28,8 @@ In this class, students will learn intermediate and advanced methods in typogra
 Our second semester will build on the type and layout foundations from the first, moving into interface design and interactive experiences on the web.
 <!-- .bold .balance .scale--h4 -->
 
-- <a :href=course.syllabus.spring><letter-bullet @bullet="V" @title="Submitted Version"></letter-bullet></a>
-- <a :href=course.catalog.spring><letter-bullet @title="Course Catalog"></letter-bullet></a>
+- <a :href="course.syllabus.spring"><letter-bullet @bullet="V" @title="Submitted Version"></letter-bullet></a>
+- <a :href="course.catalog.spring"><letter-bullet @title="Course Catalog"></letter-bullet></a>
 <!-- .link-list .right -->
 
 Interaction, interactive, interface, product, UI, UX <nobr>designers—</nobr>we are known by many names. These are all monikers for a digitally-native design practice. It is our responsibility, as practitioners in this increasingly consequential and broadening field, to both understand existing paradigms and help manifest, refine, and sustain purposeful new ones.
@@ -147,7 +147,6 @@ Students will work in pairs, with a new text from those selected by the class
 
 Here we’re looking for successful design and development collaboration, <nobr>box-model</nobr> layout design, and use of responsive media queries.
 <!-- .secondary -->
-
 
 ### Unit 3: Typography as Interface
 
@@ -344,25 +343,25 @@ In class, we will demonstrate using [Figma](http://figma.com) for visual design
 **We will use the following tools to organize our class:**
 <!-- .add-before--3 -->
 
-- <a :href=pkg.homepage><letter-bullet @title="Course Site"></letter-bullet></a>
+- <a :href="pkg.homepage"><letter-bullet @title="Course Site"></letter-bullet></a>
 	For housekeeping, agendas, and lectures<span> (you are here)</span>
 
-- <a :href=course.channel.submit><letter-bullet @title="Submission Form"></letter-bullet></a>
+- <a :href="course.channel.submit"><letter-bullet @title="Submission Form"></letter-bullet></a>
 	For submitting your work/URL&thinsp;s
 
-- <a :href=course.channel.slack><letter-bullet @title="Slack Channel"></letter-bullet></a>
+- <a :href="course.channel.slack"><letter-bullet @title="Slack Channel"></letter-bullet></a>
 	For direct and asynchronous communication (*not* email)
 
-- <a :href=course.channel.figma><letter-bullet @title="Figma Team"></letter-bullet></a>
+- <a :href="course.channel.figma"><letter-bullet @title="Figma Team"></letter-bullet></a>
 	For visual sketching, sharing
 
-- <a :href=course.channel.github><letter-bullet @title="GitHub Organization"></letter-bullet></a>
+- <a :href="course.channel.github"><letter-bullet @title="GitHub Organization"></letter-bullet></a>
 	For code examples, sharing
 
-- <a :href=course.channel.google><letter-bullet @title="Google Drive"></letter-bullet></a>
+- <a :href="course.channel.google"><letter-bullet @title="Google Drive"></letter-bullet></a>
 	For document collaboration, recorded lectures
 
-- <a :href=course.channel.zoom><letter-bullet @title="Zoom Room"></letter-bullet></a>
+- <a :href="course.channel.zoom"><letter-bullet @title="Zoom Room"></letter-bullet></a>
 	For screen sharing and recording
 <!-- .link-list -->
 
@@ -372,7 +371,7 @@ In class, we will demonstrate using [Figma](http://figma.com) for visual design
 
 This agreement is intended to help us create and maintain a safe, empathetic, and productive space for our course. It can be revised and modified, with all of our input, over the year:
 
-- The class should feel comfortable asking the instructors <nobr>anything—</nobr>nothing is too trivial, or embarrassing, or off-topic. Tangents are good. Students can ask us via <a :href=course.channel.slack>Slack</a>, if they would like to remain anonymous.
+- The class should feel comfortable asking the instructors <nobr>anything—</nobr>nothing is too trivial, or embarrassing, or off-topic. Tangents are good. Students can ask us via <a :href="course.channel.slack">Slack</a>, if they would like to remain anonymous.
 
 - Classmates should use our [preferred names and pronouns](/class).
 
@@ -399,9 +398,9 @@ Our intent is to respect and give forum to a range of perspectives and bac
 
 ### Office Hours
 
-We will have limited availability outside of our class time, and won’t keep scheduled “office hours.” Students should not expect us to immediately solve specific design or technical problems, or be blocked by this. Their first resource should be themselves, then <a :href=pkg.homepage>this course site</a> and its materials, and then each other.
+We will have limited availability outside of our class time, and won’t keep scheduled “office hours.” Students should not expect us to immediately solve specific design or technical problems, or be blocked by this. Their first resource should be themselves, then <a :href="pkg.homepage">this course site</a> and its materials, and then each other.
 
-If there are still <nobr>questions—</nobr>particularly logistical or content <nobr>ones—</nobr>students can message us on <a :href=course.channel.slack>Slack</a>, and we will respond when we can. But this should never be a bottleneck; all of this works better when not done at the last minute.
+If there are still <nobr>questions—</nobr>particularly logistical or content <nobr>ones—</nobr>students can message us on <a :href="course.channel.slack">Slack</a>, and we will respond when we can. But this should never be a bottleneck; all of this works better when not done at the last minute.
 
 ### Additional Technical Help
 
@@ -450,7 +449,7 @@ We think you first need to write code yourself to understand the medium. Copy
 
 ### Recording Sessions
 
-We will take screen recordings of our sessions for students to reference later. As these will include the students and their work, the recordings will be stored on our <a :href=course.channel.google>Google Drive</a> and made available only to New School email users.
+We will take screen recordings of our sessions for students to reference later. As these will include the students and their work, the recordings will be stored on our <a :href="course.channel.google">Google Drive</a> and made available only to New School email users.
 
 ## Attendance, Grading, and Other Policies
 
