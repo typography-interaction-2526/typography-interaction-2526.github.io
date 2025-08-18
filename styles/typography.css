@@ -12,12 +12,12 @@
 em {
 	font-style:        italic;
 	font-synthesis:    none; /* Prevent Safari from doing it. */
-	margin-inline-end: 0.15em;
+	margin-inline-end: 0.1em;
 
 	/* Added by an 11ty `transform`. */
 	span {
 		display:   inline-block;
-		transform: skew(-20deg) translateX(0.1em);
+		transform: skew(-15deg) translateX(0.1em);
 	}
 }
 
