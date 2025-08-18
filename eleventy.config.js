@@ -64,6 +64,9 @@ export default (eleventyConfig) => {
 
 						// Adds a “word joiner” `&NoBreak;` before em-dashes, to keep them from starting lines.
 						child.content = child.content.replace(/—/g, '\u2060—')
+
+						// Adds a `&ZeroWidthSpace;` after every slash.
+						child.content = child.content.replace(/\//g, '/\u200B')
 					}
 				}),
 			),
