@@ -14,6 +14,7 @@ em {
 	font-synthesis:    none; /* Prevent Safari from doing it. */
 	margin-inline-end: 0.15em;
 
+	/* Added by an 11ty `transform`. */
 	span {
 		display:   inline-block;
 		transform: skew(-20deg) translateX(0.1em);
