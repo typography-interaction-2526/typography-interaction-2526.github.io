@@ -50,7 +50,7 @@ export default (eleventyConfig) => {
 
 	// Do some automatic ragging.
 	const markdownRagging = (markdown) => {
-		const shortWords = 'a|an|as|at|I|in|it|of|the|to'
+		const shortWords = 'a|an|as|at|I|in|is|it|of|to'
 
 		markdown.core.ruler.after('inline', 'ragging', ({ tokens }) =>
 			tokens?.forEach(({ children, type }) =>
