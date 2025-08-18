@@ -66,7 +66,7 @@ export default [
 		languageOptions: { parser: htmlParser },
 		plugins: { '@html-eslint': htmlPlugin },
 		rules: {
-			'@html-eslint/element-newline': ['error', { 'inline': ['$inline'] }],
+			'@html-eslint/element-newline': ['error', { 'inline': ['$inline', 'nobr'] }],
 			'@html-eslint/id-naming-convention': ['error', 'kebab-case'],
 			'@html-eslint/lowercase': 'error',
 			'@html-eslint/no-duplicate-attrs': 'error',
