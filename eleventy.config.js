@@ -52,24 +52,21 @@ export default (eleventyConfig) => {
 	const addNbsp = (markdown) => {
 		const shortWords = 'a|an|at|in|it|the'
 
+		const wordPattern = new RegExp(`(\s|^)(${shortWords}) (\S)`, 'gi')
+		const endPattern = new RegExp(`(\s|^)(${shortWords})( ?)$`, 'i')
+
+		const nbsp = '\u00A0'
+
 		markdown.core.ruler.after('inline', 'nbsp', (state) => {
-			state.tokens.forEach((token) => {
+			state.tokens?.forEach((token) => {
 				if (token.type === 'inline' && token.children) {
 					token.children.forEach((child, index, children) => {
 						if (child.type === 'text') {
-							// In a string…
-							child.content = child.content.replace(
-								new RegExp(`(\\s|^)(${shortWords}) (\\S)`, 'gi'),
-								'$1$2\u00A0$3',
-							)
+							// Before next word…
+							child.content = child.content.replace(wordPattern, `$1$2${nbsp}$3`)
 
-							// Followed by a node (link, emphasis, etc.).
-							if (children[index + 1]) {
-								child.content = child.content.replace(
-									new RegExp(`(\\s|^)(${shortWords})( ?)$`, 'i'),
-									'$1$2\u00A0',
-								)
-							}
+							// If followed by a node (emphasis, link).
+							children?.[index + 1] && (child.content = child.content.replace(endPattern, `$1$2${nbsp}`))
 						}
 					})
 				}
