@@ -48,12 +48,31 @@ export default (eleventyConfig) => {
 		typographer: true,
 	}
 
+	// Do some automatic ragging.
 	const addNbsp = (markdown) => {
+		const shortWords = 'a|an|at|in|it|the'
+
 		markdown.core.ruler.after('inline', 'nbsp', (state) => {
 			state.tokens.forEach((token) => {
-				token.type === 'inline' && token.children?.forEach((child) => {
-					child.type === 'text' && (child.content = child.content.replace(/(\s|^)(a|an|at|in|it|the) (\S)/gi, '$1$2\u00A0$3'))
-				})
+				if (token.type === 'inline' && token.children) {
+					token.children.forEach((child, index, children) => {
+						if (child.type === 'text') {
+							// In a string…
+							child.content = child.content.replace(
+								new RegExp(`(\\s|^)(${shortWords}) (\\S)`, 'gi'),
+								'$1$2\u00A0$3',
+							)
+
+							// Followed by a node (link, emphasis, etc.).
+							if (children[index + 1]) {
+								child.content = child.content.replace(
+									new RegExp(`(\\s|^)(${shortWords})( ?)$`, 'i'),
+									'$1$2\u00A0',
+								)
+							}
+						}
+					})
+				}
 			})
 		})
 	}
