@@ -11,8 +11,8 @@
 
 This first semester will focus on a mastery of type and layout concepts on the web.
 
-- <a :href="course.syllabus.fall"><letter-bullet @bullet="V" @title="Submitted Version"></letter-bullet></a>
-- <a :href="course.catalog.fall"><letter-bullet @title="Course Catalog"></letter-bullet></a>
+- <a :href="course.syllabus.fall">Submitted Version</a>
+- <a :href="course.catalog.fall">Course Catalog</a>
 
 Typography is the infrastructure of communication in nearly any visual medium. It provides the very first shape and form to written content, and as designers, it is our responsibility to do this with intention and care. Whether towards goals of expression itself or in the service of ideas, the designer must understand type to use it successfully. In this way, we are stewards of meaning.
 
@@ -24,8 +24,8 @@ In this class, students will learn intermediate and advanced methods in typograp
 
 Our second semester will build on the type and layout foundations from the first, moving into interface design and interactive experiences on the web.
 
-- <a :href="course.syllabus.spring"><letter-bullet @bullet="V" @title="Submitted Version"></letter-bullet></a>
-- <a :href="course.catalog.spring"><letter-bullet @title="Course Catalog"></letter-bullet></a>
+- <a :href="course.syllabus.spring">Submitted Version</a>
+- <a :href="course.catalog.spring">Course Catalog</a>
 
 Interaction, interactive, interface, product, UI, UX designers—we are known by many names. These are all monikers for a digitally-native design practice. It is our responsibility, as practitioners in this increasingly consequential and broadening field, to both understand existing paradigms and help manifest, refine, and sustain purposeful new ones.
 
@@ -81,19 +81,19 @@ We will focus on reviewing the core principles of typography, and introduce the 
 
 #### Readings
 
-- [<letter-bullet @bullet="N" @title="The Principles of the New Typography"></letter-bullet>](https://readings.design/PDF/ThePrinciplesoftheNewTypography.pdf)
+- [The Principles of the New Typography](https://readings.design/PDF/ThePrinciplesoftheNewTypography.pdf)
 	Jan Tschichold, 1928
 
-- [<letter-bullet @bullet="G" @title="The Crystal Goblet, or Printing Should Be Invisible"></letter-bullet>](https://readings.design/PDF/The%20Crystal%20Goblet.pdf)
+- [The Crystal Goblet, or Printing Should Be Invisible](https://readings.design/PDF/The%20Crystal%20Goblet.pdf)
 	Beatrice Warde, 1932
 
-- [<letter-bullet @title="Detail in Typography"></letter-bullet>](https://static.trogu.com/documents/articles/palgrave/references/hochuli-Jost-H-Detail-in-Typography%20scribd%20-%2064-page.pdf)
+- [Detail in Typography](https://static.trogu.com/documents/articles/palgrave/references/hochuli-Jost-H-Detail-in-Typography%20scribd%20-%2064-page.pdf)
 	Jost Hochuli, 1987
 
-- [<letter-bullet @title="The Elements of Typographic Style"></letter-bullet>](https://readings.design/PDF/the_elements_of_typographic_style.pdf)
+- [The Elements of Typographic Style](https://readings.design/PDF/the_elements_of_typographic_style.pdf)
 	Robert Bringhurst, 1992
 
-- [<letter-bullet @title="A Handmade Web"></letter-bullet>](http://luckysoap.com/statements/handmadeweb.html)
+- [A Handmade Web](http://luckysoap.com/statements/handmadeweb.html)
 	J.R. Carpenter, 2015
 
 #### Project 1: Manuscript
@@ -112,19 +112,19 @@ Students will learn how to design and implement more complex, flexible layouts, 
 
 #### Readings
 
-- [<letter-bullet @bullet="G" @title="Investigations on Gestalt Principles"></letter-bullet>](https://g-e-s-t-a-l-t.org/media/pdf/Investigations-on-Gestalt-Principles.pdf)
+- [Investigations on Gestalt Principles](https://g-e-s-t-a-l-t.org/media/pdf/Investigations-on-Gestalt-Principles.pdf)
 	Max Wertheimer, 1923
 
-- [<letter-bullet @title="Continuity and Change"></letter-bullet>](https://readings.design/PDF/MaxBill-ContinuityAndChange.pdf)
+- [Continuity and Change](https://readings.design/PDF/MaxBill-ContinuityAndChange.pdf)
 	Max Bill, 1953
 
-- [<letter-bullet @bullet="S" @title="Grid Systems in Graphic Design"></letter-bullet>](https://monoskop.org/images/a/a4/Mueller-Brockmann_Josef_Grid_Systems_in_Graphic_Design_Raster_Systeme_fuer_die_Visuele_Gestaltung_English_German_no_OCR.pdf)
+- [Grid Systems in Graphic Design](https://monoskop.org/images/a/a4/Mueller-Brockmann_Josef_Grid_Systems_in_Graphic_Design_Raster_Systeme_fuer_die_Visuele_Gestaltung_English_German_no_OCR.pdf)
 	Josef Müller-Brockmann, 1981
 
-- [<letter-bullet @bullet="W" @title="The Web’s Grain"></letter-bullet>](https://frankchimero.com/blog/2015/the-webs-grain/)
+- [The Web’s Grain](https://frankchimero.com/blog/2015/the-webs-grain/)
 	Frank Chimero, 2015
 
-- [<letter-bullet @bullet="D" @title="The Diminishing Marginal Value of Aesthetics"></letter-bullet>](https://subpixel.space/entries/diminishing-marginal-aesthetic-value/)
+- [The Diminishing Marginal Value of Aesthetics](https://subpixel.space/entries/diminishing-marginal-aesthetic-value/)
 	Toby Shorin, 2017
 
 #### Project 2: Spread
@@ -143,19 +143,19 @@ In our final unit, we will focus on creating advanced, multi-page layouts with g
 
 #### Readings
 
-- [<letter-bullet @title="Design Interface: How Man and Machine Communicate"></letter-bullet>](https://i-n-t-e-r-f-a-c-e.org/media/pdf/Design-Interface.pdf)
+- [Design Interface: How Man and Machine Communicate](https://i-n-t-e-r-f-a-c-e.org/media/pdf/Design-Interface.pdf)
 	Gianni Barbacetto, 1987
 
-- [<letter-bullet @title="A Software Design Manifesto"></letter-bullet>](https://hci.stanford.edu/publications/bds/1-kapor.html)
+- [A Software Design Manifesto](https://hci.stanford.edu/publications/bds/1-kapor.html)
 	Mitchell Kapor, 1990
 
-- [<letter-bullet @title="Typeface As Programme"></letter-bullet>](https://www.typotheque.com/articles/typeface_as_programme)
+- [Typeface As Programme](https://www.typotheque.com/articles/typeface_as_programme)
 	Jürg Lehni, 2011
 
-- [<letter-bullet @bullet="W" @title="Interface Writing: Code for Humans"></letter-bullet>](https://www.nicolefenton.com/interface-writing/)
+- [Interface Writing: Code for Humans](https://www.nicolefenton.com/interface-writing/)
 	Nicole Fenton, 2014
 
-- [<letter-bullet @bullet="S" @title="My website is a shifting house next to a river of knowledge. What could yours be?"></letter-bullet>](https://thecreativeindependent.com/essays/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/)
+- [My website is a shifting house next to a river of knowledge. What could yours be?](https://thecreativeindependent.com/essays/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/)
 	Laurel Schwulst, 2018
 
 #### Project 3: Binding
@@ -174,19 +174,19 @@ We will expand on our first-semester foundations in design, typography, HTML, an
 
 #### Readings
 
-- [<letter-bullet @bullet="E" @title="The Design of Everyday Things"></letter-bullet>](https://dl.icdst.org/pdfs/files4/4bb8d08a9b309df7d86e62ec4056ceef.pdf)
+- [The Design of Everyday Things](https://dl.icdst.org/pdfs/files4/4bb8d08a9b309df7d86e62ec4056ceef.pdf)
 	Don Norman, 1988 (*revised* 2013)
 
-- [<letter-bullet @bullet="G" @title="I Am a Handle"></letter-bullet>](https://linedandunlined.com/archive/i-am-a-handle/)
+- [I Am a Handle](https://linedandunlined.com/archive/i-am-a-handle/)
 	Rob Giampietro, 2012
 
-- [<letter-bullet @bullet="R" @title="Sometimes It Looks Like a Duck, Sometimes It Looks Like a Rabbit"></letter-bullet>](https://linkedbyair.net/balkin.pdf)
+- [Sometimes It Looks Like a Duck, Sometimes It Looks Like a Rabbit](https://linkedbyair.net/balkin.pdf)
 	Jack Balkin, Dan Michaelson, 2012
 
-- [<letter-bullet @title="Laws of UX"></letter-bullet>](https://lawsofux.com/)
+- [Laws of UX](https://lawsofux.com/)
 	Jon Yablonski, 2018 (*ongoing*)
 
-- [<letter-bullet @title="Folk Interfaces"></letter-bullet>](https://maggieappleton.com/folk-interfaces)
+- [Folk Interfaces](https://maggieappleton.com/folk-interfaces)
 	Maggie Appleton, 2022
 
 #### Project 4: Links
@@ -205,56 +205,56 @@ To wrap up the semester (and course), we’ll round out our knowledge of the web
 
 #### Readings
 
-- [<letter-bullet @bullet="F" @title="What Is Code?"></letter-bullet>](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/)
+- [What Is Code?](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/)
 	Paul Ford, 2015
 
-- [<letter-bullet @title="TikTok’s Enshittification"></letter-bullet>](https://pluralistic.net/2023/01/21/potemkin-ai/#hey-guys)
+- [TikTok’s Enshittification](https://pluralistic.net/2023/01/21/potemkin-ai/#hey-guys)
 	Cory Doctorow, 2023
 
-- [<letter-bullet @bullet="J" @title="Chat&thinsp;GPT Is a Blurry JPEG of the Web"></letter-bullet>](https://web.archive.org/web/20230209152247/https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web)
+- [Chat&thinsp;GPT Is a Blurry JPEG of the Web](https://web.archive.org/web/20230209152247/https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web)
 	Ted Chiang, 2023
 
-- [<letter-bullet @bullet="A" @title="The Age of Average"></letter-bullet>](https://www.alexmurrell.co.uk/articles/the-age-of-average)
+- [The Age of Average](https://www.alexmurrell.co.uk/articles/the-age-of-average)
 	Alex Murrell, 2023
 
-- [<letter-bullet @title="Why A.I. Isn’t Going to Make Art"></letter-bullet>](https://web.archive.org/web/20240831102229/https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art)
+- [Why A.I. Isn’t Going to Make Art](https://web.archive.org/web/20240831102229/https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art)
 	Ted Chiang, 2024
 
 &nbsp;
 
-- [<letter-bullet @bullet="G" @title="Human Interface Guidelines"></letter-bullet>](https://andymatuschak.org/files/papers/Apple%20Human%20Interface%20Guidelines%201987.pdf)
+- [Human Interface Guidelines](https://andymatuschak.org/files/papers/Apple%20Human%20Interface%20Guidelines%201987.pdf)
 	Apple, 1987
 
-- [<letter-bullet @title="Macintosh Human Interface Guidelines"></letter-bullet>](https://vintageapple.org/macprogramming/pdf/Macintosh_Human_Interface_Guidelines_1992.pdf)
+- [Macintosh Human Interface Guidelines](https://vintageapple.org/macprogramming/pdf/Macintosh_Human_Interface_Guidelines_1992.pdf)
 	Apple, 1992
 
-- [<letter-bullet @bullet="W" @title="The Windows Interface Guidelines"></letter-bullet>](https://www.ics.uci.edu/~kobsa/courses/ICS104/course-notes/Microsoft_WindowsGuidelines.pdf)
+- [The Windows Interface Guidelines](https://www.ics.uci.edu/~kobsa/courses/ICS104/course-notes/Microsoft_WindowsGuidelines.pdf)
 	Microsoft, 1995
 
-- [<letter-bullet @title="Aqua Human Interface Guidelines"></letter-bullet>](http://www.multimedialab.be/doc/tech/doc_osx_hi_guidelines.pdf)
+- [Aqua Human Interface Guidelines](http://www.multimedialab.be/doc/tech/doc_osx_hi_guidelines.pdf)
 	Apple, 2001
 
-- [<letter-bullet @title="iPhone Human Interface Guidelines"></letter-bullet>](http://coolx.net/board/upload/develop/MobileHIG.pdf)
+- [iPhone Human Interface Guidelines](http://coolx.net/board/upload/develop/MobileHIG.pdf)
 	Apple, 2008
 
-- [<letter-bullet @bullet="7" @title="Windows Phone 7 UI Design and Interaction Guide"></letter-bullet>](http://tableless.github.io/exemplos/pdf/guidelines-interface-mobiles/UI%20Design%20and%20Interaction%20Guide%20for%20Windows%20Phone%207%20v2.0.pdf)
+- [Windows Phone 7 UI Design and Interaction Guide](http://tableless.github.io/exemplos/pdf/guidelines-interface-mobiles/UI%20Design%20and%20Interaction%20Guide%20for%20Windows%20Phone%207%20v2.0.pdf)
 	Microsoft, 2010
 
-- [<letter-bullet @bullet="1" @title="Material Design 1"></letter-bullet>](https://m1.material.io/)
+- [Material Design 1](https://m1.material.io/)
 	Google, 2014
 
-- [<letter-bullet @bullet="S" @title="i&thinsp;OS Human Interface Guidelines"></letter-bullet>](https://www.evl.uic.edu/datsoupi/420_14/docs/MobileHIG.pdf)
+- [i&thinsp;OS Human Interface Guidelines](https://www.evl.uic.edu/datsoupi/420_14/docs/MobileHIG.pdf)
 	Apple, 2014
 
 &nbsp;
 
-- [<letter-bullet @bullet="3" @title="Material Design 3"></letter-bullet>](https://m3.material.io/)
+- [Material Design 3](https://m3.material.io/)
 	Google, 2021 (*ongoing*)
 
-- [<letter-bullet @bullet="G" @title="Human Interface Guidelines"></letter-bullet>](https://developer.apple.com/design/human-interface-guidelines/guidelines/overview/)
+- [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/guidelines/overview/)
 	Apple, 2022 (*ongoing*)
 
-- [<letter-bullet @title="Fluent 2 Design System"></letter-bullet>](https://www.microsoft.com/design/fluent/)
+- [Fluent 2 Design System](https://www.microsoft.com/design/fluent/)
 	Microsoft, 2023 (*ongoing*)
 
 #### Project 5: Functions
@@ -318,25 +318,25 @@ In class, we will demonstrate using [Figma](http://figma.com) for visual design 
 
 **We will use the following tools to organize our class:**
 
-- <a :href="pkg.homepage"><letter-bullet @title="Course Site"></letter-bullet></a>
-	For housekeeping, agendas, and lectures<span> (you are here)</span>
+- <a :href="pkg.homepage">Course Site</a>
+	For housekeeping, agendas, and lectures (you are here)
 
-- <a :href="course.channel.submit"><letter-bullet @title="Submission Form"></letter-bullet></a>
+- <a :href="course.channel.submit">Submission Form</a>
 	For submitting your work/URL&thinsp;s
 
-- <a :href="course.channel.slack"><letter-bullet @title="Slack Channel"></letter-bullet></a>
+- <a :href="course.channel.slack">Slack Channel</a>
 	For direct and asynchronous communication (*not* email)
 
-- <a :href="course.channel.figma"><letter-bullet @title="Figma Team"></letter-bullet></a>
+- <a :href="course.channel.figma">Figma Team</a>
 	For visual sketching, sharing
 
-- <a :href="course.channel.github"><letter-bullet @title="GitHub Organization"></letter-bullet></a>
+- <a :href="course.channel.github">GitHub Organization</a>
 	For code examples, sharing
 
-- <a :href="course.channel.google"><letter-bullet @title="Google Drive"></letter-bullet></a>
+- <a :href="course.channel.google">Google Drive</a>
 	For document collaboration, recorded lectures
 
-- <a :href="course.channel.zoom"><letter-bullet @title="Zoom Room"></letter-bullet></a>
+- <a :href="course.channel.zoom">Zoom Room</a>
 	For screen sharing and recording
 
 ## Class Policies
