@@ -5,7 +5,7 @@
 <block webc:import="blocks/pages.webc">
 	<article>
 		<header>
-			<h1 @html="markdown(title || course.title)"></h1>
+			<h1 @html="markdown(title)"></h1>
 		</header>
 		<main @html="content"></main>
 	</article>

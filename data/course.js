@@ -12,5 +12,8 @@ export default {
 		zoom: 'https://NewSchool.zoom.us/j/98496458429',
 		zoomAlt: 'https://newschool.zoom.us/my/mfehrenbach',
 	},
-	title: 'Typography & Interaction, 2025–2026',
+	syllabus: {
+		fall: '',
+		spring: '',
+	},
 }
