@@ -49,21 +49,18 @@ export default (eleventyConfig) => {
 	}
 
 	// Do some automatic ragging.
-	const addNbsp = (markdown) => {
-		const shortWords = 'a|an|at|in|it|the'
+	const markdownRagging = (markdown) => {
+		const shortWords = 'a|an|as|at|I|in|it|of|the|to'
 
-		const wordPattern = new RegExp(`(\s|^)(${shortWords}) (\S)`, 'gi')
-		const endPattern = new RegExp(`(\s|^)(${shortWords})( ?)$`, 'i')
-
-		const nbsp = '\u00A0'
-
-		markdown.core.ruler.after('inline', 'nbsp', ({ tokens }) =>
+		markdown.core.ruler.after('inline', 'ragging', ({ tokens }) =>
 			tokens?.forEach(({ children, type }) =>
 				type === 'inline' && children?.forEach((child, index, children) => {
 					if (child.type === 'text') {
-						child.content = child.content.replace(wordPattern, `$1$2${nbsp}$3`)
+						// Keep short words with the following…
+						child.content = child.content.replace( new RegExp(`(\\s|^)(${shortWords}) (\\S)`, 'gi'), '$1$2\u00A0$3') // `&nbsp;`
 
-						children?.[index + 1] && (child.content = child.content.replace(endPattern, `$1$2${nbsp}`))
+						// Also when followed by a node (link, emphasis, etc.).
+						children[index + 1] && (child.content = child.content.replace(new RegExp(`(\\s|^)(${shortWords})( ?)$`, 'i'), '$1$2\u00A0'))
 					}
 				}),
 			),
@@ -87,7 +84,7 @@ export default (eleventyConfig) => {
 				<code class="language-${tokens[index].info.trim()}">${markdown.utils.escapeHtml(tokens[index].content)}</code>
 			</pre>`,
 		)
-		.use(addNbsp)
+		.use(markdownRagging)
 		.use(componentPlugin) // Allows custom HTML component names (otherwise made into strings).
 
 	// Append abbreviations for `markdownItAbbr`.
@@ -106,7 +103,7 @@ export default (eleventyConfig) => {
 	eleventyConfig.addFilter('markdown', (content) =>
 		markdownIt(markdownOptions)
 			.use(markdownItAbbr)
-			.use(addNbsp)
+			.use(markdownRagging)
 			.render(String(content + markdownAbbreviations))
 			.replace('<p>', '')
 			.replace('</p>', '')
