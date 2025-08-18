@@ -19,9 +19,9 @@ This first semester will focus on a mastery of type and layout concepts on 
 
 Typography is the infrastructure of communication in nearly any visual medium. It provides the very first shape and form to written content, and as designers, it is our responsibility to do this with intention and care. Whether towards goals of expression itself or in the service of ideas, the designer must understand type to use it successfully. In this way, we are stewards of meaning.
 
-Digital design, the web in particular, is inextricably linked with <nobr>typography—</nobr>from the very letters of code at its base to the words in arrangement we see on a screen. Type, thus, is the scaffolding in which all interaction design first rises. The very shape of the web, in its layouts, grid systems, and <nobr>patterns—</nobr>and its various <nobr>technologies—</nobr>all exist in the service of type, at their root. They provide the tools with which we can breathe a form and different, digital life into that meaning.
+Digital design, the web in particular, is inextricably linked with typography—from the very letters of code at its base to the words in arrangement we see on a screen. Type, thus, is the scaffolding in which all interaction design first rises. The very shape of the web, in its layouts, grid systems, and patterns—and its various technologies—all exist in the service of type, at their root. They provide the tools with which we can breathe a form and different, digital life into that meaning.
 
-In this class, students will learn intermediate and advanced methods in typography and layout as they concern interactive design. We will use web technologies as the lens to examine this <nobr>subject—</nobr>introducing the foundational, front-end languages of HTML (*HyperText Markup Language*) and CSS (*Cascading Style Sheets*) to achieve our designs. Students will understand the specific challenges of type in this medium, but also how it offers unique and particular forms to us as designers. They will learn the common tools and paradigms with which we practice, while developing their own visual, design vocabulary and critical understanding.
+In this class, students will learn intermediate and advanced methods in typography and layout as they concern interactive design. We will use web technologies as the lens to examine this subject—introducing the foundational, front-end languages of HTML (*HyperText Markup Language*) and CSS (*Cascading Style Sheets*) to achieve our designs. Students will understand the specific challenges of type in this medium, but also how it offers unique and particular forms to us as designers. They will learn the common tools and paradigms with which we practice, while developing their own visual, design vocabulary and critical understanding.
 
 ### Spring
 
@@ -32,11 +32,11 @@ Our second semester will build on the type and layout foundations from the fir
 - <a :href="course.catalog.spring"><letter-bullet @title="Course Catalog"></letter-bullet></a>
 <!-- .link-list .right -->
 
-Interaction, interactive, interface, product, UI, UX <nobr>designers—</nobr>we are known by many names. These are all monikers for a digitally-native design practice. It is our responsibility, as practitioners in this increasingly consequential and broadening field, to both understand existing paradigms and help manifest, refine, and sustain purposeful new ones.
+Interaction, interactive, interface, product, UI, UX designers—we are known by many names. These are all monikers for a digitally-native design practice. It is our responsibility, as practitioners in this increasingly consequential and broadening field, to both understand existing paradigms and help manifest, refine, and sustain purposeful new ones.
 
-Contemporary digital design exists in the continuum of the ever-shifting, evolving, and ubiquitous web. Designers today work at many different scales and within many different systems. We act as <nobr>mediators—</nobr>not only for users, meaning, and <nobr>experience—</nobr>but with these systems themselves, as well. They shape our work and we shape <nobr>them—</nobr>at the meeting point, the *interface*, between things.
+Contemporary digital design exists in the continuum of the ever-shifting, evolving, and ubiquitous web. Designers today work at many different scales and within many different systems. We act as mediators—not only for users, meaning, and experience—but with these systems themselves, as well. They shape our work and we shape them—at the meeting point, the *interface*, between things.
 
-In this class, students will learn to give form to and then work at these intersections. We will again use web technologies as our lens for the subject, building on our foundations in HTML and CSS by incorporating JS <nobr>(*JavaScript*)—</nobr>to give behavior, interaction, and life to our designs. We will survey modern approaches to front-end design and development, as our discipline has as many methodologies as we do names. There is no one way to do this work, nor one thing to do it <nobr>for—</nobr>and through our readings, discussions, exercises, and projects, students will understand and then situate themselves and their practice within the larger field.
+In this class, students will learn to give form to and then work at these intersections. We will again use web technologies as our lens for the subject, building on our foundations in HTML and CSS by incorporating JS (*JavaScript*)—to give behavior, interaction, and life to our designs. We will survey modern approaches to front-end design and development, as our discipline has as many methodologies as we do names. There is no one way to do this work, nor one thing to do it for—and through our readings, discussions, exercises, and projects, students will understand and then situate themselves and their practice within the larger field.
 
 ## Learning Outcomes
 
@@ -145,7 +145,7 @@ This unit concludes with Project 2, *Spread*, which students will present on N
 
 Students will work in pairs, with a new text from those selected by the class in *Manuscript*. Each duo will sketch collaboratively and then implement a new expression together, via pair programming. The final web page will be responsive for mobile, desktop, and print layouts.
 
-Here we’re looking for successful design and development collaboration, <nobr>box-model</nobr> layout design, and use of responsive media queries.
+Here we’re looking for successful design and development collaboration, box-model layout design, and use of responsive media queries.
 <!-- .secondary -->
 
 ### Unit 3: Typography as Interface
@@ -177,7 +177,7 @@ In our final unit, we will focus on creating advanced, multi-page layouts with 
 
 This unit, and the first semester, will culminate with Project 3, *Binding*, which will be presented in class on December 6.
 
-Students will assemble a collection of texts from *Spread*, combined with their original selection, into a “book.” The book will be a multi-page website with a homepage (cover), navigation (table of contents), individual pages for each text, and an introduction <nobr>(colophon)—</nobr>with consistent styles applied across all pages.
+Students will assemble a collection of texts from *Spread*, combined with their original selection, into a “book.” The book will be a multi-page website with a homepage (cover), navigation (table of contents), individual pages for each text, and an introduction (colophon)—with consistent styles applied across all pages.
 
 We want to see effective multi-page design and navigation, advanced layouts (flexbox, grid), consistency across the pages and content, and polish/nuance.
 <!-- .secondary -->
@@ -186,7 +186,7 @@ We want to see effective multi-page design and navigation, advanced layouts (fl
 
 #### Weeks 16–21
 
-We will expand on our first-<wbr>semester foundations in design, typography, HTML, <nobr>and CSS—</nobr>now incorporating images and other media while introducing JavaScript to enliven our work. Students will be introduced to a CMS and will work with an API.
+We will expand on our first-semester foundations in design, typography, HTML, and CSS—now incorporating images and other media while introducing JavaScript to enliven our work. Students will be introduced to a CMS and will work with an API.
 <!-- .balance -->
 
 #### Readings
@@ -211,16 +211,16 @@ We will expand on our first-<wbr>semester foundations in design, typography, H
 
 The unit ends with Project 4, *Links*, which students will present on February 26.
 
-Students will collaboratively assemble, connect, and present a collection using [Are.na](https://www.are.na) as a platform/<wbr><nobr>CMS—</nobr>designing and building an interface to explore and understand it.
+Students will collaboratively assemble, connect, and present a collection using [Are.na](https://www.are.na) as a platform/CMS—designing and building an interface to explore and understand it.
 
-In addition to our previous project requirements, here we’ll be looking for the effective use of images/<wbr>media, meaningful interactive interface functionality, and your use of JavaScript.
+In addition to our previous project requirements, here we’ll be looking for the effective use of images/media, meaningful interactive interface functionality, and your use of JavaScript.
 <!-- .secondary -->
 
 ### Unit 5: If All You Have Is a Hammer, Everything Looks Like a Nail
 
 #### Weeks 22–30
 
-To wrap up the semester (and course), we’ll round out our knowledge of the web’s <nobr>intricacies—</nobr>handling user input, managing state, constructing metadata. We will examine how our projects participate in and live elsewhere on the web, and outline real-world processes to make them come together.
+To wrap up the semester (and course), we’ll round out our knowledge of the web’s intricacies—handling user input, managing state, constructing metadata. We will examine how our projects participate in and live elsewhere on the web, and outline real-world processes to make them come together.
 <!-- .balance -->
 
 #### Readings
@@ -286,24 +286,24 @@ This unit, and the course, will culminate with Project 5, *Functions*, which w
 
 Students will identify a problem and conceptualize how to solve it on the web. They will plan, design, and implement a novel solution towards this problem—incorporating data and interaction with the tools, technologies, and techniques they’ve learned in this course.
 
-We’ll first be looking for strong <nobr>concepts—</nobr>not limited to or by existing <nobr>conventions—</nobr>that push the grain of interaction design in new and interesting directions. And as the capstone for this course, we’re expecting the highest level of nuance and polish in the organizational, aesthetic, and technical aspects of these final projects.
+We’ll first be looking for strong concepts—not limited to or by existing conventions—that push the grain of interaction design in new and interesting directions. And as the capstone for this course, we’re expecting the highest level of nuance and polish in the organizational, aesthetic, and technical aspects of these final projects.
 <!-- .secondary -->
 
 ## Evaluation Criteria
 
 - ### Engagement
 
-	Students are expected to actively and passionately participate in this course. This means more than showing up and turning things in on <nobr>time—</nobr>which should be a given. Beyond that baseline students should be curious, prepared, thoughtful, vocal, and intentional throughout the course. They should make us understand why they are here, and demonstrate to us that they care about themselves, their work, and each <nobr>other—</nobr>and ultimately, about this chosen profession.
+	Students are expected to actively and passionately participate in this course. This means more than showing up and turning things in on time—which should be a given. Beyond that baseline students should be curious, prepared, thoughtful, vocal, and intentional throughout the course. They should make us understand why they are here, and demonstrate to us that they care about themselves, their work, and each other—and ultimately, about this chosen profession.
 
-	This engagement will be unavoidably reflected in the quality of students’ <nobr>work—</nobr>but we also evaluate this discretely based on their participation in and out of the classroom, with us and with their peers.
+	This engagement will be unavoidably reflected in the quality of students’ work—but we also evaluate this discretely based on their participation in and out of the classroom, with us and with their peers.
 
 - ### Reading Responses
 
-	Each unit begins with a set of readings to introduce the subject. Students are expected to read the required selections and synthesize their thoughts in a written response, prior to the next class. We are not looking for summarization, <nobr>here—</nobr>these should be personal reflections on the subjects, and are evaluated with this lens. We will then discuss these readings as a group.
+	Each unit begins with a set of readings to introduce the subject. Students are expected to read the required selections and synthesize their thoughts in a written response, prior to the next class. We are not looking for summarization, here—these should be personal reflections on the subjects, and are evaluated with this lens. We will then discuss these readings as a group.
 
 - ### Exercises and Milestones
 
-	Each unit will also have specific, technical exercises and milestones that are assigned towards completion of the projects. These are weekly <nobr>assignments—</nobr>students are expected to complete them outside of class, before the next session. Some of these will be small; some of these will be large. They are *all* evaluated for completion and quality.
+	Each unit will also have specific, technical exercises and milestones that are assigned towards completion of the projects. These are weekly assignments—students are expected to complete them outside of class, before the next session. Some of these will be small; some of these will be large. They are *all* evaluated for completion and quality.
 
 - ### Projects
 
@@ -371,7 +371,7 @@ In class, we will demonstrate using [Figma](http://figma.com) for visual design
 
 This agreement is intended to help us create and maintain a safe, empathetic, and productive space for our course. It can be revised and modified, with all of our input, over the year:
 
-- The class should feel comfortable asking the instructors <nobr>anything—</nobr>nothing is too trivial, or embarrassing, or off-topic. Tangents are good. Students can ask us via <a :href="course.channel.slack">Slack</a>, if they would like to remain anonymous.
+- The class should feel comfortable asking the instructors anything—nothing is too trivial, or embarrassing, or off-topic. Tangents are good. Students can ask us via <a :href="course.channel.slack">Slack</a>, if they would like to remain anonymous.
 
 - Classmates should use our [preferred names and pronouns](/class).
 
@@ -400,21 +400,21 @@ Our intent is to respect and give forum to a range of perspectives and bac
 
 We will have limited availability outside of our class time, and won’t keep scheduled “office hours.” Students should not expect us to immediately solve specific design or technical problems, or be blocked by this. Their first resource should be themselves, then <a :href="pkg.homepage">this course site</a> and its materials, and then each other.
 
-If there are still <nobr>questions—</nobr>particularly logistical or content <nobr>ones—</nobr>students can message us on <a :href="course.channel.slack">Slack</a>, and we will respond when we can. But this should never be a bottleneck; all of this works better when not done at the last minute.
+If there are still questions—particularly logistical or content ones—students can message us on <a :href="course.channel.slack">Slack</a>, and we will respond when we can. But this should never be a bottleneck; all of this works better when not done at the last minute.
 
 ### Additional Technical Help
 
-For more specific technical instruction and questions, Parsons has dedicated CD-program tutors available to help students with HTML, CSS, and <nobr>JavaScript—</nobr>as well as offering general design critiques and feedback. The drop-in schedules are available in the [CD@Parsons app](https://cdparsons.glideapp.io) under “Make & Remake.”
+For more specific technical instruction and questions, Parsons has dedicated CD-program tutors available to help students with HTML, CSS, and JavaScript—as well as offering general design critiques and feedback. The drop-in schedules are available in the [CD@Parsons app](https://cdparsons.glideapp.io) under “Make & Remake.”
 
 The University Learning Center also offers its own [tutoring sessions](https://www.newschool.edu/learning-center/); these are by-appointment.
 
-As tutors are only available a limited number of hours per week, it is advisable to start early on your projects and seek help along the <nobr>way—</nobr>to avoid the usual end of project/<wbr>semester rush for additional help.
+As tutors are only available a limited number of hours per week, it is advisable to start early on your projects and seek help along the way—to avoid the usual end of project/semester rush for additional help.
 
 ### Code Plagiarism
 
 Students may find code similar to our exercises or projects elsewhere online. But the copying or adapting of *any* code beyond our provided course material (lectures, exercises, demos) without attribution is not allowed under any circumstances.
 
-If adapting, with attribution, students must explain the usage and demonstrate an understanding of how it works. We have zero tolerance for any sort of <nobr>plagiarism—</nobr>which ranges from “verbatim copying” (copying-and-pasting) to “thorough paraphrasing” (changing names or rearranging) of code. Students should also review the [Academic Integrity Policy](https://docs.google.com/document/d/175hXxUbLI8Jy7NEtbeoyX3Va_MQzXzgxzFUjj7hSkSU).
+If adapting, with attribution, students must explain the usage and demonstrate an understanding of how it works. We have zero tolerance for any sort of plagiarism—which ranges from “verbatim copying” (copying-and-pasting) to “thorough paraphrasing” (changing names or rearranging) of code. Students should also review the [Academic Integrity Policy](https://docs.google.com/document/d/175hXxUbLI8Jy7NEtbeoyX3Va_MQzXzgxzFUjj7hSkSU).
 
 <aside id="attribution">
 
@@ -443,9 +443,9 @@ Copying and pasting code in the absence of an attribution and explanation is p
 
 Relatedly, there has been a lot of discussion and developments in our field (and others) around [*large language models*](https://en.wikipedia.org/wiki/Large_language_model), a.k.a. “artificial intelligence.”
 
-Here’s what we’re going to say about this: tools like [Chat&thinsp;GPT](https://openai.com/blog/chatgpt) or [GitHub Copilot](https://github.com/features/copilot) are known to often generate wrong or unnecessarily verbose code. This, combined with the fact that their results are derived from potentially copyrighted and/or legally questionable <nobr>sources—</nobr>usually without permission or <nobr>attribution—</nobr>means the use of these tools remains fraught, at best.
+Here’s what we’re going to say about this: tools like [Chat&thinsp;GPT](https://openai.com/blog/chatgpt) or [GitHub Copilot](https://github.com/features/copilot) are known to often generate wrong or unnecessarily verbose code. This, combined with the fact that their results are derived from potentially copyrighted and/or legally questionable sources—usually without permission or attribution—means the use of these tools remains fraught, at best.
 
-We think you first need to write code yourself to understand the medium. Copying/adapting from Chat&thinsp;GPT/Copilot is no different from anywhere else ([see above](#code-plagiarism)) and is ultimately a disservice to your education. These are to be treated like any other tools at our <nobr>disposal—</nobr>as *aides* to your understanding, not *shortcuts* around learning. We think you know the difference.
+We think you first need to write code yourself to understand the medium. Copying/adapting from Chat&thinsp;GPT/Copilot is no different from anywhere else ([see above](#code-plagiarism)) and is ultimately a disservice to your education. These are to be treated like any other tools at our disposal—as *aides* to your understanding, not *shortcuts* around learning. We think you know the difference.
 
 ### Recording Sessions
 
