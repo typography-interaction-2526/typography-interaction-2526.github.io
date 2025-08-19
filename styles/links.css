@@ -3,13 +3,13 @@
 a:where([href]),
 button:where(:not([disabled])),
 summary {
-	border-radius: 1px; /* Force rounded corners with the offset. */
-	color:         blue; /* Temporary. */
-	cursor:        pointer;
-	display:       block;
-	margin:        calc(-1 * var(--x));
-	padding:       var(--x);
+	color:          blue; /* Temporary. */
+	display:        block;
+	outline-offset: var(--x);
+	position:       relative;
+	will-change:    opacity; /* Fix hover bobble. */
 
+	/* Focus outline. */
 	&:focus {
 		outline: none;
 
@@ -18,17 +18,53 @@ summary {
 			outline-width: 2px;
 		}
 	}
+
+	/* Pseudo for clicks, enlarged without shenanigans on parent. */
+	&::after {
+		background-color:           transparent;
+		content:                    '';
+		cursor:                     pointer;
+		inset:                      calc(-1 * var(--x));
+		pointer-events:             auto;
+		position:                   absolute;
+		transition-duration:        calc(var(--transition) / 2);
+		transition-property:        background-color;
+		transition-timing-function: linear;
+	}
+
+	&:active::after { background-color: var(--highlight) }
+
+	@media (any-hover: hover) {
+		transition-duration:        var(--transition);
+		transition-property:        opacity;
+		transition-timing-function: linear;
+
+		&:hover { opacity: var(--hover) }
+	}
 }
 
 /* Inline links. */
 :where(dd, dt, h1, h2, h3, h4, h5, h6, p, td, th) a {
-	display:              inline;
-	margin-block:         initial;
-	margin-inline-end:    calc(-1 * (var(--x) - var(--right)));
-	margin-inline-start:  calc(-1 * (var(--x) - var(--left)));
-	padding-block:        initial;
-	padding-block-end:    calc(var(--x) - var(--bottom--content));
-	padding-block-start:  calc(var(--x) - var(--top--content));
-	padding-inline-end:   calc(var(--x) - var(--right));
-	padding-inline-start: calc(var(--x) - var(--left));
+	-webkit-box-decoration-break: clone; /* “Restart” inline padding/margin over on wrapped links. */
+	display:                      inline;
+	margin-inline-end:            calc(-1 * (var(--x) - var(--right)));
+	margin-inline-start:          calc(-1 * (var(--x) - var(--left)));
+	outline-offset:               initial;
+	padding-block-end:            calc(var(--x) - var(--bottom--content)); /* Account for wonky link content box. */
+	padding-block-start:          calc(var(--x) - var(--top--content));
+	padding-inline-end:           calc(var(--x) - var(--right));
+	padding-inline-start:         calc(var(--x) - var(--left));
+	transition-duration:          calc(var(--transition) / 2), var(--transition);
+	transition-property:          background-color, opacity;
+	transition-timing-function:   linear;
+
+	/* Use background for active highlight, as it might wrap. */
+	&::after { content: initial }
+
+	&:active { background-color: var(--highlight) }
+
+	/* This sadly doesn’t work in Safari (doesn’t restart margin), causing overflows. */
+	@supports (font: -apple-system-body) { -webkit-box-decoration-break: initial }
+
+	/* SAFARI DECAPS LINKS? */
 }
