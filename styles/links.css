@@ -66,5 +66,5 @@ summary {
 	/* This sadly doesn’t work in Safari (doesn’t restart margin), causing overflows. */
 	@supports (font: -apple-system-body) { -webkit-box-decoration-break: initial }
 
-	/* SAFARI DECAPS LINKS? */
+	/* TODO Safari decaps links? */
 }
