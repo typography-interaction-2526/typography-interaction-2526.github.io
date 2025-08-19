@@ -11,6 +11,8 @@ import { componentPlugin } from '@mdit-vue/plugin-component' // Pretend we are V
 
 import abbreviations from './data/abbreviations.js'
 
+import pluginToc from '@uncenter/eleventy-plugin-toc'
+
 import stripTags from 'striptags'
 
 export default (eleventyConfig) => {
@@ -129,6 +131,20 @@ export default (eleventyConfig) => {
 	eleventyConfig.addFilter('stripTags', (content) => stripTags(String(content)))
 	eleventyConfig.addFilter('displayDate', (date) => new Date(date).toLocaleDateString('en-US', { day: 'numeric', month: 'long', timeZone: 'UTC' }))
 
+	// Transform words for faux-italics.
+	eleventyConfig.addTransform('italicSpans', function(html) {
+		return String(this.inputPath).endsWith('.md') && String(this.outputPath).endsWith('.html')
+			? html.replace(/<em>([\s\S]*?)<\/em>/g, (match, inner) => `<em>${inner.replace(/(\S+)/g, '<span>$1</span>')}</em>` )
+			: html
+	})
+
+	// Table of contents.
+	eleventyConfig.addPlugin(pluginToc, {
+		ignoredElements: ['a'],
+		ul: true,
+		wrapper: (toc) => toc,
+	})
+
 	// Set up the weeks for date logic.
 	eleventyConfig.addCollection('weeks', (collection) => collection
 		.getFilteredByGlob('content/week/*.md')
@@ -143,13 +159,6 @@ export default (eleventyConfig) => {
 
 	// Big, combined, non-root collection. (Sorting is template-side!)
 	eleventyConfig.addCollection('pages', (collection) => collection.getFilteredByGlob('content/*/**/*.md'))
-
-	// Transform words for faux-italics.
-	eleventyConfig.addTransform('italicSpans', function(html) {
-		return String(this.inputPath).endsWith('.md') && String(this.outputPath).endsWith('.html')
-			? html.replace(/<em>([\s\S]*?)<\/em>/g, (match, inner) => `<em>${inner.replace(/(\S+)/g, '<span>$1</span>')}</em>` )
-			: html
-	})
 
 	// Remainder setup.
 	return {
