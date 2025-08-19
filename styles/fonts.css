@@ -26,7 +26,6 @@
 	font-family:    'Gorton Digital', sans-serif;
 	font-size:      62.5%;
 	font-synthesis: none;
-	font-weight:    300;
 
 	* {
 		font-kerning:             normal;
@@ -36,4 +35,29 @@
 		text-rendering:           optimizeLegibility;
 		-webkit-text-size-adjust: none;
 	}
+}
+
+:root,
+.light {
+	--stroke: 0.056em;
+
+	font-weight: 300;
+}
+
+.regular {
+	--stroke: 0.079em;
+
+	font-weight: 400;
+}
+
+.medium {
+	--stroke: 0.089em;
+
+	font-weight: 500;
+}
+
+.heavy {
+	--stroke: 0.119em;
+
+	font-weight: 700;
 }
