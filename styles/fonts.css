@@ -30,6 +30,10 @@
 	--top:    0.057em;
 	--x:      0.407em;
 
+	/* Inline height of links. */
+	--bottom--content: 0.314em;
+	--top--content:    0.144em;
+
 	font-family:    'Gorton Digital', sans-serif;
 	font-size:      62.5%;
 	font-synthesis: none;

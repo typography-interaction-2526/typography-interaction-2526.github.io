@@ -13,6 +13,11 @@
 	href="../../styles/typography.css"
 	rel="stylesheet"
 >
+<link
+	webc:bucket="base"
+	href="../../styles/links.css"
+	rel="stylesheet"
+>
 <style
 	webc:keep
 	@raw="`

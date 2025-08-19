@@ -1,0 +1,34 @@
+:root { -webkit-tap-highlight-color: transparent }
+
+a:where([href]),
+button:where(:not([disabled])),
+summary {
+	border-radius: 1px; /* Force rounded corners with the offset. */
+	color:         blue; /* Temporary. */
+	cursor:        pointer;
+	display:       block;
+	margin:        calc(-1 * var(--x));
+	padding:       var(--x);
+
+	&:focus {
+		outline: none;
+
+		&:focus-visible {
+			outline-style: solid;
+			outline-width: 2px;
+		}
+	}
+}
+
+/* Inline links. */
+:where(dd, dt, h1, h2, h3, h4, h5, h6, p, td, th) a {
+	display:              inline;
+	margin-block:         initial;
+	margin-inline-end:    calc(-1 * (var(--x) - var(--right)));
+	margin-inline-start:  calc(-1 * (var(--x) - var(--left)));
+	padding-block:        initial;
+	padding-block-end:    calc(var(--x) - var(--bottom--content));
+	padding-block-start:  calc(var(--x) - var(--top--content));
+	padding-inline-end:   calc(var(--x) - var(--right));
+	padding-inline-start: calc(var(--x) - var(--left));
+}
