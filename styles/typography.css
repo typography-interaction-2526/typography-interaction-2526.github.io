@@ -1,6 +1,7 @@
 dd, dt, h1, h2, h3, h4, h5, h6, p, td, th {
 	margin-inline-end:   calc(-1 * var(--right));
 	margin-inline-start: calc(-1 * var(--left));
+	max-inline-size: 60ch;
 }
 
 h1, h2, h3, h4, h5, h6 { text-transform: uppercase }
@@ -20,3 +21,5 @@ em {
 
 /* Temp spacing. */
 body { margin-inline: 3cap }
+
+* { margin-block-start: 1cap }
