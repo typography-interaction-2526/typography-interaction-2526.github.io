@@ -92,7 +92,7 @@ export default (eleventyConfig) => {
 		.use(markdownItAttrs)
 		.use((markdown) => markdown.renderer.rules.fence = (tokens, index, options, env, self) =>
 			`<pre ${self.renderAttrs(tokens[index])}>
-				<code class="language-${tokens[index].info.trim()}">${markdown.utils.escapeHtml(tokens[index].content)}</code>
+				<code class="language-${tokens[index].info.trim()}">\n${markdown.utils.escapeHtml(tokens[index].content)}</code>
 			</pre>`,
 		)
 		.use(markdownRagging)
