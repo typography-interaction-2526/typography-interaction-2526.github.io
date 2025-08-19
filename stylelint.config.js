@@ -7,18 +7,18 @@ export default {
 		'_site/**',
 		'content/topic/*/**',
 	],
-	 'overrides': [
-	 	{
-	 		'customSyntax': 'postcss-html',
-	 		'files': ['**/*.html', '**/*.md', '**/*.webc'],
-	 	},
-	 	{
-	 		'files': ['layouts/blocks/styles.webc'],
-	 		'rules': {
-	 			'no-empty-source': null,
-	 		},
-	 	},
-	 ],
+	'overrides': [
+		{
+			'customSyntax': 'postcss-html',
+			'files': ['**/*.html', '**/*.md', '**/*.webc'],
+		},
+		{
+			'files': ['layouts/blocks/styles.webc'],
+			'rules': {
+				'no-empty-source': null,
+			},
+		},
+	],
 	plugins: ['@stylistic/stylelint-plugin', 'stylelint-order', 'stylelint-plugin-logical-css'],
 	rules: {
 		'alpha-value-notation': 'percentage',
