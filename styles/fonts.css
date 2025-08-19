@@ -49,7 +49,7 @@
 		text-rendering:           optimizeLegibility;
 		-webkit-text-size-adjust: none;
 
-		/* Chrome doesn’t support `text-box-trim` on inline elements (links), would apply here. */
+		/* Chrome doesn’t support `text-box-trim` on inline elements (links), otherwise would apply here. */
 	}
 }
 
@@ -76,3 +76,5 @@
 
 	font-weight: 700;
 }
+
+/* TODO Could use `@container style()` if setting on a parent! */
