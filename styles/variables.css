@@ -1,8 +1,9 @@
 :root {
-	--size:    24;
-	--leading: 1.2;
+	--leading: calc(2cap);
+	--size:    2.4rem;
+	--x:       0.407em;
 
 	@media (width >= 46em) and (height >= 27em), (width >= 60em) {
-		--size: 28;
+		--size: 2.8rem;
 	}
 }
