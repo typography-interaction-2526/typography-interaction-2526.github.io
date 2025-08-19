@@ -30,7 +30,7 @@
 	--top:    0.057em;
 	--x:      0.407em;
 
-	/* Inline height of links. */
+	/* Inline height of links, past cap. */
 	--bottom--content: 0.314em;
 	--top--content:    0.144em;
 
@@ -44,11 +44,12 @@
 		font-smooth:              always;
 		-moz-osx-font-smoothing:  grayscale;
 		-webkit-font-smoothing:   antialiased;
+		font-weight:              var(--weight);
 		line-height:              var(--leading);
-		text-box-edge:            cap alphabetic; /* 🥹 */
-		text-box-trim:            trim-both;      /* 😭 */
 		text-rendering:           optimizeLegibility;
 		-webkit-text-size-adjust: none;
+
+		/* Chrome doesn’t support `text-box-trim` on inline elements (links), would apply here. */
 	}
 }
 

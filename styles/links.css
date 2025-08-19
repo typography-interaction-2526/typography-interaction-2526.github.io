@@ -45,26 +45,21 @@ summary {
 
 /* Inline links. */
 :where(dd, dt, h1, h2, h3, h4, h5, h6, p, td, th) a {
-	-webkit-box-decoration-break: clone; /* “Restart” inline padding/margin over on wrapped links. */
-	display:                      inline;
-	margin-inline-end:            calc(-1 * (var(--x) - var(--right)));
-	margin-inline-start:          calc(-1 * (var(--x) - var(--left)));
-	outline-offset:               initial;
-	padding-block-end:            calc(var(--x) - var(--bottom--content)); /* Account for wonky link content box. */
-	padding-block-start:          calc(var(--x) - var(--top--content));
-	padding-inline-end:           calc(var(--x) - var(--right));
-	padding-inline-start:         calc(var(--x) - var(--left));
-	transition-duration:          calc(var(--transition) / 2), var(--transition);
-	transition-property:          background-color, opacity;
-	transition-timing-function:   linear;
+	box-decoration-break:       clone; /* “Restart” inline padding/margin over on wrapped links. */
+	display:                    inline;
+	margin-inline-end:          calc(-1 * (var(--x) - var(--right)));
+	margin-inline-start:        calc(-1 * (var(--x) - var(--left)));
+	outline-offset:             initial;
+	padding-block-end:          calc(var(--x) - var(--bottom--content)); /* Account for wonky link content box. */
+	padding-block-start:        calc(var(--x) - var(--top--content));
+	padding-inline-end:         calc(var(--x) - var(--right));
+	padding-inline-start:       calc(var(--x) - var(--left));
+	transition-duration:        calc(var(--transition) / 2), var(--transition);
+	transition-property:        background-color, opacity;
+	transition-timing-function: linear;
 
 	/* Use background for active highlight, as it might wrap. */
 	&::after { content: initial }
 
 	&:active { background-color: var(--highlight) }
-
-	/* This sadly doesn’t work in Safari (doesn’t restart margin), causing overflows. */
-	@supports (font: -apple-system-body) { -webkit-box-decoration-break: initial }
-
-	/* TODO Safari decaps links? */
 }

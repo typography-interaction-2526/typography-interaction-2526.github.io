@@ -1,7 +1,11 @@
 dd, dt, h1, h2, h3, h4, h5, h6, p, td, th {
 	margin-inline-end:   calc(-1 * var(--right));
 	margin-inline-start: calc(-1 * var(--left));
-	max-inline-size: 60ch;
+	max-inline-size:     60ch;
+	text-box-edge:       cap alphabetic; /* 🥹 */
+	text-box-trim:       trim-both;      /* 😭 */
+
+	/* TODO Firefox warning message! */
 }
 
 h1, h2, h3, h4, h5, h6 { text-transform: uppercase }
