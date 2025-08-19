@@ -23,22 +23,32 @@
 }
 
 :root {
+	/* Some basic metrics. */
+	--bottom: 0.228em;
+	--left:   0.059em;
+	--right:  0.149em;
+	--top:    0.057em;
+	--x:      0.407em;
+
 	font-family:    'Gorton Digital', sans-serif;
 	font-size:      62.5%;
 	font-synthesis: none;
 
 	* {
 		font-kerning:             normal;
+		font-size:                var(--size);
 		font-smooth:              always;
 		-moz-osx-font-smoothing:  grayscale;
 		-webkit-font-smoothing:   antialiased;
+		line-height:              var(--leading);
+		text-box-edge:            cap alphabetic; /* 🥹 */
+		text-box-trim:            trim-both;      /* 😭 */
 		text-rendering:           optimizeLegibility;
 		-webkit-text-size-adjust: none;
 	}
 }
 
-:root,
-.light {
+:root, .light {
 	--stroke: 0.056em;
 
 	font-weight: 300;

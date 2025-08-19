@@ -1,7 +1,6 @@
 :root {
-	--leading: calc(2cap);
+	--leading: 2cap;
 	--size:    2.4rem;
-	--x:       0.407em;
 
 	@media (width >= 46em) and (height >= 27em), (width >= 60em) {
 		--size: 2.8rem;

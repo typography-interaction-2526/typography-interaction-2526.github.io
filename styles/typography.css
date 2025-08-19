@@ -1,9 +1,6 @@
 dd, dt, h1, h2, h3, h4, h5, h6, p, td, th {
-	font-size:     var(--size);
-	line-height:   var(--leading);
-	margin-block-start: 3cap; /* Temp spacing. */
-	text-box-edge: cap alphabetic; /* 🥹 */
-	text-box-trim: trim-both;      /* 😭 */
+	margin-inline-end:   calc(-1 * var(--right));
+	margin-inline-start: calc(-1 * var(--left));
 }
 
 h1, h2, h3, h4, h5, h6 { text-transform: uppercase }
