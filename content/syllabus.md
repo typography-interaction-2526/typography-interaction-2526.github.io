@@ -7,9 +7,7 @@
 
 *Typography & Interaction* is a year-long course, divided into two classes, which will provide a rigorous foundation of typographic and interaction principles in the context of digital design. Over both classes, students will acquire and hone the skills they need for success in the field of interactive design.
 
-<!---
-### Fall
---->
+### Fall <!-- .fall -->
 
 This first semester will focus on a mastery of type and layout concepts on the web.
 
@@ -22,8 +20,7 @@ Digital design, the web in particular, is inextricably linked with typography—
 
 In this class, students will learn intermediate and advanced methods in typography and layout as they concern interactive design. We will use web technologies as the lens to examine this subject—introducing the foundational, front-end languages of HTML (*HyperText Markup Language*) and CSS (*Cascading Style Sheets*) to achieve our designs. Students will understand the specific challenges of type in this medium, but also how it offers unique and particular forms to us as designers. They will learn the common tools and paradigms with which we practice, while developing their own visual, design vocabulary and critical understanding.
 
-<!---
-### Spring
+### Spring <!-- .spring -->
 
 Our second semester will build on the type and layout foundations from the first, moving into interface design and interactive experiences on the web.
 
@@ -35,13 +32,10 @@ Interaction, interactive, interface, product, UI, UX designers—we are known by
 Contemporary digital design exists in the continuum of the ever-shifting, evolving, and ubiquitous web. Designers today work at many different scales and within many different systems. We act as mediators—not only for users, meaning, and experience—but with these systems themselves, as well. They shape our work and we shape them—at the meeting point, the *interface*, between things.
 
 In this class, students will learn to give form to and then work at these intersections. We will again use web technologies as our lens for the subject, building on our foundations in HTML and CSS by incorporating JS (*JavaScript*)—to give behavior, interaction, and life to our designs. We will survey modern approaches to front-end design and development, as our discipline has as many methodologies as we do names. There is no one way to do this work, nor one thing to do it for—and through our readings, discussions, exercises, and projects, students will understand and then situate themselves and their practice within the larger field.
---->
 
 ## Learning Outcomes
 
-<!---
-### Fall
---->
+### Fall <!-- .fall -->
 
 **By the end of this semester, students will:**
 
@@ -57,8 +51,7 @@ In this class, students will learn to give form to and then work at these inters
 
 - Think critically and develop their own, distinct thoughts on the role of digital within the larger canon of design.
 
-<!---
-### Spring
+### Spring <!-- .spring -->
 
 **By the end of this semester, students will:**
 
@@ -75,13 +68,12 @@ In this class, students will learn to give form to and then work at these inters
 - Conceptualize a web project with an eye towards its complete implementation—balancing the tradeoffs between design, features, and practical build considerations or limitations.
 
 - Develop an understanding of how they want to practice as a designer within the larger context of the discipline.
---->
 
 ## Course Outline
 
 The course is structured into thematic units, each bookended by readings on the subject and a project that will demonstrate the material:
 
-### Unit 1: Type and the Web
+### Unit 1: Type and the Web <!-- .fall -->
 
 #### Weeks 1–6
 
@@ -112,7 +104,7 @@ Students will choose a seminal design text from [readings.design](https://readin
 
 We’ll be looking for the quality of responses, appropriate type selection and hierarchy, semantic HTML, and basic CSS.
 
-### Unit 2: There Is No Perfect Layout
+### Unit 2: There Is No Perfect Layout <!-- .fall -->
 
 #### Weeks 7–10
 
@@ -143,7 +135,7 @@ Students will work in pairs, with a new text from those selected by the class in
 
 Here we’re looking for successful design and development collaboration, box-model layout design, and use of responsive media queries.
 
-### Unit 3: Typography as Interface
+### Unit 3: Typography as Interface <!-- .fall -->
 
 #### Weeks 11–15
 
@@ -174,8 +166,7 @@ Students will assemble a collection of texts from *Spread*, combined with their 
 
 We want to see effective multi-page design and navigation, advanced layouts (flexbox, grid), consistency across the pages and content, and polish/nuance.
 
-<!---
-### Unit 4: Interface as Interface
+### Unit 4: Interface as Interface <!-- .spring -->
 
 #### Weeks 16–21
 
@@ -206,7 +197,7 @@ Students will collaboratively assemble, connect, and present a collection using 
 
 In addition to our previous project requirements, here we’ll be looking for the effective use of images/media, meaningful interactive interface functionality, and your use of JavaScript.
 
-### Unit 5: If All You Have Is a Hammer, Everything Looks Like a Nail
+### Unit 5: If All You Have Is a Hammer, Everything Looks Like a Nail <!-- .spring -->
 
 #### Weeks 22–30
 
@@ -273,9 +264,10 @@ This unit, and the course, will culminate with Project 5, *Functions*, which wi
 Students will identify a problem and conceptualize how to solve it on the web. They will plan, design, and implement a novel solution towards this problem—incorporating data and interaction with the tools, technologies, and techniques they’ve learned in this course.
 
 We’ll first be looking for strong concepts—not limited to or by existing conventions—that push the grain of interaction design in new and interesting directions. And as the capstone for this course, we’re expecting the highest level of nuance and polish in the organizational, aesthetic, and technical aspects of these final projects.
---->
 
 ## Evaluation Criteria
+
+<!-- TODO Add code review/quizzes. -->
 
 - ### Engagement
 
@@ -299,9 +291,7 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 
 ## Grade Calculation
 
-<!---
-### Fall
---->
+### Fall <!-- .fall -->
 
 |                          |     |
 | ------------------------ | --- |
@@ -312,8 +302,7 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 | Project 2: Spread        | 20% |
 | Project 3: Binding       | 30% |
 
-<!---
-### Spring
+### Spring <!-- .spring -->
 
 |                          |     |
 | ------------------------ | --- |
@@ -322,7 +311,6 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 | Exercises and Milestones | 10% |
 | Project 4: Links         | 20% |
 | Project 5: Functions     | 40% |
---->
 
 ## Materials and Supplies
 
@@ -420,7 +408,7 @@ To expand on this: we are not saying you can’t incorporate other resources. If
 }
 ```
 
-<aside class="action">
+<aside>
 
 Copying and pasting code in the absence of an attribution and explanation is plagiarism.
 
