@@ -22,7 +22,7 @@
 	src:         url('../assets/fonts/gorton-digital--heavy.otf') format('opentype');
 }
 
-:root {
+:where(:root) {
 	/* Some basic bounding-box metrics. */
 	--bottom:    0.228em;
 	--top:       0.057em;

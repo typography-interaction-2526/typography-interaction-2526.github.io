@@ -1,4 +1,4 @@
-:root {
+:where(:root) {
 	--leading: 2cap;
 	--size:    2.4rem;
 

@@ -1,4 +1,4 @@
-:root { -webkit-tap-highlight-color: transparent }
+:where(:root) { -webkit-tap-highlight-color: transparent }
 
 a:where([href]),
 button:where(:not([disabled])),
