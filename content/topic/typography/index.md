@@ -15,7 +15,7 @@ Writing gives the impression of things. Conversely, things can give the impressi
 
 Typography is the form and structure into which words are manifested into our world. It has a long and storied history, and it’s our job to both understand this history and, from it, how to apply type effectively.
 
-## A *Brief* History of Typography
+## A Brief History of Typography
 
 <figure
 	@caption="Early example of Chinese movable type."
@@ -271,7 +271,7 @@ We encourage students to bring their own experience in here—introducing us all
 
 ## Typesetting and Layout
 
-### Type *Size*, *Weight*, and *Color*
+### Type Size, Weight, and Color
 
 A heading (or *display text*) should appear differently than body text (also called *body copy*), which should appear differently than lists, which should appear differently than links, and so on. A well-typeset document considers all of these elements, working together, to create a clear, cohesive layout.
 
@@ -306,7 +306,7 @@ We can also use *color* as a visual element to distinguish our content. Above, w
 
 Many of these principles of hierarchy are come from the [*Principles of Gestalt*](https://g-e-s-t-a-l-t.org/media/pdf/Investigations-on-Gestalt-Principles.pdf)—creating associations out of form. These principles [have become systematized](https://lawsofux.com/en/) in interactive work.
 
-### *Leading*
+### Leading
 
 <figure
 	@caption="An example of how leading can inform readability."
@@ -319,7 +319,7 @@ Many of these principles of hierarchy are come from the [*Principles of Gestalt*
 
 We can tolerate close lines for short texts; we struggle with them over longer passages. The space between heading and body text should also be considered.
 
-### *Ragging*
+### Ragging
 
 <figure
 	@caption="An example of ragging text."
@@ -334,7 +334,7 @@ A *good rag* is one where the lines move in and out in small increments. A not-s
 
 To avoid *bad rags*, we can make sure that the type size of a container is not too large and that the column is not too narrow. We want our text to land in nice rectangular and rounded, chunky blocks.
 
-### *Widows* and *Orphans*
+### Widows and Orphans
 
 <figure
 	@caption="An example of a widow *(left)* and orphan *(right)*."
@@ -349,9 +349,9 @@ To avoid *bad rags*, we can make sure that the type size of a container is not t
 
 We should avoid orphans and widows through proper ragging, making sure that type sizes aren’t too large for a container, and making use of the [non-breaking space](https://en.wikipedia.org/wiki/Non-breaking_space) character, which makes sure there is not a line-break between two words.
 
-We should also always *wrap* some words together (for example, *September 6*, or *van Zanten*), for ease of reading.
+We should also always *wrap* some words together (for example, *September 6*, or *van Zanten*), for ease of reading.
 
-### *Punctuation*
+### Punctuation
 
 It is also our job to make sure that we properly use punctuation—so it is in service of our content, not a distraction.
 
@@ -375,42 +375,18 @@ When in doubt, [*The Elements of Typographic Style*](https://readings.design/PDF
 
 Where does one find typefaces? From *foundries*, again referencing the days when making type involved casting actual metal. While most computers now come with many good ones, there are many other places to get fonts. Here are some that we like:
 
-- [
-<letter-bullet @title="Colophon"></letter-bullet>
-](https://www.colophon-foundry.org/)
-- [
-<letter-bullet @title="Comercial Type"></letter-bullet>
-](https://commercialtype.com/)
-- [
-<letter-bullet @title="Dinamo"></letter-bullet>
-](https://abcdinamo.com/)
-- [
-<letter-bullet @title="Forgotten Shapes"></letter-bullet>
-](https://forgotten-shapes.com/)
-- [
-<letter-bullet @title="Grilli Type"></letter-bullet>
-](https://www.grillitype.com/)
-- [
-<letter-bullet @title="Indian Type Foundry"></letter-bullet>
-](https://www.indiantypefoundry.com/)
-- [
-<letter-bullet @title="Klim"></letter-bullet>
-](https://klim.co.nz/)
-- [
-<letter-bullet @title="Lineto"></letter-bullet>
-](https://lineto.com/)
-- [
-<letter-bullet @title="MCKL"></letter-bullet>
-](https://mckltype.com/)
-- [
-<letter-bullet @title="Order"></letter-bullet>
-](https://order.design/otf)
-- [
-<letter-bullet @title="Typotheque"></letter-bullet>
-](https://www.typotheque.com/)<br><br>
-- [
-<letter-bullet @title="Google Fonts"></letter-bullet>
-](https://fonts.google.com/)
+- [Colophon](https://www.colophon-foundry.org/)
+- [Comercial Type](https://commercialtype.com/)
+- [Dinamo](https://abcdinamo.com/)
+- [Forgotten Shapes](https://forgotten-shapes.com/)
+- [Grilli Type](https://www.grillitype.com/)
+- [Indian Type Foundry](https://www.indiantypefoundry.com/)
+- [Klim](https://klim.co.nz/)
+- [Lineto](https://lineto.com/)
+- [MCKL](https://mckltype.com/)
+- [Order](https://order.design/otf)
+- [Typotheque](https://www.typotheque.com/)<br>
+- [Google Fonts](https://fonts.google.com/)
 
 While not a type foundry itself, we include (and will use) *Google Fonts* resource because of its vast array of open-source typefaces.
 

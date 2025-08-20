@@ -4,9 +4,9 @@
 	const week = 1
 </script>
 
-## Let’s Start With *The Internet*
+## Let’s Start With the Internet
 
-### When Was the *Internet* Invented?
+### When Was the Internet Invented?
 
 <details @summary="1969 or 1989?">
 
@@ -92,9 +92,9 @@ Over the following decade, [ARPANET](https://www.britannica.com/topic/ARPANET) w
 
 In 1974, Robert Kahn and Vinton Cerf (two ARPA scientists) developed the *Transmission Control Protocol* and the *Internet Protocol* (TCP/IP). By the 80s, it became the standard network communication format—and still underpins the internet we all use today.
 
-## What About *The Web*?
+## What About the Web?
 
-### When Was the *Web* Invented?
+### When Was the Web Invented?
 
 <details @summary="1969 or 1989?">
 
@@ -210,7 +210,7 @@ Its universality is essential: the fact that a hypertext link can point to anyth
 
 </blockquote>
 
-## So What Are *Web Pages*?
+## So What Are Web Pages?
 
 Obviously, *this* is a web page. Think about how many other web pages you have visited in the past day. Dozens, even hundreds?
 
@@ -267,7 +267,7 @@ That’s not what we think design is. It’s not just what it looks like and fee
 
 All these desktop “apps” are built in [Electron](https://www.electronjs.org)—and so are really just web pages inside a slim, platform-native wrapper. (Essentially, a single-website browser.)
 
-The core application only has to be written once, instead of rewritten for each platform. And why design it all again? (Designers are expensive!) Why hire Windows and Mac devs when you can just hire web devs? …then why hire i&thinsp;OS or Android devs, either? (Developers are even more expensive!) So many companies take approach, for cross-platform development.
+The core application only has to be written once, instead of rewritten for each platform. And why design it all again? (Designers are expensive!) Why hire Windows and Mac devs when you can just hire web devs? …then why hire i&NoBreak;OS or Android devs, either? (Developers are even more expensive!) So many companies take approach, for cross-platform development.
 
 <figure
 	@caption="These mobile “apps” are all built with [React Native](https://reactnative.dev), following a similar paradigm."
@@ -290,13 +290,13 @@ Even this course site is (mostly) static HTML and CSS—but it is compiled [usin
 
 </aside>
 
-### Even Things That Aren’t Web Pages Are *Web-Page-Like*
+### Even Things That Aren’t Web Pages Are Web-Page-Like
 
 In the coming weeks we are going to dive properly into HTML, CSS, and JS–the *fabric* of web pages.
 
 Let’s try to also think of these—more conceptually and semantically—as *content*, *form*, and *function*. (Or in another way, *skeleton*, *skin*, and *muscles.*) This ordering or *layering* of responsibilities is often called *progressive enhancement*. The semantic content (HTML) forms the foundation on which you can layer the form (CSS) and functionality (JS).
 
-With this understanding, the same model exists in nearly all software. (For example, [*Resources*, *Views*, and *States*](https://developer.apple.com/tutorials/app-dev-training/#swiftui-essentials) in Mac/i&thinsp;OS development, though the lines are being blurred.) So we can say that software that hasn’t yet been eaten by web technologies is often still *web-like*. And the web is likely coming for them, eventually.
+With this understanding, the same model exists in nearly all software. (For example, [*Resources*, *Views*, and *States*](https://developer.apple.com/tutorials/app-dev-training/#swiftui-essentials) in Mac/i&NoBreak;OS development, though the lines are being blurred.) So we can say that software that hasn’t yet been eaten by web technologies is often still *web-like*. And the web is likely coming for them, eventually.
 
 ## Our Lens
 
