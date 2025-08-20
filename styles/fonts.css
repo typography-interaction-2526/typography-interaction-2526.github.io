@@ -25,8 +25,6 @@
 :root {
 	/* Some basic bounding-box metrics. */
 	--bottom:    0.228em;
-	--left:      0.059em;
-	--right:     0.149em;
 	--top:       0.057em;
 
 	/* For underlines, match the `p`. */
@@ -57,24 +55,32 @@
 }
 
 :root, .light {
+	--left:   0.059em;
+	--right:  0.149em;
 	--stroke: 0.056em;
 
 	font-weight: 300;
 }
 
 .regular {
+	--left:   0.079em;
+	--right:  0.139em;
 	--stroke: 0.079em;
 
 	font-weight: 400;
 }
 
 .medium {
+	--left:   0.089em;
+	--right:  0.135em;
 	--stroke: 0.089em;
 
 	font-weight: 500;
 }
 
 .heavy {
+	--left:   0.119em;
+	--right:  0.119em;
 	--stroke: 0.119em;
 
 	font-weight: 700;

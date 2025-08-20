@@ -44,25 +44,48 @@ summary {
 
 /* Inline links. */
 :where(dd, dt, h1, h2, h3, h4, h5, h6, p, td, th) a {
-	/* Underline, drawing from the top, gradient-as-pseudo-pseudo. */
-	background-image:
-	/* Drawing from the top, gradient-as-pseudo-pseudo. */
-	--underline:
+	/* Rounded start cap. */
+	--underline--start:
+		radial-gradient(
+			circle closest-side at center,
+			currentcolor calc(100% - 0.333px),
+			transparent
+		)
+		calc(var(--enlargement) - var(--stroke) / 2)
+		/
+		var(--stroke) var(--stroke);
+
+	/* End cap. */
+	--underline--end:
+		radial-gradient(
+			circle closest-side at center,
+			currentcolor calc(100% - 0.333px),
+			transparent
+		)
+		calc(100% - var(--enlargement) + var(--stroke) / 2)
+		/
+		var(--stroke) var(--stroke);
+
+	/* Drawing from the top. */
+	--underline--center:
 		linear-gradient(
 			transparent 0%,
 			currentcolor 0%,
 			currentcolor var(--stroke),
 			transparent var(--stroke)
 		)
-		no-repeat
-		var(--enlargement) calc(1cap + var(--enlargement) + var(--descender))
+		var(--enlargement)
 		/
-		calc(100% - 2 * var(--enlargement)) calc(200%);
+		calc(100% - 2 * var(--enlargement));
+
+	--underline: var(--underline--start), var(--underline--end), var(--underline--center);
 
 	/* Extra room below the underline */
 	--enlargement--underline: calc(var(--enlargement) + var(--stroke) + var(--descender));
 
 	background:                 var(--underline);
+	background-position-y:      calc(1cap + var(--enlargement) + var(--descender)); /* Through the `p`. */
+	background-repeat:          no-repeat;
 	box-decoration-break:       clone; /* “Restart” inline padding/margin over on wrapped links. */
 	display:                    inline;
 	margin-inline-end:          calc(-1 * (var(--enlargement) - var(--right)));
