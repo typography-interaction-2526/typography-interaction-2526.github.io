@@ -2,11 +2,14 @@
 	--leading: 2cap;
 	--size:    2.4rem;
 
-	--highlight:  color-mix(in srgb, currentcolor, transparent 90%);
-	--hover:      50%;
-	--transition: 166ms;
+	--enlargement: 0.6rem;
+	--highlight:   color-mix(in srgb, currentcolor, transparent 90%);
+	--hover:       50%;
+	--transition:  166ms;
 
 	@media (width >= 46em) and (height >= 27em), (width >= 60em) {
 		--size: 2.8rem;
+
+		--enlargement: 0.8rem;
 	}
 }

@@ -3,9 +3,8 @@
 a:where([href]),
 button:where(:not([disabled])),
 summary {
-	color:          blue; /* Temporary. */
 	display:        block;
-	outline-offset: 1ex;
+	outline-offset: var(--enlargement);
 	position:       relative;
 	will-change:    opacity; /* Fix hover bobble. */
 
@@ -15,7 +14,7 @@ summary {
 
 		&:focus-visible {
 			outline-style: solid;
-			outline-width: 2px;
+			outline-width: 0.2rem;
 		}
 	}
 
@@ -24,7 +23,7 @@ summary {
 		background-color:           transparent;
 		content:                    '';
 		cursor:                     pointer;
-		inset:                      -1ex;
+		inset:                      calc(-1 * var(--enlargement));
 		pointer-events:             auto;
 		position:                   absolute;
 		transition-duration:        calc(var(--transition) / 2);
@@ -47,13 +46,13 @@ summary {
 :where(dd, dt, h1, h2, h3, h4, h5, h6, p, td, th) a {
 	box-decoration-break:       clone; /* “Restart” inline padding/margin over on wrapped links. */
 	display:                    inline;
-	margin-inline-end:          calc(-1 * (1ex - var(--right)));
-	margin-inline-start:        calc(-1 * (1ex - var(--left)));
+	margin-inline-end:          calc(-1 * (var(--enlargement) - var(--right)));
+	margin-inline-start:        calc(-1 * (var(--enlargement) - var(--left)));
 	outline-offset:             initial;
-	padding-block-end:          calc(1ex - var(--bottom--content)); /* Account for wonky link content box. */
-	padding-block-start:        calc(1ex - var(--top--content));
-	padding-inline-end:         calc(1ex - var(--right));
-	padding-inline-start:       calc(1ex - var(--left));
+	padding-block-end:          calc(var(--enlargement) - var(--bottom--content)); /* Account for wonky link content box. */
+	padding-block-start:        calc(var(--enlargement) - var(--top--content));
+	padding-inline-end:         calc(var(--enlargement) - var(--right));
+	padding-inline-start:       calc(var(--enlargement) - var(--left));
 	transition-duration:        calc(var(--transition) / 2), var(--transition);
 	transition-property:        background-color, opacity;
 	transition-timing-function: linear;
