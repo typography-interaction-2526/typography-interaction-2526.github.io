@@ -29,6 +29,7 @@
 		"markdown-it-attrs": "^4.3.1",
 		"markdown-it-deflist": "^3.0.0",
 		"markdown-it-header-sections": "^1.0.0",
+		"patch-package": "^8.0.0",
 		"striptags": "^3.2.0"
 	},
 	"devDependencies": {
