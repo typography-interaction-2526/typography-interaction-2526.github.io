@@ -5,7 +5,7 @@ button:where(:not([disabled])),
 summary {
 	color:          blue; /* Temporary. */
 	display:        block;
-	outline-offset: var(--x);
+	outline-offset: 1ex;
 	position:       relative;
 	will-change:    opacity; /* Fix hover bobble. */
 
@@ -24,7 +24,7 @@ summary {
 		background-color:           transparent;
 		content:                    '';
 		cursor:                     pointer;
-		inset:                      calc(-1 * var(--x));
+		inset:                      -1ex;
 		pointer-events:             auto;
 		position:                   absolute;
 		transition-duration:        calc(var(--transition) / 2);
@@ -45,15 +45,16 @@ summary {
 
 /* Inline links. */
 :where(dd, dt, h1, h2, h3, h4, h5, h6, p, td, th) a {
+	background-color: color-mix(in srgb, gold, transparent);
 	box-decoration-break:       clone; /* “Restart” inline padding/margin over on wrapped links. */
 	display:                    inline;
-	margin-inline-end:          calc(-1 * (var(--x) - var(--right)));
-	margin-inline-start:        calc(-1 * (var(--x) - var(--left)));
+	margin-inline-end:          calc(-1 * (1ex - var(--right)));
+	margin-inline-start:        calc(-1 * (1ex - var(--left)));
 	outline-offset:             initial;
-	padding-block-end:          calc(var(--x) - var(--bottom--content)); /* Account for wonky link content box. */
-	padding-block-start:        calc(var(--x) - var(--top--content));
-	padding-inline-end:         calc(var(--x) - var(--right));
-	padding-inline-start:       calc(var(--x) - var(--left));
+	padding-block-end:          calc(1ex - var(--bottom--content)); /* Account for wonky link content box. */
+	padding-block-start:        calc(1ex - var(--top--content));
+	padding-inline-end:         calc(1ex - var(--right));
+	padding-inline-start:       calc(1ex - var(--left));
 	transition-duration:        calc(var(--transition) / 2), var(--transition);
 	transition-property:        background-color, opacity;
 	transition-timing-function: linear;
