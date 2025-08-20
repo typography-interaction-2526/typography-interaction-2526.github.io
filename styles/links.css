@@ -46,28 +46,13 @@ summary {
 :where(dd, dt, h1, h2, h3, h4, h5, h6, p, td, th) a {
 	/* Rounded caps. */
 	--underline--cap: radial-gradient(circle closest-side at center, currentcolor calc(100% - 0.25px), transparent);
+	--underline--cap--inset: calc(var(--enlargement) - var(--stroke) / 2);
 
-	/* Start of the line. */
-	--underline--start:
-		var(--underline--cap)
-		calc(var(--enlargement) - var(--stroke) / 2)
-		/
-		var(--stroke) var(--stroke);
+	--underline--start: var(--underline--cap) var(--underline--cap--inset) / var(--stroke) var(--stroke);
+	--underline--end: var(--underline--cap) right var(--underline--cap--inset) center / var(--stroke) var(--stroke);
+	--underline--center: linear-gradient(currentcolor var(--stroke), transparent var(--stroke)) var(--enlargement) / calc(100% - 2 * var(--enlargement));
 
-	/* End one. */
-	--underline--end:
-		var(--underline--cap)
-		calc(100% - var(--enlargement) + var(--stroke) / 2)
-		/
-		var(--stroke) var(--stroke);
-
-	/* Drawing from the top. */
-	--underline--center:
-		linear-gradient(currentcolor var(--stroke), transparent var(--stroke))
-		var(--enlargement)
-		/
-		calc(100% - 2 * var(--enlargement));
-
+	/* All together now. */
 	--underline: var(--underline--start), var(--underline--end), var(--underline--center);
 
 	/* Extra room below the underline */
