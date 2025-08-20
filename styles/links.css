@@ -45,7 +45,6 @@ summary {
 
 /* Inline links. */
 :where(dd, dt, h1, h2, h3, h4, h5, h6, p, td, th) a {
-	background-color: color-mix(in srgb, gold, transparent);
 	box-decoration-break:       clone; /* “Restart” inline padding/margin over on wrapped links. */
 	display:                    inline;
 	margin-inline-end:          calc(-1 * (1ex - var(--right)));
