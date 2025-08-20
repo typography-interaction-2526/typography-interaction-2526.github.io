@@ -38,7 +38,7 @@ We’re going to have to talk about a lot of men, here—but know that women hav
 	>
 </figure>
 
-By the 1960s, computers were room-sized, institutional electronic <nobr>machines—</nobr>used by governments (the military), businesses, and universities. They were used to solve complex math problems and sort data, but were still very slow and didn’t communicate with one another.
+By the 1960s, computers were room-sized, institutional electronic machines–used by governments (the military), businesses, and universities. They were used to solve complex math problems and sort data, but were still very slow and didn’t communicate with one another.
 
 <figure
 	@caption="Different network topologies."
@@ -48,7 +48,7 @@ By the 1960s, computers were room-sized, institutional electronic <nobr>machines
 	>
 </figure>
 
-A catalyst in the formation of the internet was the Cold War. The threat of nuclear conflict spurred the US Defense Department to consider decentralized and distributed <nobr>networks—to</nobr> disseminate orders and information in the event of an attack (and ultimately, for retaliation).
+A catalyst in the formation of the internet was the Cold War. The threat of nuclear conflict spurred the US Defense Department to consider decentralized and distributed networks—to disseminate orders and information in the event of an attack (and ultimately, for retaliation).
 
 <blockquote
 	@attribution="Paul Baran"
@@ -238,7 +238,7 @@ It all starts with text, and thus, with type.
 
 ## An Ever-Present Visual Medium
 
-If you’re looking at a glowing, 16:9 rectangle somewhere (and it isn’t just playing video), nowadays it is very likely a web page—built with the exact same HTML, CSS, and <nobr>JS—</nobr>web technologies—that are behind this page, and every other.
+If you’re looking at a glowing, 16:9 rectangle somewhere (and it isn’t just playing video), nowadays it is very likely a web page—built with the exact same HTML, CSS, and JS–web technologies—that are behind this page, and every other.
 
 In its openness, connectedness, and ubiquity, the web has come to dominate over other forms of technology. Its advantages in compatibility, cost, scale, and inertia are continuing to snowball, and the advance of these web technologies shows no sign of slowing down. It is the water that we are swimming in, both as humans and as designers.
 
@@ -280,7 +280,7 @@ The core application only has to be written once, instead of rewritten for each 
 
 JavaScript began as a client-side (on your computer), front-end language running in the browser. But now with runtime environments like [Node.js](https://nodejs.org/en/), [Deno](https://deno.land), and [Bun](https://bun.sh/), JS has moved to server-side (on the remote computer) functionality previously dominated by scripting languages like [ASP](https://dotnet.microsoft.com/en-us/learn/aspnet/what-is-aspnet), [Perl](https://www.perl.org), [PHP](https://www.php.net), and [Ruby](https://www.ruby-lang.org/en/).
 
-This means that JavaScript doesn’t just run *in* a webpage you’re looking <nobr>at—</nobr>it often now actually *builds* the page itself. It might even send you the *packets*. More and more, JS isn’t a *part* of the stack so much as it really *is* the stack.
+This means that JavaScript doesn’t just run *in* a webpage you’re looking at–it often now actually *builds* the page itself. It might even send you the *packets*. More and more, JS isn’t a *part* of the stack so much as it really *is* the stack.
 
 This “JavaScript everywhere” movement means that the tendrils of the web can encompass many non-web-page uses. Maybe it is in an app, maybe a headless data API, maybe a [hardware integration](https://www.theverge.com/2022/8/18/23206110/james-webb-space-telescope-javascript-jwst-instrument-control), maybe it is even something entirely *offline*—but it is still web technologies, most of the way down.
 
@@ -292,7 +292,7 @@ Even this course site is (mostly) static HTML and CSS—but it is compiled [usin
 
 ### Even Things That Aren’t Web Pages Are *Web-Page-Like*
 
-In the coming weeks we are going to dive properly into HTML, CSS, and <nobr>JS—</nobr>the *fabric* of web pages.
+In the coming weeks we are going to dive properly into HTML, CSS, and JS–the *fabric* of web pages.
 
 Let’s try to also think of these—more conceptually and semantically—as *content*, *form*, and *function*. (Or in another way, *skeleton*, *skin*, and *muscles.*) This ordering or *layering* of responsibilities is often called *progressive enhancement*. The semantic content (HTML) forms the foundation on which you can layer the form (CSS) and functionality (JS).
 
@@ -302,7 +302,7 @@ With this understanding, the same model exists in nearly all software. (For exam
 
 Learning good, effective design in any medium necessitates knowing it thoroughly and completely, and we’re going strive to do that by truly understanding the web. It is fundamentally a medium of text, and thus a medium of typography—and this semester we will use that as our lens.
 
-In your careers, the software, languages, and platforms might be different, and to some extent, are ever-<nobr>changing—</nobr>but the design ideas and considerations are analogous and universal. To understand design for the web is to understand interactive design. And in our lives today, to understand interactive design is to understand all design.
+In your careers, the software, languages, and platforms might be different, and to some extent, are ever-changing–but the design ideas and considerations are analogous and universal. To understand design for the web is to understand interactive design. And in our lives today, to understand interactive design is to understand all design.
 
 <blockquote
 	@attribution="Abigail Disney"

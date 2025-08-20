@@ -151,7 +151,7 @@ In fact, some of the first computer programs for digital typesetting, such as [`
 
 By the early 1980s, as the internet was being formed and the web had yet to exist, the advent of computers with screens and visual interfaces made the final typesetting transition: from physical to digital. Most significantly, the [Apple Macintosh and Lisa](https://www.youtube.com/watch?v=2B-XwPjn9YY) were significant milestones in providing the first visual document editing experience on a computer. The term, *What You See Is What You Get* (WYSIWYG) begins with this era of computing.
 
-To support this, in 1983, [Susan Kare](https://www.moma.org/artists/38483) created a suite of [<nobr>digital-only typefaces</nobr>](https://www.storiesofapple.net/the-first-fonts-of-the-macintosh.html).
+To support this, in 1983, [Susan Kare](https://www.moma.org/artists/38483) created a suite of [<nobr>digital-only</nobr> typefaces](https://www.storiesofapple.net/the-first-fonts-of-the-macintosh.html).
 
 <figure
 	@caption="Physical type had to be converted to digital formats in order to be presented on a screen. We started with pixel and bitmap encodings of typefaces, before switching to vector-based representations."
@@ -236,7 +236,7 @@ While there are distinct [subfamilies within](https://www.fonts.com/content/lear
 
 - Visual appearance (“vibe”)
 
-- Licensing&thinsp;/&thinsp;rights
+- Licensing/rights
 
 </details>
 
@@ -412,7 +412,7 @@ Where does one find typefaces? From *foundries*, again referencing the days when
 <letter-bullet @title="Google Fonts"></letter-bullet>
 ](https://fonts.google.com/)
 
-While not a type foundry itself, we include (and will use) *Google Fonts* resource because of its vast array <nobr>of open-source</nobr> typefaces.
+While not a type foundry itself, we include (and will use) *Google Fonts* resource because of its vast array of open-source typefaces.
 
 <aside>
 
