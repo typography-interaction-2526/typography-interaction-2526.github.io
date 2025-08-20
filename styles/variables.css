@@ -7,6 +7,13 @@
 	--hover:       50%;
 	--transition:  166ms;
 
+	--background--root: gainsboro;
+	--background--1:    gold;
+	--background--2:    orange;
+	--background--3:    tomato;
+	--background--4:    dodgerblue;
+	--background--5:    darkturquoise;
+
 	@media (width >= 46em) and (height >= 27em), (width >= 60em) {
 		--size: 2.8rem;
 	}

@@ -11,10 +11,8 @@ li:where(:not(:has(ol, p, section, ul))), /* “Tight” lists. */
 p,
 td,
 th {
-	margin-block-start:  1cap; /* Temp spacing. */
 	margin-inline-end:   calc(-1 * var(--right));
 	margin-inline-start: calc(-1 * var(--left));
-	max-inline-size:     60ch; /* Temp spacing. */
 	text-box-edge:       cap alphabetic; /* 🥹 */
 	text-box-trim:       trim-both;      /* 😭 */
 
@@ -36,7 +34,6 @@ em {
 	}
 }
 
-nobr { white-space: nowrap }
+.balance { text-wrap: balance }
 
-/* Temp spacing. */
-body { margin: 3cap }
+.nowrap, nobr { white-space: nowrap }

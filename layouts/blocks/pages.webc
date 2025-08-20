@@ -19,12 +19,30 @@
 	})()
 </script>
 
-<ul>
+<style webc:scoped>
+	:host {
+		> li {
+			background-color: var(--background--root);
+
+			&.unit--1 { background-color: var(--background--1) }
+			&.unit--2 { background-color: var(--background--2) }
+			&.unit--3 { background-color: var(--background--3) }
+			&.unit--4 { background-color: var(--background--4) }
+			&.unit--5 { background-color: var(--background--5) }
+		}
+	}
+</style>
+
+<ul webc:root="override">
 	<li webc:for="item of [...$data.collections.root]">
 		<block webc:import="page-link.webc"></block>
 		<slot webc:if="item.url === $data.page.url"></slot>
 	</li>
-	<li webc:for="unit of groupedPages">
+	<li
+		webc:for="unit of groupedPages"
+		:class="`unit--${unit[0].data.unitNumber}`"
+		:id="slugify(stripTags(markdown(unit[0].data.unit)))"
+	>
 		<p><em><strong @html="markdown(unit[0].data.unit)"></strong></em></p>
 		<ul>
 			<li webc:for="item of unit">
