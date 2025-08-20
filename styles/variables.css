@@ -9,7 +9,5 @@
 
 	@media (width >= 46em) and (height >= 27em), (width >= 60em) {
 		--size: 2.8rem;
-
-		--enlargement: 0.8rem;
 	}
 }

@@ -46,24 +46,29 @@ summary {
 :where(dd, dt, h1, h2, h3, h4, h5, h6, p, td, th) a {
 	/* Underline, drawing from the top, gradient-as-pseudo-pseudo. */
 	background-image:
+	/* Drawing from the top, gradient-as-pseudo-pseudo. */
+	--underline:
 		linear-gradient(
 			transparent 0%,
 			currentcolor 0%,
 			currentcolor var(--stroke),
 			transparent var(--stroke)
-		);
-	background-position-x: var(--enlargement);
-	background-position-y: calc(1cap + var(--enlargement) + var(--descender));
-	background-repeat:     no-repeat;
-	background-size:       calc(100% - 2 * var(--enlargement)) 100%;
+		)
+		no-repeat
+		var(--enlargement) calc(1cap + var(--enlargement) + var(--descender))
+		/
+		calc(100% - 2 * var(--enlargement)) calc(200%);
 
-	/* Everything else. */
+	/* Extra room below the underline */
+	--enlargement--underline: calc(var(--enlargement) + var(--stroke) + var(--descender));
+
+	background:                 var(--underline);
 	box-decoration-break:       clone; /* “Restart” inline padding/margin over on wrapped links. */
 	display:                    inline;
 	margin-inline-end:          calc(-1 * (var(--enlargement) - var(--right)));
 	margin-inline-start:        calc(-1 * (var(--enlargement) - var(--left)));
 	outline-offset:             initial;
-	padding-block-end:          calc(var(--enlargement) - var(--bottom--content)); /* Account for wonky link content box. */
+	padding-block-end:          calc(var(--enlargement--underline, var(--enlargement)) - var(--bottom--content)); /* Account for wonky link content box. */
 	padding-block-start:        calc(var(--enlargement) - var(--top--content));
 	padding-inline-end:         calc(var(--enlargement) - var(--right));
 	padding-inline-start:       calc(var(--enlargement) - var(--left));
@@ -75,6 +80,4 @@ summary {
 	&::after { content: initial }
 
 	&:active { background-color: var(--highlight) }
-
-	/* TODO More outline space underneath underline! */
 }
