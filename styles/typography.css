@@ -1,4 +1,5 @@
 dd, dt, h1, h2, h3, h4, h5, h6, p, td, th {
+	margin-block-start:  1cap; /* Temp spacing. */
 	margin-inline-end:   calc(-1 * var(--right));
 	margin-inline-start: calc(-1 * var(--left));
 	max-inline-size:     60ch;
@@ -24,4 +25,4 @@ em {
 }
 
 /* Temp spacing. */
-body { margin-inline: 3cap }
+body { margin: 3cap }
