@@ -1,7 +1,8 @@
-<!---
-const title = 'Everything Is a Web Page'
-const order = 1
---->
+<script front-matter>
+	const draft = true
+	const title = 'Everything Is a Web Page'
+	const week = 1
+</script>
 
 ## Let’s Start With *The Internet*
 
@@ -83,8 +84,7 @@ By 1969, computer nodes connected the Stanford Research Institute, UCLA, UCSB an
 Over the following decade, [ARPANET](https://www.britannica.com/topic/ARPANET) would grow to include other cities in the US. It had its first expansion outside the States in 1973, with connections to the UK and Norway. Slowly, similar commercial and academic networks were developing alongside, each with their own communication protocols.
 
 <figure
-	@caption="The core of TCP/IP is routing bundles of data called *packets.*"
-	@citation="https://web.eecs.umich.edu/~prabal/teaching/eecs582-w13/readings/CK74.pdf",
+	@caption="The core of TCP/IP is routing bundles of data called *packets.*"@citation="https://web.eecs.umich.edu/~prabal/teaching/eecs582-w13/readings/CK74.pdf"
 	@source="tcpip.png"
 	class="invert"
 	style="--lines: 14"
@@ -152,7 +152,7 @@ By 1991, the [first web page](http://info.cern.ch/hypertext/WWW/TheProject.html)
 <!-- .balance .bold .scale--h4 -->
 
 <figure
-	@caption="Mosaic was one of the first widely-available browsers. It introduced support for *images*.",
+	@caption="Mosaic was one of the first widely-available browsers. It introduced support for *images*."
 	@citation="https://en.wikipedia.org/wiki/Mosaic_(web_browser)#/media/File:NCSA_Mosaic_Browser_Screenshot.png"
 	@source="mosaic.png"
 	>

@@ -1,9 +1,8 @@
-<!---
-const title = 'It’s All About Type'
-const order = 2
-const bullet = 'T'
---->
-
+<script front-matter>
+	const draft = true
+	const title = 'It’s All About Type'
+	const week = 2
+</script>
 
 <blockquote
 	@attribution="Paul Elliman"
@@ -232,7 +231,7 @@ Sans Serifs
 While there are distinct [subfamilies within](https://www.fonts.com/content/learning/fontology/level-1/type-anatomy/type-classifications) each of these, our selection of a typeface from one of these particular styles already conveys significant meaning.
 <!-- .balance -->
 
-<details class="add-after" @summary="What Are Things to Consider When Picking a Typeface?">
+<details @summary="What Are Things to Consider When Picking a Typeface?" class="add-after">
 
 - Readability
 
