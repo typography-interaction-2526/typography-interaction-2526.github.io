@@ -18,6 +18,11 @@
 	href="../../styles/links.css"
 	rel="stylesheet"
 >
+<link
+	webc:bucket="base"
+	href="../../styles/main.css"
+	rel="stylesheet"
+>
 <style
 	webc:keep
 	@raw="`
