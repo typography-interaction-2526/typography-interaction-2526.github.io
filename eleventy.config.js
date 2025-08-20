@@ -61,8 +61,9 @@ export default (eleventyConfig) => {
 						// Keep short words with the following…
 						child.content = child.content.replace( new RegExp(`(\\s|^)(${shortWords}) (\\S)`, 'gi'), '$1$2\u00A0$3') // `&nbsp;`
 
-						// Also when followed by a node (link, emphasis, etc.).
-						children[index + 1] && (child.content = child.content.replace(new RegExp(`(\\s|^)(${shortWords})( ?)$`, 'i'), '$1$2\u00A0'))
+						// TODO This is broken! Applies inside of `em`, after chops `i&thinsp;OS`.
+						// // Also when followed by a node (link, emphasis, etc.).
+						// children[index + 1] && (child.content = child.content.replace(new RegExp(`(\\s|^)(${shortWords})( ?)$`, 'i'), '$1$2\u00A0'))
 
 						// Adds a “word joiner” `&NoBreak;` before em-dashes, to keep them from starting lines.
 						child.content = child.content.replace(/—/g, '\u2060—')
