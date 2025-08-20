@@ -1,4 +1,4 @@
-:where(#toc) a:where(:has(+ ul)), /* Loose ToC links. */
+:where(menu) a:where(:has(+ ul)), /* Loose ToC links. */
 dd,
 dt,
 h1,

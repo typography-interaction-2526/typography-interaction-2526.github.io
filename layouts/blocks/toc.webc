@@ -1,13 +1,12 @@
+<script webc:setup>
+	export const removeUl = (html) => html.replace(/^<ul>([\s\S]*?)<\/ul>$/i, '$1')
+</script>
 <details
 	webc:if="toc($data.content)"
 	webc:root="override"
-	id="toc"
 >
 	<summary>
 		<p>Menu</p>
 	</summary>
-	<template
-		webc:nokeep
-		@raw="toc($data.content)"
-	></template>
+	<menu @raw="removeUl(toc($data.content))"></menu>
 </details>
