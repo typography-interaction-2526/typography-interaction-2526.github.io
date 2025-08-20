@@ -7,15 +7,7 @@
 		<header>
 			<h1 @html="markdown(title)"></h1>
 		</header>
-		<details webc:if="toc($data.content)">
-			<summary>
-				<p>Menu</p>
-			</summary>
-			<template
-				webc:nokeep
-				@raw="toc($data.content)"
-			></template>
-		</details>
+		<block webc:import="toc.webc"></block>
 		<main @html="content"></main>
 	</article>
 </block>
