@@ -220,7 +220,7 @@ To wrap up the semester (and course), we’ll round out our knowledge of the web
 - [TikTok’s Enshittification](https://pluralistic.net/2023/01/21/potemkin-ai/#hey-guys)
 	Cory Doctorow, 2023
 
-- [Chat&thinsp;GPT Is a Blurry JPEG of the Web](https://web.archive.org/web/20230209152247/https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web)
+- [Chat&ZeroWidthSpace;GPT Is a Blurry JPEG of the Web](https://web.archive.org/web/20230209152247/https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web)
 	Ted Chiang, 2023
 
 - [The Age of Average](https://www.alexmurrell.co.uk/articles/the-age-of-average)
@@ -252,7 +252,7 @@ To wrap up the semester (and course), we’ll round out our knowledge of the web
 - [Material Design 1](https://m1.material.io/)
 	Google, 2014
 
-- [i&thinsp;OS Human Interface Guidelines](https://www.evl.uic.edu/datsoupi/420_14/docs/MobileHIG.pdf)
+- [i&ZeroWidthSpace;OS Human Interface Guidelines](https://www.evl.uic.edu/datsoupi/420_14/docs/MobileHIG.pdf)
 	Apple, 2014
 
 &nbsp;
@@ -328,7 +328,7 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 
 In the open tradition of the early web, the only materials truly required are a computer, a browser, a text editor, and an internet connection. The specifics of these are open to the student’s individual preferences and practices. We will do our best to accommodate everyone and will make recommendations, when needed.
 
-In class, we will demonstrate using [Figma](http://figma.com) for visual design and sketching, [Visual Studio Code](https://code.visualstudio.com) for programming, and [GitHub](https://github.com)&thinsp;/&thinsp;[GitHub Desktop](https://desktop.github.com) for version control and project hosting. All of these products are available for free, or offer free education licenses to New School emails.
+In class, we will demonstrate using [Figma](http://figma.com) for visual design and sketching, [Visual Studio Code](https://code.visualstudio.com) for programming, and [GitHub](https://github.com)&ZeroWidthSpace;/&ZeroWidthSpace;[GitHub Desktop](https://desktop.github.com) for version control and project hosting. All of these products are available for free, or offer free education licenses to New School emails.
 
 **We will use the following tools to organize our class:**
 
@@ -336,7 +336,7 @@ In class, we will demonstrate using [Figma](http://figma.com) for visual design 
 	For housekeeping, agendas, and lectures (you are here)
 
 - <a :href="course.channel.submit">Submission Form</a>
-	For submitting your work/URL&thinsp;s
+	For submitting your work/URL&ZeroWidthSpace;s
 
 - <a :href="course.channel.slack">Slack Channel</a>
 	For direct and asynchronous communication (*not* email)
@@ -426,13 +426,13 @@ Copying and pasting code in the absence of an attribution and explanation is pla
 
 </aside>
 
-### LLM&thinsp;s and “Artificial Intelligence”
+### LLM&ZeroWidthSpace;s and “Artificial Intelligence”
 
 Relatedly, there has been a lot of discussion and developments in our field (and others) around [*large language models*](https://en.wikipedia.org/wiki/Large_language_model), a.k.a. “artificial intelligence.”
 
-Here’s what we’re going to say about this: tools like [Chat&thinsp;GPT](https://openai.com/blog/chatgpt) or [GitHub Copilot](https://github.com/features/copilot) are known to often generate wrong or unnecessarily verbose code. This, combined with the fact that their results are derived from potentially copyrighted and/or legally questionable sources—usually without permission or attribution—means the use of these tools remains fraught, at best.
+Here’s what we’re going to say about this: tools like [Chat&ZeroWidthSpace;GPT](https://openai.com/blog/chatgpt) or [GitHub Copilot](https://github.com/features/copilot) are known to often generate wrong or unnecessarily verbose code. This, combined with the fact that their results are derived from potentially copyrighted and/or legally questionable sources—usually without permission or attribution—means the use of these tools remains fraught, at best.
 
-We think you first need to write code yourself to understand the medium. Copying/adapting from Chat&thinsp;GPT/Copilot is no different from anywhere else ([see above](#code-plagiarism)) and is ultimately a disservice to your education. These are to be treated like any other tools at our disposal—as *aides* to your understanding, not *shortcuts* around learning. We think you know the difference.
+We think you first need to write code yourself to understand the medium. Copying/adapting from Chat&ZeroWidthSpace;GPT/Copilot is no different from anywhere else ([see above](#code-plagiarism)) and is ultimately a disservice to your education. These are to be treated like any other tools at our disposal—as *aides* to your understanding, not *shortcuts* around learning. We think you know the difference.
 
 ### Recording Sessions
 
