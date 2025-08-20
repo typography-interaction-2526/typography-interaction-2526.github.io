@@ -3,6 +3,7 @@
 a:where([href]),
 button:where(:not([disabled])),
 summary {
+	cursor:         pointer;
 	display:        block;
 	outline-offset: var(--enlargement);
 	position:       relative;
@@ -22,7 +23,7 @@ summary {
 	&::after {
 		background-color:           transparent;
 		content:                    '';
-		cursor:                     pointer;
+		cursor:                     inherit;
 		inset:                      calc(-1 * var(--enlargement));
 		pointer-events:             auto;
 		position:                   absolute;
