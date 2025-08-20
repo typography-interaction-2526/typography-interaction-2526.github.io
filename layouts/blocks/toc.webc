@@ -1,6 +1,7 @@
 <details
 	webc:if="toc($data.content)"
 	webc:root="override"
+	id="toc"
 >
 	<summary>
 		<p>Menu</p>
