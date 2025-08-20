@@ -36,5 +36,7 @@ em {
 	}
 }
 
+nobr { white-space: nowrap }
+
 /* Temp spacing. */
 body { margin: 3cap }
