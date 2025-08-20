@@ -44,36 +44,26 @@ summary {
 
 /* Inline links. */
 :where(dd, dt, h1, h2, h3, h4, h5, h6, p, td, th) a {
-	/* Rounded start cap. */
+	/* Rounded caps. */
+	--underline--cap: radial-gradient(circle closest-side at center, currentcolor calc(100% - 0.25px), transparent);
+
+	/* Start of the line. */
 	--underline--start:
-		radial-gradient(
-			circle closest-side at center,
-			currentcolor calc(100% - 0.333px),
-			transparent
-		)
+		var(--underline--cap)
 		calc(var(--enlargement) - var(--stroke) / 2)
 		/
 		var(--stroke) var(--stroke);
 
-	/* End cap. */
+	/* End one. */
 	--underline--end:
-		radial-gradient(
-			circle closest-side at center,
-			currentcolor calc(100% - 0.333px),
-			transparent
-		)
+		var(--underline--cap)
 		calc(100% - var(--enlargement) + var(--stroke) / 2)
 		/
 		var(--stroke) var(--stroke);
 
 	/* Drawing from the top. */
 	--underline--center:
-		linear-gradient(
-			transparent 0%,
-			currentcolor 0%,
-			currentcolor var(--stroke),
-			transparent var(--stroke)
-		)
+		linear-gradient(currentcolor var(--stroke), transparent var(--stroke))
 		var(--enlargement)
 		/
 		calc(100% - 2 * var(--enlargement));
