@@ -45,7 +45,7 @@ summary {
 /* Inline links. */
 :where(dd, dt, h1, h2, h3, h4, h5, h6, p, td, th) a {
 	/* Rounded caps. */
-	--underline--cap: radial-gradient(circle closest-side at center, currentcolor calc(100% - 0.25px), transparent);
+	--underline--cap: radial-gradient(circle closest-side at center, currentcolor calc(100% - 0.5px), transparent);
 	--underline--cap--inset: calc(var(--enlargement) - var(--stroke) / 2);
 
 	--underline--start: var(--underline--cap) var(--underline--cap--inset) / var(--stroke) var(--stroke);
