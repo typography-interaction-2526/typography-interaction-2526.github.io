@@ -19,6 +19,7 @@ main {
 		display:               grid;
 		grid-column:           all;
 		grid-template-columns: subgrid;
+		row-gap:               inherit;
 	}
 
 	@media (orientation: landscape) and (width >= 35em), (width >= 60em) {
