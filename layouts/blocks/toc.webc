@@ -1,6 +1,14 @@
 <script webc:setup>
 	export const removeUl = (html) => html.replace(/^<ul>([\s\S]*?)<\/ul>$/i, '$1')
 </script>
+
+<style webc:scoped>
+	:host {
+		display:       grid;
+		margin-inline: var(--gutter);
+	}
+</style>
+
 <details
 	webc:if="toc($data.content)"
 	webc:root="override"

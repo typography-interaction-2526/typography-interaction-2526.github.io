@@ -1,4 +1,21 @@
-<a :href="item.url">
+<style webc:scoped>
+	:host {
+		border-block-start: var(--stroke) solid currentColor;
+		display:            grid;
+		justify-content:    center;
+		justify-items:      center;
+		outline-offset:     calc(-1 * var(--enlargement));
+		padding:            2cap;
+		text-transform:     uppercase;
+	}
+
+	:host::after { inset: 0 } /* Since it is full-bleed. */
+</style>
+
+<a
+	webc:root="override"
+	:href="item?.url"
+>
 	<h1
 		webc:if="item.url === $data.page.url"
 		@html="markdown(item.data.title)"

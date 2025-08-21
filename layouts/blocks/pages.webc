@@ -24,6 +24,7 @@
 		> li {
 			background-color: var(--background--root);
 
+			/* Unit colors. */
 			&:nth-child(4) { background-color: var(--background--1) }
 			&:nth-child(5) { background-color: var(--background--2) }
 			&:nth-child(6) { background-color: var(--background--3) }
@@ -45,7 +46,8 @@
 		webc:for="unit of groupedPages"
 		:id="slugify(stripTags(markdown(unit[0].data.unit)))"
 	>
-		<p><em><strong @html="markdown(unit[0].data.unit)"></strong></em></p>
+		<!-- TODO Come back to this! -->
+		<!-- <p><em><strong @html="markdown(unit[0].data.unit)"></strong></em></p> -->
 		<ul>
 			<li webc:for="item of unit">
 				<slot webc:if="item.url === $data.page.url"></slot>

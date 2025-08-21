@@ -5,8 +5,6 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6,
 li:where(:not(:has(ol, p, section, ul))), /* “Tight” lists. */
 p,
 td,
@@ -18,8 +16,6 @@ th {
 
 	/* TODO Firefox warning message! */
 }
-
-h1, h2, h3, h4, h5, h6 { text-transform: uppercase }
 
 /* Faux-italics. */
 em {
