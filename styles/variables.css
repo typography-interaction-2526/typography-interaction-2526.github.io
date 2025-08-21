@@ -1,6 +1,10 @@
 :where(:root) {
 	--leading: 2cap;
-	--size:    2.4rem;
+	--size:    2rem;
+
+	--max:    136.6rem;
+	--gutter: max(var(--alley), calc((100vw - var(--max)) / 2));
+	--alley:  1cap;
 
 	--enlargement: 0.6rem;
 	--highlight:   color-mix(in srgb, currentcolor, transparent 90%);
@@ -14,7 +18,14 @@
 	--background--4:    dodgerblue;
 	--background--5:    darkturquoise;
 
-	@media (width >= 46em) and (height >= 27em), (width >= 60em) {
-		--size: 2.8rem;
+	@media (width >= 35em) { /* Landscape phones. */
+		--alley: 2cap;
+
+		@media (height >= 27em) { /* Tablets. */
+			--size:  2.4rem;
+			--alley: 3cap;
+		}
 	}
+
+	@media (width >= 75em) { --size: 2.8rem } /* Desktop. */
 }
