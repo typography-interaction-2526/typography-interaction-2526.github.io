@@ -44,7 +44,7 @@ summary {
 }
 
 /* Future pages. */
-a:where(:not([href])) * { color: color-mix(in srgb, currentcolor var(--disabled), transparent) }
+a:where(:not([href])) > * { color: color-mix(in srgb, currentcolor var(--disabled), transparent) }
 
 /* Inline links. */
 :where(dd, dt, h1, h2, h3, h4, h5, h6, p, td, th) a {
