@@ -35,8 +35,11 @@
 
 <ul webc:root="override">
 	<li webc:for="item of [...$data.collections.root]">
-		<block webc:import="page-link.webc"></block>
 		<slot webc:if="item.url === $data.page.url"></slot>
+		<block
+			webc:else
+			webc:import="header.webc"
+		></block>
 	</li>
 	<li
 		webc:for="unit of groupedPages"
@@ -45,8 +48,11 @@
 		<p><em><strong @html="markdown(unit[0].data.unit)"></strong></em></p>
 		<ul>
 			<li webc:for="item of unit">
-				<block webc:import="page-link.webc"></block>
 				<slot webc:if="item.url === $data.page.url"></slot>
+				<block
+					webc:else
+					webc:import="header.webc"
+				></block>
 			</li>
 		</ul>
 	</li>

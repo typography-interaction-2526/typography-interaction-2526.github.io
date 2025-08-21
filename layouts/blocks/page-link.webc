@@ -1,6 +1,0 @@
-<a
-	webc:if="item.url != $data.page.url"
-	:href="item.url"
->
-	<p @html="markdown(item.data.title)"></p>
-</a>

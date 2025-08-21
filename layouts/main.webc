@@ -4,9 +4,7 @@
 
 <block webc:import="blocks/pages.webc">
 	<article>
-		<header>
-			<h1 @html="markdown(title)"></h1>
-		</header>
+		<block webc:import="header.webc"></block>
 		<block webc:import="toc.webc"></block>
 		<main @html="content"></main>
 	</article>
