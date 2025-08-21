@@ -21,8 +21,5 @@
 			type="module"
 		></script>
 	</head>
-	<body
-		:class="pageClass(page.url)"
-		@raw="content"
-	></body>
+	<body @raw="content"></body>
 </html>
