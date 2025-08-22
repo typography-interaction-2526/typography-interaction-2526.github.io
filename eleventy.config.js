@@ -52,7 +52,7 @@ export default (eleventyConfig) => {
 
 	// Do some automatic ragging.
 	const markdownRagging = (markdown) => {
-		const shortWords = 'a|an|as|at|I|in|is|it|of|to'
+		const shortWords = 'a|an|as|at|I|in|is|it|of|on|to'
 
 		markdown.core.ruler.after('inline', 'ragging', ({ tokens }) =>
 			tokens?.forEach(({ children, type }) =>
@@ -72,14 +72,11 @@ export default (eleventyConfig) => {
 						child.content = child.content.replace(/\//g, '/\u200B')
 
 						// Prevent orphans at the end of a block/paragraph (not just token).
-						const isLastNonEmptyTextToken = (children, index) =>
-							!children?.slice(index + 1).some((t) => t.type === 'text' && t.content.trim())
-
-						isLastNonEmptyTextToken(children, index) &&
-							(child.content = child.content.replace(/(\S+)\s+(\S+)(?=\s*$)/g,
-								(match, prevWord, lastWord, offset, string) =>
-									/^\s*$/.test(string.slice(offset + match.length)) && prevWord.length + lastWord.length <= 20 ? `${prevWord}\u00A0${lastWord}` : match,
-							))
+						!children?.slice(index + 1).some((token) => token.type === 'text' && token.content.trim()) &&
+								(child.content = child.content.replace(/(\S+)\s+(\S+)(?=\s*$)/g,
+									(match, prevWord, lastWord, offset, string) =>
+										/^\s*$/.test(string.slice(offset + match.length)) && prevWord.length + lastWord.length <= 20 ? `${prevWord}🍕${lastWord}` : match,
+								))
 					}
 				}),
 			),
