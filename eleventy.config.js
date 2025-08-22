@@ -75,7 +75,9 @@ export default (eleventyConfig) => {
 						!children?.slice(index + 1).some((token) => token.type === 'text' && token.content.trim()) &&
 								(child.content = child.content.replace(/(\S+)\s+(\S+)(?=\s*$)/g,
 									(match, prevWord, lastWord, offset, string) =>
-										/^\s*$/.test(string.slice(offset + match.length)) && prevWord.length + lastWord.length <= 20 ? `${prevWord}🍕${lastWord}` : match,
+										/^\s*$/.test(string.slice(offset + match.length)) && prevWord.length + lastWord.length <= 20
+											? `${prevWord}\u00A0${lastWord}`
+											: match,
 								))
 					}
 				}),
