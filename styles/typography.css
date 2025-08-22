@@ -18,18 +18,18 @@ th {
 
 /* Faux-italics. */
 em {
-	font-style:        italic;
-	font-synthesis:    none; /* Prevent Safari from doing it. */
-	margin-inline-end: 0.1em;
+	font-style:         italic;
+	font-synthesis:     none; /* Prevent Safari from doing it. */
+	padding-inline-end: 0.15em;
 
 	/* Added by an 11ty `transform`. */
 	nobr {
 		/* `&NoBreak;` to trigger the `white-space` property. */
-		&::before { content: '\2060' }
+		&::before, &::after { content: '\2060' }
 
 		> span {
-			display:     inline-block;
-			transform:   skew(-15deg) translateX(0.1em);
+			display:   inline-block;
+			transform: skew(-15deg) translateX(0.1em);
 		}
 
 		/* TODO Trailing `)` can still wrap in Safari! */
