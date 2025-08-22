@@ -54,36 +54,42 @@
 	}
 }
 
-.light {
-	--left:   0.059em;
-	--right:  0.149em;
-	--stroke: 0.056em;
-
-	font-weight: 300;
+/* Change stroke/metrics based on weight. */
+@property --weight {
+	inherits:      true;
+	initial-value: 400; /* Default to `regular`. */
+	syntax:        '<number>';
 }
 
-:root, .regular {
-	--left:   0.079em;
-	--right:  0.139em;
-	--stroke: 0.079em;
+* {
+	@container style(--weight: 300) {
+		--left:   0.059em;
+		--right:  0.149em;
+		--stroke: 0.056em;
+	}
 
-	font-weight: 400;
-}
+	@container style(--weight: 400) {
+		--left:   0.079em;
+		--right:  0.139em;
+		--stroke: 0.079em;
+	}
 
-.medium {
-	--left:   0.089em;
-	--right:  0.135em;
-	--stroke: 0.089em;
+	@container style(--weight: 500) {
+		--left:   0.089em;
+		--right:  0.135em;
+		--stroke: 0.089em;
+	}
 
-	font-weight: 500;
-}
-
-.heavy {
-	--left:   0.119em;
-	--right:  0.119em;
-	--stroke: 0.119em;
-
-	font-weight: 700;
+	@container style(--weight: 700) {
+		--left:   0.119em;
+		--right:  0.119em;
+		--stroke: 0.119em;
+	}
 }
 
 /* TODO Could use `@container style()` if setting on a parent! */
+
+code, kbd, samp {
+	font-family: 'Courier Prime', monospace;
+	font-size: 75%;
+}
