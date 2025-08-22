@@ -47,7 +47,7 @@ summary {
 a:where(:not([href])) > * { color: color-mix(in srgb, currentcolor var(--disabled), transparent) }
 
 /* Inline links. */
-:where(dd, dt, h1, h2, h3, h4, h5, h6, p, td, th) a {
+:where(dd, dt, p, td, th, main li:not(:has(ol, p, section, ul))) a {
 	/* Rounded caps. */
 	--underline--cap: radial-gradient(circle closest-side at center, currentcolor calc(100% - 0.5px), transparent);
 	--underline--cap--inset: calc(var(--enlargement) - var(--stroke) / 2);
@@ -82,10 +82,4 @@ a:where(:not([href])) > * { color: color-mix(in srgb, currentcolor var(--disable
 	&::after { content: initial }
 
 	&:active { background-color: var(--highlight) }
-}
-
-/* Disable underlines. */
-:where(h1, h2, h3, h4, h5, h6) a {
-	--underline:              initial;
-	--enlargement--underline: initial;
 }
