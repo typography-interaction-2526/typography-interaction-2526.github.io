@@ -34,6 +34,11 @@
 			&:nth-child(7) { background-color: var(--background--4) }
 			&:nth-child(8) { background-color: var(--background--5) }
 		}
+
+		/* Root and unit pages (items). */
+		> li, > li > ul > li {
+			&:not(:first-of-type) { border-block-start: var(--stroke) solid currentcolor }
+		}
 	}
 </style>
 

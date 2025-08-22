@@ -8,7 +8,10 @@
 </script>
 
 <style>
-	:root { scroll-behavior: smooth }
+	:root {
+		background-color: black;
+		scroll-behavior:  smooth;
+	}
 
 	article { scroll-margin-block-start: 0 }
 </style>
