@@ -16,6 +16,7 @@ main {
 	h2, h3, h4, h5 { text-transform: uppercase }
 
 	section {
+		align-items:           inherit;
 		display:               grid;
 		grid-column:           all;
 		grid-template-columns: subgrid;
@@ -34,7 +35,6 @@ main {
 		display:               grid;
 		grid-row:              span var(--rows, 1);
 		grid-template-columns: subgrid;
-		row-gap:               inherit;
 	}
 
 	.all    { grid-column: all }
