@@ -54,7 +54,7 @@
 	}
 }
 
-:root, .light {
+.light {
 	--left:   0.059em;
 	--right:  0.149em;
 	--stroke: 0.056em;
@@ -62,7 +62,7 @@
 	font-weight: 300;
 }
 
-.regular {
+:root, .regular {
 	--left:   0.079em;
 	--right:  0.139em;
 	--stroke: 0.079em;

@@ -1,6 +1,6 @@
 :where(:root) {
-	--leading: 2cap;
 	--size:    2rem;
+	--leading: 2cap;
 
 	--max:    136.6rem;
 	--gutter: max(var(--alley), calc((100vw - var(--max)) / 2));
@@ -27,6 +27,4 @@
 			--alley: 3cap;
 		}
 	}
-
-	@media (width >= 75em) { --size: 2.8rem } /* Desktop. */
 }
