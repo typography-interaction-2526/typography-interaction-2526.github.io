@@ -71,11 +71,15 @@ export default (eleventyConfig) => {
 						// Adds a `&ZeroWidthSpace;` after every slash.
 						child.content = child.content.replace(/\//g, '/\u200B')
 
-						// TODO This is broken! Overzealous.
-						// // Prevent orphans.
-						// child.content = child.content.replace(/(\S+)\s+(\S+)(?=\s*$)/gm, (match, prevWord, lastWord) =>
-						// 	prevWord.length + lastWord.length <= 16 ? `${prevWord}\u00A0${lastWord}` : match,
-						// )
+						// Prevent orphans at the end of a block/paragraph (not just token).
+						const isLastNonEmptyTextToken = (children, index) =>
+							!children?.slice(index + 1).some((t) => t.type === 'text' && t.content.trim())
+
+						isLastNonEmptyTextToken(children, index) &&
+							(child.content = child.content.replace(/(\S+)\s+(\S+)(?=\s*$)/g,
+								(match, prevWord, lastWord, offset, string) =>
+									/^\s*$/.test(string.slice(offset + match.length)) && prevWord.length + lastWord.length <= 20 ? `${prevWord}\u00A0${lastWord}` : match,
+							))
 					}
 				}),
 			),
