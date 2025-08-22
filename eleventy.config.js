@@ -136,7 +136,7 @@ export default (eleventyConfig) => {
 	// Transform words for faux-italics.
 	eleventyConfig.addTransform('italicSpans', function(html) {
 		return String(this.inputPath).endsWith('.md') && String(this.outputPath).endsWith('.html')
-			? html.replace(/<em>([\s\S]*?)<\/em>/g, (match, inner) => `<em>${inner.replace(/(\S+)/g, '<span>$1</span>')}</em>` )
+			? html .replace(/<em>([\s\S]*?)<\/em>/g, (match, inner) => `<em>${inner.replace(/(\S+)/g, '<nobr><span>$1</span></nobr>')}</em>` )
 			: html
 	})
 

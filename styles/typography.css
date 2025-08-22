@@ -24,12 +24,16 @@ em {
 	margin-inline-end: 0.1em;
 
 	/* Added by an 11ty `transform`. */
-	span {
-		display:   inline-block;
-		transform: skew(-15deg) translateX(0.1em);
+	nobr {
+		/* `&NoBreak;` to trigger the `white-space` property. */
+		&::before { content: '\2060' }
+
+		> span {
+			display:     inline-block;
+			transform:   skew(-15deg) translateX(0.1em);
+		}
 	}
 }
 
 .balance { text-wrap: balance }
-
-.nowrap, nobr { white-space: nowrap }
+.nowrap, nobr { text-wrap: nowrap }
