@@ -8,6 +8,8 @@
 		place-items:        center;
 
 		:where(h1, p) {
+			--size: var(--size--h1);
+
 			text-align:     center;
 			text-transform: uppercase;
 			text-wrap:      balance;
@@ -20,6 +22,7 @@
 <a
 	webc:root="override"
 	:href="item?.url"
+	class="medium"
 >
 	<h1
 		webc:if="item.url === $data.page.url"

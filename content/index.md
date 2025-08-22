@@ -1,5 +1,5 @@
 <script front-matter>
-	const title = 'Typography & Interaction'
+	const title = 'Typography & Interaction'
 </script>
 
 <em style="margin-inline-start: -0.2em">Typography & Interaction</em> is a year-long, two-semester course in the [MPS Communication Design](https://mpscd.parsons.edu) program at [Parsons](https://www.newschool.edu/parsons/)/[The New School](https://www.newschool.edu). The class will provide a rigorous foundation of typographic and interaction principles in the context of digital design.

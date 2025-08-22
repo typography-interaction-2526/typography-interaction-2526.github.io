@@ -12,6 +12,8 @@
 	--hover:       50%;
 	--transition:  166ms;
 
+	--size--h1: calc(2 * var(--size));
+
 	--background--root: gainsboro;
 	--background--1:    gold;
 	--background--2:    orange;
