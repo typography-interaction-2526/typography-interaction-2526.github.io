@@ -21,6 +21,9 @@
 
 <style webc:scoped>
 	:host {
+		--size:   var(--size--h1);
+		--weight: 500;
+
 		> li {
 			background-color: var(--background--root);
 

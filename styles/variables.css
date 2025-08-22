@@ -1,6 +1,9 @@
 :where(:root) {
-	--size:    2rem;
+	--size:    var(--size--base);
 	--leading: 2cap;
+
+	--size--base: calc(2rem);
+	--size--h1:   calc(2 * var(--size--base));
 
 	--max:    140rem;
 	--gutter: max(var(--alley), calc((100vw - var(--max)) / 2));
@@ -12,8 +15,6 @@
 	--hover:       50%;
 	--transition:  166ms;
 
-	--size--h1: calc(2 * var(--size));
-
 	--background--root: gainsboro;
 	--background--1:    gold;
 	--background--2:    orange;
@@ -24,7 +25,7 @@
 	@media (width >= 35em) { /* Landscape phones. */
 		--alley: 2cap;
 
-		@media (height >= 27em) { --size:  2.4rem } /* Tablets. */
+		@media (height >= 27em) { --size--base:  2.4rem } /* Tablets. */
 	}
 
 	@media (width >= 60em) { --alley: 3cap }

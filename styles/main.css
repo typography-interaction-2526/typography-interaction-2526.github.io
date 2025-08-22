@@ -1,4 +1,7 @@
 main {
+	--size:   var(--size--base); /* Reset from `pages` spacing. */
+	--weight: 400;
+
 	align-items:   baseline;
 	column-gap:    var(--alley);
 	display:       grid;

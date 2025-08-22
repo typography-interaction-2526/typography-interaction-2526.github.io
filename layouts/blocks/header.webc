@@ -1,37 +1,34 @@
 <style webc:scoped>
 	:host {
-		border-block-start: var(--stroke) solid currentcolor;
-		display:            grid;
-		outline-offset:     calc(-1 * var(--enlargement));
-		padding:            2cap;
-		place-content:      center;
-		place-items:        center;
+		> a {
+			outline-offset: calc(-1 * var(--enlargement));
+			place-content:  center;
+			place-items:    center;
+			display:        grid;
+			padding:        1cap;
 
-		:where(h1, p) {
-			--size: var(--size--h1);
+			&::after { inset: 0 } /* Since it is full-bleed. */
 
-			text-align:     center;
-			text-transform: uppercase;
-			text-wrap:      balance;
+			:where(h1, p) {
+				text-align:     center;
+				text-transform: uppercase;
+				text-wrap:      balance;
+			}
 		}
 	}
-
-	:host::after { inset: 0 } /* Since it is full-bleed. */
 </style>
 
-<a
-	webc:root="override"
-	:href="item?.url"
-	class="medium"
->
-	<h1
-		webc:if="item.url === $data.page.url"
-		@html="markdown(item.data.title)"
-	></h1>
-	<p
-		webc:else
-		@html="markdown(item.data.title)"
-	></p>
+<header webc:root="override">
+	<a :href="item?.url">
+		<h1
+			webc:if="item.url === $data.page.url"
+			@html="markdown(item.data.title)"
+		></h1>
+		<p
+			webc:else
+			@html="markdown(item.data.title)"
+		></p>
 
-	<!-- TODO Add terms/years here! -->
-</a>
+		<!-- TODO Add terms/years here! -->
+	</a>
+</header>
