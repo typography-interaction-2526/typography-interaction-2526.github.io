@@ -267,7 +267,7 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 
 ## Evaluation Criteria
 
-<!-- TODO Add code review/quizzes. -->
+<!-- TODO Add code review/quizzes? -->
 
 - ### Engagement
 
@@ -380,6 +380,8 @@ If there are still questions—particularly logistical or content ones—student
 ### Additional Technical Help
 
 For more specific technical instruction and questions, Parsons has dedicated CD-program tutors available to help students with HTML, CSS, and JavaScript—as well as offering general design critiques and feedback. The drop-in schedules are available in the [CD@Parsons app](https://cdparsons.glideapp.io) under “Make & Remake.”
+
+<!-- TODO This link is busted? -->
 
 The University Learning Center also offers its own [tutoring sessions](https://www.newschool.edu/learning-center/); these are by-appointment.
 
