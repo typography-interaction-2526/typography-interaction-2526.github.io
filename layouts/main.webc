@@ -2,6 +2,17 @@
 	const layout = 'base'
 </script>
 
+<script>
+	// Ahead of HTMX, take us to the current “page.”
+	document.querySelector('article').scrollIntoView({ behavior: 'smooth', block: 'start' })
+</script>
+
+<style>
+	:root { scroll-behavior: smooth }
+
+	article { scroll-margin-block-start: 0 }
+</style>
+
 <block webc:import="blocks/pages.webc">
 	<article>
 		<block webc:import="header.webc"></block>
