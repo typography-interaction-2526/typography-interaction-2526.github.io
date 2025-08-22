@@ -1,32 +1,20 @@
-<ul>
+<ul @attributes>
 	<li>
-		<a :href="$data.course.channel.submit">
-			<p>Submit</p>
-		</a>
+		<a :href="$data.course.channel.submit">Submit</a>
 	</li>
 	<li>
-		<a :href="$data.course.channel.slack">
-			<p>Slack</p>
-		</a>
+		<a :href="$data.course.channel.slack">Slack</a>
 	</li>
 	<li>
-		<a :href="$data.course.channel.figma">
-			<p>Figma</p>
-		</a>
+		<a :href="$data.course.channel.figma">Figma</a>
 	</li>
 	<li>
-		<a :href="$data.course.channel.github">
-			<p>GitHub</p>
-		</a>
+		<a :href="$data.course.channel.github">GitHub</a>
 	</li>
 	<li>
-		<a :href="$data.course.channel.google">
-			<p>Google</p>
-		</a>
+		<a :href="$data.course.channel.google">Google</a>
 	</li>
 	<li>
-		<a :href="$data.course.channel.zoom">
-			<p>Zoom</p>
-		</a>
+		<a :href="$data.course.channel.zoom">Zoom</a>
 	</li>
 </ul>
