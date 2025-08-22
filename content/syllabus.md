@@ -13,6 +13,7 @@ This first semester will focus on a mastery of type and layout concepts on the w
 
 - <a :href="course.syllabus.fall">Submitted Version</a>
 - <a :href="course.catalog.fall">Course Catalog</a>
+<!-- .right .rows--2 -->
 
 Typography is the infrastructure of communication in nearly any visual medium. It provides the very first shape and form to written content, and as designers, it is our responsibility to do this with intention and care. Whether towards goals of expression itself or in the service of ideas, the designer must understand type to use it successfully. In this way, we are stewards of meaning.
 
@@ -26,6 +27,7 @@ Our second semester will build on the type and layout foundations from the first
 
 - <a :href="course.syllabus.spring">Submitted Version</a>
 - <a :href="course.catalog.spring">Course Catalog</a>
+<!-- .right .rows--2 -->
 
 Interaction, interactive, interface, product, UI, UX designers—we are known by many names. These are all monikers for a digitally-native design practice. It is our responsibility, as practitioners in this increasingly consequential and broadening field, to both understand existing paradigms and help manifest, refine, and sustain purposeful new ones.
 
