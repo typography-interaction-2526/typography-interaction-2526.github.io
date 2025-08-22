@@ -32,6 +32,8 @@ em {
 			display:     inline-block;
 			transform:   skew(-15deg) translateX(0.1em);
 		}
+
+		/* TODO Trailing `)` can still wrap in Safari! */
 	}
 }
 
