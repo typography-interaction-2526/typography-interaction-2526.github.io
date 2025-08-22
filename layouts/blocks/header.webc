@@ -1,12 +1,17 @@
 <style webc:scoped>
 	:host {
-		border-block-start: var(--stroke) solid currentColor;
+		border-block-start: var(--stroke) solid currentcolor;
 		display:            grid;
-		justify-content:    center;
-		justify-items:      center;
 		outline-offset:     calc(-1 * var(--enlargement));
 		padding:            2cap;
-		text-transform:     uppercase;
+		place-content:      center;
+		place-items:        center;
+
+		:where(h1, p) {
+			text-align:     center;
+			text-transform: uppercase;
+			text-wrap:      balance;
+		}
 	}
 
 	:host::after { inset: 0 } /* Since it is full-bleed. */
@@ -24,4 +29,6 @@
 		webc:else
 		@html="markdown(item.data.title)"
 	></p>
+
+	<!-- TODO Add terms/years here! -->
 </a>
