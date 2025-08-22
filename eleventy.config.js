@@ -73,11 +73,11 @@ export default (eleventyConfig) => {
 
 						// Prevent orphans at the end of a block/paragraph (not just token).
 						!children?.slice(index + 1).some((token) => token.type === 'text' && token.content.trim()) &&
-							children?.map((token) => token.type === 'text' ? token.content : '').join('').length > 64 &&
+							 /[.!?…:;)]$/.test(children?.map((token) => token.type === 'text' ? token.content : '').join('').trim()) &&
 								(child.content = child.content.replace(/(\S+)\s+(\S+)(?=\s*$)/g,
 									(match, prevWord, lastWord, offset, string) =>
 										/^\s*$/.test(string.slice(offset + match.length)) && prevWord.length + lastWord.length <= 20
-											? `${prevWord}🍕${lastWord}`
+											? `${prevWord}\u00A0${lastWord}`
 											: match,
 								))
 					}
