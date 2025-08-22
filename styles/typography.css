@@ -11,8 +11,7 @@ td,
 th {
 	margin-inline-end:   calc(-1 * var(--right));
 	margin-inline-start: calc(-1 * var(--left));
-	text-box-edge:       cap alphabetic; /* 🥹 */
-	text-box-trim:       trim-both;      /* 😭 */
+	text-box:            trim-both cap alphabetic; /* 🥹 */
 
 	/* TODO Firefox warning message! */
 }
