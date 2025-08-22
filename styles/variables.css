@@ -2,7 +2,7 @@
 	--size:    2rem;
 	--leading: 2cap;
 
-	--max:    136.6rem;
+	--max:    140rem;
 	--gutter: max(var(--alley), calc((100vw - var(--max)) / 2));
 	--alley:  1cap;
 
