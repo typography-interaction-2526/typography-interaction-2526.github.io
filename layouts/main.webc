@@ -13,7 +13,15 @@
 		scroll-behavior:  smooth;
 	}
 
-	article { scroll-margin-block-start: 0 }
+	article {
+		scroll-margin-block-start: 0;
+		padding-block-end:         3cap;
+
+		> header {
+			border-block-end: var(--stroke) solid currentColor;
+			margin-block-end: 3cap;
+		}
+	}
 </style>
 
 <block webc:import="blocks/pages.webc">
