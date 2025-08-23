@@ -15,19 +15,20 @@
 
 	article {
 		scroll-margin-block-start: 0;
-		padding-block-end:         3cap;
 
-		> header {
-			border-block-end: var(--stroke) solid currentColor;
-			margin-block-end: 3cap;
-		}
+		> header { border-block-end: var(--stroke) solid currentcolor }
 	}
 </style>
 
 <block webc:import="blocks/pages.webc">
 	<article>
 		<block webc:import="header.webc"></block>
-		<block webc:import="toc.webc"></block>
-		<main @html="content"></main>
+		<main>
+			<block webc:import="toc.webc"></block>
+			<template
+				webc:nokeep
+				@html="content"
+			></template>
+		</main>
 	</article>
 </block>
