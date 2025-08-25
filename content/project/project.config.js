@@ -1,6 +1,6 @@
 export default {
 	eleventyComputed: {
-		title: (data) => `<em>${data.title}</em>`,
+		title: (data) => `Project Nº ${data.page.fileSlug}: “${data.title}”`,
 		type: 'Project',
 	},
 }
