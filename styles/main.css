@@ -15,7 +15,7 @@ main {
 
 	* { grid-column: body } /* Default to body width. */
 
-	h1 { display: none }
+	h1, h5, h6 { display: none }
 
 	h2, h3, h4, h5 { text-transform: uppercase }
 
