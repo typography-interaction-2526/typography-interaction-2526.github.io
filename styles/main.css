@@ -19,7 +19,12 @@ main {
 
 	h2, h3, h4, h5 { text-transform: uppercase }
 
-	section {
+
+	/* Containers. */
+	dl,
+	ol,
+	section,
+	ul {
 		align-items:           inherit;
 		display:               grid;
 		grid-column:           all;
@@ -29,8 +34,47 @@ main {
 
 	/* Lists, lists, lists. */
 	dl, ol, ul {
-		display:               grid;
-		grid-template-columns: subgrid;
+		margin-block: 1lh;
+
+		/* Item inset. */
+		:where(dd, dt, li) { padding-inline-start: 2cap }
+
+		/* ”Markers.” */
+		:where(dt, li) {
+			position: relative;
+
+			&::before {
+				position: absolute;
+				text-box: trim-both cap alphabetic;
+			}
+		}
+	}
+
+	dl, ul {
+		margin-inline-start: 1cap;
+
+		> :where(dt, li)::before {
+			content:          '—';
+			inset-inline-end: calc(100% - var(--right));
+		}
+	}
+
+	ol {
+		counter-reset:       index;
+		margin-inline-start: 1em;
+
+		> li::before {
+			content:           counters(index, '.') '.';
+			counter-increment: index;
+			inline-size:       1em;
+			inset-inline-end:  100%;
+		}
+
+		&:has(:nth-child(10)) {
+			margin-inline-start: 1.25em;
+
+			> li::before { inline-size: 1.25em }
+		}
 	}
 
 	/* Manual column placements. */
