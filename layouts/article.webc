@@ -4,7 +4,7 @@
 
 <script>
 	// Ahead of HTMX, take us to the current “page.”
-	document.querySelector('article').scrollIntoView({ behavior: 'smooth', block: 'start' })
+	document.querySelector('article').scrollIntoView({ behavior: 'instant', block: 'start' })
 </script>
 
 <style>
