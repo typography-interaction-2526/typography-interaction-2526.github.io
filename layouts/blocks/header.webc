@@ -1,5 +1,8 @@
 <style webc:scoped>
 	:host {
+		--size:   var(--size--h1);
+		--weight: 500;
+
 		> a {
 			display:        grid;
 			outline-offset: calc(-1 * var(--enlargement));
@@ -9,12 +12,25 @@
 
 			&::after { inset: 0 } /* Since it is full-bleed. */
 
+			/* Centered style? */
 			:where(h1, p) {
 				text-align:     center;
 				text-transform: uppercase;
 				text-wrap:      balance;
 			}
 		}
+
+		/* Dividers. */
+		&::before,
+		&:has(+ main)::after {
+			content:          '';
+			display:          block;
+			background-color: currentColor;
+			height:           var(--stroke);
+		}
+
+		/* Future pages. */
+		&:has(> a:not([href])) { color: var(--disabled) }
 	}
 </style>
 

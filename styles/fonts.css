@@ -61,7 +61,9 @@
 	syntax:        '<number>';
 }
 
-* {
+*,
+*::before,
+*::after {
 	@container style(--weight: 300) {
 		--left:   0.059em;
 		--right:  0.149em;

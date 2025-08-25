@@ -43,9 +43,6 @@ summary {
 	}
 }
 
-/* Future pages. */
-a:where(:not([href])) > * { color: color-mix(in srgb, currentcolor var(--disabled), transparent) }
-
 /* Inline links. */
 :where(dd, dt, p, td, th, main li:not(:has(ol, p, section, ul))) a {
 	/* Rounded caps. */

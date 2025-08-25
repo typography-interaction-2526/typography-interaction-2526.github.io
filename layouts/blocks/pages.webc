@@ -21,9 +21,6 @@
 
 <style webc:scoped>
 	:host {
-		--size:   var(--size--h1);
-		--weight: 500;
-
 		> li {
 			--background: var(--background--root);
 
@@ -35,13 +32,6 @@
 			&:nth-child(6) { --background: var(--background--3) }
 			&:nth-child(7) { --background: var(--background--4) }
 			&:nth-child(8) { --background: var(--background--5) }
-		}
-
-		/* Root and unit pages (items). */
-		> li:not(:first-of-type, :has(> ul)), > li > ul > li {
-			border-block-start: var(--stroke) solid currentcolor;
-
-			&:has(> header > a:not([href])) { border-block-start: var(--stroke) solid color-mix(in srgb, currentcolor var(--disabled), transparent) }
 		}
 	}
 </style>

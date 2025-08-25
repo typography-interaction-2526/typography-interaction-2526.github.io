@@ -9,7 +9,7 @@
 	--gutter: max(var(--alley), calc((100vw - var(--max)) / 2));
 	--alley:  1cap;
 
-	--disabled:    20%;
+	--disabled:    color-mix(in srgb, currentcolor, transparent 80%);
 	--enlargement: 0.6rem;
 	--highlight:   color-mix(in srgb, currentcolor, transparent 90%);
 	--hover:       50%;
