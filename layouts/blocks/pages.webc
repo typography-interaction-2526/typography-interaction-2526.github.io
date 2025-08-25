@@ -36,12 +36,10 @@
 		}
 
 		/* Root and unit pages (items). */
-		> li, > li > ul > li {
-			&:not(:first-of-type) {
-				border-block-start: var(--stroke) solid currentcolor;
+		> li:not(:first-of-type, :has(> ul)), > li > ul > li {
+			border-block-start: var(--stroke) solid currentcolor;
 
-				&:has(> header > a:not([href])) { border-block-start: var(--stroke) solid color-mix(in srgb, currentcolor var(--disabled), transparent) }
-			}
+			&:has(> header > a:not([href])) { border-block-start: var(--stroke) solid color-mix(in srgb, currentcolor var(--disabled), transparent) }
 		}
 	}
 </style>
