@@ -9,7 +9,7 @@ main {
 		[ all-start aside-start body-start center-start five-start four-start left-start one-start recto-start right-start six-start three-start two-start verso-start ]
 		minmax(0, 1fr)
 		[ all-end aside-end body-end center-end five-end four-end left-end one-end recto-end right-end six-end three-end two-end verso-end ];
-	padding-block:  6cap;
+	padding-block:  max(3cap, calc(2 * var(--gutter)));
 	padding-inline: var(--gutter);
 	row-gap:        3cap;
 
