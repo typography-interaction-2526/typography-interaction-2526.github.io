@@ -7,8 +7,8 @@
 
 	--max:    1400;
 
-	--gutter: max(var(--alley), calc((100vw - (var(--max) / var(--size--root)) * 1rem) / 2));
-	--alley:  1rcap;
+	--gutter: max(calc(var(--alley) / 2), calc((100vw - (var(--max) / var(--size--root)) * 1rem) / 2));
+	--alley:  2rcap;
 
 	--disabled:    color-mix(in srgb, currentcolor, transparent 80%);
 	--enlargement: 1rex;
@@ -24,12 +24,12 @@
 	--background--5:    darkturquoise;
 
 	@media (width >= 35em) { /* Landscape phones. */
-		--alley: 2rcap;
+		--alley: 4rcap;
 
 		@media (height >= 27em) { --size--root: 24 } /* Tablets. */
 	}
 
-	@media (width >= 60em) { --alley: 3rcap }
+	@media (width >= 60em) { --alley: 6rcap }
 
 	@media (width >= 84em) {
 		--size--h1: 3rem;
