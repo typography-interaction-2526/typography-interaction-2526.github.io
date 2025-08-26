@@ -1,12 +1,13 @@
 :where(:root) {
 	--leading: 2cap;
 
-	--size--root: 20;
+	--size--root: 20; /* In pixels, unitless for `calc`. */
 	--size--h1:   2rem;
 
 
-	--max:    1400px;
-	--gutter: max(var(--alley), calc((100vw - var(--max)) / 2));
+	--max:    1400;
+
+	--gutter: max(var(--alley), calc((100vw - (var(--max) / var(--size--root)) * 1rem) / 2));
 	--alley:  1rcap;
 
 	--disabled:    color-mix(in srgb, currentcolor, transparent 80%);
