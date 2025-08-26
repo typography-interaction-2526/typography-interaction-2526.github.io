@@ -88,10 +88,3 @@
 		--stroke: 0.119em;
 	}
 }
-
-/* TODO Could use `@container style()` if setting on a parent! */
-
-code, kbd, samp {
-	font-family: 'Courier Prime', monospace;
-	font-size: 75%;
-}
