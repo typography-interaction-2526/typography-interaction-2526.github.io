@@ -13,11 +13,7 @@
 			&::after { inset: 0 } /* Since it is full-bleed. */
 
 			/* Centered style? */
-			:where(h1, p) {
-				text-align:     center;
-				text-transform: uppercase;
-				text-wrap:      balance;
-			}
+			:where(h1, p) { text-align: center }
 		}
 
 		/* Dividers. */
@@ -47,6 +43,7 @@
 		<p
 			webc:else
 			@html="markdown(item.data.title)"
+			class="heading"
 		></p>
 
 		<!-- TODO Add terms/years here! -->

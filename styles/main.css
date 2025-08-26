@@ -12,10 +12,7 @@ main {
 
 	* { grid-column: body } /* Default to body width. */
 
-	h1, h5, h6 { display: none }
-
-	h2, h3, h4, h5 { text-transform: uppercase }
-
+	h1 { display: none } /* Don’t you dare. */
 
 	/* Containers. */
 	dl,
