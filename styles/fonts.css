@@ -35,12 +35,12 @@
 	--top--content:    0.144em;
 
 	font-family:    'Gorton Digital', sans-serif;
-	font-size:      var(--size--root);
+	font-size:      calc((var(--size--root) / 16) * 100%);
 	font-synthesis: none;
 
 	* {
 		font-kerning:             normal;
-		font-size:                var(--size);
+		font-size:                var(--size, 1rem);
 		font-smooth:              always;
 		-moz-osx-font-smoothing:  grayscale;
 		-webkit-font-smoothing:   antialiased;

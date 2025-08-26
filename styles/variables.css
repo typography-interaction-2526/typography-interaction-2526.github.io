@@ -1,7 +1,7 @@
 :where(:root) {
 	--leading: 2cap;
 
-	--size--root: 125%; /* Do a calc! */
+	--size--root: 20;
 	--size--h1:   2rem;
 
 
@@ -25,7 +25,7 @@
 	@media (width >= 35em) { /* Landscape phones. */
 		--alley: 2rcap;
 
-		@media (height >= 27em) { --size--root:  150% } /* Tablets. */
+		@media (height >= 27em) { --size--root: 24 } /* Tablets. */
 	}
 
 	@media (width >= 60em) { --alley: 3rcap }
