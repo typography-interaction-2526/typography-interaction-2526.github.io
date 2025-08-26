@@ -39,6 +39,7 @@
 	font-synthesis: none;
 
 	* {
+		color:                    var(--color);
 		font-kerning:             normal;
 		font-size:                var(--size, 1rem);
 		font-smooth:              always;

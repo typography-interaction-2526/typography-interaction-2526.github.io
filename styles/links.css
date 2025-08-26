@@ -44,7 +44,7 @@ summary {
 }
 
 /* Inline links. */
-:where(dd, dt, p, td, th, main li:not(:has(ol, p, section, ul))) a {
+:where(dd, dt, p, td, th, main li:not(:has(ol, p, section, ul))) a:where(:not(:has(mark))) {
 	/* Rounded caps. */
 	--underline--cap: radial-gradient(circle closest-side at center, currentcolor calc(100% - 0.5px), transparent);
 	--underline--cap--inset: calc(var(--enlargement) - var(--stroke) / 2);
@@ -80,3 +80,24 @@ summary {
 
 	&:active { background-color: var(--highlight) }
 }
+
+/* Our “tag” style. */
+:is(a, button):has(mark) {
+	display:     inline-block;
+	inline-size: fit-content;
+
+	mark {
+		background-color: var(--color);
+		border-radius:    var(--stroke);
+		color:            var(--background);
+		display:          block;
+		padding:          1ex;
+
+		&::after {
+			content:             '→';
+			margin-inline-start: calc(1ex - var(--right));
+		}
+	}
+}
+
+/* TODO Move `mark` itself to a component? There is no `:global()` though. */
