@@ -3,6 +3,7 @@
 a:where([href]),
 button:where(:not([disabled])),
 summary {
+	border-radius:  1px; /* Forces round outline in Safari. */
 	cursor:         pointer;
 	display:        block;
 	outline-offset: var(--enlargement);
@@ -22,6 +23,7 @@ summary {
 	/* Pseudo for clicks, enlarged without shenanigans on parent. */
 	&::after {
 		background-color:           transparent;
+		border-radius:              var(--enlargement);
 		content:                    '';
 		cursor:                     inherit;
 		inset:                      calc(-1 * var(--enlargement));
@@ -62,6 +64,7 @@ summary {
 	background:                 var(--underline);
 	background-position-y:      calc(1cap + var(--enlargement) + var(--descender)); /* Through the `p`. */
 	background-repeat:          no-repeat;
+	border-radius:              var(--enlargement);
 	box-decoration-break:       clone; /* “Restart” inline padding/margin over on wrapped links. */
 	display:                    inline;
 	margin-inline-end:          calc(-1 * (var(--enlargement) - var(--right)));
