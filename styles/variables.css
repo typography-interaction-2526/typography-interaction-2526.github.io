@@ -35,3 +35,11 @@
 		--size--h1: 3rem;
 	}
 }
+
+/* TODO Declare `--size` and `--leading` with defaults, too? */
+
+@property --weight {
+	inherits:      true;
+	initial-value: 400; /* Default to `regular`. */
+	syntax:        '<number>';
+}

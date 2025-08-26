@@ -55,12 +55,6 @@
 }
 
 /* Change stroke/metrics based on weight. */
-@property --weight {
-	inherits:      true;
-	initial-value: 400; /* Default to `regular`. */
-	syntax:        '<number>';
-}
-
 *, *::before, *::after {
 	@container style(--weight: 300) {
 		--left:   0.059em;
