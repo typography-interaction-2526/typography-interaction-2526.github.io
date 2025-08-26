@@ -145,9 +145,13 @@ export default (eleventyConfig) => {
 	// Transform words for faux-italics.
 	eleventyConfig.addTransform('italicSpans', function(html) {
 		return String(this.inputPath).endsWith('.md') && String(this.outputPath).endsWith('.html')
-			? html .replace(/<em(\s[^>]*)?>([\s\S]*?)<\/em>/g, (match, attrs, inner) => `<em${attrs || ''}>${inner.replace(/(\S+)/g, '<nobr><span>$1</span></nobr>')}</em>` )
+			? html.replace(/<em(\s[^>]*)?>([\s\S]*?)<\/em>/g, (match, attrs, inner) =>
+				`<em${attrs || ''}>${inner.split(/(<[^>]+>)/g).map((part) =>
+					part.startsWith('<') ? part : part.replace(/(\S+)/g, '<nobr><span>$1</span></nobr>')).join('')}</em>`)
 			: html
 	})
+
+	// TODO Use JSDOM for this?
 
 	// Table of contents.
 	eleventyConfig.addPlugin(pluginToc, {
