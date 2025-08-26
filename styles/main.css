@@ -1,10 +1,7 @@
 main {
-	--size:   var(--size--base); /* Reset from `pages` spacing. */
-	--weight: 400;
-
-	align-items:           baseline;
-	column-gap:            var(--alley);
-	display:               grid;
+	align-items:    baseline;
+	column-gap:     var(--alley);
+	display:        grid;
 	grid-template-columns:
 		[ all-start aside-start body-start center-start five-start four-start left-start one-start recto-start right-start six-start three-start two-start verso-start ]
 		minmax(0, 1fr)
