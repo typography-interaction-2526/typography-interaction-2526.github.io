@@ -4,16 +4,13 @@
 		--weight: 500;
 
 		> a {
+			border-radius:  calc(var(--enlargement) * 2);
 			display:        grid;
 			outline-offset: calc(-1 * var(--enlargement));
-			padding:        1cap;
-			place-content:  center;
-			place-items:    center;
+			padding-block:  1cap;
+			padding-inline: var(--gutter);
 
 			&::after { inset: 0 } /* Since it is full-bleed. */
-
-			/* Centered style? */
-			:where(h1, p) { text-align: center }
 		}
 
 		/* Dividers. */
