@@ -37,16 +37,17 @@
 	font-family:    'Gorton Digital', sans-serif;
 	font-size:      calc((var(--size--root) / 16) * 100%);
 	font-synthesis: none;
+	line-height:    var(--leading);
 
 	* {
-		color:                    var(--color);
+		color:                    var(--color, currentcolor);
 		font-kerning:             normal;
 		font-size:                var(--size, 1rem);
 		font-smooth:              always;
 		-moz-osx-font-smoothing:  grayscale;
 		-webkit-font-smoothing:   antialiased;
 		font-weight:              var(--weight);
-		line-height:              var(--leading);
+		line-height:              var(--leading, 1rlh);
 		text-rendering:           optimizeLegibility;
 		-webkit-text-size-adjust: none;
 
