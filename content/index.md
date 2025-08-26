@@ -4,6 +4,12 @@
 
 <em style="margin-inline-start: -0.2em">Typography & Interaction</em> is a year-long, two-semester course in the [MPS Communication Design](https://mpscd.parsons.edu) program at [Parsons](https://www.newschool.edu/parsons/)/[The New School](https://www.newschool.edu). The class will provide a rigorous foundation of typographic and interaction principles in the context of digital design.
 
-<block webc:import="channels.webc" class="right rows--2"></block>
+- <a :href="$data.course.channel.submit"><mark>Submit</mark></a>
+- <a :href="$data.course.channel.slack"><mark>Slack</mark></a>
+- <a :href="$data.course.channel.figma"><mark>Figma</mark></a>
+- <a :href="$data.course.channel.github"><mark>GitHub</mark></a>
+- <a :href="$data.course.channel.google"><mark>Google</mark></a>
+- <a :href="$data.course.channel.zoom"><mark>Zoom</mark></a>
+<!-- .right .rows--2 -->
 
 We’ll be using this course site for our agendas, lectures, general class housekeeping, and anything else that comes up. It will be updated throughout the semester, so always check here first if you are looking for something.
