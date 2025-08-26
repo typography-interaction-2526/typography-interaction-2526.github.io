@@ -14,6 +14,21 @@ main {
 
 	h1 { display: none } /* Don’t you dare. */
 
+	/* Headings. */
+	hgroup {
+		grid-column: all;
+
+		&:has(> h2) {
+			--size:   var(--size--h2);
+			--weight: 500;
+
+			margin-block-end: 1rlh;
+		}
+
+		/* TODO Come back to these! */
+		> a { display: none }
+	}
+
 	/* Containers. */
 	dl,
 	ol,
@@ -24,6 +39,30 @@ main {
 		grid-column:           all;
 		grid-template-columns: subgrid;
 		row-gap:               inherit;
+	}
+
+	section:where(:not(:first-child)) {
+		margin-block-start: 1rlh; /* More space with hierarchy. */
+
+		&:has(> hgroup > h2) {
+			> hgroup > h2 {
+				margin-block-start:  calc(1lh - 1rcap); /* Back on baseline. */
+				padding-block-start: 1cap;
+				position:            relative;
+
+				/* Divider above it. */
+				&::before {
+					background-color:   currentcolor;
+					block-size:         var(--stroke);
+					border-radius:      calc(var(--stroke) / 2);
+					content:            '';
+					inset-block-start:  calc(-1 * var(--stroke) / 2);
+					inset-inline-end:   calc(var(--right) - var(--stroke) / 2);
+					inset-inline-start: calc(var(--left) - var(--stroke) / 2);
+					position:           absolute;
+				}
+			}
+		}
 	}
 
 	/* Lists, lists, lists. */
