@@ -1,16 +1,16 @@
 :where(:root) {
-	--size:    var(--size--base);
 	--leading: 2cap;
 
-	--size--base: 2rem;
-	--size--h1:   calc(2 * var(--size--base));
+	--size--root: 125%; /* Do a calc! */
+	--size--h1:   2rem;
 
-	--max:    140rem;
+
+	--max:    1400px;
 	--gutter: max(var(--alley), calc((100vw - var(--max)) / 2));
 	--alley:  1rcap;
 
 	--disabled:    color-mix(in srgb, currentcolor, transparent 80%);
-	--enlargement: 0.6rem;
+	--enlargement: 1rex;
 	--highlight:   color-mix(in srgb, currentcolor, transparent 90%);
 	--hover:       50%;
 	--transition:  166ms;
@@ -25,12 +25,12 @@
 	@media (width >= 35em) { /* Landscape phones. */
 		--alley: 2rcap;
 
-		@media (height >= 27em) { --size--base:  2.4rem } /* Tablets. */
+		@media (height >= 27em) { --size--root:  150% } /* Tablets. */
 	}
 
 	@media (width >= 60em) { --alley: 3rcap }
 
 	@media (width >= 84em) {
-		--size--h1: calc(3 * var(--size--base));
+		--size--h1: 3rem;
 	}
 }
