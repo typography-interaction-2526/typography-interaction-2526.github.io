@@ -94,7 +94,12 @@ export default (eleventyConfig) => {
 		.use(markdownItDeflist)
 		.use(markdownItHeaderSections)
 		.use(markdownItAnchor, {
-			permalink: markdownItAnchor.permalink.linkInsideHeader({ class: '', space: ' '}),
+			permalink: markdownItAnchor.permalink.linkAfterHeader({
+				assistiveText: (title) => `“${title}”`,
+				class: '',
+				style: 'aria-labelledby',
+				wrapper: ['<hgroup>', '</hgroup>'],
+			}),
 			slugify: eleventyConfig.getFilter('slugify'),
 		})
 		.use(markdownItAttrs)
