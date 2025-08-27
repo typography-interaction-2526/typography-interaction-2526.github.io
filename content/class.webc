@@ -5,7 +5,7 @@
 </script>
 
 <button id="shuffle">
-	<cite>Shuffle</cite>
+	<p>Shuffle</p>
 </button>
 <ul id="students">
 	<li webc:for="student of $data.class">

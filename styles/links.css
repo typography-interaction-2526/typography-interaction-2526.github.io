@@ -46,7 +46,7 @@ summary {
 }
 
 /* Inline links. */
-:where(dd, dt, p, td, th, main li:not(:has(ol, p, section, ul))) a:where(:not(:has(mark))) {
+:where(dd, dt, p, td, th, main li:not(:has(ol, p, section, ul))) a:where(:not(:has(cite))) {
 	/* Rounded caps. */
 	--underline--cap: radial-gradient(circle closest-side at center, currentcolor calc(100% - 0.5px), transparent);
 	--underline--cap--inset: calc(var(--enlargement) - var(--stroke) / 2);
@@ -85,22 +85,45 @@ summary {
 }
 
 /* Our “tag” style. */
-:is(a, button):has(mark) {
-	display:     inline-block;
-	inline-size: fit-content;
+:is(li, p):where(:has(> a > cite)) {
+	--size:    0.85rem;
+	--weight:  500;
 
-	mark {
-		background-color: var(--color);
-		border-radius:    var(--stroke);
-		color:            var(--background);
-		display:          block;
-		padding:          1ex;
+	/* --leading: calc(1rlh); */
 
-		&::after {
-			content:             '→';
-			margin-inline-start: calc(1ex - var(--right));
+	/* background-color: aqua; */
+	margin-block-start: calc(1rcap - 1cap); /* Back on baseline. */
+
+	> :where(a:has(> cite)) {
+		--weight:  700;
+
+		> cite {
+			--arrow:  0.85em;
+			--block:  1cap;
+			--inline: 1cap;
+			--gap:    2cap;
+
+			background-color:     var(--color);
+			border-radius:        var(--stroke);
+			color:                var(--background);
+			display:              block;
+			letter-spacing:       0.05em;
+			margin-block:         calc(-1 * var(--block));
+			padding-block:        var(--block);
+			padding-inline-end:   calc(var(--gap) + var(--arrow) + var(--inline) - var(--right));
+			padding-inline-start: calc(var(--inline));
+			position:             relative;
+			text-box:             trim-both cap alphabetic;
+
+			&::after {
+				content:          ' →';
+				inset-inline-end: calc(var(--inline) - var(--right));
+				position:         absolute;
+			}
 		}
 	}
+
+	> br { display: none } /* Link is already `block`. */
 }
 
-/* TODO Move `mark` itself to a component? There is no `:global()` though. */
+/* TODO Move `cite` itself to a component? There is no `:global()` though. */

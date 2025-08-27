@@ -1,5 +1,5 @@
 main {
-	align-items:    baseline;
+	align-items:    start;
 	column-gap:     var(--alley);
 	display:        grid;
 	grid-template-columns:
@@ -89,8 +89,10 @@ main {
 	}
 
 	/* Lists, lists, lists. */
-	dl, ol, ul {
-		margin-block: 1lh;
+	:is(dl, ol, ul:where(:not(:has(cite)))) {
+		margin-block-start: 1lh;
+
+		&:where(:not(:last-child)) { margin-block-end: 1lh }
 
 		/* Item inset. */
 		:where(dd, dt, li) { padding-inline-start: 2cap }
@@ -106,7 +108,7 @@ main {
 		}
 	}
 
-	dl, ul {
+	:is(dl, ul:where(:not(:has(cite)))) {
 		margin-inline-start: 1cap;
 
 		> :where(dt, li)::before {
@@ -131,6 +133,13 @@ main {
 
 			> li::before { inline-size: 1.25em }
 		}
+	}
+
+	/* Link lists with our “tag” style. */
+	ul:where(:has(cite)) {
+		grid-template-columns: max-content;
+
+		:where(li) { grid-column: initial }
 	}
 
 	table {
@@ -158,7 +167,6 @@ main {
 
 	/* Manual column placements. */
 	:where(.all, .aside, .body, .center, .five, .four, .left, .one, .recto, .right, .six, .three, .two, .verso) {
-		align-content:         start;
 		display:               grid;
 		grid-row:              span var(--rows, 1);
 		grid-template-columns: subgrid;
