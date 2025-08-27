@@ -11,9 +11,9 @@
 	--gutter: max(calc(var(--alley) / 2), calc((100vw - (var(--max) / var(--size--root)) * 1rem) / 2));
 	--alley:  2rcap;
 
-	--disabled:    color-mix(in srgb, currentcolor, transparent 80%);
+	--disabled:    color-mix(in srgb, var(--color, currentcolor), transparent 80%);
 	--enlargement: 1rex;
-	--highlight:   color-mix(in srgb, currentcolor, transparent 90%);
+	--highlight:   color-mix(in srgb, var(--color, currentcolor), transparent 90%);
 	--hover:       50%;
 	--transition:  166ms;
 
