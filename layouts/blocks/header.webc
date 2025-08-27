@@ -63,7 +63,7 @@
 
 		/* Half the `clamp` heading size. */
 		> a > p,
-		> hgroup {
+		> hgroup > p {
 			--size:   calc(var(--size--h1) / 2);
 			--weight: 700;
 		}
