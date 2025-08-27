@@ -79,7 +79,7 @@
 <header webc:root="override">
 	<a
 		webc:if="!item"
-		:href="`#${slugify(stripTags(markdown(unit[0].data.unit)))}`"
+		:href="unit.some(unit => unit?.url) && `#${slugify(stripTags(markdown(unit[0].data.unit)))}`"
 	>
 		<p @html="`Unit Nº ${unit[0].data.unitNumber}: “${markdown(unit[0].data.unit)}”`"></p>
 		<p @html="`Weeks ${weekRange(unit[0].data.unitNumber)}`"></p>
