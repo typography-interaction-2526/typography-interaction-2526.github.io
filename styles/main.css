@@ -37,6 +37,12 @@ main {
 			}
 		}
 
+		&:has(> h4) {
+			--weight: 700;
+
+			> h4 { -webkit-text-stroke-width: 0.033em }
+		}
+
 		+ section { margin-block-start: initial }
 
 		/* TODO Come back to these! */
@@ -78,9 +84,8 @@ main {
 			}
 		}
 
-		&:where(:has(> hgroup > h3)) {
-			margin-block-start: 3rlh;
-		}
+		&:where(:has(> hgroup > h3)) { margin-block-start: 3rlh }
+		&:where(:has(> hgroup > h4)) { margin-block-start: 1rlh }
 	}
 
 	/* Lists, lists, lists. */

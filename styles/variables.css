@@ -6,11 +6,10 @@
 	--size--h2:   1.5rem;
 	--size--h3:   1.333rem;
 
+	--max: 1400;
 
-	--max:    1400;
-
-	--gutter: max(calc(var(--alley) / 2), calc((100vw - (var(--max) / var(--size--root)) * 1rem) / 2));
 	--alley:  2rcap;
+	--gutter: max(calc(var(--alley) / 2), calc((100vw - (var(--max) / var(--size--root)) * 1rem) / 2));
 
 	--disabled--opacity: 20%;
 	--disabled:          color-mix(in srgb, var(--color, currentcolor), transparent calc(100% - var(--disabled--opacity)));
@@ -36,9 +35,7 @@
 
 	@media (width >= 60em) { --alley: 6rcap }
 
-	@media (width >= 84em) {
-		--size--h2: 2rem;
-	}
+	@media (width >= 84em) { --size--h2: 2rem }
 }
 
 /* TODO Declare `--size` and `--leading` with defaults, too? */
