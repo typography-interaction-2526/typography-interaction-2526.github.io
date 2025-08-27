@@ -4,13 +4,30 @@
 		--weight: 500;
 
 		> a {
-			border-radius:  calc(var(--enlargement) * 2);
-			display:        grid;
-			outline-offset: calc(-1 * var(--enlargement));
-			padding-block:  1cap;
-			padding-inline: var(--gutter);
+			align-items:     start;
+			border-radius:   calc(var(--enlargement) * 2);
+			column-gap:      1cap;
+			display:         flex;
+			flex-direction:  column;
+			justify-content: space-between;
+			outline-offset:  calc(-1 * var(--enlargement));
+			padding-block:   1cap;
+			padding-inline:  var(--gutter);
+			row-gap:         1cap;
+
+			> p {
+				--weight:  700;
+
+				font-size:      0.5em;
+				inline-size:    min-content;
+				text-transform: uppercase;
+				white-space:    nowrap;
+			}
 
 			&::after { inset: 0 } /* Since it is full-bleed. */
+
+			/* As soon as it fits with the `h1` title. */
+			@media (width >= 37.5em) { flex-direction: row }
 		}
 
 		/* Dividers. */
@@ -43,7 +60,9 @@
 				@html="markdown(item.data.title)"
 			></p>
 		</hgroup>
-
-		<!-- TODO Add terms/years here! -->
+		<p
+			webc:if="item.url === '/'"
+			@html="markdown($data.course.term)"
+		></p>
 	</a>
 </header>
