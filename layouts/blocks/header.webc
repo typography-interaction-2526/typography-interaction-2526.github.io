@@ -37,19 +37,18 @@
 		/* Dividers. */
 		&::before,
 		&:has(+ main)::after {
-			background-color: currentcolor;
+			background-color: var(--color);
 			block-size:       var(--stroke);
 			content:          '';
 			display:          block;
 		}
 
 		/* Future pages. */
-		&:has(> a:not([href])) { color: var(--disabled) }
+		&:has(> a:not([href])) > a { --color: var(--disabled) }
 	}
 
-	/* “Light switch” the next divider on, undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
-	:host-context(li:has(header > a[href]) + li)::before { color: initial }
-	:host-context(li:has(header > a:not([href])) + li)::before { color: inherit }
+	/* Flip the next divider off (unless it has a link) with undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
+	:host-context(li:has(> header > a:not([href])) + *):has(> a:not([href]))::before { --color: var(--disabled) }
 </style>
 
 <header webc:root="override">
