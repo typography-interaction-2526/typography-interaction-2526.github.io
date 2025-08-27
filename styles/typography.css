@@ -6,7 +6,6 @@ h2,
 h3,
 h4,
 li:where(:not(:has(ol, p, section, ul))), /* “Tight” lists. */
-mark, /* Our “tags”. */
 p,
 td,
 th {
@@ -18,7 +17,7 @@ th {
 }
 
 /* Headings. */
-h1, h2, h3, h4, mark, .heading {
+h1, h2, h3, h4, hgroup, mark {
 	text-transform: uppercase;
 	text-wrap:      balance;
 }

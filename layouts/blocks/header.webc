@@ -33,15 +33,16 @@
 
 <header webc:root="override">
 	<a :href="item?.url">
-		<h1
-			webc:if="item.url === $data.page.url"
-			@html="markdown(item.data.title)"
-		></h1>
-		<p
-			webc:else
-			@html="markdown(item.data.title)"
-			class="heading"
-		></p>
+		<hgroup>
+			<h1
+				webc:if="item.url === $data.page.url"
+				@html="markdown(item.data.title)"
+			></h1>
+			<p
+				webc:else
+				@html="markdown(item.data.title)"
+			></p>
+		</hgroup>
 
 		<!-- TODO Add terms/years here! -->
 	</a>
