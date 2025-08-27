@@ -86,12 +86,14 @@ summary {
 
 /* Our “tag” style. */
 :is(li, p):where(:has(> a > cite)) {
-	> :where(a:has(> cite)) {
-		--size:    0.85rem;
-		--leading: 1rlh;
-		--weight:  700;
+	--leading: 1rlh;
+	--size:    0.85rem;
+	--weight:  500;
 
-		margin-block-start: calc(1rcap - 1cap); /* Back on baseline. */
+	margin-block-start: calc(1rcap - 1cap); /* Back on baseline. */
+
+	> :where(a:has(> cite)) {
+		--weight:  700;
 
 		> cite {
 			--arrow:  0.85em;
@@ -124,12 +126,17 @@ summary {
 
 	/* With additional text after (Markdown adds the `br`). */
 	&:has(> br) {
+		--shift: 0.58em; /* TODO Not actually sure how this is derived! 🤷‍♀️ */
+
+		color:            var(--note);
+		margin-block-end: calc(0.58rlh);
+		max-inline-size:  50ch;
+		text-wrap:        balance;
+
 		> br { display: none } /* Link is already `block`. */
 
 		/* Push the text back down to the baseline. */
-		> :where(a:has(> cite)) { margin-block-end: calc(1rlh + 0.53em) }
-
-		/* TODO Not actually sure how this is derived! 🤷‍♀️ */
+		> :where(a:has(> cite)) { margin-block-end: calc(0.42rlh + var(--shift)) }
 	}
 }
 

@@ -141,8 +141,6 @@ main {
 		grid-template-columns: minmax(auto, max-content);
 
 		:where(li) { grid-column: initial }
-
-		&:where(:has(li > p)) { row-gap: 5rcap }
 	}
 
 	table {
