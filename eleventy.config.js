@@ -143,6 +143,8 @@ export default (eleventyConfig) => {
 	eleventyConfig.addFilter('displayDate', (date) => new Date(date).toLocaleDateString('en-US', { day: 'numeric', month: 'short', timeZone: 'UTC' })
 		.replace(/(\w{3})/, '$1.'))
 
+	// TODO “May.”
+
 	// Transform words for faux-italics.
 	eleventyConfig.addTransform('italicSpans', function(html) {
 		return String(this.inputPath).endsWith('.md') && String(this.outputPath).endsWith('.html')
