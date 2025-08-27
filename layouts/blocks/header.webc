@@ -21,12 +21,8 @@
 
 			/* Dates. */
 			> p {
-				--weight: 700;
-
-				inline-size:               min-content;
-				-webkit-text-stroke-width: 0.025em; /* Optically match the titles. */
-				text-transform:            uppercase;
-				white-space:               nowrap;
+				inline-size:    min-content;
+				text-transform: uppercase;
 
 				/* TODO any way to matte this and avoid the `--disabled--opacity`? */
 			}
@@ -39,16 +35,11 @@
 		}
 
 		/* Unit “blanks.” */
-		> hgroup {
-			--color: var(--background);
-
-			> p { -webkit-text-stroke-width: 0.025em }
-		}
+		> hgroup { --color: var(--background) }
 
 		/* Sidebar info arrangement. */
 		> a,
 		> hgroup {
-			align-items:     start;
 			column-gap:      1cap;
 			display:         flex;
 			flex-direction:  column;
@@ -57,15 +48,21 @@
 			padding-inline:  var(--gutter);
 			row-gap:         1cap;
 
+			/* Half the `clamp` heading size. */
+			> p {
+				--size:   calc(var(--size--h1) / 2);
+				--weight: 700;
+
+				-webkit-text-stroke-width: 0.025em; /* Optically match the titles. */
+
+				&:last-child {
+					align-self:  start;
+					white-space: nowrap;
+				}
+			}
+
 			/* As soon as it fits with the `h1` title. */
 			@media (width >= 37.5em) { flex-direction: row }
-		}
-
-		/* Half the `clamp` heading size. */
-		> a > p,
-		> hgroup > p {
-			--size:   calc(var(--size--h1) / 2);
-			--weight: 700;
 		}
 
 		/* Dividers. */
