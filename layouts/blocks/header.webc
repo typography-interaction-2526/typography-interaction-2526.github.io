@@ -18,13 +18,14 @@
 			> p {
 				--weight:  700;
 
+				/* TODO any way to matte this and avoid the `--disabled--opacity`? */
+
 				-webkit-text-stroke-width: 0.033em; /* Optically match the titles. */
 				font-size:                 0.5em;
 				inline-size:               min-content;
 				text-transform:            uppercase;
 				white-space:               nowrap;
 
-				/* TODO any way to matte this and avoid the `--disabled--opacity`? */
 			}
 
 			&::after {
@@ -56,7 +57,18 @@
 </style>
 
 <header webc:root="override">
-	<a :href="item?.url">
+	<a
+		webc:if="!item"
+		:href="`#${slugify(stripTags(markdown(unit[0].data.unit)))}`"
+	>
+		<hgroup>
+			<p @html="`Unit Nº ${unit[0].data.unitNumber}: “${markdown(unit[0].data.unit)}”`"></p>
+		</hgroup>
+	</a>
+	<a
+		webc:else
+		:href="item?.url"
+	>
 		<hgroup>
 			<h1
 				webc:if="item.url === $data.page.url"
