@@ -1,4 +1,5 @@
 <script front-matter>
+	const draft = true
 	const title = 'The Syllabus'
 	const order = 1
 </script>
