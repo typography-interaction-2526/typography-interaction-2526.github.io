@@ -24,7 +24,7 @@
 	--background--2:    orange;
 	--background--3:    tomato;
 	--background--4:    dodgerblue;
-	--background--5:    darkturquoise;
+	--background--5:    palegreen;
 
 	@media (width >= 35em) { /* Landscape phones. */
 		--alley: 4rcap;
