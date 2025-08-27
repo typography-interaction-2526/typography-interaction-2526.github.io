@@ -51,7 +51,8 @@
 				inset:         0; /* Since it is full-bleed. */
 			}
 
-			&[href^='#'] { padding-block: 0.5cap } /* Match unit title. */
+			/* Match unit titles. */
+			&:not(:has(> hgroup)) { padding-block: 0.5cap }
 
 			/* As soon as it fits with the `h1` title. */
 			@media (width >= 37.5em) { flex-direction: row }
