@@ -51,6 +51,8 @@
 
 	/* Flip the next divider off (unless it has a link) with undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
 	:host-context(li:has(> header > a:not([href])) + *):has(> a:not([href]))::before { --color: var(--disabled) }
+
+	/* TODO This still breaks across units! */
 </style>
 
 <header webc:root="override">
