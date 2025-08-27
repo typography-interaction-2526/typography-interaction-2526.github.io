@@ -145,6 +145,12 @@ main {
 
 	p:where(:has(a > cite)) { justify-self: start }
 
+	/* More space above these when they aren’t manually in-columns. */
+	ul, *:where(:not(li)) > p {
+		&:where(:has(a > cite):not([class])) {margin-block-start: 1rlh }
+	}
+
+	/* Tables for the grade breakdown. */
 	table {
 		inline-size: fit-content;
 
