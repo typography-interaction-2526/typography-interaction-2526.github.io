@@ -36,6 +36,10 @@
 	--background--4--alt: lightskyblue;
 	--background--5--alt: aquamarine;
 
+	--rounding: 0.5px; /* Retina pixels. */
+
+	@media (-webkit-min-device-pixel-ratio: 3) { --rounding: 0.333px }
+
 	@media (width >= 35em) { /* Landscape phones. */
 		--alley: 4rcap;
 

@@ -87,6 +87,7 @@ export default {
 		'@stylistic/selector-list-comma-newline-after': 'always-multi-line',
 		'@stylistic/selector-list-comma-space-after': 'always-single-line',
 		'@stylistic/string-quotes': 'single',
+		'media-feature-name-no-vendor-prefix': null,
 		'order/order': [
 			'custom-properties',
 			'declarations',

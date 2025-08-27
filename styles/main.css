@@ -90,7 +90,7 @@ main {
 	}
 
 	/* Lists, lists, lists. */
-	:is(dl, ol, ul:where(:not(:has(cite)))) {
+	:is(dl, ol, ul:where(:not(:has(a > cite)))) {
 		margin-block-start: 1lh;
 
 		&:where(:not(:last-child)) { margin-block-end: 1lh }
@@ -109,7 +109,7 @@ main {
 		}
 	}
 
-	:is(dl, ul:where(:not(:has(cite)))) {
+	:is(dl, ul:where(:not(:has(a > cite)))) {
 		margin-inline-start: 1cap;
 
 		> :where(dt, li)::before {
@@ -137,11 +137,13 @@ main {
 	}
 
 	/* Link lists with our “tag” style. */
-	ul:where(:has(cite)) {
+	ul:where(:has(a > cite)) {
 		grid-template-columns: minmax(auto, max-content);
 
 		:where(li) { grid-column: initial }
 	}
+
+	p:where(:has(a > cite)) { justify-self: start }
 
 	table {
 		inline-size: fit-content;
@@ -173,6 +175,8 @@ main {
 		display:               grid;
 		grid-row:              span var(--rows, 1);
 		grid-template-columns: subgrid;
+
+		/* TODO These need space above/below on mobile. */
 	}
 
 	.all    { grid-column: all }

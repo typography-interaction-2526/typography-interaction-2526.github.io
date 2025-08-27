@@ -108,6 +108,12 @@ summary {
 			letter-spacing:       0.1em;
 			margin-block:         calc(-1 * var(--block));
 			max-inline-size:      27rem; /* Half-ish. */
+			outline-color:        var(--color);
+			outline-offset:       calc(-1 * var(--stroke));
+			outline-offset:       round(down, calc(-1 * var(--stroke)), var(--rounding));
+			outline-style:        solid;
+			outline-width:        var(--stroke);
+			outline-width:        round(up, var(--stroke), var(--rounding));
 			padding-block:        var(--block);
 			padding-inline-end:   calc(var(--gap) + var(--arrow) + var(--inline) - var(--right));
 			padding-inline-start: calc(var(--inline));
@@ -117,11 +123,21 @@ summary {
 			* { color: inherit } /* For `abbr`. */
 
 			&::after {
-				content:           ' →';
+				content:           var(--icon, ' →');
 				inset-block-start: var(--block);
 				inset-inline-end:  calc(var(--inline) - var(--right));
 				position:          absolute;
 				text-box:          trim-both cap alphabetic;
+			}
+		}
+
+		/* Internal links. */
+		&[href^='/'] {
+			--icon: ' ↓';
+
+			> cite {
+				background-color: var(--background);
+				color:            var(--color);
 			}
 		}
 	}
