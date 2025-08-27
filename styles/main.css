@@ -138,7 +138,7 @@ main {
 
 	/* Link lists with our “tag” style. */
 	ul:where(:has(cite)) {
-		grid-template-columns: max-content;
+		grid-template-columns: minmax(auto, max-content);
 
 		:where(li) { grid-column: initial }
 	}
