@@ -126,17 +126,17 @@ summary {
 
 	/* With additional text after (Markdown adds the `br`). */
 	&:has(> br) {
-		--shift: 0.58em; /* TODO Not actually sure how this is derived! 🤷‍♀️ */
-
 		color:            var(--note);
-		margin-block-end: calc(0.58rlh);
+		margin-block-end: calc(1rlh - 1cap);
 		max-inline-size:  50ch;
 		text-wrap:        balance;
 
 		> br { display: none } /* Link is already `block`. */
 
 		/* Push the text back down to the baseline. */
-		> :where(a:has(> cite)) { margin-block-end: calc(0.42rlh + var(--shift)) }
+		> :where(a:has(> cite)) { margin-block-end: calc(0.343rlh + 1cap) }
+
+		/* TODO Not actually sure how this is derived! 🤷‍♀️ */
 	}
 }
 
