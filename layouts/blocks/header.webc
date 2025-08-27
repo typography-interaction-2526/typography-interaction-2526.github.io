@@ -68,7 +68,7 @@
 			@html="markdown($data.course.term)"
 		></p>
 		<p
-			webc:if="item?.url.startsWith('/week')"
+			webc:if="item?.data.type === 'week' || item?.data.type === 'project'"
 			@html="markdown(displayDate(item.data.date))"
 		></p>
 	</a>

@@ -1,5 +1,5 @@
 export default {
 	eleventyComputed: {
-		type: 'Topic',
+		type: 'topic',
 	},
 }
