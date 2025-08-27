@@ -6,6 +6,7 @@ main {
 		[ all-start aside-start body-start center-start five-start four-start left-start one-start recto-start right-start six-start three-start two-start verso-start ]
 		minmax(0, 1fr)
 		[ all-end aside-end body-end center-end five-end four-end left-end one-end recto-end right-end six-end three-end two-end verso-end ];
+	grid-template-rows:  min-content 1fr; /* Fill last row (next to `.right`) */
 	padding-block-end:   calc(2 * min(var(--alley), calc(2 * var(--gutter))));
 	padding-block-start: min(var(--alley), calc(2 * var(--gutter)));
 	padding-inline:      var(--gutter);
