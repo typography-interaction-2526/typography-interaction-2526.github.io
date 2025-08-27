@@ -12,8 +12,8 @@
 
 This first semester will focus on a mastery of type and layout concepts on the web.
 
-- <a :href="course.syllabus.fall"><mark>Submitted Version</mark></a>
-- <a :href="course.catalog.fall"><mark>Course Catalog</mark></a>
+- <a :href="course.syllabus.fall"><cite>Submitted Version</cite></a>
+- <a :href="course.catalog.fall"><cite>Course Catalog</cite></a>
 <!-- .right .rows--2 -->
 
 Typography is the infrastructure of communication in nearly any visual medium. It provides the very first shape and form to written content, and as designers, it is our responsibility to do this with intention and care. Whether towards goals of expression itself or in the service of ideas, the designer must understand type to use it successfully. In this way, we are stewards of meaning.
@@ -26,8 +26,8 @@ In this class, students will learn intermediate and advanced methods in typograp
 
 Our second semester will build on the type and layout foundations from the first, moving into interface design and interactive experiences on the web.
 
-- <a :href="course.syllabus.spring"><mark>Submitted Version</mark></a>
-- <a :href="course.catalog.spring"><mark>Course Catalog</mark></a>
+- <a :href="course.syllabus.spring"><cite>Submitted Version</cite></a>
+- <a :href="course.catalog.spring"><cite>Course Catalog</cite></a>
 <!-- .right .rows--2 -->
 
 Interaction, interactive, interface, product, UI, UX designers—we are known by many names. These are all monikers for a digitally-native design practice. It is our responsibility, as practitioners in this increasingly consequential and broadening field, to both understand existing paradigms and help manifest, refine, and sustain purposeful new ones.
@@ -84,19 +84,19 @@ We will focus on reviewing the core principles of typography, and introduce the 
 
 #### Readings
 
-- [<mark>The Principles of the New Typography</mark>](https://readings.design/PDF/ThePrinciplesoftheNewTypography.pdf)
+- [<cite>The Principles of the New Typography</cite>](https://readings.design/PDF/ThePrinciplesoftheNewTypography.pdf)
 	Jan Tschichold, 1928
 
-- [<mark>The Crystal Goblet, or Printing Should Be Invisible</mark>](https://readings.design/PDF/The%20Crystal%20Goblet.pdf)
+- [<cite>The Crystal Goblet, or Printing Should Be Invisible</cite>](https://readings.design/PDF/The%20Crystal%20Goblet.pdf)
 	Beatrice Warde, 1932
 
-- [<mark>Detail in Typography</mark>](https://static.trogu.com/documents/articles/palgrave/references/hochuli-Jost-H-Detail-in-Typography%20scribd%20-%2064-page.pdf)
+- [<cite>Detail in Typography</cite>](https://static.trogu.com/documents/articles/palgrave/references/hochuli-Jost-H-Detail-in-Typography%20scribd%20-%2064-page.pdf)
 	Jost Hochuli, 1987
 
-- [<mark>The Elements of Typographic Style</mark>](https://readings.design/PDF/the_elements_of_typographic_style.pdf)
+- [<cite>The Elements of Typographic Style</cite>](https://readings.design/PDF/the_elements_of_typographic_style.pdf)
 	Robert Bringhurst, 1992
 
-- [<mark>A Handmade Web</mark>](http://luckysoap.com/statements/handmadeweb.html)
+- [<cite>A Handmade Web</cite>](http://luckysoap.com/statements/handmadeweb.html)
 	J.R. Carpenter, 2015
 
 #### Project 1: Manuscript
@@ -115,19 +115,19 @@ Students will learn how to design and implement more complex, flexible layouts, 
 
 #### Readings
 
-- [<mark>Investigations on Gestalt Principles</mark>](https://g-e-s-t-a-l-t.org/media/pdf/Investigations-on-Gestalt-Principles.pdf)
+- [<cite>Investigations on Gestalt Principles</cite>](https://g-e-s-t-a-l-t.org/media/pdf/Investigations-on-Gestalt-Principles.pdf)
 	Max Wertheimer, 1923
 
-- [<mark>Continuity and Change</mark>](https://readings.design/PDF/MaxBill-ContinuityAndChange.pdf)
+- [<cite>Continuity and Change</cite>](https://readings.design/PDF/MaxBill-ContinuityAndChange.pdf)
 	Max Bill, 1953
 
-- [<mark>Grid Systems in Graphic Design</mark>](https://monoskop.org/images/a/a4/Mueller-Brockmann_Josef_Grid_Systems_in_Graphic_Design_Raster_Systeme_fuer_die_Visuele_Gestaltung_English_German_no_OCR.pdf)
+- [<cite>Grid Systems in Graphic Design</cite>](https://monoskop.org/images/a/a4/Mueller-Brockmann_Josef_Grid_Systems_in_Graphic_Design_Raster_Systeme_fuer_die_Visuele_Gestaltung_English_German_no_OCR.pdf)
 	Josef Müller-Brockmann, 1981
 
-- [<mark>The Web’s Grain</mark>](https://frankchimero.com/blog/2015/the-webs-grain/)
+- [<cite>The Web’s Grain</cite>](https://frankchimero.com/blog/2015/the-webs-grain/)
 	Frank Chimero, 2015
 
-- [<mark>The Diminishing Marginal Value of Aesthetics</mark>](https://subpixel.space/entries/diminishing-marginal-aesthetic-value/)
+- [<cite>The Diminishing Marginal Value of Aesthetics</cite>](https://subpixel.space/entries/diminishing-marginal-aesthetic-value/)
 	Toby Shorin, 2017
 
 #### Project 2: Spread
@@ -146,19 +146,19 @@ In our final unit, we will focus on creating advanced, multi-page layouts with g
 
 #### Readings
 
-- [<mark>Design Interface: How Man and Machine Communicate</mark>](https://i-n-t-e-r-f-a-c-e.org/media/pdf/Design-Interface.pdf)
+- [<cite>Design Interface: How Man and Machine Communicate</cite>](https://i-n-t-e-r-f-a-c-e.org/media/pdf/Design-Interface.pdf)
 	Gianni Barbacetto, 1987
 
-- [<mark>A Software Design Manifesto</mark>](https://hci.stanford.edu/publications/bds/1-kapor.html)
+- [<cite>A Software Design Manifesto</cite>](https://hci.stanford.edu/publications/bds/1-kapor.html)
 	Mitchell Kapor, 1990
 
-- [<mark>Typeface As Programme</mark>](https://www.typotheque.com/articles/typeface_as_programme)
+- [<cite>Typeface As Programme</cite>](https://www.typotheque.com/articles/typeface_as_programme)
 	Jürg Lehni, 2011
 
-- [<mark>Interface Writing: Code for Humans</mark>](https://www.nicolefenton.com/interface-writing/)
+- [<cite>Interface Writing: Code for Humans</cite>](https://www.nicolefenton.com/interface-writing/)
 	Nicole Fenton, 2014
 
-- [<mark>My website is a shifting house next to a river of knowledge. What could yours be?</mark>](https://thecreativeindependent.com/essays/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/)
+- [<cite>My website is a shifting house next to a river of knowledge. What could yours be?</cite>](https://thecreativeindependent.com/essays/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/)
 	Laurel Schwulst, 2018
 
 #### Project 3: Binding
@@ -177,19 +177,19 @@ We will expand on our first-semester foundations in design, typography, HTML, an
 
 #### Readings
 
-- [<mark>The Design of Everyday Things</mark>](https://dl.icdst.org/pdfs/files4/4bb8d08a9b309df7d86e62ec4056ceef.pdf)
+- [<cite>The Design of Everyday Things</cite>](https://dl.icdst.org/pdfs/files4/4bb8d08a9b309df7d86e62ec4056ceef.pdf)
 	Don Norman, 1988 (*revised* 2013)
 
-- [<mark>I Am a Handle</mark>](https://linedandunlined.com/archive/i-am-a-handle/)
+- [<cite>I Am a Handle</cite>](https://linedandunlined.com/archive/i-am-a-handle/)
 	Rob Giampietro, 2012
 
-- [<mark>Sometimes It Looks Like a Duck, Sometimes It Looks Like a Rabbit</mark>](https://linkedbyair.net/balkin.pdf)
+- [<cite>Sometimes It Looks Like a Duck, Sometimes It Looks Like a Rabbit</cite>](https://linkedbyair.net/balkin.pdf)
 	Jack Balkin, Dan Michaelson, 2012
 
-- [<mark>Laws of UX</mark>](https://lawsofux.com/)
+- [<cite>Laws of UX</cite>](https://lawsofux.com/)
 	Jon Yablonski, 2018 (*ongoing*)
 
-- [<mark>Folk Interfaces</mark>](https://maggieappleton.com/folk-interfaces)
+- [<cite>Folk Interfaces</cite>](https://maggieappleton.com/folk-interfaces)
 	Maggie Appleton, 2022
 
 #### Project 4: Links
@@ -208,56 +208,56 @@ To wrap up the semester (and course), we’ll round out our knowledge of the web
 
 #### Readings
 
-- [<mark>What Is Code?</mark>](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/)
+- [<cite>What Is Code?</cite>](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/)
 	Paul Ford, 2015
 
-- [<mark>TikTok’s Enshittification</mark>](https://pluralistic.net/2023/01/21/potemkin-ai/#hey-guys)
+- [<cite>TikTok’s Enshittification</cite>](https://pluralistic.net/2023/01/21/potemkin-ai/#hey-guys)
 	Cory Doctorow, 2023
 
-- [<mark>Chat&NoBreak;GPT Is a Blurry JPEG of the Web</mark>](https://web.archive.org/web/20230209152247/https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web)
+- [<cite>Chat&NoBreak;GPT Is a Blurry JPEG of the Web</cite>](https://web.archive.org/web/20230209152247/https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web)
 	Ted Chiang, 2023
 
-- [<mark>The Age of Average</mark>](https://www.alexmurrell.co.uk/articles/the-age-of-average)
+- [<cite>The Age of Average</cite>](https://www.alexmurrell.co.uk/articles/the-age-of-average)
 	Alex Murrell, 2023
 
-- [<mark>Why A.I. Isn’t Going to Make Art</mark>](https://web.archive.org/web/20240831102229/https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art)
+- [<cite>Why A.I. Isn’t Going to Make Art</cite>](https://web.archive.org/web/20240831102229/https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art)
 	Ted Chiang, 2024
 
 &nbsp;
 
-- [<mark>Human Interface Guidelines</mark>](https://andymatuschak.org/files/papers/Apple%20Human%20Interface%20Guidelines%201987.pdf)
+- [<cite>Human Interface Guidelines</cite>](https://andymatuschak.org/files/papers/Apple%20Human%20Interface%20Guidelines%201987.pdf)
 	Apple, 1987
 
-- [<mark>Macintosh Human Interface Guidelines</mark>](https://vintageapple.org/macprogramming/pdf/Macintosh_Human_Interface_Guidelines_1992.pdf)
+- [<cite>Macintosh Human Interface Guidelines</cite>](https://vintageapple.org/macprogramming/pdf/Macintosh_Human_Interface_Guidelines_1992.pdf)
 	Apple, 1992
 
-- [<mark>The Windows Interface Guidelines</mark>](https://www.ics.uci.edu/~kobsa/courses/ICS104/course-notes/Microsoft_WindowsGuidelines.pdf)
+- [<cite>The Windows Interface Guidelines</cite>](https://www.ics.uci.edu/~kobsa/courses/ICS104/course-notes/Microsoft_WindowsGuidelines.pdf)
 	Microsoft, 1995
 
-- [<mark>Aqua Human Interface Guidelines</mark>](http://www.multimedialab.be/doc/tech/doc_osx_hi_guidelines.pdf)
+- [<cite>Aqua Human Interface Guidelines</cite>](http://www.multimedialab.be/doc/tech/doc_osx_hi_guidelines.pdf)
 	Apple, 2001
 
-- [<mark>iPhone Human Interface Guidelines</mark>](http://coolx.net/board/upload/develop/MobileHIG.pdf)
+- [<cite>iPhone Human Interface Guidelines</cite>](http://coolx.net/board/upload/develop/MobileHIG.pdf)
 	Apple, 2008
 
-- [<mark>Windows Phone 7 UI Design and Interaction Guide</mark>](http://tableless.github.io/exemplos/pdf/guidelines-interface-mobiles/UI%20Design%20and%20Interaction%20Guide%20for%20Windows%20Phone%207%20v2.0.pdf)
+- [<cite>Windows Phone 7 UI Design and Interaction Guide</cite>](http://tableless.github.io/exemplos/pdf/guidelines-interface-mobiles/UI%20Design%20and%20Interaction%20Guide%20for%20Windows%20Phone%207%20v2.0.pdf)
 	Microsoft, 2010
 
-- [<mark>Material Design 1</mark>](https://m1.material.io/)
+- [<cite>Material Design 1</cite>](https://m1.material.io/)
 	Google, 2014
 
-- [<mark>i&NoBreak;OS Human Interface Guidelines</mark>](https://www.evl.uic.edu/datsoupi/420_14/docs/MobileHIG.pdf)
+- [<cite>i&NoBreak;OS Human Interface Guidelines</cite>](https://www.evl.uic.edu/datsoupi/420_14/docs/MobileHIG.pdf)
 	Apple, 2014
 
 &nbsp;
 
-- [<mark>Material Design 3</mark>](https://m3.material.io/)
+- [<cite>Material Design 3</cite>](https://m3.material.io/)
 	Google, 2021 (*ongoing*)
 
-- [<mark>Human Interface Guidelines</mark>](https://developer.apple.com/design/human-interface-guidelines/guidelines/overview/)
+- [<cite>Human Interface Guidelines</cite>](https://developer.apple.com/design/human-interface-guidelines/guidelines/overview/)
 	Apple, 2022 (*ongoing*)
 
-- [<mark>Fluent 2 Design System</mark>](https://www.microsoft.com/design/fluent/)
+- [<cite>Fluent 2 Design System</cite>](https://www.microsoft.com/design/fluent/)
 	Microsoft, 2023 (*ongoing*)
 
 #### Project 5: Functions
@@ -323,25 +323,25 @@ In class, we will demonstrate using [Figma](http://figma.com) for visual design 
 
 **We will use the following tools to organize our class:**
 
-- <a :href="pkg.homepage"><mark>Course Site</mark></a>
+- <a :href="pkg.homepage"><cite>Course Site</cite></a>
 	For housekeeping, agendas, and lectures (you are here)
 
-- <a :href="course.channel.submit"><mark>Submission Form</mark></a>
+- <a :href="course.channel.submit"><cite>Submission Form</cite></a>
 	For submitting your work/URL&NoBreak;s
 
-- <a :href="course.channel.slack"><mark>Slack Channel</mark></a>
+- <a :href="course.channel.slack"><cite>Slack Channel</cite></a>
 	For direct and asynchronous communication (*not* email)
 
-- <a :href="course.channel.figma"><mark>Figma Team</mark></a>
+- <a :href="course.channel.figma"><cite>Figma Team</cite></a>
 	For visual sketching, sharing
 
-- <a :href="course.channel.github"><mark>GitHub Organization</mark></a>
+- <a :href="course.channel.github"><cite>GitHub Organization</cite></a>
 	For code examples, sharing
 
-- <a :href="course.channel.google"><mark>Google Drive</mark></a>
+- <a :href="course.channel.google"><cite>Google Drive</cite></a>
 	For document collaboration, recorded lectures
 
-- <a :href="course.channel.zoom"><mark>Zoom Room</mark></a>
+- <a :href="course.channel.zoom"><cite>Zoom Room</cite></a>
 	For screen sharing and recording
 
 ## Class Policies
