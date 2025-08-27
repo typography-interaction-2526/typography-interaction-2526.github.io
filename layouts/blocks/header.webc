@@ -12,7 +12,7 @@
 <style webc:scoped>
 	:host {
 		--size:   var(--size--h1);
-		--weight: 500;
+		--weight: 400;
 
 		/* Page links. */
 		> a {
@@ -32,7 +32,8 @@
 				--size:   calc(var(--size--h1) / 2);
 				--weight: 700;
 
-				-webkit-text-stroke-width: 0.03em; /* Optically match the titles. */
+				/* Optically match the titles. */
+				-webkit-text-stroke-width: 0.02em;
 				text-transform:            uppercase;
 
 				/* TODO any way to matte this and avoid the `--disabled--opacity`? */

@@ -19,7 +19,7 @@ main {
 	hgroup {
 		&:has(> h2) {
 			--size:   var(--size--h2);
-			--weight: 700;
+			--weight: 500;
 
 			grid-column:      all;
 			margin-block-end: 2rlh;
@@ -31,16 +31,15 @@ main {
 
 			margin-block-end: 1rlh;
 
-			> h3 {
-				margin-block-start:        calc(1rcap - 1cap); /* Back on the baseline. */
-				-webkit-text-stroke-width: 0.015em; /* Optically match others. */
-			}
+			/* Back on the baseline. */
+			> h3 { margin-block-start: calc(1rcap - 1cap) }
 		}
 
 		&:has(> h4) {
 			--weight: 700;
 
-			> h4 { -webkit-text-stroke-width: 0.033em }
+			/* Optically match the titles. */
+			> h4 { -webkit-text-stroke-width: 0.01em }
 		}
 
 		+ section { margin-block-start: initial }
@@ -66,6 +65,7 @@ main {
 			margin-block-start: 4rlh;
 
 			> hgroup > h2 {
+				/* TODO This is off on mobile. */
 				margin-block-start: calc(1cap - 1rcap); /* Back on baseline. */
 				padding-block-end:  1cap;
 				position:           relative;
