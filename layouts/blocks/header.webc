@@ -5,16 +5,8 @@
 
 		/* Page links. */
 		> a {
-			align-items:     start;
 			border-radius:   calc(var(--enlargement) * 2);
-			column-gap:      1cap;
-			display:         flex;
-			flex-direction:  column;
-			justify-content: space-between;
 			outline-offset:  calc(-1 * var(--enlargement));
-			padding-block:   1cap;
-			padding-inline:  var(--gutter);
-			row-gap:         1cap;
 
 			/* Dates. */
 			> p {
@@ -33,9 +25,36 @@
 				border-radius: initial;
 				inset:         0; /* Since it is full-bleed. */
 			}
+		}
+
+		/* Unit “blanks.” */
+		> hgroup {
+			--color: var(--background);
+
+			-webkit-text-stroke-width: 0.01em;
+		}
+
+		/* Sidebar info arrangement. */
+		> a,
+		> hgroup {
+			align-items:     start;
+			column-gap:      1cap;
+			display:         flex;
+			flex-direction:  column;
+			justify-content: space-between;
+			padding-block:   1cap;
+			padding-inline:  var(--gutter);
+			row-gap:         1cap;
 
 			/* As soon as it fits with the `h1` title. */
 			@media (width >= 37.5em) { flex-direction: row }
+		}
+
+		/* Half the `clamp` heading size. */
+		> a > p,
+		> hgroup {
+			--size:   calc(var(--size--h1) / 2);
+			--weight: 700;
 		}
 
 		/* Dividers. */
@@ -49,26 +68,10 @@
 
 		/* Future pages. */
 		&:has(> a:not([href])) > a { opacity: var(--disabled--opacity) }
-
-		> a > p,
-		> hgroup {
-			--size:   calc(var(--size--h1) / 2);
-			--weight: 700;
-		}
 	}
 
-	/* Unit “blanks.” */
-	:host:has(> hgroup) {
-		background-color: var(--color);
-
-		> hgroup {
-			--color: var(--background);
-
-			padding-block:             1cap;
-			padding-inline:            var(--gutter);
-			-webkit-text-stroke-width: 0.015em;
-		}
-	}
+	/* Whole `header` as divider for unit titles. */
+	:host:has(> hgroup) { background-color: var(--color) }
 
 	/* Flip the next divider off (unless it has a link) with undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
 	:host-context(li:has(> header > a:not([href])) + *):has(> a:not([href]))::before { --color: var(--disabled) }
