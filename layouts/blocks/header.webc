@@ -16,8 +16,9 @@
 
 		/* Page links. */
 		> a {
-			border-radius:   calc(var(--enlargement) * 2);
-			outline-offset:  calc(-1 * var(--enlargement));
+			border-radius:  calc(var(--enlargement) * 2);
+			outline-offset: calc(-1 * var(--enlargement));
+			padding-block:  1cap;
 
 			/* Dates. */
 			> p {
@@ -35,7 +36,7 @@
 		}
 
 		/* Unit “blanks.” */
-		> hgroup { --color: var(--background) }
+		> hgroup { padding-block: 0.5cap }
 
 		/* Sidebar info arrangement. */
 		> a,
@@ -44,7 +45,6 @@
 			display:         flex;
 			flex-direction:  column;
 			justify-content: space-between;
-			padding-block:   1cap;
 			padding-inline:  var(--gutter);
 			row-gap:         1cap;
 
@@ -77,9 +77,6 @@
 		/* Future pages. */
 		&:has(> a:not([href])) > a { opacity: var(--disabled--opacity) }
 	}
-
-	/* Whole `header` as divider for unit titles. */
-	:host:has(> hgroup) { background-color: var(--color) }
 
 	/* Flip the next divider off (unless it has a link) with undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
 	:host-context(li:has(> header > a:not([href])) + *):has(> a:not([href]))::before { --color: var(--disabled) }
