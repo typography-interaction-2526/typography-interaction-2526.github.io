@@ -107,8 +107,9 @@ summary {
 			border-radius:        var(--stroke);
 			color:                var(--background);
 			display:              block;
-			letter-spacing:       0.05em;
+			letter-spacing:       0.1em;
 			margin-block:         calc(-1 * var(--block));
+			max-inline-size:      32ch;
 			padding-block:        var(--block);
 			padding-inline-end:   calc(var(--gap) + var(--arrow) + var(--inline) - var(--right));
 			padding-inline-start: calc(var(--inline));
