@@ -25,7 +25,10 @@
 				white-space:               nowrap;
 			}
 
-			&::after { inset: 0 } /* Since it is full-bleed. */
+			&::after {
+				inset:         0; /* Since it is full-bleed. */
+				border-radius: initial;
+			}
 
 			/* As soon as it fits with the `h1` title. */
 			@media (width >= 37.5em) { flex-direction: row }
