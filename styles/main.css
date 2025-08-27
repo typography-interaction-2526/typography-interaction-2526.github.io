@@ -149,6 +149,13 @@ main {
 		td:last-child { text-align: end } /* Ersatz tabular numbers. */
 	}
 
+	/* Dim inert stuff. */
+	*[inert] {
+		opacity: var(--disabled--opacity);
+
+		*[inert] { opacity: inherit } /* Section-nesting adds a dupe. */
+	}
+
 	/* Manual column placements. */
 	:where(.all, .aside, .body, .center, .five, .four, .left, .one, .recto, .right, .six, .three, .two, .verso) {
 		align-content:         start;

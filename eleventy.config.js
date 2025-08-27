@@ -120,7 +120,7 @@ export default (eleventyConfig) => {
 	// Convert HTML comments to curly brackets for `markdownItAttrs` to pick up.
 	eleventyConfig.addPreprocessor('commentsToCurlies', '.md', (data, content) =>
 		// Only match `.class`…, `#id`…, `data`…, `style`… so example/other comments aren’t transformed.
-		content.replace(/<!--\s*(\.(?:[\s\S]*?)|#(?:[\s\S]*?)|data(?:[\s\S]*?)|style(?:[\s\S]*?))\s*-->$/gm, '{ $1 }'),
+		 content.replace(/<!--\s*(\.(?:[\s\S]*?)|#(?:[\s\S]*?)|data(?:[\s\S]*?)|style(?:[\s\S]*?)|inert)\s*-->$/gm, '{ $1 }'),
 	)
 
 	// Filter for component use.
