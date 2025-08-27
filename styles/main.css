@@ -20,10 +20,24 @@ main {
 
 		&:has(> h2) {
 			--size:   var(--size--h2);
-			--weight: 500;
+			--weight: 700;
+
+			margin-block-end: 2rlh;
+		}
+
+		&:has(> h3) {
+			--size:   var(--size--h3);
+			--weight: 700;
 
 			margin-block-end: 1rlh;
+
+			> h3 {
+				margin-block-start:        calc(1rcap - 1cap); /* Back on the baseline. */
+				-webkit-text-stroke-width: 0.015em; /* Optically match others. */
+			}
 		}
+
+		+ section { margin-block-start: initial }
 
 		/* TODO Come back to these! */
 		> a { display: none }
@@ -42,26 +56,30 @@ main {
 	}
 
 	section:where(:not(:first-child)) {
-		margin-block-start: 1rlh; /* More space with hierarchy. */
+		&:where(:has(> hgroup > h2)) {
+			margin-block-start: 4rlh;
 
-		&:has(> hgroup > h2) {
 			> hgroup > h2 {
-				margin-block-start:  calc(1lh - 1rcap); /* Back on baseline. */
-				padding-block-start: 1cap;
-				position:            relative;
+				margin-block-start: calc(1cap - 1rcap); /* Back on baseline. */
+				padding-block-end:  1cap;
+				position:           relative;
 
 				/* Divider above it. */
-				&::before {
+				&::after {
 					background-color:   currentcolor;
 					block-size:         var(--stroke);
 					border-radius:      calc(var(--stroke) / 2);
 					content:            '';
-					inset-block-start:  calc(-1 * var(--stroke) / 2);
+					inset-block-end:    calc(-1 * var(--stroke) / 2);
 					inset-inline-end:   calc(var(--right) - var(--stroke) / 2);
 					inset-inline-start: calc(var(--left) - var(--stroke) / 2);
 					position:           absolute;
 				}
 			}
+		}
+
+		&:where(:has(> hgroup > h3)) {
+			margin-block-start: 3rlh;
 		}
 	}
 

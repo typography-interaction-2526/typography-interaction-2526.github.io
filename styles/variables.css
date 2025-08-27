@@ -4,6 +4,7 @@
 	--size--root: 20; /* In pixels, unitless for `calc`. */
 	--size--h1:   clamp(2rem, 4.7vw, 3rem); /* Scale `h1` based on title. */
 	--size--h2:   1.5rem;
+	--size--h3:   1.333rem;
 
 
 	--max:    1400;
