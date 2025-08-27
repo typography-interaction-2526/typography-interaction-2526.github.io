@@ -161,6 +161,8 @@ main {
 
 	/* Dim inert stuff. */
 	*[inert] {
+		--note: var(--color); /* Don’t double-fade. */
+
 		opacity: var(--disabled--opacity);
 
 		*[inert] { opacity: inherit } /* Section-nesting adds a dupe. */

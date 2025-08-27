@@ -107,12 +107,14 @@ summary {
 			display:              block;
 			letter-spacing:       0.1em;
 			margin-block:         calc(-1 * var(--block));
-			max-inline-size:      32ch;
+			max-inline-size:      16.666rem; /* Right-rail width. */
 			padding-block:        var(--block);
 			padding-inline-end:   calc(var(--gap) + var(--arrow) + var(--inline) - var(--right));
 			padding-inline-start: calc(var(--inline));
 			position:             relative;
 			text-box:             trim-both cap alphabetic;
+
+			* { color: inherit } /* For `abbr`. */
 
 			&::after {
 				content:           ' →';
