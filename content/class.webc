@@ -4,10 +4,37 @@
 	const order = 2
 </script>
 
+<style>
+	#shuffle {
+		grid-column: one / two;
+	}
+
+	#students {
+		column-gap:            var(--alley);
+		display:               grid;
+		grid-auto-flow:        column;
+		grid-column:           three / six;
+		grid-template-rows:    repeat(calc(var(--count) / var(--rows, 1)), min-content);
+
+		@media (width >= 30em) {
+			--rows: 2;
+
+			grid-auto-columns:     minmax(0, 1fr);
+			grid-template-columns: initial;
+
+			> li { max-inline-size: 18ch } /* TODO Adjust this for the names? */
+		}
+
+		@media (orientation: landscape) and (width >= 35em), (width >= 60em) { margin-block-start: initial }
+	}
+</style>
 <button id="shuffle">
 	<p>Shuffle</p>
 </button>
-<ul id="students">
+<ul
+	:style="`--count: ${$data.class.length}`"
+	id="students"
+>
 	<li webc:for="student of $data.class">
 		<a :href="`https://github.com/${student.github}`">
 			<cite @text="student.first"></cite>

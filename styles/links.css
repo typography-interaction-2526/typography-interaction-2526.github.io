@@ -95,6 +95,7 @@ summary {
 	> :where(a:has(> cite)) {
 		--weight:  700;
 
+		/* TODO Abstract some of this out for `button`! */
 		> cite {
 			--arrow:  0.85em;
 			--block:  1cap;
@@ -105,7 +106,7 @@ summary {
 			border-radius:        var(--stroke);
 			color:                var(--background);
 			display:              block;
-			letter-spacing:       0.1em;
+			letter-spacing:       0.05em;
 			margin-block:         calc(-1 * var(--block));
 			max-inline-size:      27rem; /* Half-ish. */
 			outline-color:        var(--color);
@@ -140,6 +141,8 @@ summary {
 				color:            var(--color);
 			}
 		}
+
+		/* TODO Other link types? Draw some Gorton glyphs. */
 	}
 
 	/* With additional text after (Markdown adds the `br`). */
