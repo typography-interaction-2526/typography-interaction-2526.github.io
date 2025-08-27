@@ -70,7 +70,7 @@
 			<li>
 				<block
 					webc:import="header.webc"
-					:id="slugify(stripTags(markdown(unit[0].data.unit)))"
+					:id="slugify(unit[0].data.unit)"
 				></block>
 			</li>
 			<li webc:for="item of unit">
