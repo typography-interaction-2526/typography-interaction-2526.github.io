@@ -1,3 +1,14 @@
+<script webc:setup>
+	export const weekRange = (unitNumber) => {
+		const weeks = [...$data.collections.weeks]
+			.filter((week) => week?.data?.unitNumber === unitNumber)
+
+		return weeks.length
+			? weeks[0].data.week + '–' + weeks[weeks.length - 1].data.week
+			: ''
+	}
+</script>
+
 <style webc:scoped>
 	:host {
 		--size:   var(--size--h1);
@@ -82,6 +93,7 @@
 <header webc:root="override">
 	<hgroup webc:if="!item">
 		<p @html="`Unit Nº ${unit[0].data.unitNumber}: “${markdown(unit[0].data.unit)}”`"></p>
+		<p @html="`Weeks ${weekRange(unit[0].data.unitNumber)}`"></p>
 	</hgroup>
 	<a
 		webc:else
