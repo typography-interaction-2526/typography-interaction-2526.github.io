@@ -43,11 +43,11 @@
 		></block>
 	</li>
 	<li webc:for="unit of groupedPages">
+		<block
+			webc:import="header.webc"
+			:id="slugify(stripTags(markdown(unit[0].data.unit)))"
+		></block>
 		<ul>
-			<block
-				webc:import="header.webc"
-				:id="slugify(stripTags(markdown(unit[0].data.unit)))"
-			></block>
 			<!-- TODO Also add “empties” for Thanksgiving/Winter/Spring break? -->
 			<li webc:for="item of unit">
 				<slot webc:if="item.url === $data.page.url"></slot>
