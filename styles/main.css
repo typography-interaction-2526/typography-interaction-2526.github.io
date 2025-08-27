@@ -133,6 +133,22 @@ main {
 		}
 	}
 
+	table {
+		inline-size: fit-content;
+
+		td:not(:first-child), th:not(:first-child) {
+			border-inline-start: calc(3rcap - var(--left) - var(--right)) solid transparent;
+		}
+
+		tr:not(:first-child) td, tr:not(:first-child) th {
+			border-block-start: 1rcap solid transparent;
+		}
+
+		td:first-child { text-transform: uppercase }
+
+		td:last-child { text-align: end } /* Ersatz tabular numbers. */
+	}
+
 	/* Manual column placements. */
 	:where(.all, .aside, .body, .center, .five, .four, .left, .one, .recto, .right, .six, .three, .two, .verso) {
 		align-content:         start;
