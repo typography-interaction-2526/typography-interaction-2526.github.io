@@ -272,21 +272,21 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 
 <!-- TODO Add code review/quizzes? -->
 
-- ### Engagement
+### Engagement
 
 	Students are expected to actively and passionately participate in this course. This means more than showing up and turning things in on time—which should be a given. Beyond that baseline students should be curious, prepared, thoughtful, vocal, and intentional throughout the course. They should make us understand why they are here, and demonstrate to us that they care about themselves, their work, and each other—and ultimately, about this chosen profession.
 
 	This engagement will be unavoidably reflected in the quality of students’ work—but we also evaluate this discretely based on their participation in and out of the classroom, with us and with their peers.
 
-- ### Reading Responses
+### Reading Responses
 
 	Each unit begins with a set of readings to introduce the subject. Students are expected to read the required selections and synthesize their thoughts in a written response, prior to the next class. We are not looking for summarization, here—these should be personal reflections on the subjects, and are evaluated with this lens. We will then discuss these readings as a group.
 
-- ### Exercises and Milestones
+### Exercises and Milestones
 
 	Each unit will also have specific, technical exercises and milestones that are assigned towards completion of the projects. These are weekly assignments—students are expected to complete them outside of class, before the next session. Some of these will be small; some of these will be large. They are *all* evaluated for completion and quality.
 
-- ### Projects
+### Projects
 
 	The bulk of the work for this class takes the form of projects. They are intended as opportunities for students to demonstrate the knowledge and skills learned in class while developing their own practice, and are evaluated in this light.
 
