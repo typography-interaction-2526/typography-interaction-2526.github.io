@@ -17,12 +17,11 @@ main {
 
 	/* Headings. */
 	hgroup {
-		grid-column: all;
-
 		&:has(> h2) {
 			--size:   var(--size--h2);
 			--weight: 700;
 
+			grid-column:      all;
 			margin-block-end: 2rlh;
 		}
 
