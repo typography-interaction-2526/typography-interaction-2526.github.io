@@ -116,9 +116,11 @@ summary {
 			text-box:             trim-both cap alphabetic;
 
 			&::after {
-				content:          ' →';
-				inset-inline-end: calc(var(--inline) - var(--right));
-				position:         absolute;
+				content:           ' →';
+				inset-block-start: var(--block);
+				inset-inline-end:  calc(var(--inline) - var(--right));
+				position:          absolute;
+				text-box:          trim-both cap alphabetic;
 			}
 		}
 	}
