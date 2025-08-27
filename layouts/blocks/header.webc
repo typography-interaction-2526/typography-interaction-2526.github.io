@@ -23,6 +23,8 @@
 				inline-size:               min-content;
 				text-transform:            uppercase;
 				white-space:               nowrap;
+
+				/* TODO any way to matte this and avoid the `--disabled--opacity`? */
 			}
 
 			&::after {
@@ -44,7 +46,7 @@
 		}
 
 		/* Future pages. */
-		&:has(> a:not([href])) > a { --color: var(--disabled) }
+		&:has(> a:not([href])) > a { opacity: var(--disabled--opacity) }
 	}
 
 	/* Flip the next divider off (unless it has a link) with undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
