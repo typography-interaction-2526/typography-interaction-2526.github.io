@@ -2,9 +2,9 @@
 	--leading: 2cap;
 
 	--size--root: 20; /* In pixels, unitless for `calc`. */
-	--size--h1:   clamp(2rem, 4.7vw, 3rem); /* Scale `h1` based on title. */
+	--size--h1:   clamp(2rem, 4.75vw, 3rem); /* Scale `h1` based on course title. */
 	--size--h2:   1.5rem;
-	--size--h3:   1.333rem;
+	--size--h3:   1.25rem;
 
 	--max: 1400;
 
