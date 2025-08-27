@@ -60,12 +60,12 @@
 	/* Unit “blanks.” */
 	:host:has(> hgroup) {
 		background-color: var(--color);
-		padding-inline:   var(--gutter);
 
 		> hgroup {
-			--color: var(--background--root);
+			--color: var(--background);
 
 			padding-block:             1cap;
+			padding-inline:            var(--gutter);
 			-webkit-text-stroke-width: 0.015em;
 		}
 	}
