@@ -3,6 +3,7 @@
 		--size:   var(--size--h1);
 		--weight: 500;
 
+		/* Page links. */
 		> a {
 			align-items:     start;
 			border-radius:   calc(var(--enlargement) * 2);
@@ -15,22 +16,22 @@
 			padding-inline:  var(--gutter);
 			row-gap:         1cap;
 
+			/* Dates. */
 			> p {
-				--weight:  700;
+				--weight: 700;
 
-				/* TODO any way to matte this and avoid the `--disabled--opacity`? */
-
-				-webkit-text-stroke-width: 0.033em; /* Optically match the titles. */
-				font-size:                 0.5em;
 				inline-size:               min-content;
+				-webkit-text-stroke-width: 0.025em; /* Optically match the titles. */
 				text-transform:            uppercase;
 				white-space:               nowrap;
 
+				/* TODO any way to matte this and avoid the `--disabled--opacity`? */
 			}
 
+			/* Link area/highlight. */
 			&::after {
-				inset:         0; /* Since it is full-bleed. */
 				border-radius: initial;
+				inset:         0; /* Since it is full-bleed. */
 			}
 
 			/* As soon as it fits with the `h1` title. */
@@ -48,6 +49,25 @@
 
 		/* Future pages. */
 		&:has(> a:not([href])) > a { opacity: var(--disabled--opacity) }
+
+		> a > p,
+		> hgroup {
+			--size:   calc(var(--size--h1) / 2);
+			--weight: 700;
+		}
+	}
+
+	/* Unit “blanks.” */
+	:host:has(> hgroup) {
+		background-color: var(--color);
+		padding-inline:   var(--gutter);
+
+		> hgroup {
+			--color: var(--background--root);
+
+			padding-block:             1cap;
+			-webkit-text-stroke-width: 0.015em;
+		}
 	}
 
 	/* Flip the next divider off (unless it has a link) with undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
@@ -57,14 +77,9 @@
 </style>
 
 <header webc:root="override">
-	<a
-		webc:if="!item"
-		:href="`#${slugify(stripTags(markdown(unit[0].data.unit)))}`"
-	>
-		<hgroup>
-			<p @html="`Unit Nº ${unit[0].data.unitNumber}: “${markdown(unit[0].data.unit)}”`"></p>
-		</hgroup>
-	</a>
+	<hgroup webc:if="!item">
+		<p @html="`Unit Nº ${unit[0].data.unitNumber}: “${markdown(unit[0].data.unit)}”`"></p>
+	</hgroup>
 	<a
 		webc:else
 		:href="item?.url"
