@@ -20,12 +20,19 @@
 
 	--color: black;
 
-	--background--root: gainsboro;
-	--background--1:    gold;
-	--background--2:    orange;
-	--background--3:    tomato;
-	--background--4:    dodgerblue;
-	--background--5:    palegreen;
+	--background--root:   gainsboro;
+
+	--background--1: gold;
+	--background--2: orange;
+	--background--3: tomato;
+	--background--4: dodgerblue;
+	--background--5: palegreen;
+
+	--background--1--alt: khaki;
+	--background--2--alt: sandybrown;
+	--background--3--alt: lightsalmon;
+	--background--4--alt: lightskyblue;
+	--background--5--alt: aquamarine;
 
 	@media (width >= 35em) { /* Landscape phones. */
 		--alley: 4rcap;

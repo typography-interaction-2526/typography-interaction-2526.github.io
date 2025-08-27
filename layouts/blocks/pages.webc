@@ -24,12 +24,34 @@
 
 			background-color: var(--background);
 
+			/* Unit title “headers.” */
+			> ul > li:first-child { background-color: var(--background--alt) }
+
 			/* Unit colors. */
-			&:nth-child(4) { --background: var(--background--1) }
-			&:nth-child(5) { --background: var(--background--2) }
-			&:nth-child(6) { --background: var(--background--3) }
-			&:nth-child(7) { --background: var(--background--4) }
-			&:nth-child(8) { --background: var(--background--5) }
+			&:nth-child(4) {
+				--background:      var(--background--1);
+				--background--alt: var(--background--1--alt);
+			}
+
+			&:nth-child(5) {
+				--background:      var(--background--2);
+				--background--alt: var(--background--2--alt);
+			}
+
+			&:nth-child(6) {
+				--background:      var(--background--3);
+				--background--alt: var(--background--3--alt);
+			}
+
+			&:nth-child(7) {
+				--background:      var(--background--4);
+				--background--alt: var(--background--4--alt);
+			}
+
+			&:nth-child(8) {
+				--background:      var(--background--5);
+				--background--alt: var(--background--5--alt);
+			}
 		}
 	}
 </style>

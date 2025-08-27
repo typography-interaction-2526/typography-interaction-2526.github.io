@@ -51,9 +51,6 @@
 				inset:         0; /* Since it is full-bleed. */
 			}
 
-			/* Match unit titles. */
-			&:not(:has(> hgroup)) { padding-block: 0.5cap }
-
 			/* As soon as it fits with the `h1` title. */
 			@media (width >= 37.5em) { flex-direction: row }
 		}
@@ -69,12 +66,20 @@
 
 		/* Future pages. */
 		&:has(> a:not([href])) > a { opacity: var(--disabled--opacity) }
+
+		/* Unit titles. */
+		&:not(:has(a > hgroup)) {
+			a { padding-block: 0.5cap }
+
+			/* TODO There is definitely a less-redundant way to do this. */
+			&:has(> a:not([href]))::before {--color: var(--disabled) }
+		}
 	}
 
 	/* Flip the next divider off (unless it has a link) with undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
 	:host-context(li:has(> header > a:not([href])) + *):has(> a:not([href]))::before { --color: var(--disabled) }
 
-	/* TODO This still breaks across units! */
+	/* TODO This doesn’t work across units, but obviated by override above. */
 </style>
 
 <header webc:root="override">
