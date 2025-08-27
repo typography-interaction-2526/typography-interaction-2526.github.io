@@ -86,22 +86,18 @@ summary {
 
 /* Our “tag” style. */
 :is(li, p):where(:has(> a > cite)) {
-	--size:    0.85rem;
-	--weight:  500;
-
-	/* --leading: calc(1rlh); */
-
-	/* background-color: aqua; */
-	margin-block-start: calc(1rcap - 1cap); /* Back on baseline. */
-
 	> :where(a:has(> cite)) {
+		--size:    0.85rem;
+		--leading: 1rlh;
 		--weight:  700;
+
+		margin-block-start: calc(1rcap - 1cap); /* Back on baseline. */
 
 		> cite {
 			--arrow:  0.85em;
 			--block:  1cap;
-			--inline: 1cap;
 			--gap:    2cap;
+			--inline: 1cap;
 
 			background-color:     var(--color);
 			border-radius:        var(--stroke);
@@ -126,7 +122,15 @@ summary {
 		}
 	}
 
-	> br { display: none } /* Link is already `block`. */
+	/* With additional text after (Markdown adds the `br`). */
+	&:has(> br) {
+		> br { display: none } /* Link is already `block`. */
+
+		/* Push the text back down to the baseline. */
+		> :where(a:has(> cite)) { margin-block-end: calc(1rlh + 0.53em) }
+
+		/* TODO Not actually sure how this is derived! 🤷‍♀️ */
+	}
 }
 
 /* TODO Move `cite` itself to a component? There is no `:global()` though. */

@@ -10,7 +10,7 @@ main {
 	padding-block-end:   calc(2 * min(var(--alley), calc(2 * var(--gutter))));
 	padding-block-start: min(var(--alley), calc(2 * var(--gutter)));
 	padding-inline:      var(--gutter);
-	row-gap:             3cap;
+	row-gap:             3rcap;
 
 	* { grid-column: body } /* Default to body width. */
 
@@ -141,6 +141,8 @@ main {
 		grid-template-columns: minmax(auto, max-content);
 
 		:where(li) { grid-column: initial }
+
+		&:where(:has(li > p)) { row-gap: 5rcap }
 	}
 
 	table {
