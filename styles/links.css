@@ -96,9 +96,7 @@ a:where(:has(> cite)) {
 	--size:    0.85rem;
 	--weight:  700;
 
-	inline-size:         fit-content;
-	-webkit-user-select: none;
-	user-select:         none;
+	inline-size: fit-content;
 
 	> :is(cite, p) {
 		/* TODO Outline color is broken on `cite` with text. */
