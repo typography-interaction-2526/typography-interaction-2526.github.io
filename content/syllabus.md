@@ -29,11 +29,11 @@ In this class, students will learn intermediate and advanced methods in typograp
 Our second semester will build on the type and layout foundations from the first, moving into interface design and interactive experiences on the web.
 <!-- .intro -->
 
+Interaction, interactive, interface, product, UI, UX designers—we are known by many names. These are all monikers for a digitally-native design practice. It is our responsibility, as practitioners in this increasingly consequential and broadening field, to both understand existing paradigms and help manifest, refine, and sustain purposeful new ones.
+
 - <a :href="course.syllabus.spring"><cite>Submitted Version</cite></a>
 - <a :href="course.catalog.spring"><cite>Course Catalog</cite></a>
 <!-- .right .rows--2 -->
-
-Interaction, interactive, interface, product, UI, UX designers—we are known by many names. These are all monikers for a digitally-native design practice. It is our responsibility, as practitioners in this increasingly consequential and broadening field, to both understand existing paradigms and help manifest, refine, and sustain purposeful new ones.
 
 Contemporary digital design exists in the continuum of the ever-shifting, evolving, and ubiquitous web. Designers today work at many different scales and within many different systems. We act as mediators—not only for users, meaning, and experience—but with these systems themselves, as well. They shape our work and we shape them—at the meeting point, the *interface*, between things.
 
@@ -89,6 +89,7 @@ The course is structured into thematic units, each bookended by readings on the 
 #### Weeks 1–6
 
 We will focus on reviewing the core principles of typography, and introduce the web and its base technologies. Students will learn about HTML, semantic DOM, basic CSS, as well as type hierarchy and the use of custom typefaces for the web.
+<!-- .balance -->
 
 #### Readings
 
@@ -111,9 +112,10 @@ We will focus on reviewing the core principles of typography, and introduce the 
 
  The unit ends with Project 1, *Manuscript*, which students will present on October 3.
 
-Students will choose a seminal design text from [readings.design](https://readings.design), read and respond to it, and typeset their selection and reply together as a web page. Other texts are also allowed on a case-by-case basis.
+Students will choose a seminal design text from [readings.design](https://readings.design), read and respond to it, and typeset their selection and reply together as a web page. Other texts are also allowed on a case-by-case basis.
 
 We’ll be looking for the quality of responses, appropriate type selection and hierarchy, semantic HTML, and basic CSS.
+<!-- .note -->
 
 ### Unit 2: There Is No Perfect Layout <!-- .fall -->
 
@@ -145,6 +147,7 @@ This unit concludes with Project 2, *Spread*, which students will present on Oc
 Students will work in pairs, with a new text from those selected by the class in *Manuscript*. Each duo will sketch collaboratively and then implement a new expression together, via pair programming. The final web page will be responsive for mobile, desktop, and print layouts.
 
 Here we’re looking for successful design and development collaboration, box-model layout design, and use of responsive media queries.
+<!-- .note -->
 
 ### Unit 3: Typography as Interface <!-- .fall -->
 
@@ -176,6 +179,7 @@ This unit, and the first semester, will culminate with Project 3, *Binding*, wh
 Students will assemble a collection of texts from *Spread*, combined with their original selection, into a “book.” The book will be a multi-page website with a homepage (cover), navigation (table of contents), individual pages for each text, and an introduction (colophon)—with consistent styles applied across all pages.
 
 We want to see effective multi-page design and navigation, advanced layouts (flexbox, grid), consistency across the pages and content, and polish/nuance.
+<!-- .note -->
 
 ### Unit 4: Interface as Interface <!-- .spring inert -->
 
@@ -207,6 +211,7 @@ The unit ends with Project 4, *Links*, which students will present on February�
 Students will collaboratively assemble, connect, and present a collection using [Are.na](https://www.are.na) as a platform/CMS—designing and building an interface to explore and understand it.
 
 In addition to our previous project requirements, here we’ll be looking for the effective use of images/media, meaningful interactive interface functionality, and your use of JavaScript.
+<!-- .note -->
 
 ### Unit 5: If All You Have Is a Hammer, Everything Looks Like a Nail <!-- .spring inert -->
 
@@ -275,6 +280,7 @@ This unit, and the course, will culminate with Project 5, *Functions*, which wi
 Students will identify a problem and conceptualize how to solve it on the web. They will plan, design, and implement a novel solution towards this problem—incorporating data and interaction with the tools, technologies, and techniques they’ve learned in this course.
 
 We’ll first be looking for strong concepts—not limited to or by existing conventions—that push the grain of interaction design in new and interesting directions. And as the capstone for this course, we’re expecting the highest level of nuance and polish in the organizational, aesthetic, and technical aspects of these final projects.
+<!-- .note -->
 
 ## Evaluation Criteria
 
@@ -329,7 +335,8 @@ In the open tradition of the early web, the only materials truly required are a 
 
 In class, we will demonstrate using [Figma](http://figma.com) for visual design and sketching, [Visual Studio Code](https://code.visualstudio.com) for programming, and [GitHub](https://github.com)/[GitHub Desktop](https://desktop.github.com) for version control and project hosting. All of these products are available for free, or offer free education licenses to New School emails.
 
-**We will use the following tools to organize our class:**
+We will use the following tools to organize our class:
+<!-- .intro -->
 
 - <a :href="pkg.homepage"><cite>Course Site</cite></a>
 	For housekeeping, agendas, and lectures (you are here)
@@ -356,9 +363,11 @@ In class, we will demonstrate using [Figma](http://figma.com) for visual design 
 
 ### Our Community
 
+<!-- TODO Add laptops-closed policy! And update SO/LLM emphasis. -->
+
 This agreement is intended to help us create and maintain a safe, empathetic, and productive space for our course. It can be revised and modified, with all of our input, over the year:
 
-- The class should feel comfortable asking the instructors anything—nothing is too trivial, or embarrassing, or off-topic. Tangents are good. Students can ask us via <a :href="course.channel.slack">Slack</a>, if they would like to remain anonymous.
+- The class should feel comfortable asking the instructors anything—nothing is too trivial, or embarrassing, or off-topic. Tangents are good! Students can always ask us via <a :href="course.channel.slack">Slack</a>, if they would like to remain anonymous.
 
 - Classmates should use our [preferred names and pronouns](/class).
 
@@ -380,13 +389,13 @@ We can (and should) revisit this agreement throughout the year. Please let us kn
 
 ### Inclusion
 
-Our intent is to respect and give forum to a range of perspectives and backgrounds, including culture, race, gender, sexual orientation, socioeconomic status, disability, and age. In instances where we are personally not qualified to speak from a specific perspective, students are encouraged to explore this area themselves. And please let us know if there are ways that the course can better serve these goals.
+Our intent is to respect and give forum to a range of perspectives and backgrounds, including culture, race, gender, sexual orientation, socioeconomic status, disability, and age. In instances where we are personally not qualified to speak from a specific perspective, students are encouraged to explore this area themselves. And please let us know if there are ways that the course can better serve these goals.
 
 ### Office Hours
 
 We will have limited availability outside of our class time, and won’t keep scheduled “office hours.” Students should not expect us to immediately solve specific design or technical problems, or be blocked by this. Their first resource should be themselves, then <a :href="pkg.homepage">this course site</a> and its materials, and then each other.
 
-If there are still questions—particularly logistical or content ones—students can message us on <a :href="course.channel.slack">Slack</a>, and we will respond when we can. But this should never be a bottleneck; all of this works better when not done at the last minute.
+That said: if there are still questions—particularly logistical or content ones—students can message us on <a :href="course.channel.slack">Slack</a>, and we will respond when we can. But this should never be a bottleneck; all of this works better when not done at the last minute.
 
 ### Additional Technical Help
 
@@ -399,6 +408,8 @@ The University Learning Center also offers its own [tutoring sessions](https://w
 As tutors are only available a limited number of hours per week, it is advisable to start early on your projects and seek help along the way—to avoid the usual end of project/semester rush for additional help.
 
 ### Code Plagiarism
+
+<!-- TODO Comment out/in code example, until we get there? -->
 
 Students may find code similar to our exercises or projects elsewhere online. But the copying or adapting of *any* code beyond our provided course material (lectures, exercises, demos) without attribution is not allowed under any circumstances.
 

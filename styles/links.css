@@ -121,8 +121,6 @@ summary {
 			position:             relative;
 			text-box:             trim-both cap alphabetic;
 
-			* { color: inherit } /* For `abbr`. */
-
 			&::after {
 				content:           var(--icon, ' →');
 				inset-block-start: var(--block);
@@ -147,17 +145,14 @@ summary {
 
 	/* With additional text after (Markdown adds the `br`). */
 	&:has(> br) {
-		color:            var(--note);
 		margin-block-end: calc(1rlh - 1cap);
-		max-inline-size:  50ch;
-		text-wrap:        balance;
-
-		> br { display: none } /* Link is already `block`. */
 
 		/* Push the text back down to the baseline. */
 		> :where(a:has(> cite)) { margin-block-end: calc(0.343rlh + 1cap) }
 
 		/* TODO Not actually sure how this is derived! 🤷‍♀️ */
+
+		> br { display: none } /* Link is already `block`. */
 	}
 }
 
