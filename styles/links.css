@@ -86,24 +86,27 @@ summary {
 	&:active { background-color: var(--highlight) }
 }
 
+/* Our “tag” style. */
 button,
 summary,
-:where(a:has(> cite)) {
+a:where(:has(> cite)) {
 	--leading: 1rlh;
 	--size:    0.85rem;
 	--weight:  700;
 
+	inline-size:          fit-content;
 	-webkit-user-select: none;
 	user-select:         none;
 
 	> :is(cite, p) {
 		--block:  1cap;
-		--gap:    2cap;
 		--inline: 1cap;
 
-		background-color:     var(--color);
+		/* TODO Outline color is broken on `cite` with text. */
+
+		background-color:     var(--background);
 		border-radius:        var(--stroke);
-		color:                var(--background);
+		color:                var(--color);
 		display:              block;
 		letter-spacing:       0.05em;
 		margin-block:         calc(-1 * var(--block));
@@ -115,47 +118,42 @@ summary,
 		outline-width:        var(--stroke);
 		outline-width:        round(up, var(--stroke), var(--rounding));
 		padding-block:        var(--block);
-		padding-inline-end:   calc(var(--gap) + var(--arrow) + var(--inline) - var(--right));
-		padding-inline-start: calc(var(--inline));
+		padding-inline-end:   calc(var(--gap, 0rem) + var(--icon--width, 0rem) + var(--inline) - var(--right));
+		padding-inline-start: calc(var(--inline) - var(--left));
 		text-box:             trim-both cap alphabetic;
 	}
+
+	> cite {
+		--gap:         2cap;
+		--icon--width: 0.85em;
+
+		position: relative;
+
+		&::after {
+			content:           var(--icon, ' ↓');
+			inset-block-start: var(--block);
+			inset-inline-end:  calc(var(--inline) - var(--right));
+			position:          absolute;
+			text-box:          trim-both cap alphabetic;
+		}
+	}
+
+	&:where([href]:not([href^='/'])) {
+		--icon: ' →';
+
+		> cite {
+			background-color: var(--color);
+			color:            var(--background);
+		}
+	}
+
+	/* TODO Other link types? Draw some Gorton glyphs. */
 }
 
-/* Our “tag” style. */
 :is(li, p):where(:has(> a > cite)) {
-	--leading: 1rlh;
-	--size:    0.85rem;
-	--weight:  500;
-
 	margin-block-start: calc(1rcap - 1cap); /* Back on baseline. */
 
-	> :where(a:has(> cite)) {
-		> cite {
-			--arrow:  0.85em;
-
-			position: relative;
-
-			&::after {
-				content:           var(--icon, ' →');
-				inset-block-start: var(--block);
-				inset-inline-end:  calc(var(--inline) - var(--right));
-				position:          absolute;
-				text-box:          trim-both cap alphabetic;
-			}
-		}
-
-		/* Internal links. */
-		&[href^='/'] {
-			--icon: ' ↓';
-
-			> cite {
-				background-color: var(--background);
-				color:            var(--color);
-			}
-		}
-
-		/* TODO Other link types? Draw some Gorton glyphs. */
-	}
+	> :where(a:has(> cite)) { inline-size: initial } /* To the grid. */
 
 	/* With additional text after (Markdown adds the `br`). */
 	&:has(> br) {
