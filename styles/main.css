@@ -143,7 +143,7 @@ main {
 		:where(li) { grid-column: initial }
 	}
 
-	p:where(:has(a > cite)) { justify-self: start }
+	*:where(:not(li)) > p:where(:has(a > cite)) { justify-self: start }
 
 	/* More space above these when they aren’t manually in-columns. */
 	ul, *:where(:not(li)) > p {
