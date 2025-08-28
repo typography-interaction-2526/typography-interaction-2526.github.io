@@ -6,17 +6,19 @@
 
 ## Course Description
 
-<em style="margin-inline-start: -0.2em">Typography & Interaction</em> is a year-long course, divided into two classes, which will provide a rigorous foundation of typographic and interaction principles in the context of digital design. Over both classes, students will acquire and hone the skills they need for success in the field of interactive design.
+<em style="margin-inline-start: -0.2em">Typography & Interaction</em> is a year-long course, divided into two classes, which will provide a rigorous foundation of typographic and interaction principles in the context of digital design. Over both classes, students will acquire and hone the skills they need for success in the field of interactive design.
+<!-- .intro -->
 
 ### Fall <!-- .fall -->
 
 This first semester will focus on a mastery of type and layout concepts on the web.
+<!-- .intro -->
+
+Typography is the infrastructure of communication in nearly any visual medium. It provides the very first shape and form to written content, and as designers, it is our responsibility to do this with intention and care. Whether towards goals of expression itself or in the service of ideas, the designer must understand type to use it successfully. In this way, we are stewards of meaning.
 
 - <a :href="course.syllabus.fall"><cite>Submitted Version</cite></a>
 - <a :href="course.catalog.fall"><cite>Course Catalog</cite></a>
 <!-- .right .rows--2 -->
-
-Typography is the infrastructure of communication in nearly any visual medium. It provides the very first shape and form to written content, and as designers, it is our responsibility to do this with intention and care. Whether towards goals of expression itself or in the service of ideas, the designer must understand type to use it successfully. In this way, we are stewards of meaning.
 
 Digital design, the web in particular, is inextricably linked with typography—from the very letters of code at its base to the words in arrangement we see on a screen. Type, thus, is the scaffolding in which all interaction design first rises. The very shape of the web, in its layouts, grid systems, and patterns—and its various technologies—all exist in the service of type, at their root. They provide the tools with which we can breathe a form and different, digital life into that meaning.
 
@@ -25,6 +27,7 @@ In this class, students will learn intermediate and advanced methods in typograp
 ### Spring <!-- .spring inert -->
 
 Our second semester will build on the type and layout foundations from the first, moving into interface design and interactive experiences on the web.
+<!-- .intro -->
 
 - <a :href="course.syllabus.spring"><cite>Submitted Version</cite></a>
 - <a :href="course.catalog.spring"><cite>Course Catalog</cite></a>
@@ -40,7 +43,8 @@ In this class, students will learn to give form to and then work at these inters
 
 ### Fall <!-- .fall -->
 
-**By the end of this semester, students will:**
+By the end of this semester, students will:
+<!-- .intro -->
 
 - Demonstrate advanced knowledge of and be able to critically analyze type, form, and interactivity as it applies to screen-based media.
 
@@ -53,10 +57,12 @@ In this class, students will learn to give form to and then work at these inters
 - Give, receive, and respond productively to feedback in critiques.
 
 - Think critically and develop their own, distinct thoughts on the role of digital within the larger canon of design.
+<!-- .balance -->
 
 ### Spring <!-- .spring inert -->
 
-**By the end of this semester, students will:**
+By the end of this semester, students will:
+<!-- .intro -->
 
 - Thoroughly exercise and extend their typographic, design, and technical web skills developed in the first semester.
 
@@ -71,10 +77,12 @@ In this class, students will learn to give form to and then work at these inters
 - Conceptualize a web project with an eye towards its complete implementation—balancing the tradeoffs between design, features, and practical build considerations or limitations.
 
 - Develop an understanding of how they want to practice as a designer within the larger context of the discipline.
+<!-- .balance -->
 
 ## Course Outline
 
 The course is structured into thematic units, each bookended by readings on the subject and a project that will demonstrate the material:
+<!-- .intro -->
 
 ### Unit 1: Type and the Web <!-- .fall -->
 
