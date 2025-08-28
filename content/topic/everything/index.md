@@ -8,7 +8,8 @@
 
 ### When Was the Internet Invented?
 
-<details @summary="1969 or 1989?">
+<details>
+	<summary>1969 or 1989?</summary>
 
 1969!
 
@@ -96,7 +97,8 @@ In 1974, Robert Kahn and Vinton Cerf (two ARPA scientists) developed the *Transm
 
 ### When Was the Web Invented?
 
-<details @summary="1969 or 1989?">
+<details>
+	<summary>1969 or 1989?</summary>
 
 1989!
 
@@ -316,3 +318,4 @@ All I know is that if you are a fish, it is hard to describe water, much less to
 ---
 
 A hat-tip to friend-of-the-program [Tuan](https://tuanpham.info) on this lecture.
+<!-- .note -->
