@@ -209,7 +209,7 @@ We will expand on our first-semester foundations in design, typography, HTML, an
 
 #### Project Nº 4: *Links*
 
-The unit ends with Project 4, *Links*, which students will present on February 26.
+The unit ends with Project 4, *Links*, which students will present on February 25.
 <!-- .pretty -->
 
 Students will collaboratively assemble, connect, and present a collection using [Are.na](https://www.are.na) as a platform/CMS—designing and building an interface to explore and understand it.
@@ -279,7 +279,7 @@ To wrap up the semester (and course), we’ll round out our knowledge of the web
 
 #### Project Nº 5: *Functions*
 
-This unit, and the course, will culminate with Project 5, *Functions*, which will be presented in class on April 23.
+This unit, and the course, will culminate with Project 5, *Functions*, which will be presented in class on April 22.
 <!-- .pretty -->
 
 Students will identify a problem and conceptualize how to solve it on the web. They will plan, design, and implement a novel solution towards this problem—incorporating data and interaction with the tools, technologies, and techniques they’ve learned in this course.
