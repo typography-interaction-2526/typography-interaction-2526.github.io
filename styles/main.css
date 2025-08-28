@@ -12,6 +12,8 @@ main {
 	padding-inline:      var(--gutter);
 	row-gap:             3rcap;
 
+	/* TODO Scroll margin on ID. */
+
 	* { grid-column: body } /* Default to body width. */
 
 	h1 { display: none } /* Don’t you dare. */
@@ -142,6 +144,8 @@ main {
 
 		:where(li) { grid-column: initial }
 	}
+
+	/* TODO Longer text after blows up the common width of these! */
 
 	*:where(:not(li)) > p:where(:has(a > cite)) { justify-self: start }
 

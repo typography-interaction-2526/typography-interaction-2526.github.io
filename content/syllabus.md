@@ -14,7 +14,7 @@
 This first semester will focus on a mastery of type and layout concepts on the web.
 <!-- .intro -->
 
-Typography is the infrastructure of communication in nearly any visual medium. It provides the very first shape and form to written content, and as designers, it is our responsibility to do this with intention and care. Whether towards goals of expression itself or in the service of ideas, the designer must understand type to use it successfully. In this way, we are stewards of meaning.
+Typography is the infrastructure of communication in nearly any visual medium. It provides the very first shape and form to written content, and as designers, it is our responsibility to do this with intention and care. Whether towards goals of expression itself or in the service of ideas, the designer must understand type to use it successfully. In this way, we are stewards of meaning.
 
 - <a :href="course.syllabus.fall"><cite>Submitted Version</cite></a>
 - <a :href="course.catalog.fall"><cite>Course Catalog</cite></a>
@@ -146,7 +146,7 @@ Students will learn how to design and implement more complex, flexible layouts, 
 This unit concludes with Project 2, *Spread*, which students will present on October 31.
 <!-- .pretty -->
 
-Students will work in pairs, with a new text from those selected by the class in *Manuscript*. Each duo will sketch collaboratively and then implement a new expression together, via pair programming. The final web page will be responsive for mobile, desktop, and print layouts.
+Students will work in pairs, with the texts they selected in *Manuscript*. Each duo will sketch collaboratively and then implement a new expression together, via pair programming. The final web page will be responsive for mobile, desktop, and print layouts.
 
 Here we’re looking for successful design and development collaboration, box-model layout design, and use of responsive media queries.
 <!-- .note -->
@@ -289,8 +289,6 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 
 ## Evaluation Criteria
 
-<!-- TODO Add code review/quizzes? -->
-
 ### Engagement
 
 	Students are expected to actively and passionately participate in this course. This means more than showing up and turning things in on time—which should be a given. Beyond that baseline students should be curious, prepared, thoughtful, vocal, and intentional throughout the course. They should make us understand why they are here, and demonstrate to us that they care about themselves, their work, and each other—and ultimately, about this chosen profession.
@@ -301,44 +299,44 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 
 	Each unit begins with a set of readings to introduce the subject. Students are expected to read the required selections and synthesize their thoughts in a written response, prior to the next class. We are not looking for summarization, here—these should be personal reflections on the subjects, and are evaluated with this lens. We will then discuss these readings as a group.
 
-### Exercises and Milestones
+### Quizzes, Exercises, Milestones
 
-	Each unit will also have specific, technical exercises and milestones that are assigned towards completion of the projects. These are weekly assignments—students are expected to complete them outside of class, before the next session. Some of these will be small; some of these will be large. They are *all* evaluated for completion and quality.
+	Each unit will also have short quizzes on topic material, and specific, technical exercises and milestones that are assigned towards completion of the projects. Quizzes will occur in the class following new material; assignments are expected to be completed outside of class, before the next session. Some of these will be small; some of these will be large. They are *all* evaluated for completion and quality.
 
 ### Projects
 
 	The bulk of the work for this class takes the form of projects. They are intended as opportunities for students to demonstrate the knowledge and skills learned in class while developing their own practice, and are evaluated in this light.
 
-	There will be check-ins and reviews around each of these before the final due dates, when we will have critiques as a group. In addition to the project itself, students will be assessed on their presentation of their work, as well as their ability to provide constructive, critical feedback to their peers. More specific evaluation criteria will be delineated with each project’s introduction.
+	There will be check-ins and reviews around each of these before the final due dates, when we will have critiques as a group. In addition to the quality of the project itself, students will be subject to an in-person code review and will also be assessed on the presentation of their work. More specific evaluation criteria will be delineated with each project’s introduction.
 
 ## Grade Calculation
 
 ### Fall <!-- .fall -->
 
-|                            |     |
-| -------------------------- | --- |
-| Engagement                 | 20% |
-| Reading Responses          | 10% |
-| Exercises and Milestones   | 10% |
-| Project Nº 1: *Manuscript* | 10% |
-| Project Nº 2: *Spread*     | 20% |
-| Project Nº 3: *Binding*    | 30% |
+|                                |     |
+| ------------------------------ | --- |
+| Engagement                     | 20% |
+| Reading Responses              | 10% |
+| Quizzes, Exercises, Milestones | 10% |
+| Project Nº 1: *Manuscript*     | 10% |
+| Project Nº 2: *Spread*         | 20% |
+| Project Nº 3: *Binding*        | 30% |
 
 ### Spring <!-- .spring inert -->
 
-|                            |     |
-| -------------------------- | --- |
-| Engagement                 | 20% |
-| Reading Responses          | 10% |
-| Exercises and Milestones   | 10% |
-| Project Nº 4: *Links*      | 20% |
-| Project Nº 5: *Functions*  | 40% |
+|                                |     |
+| ------------------------------ | --- |
+| Engagement                     | 20% |
+| Reading Responses              | 10% |
+| Quizzes, Exercises, Milestones | 10% |
+| Project Nº 4: *Links*          | 20% |
+| Project Nº 5: *Functions*      | 40% |
 
 ## Materials and Supplies
 
 In the open tradition of the early web, the only materials truly required are a computer, a browser, a text editor, and an internet connection. The specifics of these are open to the student’s individual preferences and practices. We will do our best to accommodate everyone and will make recommendations, when needed.
 
-In class, we will demonstrate using [Figma](http://figma.com) for visual design and sketching, [Visual Studio Code](https://code.visualstudio.com) for programming, and [GitHub](https://github.com)/[GitHub Desktop](https://desktop.github.com) for version control and project hosting. All of these products are available for free, or offer free education licenses to New School emails.
+In class, we will demonstrate using [Figma](http://figma.com) for visual design and sketching, [Visual Studio Code](https://code.visualstudio.com) for programming, and [GitHub](https://github.com)/[GitHub Desktop](https://desktop.github.com) for version control and project hosting. All of these products are available for free, or offer free education licenses with New School emails.
 
 We will use the following tools to organize our class:
 <!-- .intro -->
@@ -368,23 +366,23 @@ We will use the following tools to organize our class:
 
 ### Our Community
 
-<!-- TODO Add laptops-closed policy! And update SO/LLM emphasis. -->
-
-This agreement is intended to help us create and maintain a safe, empathetic, and productive space for our course. It can be revised and modified, with all of our input, over the year:
-
-- The class should feel comfortable asking the instructors anything—nothing is too trivial, or embarrassing, or off-topic. Tangents are good! Students can always ask us via <a :href="course.channel.slack">Slack</a>, if they would like to remain anonymous.
+This agreement is intended to help us create and maintain a safe, empathetic, and productive space for our course. It is build on trust and accumulated experience across cohorts. It can be revised and modified, with all of our input, over the year:
 
 - Classmates should use our [preferred names and pronouns](/class).
 
-- When presenting, students will “have the floor” while they take us through their work. This means everyone else will be quiet, we’ll close our laptops, and give our full attention to the person showing their work.
+- We will have a short break, roughly halfway through the class.
+
+- The class should feel comfortable asking the instructors anything—nothing is too trivial, or embarrassing, or off-topic. Tangents are good! Students can always ask us via <a :href="course.channel.slack">Slack</a>, if they would like to remain anonymous.
+
+- When presenting, students will “have the floor” while they take us through their work. This means everyone else will be quiet, we’ll close our laptops/turn off our phones, and give our full attention to the person showing their work.
+
+- Likewise for when the *instructors* are presenting new material—no laptops, no phones. If students require either for assisting their learning, they must request approval beforehand. Our default setting should be “full attention, up front.”
 
 - We will all engage meaningfully with presented work and try to give constructive feedback (no fluff).
 
-- Fall semester, we’re not going to copy/paste any of our code. We’ll talk about appropriately using *Stack Overflow* and *large language models* (“artificial intelligence”) in the Spring.
+- For Fall semester, we’re not going to use LLM agents/autocomplete (“artificial intelligence”), nor traditional copy/pasting, nor any other tools where we do not write our own code. We will talk through appropriate, allowed use of these technologies in the Spring.
 
-- We will [attribute](#attribution) our work when referencing other tools or examples.
-
-- We will have a short break, roughly halfway through the class.
+- We will always [attribute](#attribution) our work when referencing others, tools, or examples.
 
 <aside>
 
@@ -398,31 +396,31 @@ Our intent is to respect and give forum to a range of perspectives and backgrou
 
 ### Office Hours
 
-We will have limited availability outside of our class time, and won’t keep scheduled “office hours.” Students should not expect us to immediately solve specific design or technical problems, or be blocked by this. Their first resource should be themselves, then <a :href="pkg.homepage">this course site</a> and its materials, and then each other.
+We will have limited availability outside of our class time, and won’t keep scheduled “office hours.” Students should not expect us to immediately solve specific design or technical problems, or have their progress be blocked by this. Their first resource should be themselves, then <a :href="pkg.homepage">our course site</a> and its materials, and then each other.
 
-That said: if there are still questions—particularly logistical or content ones—students can message us on <a :href="course.channel.slack">Slack</a>, and we will respond when we can. But this should never be a bottleneck; all of this works better when not done at the last minute.
+That said: if there are still questions—particularly logistical or content ones—students can message us on <a :href="course.channel.slack">Slack</a>, and we will respond when we can. But again this should never be a bottleneck; all of this works better when not done at the last minute.
 
 ### Additional Technical Help
 
-For more specific technical instruction and questions, Parsons has dedicated CD-program tutors available to help students with HTML, CSS, and JavaScript—as well as offering general design critiques and feedback. The drop-in schedules are available in the [CD@Parsons app](https://cdparsons.glideapp.io) under “Make & Remake.”
-
-<!-- TODO This link is busted? -->
+For more specific technical instruction and questions, Parsons has dedicated CD-program tutors available to help students with HTML, CSS, and JavaScript—as well as offering general design critiques and feedback. They should be available midway through Fall semester, and usually have drop-in schedules. More info will be provided as available.
 
 The University Learning Center also offers its own [tutoring sessions](https://www.newschool.edu/learning-center/); these are by-appointment.
 
-As tutors are only available a limited number of hours per week, it is advisable to start early on your projects and seek help along the way—to avoid the usual end of project/semester rush for additional help.
+As tutors are only available a limited number of hours per week, it is advisable to start early on your projects and seek help along the way—to avoid the usual end of project/semester rush for additional help.
 
 ### Code Plagiarism
 
 <!-- TODO Comment out/in code example, until we get there? -->
 
-Students may find code similar to our exercises or projects elsewhere online. But the copying or adapting of *any* code beyond our provided course material (lectures, exercises, demos) without attribution is not allowed under any circumstances.
+Students may find code similar to our exercises or projects elsewhere online. But the copying or adapting of *any* code beyond our provided course material (lectures, exercises, demos), without attribution, is not allowed under any circumstances. This *includes* from LLMs, [more below](#llms-and-artificial-intelligence).
 
-If adapting, with attribution, students must explain the usage and demonstrate an understanding of how it works. We have zero tolerance for any sort of plagiarism—which ranges from “verbatim copying” (copying-and-pasting) to “thorough paraphrasing” (changing names or rearranging) of code. Students should also review the [Academic Integrity Policy](https://docs.google.com/document/d/175hXxUbLI8Jy7NEtbeoyX3Va_MQzXzgxzFUjj7hSkSU).
+If adapting, with attribution, students must explain the usage and demonstrate an understanding of how the code works. We will have in-person code reviews to facilitate and guage this understanding.
+
+We have zero tolerance for any sort of plagiarism—which ranges from “verbatim copying” (copying-and-pasting) to “thorough paraphrasing” (changing names or rearranging) and “autocompleting” (with LLM-assisted editors). Students should also review the [Academic Integrity Policy](https://docs.google.com/document/d/175hXxUbLI8Jy7NEtbeoyX3Va_MQzXzgxzFUjj7hSkSU).
 
 <aside id="attribution">
 
-To expand on this: we are not saying you can’t incorporate other resources. If you make use of other tools, we should see [code](/topic/html/#comments) [comments](/topic/css/#element-preview) that explain *why* you used them, *what* you referenced, and your overall understanding of *how* it works.
+To expand on this: we are not saying you can’t learn from and incorporate other resources. We do! If you make use of other tools, we should see [code](/topic/html/#comments) [comments](/topic/css/#element-preview) that explain *why* you used them, *what* you referenced, and your overall understanding of *how* it works.
 
 </aside>
 
@@ -439,26 +437,27 @@ To expand on this: we are not saying you can’t incorporate other resources. If
 
 <aside>
 
-Copying and pasting code in the absence of an attribution and explanation is plagiarism.
+Copying, pasting, or autocompleting code in the absence of an attribution and explanation is plagiarism.
 
 </aside>
 
 ### LLM<span style="text-transform: initial">s</span> and “Artificial Intelligence”
 
-Relatedly, there has been a lot of discussion and developments in our field (and others) around [*large language models*](https://en.wikipedia.org/wiki/Large_language_model), a.k.a. “artificial intelligence.”
+Relatedly, there has been much discussion and developments in our field (and others) around [*large language models*](https://en.wikipedia.org/wiki/Large_language_model), a.k.a. “artificial intelligence.”
 
-Here’s what we’re going to say about this: tools like [Chat&NoBreak;GPT](https://openai.com/blog/chatgpt) or [GitHub Copilot](https://github.com/features/copilot) are known to often generate wrong or unnecessarily verbose code. This, combined with the fact that their results are derived from potentially copyrighted and/or legally questionable sources—usually without permission or attribution—means the use of these tools remains fraught, at best.
+Here’s what we’re going to say about this: tools like the conspicuous [Chat&NoBreak;GPT](https://openai.com/blog/chatgpt), [Cursor’s IDE](https://cursor.com/en), or [GitHub Copilot](https://github.com/features/copilot) are known to often generate wrong or unnecessarily verbose code. This, combined with the fact that their results are derived from copyrighted and/or legally questionable sources—usually without permission or attribution—means the use of these tools continues to be fraught, at best.
 
-We think you first need to write code yourself to understand the medium. Copying/adapting from Chat&NoBreak;GPT/Copilot is no different from anywhere else ([see above](#code-plagiarism)) and is ultimately a disservice to your education. These are to be treated like any other tools at our disposal—as *aides* to your understanding, not *shortcuts* around learning. We think you know the difference.
+We think you first need to write code yourself to understand the medium. Copying/adapting from Chat&NoBreak;GPT/Copilot is no different from anywhere else ([see above](#code-plagiarism)) and is ultimately a disservice to your education. These are always to be treated like any other tools at our disposal—as *aides* to your understanding, not *shortcuts* around learning. We think you know the difference.
 
 ### Recording Sessions
 
-We will take screen recordings of our sessions for students to reference later. As these will include the students and their work, the recordings will be stored on our <a :href="course.channel.google">Google Drive</a> and made available only to New School email users.
+We will take recordings of our sessions for students to reference later. As these will include the students and their work, the recordings will be stored on our <a :href="course.channel.google">Google Drive</a> and made available only to New School email users.
 
 ## Attendance, Grading, and Other Policies
 
-All CD classes adhere to the same [common program and university policies](https://docs.google.com/document/d/1Su2tPo8ZW-EUVQ8svhCEDHYyKi93ugLLB2h8gc86Eoc).
+All CD classes adhere to the same [common program and university policies](https://docs.google.com/document/d/1Su2tPo8ZW-EUVQ8svhCEDHYyKi93ugLLB2h8gc86Eoc).
+<!-- .pretty -->
 
 ## Acknowledgments
 
-We’d like to thank [Brendan Griffiths](https://brendangriffiths.com/), [Lynn Kiang](http://www.lynnkiang.com), [Andrew LeClair](https://andrewleclair.com), and the [extended MPS CD family](https://mpscd.parsons.edu/faculty/) for their support in planning this course. And thank you, for reading this far.
+We’d like to thank [Brendan Griffiths](https://brendangriffiths.com/), [Lynn Kiang](http://www.lynnkiang.com), [Andrew LeClair](https://andrewleclair.com), and the [extended MPS CD family](https://mpscd.parsons.edu/faculty/) for their support in the planning and running of this course. And thank you, for reading this far.

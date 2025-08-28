@@ -11,7 +11,7 @@
 	--alley:  2rcap;
 	--gutter: max(calc(var(--alley) / 2), calc((100vw - (var(--max) / var(--size--root)) * 1rem) / 2));
 
-	--disabled--opacity: 25%;
+	--disabled--opacity: 20%;
 	--disabled:          color-mix(in srgb, var(--color, currentcolor), transparent calc(100% - var(--disabled--opacity)));
 	--enlargement:       1rex;
 	--highlight:         color-mix(in srgb, var(--color, currentcolor), transparent 90%);
@@ -20,7 +20,7 @@
 
 	--color: black;
 
-	--note: color-mix(in srgb, var(--color, currentcolor), transparent 60%);
+	--note: color-mix(in srgb, var(--color, currentcolor), transparent 66%);
 
 	--background--root:   gainsboro;
 
