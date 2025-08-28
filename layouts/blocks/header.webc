@@ -89,7 +89,7 @@
 		:href="unit.some(unit => unit?.url) && `#${slugify(unit[0].data.unit)}`"
 	>
 		<p @html="`Unit Nº ${unit[0].data.unitNumber}: “${markdown(unit[0].data.unit)}”`"></p>
-		<p @text="`Weeks ${weekRange(unit[0].data.unitNumber)}`"></p>
+		<p @text="`Wks. ${weekRange(unit[0].data.unitNumber)}`"></p>
 	</a>
 	<a
 		webc:else
