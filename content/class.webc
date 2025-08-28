@@ -5,9 +5,7 @@
 </script>
 
 <style>
-	#shuffle {
-		grid-column: one / two;
-	}
+	#shuffle { grid-column: one / two }
 
 	#students {
 		column-gap:            var(--alley);

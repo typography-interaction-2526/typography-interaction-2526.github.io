@@ -90,18 +90,17 @@ summary {
 button,
 summary,
 a:where(:has(> cite)) {
+	--block:   1cap;
+	--inline:  1cap;
 	--leading: 1rlh;
 	--size:    0.85rem;
 	--weight:  700;
 
-	inline-size:          fit-content;
+	inline-size:         fit-content;
 	-webkit-user-select: none;
 	user-select:         none;
 
 	> :is(cite, p) {
-		--block:  1cap;
-		--inline: 1cap;
-
 		/* TODO Outline color is broken on `cite` with text. */
 
 		background-color:     var(--background);
@@ -112,15 +111,19 @@ a:where(:has(> cite)) {
 		margin-block:         calc(-1 * var(--block));
 		max-inline-size:      27rem; /* Half-ish. */
 		outline-color:        var(--color);
-		outline-offset:       calc(-1 * var(--stroke));
 		outline-offset:       round(down, calc(-1 * var(--stroke)), var(--rounding));
 		outline-style:        solid;
-		outline-width:        var(--stroke);
 		outline-width:        round(up, var(--stroke), var(--rounding));
 		padding-block:        var(--block);
 		padding-inline-end:   calc(var(--gap, 0rem) + var(--icon--width, 0rem) + var(--inline) - var(--right));
 		padding-inline-start: calc(var(--inline) - var(--left));
 		text-box:             trim-both cap alphabetic;
+	}
+
+	/* Otherwise collapses down; not sure why links don’t!  */
+	&:where(button) {
+		margin-block:  calc(-1 * var(--block));
+		padding-block: var(--block);
 	}
 
 	> cite {
