@@ -366,7 +366,7 @@ We will use the following tools to organize our class:
 
 ### Our Community
 
-This agreement is intended to help us create and maintain a safe, empathetic, and productive space for our course. It is build on trust and accumulated experience across cohorts. It can be revised and modified, with all of our input, over the year:
+This agreement is intended to help us create and maintain a safe, empathetic, and productive space for our course. It is built on trust and accumulated experience across cohorts. It can be revised and modified, with all of our input, over the year:
 
 - Classmates should use our [preferred names and pronouns](/class).
 

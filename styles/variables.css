@@ -20,7 +20,7 @@
 
 	--color: black;
 
-	--note: color-mix(in srgb, var(--color, currentcolor), transparent 66%);
+	--note: color-mix(in srgb, var(--color, currentcolor), transparent 50%);
 
 	--background--root:   gainsboro;
 
