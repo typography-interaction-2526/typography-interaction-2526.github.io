@@ -162,8 +162,6 @@ main {
 			border-block-start: 1rcap solid transparent;
 		}
 
-		td:first-child { text-transform: uppercase }
-
 		td:last-child { text-align: end } /* Ersatz tabular numbers. */
 	}
 
@@ -183,8 +181,6 @@ main {
 
 		margin-block-start:        calc(1rcap - 1cap); /* Back on baseline. */
 		-webkit-text-stroke-width: 0.01em; /* Match to body copy. */
-		text-transform:            uppercase;
-		text-wrap:                 balance;
 
 		&:not(:where(:first-child)) { margin-block-start: 1rlh }
 

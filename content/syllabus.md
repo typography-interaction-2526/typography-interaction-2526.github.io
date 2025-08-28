@@ -6,7 +6,7 @@
 
 ## Course Description
 
-<em style="margin-inline-start: -0.2em">Typography & Interaction</em> is a year-long course, divided into two classes, which will provide a rigorous foundation of typographic and interaction principles in the context of digital design. Over both classes, students will acquire and hone the skills they need for success in the field of interactive design.
+*Typography & Interaction* is a year-long course, divided into two classes, which will provide a rigorous foundation of typographic and interaction principles in the context of digital design. Over both classes, students will acquire and hone the skills they need for success in the field of interactive design.
 <!-- .intro -->
 
 ### Fall <!-- .fall -->
@@ -84,7 +84,7 @@ By the end of this semester, students will:
 The course is structured into thematic units, each bookended by readings on the subject and a project that will demonstrate the material:
 <!-- .intro -->
 
-### Unit 1: Type and the Web <!-- .fall -->
+### Unit Nº 1: *Type and the Web* <!-- .fall -->
 
 #### Weeks 1–6
 
@@ -108,16 +108,17 @@ We will focus on reviewing the core principles of typography, and introduce the 
 - [<cite>A Handmade Web</cite>](http://luckysoap.com/statements/handmadeweb.html)
 	J.R. Carpenter, 2015
 
-#### Project 1: Manuscript
+#### Project Nº 1: *Manuscript*
 
- The unit ends with Project 1, *Manuscript*, which students will present on October 3.
+The unit ends with Project 1, *Manuscript*, which students will present on October 3.
+<!-- .pretty -->
 
 Students will choose a seminal design text from [readings.design](https://readings.design), read and respond to it, and typeset their selection and reply together as a web page. Other texts are also allowed on a case-by-case basis.
 
 We’ll be looking for the quality of responses, appropriate type selection and hierarchy, semantic HTML, and basic CSS.
 <!-- .note -->
 
-### Unit 2: There Is No Perfect Layout <!-- .fall -->
+### Unit Nº 2: *There Is No Perfect Layout* <!-- .fall -->
 
 #### Weeks 7–10
 
@@ -140,20 +141,21 @@ Students will learn how to design and implement more complex, flexible layouts, 
 - [<cite>The Diminishing Marginal Value of Aesthetics</cite>](https://subpixel.space/entries/diminishing-marginal-aesthetic-value/)
 	Toby Shorin, 2017
 
-#### Project 2: Spread
+#### Project Nº 2: *Spread*
 
 This unit concludes with Project 2, *Spread*, which students will present on October 31.
+<!-- .pretty -->
 
 Students will work in pairs, with a new text from those selected by the class in *Manuscript*. Each duo will sketch collaboratively and then implement a new expression together, via pair programming. The final web page will be responsive for mobile, desktop, and print layouts.
 
 Here we’re looking for successful design and development collaboration, box-model layout design, and use of responsive media queries.
 <!-- .note -->
 
-### Unit 3: Typography as Interface <!-- .fall -->
+### Unit Nº 3: *Typography as Interface* <!-- .fall -->
 
 #### Weeks 11–15
 
-In our final unit, we will focus on creating advanced, multi-page layouts with grid systems, prototyping their flows, and exploring typography’s usage as interface elements for navigating a website.
+In our final Fall unit, we will focus on creating advanced, multi-page layouts with grid systems, prototyping their flows, and exploring typography’s usage as interface elements for navigating a website.
 
 #### Readings
 
@@ -172,16 +174,17 @@ In our final unit, we will focus on creating advanced, multi-page layouts with g
 - [<cite>My website is a shifting house next to a river of knowledge. What could yours be?</cite>](https://thecreativeindependent.com/essays/laurel-schwulst-my-website-is-a-shifting-house-next-to-a-river-of-knowledge-what-could-yours-be/)
 	Laurel Schwulst, 2018
 
-#### Project 3: Binding
+#### Project Nº 3: *Binding*
 
 This unit, and the first semester, will culminate with Project 3, *Binding*, which will be presented in class on December 5.
+<!-- .pretty -->
 
 Students will assemble a collection of texts from *Spread*, combined with their original selection, into a “book.” The book will be a multi-page website with a homepage (cover), navigation (table of contents), individual pages for each text, and an introduction (colophon)—with consistent styles applied across all pages.
 
 We want to see effective multi-page design and navigation, advanced layouts (flexbox, grid), consistency across the pages and content, and polish/nuance.
 <!-- .note -->
 
-### Unit 4: Interface as Interface <!-- .spring inert -->
+### Unit Nº 4: *Interface as Interface* <!-- .spring inert -->
 
 #### Weeks 16–21
 
@@ -204,16 +207,17 @@ We will expand on our first-semester foundations in design, typography, HTML, an
 - [<cite>Folk Interfaces</cite>](https://maggieappleton.com/folk-interfaces)
 	Maggie Appleton, 2022
 
-#### Project 4: Links
+#### Project Nº 4: *Links*
 
 The unit ends with Project 4, *Links*, which students will present on February 26.
+<!-- .pretty -->
 
 Students will collaboratively assemble, connect, and present a collection using [Are.na](https://www.are.na) as a platform/CMS—designing and building an interface to explore and understand it.
 
 In addition to our previous project requirements, here we’ll be looking for the effective use of images/media, meaningful interactive interface functionality, and your use of JavaScript.
 <!-- .note -->
 
-### Unit 5: If All You Have Is a Hammer, Everything Looks Like a Nail <!-- .spring inert -->
+### Unit Nº 5: *If All You Have Is a Hammer, Everything Looks Like a Nail* <!-- .spring inert -->
 
 #### Weeks 22–30
 
@@ -273,9 +277,10 @@ To wrap up the semester (and course), we’ll round out our knowledge of the web
 - [<cite>Fluent 2 Design System</cite>](https://www.microsoft.com/design/fluent/)
 	Microsoft, 2023 (*ongoing*)
 
-#### Project 5: Functions
+#### Project Nº 5: *Functions*
 
 This unit, and the course, will culminate with Project 5, *Functions*, which will be presented in class on April 23.
+<!-- .pretty -->
 
 Students will identify a problem and conceptualize how to solve it on the web. They will plan, design, and implement a novel solution towards this problem—incorporating data and interaction with the tools, technologies, and techniques they’ve learned in this course.
 
@@ -310,24 +315,24 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 
 ### Fall <!-- .fall -->
 
-|                          |     |
-| ------------------------ | --- |
-| Engagement               | 20% |
-| Reading Responses        | 10% |
-| Exercises and Milestones | 10% |
-| Project 1: Manuscript    | 10% |
-| Project 2: Spread        | 20% |
-| Project 3: Binding       | 30% |
+|                            |     |
+| -------------------------- | --- |
+| Engagement                 | 20% |
+| Reading Responses          | 10% |
+| Exercises and Milestones   | 10% |
+| Project Nº 1: *Manuscript* | 10% |
+| Project Nº 2: *Spread*     | 20% |
+| Project Nº 3: *Binding*    | 30% |
 
 ### Spring <!-- .spring inert -->
 
-|                          |     |
-| ------------------------ | --- |
-| Engagement               | 20% |
-| Reading Responses        | 10% |
-| Exercises and Milestones | 10% |
-| Project 4: Links         | 20% |
-| Project 5: Functions     | 40% |
+|                            |     |
+| -------------------------- | --- |
+| Engagement                 | 20% |
+| Reading Responses          | 10% |
+| Exercises and Milestones   | 10% |
+| Project Nº 4: *Links*      | 20% |
+| Project Nº 5: *Functions*  | 40% |
 
 ## Materials and Supplies
 

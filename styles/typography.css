@@ -17,9 +17,20 @@ th {
 }
 
 /* Headings. */
-h1, h2, h3, h4, hgroup, cite {
+h1, h2, h3, h4, hgroup, cite, td:first-child, .intro {
 	text-transform: uppercase;
 	text-wrap:      balance;
+
+	/* No-itals-in-caps “rule.” */
+	em {
+		padding: initial;
+
+		&::before { content: '“' }
+		&::after { content: '”' }
+
+		/* Negates the `skew`. */
+		span { display: contents }
+	}
 }
 
 h5, h6 { display: none }
