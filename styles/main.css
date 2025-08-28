@@ -1,12 +1,12 @@
 main {
-	align-items:    start;
-	column-gap:     var(--alley);
-	display:        grid;
+	align-items:         baseline;
+	column-gap:          var(--alley);
+	display:             grid;
+	grid-auto-rows:      min-content;
 	grid-template-columns:
-		[ all-start aside-start body-start center-start five-start four-start left-start one-start recto-start right-start six-start three-start two-start verso-start ]
+		[ all-start aside-start body-start center-start five-start four-start intro-start left-start one-start recto-start right-start six-start three-start two-start verso-start ]
 		minmax(0, 1fr)
-		[ all-end aside-end body-end center-end five-end four-end left-end one-end recto-end right-end six-end three-end two-end verso-end ];
-	grid-template-rows:  min-content 1fr; /* Fill last row (next to `.right`) */
+		[ all-end aside-end body-end center-end five-end four-end intro-end left-end one-end recto-end right-end six-end three-end two-end verso-end ];
 	padding-block-end:   calc(2 * min(var(--alley), calc(2 * var(--gutter))));
 	padding-block-start: min(var(--alley), calc(2 * var(--gutter)));
 	padding-inline:      var(--gutter);
@@ -176,6 +176,20 @@ main {
 		*[inert] { opacity: inherit } /* Section-nesting adds a dupe. */
 	}
 
+	:where(.intro) {
+		--leading: 1rlh;
+		--size:    var(--size--h3);
+		--weight:  500;
+
+		margin-block-start:        calc(1rcap - 1cap); /* Back on baseline. */
+		text-transform:            uppercase;
+		text-wrap:                 balance;
+
+		+ * { margin-block-start: 2rlh }
+
+		/* TODO `aria-label` instead? */
+	}
+
 	/* Manual column placements. */
 	:where(.all, .aside, .body, .center, .five, .four, .left, .one, .recto, .right, .six, .three, .two, .verso) {
 		display:               grid;
@@ -191,6 +205,7 @@ main {
 	.center { grid-column: center }
 	.five   { grid-column: five }
 	.four   { grid-column: four }
+	.intro  { grid-column: intro }
 	.left   { grid-column: left }
 	.one    { grid-column: one }
 	.recto  { grid-column: recto }
@@ -223,7 +238,7 @@ main {
 	/* The actual columns. */
 	@media (orientation: landscape) and (width >= 35em), (width >= 60em) {
 		grid-template-columns:
-			[ all-start body-start left-start one-start verso-start ]
+			[ all-start body-start intro-start left-start one-start verso-start ]
 			minmax(0, 1fr)
 			[ aside-start one-end two-start]
 			minmax(0, 1fr)
@@ -233,7 +248,7 @@ main {
 			minmax(0, 1fr)
 			[ body-end center-end five-start four-end right-start ]
 			minmax(0, 1fr)
-			[aside-end five-end six-start]
+			[aside-end intro-end five-end six-start]
 			minmax(0, 1fr)
 			[ all-end recto-end right-end six-end];
 	}
