@@ -151,7 +151,7 @@ a:where(:has(> cite)) {
 	/* TODO Other link types? Draw some Gorton glyphs. */
 }
 
-:is(li, p):where(:has(> a > cite)) {
+:is(li, p:only-child):where(:has(> a > cite)) {
 	margin-block-start: calc(1rcap - 1cap); /* Back on baseline. */
 
 	> :where(a:has(> cite)) { inline-size: initial } /* To the grid. */
