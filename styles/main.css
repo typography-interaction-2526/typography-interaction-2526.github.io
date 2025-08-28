@@ -15,17 +15,16 @@ main {
 	/* Space above anchor destination. */
 	[id] { scroll-margin-block: 2cap }
 
-	* { grid-column: body } /* Default to body width. */
-
 	h1 { display: none } /* Don’t you dare. */
 
 	/* Headings. */
 	hgroup {
+		grid-column: all;
+
 		&:has(> h2) {
 			--size:   var(--size--h2);
 			--weight: 500;
 
-			grid-column:      all;
 			margin-block-end: 2rlh;
 		}
 
@@ -52,16 +51,23 @@ main {
 		> a { display: none }
 	}
 
+	/* Default to body width. */
+	:where(&, section) > * { grid-column: body }
+
 	/* Containers. */
 	dl,
 	ol,
 	section,
 	ul {
-		align-items:           inherit;
-		display:               grid;
+		align-items: inherit;
+		display:     grid;
+		row-gap:     inherit;
+	}
+
+	/* Subgridded `section`. */
+	section {
 		grid-column:           all;
 		grid-template-columns: subgrid;
-		row-gap:               inherit;
 	}
 
 	section:where(:not(:first-child)) {
@@ -233,9 +239,8 @@ main {
 
 	/* Manual column placements. */
 	:where(.all, .aside, .body, .center, .five, .four, .left, .one, .recto, .right, .six, .three, .two, .verso) {
-		display:               grid;
-		grid-row:              span var(--rows, 1);
-		grid-template-columns: subgrid;
+		display:  grid;
+		grid-row: span var(--rows, 1);
 
 		/* TODO These need space above/below on mobile. */
 	}
