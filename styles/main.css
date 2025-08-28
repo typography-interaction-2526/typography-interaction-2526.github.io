@@ -179,9 +179,10 @@ main {
 	:where(.intro) {
 		--leading: 1rlh;
 		--size:    var(--size--h3);
-		--weight:  500;
+		--weight:  300;
 
 		margin-block-start:        calc(1rcap - 1cap); /* Back on baseline. */
+		-webkit-text-stroke-width: 0.01em; /* Match to body copy. */
 		text-transform:            uppercase;
 		text-wrap:                 balance;
 
