@@ -165,6 +165,28 @@ main {
 		td:last-child { text-align: end } /* Ersatz tabular numbers. */
 	}
 
+	hr {
+		--size:   var(--size--h1);
+		--weight: 400;
+
+		block-size:         1rcap; /* Keep on baseline. */
+		grid-column:        all;
+		margin-block-end:   1rlh;
+		margin-block-start: 2rlh;
+		position:           relative;
+
+		&::after {
+			background-color: var(--color);
+			block-size:       var(--stroke);
+			border-radius:    var(--stroke);
+			content:          '';
+			display:          block;
+			inset-block-end:  calc(-1 * var(--stroke) / 2);
+			inset-inline:     calc(-1 * var(--stroke) / 2);
+			position:         absolute;
+		}
+	}
+
 	/* Dim inert stuff. */
 	*[inert] {
 		--note: var(--color); /* Don’t double-fade. */
