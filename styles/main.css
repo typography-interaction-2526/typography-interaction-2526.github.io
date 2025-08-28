@@ -166,8 +166,8 @@ main {
 	}
 
 	hr {
-		--size:   var(--size--h1);
-		--weight: 400;
+		--size:   var(--size--h2);
+		--weight: 500;
 
 		block-size:         1rcap; /* Keep on baseline. */
 		grid-column:        all;
