@@ -78,10 +78,47 @@ summary {
 	transition-property:        background-color, opacity;
 	transition-timing-function: linear;
 
+	/* TODO Fix this with opacity `color-mix`! */
+
 	/* Use background for active highlight, as it might wrap. */
 	&::after { content: initial }
 
 	&:active { background-color: var(--highlight) }
+}
+
+button,
+summary,
+:where(a:has(> cite)) {
+	--leading: 1rlh;
+	--size:    0.85rem;
+	--weight:  700;
+
+	-webkit-user-select: none;
+	user-select:         none;
+
+	> :is(cite, p) {
+		--block:  1cap;
+		--gap:    2cap;
+		--inline: 1cap;
+
+		background-color:     var(--color);
+		border-radius:        var(--stroke);
+		color:                var(--background);
+		display:              block;
+		letter-spacing:       0.05em;
+		margin-block:         calc(-1 * var(--block));
+		max-inline-size:      27rem; /* Half-ish. */
+		outline-color:        var(--color);
+		outline-offset:       calc(-1 * var(--stroke));
+		outline-offset:       round(down, calc(-1 * var(--stroke)), var(--rounding));
+		outline-style:        solid;
+		outline-width:        var(--stroke);
+		outline-width:        round(up, var(--stroke), var(--rounding));
+		padding-block:        var(--block);
+		padding-inline-end:   calc(var(--gap) + var(--arrow) + var(--inline) - var(--right));
+		padding-inline-start: calc(var(--inline));
+		text-box:             trim-both cap alphabetic;
+	}
 }
 
 /* Our “tag” style. */
@@ -93,33 +130,10 @@ summary {
 	margin-block-start: calc(1rcap - 1cap); /* Back on baseline. */
 
 	> :where(a:has(> cite)) {
-		--weight:  700;
-
-		/* TODO Abstract some of this out for `button`! */
 		> cite {
 			--arrow:  0.85em;
-			--block:  1cap;
-			--gap:    2cap;
-			--inline: 1cap;
 
-			background-color:     var(--color);
-			border-radius:        var(--stroke);
-			color:                var(--background);
-			display:              block;
-			letter-spacing:       0.05em;
-			margin-block:         calc(-1 * var(--block));
-			max-inline-size:      27rem; /* Half-ish. */
-			outline-color:        var(--color);
-			outline-offset:       calc(-1 * var(--stroke));
-			outline-offset:       round(down, calc(-1 * var(--stroke)), var(--rounding));
-			outline-style:        solid;
-			outline-width:        var(--stroke);
-			outline-width:        round(up, var(--stroke), var(--rounding));
-			padding-block:        var(--block);
-			padding-inline-end:   calc(var(--gap) + var(--arrow) + var(--inline) - var(--right));
-			padding-inline-start: calc(var(--inline));
-			position:             relative;
-			text-box:             trim-both cap alphabetic;
+			position: relative;
 
 			&::after {
 				content:           var(--icon, ' →');

@@ -17,7 +17,7 @@ th {
 }
 
 /* Headings. */
-h1, h2, h3, h4, hgroup, cite, td:first-child, .intro {
+h1, h2, h3, h4, hgroup, cite, td:first-child, button, summary, .intro {
 	text-transform: uppercase;
 	text-wrap:      balance;
 
