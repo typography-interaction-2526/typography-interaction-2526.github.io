@@ -11,4 +11,13 @@ export default [
 	{ first: 'Maika',    github: '' },
 	{ first: 'Riya',     github: '' },
 	{ first: 'Zarah',    github: '' },
+	{ first: 'Noor',     github: '' },
+	{ first: 'Evgenii',  github: '' },
+	{ first: 'Carson',   github: '' },
+	{ first: 'Katie',    github: '' },
+	{ first: 'Ali',      github: '' },
+	{ first: 'Kimaya',   github: '' },
+	{ first: 'Trent',    github: '' },
+	{ first: 'Mia',      github: '' },
+	{ first: 'Lucy',     github: '' },
 ]
