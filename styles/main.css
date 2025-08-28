@@ -12,7 +12,8 @@ main {
 	padding-inline:      var(--gutter);
 	row-gap:             3rcap;
 
-	/* TODO Scroll margin on ID. */
+	/* Space above anchor destination. */
+	[id] { scroll-margin-block: 2cap }
 
 	* { grid-column: body } /* Default to body width. */
 
