@@ -44,5 +44,7 @@ em {
 	}
 }
 
-.balance { text-wrap: balance }
+.balance      { text-wrap: balance }
+.caps         { text-transform: uppercase }
 .nowrap, nobr { text-wrap: nowrap }
+.pretty       { text-wrap: pretty }
