@@ -105,14 +105,14 @@ main {
 
 
 		/* Not “tag” lists. */
-		&:where(:not(:has(li > a > cite, li > p:only-child > a > cite))) {
+		&:where(:not(:has(> li > a > cite, > li > p:only-child > a > cite))) {
 			/* TODO There has to be a simpler way to check for these! */
 
 			/* Item inset. */
-			:where(dd, dt, li) { padding-inline-start: 2cap }
+			> :where(dd, dt, li) { padding-inline-start: 2cap }
 
 			/* ”Markers.” */
-			:where(dt, li) {
+			> :where(dt, li) {
 				position: relative;
 
 				&::before {
@@ -126,14 +126,14 @@ main {
 		&:where(:has(:where(dt, li) > p:not(:only-child))) {
 			row-gap: 5rcap;
 
-			:where(dt, li):where(:has(p:not(:only-child))) {
+			> :where(dt, li):where(:has(p:not(:only-child))) {
 				display: grid;
 				row-gap: 3rcap; /* Back to `main` spacing. */
 			}
 		}
 	}
 
-	:is(dl, ul:where(:not(:has(li > a > cite, li > p:only-child > a > cite)))) {
+	:is(dl, ul:where(:not(:has(> li > a > cite, > li > p:only-child > a > cite)))) {
 		margin-inline-start: 1cap;
 
 		> :where(dt, li)::before {
