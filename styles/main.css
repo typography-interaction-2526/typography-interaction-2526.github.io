@@ -98,26 +98,32 @@ main {
 	}
 
 	/* Lists, lists, lists. */
-	:is(dl, ol, ul:where(:not(:has(a > cite)))) {
+	:is(dl, ol, ul) {
 		margin-block-start: 1lh;
 
 		&:where(:not(:last-child)) { margin-block-end: 1lh }
 
-		/* Item inset. */
-		:where(dd, dt, li) { padding-inline-start: 2cap }
 
-		/* ”Markers.” */
-		:where(dt, li) {
-			position: relative;
+		/* Not “tag” lists. */
+		&:where(:not(:has(li > a > cite, li > p:only-child > a > cite))) {
+			/* TODO There has to be a simpler way to check for these! */
 
-			&::before {
-				position: absolute;
-				text-box: trim-both cap alphabetic;
+			/* Item inset. */
+			:where(dd, dt, li) { padding-inline-start: 2cap }
+
+			/* ”Markers.” */
+			:where(dt, li) {
+				position: relative;
+
+				&::before {
+					position: absolute;
+					text-box: trim-both cap alphabetic;
+				}
 			}
 		}
 	}
 
-	:is(dl, ul:where(:not(:has(a > cite)))) {
+	:is(dl, ul:where(:not(:has(li > a > cite, li > p:only-child > a > cite)))) {
 		margin-inline-start: 1cap;
 
 		> :where(dt, li)::before {
@@ -145,10 +151,8 @@ main {
 	}
 
 	/* Link lists with our “tag” style. */
-	ul:where(:has(a > cite)) {
+	ul:where(:has(li > a > cite, li > p:only-child > a > cite)) {
 		grid-template-columns: minmax(auto, max-content);
-
-		:where(li) { grid-column: initial }
 	}
 
 	/* TODO Longer text after blows up the common width of these! */
