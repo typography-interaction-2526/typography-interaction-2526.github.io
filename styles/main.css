@@ -121,6 +121,16 @@ main {
 				}
 			}
 		}
+
+		/* More vertical space when the items have multiple paragraphs. */
+		&:where(:has(:where(dt, li) > p:not(:only-child))) {
+			row-gap: 5rcap;
+
+			:where(dt, li):where(:has(p:not(:only-child))) {
+				display: grid;
+				row-gap: 3rcap; /* Back to `main` spacing. */
+			}
+		}
 	}
 
 	:is(dl, ul:where(:not(:has(li > a > cite, li > p:only-child > a > cite)))) {
@@ -155,12 +165,13 @@ main {
 		grid-template-columns: minmax(auto, max-content);
 	}
 
-	/* TODO Longer text after blows up the common width of these! */
+	/* TODO Longer text-after-cite blows up the common width of these! */
 
 	*:where(:not(li)) > p:where(:has(a > cite)) { justify-self: start }
 
 	/* More space above these when they aren’t manually in-columns. */
-	ul, *:where(:not(li)) > p {
+	ul,
+	*:where(:not(li)) > p {
 		&:where(:has(a > cite):not([class])) {margin-block-start: 1rlh }
 	}
 
