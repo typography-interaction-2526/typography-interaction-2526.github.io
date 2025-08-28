@@ -16,5 +16,5 @@ export default {
 		fall: '',
 		spring: '',
 	},
-	term: '’25–26',
+	terms: '’25–26',
 }
