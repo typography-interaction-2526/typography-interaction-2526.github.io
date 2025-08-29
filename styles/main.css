@@ -58,6 +58,7 @@ main {
 	:where(&, section) > * { grid-column: body }
 
 	/* Containers. */
+	div,
 	dl,
 	ol,
 	section,
@@ -405,13 +406,27 @@ main {
 		/* TODO These need space above/below on mobile. */
 	}
 
+	/* TODO Organize these! */
+	.start  { align-self: start }
+	.stack  { figure { margin: initial } }
+
+	*:has(> .sticky) {
+		align-self: stretch;
+
+		.sticky {
+			inset-block-start: 5rlh;
+			position:          sticky;
+		}
+	}
+
+	.intro  { grid-column: intro } /* Up top to be cascaded over. */
+
 	.all    { grid-column: all }
 	.aside  { grid-column: aside }
 	.body   { grid-column: body }
 	.center { grid-column: center }
 	.five   { grid-column: five }
 	.four   { grid-column: four }
-	.intro  { grid-column: intro }
 	.left   { grid-column: left }
 	.one    { grid-column: one }
 	.recto  { grid-column: recto }

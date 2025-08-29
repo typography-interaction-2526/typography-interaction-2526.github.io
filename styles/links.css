@@ -46,7 +46,7 @@ summary {
 }
 
 /* Inline links. */
-:where(dd, dt, p, td, th, main li:not(:has(ol, p, section, ul))) a:where(:not(:has(cite))) {
+:where(dd, dt, figcaption, p, td, th, main li:not(:has(ol, p, section, ul))) a:where(:not(:has(cite))) {
 	/* Rounded caps. */
 	--underline--cap: radial-gradient(circle closest-side at center, currentcolor calc(100% - 0.5px), transparent);
 	--underline--cap--inset: calc(var(--enlargement) - var(--stroke) / 2);

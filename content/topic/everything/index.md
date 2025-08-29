@@ -165,7 +165,7 @@ By 1991, the [first web page](http://info.cern.ch/hypertext/WWW/TheProject.html)
 </figure>
 
 <figure
-	@caption="Netscape, the first browser that I ever used."
+	@caption="Netscape, the first browser that Michael ever used."
 	@citation="https://commons.wikimedia.org/wiki/File:Netscape_Navigator_3_Screenshot.png"
 	@source="netscape.png"
 	>
@@ -225,8 +225,21 @@ Its universality is essential: the fact that a hypertext link can point to anyth
 ## So What Are Web Pages?
 
 Obviously, *this* is a web page. Think about how many other web pages you have visited in the past day. Dozens, even hundreds?
+<!-- .intro -->
 
-<div class="right stack add-before--3" style="--rows: 5">
+<div>
+
+<div class="sticky">
+
+Ultimately, a web page is a just text file on a computer. It is written in a special format, the aforementioned HTML, which structures the content of the document and also links it to other resources—other web pages, images, computers, really almost anything. Think of the web as *type with instructions*.
+
+These all started as simple, hand-typed documents. Then as the power of computers grew, and the languages of the web evolved alongside—web pages expanded almost inconceivably in complexity and capabilities. *Cascading Style Sheets* (CSS) gave them marvelous abilities to be customized and designed. *JavaScript* (JS) gave them remarkable, newfound interactivity and function. Websites (collections of web pages) today are built on top of an incredible *stack* of technology—networks, servers, databases, libraries, browsers, devices.
+
+</div>
+
+</div>
+
+<div class="right start stack" style="margin-block-start: 2rlh; row-gap: 1rlh">
 
 <figure @source="org.png"></figure>
 
@@ -235,18 +248,15 @@ Obviously, *this* is a web page. Think about how many other web pages you have v
 <figure @source="kiosk.png"></figure>
 
 <figure
-	@caption="Michael used to work at MoMA. These are all web pages."
+	@caption="Michael used to work at MoMA. These are all web pages!"
 	@source="turner.jpg"
 	>
 </figure>
 
 </div>
 
-Ultimately, a web page is a just text file on a computer. It is written in a special format, the aforementioned HTML, which structures the content of the document and also links it to other resources—other web pages, images, computers, really almost anything. Think of the web as *type with instructions*.
-
-These all started as simple, hand-typed documents. Then as the power of computers grew, and the languages of the web evolved alongside—web pages expanded almost inconceivably in complexity and capabilities. *Cascading Style Sheets* (CSS) gave them marvelous abilities to be customized and designed. *JavaScript* (JS) gave them remarkable, newfound interactivity and function. Websites (collections of web pages) today are built on top of an incredible *stack* of technology—networks, servers, databases, libraries, browsers, devices.
-
 It all starts with text, and thus, with type.
+<!-- .intro .body -->
 
 ## An Ever-Present Visual Medium
 
@@ -277,16 +287,19 @@ That’s not what we think design is. It’s not just what it looks like and fee
 	>
 </figure>
 
-All these desktop “apps” are built in [Electron](https://www.electronjs.org)—and so are really just web pages inside a slim, platform-native wrapper. (Essentially, a single-website browser.)
+All these desktop “apps” are built in [Electron](https://www.electronjs.org)—and so are really just web pages inside a slim, platform-native wrapper. (Essentially, a single-website browser!)
+<!-- .balance -->
 
-The core application only has to be written once, instead of rewritten for each platform. And why design it all again? (Designers are expensive!) Why hire Windows and Mac devs when you can just hire web devs? …then why hire i&NoBreak;OS or Android devs, either? (Developers are even more expensive!) So many companies take approach, for cross-platform development.
+The core application only has to be written once, instead of rewritten for each platform. And why design it all again? (Designers are expensive!) Why hire Windows and Mac devs when you can just hire web devs? …then why hire i&NoBreak;OS or Android devs, either? (Developers are even more expensive!) So many companies take approach, for cross-platform development.
+<!-- .balance -->
 
 <figure
 	@caption="These mobile “apps” are all built with [React Native](https://reactnative.dev), following a similar paradigm."
 	@source="mobile.png">
 </figure>
 
- The app is really just a *web view* (browser), and every screen within is a *web page*.
+The app is really just a *web view* (browser), and every screen within is a *web page*.
+<!-- .balance -->
 
 ### It’s Increasingly Just JS, Behind the Scenes
 
@@ -298,17 +311,19 @@ This “JavaScript everywhere” movement means that the tendrils of the web can
 
 <aside>
 
-Even this course site is (mostly) static HTML and CSS—but it is compiled [using JavaScript](https://www.11ty.dev)!
+<mark>Only resort to JS when necessary</mark>
+
+Even this very course site is (mostly) static HTML and CSS—but it is compiled [using JavaScript](https://www.11ty.dev)!
 
 </aside>
 
 ### Even Things That Aren’t Web Pages Are Web-Page-Like
 
-In the coming weeks we are going to dive properly into HTML, CSS, and JS–the *fabric* of web pages.
+In the coming year we are going to dive properly into HTML, CSS, and JS–the *fabric* of web pages.
 
 Let’s try to also think of these—more conceptually and semantically—as *content*, *form*, and *function*. (Or in another way, *skeleton*, *skin*, and *muscles.*) This ordering or *layering* of responsibilities is often called *progressive enhancement*. The semantic content (HTML) forms the foundation on which you can layer the form (CSS) and functionality (JS).
 
-With this understanding, the same model exists in nearly all software. (For example, [*Resources*, *Views*, and *States*](https://developer.apple.com/tutorials/app-dev-training/#swiftui-essentials) in Mac/i&NoBreak;OS development, though the lines are being blurred.) So we can say that software that hasn’t yet been eaten by web technologies is often still *web-like*. And the web is likely coming for them, eventually.
+With this understanding, the same model exists in nearly all software. (For example, [*Resources*, *Views*, and *States*](https://developer.apple.com/tutorials/app-dev-training/#swiftui-essentials) in Mac/i&NoBreak;OS development, though the lines are being blurred.) So we can say that software that hasn’t yet been eaten by web technologies is often still *web-like*. And the web is likely coming for them, eventually.
 
 ## Our Lens
 
