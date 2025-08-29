@@ -175,6 +175,18 @@ main {
 		&:where(:has(a > cite):not([class])) {margin-block-start: 1rlh }
 	}
 
+	/* TODO More structure here! */
+	details[open]::details-content {
+		--size:   var(--size--h2);
+		--weight: 500;
+
+		display:            grid;
+		margin-block-start: 2rlh;
+		row-gap:            inherit;
+
+		> p { margin-block-start: calc(1cap - 1rcap) }
+	}
+
 	/* Tables for the grade breakdown. */
 	table {
 		inline-size: fit-content;

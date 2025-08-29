@@ -9,7 +9,9 @@
 ### When Was the Internet Invented?
 
 <details>
-	<summary>1969 or 1989?</summary>
+	<summary>
+		<p>1969 or 1989?</p>
+	</summary>
 
 1969!
 
@@ -97,8 +99,10 @@ In 1974, Robert Kahn and Vinton Cerf (two ARPA scientists) developed the *Transm
 
 ### When Was the Web Invented?
 
-<details>
-	<summary>1969 or 1989?</summary>
+<details open>
+	<summary>
+		<p>1969 or 1989?</p>
+	</summary>
 
 1989!
 
