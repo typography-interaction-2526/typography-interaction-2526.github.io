@@ -99,7 +99,7 @@ In 1974, Robert Kahn and Vinton Cerf (two ARPA scientists) developed the *Transm
 
 ### When Was the Web Invented?
 
-<details open>
+<details>
 	<summary>
 		<p>1969 or 1989?</p>
 	</summary>
