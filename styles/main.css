@@ -208,19 +208,37 @@ main {
 
 	/* TODO Move this to component? (And flatten that into native/Markdown?) */
 	figure {
-		align-items: start;
-		display:     grid;
-		grid-column: all;
-		position:    relative;
-		row-gap:     1rlh;
+		align-items:           start;
+		display:               grid;
+		grid-column:           all;
+		grid-template-columns: minmax(auto, max-content);
+		position:              relative;
+		row-gap:               1rlh;
 
 		&:not(:first-child) { margin-block-start: 2rlh }
 		&:not(:last-child)  { margin-block-end:   2rlh }
 
-		> figcaption { margin-block-end: calc(1rlh - 1rcap) }
+		> figcaption {
+			align-items:      baseline;
+			display:          flex;
+			gap:              3rcap;
+			justify-content:  space-between;
+			margin-block-end: calc(1rlh - 1rcap);
+			max-inline-size:  initial; /* Go to `img` edge. */
 
-		/* TODO Come back here! */
-		> cite { display: none }
+			/* TODO Move/consolidate this with `links` one! */
+			> a {
+				--block: 1ex;
+
+				cite {
+					--icon:        '→';
+					--gap:         initial;
+					--icon--width: initial;
+
+					&::after { position: initial }
+				}
+			}
+		}
 
 		img,
 		object,

@@ -119,7 +119,7 @@ a:where(:has(> cite)) {
 	}
 
 	/* Otherwise collapses down; not sure why links don’t!  */
-	&:where(button) {
+	&:where(a, button) {
 		margin-block:  calc(-1 * var(--block));
 		padding-block: var(--block);
 	}
