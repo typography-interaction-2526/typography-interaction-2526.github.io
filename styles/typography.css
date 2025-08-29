@@ -18,7 +18,18 @@ th {
 }
 
 /* “Headings.” */
-h1, h2, h3, h4, hgroup, cite, td:first-child, button, summary, .intro, aside {
+h1,
+h2,
+h3,
+h4,
+hgroup,
+cite,
+td:first-child,
+button,
+summary,
+.intro,
+aside,
+blockquote {
 	text-transform: uppercase;
 	text-wrap:      balance;
 
