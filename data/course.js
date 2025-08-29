@@ -14,8 +14,8 @@ export default {
 	},
 	logistics:
 		`The New School, Parsons, MPS CD
-		PMCD 5001, CRN 4253/9023 • PMCD 5002, CRN 3992/9589
-		65 West 11th Street, Room 464 • Fridays, 9–11:40am
+		PMCD 5001, CRN 4253/9023 — PMCD 5002, CRN 3992/9589
+		65 West 11th Street, Room 464 — Fridays, 9–11:40am
 		`,
 	syllabus: {
 		fall: '',
