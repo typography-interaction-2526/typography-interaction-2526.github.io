@@ -7,10 +7,12 @@
 <p
 	webc:if="attribution || citation"
 >
-	<cite
+	<a
 		webc:if="citation"
-		:citation="citation"
-	></cite>
+		:href="citation"
+	>
+		<cite></cite>
+	</a>
 	<span
 		webc:if="attribution"
 		@html="markdown(attribution)"

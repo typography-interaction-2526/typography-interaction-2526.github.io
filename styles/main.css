@@ -229,9 +229,7 @@ main {
 			align-items:      baseline;
 			display:          flex;
 			gap:              3rcap;
-			justify-content:  space-between;
 			margin-block-end: calc(1rlh - 1rcap);
-			max-inline-size:  initial; /* Go to `img` edge. */
 
 			/* TODO Move/consolidate this with `links` one! */
 			> a:has(cite) {
@@ -291,6 +289,49 @@ main {
 			background-color: var(--color);
 
 			* { --color: white }
+		}
+	}
+
+	blockquote {
+		--leading: 1rlh;
+		--size:    var(--size--h3);
+		--weight:  700;
+
+		display:     grid;
+		grid-column: aside;
+		row-gap:     inherit;
+		text-wrap:   balance;
+
+		&:where(:not(:first-child)) { margin-block-start: 2rlh }
+		&:where(:not(:last-child))  { margin-block-end:   2rlh }
+
+		&:has(+ p > a > cite) { margin-block-end: 1rlh }
+
+		/* TODO Consolidate this with `figure` one! Figure out overrides. */
+		+ p:has(a > cite) {
+			--size:   initial;
+			--weight: 700;
+
+			color:          var(--color);
+			grid-column:    aside;
+			text-transform: uppercase;
+
+			> a:has(cite) {
+				--block: 1ex;
+
+				display:           inline-block;
+				margin-inline-end: 2cap;
+
+				cite {
+					--icon:        '→';
+					--gap:         initial;
+					--icon--width: initial;
+
+					&::after { position: initial }
+				}
+			}
+
+			&:not(:last-child) { margin-block-end: 2rlh }
 		}
 	}
 

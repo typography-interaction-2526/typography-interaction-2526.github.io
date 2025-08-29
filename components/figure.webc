@@ -20,16 +20,16 @@
 		allowfullscreen
 	></iframe>
 	<figcaption webc:if="caption || citation">
-		<span
-			webc:if="caption"
-			@html="markdown(caption)"
-		></span>
 		<a
 			webc:if="citation"
 			:href="citation"
 		>
 			<cite></cite>
 		</a>
+		<span
+			webc:if="caption"
+			@html="markdown(caption)"
+		></span>
 	</figcaption>
 	<!-- TODO Come back to this! -->
 	<!-- <p webc:if="source && !source.includes(`drive.google.com`)">
