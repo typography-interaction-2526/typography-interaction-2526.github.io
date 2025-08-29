@@ -11,6 +11,16 @@
 			name="viewport"
 		>
 		<title @text="stripTags(markdown(title || course.title))"></title>
+		<link
+			href="/assets/icons/favicon.ico"
+			rel="icon"
+			sizes="64x64"
+			type="image/x-icon"
+		>
+		<link
+			href="/assets/icons/touch.png"
+			rel="apple-touch-icon"
+		>
 		<template
 			webc:import="blocks/styles.webc"
 			webc:nokeep
