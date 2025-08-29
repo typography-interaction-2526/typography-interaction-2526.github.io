@@ -1,0 +1,38 @@
+<figure
+	:id="source && !source.includes(`drive.google.com`) && slugify(source.split(`?`).shift())"
+	@attributes
+>
+	<img
+		webc:if="[`.png`, `.gif`, `.jpg`].some(ext => source.endsWith(ext))"
+		:alt="stripTags(markdown(caption))"
+		:src="source"
+	>
+	<object
+		webc:elseif="source.endsWith(`.svg`)"
+		:alt="stripTags(markdown(caption))"
+		:data="source"
+		type="image/svg+xml"
+	></object>
+	<iframe
+		webc:else
+		:src="source"
+		allowfullscreen
+	></iframe>
+	<figcaption webc:if="caption || citation">
+		<cite
+			webc:if="citation"
+			:citation="citation"
+		></cite>
+		<span
+			webc:if="caption"
+			@html="markdown(caption)"
+			class="secondary"
+		></span>
+	</figcaption>
+	<p
+		webc:if="source && !source.includes(`drive.google.com`)"
+		class="size--h4 bold"
+	>
+		<a :href="`#${slugify(source.split(`?`).shift())}`">#</a>
+	</p>
+</figure>
