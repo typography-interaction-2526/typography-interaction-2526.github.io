@@ -180,15 +180,20 @@ main {
 	}
 
 	/* TODO More structure here! */
-	details[open]::details-content {
-		--size:   var(--size--h2);
-		--weight: 500;
+	details {
+		&:where(:not(:first-child)) { margin-block-start: 1rlh }
+		&:where(:not(:last-child))  { margin-block-end:   1rlh }
 
-		display:            grid;
-		margin-block-start: 2rlh;
-		row-gap:            inherit;
+		&[open]::details-content {
+			--size:   var(--size--h2);
+			--weight: 500;
 
-		> p { margin-block-start: calc(1cap - 1rcap) }
+			display:            grid;
+			margin-block-start: 2rlh;
+			row-gap:            inherit;
+
+			> p { margin-block-start: calc(1cap - 1rcap) }
+		}
 	}
 
 	/* Tables for the grade breakdown. */
@@ -215,8 +220,10 @@ main {
 		position:              relative;
 		row-gap:               1rlh;
 
-		&:not(:first-child) { margin-block-start: 2rlh }
-		&:not(:last-child)  { margin-block-end:   2rlh }
+		&:where(:not(:first-child)) { margin-block-start: 2rlh }
+		&:where(:not(:last-child))  { margin-block-end:   2rlh }
+
+		+ :where(figure) { margin-block-start: initial }
 
 		> figcaption {
 			align-items:      baseline;
@@ -245,7 +252,7 @@ main {
 		iframe {
 			--height: calc(var(--lines) * 1rlh - 1rcap);
 
-			max-block-size: var(--height, round(85svh, 1rcap));
+			max-block-size: var(--height, round(80svh, 1rcap));
 		}
 
 		&.multiply { img, object, iframe { mix-blend-mode: multiply } }
@@ -269,8 +276,8 @@ main {
 		row-gap:          inherit;
 		text-align:       center;
 
-		&:not(:first-child) { margin-block-start: 2rlh }
-		&:not(:last-child)  { margin-block-end:   2rlh }
+		&:where(:not(:first-child)) { margin-block-start: 2rlh }
+		&:where(:not(:last-child))  { margin-block-end:   2rlh }
 
 		> p:has(mark) {
 			--weight:  700;
