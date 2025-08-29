@@ -86,6 +86,9 @@ summary {
 	&:active { background-color: var(--highlight) }
 }
 
+/* Tighten these. */
+.intro a { background-position-y: calc(1cap + var(--enlargement) + (1rlh - 1cap) / 2 - var(--stroke)) }
+
 /* Our “tag” style. */
 button,
 summary,
