@@ -47,7 +47,7 @@ By the 1960s, computers were room-sized, institutional electronic machines–use
 	@caption="Different network topologies."
 	@citation="https://www.rand.org/content/dam/rand/pubs/research_memoranda/2006/RM3420.pdf"
 	@source="networks.png"
-	class="invert"
+	class="multiply"
 	>
 </figure>
 
@@ -79,7 +79,7 @@ By 1969, computer nodes connected the Stanford Research Institute, UCLA, UCSB an
 	@caption="The growth of ARPANET into the 1970s."
 	@citation="https://medium.com/syntropynet/the-internet-was-not-developed-it-just-happened-part-1-a123fe4628"
 	@source="arpanet.gif"
-	class="invert"
+	class="multiply"
 	>
 </figure>
 
@@ -88,7 +88,7 @@ Over the following decade, [ARPANET](https://www.britannica.com/topic/ARPANET) w
 <figure
 	@caption="The core of TCP/IP is routing bundles of data called *packets.*"@citation="https://web.eecs.umich.edu/~prabal/teaching/eecs582-w13/readings/CK74.pdf"
 	@source="tcpip.png"
-	class="invert"
+	class="multiply"
 	style="--lines: 14"
 	>
 </figure>
@@ -121,7 +121,7 @@ Tim Berners-Lee, a British academic and scientist, invented the *World Wide Web*
 	@caption="The cover of the original proposal, visualizing the idea of *hypertext.*"
 	@citation="https://cds.cern.ch/record/1405411/files/ARCH-WWW-4-010.pdf"
 	@source="web.png"
-	class="invert"
+	class="multiply"
 	>
 </figure>
 

@@ -230,6 +230,8 @@ main {
 			max-block-size: var(--height, round(85svh, 1rcap));
 		}
 
+		&.multiply { img, object, iframe { mix-blend-mode: multiply } }
+
 		/* TODO Shorthand classes for lines? Or specify units directly? */
 	}
 
