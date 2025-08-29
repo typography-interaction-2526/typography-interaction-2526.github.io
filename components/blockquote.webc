@@ -1,0 +1,18 @@
+<blockquote
+	webc:root="override"
+	:cite="citation"
+>
+	<slot></slot>
+</blockquote>
+<p
+	webc:if="attribution || citation"
+>
+	<cite
+		webc:if="citation"
+		:citation="citation"
+	></cite>
+	<span
+		webc:if="attribution"
+		@html="markdown(attribution)"
+	></span>
+</p>
