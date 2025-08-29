@@ -206,6 +206,33 @@ main {
 		td:last-child { text-align: end } /* Ersatz tabular numbers. */
 	}
 
+	/* TODO Move this to component? (And flatten that into native/Markdown?) */
+	figure {
+		align-items: start;
+		display:     grid;
+		grid-column: all;
+		position:    relative;
+		row-gap:     1rlh;
+
+		&:not(:first-child) { margin-block-start: 2rlh }
+		&:not(:last-child)  { margin-block-end:   2rlh }
+
+		> figcaption { margin-block-end: calc(1rlh - 1rcap) }
+
+		/* TODO Come back here! */
+		> cite { display: none }
+
+		img,
+		object,
+		iframe {
+			--height: calc(var(--lines) * 1rlh - 1rcap);
+
+			max-block-size: var(--height, round(85svh, 1rcap));
+		}
+
+		/* TODO Shorthand classes for lines? Or specify units directly? */
+	}
+
 	hr {
 		--size:   var(--size--h2);
 		--weight: 500;
@@ -252,7 +279,9 @@ main {
 		/* TODO `aria-label` instead? */
 	}
 
-	:where(.note), :where(li, p):where(:has(> a > cite)) {
+	:where(.note),
+	:where(li, p):where(:has(> a > cite)),
+	figcaption {
 		--leading: 1rlh;
 		--size:    0.85rem;
 		--weight:  500;

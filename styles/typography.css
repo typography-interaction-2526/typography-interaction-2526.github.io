@@ -1,6 +1,7 @@
 :where(menu) a:where(:has(+ ul)), /* Loose ToC links. */
 dd,
 dt,
+figcaption,
 h1,
 h2,
 h3,
