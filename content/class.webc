@@ -1,5 +1,4 @@
 <script front-matter>
-	const draft = true
 	const title = 'Our Class'
 	const order = 2
 </script>
