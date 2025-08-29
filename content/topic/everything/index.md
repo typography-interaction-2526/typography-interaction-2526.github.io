@@ -17,14 +17,14 @@
 
 </details>
 
+Before this time, the term *computer* usually referred to a person, not a machine—someone who would *compute* (solve) math problems.
+
 <figure
 	@caption="The *Harvard Computers* in the late 1800s."
 	@citation="https://en.wikipedia.org/wiki/Harvard_Computers#/media/File:Astronomer_Edward_Charles_Pickering%27s_Harvard_computers.jpg"
 	@source="harvard.jpg"
 	>
 </figure>
-
-Before this time, the term *computer* usually referred to a person, not a machine—someone who would *compute* (solve) math problems.
 
 <aside>
 
@@ -36,6 +36,8 @@ We’re going talk about a lot of men, here—but know that women have been pres
 
 </aside>
 
+By the 1960s, computers were room-sized, institutional electronic machines–used by governments (the military), businesses, and universities. They were used to solve complex math problems and sort data, but were still very slow and didn’t communicate with one another.
+
 <figure
 	@caption="Univac, the first commercial computer in the US."
 	@citation="https://time.com/4271506/census-bureau-computer-history/"
@@ -43,7 +45,7 @@ We’re going talk about a lot of men, here—but know that women have been pres
 	>
 </figure>
 
-By the 1960s, computers were room-sized, institutional electronic machines–used by governments (the military), businesses, and universities. They were used to solve complex math problems and sort data, but were still very slow and didn’t communicate with one another.
+A catalyst in the formation of the internet was the Cold War. The threat of nuclear conflict spurred the US Defense Department to consider decentralized and distributed networks—to disseminate orders and information in the event of an attack (and ultimately, for retaliation).
 
 <figure
 	@caption="Different network topologies."
@@ -52,8 +54,6 @@ By the 1960s, computers were room-sized, institutional electronic machines–use
 	class="multiply"
 	>
 </figure>
-
-A catalyst in the formation of the internet was the Cold War. The threat of nuclear conflict spurred the US Defense Department to consider decentralized and distributed networks—to disseminate orders and information in the event of an attack (and ultimately, for retaliation).
 
 <blockquote
 	@attribution="Paul Baran"
@@ -72,10 +72,13 @@ Well, then, let’s not make it centralized. Let’s spread it out so that we ca
 	@caption="The original sketch of ARPANET (*Advanced Research Projects Agency Network*)."
 	@citation="https://www.scientificamerican.com/gallery/early-sketch-of-arpanets-first-four-nodes/"
 	@source="arpanet.png"
+	style="--lines: 16"
 	>
 </figure>
 
 By 1969, computer nodes connected the Stanford Research Institute, UCLA, UCSB and the University of Utah—developed by the Defense Department’s *Advanced Research Project Agency* (ARPA).
+
+Over the following decade, [ARPANET](https://www.britannica.com/topic/ARPANET) would grow to include other cities in the US. It had its first expansion outside the States in 1973, with connections to the UK and Norway. Slowly, similar commercial and academic networks were developing alongside, each with their own communication protocols.
 
 <figure
 	@caption="The growth of ARPANET into the 1970s."
@@ -85,7 +88,7 @@ By 1969, computer nodes connected the Stanford Research Institute, UCLA, UCSB an
 	>
 </figure>
 
-Over the following decade, [ARPANET](https://www.britannica.com/topic/ARPANET) would grow to include other cities in the US. It had its first expansion outside the States in 1973, with connections to the UK and Norway. Slowly, similar commercial and academic networks were developing alongside, each with their own communication protocols.
+In 1974, Robert Kahn and Vinton Cerf (two ARPA scientists) developed the *Transmission Control Protocol* and the *Internet Protocol* (TCP/IP). By the 80s, it became the standard network communication format—and still underpins the internet we all use today.
 
 <figure
 	@caption="The core of TCP/IP is routing bundles of data called *packets.*"@citation="https://web.eecs.umich.edu/~prabal/teaching/eecs582-w13/readings/CK74.pdf"
@@ -94,8 +97,6 @@ Over the following decade, [ARPANET](https://www.britannica.com/topic/ARPANET) w
 	style="--lines: 14"
 	>
 </figure>
-
-In 1974, Robert Kahn and Vinton Cerf (two ARPA scientists) developed the *Transmission Control Protocol* and the *Internet Protocol* (TCP/IP). By the 80s, it became the standard network communication format—and still underpins the internet we all use today.
 
 ## What About the Web?
 
@@ -119,14 +120,6 @@ In 1974, Robert Kahn and Vinton Cerf (two ARPA scientists) developed the *Transm
 
 Tim Berners-Lee, a British academic and scientist, invented the *World Wide Web* (WWW) with his team while working at [CERN (*European Organization for Nuclear Research*) in 1989](https://home.cern/science/computing/birth-web/short-history-web). It was developed on top of TCP/IP as a standard way to connect documents, living on different computers in different places, via *hypertext* links.
 
-<figure
-	@caption="The cover of the original proposal, visualizing the idea of *hypertext.*"
-	@citation="https://cds.cern.ch/record/1405411/files/ARCH-WWW-4-010.pdf"
-	@source="web.png"
-	class="multiply"
-	>
-</figure>
-
 Their proposal had four components:
 
 1. A text file format to represent the documents: the *HyperText Markup Language* (HTML)
@@ -136,6 +129,15 @@ Their proposal had four components:
 1. A program to display (and edit) these documents: the first *web browser* (called WorldWideWeb)
 
 1. Software that gives access to the documents: the *server*
+<!-- .balance -->
+
+<figure
+	@caption="The cover of the original proposal, visualizing the idea of *hypertext.*"
+	@citation="https://cds.cern.ch/record/1405411/files/ARCH-WWW-4-010.pdf"
+	@source="web.png"
+	class="multiply"
+	>
+</figure>
 
 <figure
 	@caption="How it looked for Tim, back then."
@@ -153,6 +155,7 @@ Their proposal had four components:
 </figure>
 
 By 1991, the [first web page](http://info.cern.ch/hypertext/WWW/TheProject.html) was up and running and the web began to take off.
+<!-- .intro -->
 
 <figure
 	@caption="Mosaic was one of the first widely-available browsers. It introduced support for *images*."
@@ -171,6 +174,7 @@ By 1991, the [first web page](http://info.cern.ch/hypertext/WWW/TheProject.html)
 The 1990s then saw more-affordable home computers bring internet access to many more people—escaping the government (military), business, and university settings it had been siloed in before. Early web browsers like [Mosaic and Netscape](https://en.wikipedia.org/wiki/History_of_the_web_browser) (1993) helped evolve what was possible online—adding color, images, and interactivity.
 
 And the web exploded from there.
+<!-- .intro -->
 
 <figure
 	@caption="1994: Before search engines, there were web directories like Yahoo."
