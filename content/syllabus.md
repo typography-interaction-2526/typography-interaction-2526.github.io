@@ -386,6 +386,8 @@ This agreement is intended to help us create and maintain a safe, empathetic, an
 
 <aside>
 
+<mark>This is a living document!</mark>
+
 We can (and should) revisit this agreement throughout the year. Please let us know if you’d like to raise something with the class.
 
 </aside>
@@ -420,7 +422,11 @@ We have zero tolerance for any sort of plagiarism—which ranges from “verbati
 
 <aside id="attribution">
 
-To expand on this: we are not saying you can’t learn from and incorporate other resources. We do! If you make use of other tools, we should see [code](/topic/html/#comments) [comments](/topic/css/#element-preview) that explain *why* you used them, *what* you referenced, and your overall understanding of *how* it works.
+<mark>External Resources Subject to Attribution</mark>
+
+We are not saying you can’t learn from and incorporate other resources. We do, all the time!
+
+If you make use of other tools, we should see [code](/topic/html/#comments) [comments](/topic/css/#element-preview) that explain *why* you used them, *what* you referenced, and your overall understanding of *how* it works.
 
 </aside>
 
@@ -435,7 +441,9 @@ To expand on this: we are not saying you can’t learn from and incorporate othe
 }
 ```
 
-<aside>
+<aside class="reverse">
+
+<mark>Management thanks you for your cooperation</mark>
 
 Copying, pasting, or autocompleting code in the absence of an attribution and explanation is plagiarism.
 

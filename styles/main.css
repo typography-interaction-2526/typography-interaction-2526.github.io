@@ -227,7 +227,7 @@ main {
 			max-inline-size:  initial; /* Go to `img` edge. */
 
 			/* TODO Move/consolidate this with `links` one! */
-			> a {
+			> a:has(cite) {
 				--block: 1ex;
 
 				cite {
@@ -251,6 +251,40 @@ main {
 		&.multiply { img, object, iframe { mix-blend-mode: multiply } }
 
 		/* TODO Shorthand classes for lines? Or specify units directly? */
+	}
+
+	aside {
+		--weight: 500;
+
+		background-color: white;
+		border-radius:    var(--stroke);
+		display:          grid;
+		grid-column:      aside;
+		outline-color:    var(--color);
+		outline-offset:   round(down, calc(-1 * var(--stroke) * 2), var(--rounding));
+		outline-style:    solid;
+		outline-width:    round(up, calc(2 * var(--stroke)), var(--rounding));
+		padding:          1rlh;
+		place-items:      center;
+		row-gap:          inherit;
+		text-align:       center;
+
+		&:not(:first-child) { margin-block-start: 2rlh }
+		&:not(:last-child)  { margin-block-end:   2rlh }
+
+		> p:has(mark) {
+			--weight:  700;
+			--size:    var(--size--h3);
+			--leading: 1lrh;
+
+			margin-block-start: calc(1rcap - 1cap); /* Back on baseline. */
+		}
+
+		&.reverse {
+			background-color: var(--color);
+
+			* { --color: white }
+		}
 	}
 
 	hr {
@@ -303,7 +337,7 @@ main {
 	:where(li, p):where(:has(> a > cite)),
 	:where(figcaption) {
 		--leading: 1rlh;
-		--size:    0.85rem;
+		--size:    var(--size--note);
 		--weight:  500;
 
 		color:              var(--note);
@@ -373,8 +407,8 @@ main {
 			minmax(0, 1fr)
 			[ body-end center-end five-start four-end right-start ]
 			minmax(0, 1fr)
-			[aside-end intro-end five-end six-start]
+			[ intro-end five-end six-start]
 			minmax(0, 1fr)
-			[ all-end recto-end right-end six-end];
+			[ all-end aside-end recto-end right-end six-end];
 	}
 }

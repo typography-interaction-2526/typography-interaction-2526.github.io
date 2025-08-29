@@ -93,7 +93,7 @@ a:where(:has(> cite)) {
 	--block:   1cap;
 	--inline:  1cap;
 	--leading: 1rlh;
-	--size:    0.85rem;
+	--size:    var(--size--note);
 	--weight:  700;
 
 	inline-size: fit-content;
@@ -118,7 +118,7 @@ a:where(:has(> cite)) {
 		text-box:             trim-both cap alphabetic;
 	}
 
-	/* Otherwise collapses down; not sure why links don’t!  */
+	/* TODO Otherwise collapses down! Not sure why.  */
 	&:where(a, button) {
 		margin-block:  calc(-1 * var(--block));
 		padding-block: var(--block);

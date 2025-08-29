@@ -17,8 +17,8 @@ th {
 	/* TODO Firefox warning message! */
 }
 
-/* Headings. */
-h1, h2, h3, h4, hgroup, cite, td:first-child, button, summary, .intro {
+/* “Headings.” */
+h1, h2, h3, h4, hgroup, cite, td:first-child, button, summary, .intro, aside {
 	text-transform: uppercase;
 	text-wrap:      balance;
 

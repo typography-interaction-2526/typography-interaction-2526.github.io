@@ -5,6 +5,7 @@
 	--size--h1:   clamp(2rem, 4.75vw, 3rem); /* Scale `h1` based on course title. */
 	--size--h2:   1.5rem;
 	--size--h3:   1.25rem; /* Cap-x-cap on `rlh`. */
+	--size--note: 0.85rem;
 
 	--max: 1400;
 

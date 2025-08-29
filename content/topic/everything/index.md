@@ -24,13 +24,15 @@
 	>
 </figure>
 
-Before this time, the term *computer* usually referred to a person, not a machine—someone who would *compute* (solve) math problems.
+Before this time, the term *computer* usually referred to a person, not a machine—someone who would *compute* (solve) math problems.
 
 <aside>
 
-It is worth noting these [were *often* women](https://www.nytimes.com/2019/02/13/magazine/women-coding-computer-programming.html), and they were usually underpaid and underrecognized compared to men in their field. Many would go on to operate the early mechanical/electronic computers.
+<mark>Warning: Lots of Dudes in this Area</mark>
 
-We’re going to have to talk about a lot of men, here—but know that women have been present from the start.
+It is worth noting these pioneers [were often women](https://www.nytimes.com/2019/02/13/magazine/women-coding-computer-programming.html), and they were usually underpaid and underrecognized compared to men in their field. Many would go on to operate the early mechanical/electronic computers.
+
+We’re going talk about a lot of men, here—but know that women have been present from the start, as usual.
 
 </aside>
 
