@@ -281,7 +281,7 @@ main {
 
 	:where(.note),
 	:where(li, p):where(:has(> a > cite)),
-	figcaption {
+	:where(figcaption) {
 		--leading: 1rlh;
 		--size:    0.85rem;
 		--weight:  500;
