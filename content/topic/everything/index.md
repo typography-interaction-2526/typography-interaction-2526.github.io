@@ -68,7 +68,7 @@ Well, then, let’s not make it centralized. Let’s spread it out so that we ca
 </blockquote>
 
 <figure
-	@caption="The original sketch of ARPANET (*Advanced Research Projects Agency Network*)."
+	@caption="The original sketch of ARPANET (*Advanced Research Projects Agency Network*)."
 	@citation="https://www.scientificamerican.com/gallery/early-sketch-of-arpanets-first-four-nodes/"
 	@source="arpanet.png"
 	style="--lines: 16"
