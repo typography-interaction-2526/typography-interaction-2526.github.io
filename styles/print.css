@@ -1,0 +1,6 @@
+/* Hide other sections. */
+body > ul > li:not(:has(article)) { display: none }
+
+article {
+	background-color: white;
+}

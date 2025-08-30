@@ -23,6 +23,11 @@
 	href="../../styles/main.css"
 	rel="stylesheet"
 >
+<link
+	webc:bucket="print"
+	href="../../styles/print.css"
+	rel="stylesheet"
+>
 <style
 	webc:keep
 	@raw="`
