@@ -1,7 +1,10 @@
 @page {
-	margin: 1in 0;
-	size:   letter;
+	margin:  0;
+	padding: 1in 0;
+	size:    letter;
 }
+
+@page :first { padding: 0 }
 
 :root {
 	--size--root: 16;
@@ -19,20 +22,57 @@
 			background-color: var(--background);
 			text-wrap:        pretty;
 
-			/* Per semester. */
-			/* .fall { display: none } */
-			.spring { display: none }
-
-			/* Semester headers. */
-			hgroup:has(h3:where([id^='fall'], [id^='spring'])) {
-				display: none;
-
-				+ * { margin-block-start: initial }
-			}
 
 			/* Toggles. */
 			.screen { display: none }
 			.print  { display: block }
+
+			/* Syllabus stuff. */
+			> main {
+				padding-block-start: 1in;
+
+				header.print {
+					--weight: 400;
+					--size:   var(--size--h1);
+
+					display:           flex;
+					gap:               var(--alley);
+					padding-block-end: 1cap;
+					position:          relative;
+
+					h1 { display: block }
+
+					p {
+						--weight: 700;
+
+						font-size:      0.5em;
+						text-transform: uppercase;
+						text-wrap:      nowrap;
+					}
+
+					&::after {
+						background-color: var(--color);
+						block-size:       var(--stroke);
+						border-radius:    var(--stroke);
+						content:          '';
+						display:          block;
+						inset-block-end:  calc(-1 * var(--stroke) / 2);
+						inset-inline:     0;
+						position:         absolute;
+					}
+				}
+
+				/* Per-semester. */
+				/* .fall { display: none } */
+				.spring { display: none }
+
+				/* Semester headers. */
+				hgroup:has(h3:where([id^='fall'], [id^='spring'])) {
+					display: none;
+
+					+ * { margin-block-start: initial }
+				}
+			}
 		}
 	}
 }

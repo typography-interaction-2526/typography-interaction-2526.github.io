@@ -1,0 +1,17 @@
+<script>
+	console.log('yo')
+</script>
+<header
+	webc:root="override"
+	class="print"
+>
+	<h1 @text="$data.course.title"></h1>
+	<p
+		@text="$data.course.terms.fall"
+		class="fall"
+	></p>
+	<p
+		@text="$data.course.terms.spring"
+		class="spring"
+	></p>
+</header>

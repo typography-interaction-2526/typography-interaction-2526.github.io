@@ -13,13 +13,25 @@
 		scroll-behavior:  smooth;
 	}
 
-	article { scroll-margin-block-start: 0 }
+	article {
+		scroll-margin-block-start: 0;
+
+		/* Print-only. */
+		.print { display: none }
+	}
 </style>
 
 <block webc:import="blocks/pages.webc">
 	<article>
-		<block webc:import="header.webc"></block>
+		<block
+			webc:import="header.webc"
+			:class="$data.page.url === '/syllabus/' && 'screen'"
+		></block>
 		<main>
+			<block
+				webc:if="$data.page.url === '/syllabus/'"
+				webc:import="print.webc"
+			></block>
 			<!-- TODO Come back to this! -->
 			<!-- <block webc:import="toc.webc"></block> -->
 			<template
