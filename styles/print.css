@@ -26,6 +26,10 @@
 
 				+ * { margin-block-start: initial }
 			}
+
+			/* Toggles. */
+			.screen { display: none }
+			.print  { display: block }
 		}
 	}
 }

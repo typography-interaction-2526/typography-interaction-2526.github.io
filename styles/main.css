@@ -398,6 +398,9 @@ main {
 		/* TODO `role` instead? */
 	}
 
+	/* Print-only. */
+	.print { display: none }
+
 	/* Manual column placements. */
 	:where(.all, .aside, .body, .center, .five, .four, .left, .one, .recto, .right, .six, .three, .two, .verso) {
 		display:  grid;

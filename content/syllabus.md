@@ -383,7 +383,7 @@ This agreement is intended to help us create and maintain a safe, empathetic, an
 
 - We will always [attribute](#attribution) our work when referencing others, tools, or examples.
 
-<aside>
+<aside class="screen">
 
 <mark>This is a living document!</mark>
 
@@ -411,15 +411,13 @@ As tutors are only available a limited number of hours per week, it is advisable
 
 ### Code Plagiarism
 
-<!-- TODO Comment out/in code example, until we get there? -->
-
 Students may find code similar to our exercises or projects elsewhere online. But the copying or adapting of *any* code beyond our provided course material (lectures, exercises, demos), without attribution, is not allowed under any circumstances. This *includes* from LLMs, [more below](#llms-and-artificial-intelligence).
 
 If adapting, with attribution, students must explain the usage and demonstrate an understanding of how the code works. We will have in-person code reviews to facilitate and guage this understanding.
 
 We have zero tolerance for any sort of plagiarism—which ranges from “verbatim copying” (copying-and-pasting) to “thorough paraphrasing” (changing names or rearranging) and “autocompleting” (with LLM-assisted editors). Students should also review the [Academic Integrity Policy](https://docs.google.com/document/d/175hXxUbLI8Jy7NEtbeoyX3Va_MQzXzgxzFUjj7hSkSU).
 
-<aside id="attribution">
+<aside class="screen" id="attribution">
 
 <mark>External Resources Subject to Attribution</mark>
 
@@ -429,9 +427,9 @@ If you make use of other tools, we should see [code](/topic/html/#comments) [co
 
 </aside>
 
-**An example:**
+**An example:** <!-- .screen -->
 
-```css
+```css <!-- .screen -->
 /* I wanted to treat large grids differently in my design! */
 /* I found this tool: https://css-tip.com/quantity-queries/ */
 /* The selector matches when the container has a sixth child. */
@@ -440,7 +438,7 @@ If you make use of other tools, we should see [code](/topic/html/#comments) [co
 }
 ```
 
-<aside class="reverse">
+<aside class="reverse screen">
 
 <mark>Management thanks you for your cooperation</mark>
 
