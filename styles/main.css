@@ -229,10 +229,10 @@ main {
 		+ :where(figure) { margin-block-start: initial }
 
 		> figcaption {
-			align-items:      baseline;
-			display:          flex;
-			gap:              3rcap;
-			margin-block-end: calc(1rlh - 1rcap);
+			align-items:       baseline;
+			display:           flex;
+			gap:               3rcap;
+			padding-block-end: calc(1rlh - 1rcap);
 
 			/* TODO Move/consolidate this with `links` one! */
 			> a:has(cite) {
@@ -246,6 +246,8 @@ main {
 					&::after { position: initial }
 				}
 			}
+
+			> span { text-box: trim-both cap alphabetic }
 		}
 
 		img,
