@@ -2,7 +2,9 @@
 	const eleventyComputed = { title: ({ course }) => course.title }
 </script>
 
-<span webc:nokeep @html="markdown(course.logistics)"></span>
+<span webc:nokeep @html="markdown(course.logistics.school)"></span>
+<span webc:nokeep @html="markdown(course.logistics.fall)"></span> — <span webc:nokeep @html="markdown(course.logistics.spring)"></span>
+<span webc:nokeep @html="markdown(course.logistics.room)"></span> — <span webc:nokeep @html="markdown(course.logistics.time)"></span>
 <!-- .intro -->
 
 <em @text="course.title" style="margin-inline-start: -0.2em"></em> is a year-long, two-semester course in the [MPS Communication Design](https://mpscd.parsons.edu) program at [Parsons](https://www.newschool.edu/parsons/), at [The New School](https://www.newschool.edu). The class will provide a rigorous foundation of typographic and interaction principles in the context of digital design.

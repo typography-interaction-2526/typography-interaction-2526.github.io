@@ -12,11 +12,13 @@ export default {
 		zoom: 'https://NewSchool.zoom.us/j/98496458429',
 		zoomAlt: 'https://newschool.zoom.us/my/mfehrenbach',
 	},
-	logistics:
-		`The New School, Parsons, MPS CD
-		PMCD 5001, CRN 4253/9023 — PMCD 5002, CRN 3992/9589
-		65 West 11th Street, Room 464 — Fridays, 9–11:40am
-		`,
+	logistics: {
+		fall: 'PMCD 5001, CRN 4253/9023',
+		room: '65 West 11th Street, Room 464',
+		school: 'The New School, Parsons, MPS CD',
+		spring: 'PMCD 5002, CRN 3992/9589',
+		time: 'Fridays, 9–11:40am',
+	},
 	syllabus: {
 		fall: '',
 		spring: '',
