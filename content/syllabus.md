@@ -17,7 +17,7 @@ Typography is the infrastructure of communication in nearly any visual medium. I
 
 - <a :href="course.syllabus.fall"><cite>Submitted Version</cite></a>
 - <a :href="course.catalog.fall"><cite>Course Catalog</cite></a>
-<!-- .right .rows--2 -->
+<!-- .right .rows--2 .screen -->
 
 Digital design, the web in particular, is inextricably linked with typography—from the very letters of code at its base to the words in arrangement we see on a screen. Type, thus, is the scaffolding in which all interaction design first rises. The very shape of the web, in its layouts, grid systems, and patterns—and its various technologies—all exist in the service of type, at their root. They provide the tools with which we can breathe a form and different, digital life into that meaning.
 
@@ -341,7 +341,7 @@ We will use the following tools to organize our class:
 <!-- .intro -->
 
 - <a :href="pkg.homepage"><cite>Course Site</cite></a>
-	For housekeeping, agendas, and lectures (you are here)
+	For housekeeping, agendas, and lectures <span class="screen">(you are here)</span>
 
 - <a :href="course.channel.submit"><cite>Submission Form</cite></a>
 	For submitting your work/URL&NoBreak;s

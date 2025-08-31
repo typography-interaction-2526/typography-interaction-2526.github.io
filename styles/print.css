@@ -66,7 +66,7 @@
 						display:        flex;
 						flex-direction: column;
 						margin-block:   1in;
-						row-gap:        1cap;
+						row-gap:        1ex;
 					}
 
 					+ section > hgroup {
