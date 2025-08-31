@@ -9,11 +9,14 @@
 
 	background-color: white;
 
-	body > ul > li {
+	body > ul > li,
+	body > ul > li > ul > li {
 		&:not(:has(article)) { display: none } /* Hide other sections. */
 
 		article {
-			background-color: white;
+			--background: white;
+
+			background-color: var(--background);
 			text-wrap:        pretty;
 
 			/* Per semester. */
