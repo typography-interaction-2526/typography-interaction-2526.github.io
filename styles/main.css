@@ -179,7 +179,7 @@ main {
 	/* More space above these when they aren’t manually in-columns. */
 	ul,
 	*:where(:not(li)) > p {
-		&:where(:has(a > cite):not([class])) {margin-block-start: 1rlh }
+		&:where(:has(a > cite):not([class])) { margin-block-start: 1rlh }
 	}
 
 	/* TODO More structure here! */
@@ -390,10 +390,10 @@ main {
 		--size:    var(--size--note);
 		--weight:  500;
 
-		color:              var(--note);
-		margin-block-start: calc(1rcap - 1cap); /* Back on baseline. */
-		max-inline-size:    56ch; /* Close to `body`. */
-		text-wrap:          balance;
+		color:               var(--note);
+		max-inline-size:     56ch; /* Close to `body`. */
+		padding-block-start: calc(1rcap - 1cap); /* Back on baseline. */
+		text-wrap:           balance;
 
 		* { color: inherit } /* For `abbr`. */
 

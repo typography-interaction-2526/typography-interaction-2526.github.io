@@ -4,7 +4,11 @@
 </script>
 
 <style>
-	#shuffle { grid-column: one / two }
+	div {
+		grid-column:    left;
+
+		> p { margin-block-start: initial }
+	}
 
 	#students {
 		column-gap:            var(--alley);
@@ -25,9 +29,12 @@
 		@media (orientation: landscape) and (width >= 35em), (width >= 60em) { margin-block-start: initial }
 	}
 </style>
-<button id="shuffle">
-	<p>Shuffle</p>
-</button>
+<div>
+	<button id="shuffle">
+		<p>Shuffle</p>
+	</button>
+	<p><a href="https://docs.google.com/document/d/1En_aoZwgi3slvnv18JRrc-xucbYeG75tMyGsg1nFcA4"><cite>Who We Are</cite></a></p>
+</div>
 <ul
 	:style="`--count: ${$data.class.length}`"
 	id="students"
