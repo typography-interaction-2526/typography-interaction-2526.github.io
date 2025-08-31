@@ -31,34 +31,58 @@
 			> main {
 				padding-block-start: 1in;
 
-				header.print {
-					--weight: 400;
-					--size:   var(--size--h1);
+				> header.print {
+					> hgroup {
+						--size: var(--size--h1);
 
-					display:           flex;
-					gap:               var(--alley);
-					padding-block-end: 1cap;
-					position:          relative;
+						display:           flex;
+						gap:               var(--alley);
+						padding-block-end: 1cap;
+						position:          relative;
 
-					h1 { display: block }
+						h1 { display: block }
 
-					p {
-						--weight: 700;
+						p {
+							--weight: 700;
 
-						font-size:      0.5em;
-						text-transform: uppercase;
-						text-wrap:      nowrap;
+							font-size:      0.5em;
+							text-transform: uppercase;
+							text-wrap:      nowrap;
+						}
+
+						&::after {
+							background-color: var(--color);
+							block-size:       var(--stroke);
+							border-radius:    var(--stroke);
+							content:          '';
+							display:          block;
+							inset-block-end:  calc(-1 * var(--stroke) / 2);
+							inset-inline:     0;
+							position:         absolute;
+						}
 					}
 
-					&::after {
-						background-color: var(--color);
-						block-size:       var(--stroke);
-						border-radius:    var(--stroke);
-						content:          '';
-						display:          block;
-						inset-block-end:  calc(-1 * var(--stroke) / 2);
-						inset-inline:     0;
-						position:         absolute;
+					> section {
+						display:        flex;
+						flex-direction: column;
+						margin-block:   1in;
+						row-gap:        1cap;
+					}
+
+					+ section > hgroup {
+						padding-block-end:  1cap;
+						position:           relative;
+
+						/* Divider above it. */
+						&::after {
+							background-color: currentcolor;
+							block-size:       var(--stroke);
+							border-radius:    calc(var(--stroke) / 2);
+							content:          '';
+							inset-block-end:  calc(-1 * var(--stroke) / 2);
+							inset-inline:     0;
+							position:         absolute;
+						}
 					}
 				}
 

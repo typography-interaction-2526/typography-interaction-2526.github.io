@@ -5,13 +5,34 @@
 	webc:root="override"
 	class="print"
 >
-	<h1 @text="$data.course.title"></h1>
-	<p
-		@text="$data.course.terms.fall"
-		class="fall"
-	></p>
-	<p
-		@text="$data.course.terms.spring"
-		class="spring"
-	></p>
+	<hgroup>
+		<h1 @text="$data.course.title"></h1>
+		<p
+			@text="$data.course.terms.fall"
+			class="fall"
+		></p>
+		<p
+			@text="$data.course.terms.spring"
+			class="spring"
+		></p>
+	</hgroup>
+	<section class="intro">
+		<p
+			@html="markdown($data.course.logistics.school)"
+		></p>
+		<p
+			@html="markdown($data.course.logistics.fall)"
+			class="fall"
+		></p>
+		<p
+			@html="markdown($data.course.logistics.spring)"
+			class="spring"
+		></p>
+		<p
+			@html="markdown($data.course.logistics.room)"
+		></p>
+		<p
+			@html="markdown($data.course.logistics.time)"
+		></p>
+	</section>
 </header>
