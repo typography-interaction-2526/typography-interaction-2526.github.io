@@ -4,9 +4,7 @@
 >
 	<slot></slot>
 </blockquote>
-<p
-	webc:if="attribution || citation"
->
+<p webc:if="attribution || citation">
 	<a
 		webc:if="citation"
 		:href="citation"
