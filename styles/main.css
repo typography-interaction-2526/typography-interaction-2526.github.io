@@ -84,6 +84,8 @@ main {
 				padding-block-end:  1cap;
 				position:           relative;
 
+				/* TODO Fix baseline under! */
+
 				/* Divider above it. */
 				&::after {
 					background-color:   currentcolor;
