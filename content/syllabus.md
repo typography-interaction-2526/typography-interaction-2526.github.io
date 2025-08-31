@@ -5,7 +5,7 @@
 
 ## Course Description
 
-<em @text="course.title"></em> is a year-long course, divided into two classes, which will provide a rigorous foundation of typographic and interaction principles in the context of digital design. Over both classes, students will acquire and hone the skills they need for success in the field of interactive design.
+<em @text="course.title"></em> is a year-long course, divided into two classes, which will provide a rigorous foundation of typographic and interaction principles in the context of digital design. Over both classes, students will acquire and hone the skills they need for success in the field of interactive design.
 <!-- .intro -->
 
 ### Fall <!-- .fall -->
@@ -403,7 +403,7 @@ That said: if there are still questions—particularly logistical or content one
 
 ### Additional Technical Help
 
-For more specific technical instruction and questions, Parsons has dedicated CD-program tutors available to help students with HTML, CSS, and JavaScript—as well as offering general design critiques and feedback. They should be available midway through Fall semester, and usually have drop-in schedules. More info will be provided as available.
+For more specific technical instruction and questions, Parsons has dedicated CD-program tutors available to help students with HTML, CSS, and JavaScript—as well as offering general design critiques and feedback. They should be available midway through Fall semester, and usually have drop-in schedules. More info will be provided as available.
 
 The University Learning Center also offers its own [tutoring sessions](https://www.newschool.edu/learning-center/); these are by-appointment.
 
@@ -450,7 +450,7 @@ Copying, pasting, or autocompleting code in the absence of an attribution and ex
 
 ### LLM<span style="text-transform: initial">s</span> and “Artificial Intelligence”
 
-Relatedly, there has been much discussion and developments in our field (and others) around [*large language models*](https://en.wikipedia.org/wiki/Large_language_model), a.k.a. “artificial intelligence.”
+Relatedly, there has been much discussion and developments in our field (and others) around [*large language models*](https://en.wikipedia.org/wiki/Large_language_model), a.k.a. “artificial intelligence.”
 
 Here’s what we’re going to say about this: tools like the conspicuous [Chat&NoBreak;GPT](https://openai.com/blog/chatgpt), [Cursor’s IDE](https://cursor.com/en), or [GitHub Copilot](https://github.com/features/copilot) are known to often generate wrong or unnecessarily verbose code. This, combined with the fact that their results are derived from copyrighted and/or legally questionable sources—usually without permission or attribution—means the use of these tools continues to be fraught, at best.
 

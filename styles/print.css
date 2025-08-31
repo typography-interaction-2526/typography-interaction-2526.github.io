@@ -14,10 +14,18 @@
 
 		article {
 			background-color: white;
+			text-wrap:        pretty;
 
 			/* Per semester. */
 			/* .fall { display: none } */
 			.spring { display: none }
+
+			/* Semester headers. */
+			hgroup:has(h3:where([id^='fall'], [id^='spring'])) {
+				display: none;
+
+				+ * { margin-block-start: initial }
+			}
 		}
 	}
 }
