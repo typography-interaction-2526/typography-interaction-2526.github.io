@@ -22,4 +22,5 @@ export default {
 		spring: '',
 	},
 	terms: '’25–26',
+	title: 'Typography & Interaction',
 }

@@ -1,5 +1,5 @@
 <script front-matter>
-	const title = 'Typography & Interaction'
+	const eleventyComputed = { title: ({ course }) => course.title }
 </script>
 
 <span webc:nokeep @html="markdown(course.logistics)"></span>
