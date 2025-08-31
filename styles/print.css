@@ -1,6 +1,23 @@
-/* Hide other sections. */
-body > ul > li:not(:has(article)) { display: none }
+@page {
+	margin: 1in 0;
+	size:   letter;
+}
 
-article {
+:root {
+	--size--root: 16;
+	--gutter:     1in;
+
 	background-color: white;
+
+	body > ul > li {
+		&:not(:has(article)) { display: none } /* Hide other sections. */
+
+		article {
+			background-color: white;
+
+			/* Per semester. */
+			/* .fall { display: none } */
+			.spring { display: none }
+		}
+	}
 }
