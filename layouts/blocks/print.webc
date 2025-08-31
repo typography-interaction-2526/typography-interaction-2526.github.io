@@ -1,6 +1,3 @@
-<script>
-	console.log('yo')
-</script>
 <header
 	webc:root="override"
 	class="print"
@@ -17,9 +14,7 @@
 		></p>
 	</hgroup>
 	<section class="intro">
-		<p
-			@html="markdown($data.course.logistics.school)"
-		></p>
+		<p @html="markdown($data.course.logistics.school)"></p>
 		<p
 			@html="markdown($data.course.logistics.fall)"
 			class="fall"
@@ -28,11 +23,8 @@
 			@html="markdown($data.course.logistics.spring)"
 			class="spring"
 		></p>
-		<p
-			@html="markdown($data.course.logistics.room)"
-		></p>
-		<p
-			@html="markdown($data.course.logistics.time)"
-		></p>
+		<p @html="markdown($data.course.logistics.room)"></p>
+		<p @html="markdown($data.course.logistics.time)"></p>
 	</section>
+	<!-- TODO Add instructors! -->
 </header>
