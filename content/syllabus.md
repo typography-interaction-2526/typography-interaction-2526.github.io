@@ -367,7 +367,7 @@ We will use the following tools to organize our class:
 
 This agreement is intended to help us create and maintain a safe, empathetic, and productive space for our course. It is built on trust and accumulated experience across cohorts. It can be revised and modified, with all of our input, over the year:
 
-- Classmates should use our [preferred names and pronouns](/class).
+- Classmates should use our <a :href="`${pkg.homepage}/class`">preferred names and pronouns</a>.
 
 - We will have a short break, roughly halfway through the class.
 
@@ -381,7 +381,7 @@ This agreement is intended to help us create and maintain a safe, empathetic, an
 
 - For Fall semester, we’re not going to use LLM agents/autocomplete (“artificial intelligence”), nor traditional copy/pasting, nor any other tools where we do not write our own code. We will talk through appropriate, allowed use of these technologies in the Spring. <!-- .print--break -->
 
-- We will always [attribute](#attribution) our work when referencing others, tools, or examples.
+- We will always <a :href="`${pkg.homepage}/syllabus/#attribution`">attribute</a> our work when referencing others, tools, or examples.
 
 <aside class="screen">
 
