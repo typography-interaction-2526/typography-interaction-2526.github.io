@@ -1,3 +1,6 @@
+<script>
+	// TODO JS to prepend full-URL links on print.
+</script>
 <header
 	webc:root="override"
 	class="print"
