@@ -182,9 +182,9 @@ details[open] { --icon: '-' }
 
 	/* With additional text after (Markdown adds the `br`). */
 	&:has(> br) {
-		margin-block-end: 1rcap;
+		padding-block-end: 1rcap;
 
-		/* Push the additional text back down to the (half) baseline. */
+		/* “Push” the additional text back down to the (half) baseline. */
 		> :where(a:has(> cite)) { margin-block-end: calc(1cap - 2rcap) }
 	}
 }
