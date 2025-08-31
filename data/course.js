@@ -20,7 +20,7 @@ export default {
 		time:   'Fridays, 9–11:40am',
 	},
 	syllabus: {
-		fall:   '',
+		fall:   '/assets/PMCD_5001_F25.pdf',
 		spring: '',
 	},
 	terms: {
