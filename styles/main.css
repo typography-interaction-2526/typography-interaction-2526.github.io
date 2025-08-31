@@ -74,7 +74,7 @@ main {
 		grid-template-columns: subgrid;
 	}
 
-	section:where(:not(:first-child, header.print + section)) {
+	section:where(:not(:first-child)) {
 		&:where(:has(> hgroup > h2)) {
 			margin-block-start: 4rlh;
 

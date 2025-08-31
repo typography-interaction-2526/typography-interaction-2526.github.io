@@ -58,7 +58,7 @@
 
 		/* Dividers. */
 		&::before,
-		&:has(+ main)::after {
+		&:has(~ main)::after {
 			background-color: var(--color);
 			block-size:       var(--stroke);
 			content:          '';
