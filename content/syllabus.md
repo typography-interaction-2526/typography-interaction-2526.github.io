@@ -8,7 +8,7 @@
 <em @text="course.title"></em> is a year-long course, divided into two classes, which will provide a rigorous foundation of typographic and interaction principles in the context of digital design. Over both classes, students will acquire and hone the skills they need for success in the field of interactive design.
 <!-- .intro -->
 
-### Fall <!-- .fall -->
+### Fall <!-- .fall .print--break -->
 
 This first semester will focus on a mastery of type and layout concepts on the web.
 <!-- .intro -->
@@ -32,13 +32,13 @@ Interaction, interactive, interface, product, UI, UX designers—we are known by
 
 - <a :href="course.syllabus.spring"><cite>Submitted Version</cite></a>
 - <a :href="course.catalog.spring"><cite>Course Catalog</cite></a>
-<!-- .right .rows--2 -->
+<!-- .right .rows--2 .screen -->
 
 Contemporary digital design exists in the continuum of the ever-shifting, evolving, and ubiquitous web. Designers today work at many different scales and within many different systems. We act as mediators—not only for users, meaning, and experience—but with these systems themselves, as well. They shape our work and we shape them—at the meeting point, the *interface*, between things.
 
 In this class, students will learn to give form to and then work at these intersections. We will again use web technologies as our lens for the subject, building on our foundations in HTML and CSS by incorporating JS (*JavaScript*)—to give behavior, interaction, and life to our designs. We will survey modern approaches to front-end design and development, as our discipline has as many methodologies as we do names. There is no one way to do this work, nor one thing to do it for—and through our readings, discussions, exercises, and projects, students will understand and then situate themselves and their practice within the larger field.
 
-## Learning Outcomes
+## Learning Outcomes <!-- .print--break -->
 
 ### Fall <!-- .fall -->
 
@@ -78,7 +78,7 @@ By the end of this semester, students will:
 - Develop an understanding of how they want to practice as a designer within the larger context of the discipline.
 <!-- .balance -->
 
-## Course Outline
+## Course Outline <!-- .print--break -->
 
 The course is structured into thematic units, each bookended by readings on the subject and a project that will demonstrate the material:
 <!-- .intro -->
@@ -99,7 +99,7 @@ We will focus on reviewing the core principles of typography, and introduce the 
 	Beatrice Warde, 1932
 
 - [<cite>Detail in Typography</cite>](https://static.trogu.com/documents/articles/palgrave/references/hochuli-Jost-H-Detail-in-Typography%20scribd%20-%2064-page.pdf)
-	Jost Hochuli, 1987
+	Jost Hochuli, 1987 <!-- .print--break -->
 
 - [<cite>The Elements of Typographic Style</cite>](https://readings.design/PDF/the_elements_of_typographic_style.pdf)
 	Robert Bringhurst, 1992
@@ -117,7 +117,7 @@ Students will choose a seminal design text from [readings.design](https://readin
 We’ll be looking for the quality of responses, appropriate type selection and hierarchy, semantic HTML, and basic CSS.
 <!-- .note -->
 
-### Unit Nº 2: *There Is No Perfect Layout* <!-- .fall -->
+### Unit Nº 2: *There Is No Perfect Layout* <!-- .fall .print--break -->
 
 #### Weeks 7–10
 
@@ -140,7 +140,7 @@ Students will learn how to design and implement more complex, flexible layouts, 
 - [<cite>The Diminishing Marginal Value of Aesthetics</cite>](https://subpixel.space/entries/diminishing-marginal-aesthetic-value/)
 	Toby Shorin, 2017
 
-#### Project Nº 2: *Spread*
+#### Project Nº 2: *Spread* <!-- .print--break -->
 
 This unit concludes with Project 2, *Spread*, which students will present on October 31.
 <!-- .pretty -->
@@ -165,7 +165,7 @@ In our final Fall unit, we will focus on creating advanced, multi-page layouts w
 	Mitchell Kapor, 1990
 
 - [<cite>Typeface As Programme</cite>](https://www.typotheque.com/articles/typeface_as_programme)
-	Jürg Lehni, 2011
+	Jürg Lehni, 2011 <!-- .print--break -->
 
 - [<cite>Interface Writing: Code for Humans</cite>](https://www.nicolefenton.com/interface-writing/)
 	Nicole Fenton, 2014
@@ -286,7 +286,7 @@ Students will identify a problem and conceptualize how to solve it on the web. T
 We’ll first be looking for strong concepts—not limited to or by existing conventions—that push the grain of interaction design in new and interesting directions. And as the capstone for this course, we’re expecting the highest level of nuance and polish in the organizational, aesthetic, and technical aspects of these final projects.
 <!-- .note -->
 
-## Evaluation Criteria
+## Evaluation Criteria <!-- .print--break -->
 
 ### Engagement
 
@@ -298,7 +298,7 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 
 	Each unit begins with a set of readings to introduce the subject. Students are expected to read the required selections and synthesize their thoughts in a written response, prior to the next class. We are not looking for summarization, here—these should be personal reflections on the subjects, and are evaluated with this lens. We will then discuss these readings as a group.
 
-### Quizzes, Exercises, Milestones
+### Quizzes, Exercises, Milestones <!-- .print--break -->
 
 	Each unit will also have short quizzes on topic material, and specific, technical exercises and milestones that are assigned towards completion of the projects. Quizzes will occur in the class following new material; assignments are expected to be completed outside of class, before the next session. Some of these will be small; some of these will be large. They are *all* evaluated for completion and quality.
 
@@ -308,7 +308,7 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 
 	There will be check-ins and reviews around each of these before the final due dates, when we will have critiques as a group. In addition to the quality of the project itself, students will be subject to an in-person code review and will also be assessed on the presentation of their work. More specific evaluation criteria will be delineated with each project’s introduction.
 
-## Grade Calculation
+## Grade Calculation <!-- .print--break -->
 
 ### Fall <!-- .fall -->
 
@@ -338,7 +338,7 @@ In the open tradition of the early web, the only materials truly required are a 
 In class, we will demonstrate using [Figma](http://figma.com) for visual design and sketching, [Visual Studio Code](https://code.visualstudio.com) for programming, and [GitHub](https://github.com)/[GitHub Desktop](https://desktop.github.com) for version control and project hosting. All of these products are available for free, or offer free education licenses with New School emails.
 
 We will use the following tools to organize our class:
-<!-- .intro -->
+<!-- .intro .print--break -->
 
 - <a :href="pkg.homepage"><cite>Course Site</cite></a>
 	For housekeeping, agendas, and lectures <span class="screen">(you are here)</span>
@@ -361,7 +361,7 @@ We will use the following tools to organize our class:
 - <a :href="course.channel.zoom"><cite>Zoom Room</cite></a>
 	For screen sharing and recording
 
-## Class Policies
+## Class Policies <!-- .print--break -->
 
 ### Our Community
 
@@ -379,7 +379,7 @@ This agreement is intended to help us create and maintain a safe, empathetic, an
 
 - We will all engage meaningfully with presented work and try to give constructive feedback (no fluff).
 
-- For Fall semester, we’re not going to use LLM agents/autocomplete (“artificial intelligence”), nor traditional copy/pasting, nor any other tools where we do not write our own code. We will talk through appropriate, allowed use of these technologies in the Spring.
+- For Fall semester, we’re not going to use LLM agents/autocomplete (“artificial intelligence”), nor traditional copy/pasting, nor any other tools where we do not write our own code. We will talk through appropriate, allowed use of these technologies in the Spring. <!-- .print--break -->
 
 - We will always [attribute](#attribution) our work when referencing others, tools, or examples.
 
@@ -401,7 +401,7 @@ We will have limited availability outside of our class time, and won’t keep sc
 
 That said: if there are still questions—particularly logistical or content ones—students can message us on <a :href="course.channel.slack">Slack</a>, and we will respond when we can. But again this should never be a bottleneck; all of this works better when not done at the last minute.
 
-### Additional Technical Help
+### Additional Technical Help <!-- .print--break -->
 
 For more specific technical instruction and questions, Parsons has dedicated CD-program tutors available to help students with HTML, CSS, and JavaScript—as well as offering general design critiques and feedback. They should be available midway through Fall semester, and usually have drop-in schedules. More info will be provided as available.
 
@@ -446,7 +446,7 @@ Copying, pasting, or autocompleting code in the absence of an attribution and ex
 
 </aside>
 
-### LLM<span style="text-transform: initial">s</span> and “Artificial Intelligence”
+### LLM<span style="text-transform: initial">s</span> and “Artificial Intelligence” <!-- .print--break -->
 
 Relatedly, there has been much discussion and developments in our field (and others) around [*large language models*](https://en.wikipedia.org/wiki/Large_language_model), a.k.a. “artificial intelligence.”
 
@@ -458,7 +458,7 @@ We think you first need to write code yourself to understand the medium. Copying
 
 We will take recordings of our sessions for students to reference later. As these will include the students and their work, the recordings will be stored on our <a :href="course.channel.google">Google Drive</a> and made available only to New School email users.
 
-## Attendance, Grading, and Other Policies
+## Attendance, Grading, and Other Policies <!-- .print--break -->
 
 All CD classes adhere to the same [common program and university policies](https://docs.google.com/document/d/1Su2tPo8ZW-EUVQ8svhCEDHYyKi93ugLLB2h8gc86Eoc).
 <!-- .pretty -->

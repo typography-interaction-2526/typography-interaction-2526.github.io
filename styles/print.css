@@ -1,10 +1,9 @@
 @page {
-	margin:  0;
-	padding: 1in 0;
+	margin:  1in 0;
 	size:    letter;
 }
 
-@page :first { padding: 0 }
+@page :first { margin: 0 }
 
 :root {
 	--size--root: 16;
@@ -22,10 +21,21 @@
 			background-color: var(--background);
 			text-wrap:        pretty;
 
-
 			/* Toggles. */
 			.screen { display: none }
 			.print  { display: block }
+
+			/* Pagination. */
+			.print--break {
+				break-before:       page;
+				margin-block-start: calc(var(--stroke) / 2);
+
+				/* Don’t double-up. */
+				> hgroup > .print--break { break-before: initial }
+
+				/* Fix negative going to previous page. */
+				&:where(li) a:has(cite) { margin-block-start: initial }
+			}
 
 			/* Syllabus stuff. */
 			> header.print {
@@ -88,7 +98,7 @@
 
 					display:               grid;
 					grid-template-columns: minmax(auto, max-content);
-					margin-block-start:    1in;
+					margin-block-start:    5rcap;
 					row-gap:               3rcap;
 
 					span {
