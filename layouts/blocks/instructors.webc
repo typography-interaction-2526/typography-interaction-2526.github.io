@@ -1,0 +1,21 @@
+<ul
+	webc:keep
+	webc:root="override"
+>
+	<li
+		webc:for="instructor, index of $data.pkg.contributors"
+		:class="index === 1 ? 'fall' : index === 2 ? 'spring' : ''"
+	>
+		<p>
+			<a :href="instructor.url">
+				<cite @text="instructor.name"></cite>
+			</a>
+			<span class="print">
+				<a
+					:href="`mailto:${instructor.email}`"
+					@text="instructor.email"
+				></a>
+			</span>
+		</p>
+	</li>
+</ul>

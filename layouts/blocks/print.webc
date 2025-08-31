@@ -29,5 +29,5 @@
 		<p @html="markdown($data.course.logistics.room)"></p>
 		<p @html="markdown($data.course.logistics.time)"></p>
 	</section>
-	<!-- TODO Add instructors! -->
+	<block webc:import="instructors.webc"></block>
 </header>

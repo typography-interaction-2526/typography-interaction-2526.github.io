@@ -9,6 +9,16 @@
 			"name": "Michael Fehrenbach",
 			"url": "https://michaelfehrenbach.com",
 			"email": "mfehrenbach@newschool.edu"
+		},
+		{
+			"name": "Rijk van Zanten",
+			"url": "https://rijk.nyc",
+			"email": "vanzr998@newschool.edu"
+		},
+		{
+			"name": "Eric Li",
+			"url": "https://eric.young.li",
+			"email": "lie@newschool.edu"
 		}
 	],
 	"scripts": {
