@@ -5,17 +5,20 @@
 
 <style>
 	div {
-		grid-column:    left;
+		grid-column:           left;
+		grid-template-columns: minmax(auto, max-content);
+
+		> button { inline-size: initial }
 
 		> p { margin-block-start: initial }
 	}
 
 	#students {
-		column-gap:            var(--alley);
-		display:               grid;
-		grid-auto-flow:        column;
-		grid-column:           three / six;
-		grid-template-rows:    repeat(calc(var(--count) / var(--rows, 1)), min-content);
+		column-gap:         var(--alley);
+		display:            grid;
+		grid-auto-flow:     column;
+		grid-column:        three / six;
+		grid-template-rows: repeat(calc(var(--count) / var(--rows, 1)), min-content);
 
 		@media (width >= 30em) {
 			--rows: 2;
