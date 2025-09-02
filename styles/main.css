@@ -25,18 +25,19 @@ main {
 			--size:   var(--size--h2);
 			--weight: 500;
 
-			grid-column:      all;
-			margin-block-end: 2rlh;
+			grid-column: all;
+
+			+ * { margin-block-start: 2rlh }
 		}
 
 		&:has(> h3) {
 			--size:   var(--size--h3);
 			--weight: 700;
 
-			margin-block-end: 1rlh;
-
 			/* Back on the baseline. */
 			> h3 { margin-block-start: calc(1rcap - 1cap) }
+
+			+ * { margin-block-start: 1rlh }
 		}
 
 		&:has(> h4) {
@@ -47,8 +48,6 @@ main {
 
 			/* TODO Down in size? */
 		}
-
-		+ section { margin-block-start: initial }
 
 		/* TODO Come back to these! */
 		> a { display: none }
@@ -110,7 +109,7 @@ main {
 		&:where(:not([class]), :not(:where([class]:not(.balance)))) {
 			margin-block-start: 1lh;
 
-			&:where(:not(:last-child)) { margin-block-end: 1lh }
+			&:where(:not(:last-child)) + * { margin-block-start: 1rlh }
 		}
 
 		/* Not “tag” lists. */
@@ -189,8 +188,7 @@ main {
 
 	/* TODO More structure here! */
 	details {
-		&:where(:not(:first-child)) { margin-block-start: 1rlh }
-		&:where(:not(:last-child))  { margin-block-end:   1rlh }
+		&:where(:not(:first-child)), &:where(:not(:last-child)) + * { margin-block-start: 1rlh }
 
 		&[open]::details-content {
 			--size:   var(--size--h2);
@@ -228,15 +226,14 @@ main {
 		position:              relative;
 		row-gap:               1rlh;
 
-		&:where(:not(:first-child)) { margin-block-start: 2rlh }
-		&:where(:not(:last-child))  { margin-block-end:   2rlh }
+		&:where(:not(:first-child)), &:where(:not(:last-child)) + * { margin-block-start: 2rlh }
 
 		+ :where(figure) { margin-block-start: initial }
 
 		> figcaption {
 			align-items:       baseline;
 			display:           flex;
-			gap:               3rcap;
+			gap:               1rlh;
 			padding-block-end: calc(1rlh - 1rcap);
 
 			/* TODO Move/consolidate this with `links` one! */
@@ -284,8 +281,7 @@ main {
 		row-gap:          inherit;
 		text-align:       center;
 
-		&:where(:not(:first-child)) { margin-block-start: 2rlh }
-		&:where(:not(:last-child))  { margin-block-end:   2rlh }
+		&:where(:not(:first-child)), &:where(:not(:last-child)) + * { margin-block-start: 2rlh }
 
 		> p:has(mark) {
 			--weight:  700;
@@ -311,8 +307,7 @@ main {
 		row-gap:     3rlh;
 		text-wrap:   balance;
 
-		&:where(:not(:first-child)) { margin-block-start: 2rlh }
-		&:where(:not(:last-child))  { margin-block-end:   2rlh }
+		&:where(:not(:first-child)), &:where(:not(:last-child)) + * { margin-block-start: 2rlh }
 
 		&:has(+ p > a > cite) { margin-block-end: 1rlh }
 
@@ -321,9 +316,10 @@ main {
 			--size:   initial;
 			--weight: 700;
 
-			color:          var(--color);
-			grid-column:    aside;
-			text-transform: uppercase;
+			color:              var(--color);
+			grid-column:        aside;
+			margin-block-start: 1rlh;
+			text-transform:     uppercase;
 
 			> a:has(cite) {
 				--block: 1ex;
@@ -340,7 +336,7 @@ main {
 				}
 			}
 
-			&:not(:last-child) { margin-block-end: 2rlh }
+			&:where(:not(:last-child)) + * { margin-block-start: 2rlh }
 		}
 	}
 
