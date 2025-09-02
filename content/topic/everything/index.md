@@ -320,7 +320,7 @@ Even this very course site is (mostly) static HTML and CSS—but it is compiled 
 
 In the coming year we are going to dive properly into HTML, CSS, and JS–the *fabric* of web pages.
 
-Let’s try to also think of these—more conceptually and semantically—as *content*, *form*, and *function*. (Or in another way, *skeleton*, *skin*, and *muscles.*) This ordering or *layering* of responsibilities is often called *progressive enhancement*. The semantic content (HTML) forms the foundation on which you can layer the form (CSS) and functionality (JS).
+Let’s try to also think of these—more conceptually and semantically—as *content*, *form*, and *function*. (Or in another way, *skeleton*, *skin*, and *muscles.*) This ordering or *layering* of responsibilities is often called *progressive enhancement*. The semantic content (HTML) forms the foundation on which you can layer the form (CSS) and functionality (JS).
 
 With this understanding, the same model exists in nearly all software. (For example, [*Resources*, *Views*, and *States*](https://developer.apple.com/tutorials/app-dev-training/#swiftui-essentials) in Mac/i&NoBreak;OS development, though the lines are being blurred.) So we can say that software that hasn’t yet been eaten by web technologies is often still *web-like*. And the web is likely coming for them, eventually.
 

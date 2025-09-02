@@ -325,10 +325,13 @@ main {
 		--size:    var(--size--h2);
 		--weight:  500;
 
-		display:     grid;
-		grid-column: aside;
-		row-gap:     3rlh;
-		text-wrap:   balance;
+		display:             grid;
+		grid-column:         aside;
+		row-gap:             3rlh;
+		text-wrap:           balance;
+
+		/* Back on baseline. */
+		> *:first-child { margin-block-start: calc(1cap - 1rcap) }
 
 		&:where(:not(:first-child)), &:where(:not(:last-child)) + * { margin-block-start: 2rlh }
 
