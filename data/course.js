@@ -21,7 +21,7 @@ export default {
 	},
 	syllabus: {
 		fall:   '/assets/PMCD_5001_F25.pdf',
-		spring: '',
+		spring: '/assets/PMCD_5002_S25.pdf',
 	},
 	terms: {
 		fall:   'Fall ’25',

@@ -93,11 +93,13 @@ summary {
 button,
 summary,
 a:where(:has(> cite)) {
-	--block:   1cap;
-	--inline:  1cap;
-	--leading: 1rlh;
-	--size:    var(--size--note);
-	--weight:  700;
+	--block:       1cap;
+	--inline:      1cap;
+	--leading:     1rlh;
+	--size:        var(--size--note);
+	--weight:      700;
+	--gap:         2cap;
+	--icon--width: 0.85em;
 
 	inline-size: fit-content;
 
@@ -129,13 +131,26 @@ a:where(:has(> cite)) {
 
 	/* TODO Consolidate these! */
 	> cite {
-		--gap:         2cap;
-		--icon--width: 0.85em;
-
 		position: relative;
 
 		&::after {
-			content:           var(--icon, ' ↓');
+			content:           var(--icon, '↓');
+			inset-block-start: var(--block);
+			inset-inline-end:  calc(var(--inline) - var(--right));
+			position:          absolute;
+			text-box:          trim-both cap alphabetic;
+		}
+	}
+
+	&:where(summary, button) {
+		--gap: 1cap;
+
+		-webkit-user-select: none;
+		user-select:         none;
+
+		/* `before` to not foul link tap area. */
+		&::before {
+			content:           var(--icon);
 			inset-block-start: var(--block);
 			inset-inline-end:  calc(var(--inline) - var(--right));
 			position:          absolute;
@@ -144,37 +159,18 @@ a:where(:has(> cite)) {
 	}
 
 	&:where(summary) {
-		--gap:         1cap;
+		--icon:        '+';
 		--icon--width: 0.75em;
-
-		-webkit-user-select: none;
-		user-select:         none;
-
-		/* To not foul the tap area. */
-		&::before {
-			content:           var(--icon, '+');
-			inset-block-start: var(--block);
-			inset-inline-end:  calc(var(--inline) - var(--right));
-			position:          absolute;
-			text-box:          trim-both cap alphabetic;
-		}
 	}
 
 	&:where(button) {
-		--gap:         1cap;
+		--icon:        '🔀';
 		--icon--width: 1em;
-
-		&::before {
-			content:           var(--icon, '🔀');
-			inset-block-start: var(--block);
-			inset-inline-end:  calc(var(--inline) - var(--right));
-			position:          absolute;
-			text-box:          trim-both cap alphabetic;
-		}
 	}
 
 	&:where([href]:not([href^='/'])) {
-		--icon: ' →';
+		--icon:        '→';
+		--icon--width: 1em;
 
 		> cite {
 			background-color: var(--color);
@@ -182,11 +178,13 @@ a:where(:has(> cite)) {
 		}
 	}
 
-	/* TODO Other link types? Draw some Gorton glyphs. */
+	&:where([href$='.pdf']) {
+		--icon:        '⤓';
+		--icon--width: 1em;
+	}
 }
 
-/* TODO Redraw these! */
-details[open] { --icon: '-' }
+details[open] :where(summary) { --icon: '−' }
 
 :is(li, p:only-child):where(:has(> a > cite)) {
 	padding-block-start: calc(1rcap - 1cap); /* Back on baseline. */
