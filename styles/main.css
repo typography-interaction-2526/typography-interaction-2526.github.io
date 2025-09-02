@@ -260,6 +260,29 @@ main {
 			max-block-size: var(--height, round(80svh, 1rcap));
 		}
 
+		iframe {
+			aspect-ratio: var(--aspect-ratio, 16/9);
+			block-size:   100vh;
+
+			/* Embedded session video/recordings. */
+			&[src^="https://drive.google.com/file/"][src$="/preview"] {
+				background-color: var(--highlight);
+
+				+ figcaption::after {
+					color:    var(--note);
+					content:  'You’ll need to be signed in to your New School account to see these in-page.';
+					text-box: trim-both cap alphabetic;
+				}
+
+				/* Hide it in Safari. */
+				@supports (font: -apple-system-body) {
+					display: none;
+
+					+ figcaption::after { content: 'Safari prevents Google Drive embeds—so you’ll need to go to the originals.' }
+				}
+			}
+		}
+
 		&.multiply { img, object, iframe { mix-blend-mode: multiply } }
 
 		/* TODO Shorthand classes for lines? Or specify units directly? */
