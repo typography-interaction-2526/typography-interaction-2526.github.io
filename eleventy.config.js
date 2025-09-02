@@ -94,6 +94,7 @@ export default (eleventyConfig) => {
 		.use(markdownItDeflist)
 		.use(markdownItHeaderSections)
 		.use(markdownItAnchor, {
+			// TODO This has broken `abbr` in headings?
 			permalink: markdownItAnchor.permalink.linkAfterHeader({
 				assistiveText: (title) => `“${title}”`,
 				class: '',
