@@ -34,6 +34,21 @@
 		<main>
 			<!-- TODO Come back to this! -->
 			<!-- <block webc:import="toc.webc"></block> -->
+			<hgroup webc:if="$data.video">
+				<h2
+					id="session-recording"
+					tabindex="-1"
+				>Session Recording</h2>
+				<a
+					aria-labelledby="session-recording"
+					href="#session-recording"
+				>#</a>
+			</hgroup>
+			<figure
+				webc:if="$data.video"
+				:citation="`https://drive.google.com/file/d/${$data.video}`"
+				:source="`https://drive.google.com/file/d/${$data.video}/preview`"
+			></figure>
 			<template
 				webc:nokeep
 				@html="content"
