@@ -38,7 +38,9 @@
 				<h2
 					id="session-recording"
 					tabindex="-1"
-				>Session Recording</h2>
+				>
+					Session Recording
+				</h2>
 				<a
 					aria-labelledby="session-recording"
 					href="#session-recording"

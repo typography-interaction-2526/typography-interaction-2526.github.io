@@ -132,7 +132,7 @@ main {
 		}
 
 		/* “Tight” lists. */
-		&:where(:not(:has(li > p))) { row-gap: 1rcap }
+		&:where(:not(:has(li > p, a > cite))) { row-gap: 1rcap }
 
 		/* More vertical space when the items have multiple paragraphs. */
 		&:where(:has(:where(dt, li) > p:not(:only-child))) {
