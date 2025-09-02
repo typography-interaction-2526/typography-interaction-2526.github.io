@@ -162,6 +162,7 @@ main {
 			content:           counters(index, '.') '.';
 			counter-increment: index;
 			inline-size:       1em;
+			inset-block-start: 0;
 			inset-inline-end:  100%;
 		}
 
