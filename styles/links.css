@@ -160,6 +160,19 @@ a:where(:has(> cite)) {
 		}
 	}
 
+	&:where(button) {
+		--gap:         1cap;
+		--icon--width: 1em;
+
+		&::before {
+			content:           var(--icon, '🔀');
+			inset-block-start: var(--block);
+			inset-inline-end:  calc(var(--inline) - var(--right));
+			position:          absolute;
+			text-box:          trim-both cap alphabetic;
+		}
+	}
+
 	&:where([href]:not([href^='/'])) {
 		--icon: ' →';
 
