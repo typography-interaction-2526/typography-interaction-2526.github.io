@@ -106,10 +106,12 @@ main {
 
 	/* Lists, lists, lists. */
 	:is(dl, ol, ul) {
-		margin-block-start: 1lh;
+		/* Extra spacing around loosies. */
+		&:where(:not([class]), :not(:where([class]:not(.balance)))) {
+			margin-block-start: 1lh;
 
-		&:where(:not(:last-child)) { margin-block-end: 1lh }
-
+			&:where(:not(:last-child)) { margin-block-end: 1lh }
+		}
 
 		/* Not “tag” lists. */
 		&:where(:not(:has(> li > a > cite, > li > p:only-child > a > cite))) {
@@ -128,6 +130,9 @@ main {
 				}
 			}
 		}
+
+		/* “Tight” lists. */
+		&:where(:not(:has(li > p))) { row-gap: 1rcap }
 
 		/* More vertical space when the items have multiple paragraphs. */
 		&:where(:has(:where(dt, li) > p:not(:only-child))) {
@@ -380,7 +385,7 @@ main {
 
 		&:not(:where(:first-child)) { margin-block-start: 1rlh }
 
-		+ * { margin-block-start: 2rlh }
+		+ * { margin-block-start: 1rlh }
 
 		/* TODO `aria-label` instead? */
 	}
@@ -424,6 +429,7 @@ main {
 	}
 
 	.intro  { grid-column: intro } /* Up top to be cascaded over. */
+	.body .intro { grid-column: initial } /* Override for nested. */
 
 	.all    { grid-column: all }
 	.aside  { grid-column: aside }
