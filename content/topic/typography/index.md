@@ -51,6 +51,16 @@ Dürer examined Roman letterforms and attempted to create a rational system for 
 	>
 </figure>
 
+<aside>
+
+<mark>Caution: Typically Euro-centric</mark>
+
+Our discussion of typesetting here is within a narrow European (and subsequently American) tradition. The norms, conventions, and rules will be different, [outside of that lens](https://en.wikipedia.org/wiki/History_of_printing_in_East_Asia)—and we recognize we have a limited ability to speak to other paradigms.
+
+We encourage students to bring their own experience in this area—introducing us all to other typographic forms, customs, and traditions.
+
+</aside>
+
 ## The First Typefaces
 
 <figure
@@ -214,11 +224,17 @@ However, while vector files are infinitely scalable, the medium on which they ar
 
 A typeface has distinct characteristics and properties that make it unique from other typefaces. Beyond the visual manifestation of each glyph, typefaces contain metrics that aren’t visible, such as *kerning*.
 
-<details @summary="What Is the Difference Between a Typeface and a Font?">
+<details class="balance">
 
-A *typeface* is a *font family*—a collection of fonts based on the same design.
+<summary>
 
-The term *font* is mostly used for a single style such as *Helvetica Neue Bold*.
+What Is the Difference Between a Typeface and a Font?
+
+</summary>
+
+A *typeface* is a *font family*—a collection of fonts based on the same design.
+
+The term *font* is mostly used for a single style such as *Gorton Digital Medium*.
 
 </details>
 
@@ -226,32 +242,38 @@ The term *font* is mostly used for a single style such as *Helvetica Neue Bold*.
 	@caption="More typeface anatomy!"
 	@citation="https://material.io/design/typography/understanding-typography.html"
 	@source="material-typeface.png"
-	class="multiply"
+	class="gray multiply"
 	style="--lines: 13"
 	>
 </figure>
 
 Broadly, we’ll refer to several main styles of typefaces:
 
-<span style="font-family: serif">Serifs</span>
+<span style="--size: var(--size--h2); font-family: serif">Serifs</span>
 
 : These have small lines (*serifs*) attached to the ends of letters
 
-Sans Serifs
+<span style="--size: var(--size--h2); font-family: sans-serif">Sans Serifs</span>
 
 : Without these lines (like this site)
 
-<span style="font-family: monospace">Monospace</span>
+<span style="--size: var(--size--h2); font-family: monospace">Monospace</span>
 
-: All characters the same width (as in code)
+: All characters the same width (as in `code`)
 
-<span style="font-family: fantasy">Decorative</span>
+<span style="--size: var(--size--h2); font-family: fantasy">Decorative</span>
 
-: <span class="secondary">…everything else (be careful)</span>
+: …everything else (be careful)
 
 While there are distinct [subfamilies within](https://www.fonts.com/content/learning/fontology/level-1/type-anatomy/type-classifications) each of these, our selection of a typeface from one of these particular styles already conveys significant meaning.
 
-<details @summary="What Are Things to Consider When Picking a Typeface?" class="add-after">
+<details>
+
+<summary>
+
+What Are Things to Consider When Picking a Typeface?
+
+</summary>
 
 - Readability
 
@@ -292,11 +314,18 @@ While there are distinct [subfamilies within](https://www.fonts.com/content/lear
 
 <aside>
 
-It is worth noting here that our discussion of typesetting is within a narrow European (and subsequently American) tradition. The norms, conventions, and rules will be different, [outside of that lens](https://en.wikipedia.org/wiki/History_of_printing_in_East_Asia)—and we recognize we have a limited ability to speak to other paradigms.
+<mark>Your medium always informs your typography!</mark>
 
-We encourage students to bring their own experience in here—introducing us all to other typographic forms, customs, and traditions.
+Our course site this year is set in *Gorton*—one common name for [a vernacular family](https://aresluna.org/the-hardest-working-font-in-manhattan/) informed (like all type) by its original medium—in this case, machined/milled/routed metal.
 
 </aside>
+
+<figure
+	@caption="A *Gorton* pantograph in action."
+	@source="https://www.youtube.com/embed/OKaczEUNGeQ"
+	class="aside"
+	>
+</figure>
 
 ## Typesetting and Layout
 

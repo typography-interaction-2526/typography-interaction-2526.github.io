@@ -160,20 +160,28 @@ main {
 		}
 	}
 
+	dl {
+		row-gap: inherit;
+
+		> dt:where(:not(:first-of-type)) { margin-block-start: 1rlh }
+	}
+
 	/* TODO More structure here! */
 	details {
+		display: grid;
+		row-gap: inherit;
+
 		&:where(:not(:first-child)), &:where(:not(:last-child)) + * { margin-block-start: 1rlh }
 
 		&[open]::details-content {
 			--size:   var(--size--h2);
 			--weight: 500;
-
-			display:            grid;
-			margin-block-start: 2rlh;
-			row-gap:            inherit;
-
-			> p { margin-block-start: calc(1cap - 1rcap) }
 		}
+
+		/* TODO Baseline grid is off, here. */
+		> p:first-of-type { margin-block-start: calc(1cap - 1rcap) }
+
+		> ul { row-gap: 1rlh }
 	}
 
 	/* Tables for the grade breakdown. */
@@ -229,7 +237,8 @@ main {
 		iframe {
 			--height: calc(var(--lines) * 1rlh - 1rcap);
 
-			max-block-size: var(--height, round(80svh, 1rcap));
+			max-block-size:  var(--height, round(80svh, 1rcap));
+			max-inline-size: 100%;
 		}
 
 		iframe {
@@ -256,6 +265,7 @@ main {
 		}
 
 		&.multiply { img, object, iframe { mix-blend-mode: multiply } }
+		&.gray     { img, object, iframe { filter: saturate(0) } }
 
 		/* TODO Shorthand classes for lines? Or specify units directly? */
 	}
@@ -304,6 +314,8 @@ main {
 
 		/* Back on baseline. */
 		> *:first-child { margin-block-start: calc(1cap - 1rcap) }
+
+		> ol { row-gap: 1rlh }
 
 		&:where(:not(:first-child)), &:where(:not(:last-child)) + * { margin-block-start: 2rlh }
 
