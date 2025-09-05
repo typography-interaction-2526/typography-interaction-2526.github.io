@@ -155,7 +155,9 @@ main {
 	/* More space above these when they aren’t manually in-columns. */
 	ul,
 	*:where(:not(li)) > p {
-		&:where(:has(a > cite):not([class])) { margin-block-start: 1rlh }
+		&:where(:has(a > cite):not([class])) {
+			&:where(:not(:first-child)), &:where(:not(:last-child)) + * { margin-block-start: 1rlh }
+		}
 	}
 
 	/* TODO More structure here! */
