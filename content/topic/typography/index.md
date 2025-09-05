@@ -321,7 +321,7 @@ Our course site this year is set in *Gorton*—one common name for [a vernacula
 </aside>
 
 <figure
-	@caption="A *Gorton* pantograph in action."
+	@caption="A *Gorton* pantograph milling machine in action."
 	@source="https://www.youtube.com/embed/OKaczEUNGeQ"
 	class="aside"
 	>
@@ -354,15 +354,15 @@ We can use differing *type sizes* to distinguish between headings and body text.
 But the literal size is not our only tool. Another way we can distinguish copy within a document is by making use of *weights*—varying the thickness of the stroke. Good typefaces usually come in a range of weights to facilitate our designs—at the very least a *regular* (or *roman*), *bold*, and *italic* weight. Nowadays, [variable typefaces](https://v-fonts.com) allow us to pick and choose the exact weight combinations that we need.
 
 <figure
-	@caption="An example of how type color informs hierarchy. We’re guessing you went to the yellow, first."
+	@caption="An example of how type color informs hierarchy. We’re guessing you went to the red, first."
 	@source="type-color.svg"
 	class="multiply"
 	>
 </figure>
 
-We can also use *color* as a visual element to distinguish our content. Above, we keep the type the same in both the heading and body text. But using only color, we are still able to set the heading apart.
+We can also use *color* as a visual element to distinguish our content. Above, we keep the type the same in both the heading and body text. But using only color, we are still able to set the heading apart.
 
-Many of these principles of hierarchy are come from the [*Principles of Gestalt*](https://g-e-s-t-a-l-t.org/media/pdf/Investigations-on-Gestalt-Principles.pdf)—creating associations out of form. These principles [have become systematized](https://lawsofux.com/en/) in interactive work.
+Many of these principles of hierarchy are come from the [*Principles of Gestalt*](https://g-e-s-t-a-l-t.org/media/pdf/Investigations-on-Gestalt-Principles.pdf)—creating associations out of form. (These, in turn, are buried deep in our evolutionary history.) These principles [have become systematized](https://lawsofux.com/en/) in interactive work.
 
 ### Leading
 
@@ -407,7 +407,7 @@ To avoid *bad rags*, we can make sure that the type size of a container is not t
 
 We should avoid orphans and widows through proper ragging, making sure that type sizes aren’t too large for a container, and making use of the [non-breaking space](https://en.wikipedia.org/wiki/Non-breaking_space) character, which makes sure there is not a line-break between two words.
 
-We should also always *wrap* some words together (for example, *September 6*, or *van Zanten*), for ease of reading.
+We should also always *wrap* some words together (for example, *September 5*, or *van Zanten*), for ease of reading.
 
 ### Punctuation
 
@@ -415,25 +415,30 @@ It is also our job to make sure that we properly use punctuation—so it is in s
 
 Various dashes are a [very common mistake](https://www.merriam-webster.com/words-at-play/em-dash-en-dash-how-to-use). *Hyphens* (-) are different than <nobr>*en-dashes* (–)</nobr> are different than <nobr>*em-dashes* (—).</nobr> We use hyphens to separate and break words, <nobr>en-dashes</nobr> to dictate a numerical range, and <nobr>em-dashes</nobr> to emphasize phrasing.
 
-Another common mistake is misusing [apostrophes and quotations](https://cmosshoptalk.com/2019/03/19/smart-apostrophes-cmos-6-117/). By default, most computers will generate (&quot;) as a proper *curly* quote when you type it (the feature is usually called “smart quotes”). However, you should be prudent to use opening and closing quotes—note the difference between these two quotes:
+Another common mistake is misusing [apostrophes and quotations](https://cmosshoptalk.com/2019/03/19/smart-apostrophes-cmos-6-117/). By default, most computers will generate (&quot;) as a proper *curly* quote when you type it (the feature is usually called “smart quotes”). However, you should be prudent to use opening and closing quotes—note the difference between these two quotes:
+<!-- style="margin-block-start: 2rlh" -->
 
 &quot;These are sad, ambiguous, straight quotes.&quot;
+<!-- style="--size: var(--size--h3)" -->
 
 &ldquo;These are better, clearer, opening/closing quotes.&rdquo;
+<!-- style="--size: var(--size--h3)" -->
 
 A third mistake is to use characters rather than mathematical symbols. This common practice started when typewriters where the norm which only had a limited characters set. This excuse no longer applies! For example:
+<!-- style="margin-block-start: 2rlh" -->
 
 9 x 5&ensp;→&ensp;9 × 5<br>
 9 / 5&ensp;→&ensp;9 ÷ 5<br>
 9 - 5&ensp;→&ensp;9 − 5
+<!-- style="--size: var(--size--h3)" -->
 
 When in doubt, [*The Elements of Typographic Style*](https://readings.design/PDF/the_elements_of_typographic_style.pdf) probably has the answers you need. It is among the best single references for typographic minutia.
+<!-- .intro -->
 
 ## Type Foundries
 
-Where does one find typefaces? From *foundries*, again referencing the days when making type involved casting actual metal. While most computers now come with many good ones, there are many other places to get fonts. Here are some that we like:
+Where does one find typefaces? From *foundries*, again referencing the days when making type involved casting actual metal. While most computers now come with many good ones, there are many other places to get fonts. Here are some that we like:
 
-- [Colophon](https://www.colophon-foundry.org/)
 - [Comercial Type](https://commercialtype.com/)
 - [Dinamo](https://abcdinamo.com/)
 - [Forgotten Shapes](https://forgotten-shapes.com/)
@@ -445,17 +450,24 @@ Where does one find typefaces? From *foundries*, again referencing the days when
 - [Order](https://order.design/otf)
 - [Typotheque](https://www.typotheque.com/)<br>
 - [Google Fonts](https://fonts.google.com/)
+- [Adobe Fonts](https://fonts.google.com/)
 
-While not a type foundry itself, we include (and will use) *Google Fonts* resource because of its vast array of open-source typefaces.
+While not a type foundry itself, we include (and will use) *Google Fonts* resource because of its vast array of open-source typefaces. *Adobe Fonts* is similar, but requires a paid subscription.
+<!-- .note -->
 
 <aside>
 
-While many of these type foundries offer trial versions to use, you should always properly license a typeface before using it for commercial purposes.
+<mark>Proper licenses are required</mark>
 
-Many foundries offer student discounts. There are also many open-source typefaces and fonts licensed under the [SIL license](https://www.librarystack.org/in-their-own-language/). Always remember that typographers are designers, just like you—and deserve to be paid fairly for their work. It’s hard for you to do well, without their efforts.
+While many of these type foundries offer trial versions to use, you should always properly license (pay for) a typeface before using it for commercial purposes.
+
+Many foundries offer student discounts. There are also many open-source typefaces and fonts licensed under the [SIL Open Font License](https://openfontlicense.org/).
+
+Always remember that typographers are designers, just like you—and deserve to be paid fairly for their work. It’s hard for you to do well, without their efforts.
 
 </aside>
 
 ___
 
-Shout-out to instructor-emeritus [Eric](https://eric.young.li) on this one.
+Shout-out to Spring instructor [Eric](https://eric.young.li) on this one.
+<!-- .note -->
