@@ -73,36 +73,6 @@ main {
 		grid-template-columns: subgrid;
 	}
 
-	section:where(:not(:first-child)) {
-		&:where(:has(> hgroup > h2)) {
-			margin-block-start: 4rlh;
-
-			> hgroup > h2 {
-				/* TODO This is off on mobile. */
-				margin-block-start: calc(1cap - 1rcap); /* Back on baseline. */
-				padding-block-end:  1cap;
-				position:           relative;
-
-				/* TODO Fix baseline under! */
-
-				/* Divider above it. */
-				&::after {
-					background-color:   currentcolor;
-					block-size:         var(--stroke);
-					border-radius:      calc(var(--stroke) / 2);
-					content:            '';
-					inset-block-end:    calc(-1 * var(--stroke) / 2);
-					inset-inline-end:   calc(var(--right) - var(--stroke) / 2);
-					inset-inline-start: calc(var(--left) - var(--stroke) / 2);
-					position:           absolute;
-				}
-			}
-		}
-
-		&:where(:has(> hgroup > h3)) { margin-block-start: 3rlh }
-		&:where(:has(> hgroup > h4)) { margin-block-start: 1rlh }
-	}
-
 	/* Lists, lists, lists. */
 	:is(dl, ol, ul) {
 		/* Extra spacing around loosies. */
@@ -388,6 +358,37 @@ main {
 			inset-inline:     calc(-1 * var(--stroke) / 2);
 			position:         absolute;
 		}
+	}
+
+	/* Heading spacing, lower for cascade. */
+	section:where(:not(:first-child)) {
+		&:where(:has(> hgroup > h2)) {
+			margin-block-start: 4rlh;
+
+			> hgroup > h2 {
+				/* TODO This is off on mobile. */
+				margin-block-start: calc(1cap - 1rcap); /* Back on baseline. */
+				padding-block-end:  1cap;
+				position:           relative;
+
+				/* TODO Fix baseline under! */
+
+				/* Divider above it. */
+				&::after {
+					background-color:   currentcolor;
+					block-size:         var(--stroke);
+					border-radius:      calc(var(--stroke) / 2);
+					content:            '';
+					inset-block-end:    calc(-1 * var(--stroke) / 2);
+					inset-inline-end:   calc(var(--right) - var(--stroke) / 2);
+					inset-inline-start: calc(var(--left) - var(--stroke) / 2);
+					position:           absolute;
+				}
+			}
+		}
+
+		&:where(:has(> hgroup > h3)) { margin-block-start: 3rlh }
+		&:where(:has(> hgroup > h4)) { margin-block-start: 1rlh }
 	}
 
 	/* Dim inert stuff. */
