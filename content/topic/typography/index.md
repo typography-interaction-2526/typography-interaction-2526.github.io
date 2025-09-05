@@ -403,7 +403,7 @@ To avoid *bad rags*, we can make sure that the type size of a container is not t
 
 *Widows* are short last lines of a paragraph, usually one word on its own or the end of a hyphenated word. Widows generally leave too much white space at the end of a line, making it look like an extra blank line—disrupting your typographic rhythm and spacing. The wider the line and the tighter the paragraph spacing, the more distracting the widow.
 
-*Orphans* are short top lines of a page or column—abandoned on their own—that are also distracting. They create ambiguous design intention and hinder clear reading.
+*Orphans* are short top lines of a page or column—abandoned on their own—that are also distracting. They create ambiguous design intention and hinder clear reading.
 
 We should avoid orphans and widows through proper ragging, making sure that type sizes aren’t too large for a container, and making use of the [non-breaking space](https://en.wikipedia.org/wiki/Non-breaking_space) character, which makes sure there is not a line-break between two words.
 
@@ -429,7 +429,6 @@ A third mistake is to use characters rather than mathematical symbols. This comm
 
 9 x 5&ensp;→&ensp;9 × 5<br>
 9 / 5&ensp;→&ensp;9 ÷ 5<br>
-9 - 5&ensp;→&ensp;9 − 5
 <!-- style="--size: var(--size--h3)" -->
 
 When in doubt, [*The Elements of Typographic Style*](https://readings.design/PDF/the_elements_of_typographic_style.pdf) probably has the answers you need. It is among the best single references for typographic minutia.
@@ -443,7 +442,7 @@ Where does one find typefaces? From *foundries*, again referencing the days whe
 - [Dinamo](https://abcdinamo.com/)
 - [Forgotten Shapes](https://forgotten-shapes.com/)
 - [Grilli Type](https://www.grillitype.com/)
-- [Indian Type Foundry](https://www.indiantypefoundry.com/)
+- [Indian Type Foundry](https://www.indiantypefoundry.com/)/[Fontshare (Free!)](https://www.fontshare.com/)
 - [Klim](https://klim.co.nz/)
 - [Lineto](https://lineto.com/)
 - [MCKL](https://mckltype.com/)
