@@ -4,9 +4,9 @@ main {
 	display:             grid;
 	grid-auto-rows:      min-content;
 	grid-template-columns:
-		[ all-start aside-start body-start center-start five-start four-start intro-start left-start one-start recto-start right-start six-start three-start two-start verso-start ]
+		[ all-start aside-start body-start middle-start five-start four-start intro-start left-start one-start recto-start right-start six-start three-start two-start verso-start ]
 		minmax(0, 1fr)
-		[ all-end aside-end body-end center-end five-end four-end intro-end left-end one-end recto-end right-end six-end three-end two-end verso-end ];
+		[ all-end aside-end body-end middle-end five-end four-end intro-end left-end one-end recto-end right-end six-end three-end two-end verso-end ];
 	padding-block-end:   calc(2 * min(var(--alley), calc(2 * var(--gutter))));
 	padding-block-start: min(var(--alley), calc(2 * var(--gutter)));
 	padding-inline:      var(--gutter);
@@ -201,8 +201,6 @@ main {
 		row-gap:               1rlh;
 
 		&:where(:not(:first-child)), &:where(:not(:last-child)) + * { margin-block-start: 2rlh }
-
-		+ :where(figure) { margin-block-start: initial }
 
 		> figcaption {
 			align-items:       baseline;
@@ -435,8 +433,7 @@ main {
 	}
 
 	/* Manual column placements. */
-	:where(.all, .aside, .body, .center, .five, .four, .left, .one, .recto, .right, .six, .three, .two, .verso) {
-		display:  grid;
+	:where(.all, .aside, .body, .middle, .five, .four, .left, .one, .recto, .right, .six, .three, .two, .verso) {
 		grid-row: span var(--rows, 1);
 
 		/* TODO These need space above/below on mobile. */
@@ -445,6 +442,7 @@ main {
 	/* TODO Organize these! */
 	.start  { align-self: start }
 	.stack  { figure { margin: initial } }
+	.center { align-self: center }
 
 	*:has(> .sticky) {
 		align-self: stretch;
@@ -461,7 +459,7 @@ main {
 	.all    { grid-column: all }
 	.aside  { grid-column: aside }
 	.body   { grid-column: body }
-	.center { grid-column: center }
+	.middle { grid-column: middle }
 	.five   { grid-column: five }
 	.four   { grid-column: four }
 	.left   { grid-column: left }
@@ -500,11 +498,11 @@ main {
 			minmax(0, 1fr)
 			[ aside-start one-end two-start]
 			minmax(0, 1fr)
-			[ center-start left-end three-start two-end ]
+			[ middle-start left-end three-start two-end ]
 			minmax(0, 1fr)
 			[four-start recto-start three-end verso-end]
 			minmax(0, 1fr)
-			[ body-end center-end five-start four-end right-start ]
+			[ body-end middle-end five-start four-end right-start ]
 			minmax(0, 1fr)
 			[ intro-end five-end six-start]
 			minmax(0, 1fr)

@@ -24,20 +24,24 @@ Typography is the form and structure into which words are manifested into our wo
 	>
 </figure>
 
+<div class="body">
+
 While [Johannes Gutenberg](https://en.wikipedia.org/wiki/Johannes_Gutenberg) is widely associated with inventing the printing press and movable typography in 1450, earlier forms had been invented [around 1040](https://en.wikipedia.org/wiki/Movable_type#Ceramic_movable_type) in Asia, by Chinese polymath [Bi Sheng](https://en.wikipedia.org/wiki/Bi_Sheng).
 
-Our story here however begins in the early 1500s with [Albrecht Dürer](https://en.wikipedia.org/wiki/Albrecht_Dürer), a seminal figure of the German Renaissance. Dürer made the first inroads towards a *methodology* of type design, the beginnings of formal typography.
+Our story here though begins in the early 1500s with [Albrecht Dürer](https://en.wikipedia.org/wiki/Albrecht_Dürer), a seminal figure of the German Renaissance. Dürer made the first inroads towards a *methodology* of type design, the beginnings of formal typography.
+
+Dürer examined Roman letterforms and attempted to create a rational system for recreating glyphs, specifically drawing attention to the form in which words appear. The way words appeared then, as now, was a byproduct of the medium in which they were written.
+
+</div>
 
 <figure
-	@caption="Image from Dürer’s “Directions for the Construction of the Text.”"
+	@caption="Image from Dürer’s “Directions for the Construction of the Text.”"
 	@citation="https://biblioklept.org/2013/11/12/directions-for-the-construction-of-the-text-albrecht-durer/"
 	@source="durer.jpg"
-	class="invert"
-	style="--lines: 14"
+	class="multiply start right"
+	style="--lines: 12"
 	>
 </figure>
-
-Dürer examined Roman letterforms and attempted to create a rational system for recreating glyphs, specifically drawing attention to the form in which words appear. At the time, the way words appeared were often a byproduct of the medium that was used to write them.
 
 <figure
 	@caption="An early example of blackletter script—a style that reflected the thick nibbed pens that were in use at the time."
@@ -53,66 +57,82 @@ Dürer examined Roman letterforms and attempted to create a rational system for 
 	@caption="Cuneiform tablet: administrative account concerning the distribution of barley and emmer."
 	@citation="https://www.metmuseum.org/art/collection/search/327384"
 	@source="cuneiform.jpg"
-	style="--lines: 14"
+	style="--lines: 20"
 	>
 </figure>
 
+<div class="verso">
+
+<div class="sticky">
+
 The first “typefaces” weren’t typefaces at all. Early writing was used primarily as a means for recording and storing information. Care was generally not given to the presentation of forms on physical medium, but to the information as such.
+
+Often, words and forms were expressed into a particular physical medium with whatever tools were available. These tools shaped the ways words were shown and presented
+</div>
+
+</div>
+
+<div class="recto">
 
 <figure
 	@caption="Brush and pen strokes defining typeforms."
 	@citation="https://www.thing.net/~grist/ld/TextBackHome/Roman.htm"
 	@source="pen.jpg"
-	class="invert"
+	class="multiply recto start"
 	style="--lines: 7"
 	>
 </figure>
-
-Often, words and forms were expressed into a particular physical medium with whatever tools were available. These tools shaped the ways words were shown and presented.
 
 <figure
 	@caption="Type forms which came from chisel on marble *(a)*, stubby pen or metal stylus *(b, c)*, reed pen *(d)*, reed pen inspired by stone *(e)*, and pen or brush on parchment *(f)*."
 	@citation="https://www.thing.net/~grist/ld/TextBackHome/Roman.htm"
 	@source="letter-styles.jpg"
-	class="invert"
+	class="multiply recto start"
 	style="--lines: 15"
 	>
 </figure>
 
+</div>
+
 ## Metal Type
+
+The first typefaces created with movable type attempted to emulate handwritten scripts. A typeface designer would create a *punch* which would function as the source from which a metal form would be created.
+<!-- .center .verso -->
 
 <figure
 	@caption="Creating movable type from punch cut forms."
 	@citation="https://web.archive.org/web/20230924025255/https://erenow.org/biographies/gutenberg-how-one-man-remade-the-world-with-words/6.php"
 	@source="punch-cut.jpg"
-	class="invert"
+	class="multiply recto"
 	style="--lines: 15"
 	>
 </figure>
 
-The first typefaces created with movable type attempted to emulate handwritten scripts. A typeface designer would create a *punch* which would function as the source from which a metal form would be created.
+Many of the terms that were created to describe physical attributes of metal type (*leading*, *point size*, *shoulder*) continue through to our digital world:
 
 <figure
-	@caption="A “lockup” of metal type, describing the frame holding forms together. We still use this phrase to refer to design layouts."
+	@caption="A “lockup” of metal type, describing the frame holding forms together. We still use this phrase to refer to design layouts!"
 	@source="letterpress.jpg"
+	class="verso"
 	>
 </figure>
-
-Many of the terms that were created to describe physical attributes of metal type (*leading*, *point size*, *shoulder*) continue through to our digital world.
 
 <figure
 	@caption="Anatomy of metal type."
 	@citation="https://www.flickr.com/photos/depressionpress/2009461000"
 	@source="atf.jpg"
+	class="recto"
 	>
 </figure>
 
 Type was stored in drawers where the *lower* case held the uncapitalized forms, and the *upper* case held the capital forms. Sound familiar?
+<!-- .center .verso -->
 
 <figure
 	@caption="Conventions and standards carry on through history."
 	@citation="https://commons.wikimedia.org/wiki/File:Plan_%28top%29,_and_three-quarter_view_%28below%29,_of_a_type_case,_Wellcome_V0023764.jpg"
 	@source="type-case.jpg"
+	class="recto"
 	>
 </figure>
 
@@ -127,37 +147,46 @@ Type was stored in drawers where the *lower* case held the uncapitalized forms, 
 
 Over time, as technologies evolved, type and typesetting transitioned as well. We moved from hand-setting movable type in composing sticks to [*Linotype*](https://en.wikipedia.org/wiki/Linotype_machine) typesetting. This allowed for machines to create an entire <nobr>*line-of-type*</nobr> as a metal slug, which could then be put into layout.
 
-<figure
-	@caption="A master plate for *Futura* phototypesetting."
-	@citation="https://en.wikipedia.org/wiki/Phototypesetting"
-	@source="photo-typesetting.jpg"
-	style="--lines: 15"
-	>
-</figure>
+<div class="body center">
 
 With the advent of the photocopier, we quickly moved from metal type to phototypesetting—which worked by [projecting text silhouettes](https://www.digitalcheck.com/phototypesetters-printing/) onto a light-sensitive medium. This was significantly less constrained than metal type—allowing novel typographic compositions and dramatically increasing speed.
 
 In fact, some of the first computer programs for digital typesetting, such as [`troff`](https://en.wikipedia.org/wiki/Troff), were created to support and drive phototypesetting processes.
 
+</div>
+
+<figure
+	@caption="A master plate for *Futura* phototypesetting."
+	@citation="https://en.wikipedia.org/wiki/Phototypesetting"
+	@source="photo-typesetting.jpg"
+	class="right start"
+	style="--lines: 15"
+	>
+</figure>
+
 ### A Transition to Digital
+
+<div class="body center">
+
+By the early 1980s, as the internet was being formed and the web had yet to exist, the advent of computers with screens and visual interfaces made the final typesetting transition: from physical to digital. Most significantly, the [Apple Macintosh and Lisa](https://www.youtube.com/watch?v=2B-XwPjn9YY) were significant milestones in providing the first visual document editing experience on a computer. The term, *What You See Is What You Get* (WYSIWYG) begins with this era of computing.
+
+To support this, in 1983, [Susan Kare](https://www.moma.org/artists/38483) created a suite of [digital-only typefaces](https://www.storiesofapple.net/the-first-fonts-of-the-macintosh.html).
+
+</div>
 
 <figure
 	@caption="Some typefaces that came with the original Macintosh."
 	@citation="https://en.wikipedia.org/wiki/Fonts_on_Macintosh#Fonts_of_the_original_Macintosh"
 	@source="mac.png"
-	class="invert"
+	class="multiply right"
 	>
 </figure>
-
-By the early 1980s, as the internet was being formed and the web had yet to exist, the advent of computers with screens and visual interfaces made the final typesetting transition: from physical to digital. Most significantly, the [Apple Macintosh and Lisa](https://www.youtube.com/watch?v=2B-XwPjn9YY) were significant milestones in providing the first visual document editing experience on a computer. The term, *What You See Is What You Get* (WYSIWYG) begins with this era of computing.
-
-To support this, in 1983, [Susan Kare](https://www.moma.org/artists/38483) created a suite of [<nobr>digital-only</nobr> typefaces](https://www.storiesofapple.net/the-first-fonts-of-the-macintosh.html).
 
 <figure
 	@caption="Physical type had to be converted to digital formats in order to be presented on a screen. We started with pixel and bitmap encodings of typefaces, before switching to vector-based representations."
 	@citation="http://www.designhistory.org/Digital_Revolution_pages/EarlyDigType.html"
 	@source="bit-to-line.jpg"
-	class="invert"
+	class="multiply"
 	>
 </figure>
 
@@ -179,7 +208,7 @@ However, while vector files are infinitely scalable, the medium on which they ar
 	@caption="Anatomy of a typeface, from Ellen Lupton’s *Thinking with Type*."
 	@citation="https://readings.design/PDF/thinkingwithtype_ellenlupton.pdf"
 	@source="anatomy.png"
-	class="invert"
+	class="multiply"
 	>
 </figure>
 
@@ -197,7 +226,7 @@ The term *font* is mostly used for a single style such as *Helvetica Neue Bold*.
 	@caption="More typeface anatomy!"
 	@citation="https://material.io/design/typography/understanding-typography.html"
 	@source="material-typeface.png"
-	class="invert"
+	class="multiply"
 	style="--lines: 13"
 	>
 </figure>
@@ -280,7 +309,7 @@ As you typeset it is also important to treat things consistently—headings shou
 <figure
 	@caption="An example of how type *size* informs hierarchy."
 	@source="type-size.svg"
-	class="invert"
+	class="multiply"
 	>
 </figure>
 
@@ -289,7 +318,7 @@ We can use differing *type sizes* to distinguish between headings and body text.
 <figure
 	@caption="An example of how type *weight* informs hierarchy. Did your eyes skip over the first block?"
 	@source="type-weight.svg"
-	class="invert"
+	class="multiply"
 	>
 </figure>
 
@@ -298,7 +327,7 @@ But the literal size is not our only tool. Another way we can distinguish copy w
 <figure
 	@caption="An example of how type color informs hierarchy. We’re guessing you went to the yellow, first."
 	@source="type-color.svg"
-	class="invert"
+	class="multiply"
 	>
 </figure>
 
@@ -311,7 +340,7 @@ Many of these principles of hierarchy are come from the [*Principles of Gestalt*
 <figure
 	@caption="An example of how leading can inform readability."
 	@source="type-leading.svg"
-	class="invert"
+	class="multiply"
 	>
 </figure>
 
@@ -324,7 +353,7 @@ We can tolerate close lines for short texts; we struggle with them over longer p
 <figure
 	@caption="An example of ragging text."
 	@source="type-rag.svg"
-	class="invert"
+	class="multiply"
 	>
 </figure>
 
@@ -339,7 +368,7 @@ To avoid *bad rags*, we can make sure that the type size of a container is not t
 <figure
 	@caption="An example of a widow *(left)* and orphan *(right)*."
 	@source="type-widows-orphans.svg"
-	class="invert"
+	class="multiply"
 	>
 </figure>
 
