@@ -176,6 +176,9 @@ main {
 		&[open]::details-content {
 			--size:   var(--size--h2);
 			--weight: 500;
+
+			display: grid;
+			row-gap: 3rlh;
 		}
 
 		/* TODO Baseline grid is off, here. */
