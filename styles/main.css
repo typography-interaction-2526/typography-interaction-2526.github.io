@@ -204,7 +204,6 @@ main {
 		align-items:           start;
 		display:               grid;
 		grid-column:           all;
-		grid-template-columns: minmax(auto, max-content);
 		position:              relative;
 		row-gap:               1rlh;
 
@@ -243,7 +242,6 @@ main {
 
 		iframe {
 			aspect-ratio: var(--aspect-ratio, 16/9);
-			block-size:   100vh;
 
 			/* Embedded session video/recordings. */
 			&[src^="https://drive.google.com/file/"][src$="/preview"] {
