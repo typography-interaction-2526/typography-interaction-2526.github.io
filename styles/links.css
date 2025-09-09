@@ -191,6 +191,7 @@ details[open] :where(summary) { --icon: '−' }
 	> :where(a:has(> cite)) { inline-size: initial } /* To the grid. */
 
 	/* With additional text after (Markdown adds the `br`). */
+	/* TODO Make this work with loose paragraphs, baseline is off! */
 	&:has(> br) {
 		padding-block-end: 1rcap;
 

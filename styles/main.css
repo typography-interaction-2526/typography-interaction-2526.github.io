@@ -418,6 +418,7 @@ main {
 		--size:    var(--size--h3);
 		--weight:  300;
 
+		/* TODO Broken! */
 		margin-block-start:        calc(1rcap - 1cap); /* Back on baseline. */
 		-webkit-text-stroke-width: 0.01em; /* Match to body copy. */
 
@@ -458,6 +459,7 @@ main {
 	.center { align-self: center }
 
 	*:has(> .sticky) {
+		/* TODO This breaks `baseline` alignment! */
 		align-self: stretch;
 
 		.sticky {

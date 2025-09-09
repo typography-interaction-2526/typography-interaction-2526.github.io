@@ -30,6 +30,7 @@
 				break-before:       page;
 				margin-block-start: var(--stroke);
 
+				/* TODO The lists are still busted, here! */
 				/* Don’t double-up. */
 				> hgroup > .print--break { break-before: initial }
 
