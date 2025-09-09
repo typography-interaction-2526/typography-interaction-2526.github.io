@@ -11,7 +11,23 @@
 		article.setAttribute('tabindex', '-1')
 		article.focus()
 		article.addEventListener('blur', () => article.removeAttribute('tabindex'), { once: true })
-	}, 10)
+	}, 16.666)
+
+	document.addEventListener('click', (event) => {
+		if (event.target.matches?.('a[href^="/"]')) {
+			event.preventDefault()
+
+			const header = document.querySelector(`header a[href="${event.target.getAttribute('href')}"]`).closest('header')
+
+			header.scrollIntoView({ block: 'start' })
+
+			const goToLink = () => window.location = event.target.getAttribute('href')
+
+			'onscrollend' in window
+				? window.addEventListener('scrollend', goToLink)
+				: setTimeout(goToLink, 333)
+		}
+	})
 </script>
 
 <style>
@@ -19,6 +35,8 @@
 		background-color: black;
 		scroll-behavior:  smooth;
 	}
+
+	@view-transition { navigation: auto }
 
 	article {
 		scroll-margin-block-start: 0;
