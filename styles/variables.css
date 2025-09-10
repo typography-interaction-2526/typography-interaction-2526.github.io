@@ -19,7 +19,8 @@
 	--hover:             66%;
 	--transition:        166ms;
 
-	--color: black;
+	--color:  black;
+	--accent: white;
 
 	--note: color-mix(in srgb, var(--color, currentcolor), transparent 50%);
 

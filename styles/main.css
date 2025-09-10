@@ -274,7 +274,7 @@ main {
 	aside {
 		--weight: 500;
 
-		background-color: white;
+		background-color: var(--accent);
 		border-radius:    var(--stroke);
 		display:          grid;
 		grid-column:      aside;
