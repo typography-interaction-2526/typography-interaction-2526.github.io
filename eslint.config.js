@@ -66,7 +66,6 @@ export default [
 		languageOptions: { parser: htmlParser },
 		plugins: { '@html-eslint': htmlPlugin },
 		rules: {
-			'@html-eslint/element-newline': ['error', { 'inline': ['$inline', 'nobr'] }],
 			'@html-eslint/id-naming-convention': ['error', 'kebab-case'],
 			'@html-eslint/lowercase': 'error',
 			'@html-eslint/no-duplicate-attrs': 'error',
@@ -79,7 +78,6 @@ export default [
 			'@html-eslint/no-script-style-type': 'error',
 			'@html-eslint/no-trailing-spaces': 'error',
 			'@html-eslint/quotes': ['error', 'double'],
-			'@html-eslint/require-closing-tags': ['error', { 'selfClosing': 'never'}],
 			'@html-eslint/sort-attrs': ['error', {
 				'priority': [
 					{ 'pattern': 'webc:*' },
@@ -93,9 +91,11 @@ export default [
 		plugins: { '@html-eslint': htmlPlugin },
 		rules: {
 			'@html-eslint/attrs-newline': ['error', { 'closeStyle': 'newline', 'ifAttrsMoreThan': 1 }],
+			'@html-eslint/element-newline': ['error', { 'inline': ['$inline', 'nobr'] }],
 			'@html-eslint/indent': ['error', 'tab'],
 			'@html-eslint/no-extra-spacing-text': 'error',
 			'@html-eslint/prefer-https': 'error',
+			'@html-eslint/require-closing-tags': ['error', { 'selfClosing': 'never'}],
 		},
 	},
 	{
@@ -103,7 +103,9 @@ export default [
 		languageOptions: { parser: htmlParser },
 		plugins: { '@html-eslint': htmlPlugin },
 		rules: {
+			'@html-eslint/element-newline': ['warn', { 'inline': ['$inline', 'nobr'] }],
 			'@html-eslint/prefer-https': 'warn',
+			'@html-eslint/require-closing-tags': ['warn', { 'selfClosing': 'never'}],
 		},
 	},
 ]
