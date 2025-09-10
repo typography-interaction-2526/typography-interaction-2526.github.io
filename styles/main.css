@@ -216,7 +216,7 @@ main {
 			align-items:       baseline;
 			display:           flex;
 			gap:               1rlh;
-			padding-block-end: calc(1rlh - 1rcap);
+			padding-block-end: calc(1rlh - 1rcap); /* Back on baseline. */
 
 			/* TODO Move/consolidate this with `links` one! */
 			> a:has(cite) {
