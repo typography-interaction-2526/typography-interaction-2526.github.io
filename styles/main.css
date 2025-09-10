@@ -468,23 +468,24 @@ main {
 		}
 	}
 
-	.intro  { grid-column: intro } /* Up top to be cascaded over. */
-	.body .intro { grid-column: initial } /* Override for nested. */
-
-	.all    { grid-column: all }
-	.aside  { grid-column: aside }
-	.body   { grid-column: body }
-	.middle { grid-column: middle }
-	.five   { grid-column: five }
-	.four   { grid-column: four }
-	.left   { grid-column: left }
-	.one    { grid-column: one }
-	.recto  { grid-column: recto }
-	.right  { grid-column: right }
-	.six    { grid-column: six }
-	.three  { grid-column: three }
-	.two    { grid-column: two }
-	.verso  { grid-column: verso }
+	/* Only when on The Grid. */
+	:where(&, section) {
+		> .all    { grid-column: all }
+		> .aside  { grid-column: aside }
+		> .body   { grid-column: body }
+		> .five   { grid-column: five }
+		> .four   { grid-column: four }
+		> .intro  { grid-column: intro }
+		> .left   { grid-column: left }
+		> .middle { grid-column: middle }
+		> .one    { grid-column: one }
+		> .recto  { grid-column: recto }
+		> .right  { grid-column: right }
+		> .six    { grid-column: six }
+		> .three  { grid-column: three }
+		> .two    { grid-column: two }
+		> .verso  { grid-column: verso }
+	}
 
 	/* Some `--rows` shorthands. */
 	.rows--2 { --rows: 2 }
