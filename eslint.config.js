@@ -103,7 +103,6 @@ export default [
 		languageOptions: { parser: htmlParser },
 		plugins: { '@html-eslint': htmlPlugin },
 		rules: {
-			'@html-eslint/element-newline': ['warn', { 'inline': ['$inline', 'nobr'] }],
 			'@html-eslint/prefer-https': 'warn',
 			'@html-eslint/require-closing-tags': ['warn', { 'selfClosing': 'never'}],
 		},
