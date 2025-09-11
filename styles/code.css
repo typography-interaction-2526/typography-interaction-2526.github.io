@@ -20,12 +20,13 @@ samp {
 }
 
 pre {
-	background-color: var(--code);
-	border-radius:    var(--stroke);
+	background-color: var(--pre);
+	border-radius:    calc(var(--stroke) * 2);
 	inline-size:      fit-content;
 	max-inline-size:  100%;
 
 	> code {
+		color:              color-mix(in srgb, currentcolor, transparent 66%);
 		display:            block;
 		inset-block-start:  -0.15em;
 		line-height:        inherit;

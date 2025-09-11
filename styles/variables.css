@@ -22,9 +22,10 @@
 	--color:  black;
 	--accent: white;
 
-	--note: color-mix(in srgb, var(--color, currentcolor), transparent 50%);
+	--note: color-mix(in srgb, var(--color, currentcolor), transparent);
 
-	--code: color-mix(in srgb, var(--accent), transparent 25%);
+	--code: var(--highlight);
+	--pre:  color-mix(in srgb, var(--accent), transparent 33%);
 
 	--background--root: gainsboro;
 
