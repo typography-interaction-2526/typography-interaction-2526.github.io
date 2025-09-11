@@ -313,11 +313,11 @@ All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs
 Generally speaking, HTML doesn’t care about capitalization, extra white space, or line breaks (one exception, [below](#inline-whitespace)). The browser will just read everything from left to right, as if it is one long, running sentence. So the shouty `<html>` and quieter `<html>` are interpreted the same.
 
 [<cite>How Whitespace Is Handled – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Whitespace)
-	It depends.
+	It depends! It always depends.
 <!-- .link-list .right style="--lines: 2" -->
 
 The browser parses both of these in the exact same way:
-<!-- .add-before--3 .add-after .balance .bold .scale--h4 -->
+<!-- .intro .before--3 -->
 
 ```html <!-- .verso -->
 <body>
@@ -337,11 +337,10 @@ ind of dog breeds</p><ul><li>German Shepherd
 </li><li>Bulldog</li><li>Poodle</li></ul></body>
 ```
 
-But obviously, the left one here is much more readable to us humans. We can use white space, tabs/indenting, and line breaks to make it easier for us to read the code.
-<!-- .add-before--2 .balance -->
+But obviously, the left one here is much more readable to us humans. We can use white space, tabs/indenting, and line breaks to make it easier for us to read the code.
+<!-- .before -->
 
 There are a lot of common patterns used—like indenting to indicate hierarchy/nesting. But there are also no wrong ways to do it! In HTML, spaces are code *ergonomics* for you—just like a good chair or desk—that allow you to work more comfortably.
-<!-- .add-before--3 -->
 
 <blockquote
 	@attribution="Guido van Rossum"
