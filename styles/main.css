@@ -102,7 +102,7 @@ main {
 		}
 
 		/* “Tight” lists. */
-		&:where(:not(:has(li > p, a > cite))) { row-gap: calc(1rcap - (1cap - 1rcap)) }
+		&:where(:not(:has(li > p, a > cite))) { row-gap: 1rcap }
 
 		/* More vertical space when the items have multiple paragraphs. */
 		&:where(:has(:where(dt, li) > p:not(:only-child))) {
@@ -119,10 +119,14 @@ main {
 	:is(dl, ul:where(:not(:has(> li > a > cite, > li > p:only-child > a > cite)))) {
 		margin-inline-start: 1cap;
 
-		> :where(dt, li)::before {
-			content:           '—';
-			inset-block-start: 0;
-			inset-inline-end:  calc(100% - var(--right));
+		> :where(dt, li) {
+			&::before {
+				content:           '—';
+				inset-block-start: 0;
+				inset-inline-end:  calc(100% - var(--right));
+			}
+
+			&:has(p:first-child strong)::before { font-weight: 700 }
 		}
 	}
 
@@ -349,7 +353,10 @@ main {
 				}
 			}
 
-			&:where(:not(:last-child)) + * { margin-block-start: 2rlh }
+			&:where(:not(:last-child)) {
+				+ *:not(section) { margin-block-start: 2rlh }
+				+ section { margin-block-start: 5rlh }
+			}
 		}
 	}
 
@@ -415,7 +422,15 @@ main {
 		*[inert] { opacity: inherit } /* Section-nesting adds a dupe. */
 	}
 
-	:where(.intro) {
+	/* Match `h4`? */
+	:where(strong) {
+		--weight: 700;
+
+		/* Optically match the `h3`. */
+		-webkit-text-stroke-width: 0.01em;
+	}
+
+	:where(p.intro) {
 		--leading:        1rlh;
 		--size:           var(--size--h3);
 
@@ -499,6 +514,19 @@ main {
 	.rows--4 { --rows: 4 }
 	.rows--5 { --rows: 5 }
 	.rows--6 { --rows: 6 }
+
+	/* Manual vertical spacing. */
+	.before--0 { margin-block-start: initial }
+	.before--1 { margin-block-start: 1rlh }
+	.before--2 { margin-block-start: 2rlh }
+	.before--3 { margin-block-start: 3rlh }
+	.before--4 { margin-block-start: 4rlh }
+
+	.after--0 + * { margin-block-start: initial }
+	.after--1 + * { margin-block-start: 1rlh }
+	.after--2 + * { margin-block-start: 2rlh }
+	.after--3 + * { margin-block-start: 3rlh }
+	.after--4 + * { margin-block-start: 4rlh }
 
 	/* The actual columns. */
 	@media (orientation: landscape) and (width >= 35em), (width >= 60em) {
