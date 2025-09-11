@@ -287,6 +287,8 @@ main {
 		row-gap:          inherit;
 		text-align:       center;
 
+		/* TODO `::selection` override here! Wasn‘t working. */
+
 		&:where(:not(:first-child)), &:where(:not(:last-child)) + * { margin-block-start: 2rlh }
 
 		> p:has(mark) {

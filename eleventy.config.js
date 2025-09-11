@@ -81,6 +81,8 @@ export default (eleventyConfig) => {
 											: match,
 								))
 					}
+
+					// TODO Put thin spaces between code and punctuation!
 				}),
 			),
 		)
