@@ -16,6 +16,9 @@ samp {
 	user-select:       all;
 }
 
+/* Tighten keyboard/menu combos. */
+:where(nobr):has(:where(kbd, samp)) :where(kbd, samp):not(:first-child) { margin-inline-start: -0.4em }
+
 pre {
 	background-color: var(--pre);
 	border-radius:    calc(var(--stroke) * 2);
