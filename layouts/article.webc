@@ -5,12 +5,14 @@
 <script>
 	// Ahead of HTMX, take us to the current “page.”
 	setTimeout(() => {
-		const article = document.querySelector('article')
+		if (!window.location.hash) {
+			const article = document.querySelector('article')
 
-		article.scrollIntoView({ behavior: 'instant', block: 'start' })
-		article.setAttribute('tabindex', '-1')
-		article.focus()
-		article.addEventListener('blur', () => article.removeAttribute('tabindex'), { once: true })
+			article.scrollIntoView({ behavior: 'instant', block: 'start' })
+			article.setAttribute('tabindex', '-1')
+			article.focus()
+			article.addEventListener('blur', () => article.removeAttribute('tabindex'), { once: true })
+		}
 	}, 16.666)
 
 	document.addEventListener('click', (event) => {
