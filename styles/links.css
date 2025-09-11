@@ -199,7 +199,11 @@ details[open] :where(summary) { --icon: '−' }
 		padding-block-end: 1rcap;
 
 		/* “Push” the additional text back down to the (half) baseline. */
-		> :where(a:has(> cite)) { margin-block-end: calc(1cap - 2rcap) }
+		> :where(a:has(> cite)) { margin-block-end: calc((1cap - 2rcap) + 1rlh) }
+
+		/* TODO This is ever-so-slightly off still. */
+
+		> br { display: none } /* Link is already `block`. */
 	}
 }
 
