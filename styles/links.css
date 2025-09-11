@@ -47,44 +47,47 @@ summary {
 }
 
 /* Inline links. */
-:where(dd, dt, figcaption, p, td, th, main li:not(:has(ol, p, section, ul))) a:where(:not(:has(cite))) {
-	/* Rounded caps. */
-	--underline--cap: radial-gradient(circle closest-side at center, currentcolor calc(100% - 0.5px), transparent);
-	--underline--cap--inset: calc(var(--enlargement) - var(--stroke) / 2);
+:where(dd, dt, figcaption, p, td, th, main li:not(:has(ol, p, section, ul))) {
+	:where(s),
+	a:where(:not(:has(cite))) {
+		/* Rounded caps. */
+		--underline--cap: radial-gradient(circle closest-side at center, var(--line, currentcolor) calc(100% - 0.5px), transparent);
+		--underline--cap--inset: calc(var(--enlargement) - var(--stroke) / 2);
 
-	--underline--start: var(--underline--cap) var(--underline--cap--inset) / var(--stroke) var(--stroke);
-	--underline--end: var(--underline--cap) right var(--underline--cap--inset) center / var(--stroke) var(--stroke);
-	--underline--center: linear-gradient(currentcolor var(--stroke), transparent var(--stroke)) var(--enlargement) / calc(100% - 2 * var(--enlargement));
+		--underline--start: var(--underline--cap) var(--underline--cap--inset) / var(--stroke) var(--stroke);
+		--underline--end: var(--underline--cap) right var(--underline--cap--inset) center / var(--stroke) var(--stroke);
+		--underline--center: linear-gradient(var(--line, currentcolor) var(--stroke), transparent var(--stroke)) var(--enlargement) / calc(100% - 2 * var(--enlargement));
 
-	/* All together now. */
-	--underline: var(--underline--start), var(--underline--end), var(--underline--center);
+		/* All together now. */
+		--underline: var(--underline--start), var(--underline--end), var(--underline--center);
 
-	/* Extra room below the underline */
-	--enlargement--underline: calc(var(--enlargement) + var(--stroke) + var(--descender));
+		/* Extra room below the underline */
+		--enlargement--underline: calc(var(--enlargement) + var(--stroke) + var(--descender));
 
-	background:                 var(--underline);
-	background-position-y:      calc(1cap + var(--enlargement) + var(--descender)); /* Through the `p`. */
-	background-repeat:          no-repeat;
-	border-radius:              var(--enlargement);
-	box-decoration-break:       clone; /* “Restart” inline padding/margin over on wrapped links. */
-	display:                    inline;
-	margin-inline-end:          calc(-1 * (var(--enlargement) - var(--right)));
-	margin-inline-start:        calc(-1 * (var(--enlargement) - var(--left)));
-	outline-offset:             initial;
-	padding-block-end:          calc(var(--enlargement--underline, var(--enlargement)) - var(--bottom--content)); /* Account for wonky link content box. */
-	padding-block-start:        calc(var(--enlargement) - var(--top--content));
-	padding-inline-end:         calc(var(--enlargement) - var(--right));
-	padding-inline-start:       calc(var(--enlargement) - var(--left));
-	transition-duration:        calc(var(--transition) / 2), var(--transition);
-	transition-property:        background-color, opacity;
-	transition-timing-function: linear;
+		background:                 var(--underline);
+		background-position-y:      calc(1cap + var(--enlargement) + var(--descender)); /* Through the `p`. */
+		background-repeat:          no-repeat;
+		border-radius:              var(--enlargement);
+		box-decoration-break:       clone; /* “Restart” inline padding/margin over on wrapped links. */
+		display:                    inline;
+		margin-inline-end:          calc(-1 * (var(--enlargement) - var(--right)));
+		margin-inline-start:        calc(-1 * (var(--enlargement) - var(--left)));
+		outline-offset:             initial;
+		padding-block-end:          calc(var(--enlargement--underline, var(--enlargement)) - var(--bottom--content)); /* Account for wonky link content box. */
+		padding-block-start:        calc(var(--enlargement) - var(--top--content));
+		padding-inline-end:         calc(var(--enlargement) - var(--right));
+		padding-inline-start:       calc(var(--enlargement) - var(--left));
+		transition-duration:        calc(var(--transition) / 2), var(--transition);
+		transition-property:        background-color, opacity;
+		transition-timing-function: linear;
 
-	/* TODO Fix this with opacity `color-mix`! */
+		/* TODO Fix this with opacity `color-mix`! */
 
-	/* Use background for active highlight, as it might wrap. */
-	&::after { content: initial }
+		/* Use background for active highlight, as it might wrap. */
+		&::after { content: initial }
 
-	&:active { background-color: var(--highlight) }
+		&:active { background-color: var(--highlight) }
+	}
 }
 
 /* Tighten these. */

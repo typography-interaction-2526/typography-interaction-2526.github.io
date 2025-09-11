@@ -68,6 +68,19 @@ em {
 	}
 }
 
+/* Strikethrough. */
+s {
+	--line: var(--color);
+
+	background-position-y: calc(0.5cap + var(--enlargement)); /* Shift “underline”. */
+	color:                 var(--disabled);
+
+	* {
+		--color: var(--disabled);
+		--line:  initial;
+	}
+}
+
 .balance      { text-wrap: balance }
 .caps         { text-transform: uppercase }
 .nowrap, nobr { text-wrap: nowrap }
