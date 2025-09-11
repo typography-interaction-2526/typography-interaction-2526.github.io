@@ -2,8 +2,6 @@ code, kbd, samp {
 	font-feature-settings: initial;
 	font-style:            normal;
 	position:              relative;
-	text-box-edge:         cap alphabetic;
-	text-box-trim:         trim-both;
 	white-space:           pre;
 }
 
@@ -12,10 +10,9 @@ kbd,
 samp {
 	background-color:  var(--code);
 	border-radius:     var(--stroke);
-	display:           inline-block;
 	inset-block-start: 0.03em;
-	padding-block:     1ex;
-	padding-inline:    0.85ex;
+	padding-block:     0.2em;
+	padding-inline:    0.4em;
 	user-select:       all;
 }
 
@@ -36,5 +33,7 @@ pre {
 		overflow-y:         hidden;
 		padding:            1rcap;
 		tab-size:           4;
+		text-box-edge:      cap alphabetic;
+		text-box-trim:      trim-both;
 	}
 }

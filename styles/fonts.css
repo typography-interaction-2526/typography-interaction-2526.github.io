@@ -22,10 +22,17 @@
 	src:         url('../assets/fonts/gorton-digital--heavy.otf') format('opentype');
 }
 
+/* Lighter one. */
 @font-face {
-	font-family: OCR-B;
-	font-weight: 700;
-	src:         url('../assets/fonts/ocr-b.otf') format('opentype');
+	font-family: 'OCR B';
+	font-weight: normal;
+	src:         url('../assets/fonts/ocr-b--regular.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'OCR B';
+	font-weight: bold;
+	src:         url('../assets/fonts/ocr-b--original.otf') format('opentype');
 }
 
 :where(:root) {
@@ -91,7 +98,12 @@
 
 /* Code stuff! */
 code, kbd, samp {
-	font-family: OCR-B, 'SF Pro', monospace;
+	font-family: 'OCR B', 'SF Pro', monospace;
 	font-size:   70%;
-	font-weight: 600; /* Only changes the SF. */
+	font-weight: bold; /* Only changes the SF. */
+}
+
+:where(pre) code {
+	font-size:   75%;
+	font-weight: normal;
 }
