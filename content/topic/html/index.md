@@ -4,17 +4,17 @@
 	const week = 3
 </script>
 
-## HTML Stands for *HyperText Markup Language*
+## HTML Stands for *HyperText Markup Language*
 
 HTML is the standard markup language/format for creating web pages, containing the content and structure of a page as a series of *elements*.
 
-- [<letter-bullet @title="HTML – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/HTML) \
+- [<cite>HTML – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML) \
 	When in doubt, refer to the MDN documentation!
 
-- [<letter-bullet @title="Basics of HTML"></letter-bullet>](https://www.youtube.com/watch?v=CkzbI1Tv_rQ)\
+- [<cite>Basics of HTML</cite>](https://www.youtube.com/watch?v=CkzbI1Tv_rQ)\
 	A very calming introduction by [Laurel Schwulst](https://laurelschwulst.com).
 
-- [<letter-bullet @bullet="W" @title="Organizing Files for the Web"></letter-bullet>](https://docs.google.com/presentation/d/101TEdtacOFZhCwebijcJaX0h1BpDwhAm2SJhE3jW89c/edit#slide=id.g331f24f572_4_0)
+- [<cite>Organizing Files for the Web</cite>](https://docs.google.com/presentation/d/101TEdtacOFZhCwebijcJaX0h1BpDwhAm2SJhE3jW89c/edit#slide=id.g331f24f572_4_0)
 	[Sasha Portis](https://sashaportis.com) on (web) file-naming, for when you get to saving.
 <!-- .balance .link-list .right style="--rows: 4" -->
 
@@ -111,7 +111,6 @@ In our example, here is what we’ve told the computer:
 
 </div>
 
-
 We use semantic elements to help structure and describe our content—but also for accessibility (screen <nobr>readers)—</nobr>where the tag type helps indicate what things are.
 <!-- .balance .add-before--3 -->
 
@@ -120,7 +119,7 @@ We use semantic elements to help structure and describe our content—but als
 [Elements](https://developer.mozilla.org/en-US/docs/Glossary/Element) are composed of tags (opening, closing) and their content:
 <!-- .balance .bold .scale--h4 -->
 
-[<letter-bullet @bullet="E" @title="HTML Elements Reference – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+[<cite>HTML Elements Reference – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 	MDN will always go deep; this is *all* the elements.
 <!-- .link-list .right style="--rows: 2" -->
 
@@ -213,7 +212,7 @@ There are [many, many HTML elements](https://developer.mozilla.org/en-US/docs/We
 All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes), which provide more information about the element:
 <!-- .balance .bold .scale--h4 -->
 
-[<letter-bullet @bullet="A" @title="HTML Attribute Reference – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)
+[<cite>HTML Attribute Reference – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)
 	There are a lot of them.
 <!-- .link-list .right -->
 
@@ -289,7 +288,6 @@ All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs
 
 	The `alt` attribute of `<img>` provides an alternate text for an image, used by screen readers.
 
-
 - #### Identifier
 
 	```html
@@ -313,9 +311,9 @@ All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs
 
 ## Case, White Space, Tabs, Line Breaks
 
-Generally speaking, HTML doesn’t care about capitalization, extra white space, or line breaks (one exception, [below](#inline-whitespace)). The browser will just read everything from left to right, as if it is one long, running sentence. So the shouty `<HTML>` and quieter `<html>` are interpreted the same.
+Generally speaking, HTML doesn’t care about capitalization, extra white space, or line breaks (one exception, [below](#inline-whitespace)). The browser will just read everything from left to right, as if it is one long, running sentence. So the shouty `<html>` and quieter `<html>` are interpreted the same.
 
-[<letter-bullet @bullet="W" @title="How Whitespace Is Handled – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Whitespace)
+[<cite>How Whitespace Is Handled – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Whitespace)
 	It depends.
 <!-- .link-list .right style="--lines: 2" -->
 
@@ -424,7 +422,6 @@ Code is read more often than it is written. Code should always be written in 
 
 Inline elements [are the exception](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Whitespace#spaces_in_between_inline_and_inline-block_elements) to the “white space is generally ignored” rule: extra space between inline elements will always be reduced—*collapsed*—to one space.
 <!-- .balance .verso -->
-
 
 <div class="recto">
 
