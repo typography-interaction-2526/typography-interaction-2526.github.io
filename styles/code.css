@@ -1,26 +1,39 @@
 code, kbd, samp {
 	font-feature-settings: initial;
 	font-style:            normal;
-	inset-block-start:     0.03em;
 	position:              relative;
+	text-box-edge:         cap alphabetic;
+	text-box-trim:         trim-both;
 	white-space:           pre;
 }
 
 :where(*:not(pre)) > code,
 kbd,
 samp {
-	background-color: var(--code);
-	border-radius:    var(--stroke);
-	display:          inline-block;
-	line-height:      initial;
-	padding-block:    1ex;
-	padding-inline:   0.75ex;
-	text-box-edge:    cap alphabetic;
-	text-box-trim:    trim-both;
-	user-select:      all;
+	background-color:  var(--code);
+	border-radius:     var(--stroke);
+	display:           inline-block;
+	inset-block-start: 0.03em;
+	padding-block:     1ex;
+	padding-inline:    0.85ex;
+	user-select:       all;
 }
 
 pre {
 	background-color: var(--code);
-	overflow-x:       scroll;
+	border-radius:    var(--stroke);
+	inline-size:      fit-content;
+	max-inline-size:  100%;
+
+	> code {
+		display:            block;
+		inset-block-start:  -0.15em;
+		line-height:        inherit;
+		margin-block-start: calc(1rcap - 1cap);
+		mask:               linear-gradient(to right, transparent, white 1rcap, white calc(100% - 1rcap), transparent 100%);
+		overflow-x:         auto;
+		overflow-y:         hidden;
+		padding:            1rcap;
+		tab-size:           4;
+	}
 }
