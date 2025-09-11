@@ -1,6 +1,8 @@
 code, kbd, samp {
 	font-feature-settings: initial;
 	font-style:            normal;
+	inset-block-start:     0.03em;
+	position:              relative;
 	white-space:           pre;
 }
 
@@ -11,7 +13,8 @@ samp {
 	border-radius:    var(--stroke);
 	display:          inline-block;
 	line-height:      initial;
-	padding:          1ex;
+	padding-block:    1ex;
+	padding-inline:   0.75ex;
 	text-box-edge:    cap alphabetic;
 	text-box-trim:    trim-both;
 	user-select:      all;
