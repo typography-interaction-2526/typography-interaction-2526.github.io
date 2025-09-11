@@ -17,7 +17,7 @@
 		if (event.target.matches?.('a[href^="/"]')) {
 			event.preventDefault()
 
-			const header = document.querySelector(`header a[href="${event.target.getAttribute('href')}"]`).closest('header')
+			const header = document.querySelector(`header a[href="${event.target.getAttribute('href').split('#')[0]}"]`).closest('header')
 
 			header.scrollIntoView({ block: 'start' })
 
