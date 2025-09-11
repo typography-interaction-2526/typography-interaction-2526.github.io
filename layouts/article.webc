@@ -28,6 +28,18 @@
 				: setTimeout(goToLink, 333)
 		}
 	})
+
+	// Line up to grid.
+	// document.addEventListener('keydown', (e) => {
+	// 	if (['ArrowUp', 'ArrowDown'].includes(e.key)) {
+	// 		const delta = e.shiftKey ? 10 : 1
+	// 		window.scrollBy({
+	// 			behavior: 'auto',
+	// 			top: e.key === 'ArrowUp' ? -delta : delta,
+	// 		})
+	// 		e.preventDefault()
+	// 	}
+	// })
 </script>
 
 <style>
