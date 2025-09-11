@@ -34,6 +34,7 @@ export default (eleventyConfig) => {
 	eleventyConfig.addPassthroughCopy('styles/reset.css')
 	eleventyConfig.addPassthroughCopy('assets/**/*.(ico|otf|pdf|png)')
 	eleventyConfig.addPassthroughCopy('content/**/*.(gif|jpg|png|svg)')
+	eleventyConfig.addPassthroughCopy({'node_modules/@parsons/ti-preview/dist/bundled/**/*.*': 'assets/ti-preview'})
 
 	// Don’t render examples as if they’re real pages, but copy them to the output as is.
 	eleventyConfig.ignores.add('content/topic/*/*/*.*')

@@ -1,0 +1,9 @@
+<ti-preview
+	@attributes
+	hide-output
+	hide-tabs
+>
+	<pre>
+		<slot></slot>
+	</pre>
+</ti-preview>

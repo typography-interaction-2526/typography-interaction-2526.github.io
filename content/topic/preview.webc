@@ -1,0 +1,33 @@
+<script front-matter>
+	const layout = 'base'
+	const pagination = {
+		alias: 'example',
+		data: 'examples',
+		size: 1,
+	}
+	const permalink = ({ example: { example, topic } }) => `topic/${topic}/${example}/preview/`
+</script>
+
+<style>
+	body,
+	html,
+	ti-preview {
+		block-size:  100%;
+		inline-size: 100%;
+	}
+</style>
+<script>
+	const active = (new URLSearchParams(window.location.search)).get('active')
+	if (active) document.querySelector('ti-preview').setAttribute('current', active)
+</script>
+<ti-preview base="../">
+	<figure
+		webc:for="file of example.files.filter(({ filename }) => ['.html', '.css', '.js'].some((ext) => filename.endsWith(ext)))"
+		webc:raw
+	>
+		<pre>
+			<code @text="file.contents"></code>
+		</pre>
+		<figcaption @text="file.filename"></figcaption>
+	</figure>
+</ti-preview>

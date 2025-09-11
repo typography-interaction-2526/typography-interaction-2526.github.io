@@ -25,6 +25,7 @@
 			webc:import="blocks/styles.webc"
 			webc:nokeep
 		></template>
+		<script webc:keep src="/assets/ti-preview/index.js" type="module"></script>
 		<script
 			webc:keep
 			@raw="getBundle(`js`)"
