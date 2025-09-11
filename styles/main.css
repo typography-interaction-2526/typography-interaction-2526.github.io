@@ -418,9 +418,11 @@ main {
 		--size:    var(--size--h3);
 		--weight:  300;
 
-		/* TODO Broken! */
-		margin-block-start:        calc(1rcap - 1cap); /* Back on baseline. */
-		-webkit-text-stroke-width: 0.01em; /* Match to body copy. */
+		/* Back on baseline. */
+		inset-block-start:         calc(1rcap - 1cap);
+		margin-block-end:          calc(1rcap - 1cap);
+		position:                  relative;
+		-webkit-text-stroke-width: 0.015em; /* Match to body copy. */
 
 		&:not(:where(:first-child)) { margin-block-start: 1rlh }
 
