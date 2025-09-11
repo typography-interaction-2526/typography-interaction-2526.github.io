@@ -16,28 +16,30 @@ HTML is the standard markup language/format for creating web pages, containing t
 
 - [<cite>Organizing Files for the Web</cite>](https://docs.google.com/presentation/d/101TEdtacOFZhCwebijcJaX0h1BpDwhAm2SJhE3jW89c/edit#slide=id.g331f24f572_4_0)
 	[Sasha Portis](https://sashaportis.com) on (web) file-naming, for when you get to saving.
-<!-- .balance .link-list .right style="--rows: 4" -->
+<!-- .right style="--rows: 4" -->
 
 In our ongoing analogy, HTML is the _skeleton_ of the web. At its most basic it is a text file, in a folder on a computer, with a `.html` extension—*text, with instructions.*
 
-As we heard in our first class, this format was codified by our pal [Tim Berners-Lee](https://www.w3.org/People/Berners-Lee/) in 1991, evolving from his earlier [SGML](https://en.wikipedia.org/wiki/Standard_Generalized_Markup_Language), a similar/proto language. There have been five major revisions to the spec since then, which added (and sometimes _deprecated_, or removed) tags and syntax:
+As we heard in our first class, this format was codified by our pal [Tim Berners-Lee](https://www.w3.org/People/Berners-Lee/) in 1991, evolving from his earlier [SGML](https://en.wikipedia.org/wiki/Standard_Generalized_Markup_Language), a similar/proto language. There have been five major revisions to the spec since then, which added (and sometimes _deprecated_, or removed) tags and syntax:
 
 - HTML 1, 1991
 - HTML 2, 1995
 - HTML 3, 1997
 - HTML 4, 1997 (busy year)
 - HTML 5, 2014
-<!-- .bold -->
 
 ## The Basic Document <!-- style="--inset: -0.05em" -->
+## The Basic Document
 
 <figure @source="nesting.svg" class="verso"></figure>
 
 <div class="recto" style="align-self: center">
 
 HTML consists of a [range of elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element), nested inside one another, like a [matryoshka doll](https://en.wikipedia.org/wiki/Matryoshka_doll) of text.
+HTML consists of a [range of elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element), nested inside one another, like a [matryoshka doll](https://en.wikipedia.org/wiki/Matryoshka_doll) of text.
 
 The `<html>` element contains all elements of the page. In diagram here, the `<head>` element contains the `<title>`, and the `<body>` contains the `<h1>` and `<p>` elements.
+The `<html>` element contains all elements of the page. In diagram here, the `<head>` element contains the `<title>`, and the `<body>` contains the `<h1>` and `<p>` elements.
 
 We call these [*semantic* elements](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#semantic_elements)—which is saying that they give their contents a *meaning* or a *role*. (Remember [Tim’s diagram](/topic/everything/web.png).) These *roles* are then interpreted by your browser (Chrome, Safari, Firefox, etc.) when it loads the file, to ultimately display the page. We call this *parsing* the document.
 
@@ -73,38 +75,48 @@ We call these [*semantic* elements](https://developer.mozilla.org/en-US/docs/Glo
 </div>
 
 <div class="recto add-before">
+<div class="recto before--1">
 
 In our example, here is what we’ve told the computer:
 <!-- .balance .bold .scale--h4 style="margin-block-end: initial" -->
+<!-- .intro -->
 
 - `<!doctype html>`<!-- style="--typography--scale: var(--typography--leading--tight)" -->
+- `<!doctype html>`
 
 	What type/version of HTML this file contains, so it knows how to parse it.
 
 	- `<html></html>`<!-- style="--typography--scale: var(--typography--leading--tight)" -->
+	- `<html></html>`
 
 		The root element of an HTML page, containing all the content.
 
 	- `<head></head>`<!-- style="--typography--scale: var(--typography--leading--tight)" -->
+	- `<head></head>`
 
 		The *meta* information about the HTML page—like its title, default language, and any [scripts](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script) and [stylesheets](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/style) it needs to display the page.
 
 		Nothing in this element is visible on the page itself!
 		<!-- .secondary -->
+		<!-- .note -->
 
 		- `<title></title>`<!-- style="--typography--scale: var(--typography--leading--tight)" -->
+		- `<title></title>`
 
 			Specifies a [title](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title) for the page—which is shown in the browser’s tab, and when it is shared.
 
 	- `<body></body>`<!-- style="--typography--scale: var(--typography--leading--tight)" -->
+	- `<body></body>`
 
 		 Defines the document's body—the container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.
 
 		- `<h1></h1>`<!-- style="--typography--scale: var(--typography--leading--tight)" -->
+		- `<h1></h1>`
 
 			Defines a primary/first-level heading.
 
 		- `<p></p>`<!-- style="--typography--scale: var(--typography--leading--tight)" -->
+		- `<p></p>`
 
 			Defines a paragraph.
 <!-- .balance -->
@@ -112,16 +124,20 @@ In our example, here is what we’ve told the computer:
 </div>
 
 We use semantic elements to help structure and describe our content—but also for accessibility (screen <nobr>readers)—</nobr>where the tag type helps indicate what things are.
-<!-- .balance .add-before--3 -->
+We use semantic elements to help structure and describe our content—but also for accessibility (screen <nobr>readers)—</nobr>where the tag type helps indicate what things *are*.
+<!-- .balance .before--2 -->
 
 ## What Are Elements? <!-- style="--inset: -0.07em" -->
+## What Are Elements?
 
 [Elements](https://developer.mozilla.org/en-US/docs/Glossary/Element) are composed of tags (opening, closing) and their content:
 <!-- .balance .bold .scale--h4 -->
+<!-- .intro .body -->
 
 [<cite>HTML Elements Reference – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 	MDN will always go deep; this is *all* the elements.
 <!-- .link-list .right style="--rows: 2" -->
+<!-- .right .start .before--2 -->
 
 <figure @source="tag.svg"></figure>
 

@@ -188,13 +188,12 @@ a:where(:has(> cite)) {
 
 details[open] :where(summary) { --icon: '−' }
 
-:is(li, p:only-child):where(:has(> a > cite)) {
+:is(li, p):where(:has(> a > cite)) {
 	padding-block-start: calc(1rcap - 1cap); /* Back on baseline. */
 
 	> :where(a:has(> cite)) { inline-size: initial } /* To the grid. */
 
 	/* With additional text after (Markdown adds the `br`). */
-	/* TODO Make this work with loose paragraphs, baseline is off! */
 	&:has(> br) {
 		padding-block-end: 1rcap;
 
