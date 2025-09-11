@@ -496,19 +496,6 @@ main {
 	.rows--5 { --rows: 5 }
 	.rows--6 { --rows: 6 }
 
-	/* Baseline reference grid. */
-	&::before {
-		background-image:    linear-gradient(color-mix(in srgb, #38f, transparent 25%) 0.5px, transparent 0.5px);
-		background-position: 0 1cap;
-		background-size:     100% 1rlh;
-
-		/* content:             ''; */
-		inset:               0;
-		pointer-events:      none;
-		position:            fixed;
-		z-index:             1;
-	}
-
 	/* The actual columns. */
 	@media (orientation: landscape) and (width >= 35em), (width >= 60em) {
 		grid-template-columns:
