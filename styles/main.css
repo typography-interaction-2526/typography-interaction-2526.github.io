@@ -102,7 +102,7 @@ main {
 		}
 
 		/* “Tight” lists. */
-		&:where(:not(:has(li > p, a > cite))) { row-gap: 1rcap }
+		&:where(:not(:has(li > p, a > cite))) { row-gap: calc(1rcap - (1cap - 1rcap)) }
 
 		/* More vertical space when the items have multiple paragraphs. */
 		&:where(:has(:where(dt, li) > p:not(:only-child))) {
@@ -416,15 +416,16 @@ main {
 	}
 
 	:where(.intro) {
-		--leading: 1rlh;
-		--size:    var(--size--h3);
-		--weight:  300;
+		--leading:        1rlh;
+		--size:           var(--size--h3);
 
 		/* Back on baseline. */
-		inset-block-start:         calc(1rcap - 1cap);
-		margin-block-end:          calc(1rcap - 1cap);
-		position:                  relative;
-		-webkit-text-stroke-width: 0.015em; /* Match to body copy. */
+		&::before {
+			content:            ' '; /* Otherwise it collapses! */
+			display:            flow-root;
+			margin-block-start: calc(1rcap - 1cap - 1rlh);
+			visibility:         hidden;
+		}
 
 		&:not(:where(:first-child)) { margin-block-start: 1rlh }
 
@@ -474,12 +475,13 @@ main {
 
 	/* Only when on The Grid. */
 	:where(&, section) {
+		> .intro  { grid-column: intro } /* Higher for cascade override. */
+
 		> .all    { grid-column: all }
 		> .aside  { grid-column: aside }
 		> .body   { grid-column: body }
 		> .five   { grid-column: five }
 		> .four   { grid-column: four }
-		> .intro  { grid-column: intro }
 		> .left   { grid-column: left }
 		> .middle { grid-column: middle }
 		> .one    { grid-column: one }
