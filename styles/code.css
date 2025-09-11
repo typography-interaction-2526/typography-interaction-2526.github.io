@@ -8,12 +8,13 @@ code, kbd, samp {
 :where(*:not(pre)) > code,
 kbd,
 samp {
-	background-color:  var(--code);
-	border-radius:     var(--stroke);
-	inset-block-start: 0.03em;
-	padding-block:     0.25em;
-	padding-inline:    0.5em;
-	user-select:       all;
+	background-color:    var(--code);
+	border-radius:       var(--stroke);
+	inset-block-start:   0.03em;
+	padding-block-end:   0.2em;
+	padding-block-start: 0.3em;
+	padding-inline:      0.5em;
+	user-select:         all;
 }
 
 /* Tighten keyboard/menu combos. */
