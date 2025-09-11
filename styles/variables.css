@@ -24,7 +24,9 @@
 
 	--note: color-mix(in srgb, var(--color, currentcolor), transparent 50%);
 
-	--background--root:   gainsboro;
+	--code: color-mix(in srgb, var(--accent), transparent 25%);
+
+	--background--root: gainsboro;
 
 	--background--1: gold;
 	--background--2: orange;

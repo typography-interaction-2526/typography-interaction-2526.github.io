@@ -20,6 +20,11 @@
 >
 <link
 	webc:bucket="base"
+	href="../../styles/code.css"
+	rel="stylesheet"
+>
+<link
+	webc:bucket="base"
 	href="../../styles/main.css"
 	rel="stylesheet"
 >

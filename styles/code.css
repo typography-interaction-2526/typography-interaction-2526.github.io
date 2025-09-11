@@ -1,0 +1,23 @@
+code, kbd, samp {
+	font-feature-settings: initial;
+	font-style:            normal;
+	white-space:           pre;
+}
+
+:where(*:not(pre)) > code,
+kbd,
+samp {
+	background-color: var(--code);
+	border-radius:    var(--stroke);
+	display:          inline-block;
+	line-height:      initial;
+	padding:          1ex;
+	text-box-edge:    cap alphabetic;
+	text-box-trim:    trim-both;
+	user-select:      all;
+}
+
+pre {
+	background-color: var(--code);
+	overflow-x:       scroll;
+}

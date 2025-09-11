@@ -22,6 +22,12 @@
 	src:         url('../assets/fonts/gorton-digital--heavy.otf') format('opentype');
 }
 
+@font-face {
+	font-family: OCR-B;
+	font-weight: 700;
+	src:         url('../assets/fonts/ocr-b.otf') format('opentype');
+}
+
 :where(:root) {
 	/* Some basic bounding-box metrics. */
 	--bottom:    0.228em;
@@ -81,4 +87,11 @@
 		--right:  0.119em;
 		--stroke: 0.119em;
 	}
+}
+
+/* Code stuff! */
+code, kbd, samp {
+	font-family: OCR-B, 'SF Pro', monospace;
+	font-size:   75%;
+	font-weight: 600; /* Only changes the SF. */
 }
