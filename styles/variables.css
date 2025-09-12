@@ -48,7 +48,7 @@
 	@media (width >= 35em) { /* Landscape phones. */
 		--alley: 4rcap;
 
-		@media (height >= 27em) { --size--root: 24 } /* Tablets. */
+		@media (height >= 27em), (width >= 60em) { --size--root: 24 } /* Tablets. */
 	}
 
 	@media (width >= 60em) { --alley: 6rcap }

@@ -11,10 +11,13 @@
 <style>
 	body,
 	html,
+	pre,
 	ti-preview {
 		block-size:  100%;
 		inline-size: 100%;
 	}
+
+	figure:only-child figcaption { display: none }
 </style>
 <script>
 	const active = (new URLSearchParams(window.location.search)).get('active')

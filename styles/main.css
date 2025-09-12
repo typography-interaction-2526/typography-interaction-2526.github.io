@@ -267,6 +267,9 @@ main {
 					+ figcaption::after { content: 'Safari prevents Google Drive embeds—so you’ll need to go to the originals.' }
 				}
 			}
+
+			/* Code previews. */
+			&:not([src*="https://"])[src$='/preview'] { inline-size: 100% }
 		}
 
 		&.multiply { img, object, iframe { mix-blend-mode: multiply } }
@@ -324,7 +327,7 @@ main {
 
 		> ol { row-gap: 1rlh }
 
-		&:where(:not(:first-child)), &:where(:not(:last-child)) + * { margin-block-start: 2rlh }
+		&:where(:not(:first-child)), &:where(:not(:last-child)) + * { margin-block-start: 4rlh }
 
 		&:has(+ p > a > cite) { margin-block-end: 1rlh }
 
@@ -516,17 +519,17 @@ main {
 	.rows--6 { --rows: 6 }
 
 	/* Manual vertical spacing. */
-	.before--0 { margin-block-start: initial }
-	.before--1 { margin-block-start: 1rlh }
-	.before--2 { margin-block-start: 2rlh }
-	.before--3 { margin-block-start: 3rlh }
-	.before--4 { margin-block-start: 4rlh }
+	.before--0          { margin-block-start: initial }
+	.before, .before--1 { margin-block-start: 1rlh }
+	.before--2          { margin-block-start: 2rlh }
+	.before--3          { margin-block-start: 3rlh }
+	.before--4          { margin-block-start: 4rlh }
 
-	.after--0 + * { margin-block-start: initial }
-	.after--1 + * { margin-block-start: 1rlh }
-	.after--2 + * { margin-block-start: 2rlh }
-	.after--3 + * { margin-block-start: 3rlh }
-	.after--4 + * { margin-block-start: 4rlh }
+	.after--0 + *              { margin-block-start: initial }
+	:is(.after, .after--1) + * { margin-block-start: 1rlh }
+	.after--2 + *              { margin-block-start: 2rlh }
+	.after--3 + *              { margin-block-start: 3rlh }
+	.after--4 + *              { margin-block-start: 4rlh }
 
 	/* The actual columns. */
 	@media (orientation: landscape) and (width >= 35em), (width >= 60em) {

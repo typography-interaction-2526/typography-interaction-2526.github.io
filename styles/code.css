@@ -23,15 +23,11 @@ samp {
 pre {
 	background-color: var(--pre);
 	border-radius:    calc(var(--stroke) * 2);
-	inline-size:      fit-content;
-	max-inline-size:  100%;
 
 	> code {
 		color:              color-mix(in srgb, currentcolor, transparent 66%);
 		display:            block;
-		inset-block-start:  -0.15em;
 		line-height:        inherit;
-		margin-block-start: calc(1rcap - 1cap);
 		mask:               linear-gradient(to right, transparent, white 1rcap, white calc(100% - 1rcap), transparent 100%);
 		overflow-x:         auto;
 		overflow-y:         hidden;
@@ -39,5 +35,16 @@ pre {
 		tab-size:           4;
 		text-box-edge:      cap alphabetic;
 		text-box-trim:      trim-both;
+	}
+}
+
+/* In-page. */
+main pre {
+	inline-size:     fit-content;
+	max-inline-size: 100%;
+
+	> code {
+		inset-block-start:  -0.15em;
+		margin-block-start: calc(1rcap - 1cap);
 	}
 }
