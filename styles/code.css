@@ -27,7 +27,7 @@ pre {
 	> code {
 		color:              color-mix(in srgb, currentcolor, transparent 66%);
 		display:            block;
-		inset-block-start:  0.15em;
+		inset-block-start:  0.2em;
 		line-height:        inherit;
 		mask:               linear-gradient(to right, transparent, white 1rcap, white calc(100% - 1rcap), transparent 100%);
 		overflow-x:         auto;
@@ -36,16 +36,38 @@ pre {
 		tab-size:           4;
 		text-box-edge:      cap alphabetic;
 		text-box-trim:      trim-both;
+
+		&::-webkit-scrollbar { display: none }
 	}
 }
 
 /* In-page. */
-main pre {
-	inline-size:     fit-content;
-	max-inline-size: 100%;
-
-	> code {
-		inset-block-start:  -0.15em;
+main {
+	pre,
+	ti-preview {
+		inline-size:        fit-content;
 		margin-block-start: calc(1rcap - 1cap);
+		max-inline-size:    100%;
 	}
+
+	pre > code { inset-block-start:  -0.05em }
+
+	ti-preview { --editor-padding: 0.37rcap 1rcap 0.37rcap }
+}
+
+/* Live preview settings. */
+ti-preview {
+	--output-background: white;
+	--output-border:     initial;
+
+	--editor-background:           var(--pre);
+	--editor-caret-color:          var(--color);
+	--editor-font-family:          'OCR B', ui-monospace, monospace;
+	--editor-font-size:            var(--size--pre);
+	--editor-line-height:          1rlh;
+
+	--editor-padding:              0.65rcap 1rcap 0.35rcap;
+	--editor-selection-background: var(--accent);
+
+	--editor-width: 64.25%; /* End of body column. */
 }

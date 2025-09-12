@@ -99,11 +99,12 @@
 /* Code stuff! */
 code, kbd, samp {
 	font-family: 'OCR B', 'SF Pro', monospace;
-	font-size:   70%;
+	font-size:   var(--size--code);
 	font-weight: bold; /* Only changes the SF. */
 }
 
+ti-preview,
 :where(pre) code {
-	font-size:   75%;
+	font-size:   var(--size--pre);
 	font-weight: normal;
 }
