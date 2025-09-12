@@ -70,4 +70,33 @@ ti-preview {
 	--editor-selection-background: var(--accent);
 
 	--editor-width: 64.25%; /* End of body column. */
+
+	--syntax-text:         #f0f6fb;
+	--syntax-link:         #c678dd;
+	--syntax-heading:      #e06c75;
+	--syntax-emphasis:     #acb2be;
+	--syntax-strong:       #acb2be;
+	--syntax-keyword:      #ff7b72;
+	--syntax-atom:         #f0f6fb;
+	--syntax-bool:         #79c0ff;
+	--syntax-url:          #56b6c2;
+	--syntax-labelName:    #61afef;
+	--syntax-inserted:     #98c379;
+	--syntax-deleted:      #e06c75;
+	--syntax-literal:      #a5d6ff;
+	--syntax-string:       #a5d6ff;
+	--syntax-number:       #79c0ff;
+	--syntax-variableName: #ffa657;
+	--syntax-definition:   #d2a8ff;
+	--syntax-typeName:     #7ee687;
+	--syntax-namespace:    #e5c07b;
+	--syntax-className:    #79c0ff;
+	--syntax-macroName:    #e06c75;
+	--syntax-propertyName: #79c0ff;
+	--syntax-operator:     #f0f6fc;
+	--syntax-comment:      #9198a1;
+	--syntax-meta:         #79c0ff;
+	--syntax-punctuation:  #f0f6fb;
+	--syntax-invalid:      #fff;
+	--syntax-whitespace:   var(--color--highlight);
 }
