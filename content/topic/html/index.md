@@ -447,10 +447,23 @@ You can *comment* part of the code and the browser won’t show it. [Comments](h
 	>
 </figure>
 
-We *highly* recommend getting into a habit of commenting your code, especially when starting out!
-<!-- .balance -->
+<aside>
 
-If you figure something tricky out, write down why and how you solved it to help you understand and remember. And you’ll often come back to things. *Commenting your code is a gift to your future self!*
+<mark>Regular commenting highly recommended</mark>
+
+If you figure something tricky out, write down why and how you solved it to help you understand and remember. And you’ll often come back to these things.
+
+<mark>*Commenting code is a gift to your future self!*</mark>
+
+</aside>
+
+<aside class="reverse">
+
+<mark>Reminder from Management</mark>
+
+Commenting is also how you will [add attributions](/syllabus/#attribution) to your code.
+
+</aside>
 
 ### Lists
 
