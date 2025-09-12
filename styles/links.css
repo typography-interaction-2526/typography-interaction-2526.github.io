@@ -86,7 +86,7 @@ summary {
 		/* Use background for active highlight, as it might wrap. */
 		&::after { content: initial }
 
-		:where(:not(s)):active { background-color: var(--highlight) }
+		&:where(:not(s)):active { background-color: var(--highlight) }
 	}
 }
 
