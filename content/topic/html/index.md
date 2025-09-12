@@ -354,7 +354,6 @@ Code is read more often than it is written. Code should always be written in a w
 ## Block Elements
 
 [*Block-level elements*](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements) always start on a new line, and take up the full width available—stretching out to the left and right of their parent/container. They stack on top of each other. Importantly, block elements can have a top and bottom margin, unlike inline elements.
-<!-- .add-after -->
 
 `<address>`
 `<article>`
@@ -399,7 +398,7 @@ Code is read more often than it is written. Code should always be written in a w
 <figure
 	@caption="These are live, *editable* examples!"
 	@source="block/preview"
-	style="--lines: 15"
+	style="--lines: 16"
 	>
 </figure>
 
@@ -408,11 +407,11 @@ Code is read more often than it is written. Code should always be written in a w
 [*Inline elements*](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements) do *not* start on a new line, and only take up as much width as necessary. You can think of these as the little metal slugs [from printing](<https://en.wikipedia.org/wiki/Slug_(typesetting)>). Other text and inline elements will continue to flow around them, and they can wrap to new lines:
 
 `<abbr>` `<a>` `<cite>` `<code>` `<del>` `<em>` `<img>` `<ins>` `<mark>` `<span>` `<strong>` `<sub>` `<sup>` `<time>`
-<!-- .add-before .balance -->
+<!-- .balance -->
 
 <figure
 	@source="inline/preview"
-	style="--lines: 13"
+	style="--lines: 14"
 	>
 </figure>
 
@@ -431,6 +430,7 @@ Inline elements [are the exception](https://developer.mozilla.org/en-US/docs/Web
 ```
 
 …displays as `Hello World`, not  `HelloWorld`.
+<!-- .note -->
 
 </div>
 
@@ -443,7 +443,7 @@ You can *comment* part of the code and the browser won’t show it. [Comments](h
 <figure
 	@caption="Keep in mind these are still readable in the *source*."
 	@source="comment/preview"
-	style="--lines: 11"
+	style="--lines: 12"
 	>
 </figure>
 
@@ -458,7 +458,7 @@ Any time you have more than two of something, you probably have [a *list*](https
 
 <figure
 	@source="list/preview"
-	style="--lines: 21"
+	style="--lines: 22"
 	>
 </figure>
 
@@ -469,7 +469,7 @@ There are [specific lists](https://developer.mozilla.org/en-US/docs/Web/HTML/Ele
 <figure
 	@caption="These aren’t much to look at without CSS, though. Soon!"
 	@source="description-list/preview"
-	style="--lines: 16"
+	style="--lines: 17"
 	>
 </figure>
 
@@ -480,7 +480,7 @@ There is even some basic interactivity (way, way ahead of JavaScript) with [*det
 <figure
 	@caption="You can do a lot with these, without any JavaScript!"
 	@source="details-summary/preview"
-	style="--lines: 18"
+	style="--lines: 19"
 	>
 </figure>
 
@@ -495,10 +495,10 @@ There is even some basic interactivity (way, way ahead of JavaScript) with [*det
 	>
 </figure>
 
-They used to be the only way to achieve multi-column or grid layouts, but that has luckily since been replaced by modern CSS techniques like `flexbox`, and `grid`. (Or even `float`.) We’ll talk about those later!
+They used to be the only way to achieve multi-column or grid layouts, but that has luckily since been replaced by modern CSS techniques like `flexbox`, and `grid`. (Or even `float`.) We’ll talk about those later!
 
-Again, there are [many, many, many, many HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). Try and find the one that best fits your usage, wherever possible using a *semantic* element that fits your content.
-<!-- .add-before--3 .balance .bold .scale--h4 -->
+Again, there are [many, many, many, many HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element). Try and find the one that best fits your usage, wherever possible using a *semantic* element that fits your content.
+<!-- .intro -->
 
 ## User-Agent Styles
 
@@ -513,7 +513,7 @@ This is what the web was, before CSS! But as a designer, rarely what you want. W
 
 In case of conflict, consider users over authors over implementors over specifiers over theoretical purity.
 
-In other words costs or difficulties to the user should be given more weight than costs to authors; which in turn should be given more weight than costs to implementors; which should be given more weight than costs to authors of the spec itself, which should be given more weight than those proposing changes for theoretical reasons alone.
+…
 
 Of course, it is preferred to make things better for multiple constituencies at once.
 
