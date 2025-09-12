@@ -47,7 +47,7 @@ We call these [*semantic* elements](https://developer.mozilla.org/en-US/docs/Glo
 	@citation="https://www.lassila.org/publications/2001/SciAm.pdf"
 	>
 
-*The Semantic Web* is not a separate Web but an extension of the current one, in which information is given well-defined meaning, better enabling computers and people to work in cooperation.
+<em style="margin-inline-start: -0.55em">The Semantic Web</em> is not a separate Web but an extension of the current one, in which information is given well-defined meaning, better enabling computers and people to work in cooperation.
 
 </blockquote>
 
@@ -317,7 +317,7 @@ Generally speaking, HTML doesn’t care about capitalization, extra white space,
 <!-- .link-list .right style="--lines: 2" -->
 
 The browser parses both of these in the exact same way:
-<!-- .intro .before--3 -->
+<!-- .intro .before--3 .after -->
 
 ```html <!-- .verso -->
 <body>
@@ -331,7 +331,7 @@ The browser parses both of these in the exact same way:
 </body>
 ```
 
-```html <!-- .recto -->
+```html <!-- .recto .center -->
 <body><h1>Dog Breeds</h1><p>There are many k
 ind of dog breeds</p><ul><li>German Shepherd
 </li><li>Bulldog</li><li>Poodle</li></ul></body>
@@ -504,7 +504,7 @@ There is even some basic interactivity (way, way ahead of JavaScript) with [*det
 <figure
 	@caption="This syntax is pretty verbose, for what you get."
 	@source="table/preview"
-	style="--lines: 16"
+	style="--lines: 26"
 	>
 </figure>
 

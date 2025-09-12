@@ -6,6 +6,7 @@
 	--size--h2:   1.5rem;
 	--size--h3:   1.25rem; /* Cap-x-cap on `rlh`. */
 	--size--note: 0.85rem;
+
 	--size--code: 0.7rem;
 	--size--pre:  0.75rem;
 
@@ -27,7 +28,7 @@
 	--note: color-mix(in srgb, var(--color, currentcolor), transparent);
 
 	--code: var(--highlight);
-	--pre:  color-mix(in srgb, var(--accent), transparent 33%);
+	--pre:  color-mix(in srgb, var(--color), transparent 20%);
 
 	--background--root: gainsboro;
 
