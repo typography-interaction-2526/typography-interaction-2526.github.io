@@ -9,9 +9,10 @@
 </script>
 
 <style>
-	body,
 	html,
+	body,
 	pre,
+	figure,
 	ti-preview {
 		block-size:  100%;
 		inline-size: 100%;

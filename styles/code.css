@@ -27,6 +27,7 @@ pre {
 	> code {
 		color:              color-mix(in srgb, currentcolor, transparent 66%);
 		display:            block;
+		inset-block-start:  0.15em;
 		line-height:        inherit;
 		mask:               linear-gradient(to right, transparent, white 1rcap, white calc(100% - 1rcap), transparent 100%);
 		overflow-x:         auto;

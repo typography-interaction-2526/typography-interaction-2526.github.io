@@ -449,9 +449,9 @@ You can *comment* part of the code and the browser won’t show it. [Comments](h
 
 <aside>
 
-<mark>Regular commenting highly recommended</mark>
+<mark>Regular commenting is highly recommended</mark>
 
-If you figure something tricky out, write down why and how you solved it to help you understand and remember. And you’ll often come back to these things.
+If you figure something tricky out, write down why and how you solved it to help you understand and remember—you’ll often come back to these things.
 
 <mark>*Commenting code is a gift to your future self!*</mark>
 
