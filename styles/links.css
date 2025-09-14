@@ -94,115 +94,117 @@ summary {
 .intro a { background-position-y: calc(1cap + var(--enlargement) + (1rlh - 1cap) / 2 - var(--stroke)) }
 
 /* Our “tag” style. */
-button,
-summary,
-a:where(:has(> cite)) {
-	--block:       1cap;
-	--inline:      1cap;
-	--leading:     1rlh;
-	--size:        var(--size--note);
-	--weight:      700;
-	--gap:         2cap;
-	--icon--width: 0.85em;
+:where(main) {
+	button,
+	summary,
+	a:where(:has(> cite)) {
+		--block:       1cap;
+		--inline:      1cap;
+		--leading:     1rlh;
+		--size:        var(--size--note);
+		--weight:      700;
+		--gap:         2cap;
+		--icon--width: 0.85em;
 
-	inline-size: fit-content;
+		inline-size: fit-content;
 
-	> :is(cite, p) {
-		background-color:     var(--background);
-		border-radius:        var(--stroke);
-		color:                var(--color);
-		display:              block;
-		letter-spacing:       0.05em;
-		margin-block:         calc(-1 * var(--block));
-		max-inline-size:      27rem; /* Half-ish. */
-		outline-color:        var(--color);
-		outline-offset:       round(down, calc(-1 * var(--stroke)), var(--rounding));
-		outline-style:        solid;
-		outline-width:        round(up, var(--stroke), var(--rounding));
-		padding-block:        var(--block);
-		padding-inline-end:   calc(var(--gap, 0rem) + var(--icon--width, 0rem) + var(--inline) - var(--right));
-		padding-inline-start: calc(var(--inline) - var(--left));
-		text-box:             trim-both cap alphabetic;
-	}
-
-	/* TODO Otherwise collapses down! Not sure why.  */
-	&:where(a, button, summary) {
-		margin-block:  calc(-1 * var(--block));
-		padding-block: var(--block);
-	}
-
-	/* TODO Consolidate these! */
-	> cite {
-		position: relative;
-
-		&::after {
-			content:           var(--icon, '↓');
-			inset-block-start: var(--block);
-			inset-inline-end:  calc(var(--inline) - var(--right));
-			position:          absolute;
-			text-box:          trim-both cap alphabetic;
+		> :is(cite, p) {
+			background-color:     var(--background);
+			border-radius:        var(--stroke);
+			color:                var(--color);
+			display:              block;
+			letter-spacing:       0.05em;
+			margin-block:         calc(-1 * var(--block));
+			max-inline-size:      27rem; /* Half-ish. */
+			outline-color:        var(--color);
+			outline-offset:       round(down, calc(-1 * var(--stroke)), var(--rounding));
+			outline-style:        solid;
+			outline-width:        round(up, var(--stroke), var(--rounding));
+			padding-block:        var(--block);
+			padding-inline-end:   calc(var(--gap, 0rem) + var(--icon--width, 0rem) + var(--inline) - var(--right));
+			padding-inline-start: calc(var(--inline) - var(--left));
+			text-box:             trim-both cap alphabetic;
 		}
-	}
 
-	&:where(summary, button) {
-		--gap: 1cap;
-
-		-webkit-user-select: none;
-		user-select:         none;
-
-		/* `before` to not foul link tap area. */
-		&::before {
-			content:           var(--icon);
-			inset-block-start: var(--block);
-			inset-inline-end:  calc(var(--inline) - var(--right));
-			position:          absolute;
-			text-box:          trim-both cap alphabetic;
+		/* TODO Otherwise collapses down! Not sure why.  */
+		&:where(a, button, summary) {
+			margin-block:  calc(-1 * var(--block));
+			padding-block: var(--block);
 		}
-	}
 
-	&:where(summary) {
-		--icon:        '+';
-		--icon--width: 0.75em;
-	}
-
-	&:where(button) {
-		--icon:        '🔀';
-		--icon--width: 1em;
-	}
-
-	&:where([href]:not([href^='/'])) {
-		--icon:        '→';
-		--icon--width: 1em;
-
+		/* TODO Consolidate these! */
 		> cite {
-			background-color: var(--color);
-			color:            var(--background);
+			position: relative;
+
+			&::after {
+				content:           var(--icon, '↓');
+				inset-block-start: var(--block);
+				inset-inline-end:  calc(var(--inline) - var(--right));
+				position:          absolute;
+				text-box:          trim-both cap alphabetic;
+			}
+		}
+
+		&:where(summary, button) {
+			--gap: 1cap;
+
+			-webkit-user-select: none;
+			user-select:         none;
+
+			/* `before` to not foul link tap area. */
+			&::before {
+				content:           var(--icon);
+				inset-block-start: var(--block);
+				inset-inline-end:  calc(var(--inline) - var(--right));
+				position:          absolute;
+				text-box:          trim-both cap alphabetic;
+			}
+		}
+
+		&:where(summary) {
+			--icon:        '+';
+			--icon--width: 0.75em;
+		}
+
+		&:where(button) {
+			--icon:        '🔀';
+			--icon--width: 1em;
+		}
+
+		&:where([href]:not([href^='/'])) {
+			--icon:        '→';
+			--icon--width: 1em;
+
+			> cite {
+				background-color: var(--color);
+				color:            var(--background);
+			}
+		}
+
+		&:where([href$='.pdf']) {
+			--icon:        '⤓';
+			--icon--width: 1em;
 		}
 	}
 
-	&:where([href$='.pdf']) {
-		--icon:        '⤓';
-		--icon--width: 1em;
-	}
-}
+	details[open] :where(summary) { --icon: '−' }
 
-details[open] :where(summary) { --icon: '−' }
+	:is(li, p):where(:has(> a > cite)) {
+		padding-block-start: calc(1rcap - 1cap); /* Back on baseline. */
 
-:is(li, p):where(:has(> a > cite)) {
-	padding-block-start: calc(1rcap - 1cap); /* Back on baseline. */
+		&:where(p:only-child) > :where(a:has(> cite)) { inline-size: initial } /* To the grid. */
 
-	&:where(p:only-child) > :where(a:has(> cite)) { inline-size: initial } /* To the grid. */
+		/* With additional text after (Markdown adds the `br`). */
+		&:has(> br) {
+			padding-block-end: 1rcap;
 
-	/* With additional text after (Markdown adds the `br`). */
-	&:has(> br) {
-		padding-block-end: 1rcap;
+			/* “Push” the additional text back down to the (half) baseline. */
+			> :where(a:has(> cite)) { margin-block-end: calc((1cap - 2rcap) + 1rlh) }
 
-		/* “Push” the additional text back down to the (half) baseline. */
-		> :where(a:has(> cite)) { margin-block-end: calc((1cap - 2rcap) + 1rlh) }
+			/* TODO This is ever-so-slightly off still. */
 
-		/* TODO This is ever-so-slightly off still. */
-
-		> br { display: none } /* Link is already `block`. */
+			> br { display: none } /* Link is already `block`. */
+		}
 	}
 }
 
