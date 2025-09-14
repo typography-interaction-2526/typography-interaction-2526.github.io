@@ -31,6 +31,16 @@
 		}
 	})
 
+
+	// Update the hash while scrolling through.
+	document.querySelectorAll('article [id]:not(figure)').forEach(
+		(section) =>
+			new IntersectionObserver(
+				([entry]) => entry.isIntersecting && history.replaceState(null, '', `#${entry.target.id}`),
+				{ rootMargin: '-50% 0%' },
+			).observe(section),
+	)
+
 	// Line up to grid.
 	// document.addEventListener('keydown', (e) => {
 	// 	if (['ArrowUp', 'ArrowDown'].includes(e.key)) {
