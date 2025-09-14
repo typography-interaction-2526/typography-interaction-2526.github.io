@@ -14,9 +14,6 @@ main {
 
 	/* TODO Revise vertical spacing above/below! */
 
-	/* Space above anchor destination. */
-	[id] { scroll-margin-block: 2cap }
-
 	h1 { display: none } /* Don’t you dare. */
 
 	/* Headings. */

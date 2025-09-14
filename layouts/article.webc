@@ -57,6 +57,9 @@
 	article {
 		scroll-margin-block-start: 0;
 
+		/* Space above anchor destination. */
+		[id] { scroll-margin-block: min(var(--gutter--base), var(--gutter)) }
+
 		/* Print-only. */
 		.print { display: none }
 

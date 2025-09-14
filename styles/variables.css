@@ -12,8 +12,9 @@
 
 	--max: 1400;
 
-	--alley:  2rcap;
-	--gutter: max(calc(var(--alley) / 2), calc((100vw - (var(--max) / var(--size--root)) * 1rem) / 2));
+	--alley:        2rcap;
+	--gutter--base: calc(var(--alley) / 2);
+	--gutter:       max(var(--gutter--base), calc((100vw - (var(--max) / var(--size--root)) * 1rem) / 2));
 
 	--disabled--opacity: 20%;
 	--disabled:          color-mix(in srgb, var(--color, currentcolor), transparent calc(100% - var(--disabled--opacity)));
