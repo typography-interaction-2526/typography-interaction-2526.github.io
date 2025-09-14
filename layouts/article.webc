@@ -31,15 +31,21 @@
 		}
 	})
 
+	// Update the hash while scrolling through, without modifying the DOM.
+	const sections = new Set()
 
-	// Update the hash while scrolling through.
-	document.querySelectorAll('article [id]:not(figure)').forEach(
-		(section) =>
+	document.querySelectorAll('article [id]:not(figure)').forEach((id) => {
+		const section = id.closest('section')
+
+		if (section && !sections.has(section)) {
+			sections.add(section)
+
 			new IntersectionObserver(
-				([entry]) => entry.isIntersecting && history.replaceState(null, '', `#${entry.target.id}`),
+				([entry]) => entry.isIntersecting && history.replaceState(null, '', `#${section.querySelector('[id]')?.id}`),
 				{ rootMargin: '-50% 0%' },
-			).observe(section),
-	)
+			).observe(section)
+		}
+	})
 
 	// Line up to grid.
 	// document.addEventListener('keydown', (e) => {
@@ -99,23 +105,25 @@
 		<main>
 			<!-- TODO Come back to this! -->
 			<!-- <block webc:import="toc.webc"></block> -->
-			<hgroup webc:if="$data.video">
-				<h2
-					id="session-recording"
-					tabindex="-1"
-				>
-					Session Recording
-				</h2>
-				<a
-					aria-labelledby="session-recording"
-					href="#session-recording"
-				></a>
-			</hgroup>
-			<figure
-				webc:if="$data.video"
-				:citation="`https://drive.google.com/file/d/${$data.video}`"
-				:source="`https://drive.google.com/file/d/${$data.video}/preview`"
-			></figure>
+			<section webc:if="$data.video">
+				<hgroup>
+					<h2
+						id="session-recording"
+						tabindex="-1"
+					>
+						Session Recording
+					</h2>
+					<a
+						aria-labelledby="session-recording"
+						href="#session-recording"
+					></a>
+				</hgroup>
+				<figure
+					webc:if="$data.video"
+					:citation="`https://drive.google.com/file/d/${$data.video}`"
+					:source="`https://drive.google.com/file/d/${$data.video}/preview`"
+				></figure>
+			</section>
 			<template
 				webc:nokeep
 				@html="content"
