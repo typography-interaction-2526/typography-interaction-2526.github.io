@@ -457,6 +457,9 @@ main {
 
 		+ * { margin-block-start: 1rlh }
 
+		/* Tighten underlines. */
+		a { background-position-y: calc(var(--enlargement) + 1cap + (1rlh - 1cap) / 2 - var(--stroke)) }
+
 		/* TODO `aria-label` instead? */
 	}
 
