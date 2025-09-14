@@ -310,6 +310,8 @@ main {
 			--leading: 1lrh;
 
 			margin-block-start: calc(1rcap - 1cap); /* Back on baseline. */
+
+			&:last-child { margin-block-start: 1rlh }
 		}
 
 		&.reverse {
