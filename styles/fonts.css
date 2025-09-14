@@ -99,7 +99,6 @@
 /* Code stuff! */
 code, kbd, samp {
 	font-family: 'OCR B', 'SF Pro', monospace;
-	font-size:   var(--size--code);
 	font-weight: bold; /* Only changes the SF. */
 }
 
