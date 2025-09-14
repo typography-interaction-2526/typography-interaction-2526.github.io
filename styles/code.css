@@ -2,6 +2,7 @@ code, kbd, samp {
 	font-feature-settings: initial;
 	font-style:            normal;
 	position:              relative;
+	text-transform:        initial;
 	white-space:           pre;
 }
 
@@ -11,6 +12,7 @@ samp {
 	background-color:    var(--code);
 	border-radius:       var(--stroke);
 	inset-block-start:   0.03em;
+	line-height:         initial;
 	padding-block-end:   0.2em;
 	padding-block-start: 0.3em;
 	padding-inline:      0.5em;
