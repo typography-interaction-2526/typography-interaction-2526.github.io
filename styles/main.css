@@ -382,6 +382,8 @@ main {
 		grid-column:        all;
 		margin-block-end:   1rlh;
 		margin-block-start: 2rlh;
+
+		&::after { content: '' } /* Divider itself. */
 	}
 
 	/* Heading spacing, lower for cascade. */
@@ -392,6 +394,8 @@ main {
 			> hgroup {
 				/* TODO This is off on mobile. */
 				margin-block-start: calc(1cap - 1rcap); /* Back on baseline. */
+
+				&::after { content: '' } /* Divider itself. */
 
 				+ * { margin-block-start: 3rlh } /* One more for divider. */
 			}
@@ -409,16 +413,12 @@ main {
 			background-color:   var(--color);
 			block-size:         var(--stroke);
 			border-radius:      calc(var(--stroke) / 2);
-			content:            '';
 			inline-size:        calc(100vw - 2 * var(--gutter));
 			inset-block-end:    calc(-1 * var(--stroke) / 2 - 1rlh);
 			inset-inline-start: calc(-1 * var(--stroke) / 2);
 			position:           absolute;
 		}
 	}
-
-	/* Turn off on first `h2`. */
-	section:first-child hgroup:has(> h2)::after { content: initial }
 
 	/* Dim inert stuff. */
 	*[inert] {
