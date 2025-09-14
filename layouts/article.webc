@@ -48,7 +48,14 @@
 							|| (section === ([...sections].at(-1)) && entry.boundingClientRect.top <= 0)) &&
 								history.replaceState(null, '', window.location.pathname + window.location.search)
 				},
-				{ rootMargin: '-50% 0%' },
+				{
+					rootMargin:
+						section.matches('main > section:first-child')
+							? '0% 0% -100%'
+							: section.matches('main > section:last-child')
+								? '0% 0% -50%'
+								: '-50% 0%',
+				},
 			).observe(section)
 		}
 	})

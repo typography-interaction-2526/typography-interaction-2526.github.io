@@ -1,4 +1,6 @@
 main {
+	--start: min(var(--alley), calc(2 * var(--gutter)));
+
 	align-items:         baseline;
 	column-gap:          var(--alley);
 	display:             grid;
@@ -7,9 +9,10 @@ main {
 		[ all-start aside-start body-start middle-start five-start four-start intro-start left-start one-start recto-start right-start six-start three-start two-start verso-start ]
 		minmax(0, 1fr)
 		[ all-end aside-end body-end middle-end five-end four-end intro-end left-end one-end recto-end right-end six-end three-end two-end verso-end ];
-	padding-block-end:   calc(2 * min(var(--alley), calc(2 * var(--gutter))));
-	padding-block-start: min(var(--alley), calc(2 * var(--gutter)));
+	padding-block-end:   calc(2 * var(--start));
+	padding-block-start: var(--start);
 	padding-inline:      var(--gutter);
+	position:            relative;
 	row-gap:             3rcap;
 
 	/* TODO Revise vertical spacing above/below! */
@@ -403,6 +406,14 @@ main {
 		&:where(:has(> hgroup > h4)) { margin-block-start: 1rlh }
 	}
 
+	section:where(:first-child):where(:has(h2)) {
+		grid-auto-flow:      dense; /* TL;DR links next to first `h2`. */
+		margin-block-start:  calc(-1 * var(--start));
+		padding-block-start: var(--start);
+
+		@media (width >= 60em) { hgroup { margin-inline-end: 1cap } }
+	}
+
 	/* Dividers. */
 	:where(hr, hgroup:has(> h2)) {
 		position: relative;
@@ -416,13 +427,6 @@ main {
 			inset-inline-start: calc(-1 * var(--stroke) / 2);
 			position:           absolute;
 		}
-	}
-
-	/* TL;DR links next to first `h2`. */
-	section:where(:first-child):where(:has(h2)) {
-		grid-auto-flow: dense;
-
-		@media (width >= 60em) { hgroup { margin-inline-end: 1cap } }
 	}
 
 	/* Dim inert stuff. */
