@@ -41,7 +41,13 @@
 			sections.add(section)
 
 			new IntersectionObserver(
-				([entry]) => entry.isIntersecting && history.replaceState(null, '', `#${section.querySelector('[id]')?.id}`),
+				([entry]) => {
+					(entry.isIntersecting)
+						? history.replaceState(null, '', `#${section.querySelector('[id]')?.id}`)
+						: ((section === ([...sections][0]) && entry.boundingClientRect.top >= 0)
+							|| (section === ([...sections].at(-1)) && entry.boundingClientRect.top <= 0)) &&
+								history.replaceState(null, '', window.location.pathname + window.location.search)
+				},
 				{ rootMargin: '-50% 0%' },
 			).observe(section)
 		}
