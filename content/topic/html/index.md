@@ -154,7 +154,7 @@ Links
 
 Images
 
-	```html
+:	```html
 	<img src="example.jpg" alt="Images should have descriptions!">
 	```
 
