@@ -460,6 +460,8 @@ main {
 		/* TODO `aria-label` instead? */
 	}
 
+	&:where(main) > :where(p.intro:first-child)::before { content: initial } /* Fix first. */
+
 	:where(.note),
 	:where(li, p):where(:has(> a > cite)),
 	:where(figcaption) {
