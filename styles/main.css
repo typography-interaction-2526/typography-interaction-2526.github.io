@@ -308,6 +308,8 @@ main {
 
 		&:where(:not(:first-child)), &:where(:not(:last-child)) + * { margin-block-start: 2rlh }
 
+		p { max-inline-size: initial }
+
 		> p:has(mark) {
 			--weight:  700;
 			--size:    var(--size--h3);
