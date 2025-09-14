@@ -28,8 +28,6 @@ main {
 			--size:   var(--size--h2);
 			--weight: 500;
 
-			grid-column: all;
-
 			+ * { margin-block-start: 2rlh }
 		}
 
@@ -393,6 +391,7 @@ main {
 
 			> hgroup {
 				/* TODO This is off on mobile. */
+				grid-column:        all;
 				margin-block-start: calc(1cap - 1rcap); /* Back on baseline. */
 
 				&::after { content: '' } /* Divider itself. */
@@ -418,6 +417,13 @@ main {
 			inset-inline-start: calc(-1 * var(--stroke) / 2);
 			position:           absolute;
 		}
+	}
+
+	/* TL;DR links next to first `h2`. */
+	section:where(:first-child):where(:has(h2)) {
+		grid-auto-flow: dense;
+
+		@media (width >= 60em) { h2 { padding-inline-end: 1cap } }
 	}
 
 	/* Dim inert stuff. */
