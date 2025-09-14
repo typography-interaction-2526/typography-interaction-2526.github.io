@@ -114,7 +114,7 @@ We use semantic elements to help structure and describe our content—but also f
 
 ## What Are Elements?
 
-[Elements](https://developer.mozilla.org/en-US/docs/Glossary/Element) are composed of tags (opening, closing) and their content:
+[Elements](https://developer.mozilla.org/en-US/docs/Glossary/Element) are composed of *tags* and their content:
 <!-- .intro .body -->
 
 [<cite>HTML Elements Reference – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
