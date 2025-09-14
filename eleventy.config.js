@@ -102,6 +102,7 @@ export default (eleventyConfig) => {
 				assistiveText: (title) => `“${title}”`,
 				class: '',
 				style: 'aria-labelledby',
+				symbol: '',
 				wrapper: ['<hgroup>', '</hgroup>'],
 			}),
 			slugify: eleventyConfig.getFilter('slugify'),

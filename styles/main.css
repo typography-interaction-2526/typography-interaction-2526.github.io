@@ -21,6 +21,9 @@ main {
 
 	/* Headings. */
 	hgroup {
+		inline-size: fit-content;
+		position:    relative;
+
 		&:has(> h2) {
 			--size:   var(--size--h2);
 			--weight: 500;
@@ -40,17 +43,13 @@ main {
 			+ * { margin-block-start: 1rlh }
 		}
 
-		&:has(> h4) {
-			--weight: 700;
+		&:has(> h4) { --weight: 700 }
 
-			/* Optically match the titles. */
-			> h4 { -webkit-text-stroke-width: 0.01em }
-
-			/* TODO Down in size? */
+		/* Anchors links. */
+		> a {
+			inset:    0;
+			position: absolute;
 		}
-
-		/* TODO Come back to these! */
-		> a { display: none }
 	}
 
 	/* Default to body width. */
@@ -383,18 +382,6 @@ main {
 		grid-column:        all;
 		margin-block-end:   1rlh;
 		margin-block-start: 2rlh;
-		position:           relative;
-
-		&::after {
-			background-color:   var(--color);
-			block-size:         var(--stroke);
-			border-radius:      calc(var(--stroke) / 2);
-			content:            '';
-			display:            block;
-			inset-inline-end:   calc(var(--right) - var(--stroke) / 2);
-			inset-inline-start: calc(var(--left) - var(--stroke) / 2);
-			position:           absolute;
-		}
 	}
 
 	/* Heading spacing, lower for cascade. */
@@ -402,31 +389,36 @@ main {
 		&:where(:has(> hgroup > h2)) {
 			margin-block-start: 4rlh;
 
-			> hgroup > h2 {
+			> hgroup {
 				/* TODO This is off on mobile. */
 				margin-block-start: calc(1cap - 1rcap); /* Back on baseline. */
-				padding-block-end:  1cap;
-				position:           relative;
 
-				/* TODO Fix baseline under! */
-
-				/* Divider above it. */
-				&::after {
-					background-color:   var(--color);
-					block-size:         var(--stroke);
-					border-radius:      calc(var(--stroke) / 2);
-					content:            '';
-					inset-block-end:    calc(-1 * var(--stroke) / 2);
-					inset-inline-end:   calc(var(--right) - var(--stroke) / 2);
-					inset-inline-start: calc(var(--left) - var(--stroke) / 2);
-					position:           absolute;
-				}
+				+ * { margin-block-start: 3rlh } /* One more for divider. */
 			}
 		}
 
 		&:where(:has(> hgroup > h3)) { margin-block-start: 3rlh }
 		&:where(:has(> hgroup > h4)) { margin-block-start: 1rlh }
 	}
+
+	/* Dividers. */
+	:where(hr, hgroup:has(> h2)) {
+		position: relative;
+
+		&::after {
+			background-color:   var(--color);
+			block-size:         var(--stroke);
+			border-radius:      calc(var(--stroke) / 2);
+			content:            '';
+			inline-size:        calc(100vw - 2 * var(--gutter));
+			inset-block-end:    calc(-1 * var(--stroke) / 2 - 1rlh);
+			inset-inline-start: calc(-1 * var(--stroke) / 2);
+			position:           absolute;
+		}
+	}
+
+	/* Turn off on first `h2`. */
+	section:first-child hgroup:has(> h2)::after { content: initial }
 
 	/* Dim inert stuff. */
 	*[inert] {
@@ -437,8 +429,7 @@ main {
 		*[inert] { opacity: inherit } /* Section-nesting adds a dupe. */
 	}
 
-	/* Match `h4`? */
-	:where(dt, strong) {
+	:where(h4, dt, strong) {
 		--weight: 700;
 
 		/* Optically match the `h3`. */

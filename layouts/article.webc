@@ -97,7 +97,7 @@
 				<a
 					aria-labelledby="session-recording"
 					href="#session-recording"
-				>#</a>
+				></a>
 			</hgroup>
 			<figure
 				webc:if="$data.video"
