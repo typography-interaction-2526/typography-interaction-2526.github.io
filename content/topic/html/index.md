@@ -269,7 +269,7 @@ Source
 
 Dimensions
 
-	```html
+:	```html
 	<img src="example.jpg" width="200px" height="200px">
 	```
 
@@ -279,7 +279,7 @@ Dimensions
 
 Alternate Text
 
-	```html
+:	```html
 	<img src="example.jpg" alt="A description of the image.">
 	```
 
