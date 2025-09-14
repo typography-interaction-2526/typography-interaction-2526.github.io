@@ -56,6 +56,9 @@ main {
 	/* Default to body width. */
 	:where(&, section) > * { grid-column: body }
 
+	/* Limit paragraphs (inside things), sameish. */
+	:where(p) { max-inline-size: 49ch }
+
 	/* Containers. */
 	div,
 	dl,
@@ -99,6 +102,11 @@ main {
 					text-box: trim-both cap alphabetic;
 				}
 			}
+
+			> :where(dd):has(> *:not(:only-child)) {
+				display: grid;
+				row-gap: 3rcap;
+			}
 		}
 
 		/* “Tight” lists. */
@@ -125,8 +133,6 @@ main {
 				inset-block-start: 0;
 				inset-inline-end:  calc(100% - var(--right));
 			}
-
-			&:has(p:first-child strong)::before { font-weight: 700 }
 		}
 	}
 
@@ -430,11 +436,11 @@ main {
 	}
 
 	/* Match `h4`? */
-	:where(strong) {
+	:where(dt, strong) {
 		--weight: 700;
 
 		/* Optically match the `h3`. */
-		-webkit-text-stroke-width: 0.01em;
+		-webkit-text-stroke-width: 0.02em;
 	}
 
 	:where(p.intro) {

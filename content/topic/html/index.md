@@ -123,29 +123,28 @@ We use semantic elements to help structure and describe our content—but also f
 
 <figure @source="tag.svg"></figure>
 
-Some elements do not have any content or children, like `<br>` or `<img>`. These are called [*empty elements*](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element), and do not have a closing tag.
+Some elements do not have any content or children, like `<br>` or `<img>`. These are called [*empty elements*](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element), and do not have a closing tag.
+<!-- .note -->
 
-### Common Elements
+Headings
 
-- **Headings**
-
-	```html
+:	```html
 	<h1>There should only be one first-level heading!</h1>
 	```
 
 	There are also `<h2>` `<h3>` `<h4>` `<h5>` and `<h6>`. These provide semantic organization and hierarchy for your document!
 
-- **Paragraphs**
+Paragraphs
 
-	```html
+:	```html
 	<p>You should always wrap your text in a paragraph!</p>
 	```
 
 	Our basic, default text element.
 
-- **Links**
+Links
 
-	```html
+:	```html
 	<a href="https://www.example.com">Links need attributes!</a>
 	```
 
@@ -153,7 +152,7 @@ Some elements do not have any content or children, like `<br>` or `<img>`. These
 
 	The `href` (*H*ypertext *REF*erence) specifies a URL that the link points to, and the tag wraps the visible link text. This *attribute* can point to another, local HTML file (living in the same directory structure) or an external page. They can also point to specific parts of a page.
 
-- **Images**
+Images
 
 	```html
 	<img src="example.jpg" alt="Images should have descriptions!">
@@ -161,9 +160,9 @@ Some elements do not have any content or children, like `<br>` or `<img>`. These
 
 	The `src` likewise can point to a local image file or an external URL! `alt` provides a description for accessibility/screen readers. More on these *attributes* in a bit.
 
-- **Containers**
+Containers
 
-	```html
+:	```html
 	<body>
 		<header>
 			<!-- A header. -->
@@ -181,17 +180,17 @@ Some elements do not have any content or children, like `<br>` or `<img>`. These
 
 	These are the structural containers of a website. The names don’t imbue function directly, but help us organize and think about our content structure—and also are helpful for accessibility.
 
-- **Inline Text Elements**
+Inline Text Elements
 
-	```html
+:	```html
 	<p>You may have noticed I like using<em>emphasis</em>.</p>
 	```
 
 	These wrap around bits of text (within [headings](#headings) or `<p>`) for semantic meaning and to apply specific styles using `<span>`, `<strong>`, `<em>`, `<abbr>`, `<cite>`, `<time>`, `<code>`, `<mark>`, `<del>`, `<ins>`, `<sub>`, and `<sup>`.
 
-- **Lists**
+Lists
 
-	```html
+:	```html
 	<ul>
 		<li><!-- A list item. --></li>
 		<li><!-- Another. --></li>
@@ -200,7 +199,7 @@ Some elements do not have any content or children, like `<br>` or `<img>`. These
 	```
 
 	If you have three of something, it is probably [a list](#lists-1)! There are also `ol`.
-<!-- .balance -->
+<!-- .all .balance -->
 
 There are [many, many HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element), all with particular uses. (We’ll unpack some more, later.)
 <!-- .intro .before--3 -->
@@ -218,25 +217,25 @@ All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs
 
 ### Common Attributes
 
-- **Language**
+Language
 
-	```html
+:	```html
 	<html lang="en"></html>
 	```
 
 	The `lang` attribute of the `<html>` tag declares the language of the Web page.
 
-- **HyperText Reference**
+HyperText Reference
 
-	```html
+:	```html
 	<a href="https://www.example.com">Goes to example.com</a>
 	```
 
 	The `href` attribute of `<a>` specifies the URL of the page the link goes to.
 
-- **Target**
+Target
 
-	```html
+:	```html
 	<a href="https://www.example.com" target="_blank">New tab!</a>
 	```
 
@@ -244,9 +243,9 @@ All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs
 
 	This can be annoying, so use it judiciously! <!-- .note -->
 
-- 	**Style**
+Style
 
-	```html
+:	```html
 	<p style="color: blue;">This is blue text.</p>
 	```
 
@@ -254,9 +253,9 @@ All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs
 
 	We’ll use CSS for this kind of thing, but know this is how it used to be done and it was brittle and terrible. <!-- .note -->
 
-- **Source**
+Source
 
-	```html
+:	```html
 	<img src="example.jpg">
 	```
 
@@ -268,7 +267,7 @@ All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs
 
 	Same thing for an `<iframe>`, which is [a little window](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) into another website.
 
-- **Dimensions**
+Dimensions
 
 	```html
 	<img src="example.jpg" width="200px" height="200px">
@@ -278,7 +277,7 @@ All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs
 
 	Not required, but helps prevent layout “sloshing” as images load. <!-- .note -->
 
-- **Alternate Text**
+Alternate Text
 
 	```html
 	<img src="example.jpg" alt="A description of the image.">
@@ -286,9 +285,9 @@ All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs
 
 	The `alt` attribute of `<img>` provides an alternate text for an image, used by screen readers.
 
-- **Identifier**
+Identifier
 
-	```html
+:	```html
 	<h2 id="a-heading-element">A heading element</h2>
 	```
 
@@ -298,14 +297,14 @@ All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs
 
 	The `id` specifies a singular, unique element on a page—for CSS targeting and <span id="anchor-links">anchor (*scroll*, *jump*) links</span>, prepended with `#`.
 
-- **Class**
+Class
 
-	```html
+:	```html
 	<p class="warning">We’ll get into this soon.</p>
 	```
 
 	The `class` attribute provides an additional way to select the element in CSS or JS.
-<!-- .balance -->
+<!-- .all .balance -->
 
 ## Case, White Space, Tabs, Line Breaks
 
