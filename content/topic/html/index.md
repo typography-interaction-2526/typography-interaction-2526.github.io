@@ -126,7 +126,7 @@ We use semantic elements to help structure and describe our content—but also f
 Some elements do not have any content or children, like `<br>` or `<img>`. These are called [*empty elements*](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element), and do not have a closing tag.
 <!-- .note -->
 
-Headings
+Headings: `<h#>` <!-- #headings -->
 
 :	```html
 	<h1>There should only be one first-level heading!</h1>
@@ -134,7 +134,7 @@ Headings
 
 	There are also `<h2>` `<h3>` `<h4>` `<h5>` and `<h6>`. These provide semantic organization and hierarchy for your document!
 
-Paragraphs
+Paragraphs: `<p>` <!-- #paragraphs -->
 
 :	```html
 	<p>You should always wrap your text in a paragraph!</p>
@@ -142,7 +142,7 @@ Paragraphs
 
 	Our basic, default text element.
 
-Links
+Links: `<a>` <!-- #paragraphs -->
 
 :	```html
 	<a href="https://www.example.com">Links need attributes!</a>
@@ -152,7 +152,7 @@ Links
 
 	The `href` (*H*ypertext *REF*erence) specifies a URL that the link points to, and the tag wraps the visible link text. This *attribute* can point to another, local HTML file (living in the same directory structure) or an external page. They can also point to specific parts of a page.
 
-Images
+Images: `<img>` <!-- #images -->
 
 :	```html
 	<img src="example.jpg" alt="Images should have descriptions!">
@@ -160,7 +160,7 @@ Images
 
 	The `src` likewise can point to a local image file or an external URL! `alt` provides a description for accessibility/screen readers. More on these *attributes* in a bit.
 
-Containers
+Containers <!-- #containers -->
 
 :	```html
 	<body>
@@ -180,7 +180,7 @@ Containers
 
 	These are the structural containers of a website. The names don’t imbue function directly, but help us organize and think about our content structure—and also are helpful for accessibility.
 
-Inline Text Elements
+Inline Text Elements <!-- #inline -->
 
 :	```html
 	<p>You may have noticed I like using<em>emphasis</em>.</p>
@@ -188,7 +188,7 @@ Inline Text Elements
 
 	These wrap around bits of text (within [headings](#headings) or `<p>`) for semantic meaning and to apply specific styles using `<span>`, `<strong>`, `<em>`, `<abbr>`, `<cite>`, `<time>`, `<code>`, `<mark>`, `<del>`, `<ins>`, `<sub>`, and `<sup>`.
 
-Lists
+Lists: `ol` / `<ul>` <!-- #paragraphs -->
 
 :	```html
 	<ul>
@@ -217,7 +217,7 @@ All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs
 
 ### Common Attributes
 
-Language
+Language: `lang` <!-- #language -->
 
 :	```html
 	<html lang="en"></html>
@@ -225,7 +225,7 @@ Language
 
 	The `lang` attribute of the `<html>` tag declares the language of the Web page.
 
-HyperText Reference
+HyperText Reference: `href` <!-- #href -->
 
 :	```html
 	<a href="https://www.example.com">Goes to example.com</a>
@@ -233,7 +233,7 @@ HyperText Reference
 
 	The `href` attribute of `<a>` specifies the URL of the page the link goes to.
 
-Target
+Target: `target` <!-- #target -->
 
 :	```html
 	<a href="https://www.example.com" target="_blank">New tab!</a>
@@ -243,7 +243,7 @@ Target
 
 	This can be annoying, so use it judiciously! <!-- .note -->
 
-Style
+Style: `style` <!-- #style -->
 
 :	```html
 	<p style="color: blue;">This is blue text.</p>
@@ -253,7 +253,7 @@ Style
 
 	We’ll use CSS for this kind of thing, but know this is how it used to be done and it was brittle and terrible. <!-- .note -->
 
-Source
+Source: `src` <!-- #src -->
 
 :	```html
 	<img src="example.jpg">
@@ -267,7 +267,7 @@ Source
 
 	Same thing for an `<iframe>`, which is [a little window](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) into another website.
 
-Dimensions
+Dimensions: `width` / `height` <!-- #dimensions -->
 
 :	```html
 	<img src="example.jpg" width="200px" height="200px">
@@ -277,7 +277,7 @@ Dimensions
 
 	Not required, but helps prevent layout “sloshing” as images load. <!-- .note -->
 
-Alternate Text
+Alternate Text: `alt` <!-- #alt -->
 
 :	```html
 	<img src="example.jpg" alt="A description of the image.">
@@ -285,7 +285,7 @@ Alternate Text
 
 	The `alt` attribute of `<img>` provides an alternate text for an image, used by screen readers.
 
-Identifier
+Identifier: `id` <!-- #id -->
 
 :	```html
 	<h2 id="a-heading-element">A heading element</h2>
@@ -297,7 +297,7 @@ Identifier
 
 	The `id` specifies a singular, unique element on a page—for CSS targeting and <span id="anchor-links">anchor (*scroll*, *jump*) links</span>, prepended with `#`.
 
-Class
+Class: `class` <!-- #class -->
 
 :	```html
 	<p class="warning">We’ll get into this soon.</p>
