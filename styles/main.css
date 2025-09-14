@@ -422,7 +422,7 @@ main {
 	section:where(:first-child):where(:has(h2)) {
 		grid-auto-flow: dense;
 
-		@media (width >= 60em) { h2 { padding-inline-end: 1cap } }
+		@media (width >= 60em) { hgroup { margin-inline-end: 1cap } }
 	}
 
 	/* Dim inert stuff. */
