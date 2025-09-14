@@ -31,7 +31,7 @@
 		}
 	})
 
-	// Update the hash while scrolling through, without modifying the DOM.
+	// Update the hash while scrolling through.
 	const sections = new Set()
 
 	document.querySelectorAll('article [id]:not(figure)').forEach((id) => {
