@@ -386,14 +386,14 @@ main {
 		position:           relative;
 
 		&::after {
-			background-color: var(--color);
-			block-size:       var(--stroke);
-			border-radius:    var(--stroke);
-			content:          '';
-			display:          block;
-			inset-block-end:  calc(-1 * var(--stroke) / 2);
-			inset-inline:     calc(-1 * var(--stroke) / 2);
-			position:         absolute;
+			background-color:   var(--color);
+			block-size:         var(--stroke);
+			border-radius:      calc(var(--stroke) / 2);
+			content:            '';
+			display:            block;
+			inset-inline-end:   calc(var(--right) - var(--stroke) / 2);
+			inset-inline-start: calc(var(--left) - var(--stroke) / 2);
+			position:           absolute;
 		}
 	}
 
@@ -412,7 +412,7 @@ main {
 
 				/* Divider above it. */
 				&::after {
-					background-color:   currentcolor;
+					background-color:   var(--color);
 					block-size:         var(--stroke);
 					border-radius:      calc(var(--stroke) / 2);
 					content:            '';
