@@ -54,11 +54,13 @@
 	}
 
 	/* Undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
-	:host-context(article:not(.top)) li:first-child,
-	:host-context(article:not(.bottom)) li:last-child {
+	:host-context(article:not(.top)) li:where(:first-child),
+	:host-context(article:not(.bottom)) li:where(:last-child) {
 		--delay: 1s;
 		--slide: 0;
 	}
+
+	:host-context(article:not(.visible)) li { --slide: initial }
 </style>
 
 <nav webc:root="override">

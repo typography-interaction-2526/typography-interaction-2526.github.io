@@ -75,6 +75,10 @@
 
 	// Toggling nav stuff.
 	new IntersectionObserver(
+		([entry]) => article.classList.toggle('visible', entry?.isIntersecting),
+	).observe(article)
+
+	new IntersectionObserver(
 		([entry]) => article.classList.toggle('top', entry?.isIntersecting),
 	).observe(article.querySelector('header'))
 
