@@ -120,6 +120,8 @@
 		animation-name:     fade-in;
 		animation-duration: 100ms;
 		animation-delay:    200ms;
+
+		@supports (font: -apple-system-body) { animation-delay: 500ms }
 	}
 
 	article {
