@@ -74,3 +74,5 @@
 	initial-value: 400; /* Default to `regular`. */
 	syntax:        '<number>';
 }
+
+/* TODO Declare `--size` and `--leading` with defaults, too? */
