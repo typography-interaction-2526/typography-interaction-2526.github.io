@@ -10,8 +10,8 @@
 		z-index:           1;
 
 		> menu {
-			--size:     2rcap;
-			--gap:      var(--size);
+			--diameter: 2rcap;
+			--gap:      var(--diameter);
 			--duration: 250ms;
 			--easing:   cubic-bezier(0.68, -0.6, 0.32, 1.6); /* `easeInOutBack` */
 
@@ -20,7 +20,7 @@
 
 			display:                    grid;
 			inset-block-end:            0;
-			margin-block-start:         calc(-1 * (var(--size) + var(--gap))); /* Offset `#top` one. */
+			margin-block-start:         calc(-1 * (var(--diameter) + var(--gap))); /* Offset `#top` one. */
 			overflow:                   hidden;
 			padding-block:              var(--gutter--base);
 			padding-inline-end:         var(--gutter);
@@ -35,8 +35,8 @@
 			transition-property:        transform;
 			transition-timing-function: var(--easing);
 			will-change:                transform;
-			grid-template-columns:      var(--size);
-			grid-auto-rows:             var(--size);
+			grid-template-columns:      var(--diameter);
+			grid-auto-rows:             var(--diameter);
 
 			> li {
 				display:       grid;
@@ -46,8 +46,7 @@
 					backdrop-filter:            blur(0.25rem);
 					background-color:           var(--nav);
 					border-radius:              100%;
-					color:                      var(--background);
-					display:                    block;
+					color:                      color-mix(in srgb, var(--background), transparent 25%);
 					display:                    grid;
 					filter:                     drop-shadow(0 0.25rem 0.5rem var(--shadow));
 					margin:                     -0.25rem;
@@ -77,7 +76,7 @@
 	}
 
 	/* TODO Some less-brittle way, knowing the size? */
-	:host-context(article.bottom) menu { --vertical: translateY(calc(var(--size) + var(--gap))) }
+	:host-context(article.bottom) menu { --vertical: translateY(calc(var(--diameter) + var(--gap))) }
 
 	:host-context(article:not(.visible)) li { --horizontal: initial }
 </style>
