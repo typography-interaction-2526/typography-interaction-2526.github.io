@@ -1,6 +1,4 @@
 main {
-	--start: min(var(--alley), calc(2 * var(--gutter)));
-
 	align-items:         baseline;
 	column-gap:          var(--alley);
 	display:             grid;
