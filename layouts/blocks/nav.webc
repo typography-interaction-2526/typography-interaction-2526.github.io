@@ -10,11 +10,17 @@
 		z-index:           1;
 
 		> menu {
-			--timing: cubic-bezier(0.68, -0.6, 0.32, 1.6); /* `easeInOutBack` */
+			--size:     2rcap;
+			--gap:      var(--size);
+			--duration: 250ms;
+			--easing:   cubic-bezier(0.68, -0.6, 0.32, 1.6); /* `easeInOutBack` */
+
+			--hover:  95%;
+			--shadow: var(--nav);
 
 			display:                    grid;
 			inset-block-end:            0;
-			margin-block-start:         -4rcap; /* Offset `#top` one. */
+			margin-block-start:         calc(-1 * (var(--size) + var(--gap))); /* Offset `#top` one. */
 			overflow:                   hidden;
 			padding-block:              var(--gutter--base);
 			padding-inline-end:         var(--gutter);
@@ -22,24 +28,21 @@
 			place-self:                 end;
 			pointer-events:             auto;
 			position:                   sticky;
-			row-gap:                    2rcap;
+			row-gap:                    var(--gap);
 			transform:                  var(--vertical, 0);
-			transition-delay:           250ms;
-			transition-duration:        250ms;
+			transition-delay:           var(--duration);
+			transition-duration:        var(--duration);
 			transition-property:        transform;
-			transition-timing-function: var(--timing);
+			transition-timing-function: var(--easing);
 			will-change:                transform;
+			grid-template-columns:      var(--size);
+			grid-auto-rows:             var(--size);
 
 			> li {
-				block-size:    2rcap;
 				display:       grid;
-				inline-size:   2rcap;
 				margin-inline: initial; /* Override `typography`. */
 
 				> a {
-					--hover:  95%;
-					--shadow: var(--nav);
-
 					backdrop-filter:            blur(0.25rem);
 					background-color:           var(--nav);
 					border-radius:              100%;
@@ -52,9 +55,9 @@
 					text-align:                 center;
 					transform:                  var(--horizontal, translateX(calc(100% + var(--gutter))) rotate(90deg));
 					transition-delay:           var(--delay, 0);
-					transition-duration:        250ms;
+					transition-duration:        var(--duration);
 					transition-property:        transform;
-					transition-timing-function: var(--timing);
+					transition-timing-function: var(--easing);
 					will-change:                transform;
 
 					&::after { border-radius: inherit }
@@ -69,11 +72,12 @@
 	/* Undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
 	:host-context(article:not(.top)) li:where(:first-child),
 	:host-context(article:not(.bottom)) li:where(:last-child) {
-		--delay: 500ms;
+		--delay:      calc(2 * var(--duration));
 		--horizontal: 0;
 	}
 
-	:host-context(article.bottom) menu { --vertical: translateY(4rcap) } /* TODO Some less-brittle way? */
+	/* TODO Some less-brittle way, knowing the size? */
+	:host-context(article.bottom) menu { --vertical: translateY(calc(var(--size) + var(--gap))) }
 
 	:host-context(article:not(.visible)) li { --horizontal: initial }
 </style>
