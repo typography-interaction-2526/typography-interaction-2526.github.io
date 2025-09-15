@@ -10,12 +10,16 @@
 		z-index:           1;
 
 		> menu {
-			inset-block-end:   var(--gutter--base);
-			margin-block:      var(--gutter--base);
-			margin-inline-end: var(--gutter);
-			place-self:        end;
-			pointer-events:    auto;
-			position:          sticky;
+			display:              grid;
+			inset-block-end:      0;
+			padding-block:        var(--gutter--base);
+			padding-inline-start: var(--gutter--base);
+			padding-inline-end:   var(--gutter);
+			place-self:           end;
+			pointer-events:       auto;
+			position:             sticky;
+			row-gap:              2rcap;
+			overflow:             hidden;
 
 			> li {
 				display:       grid;
@@ -24,6 +28,7 @@
 				> a {
 					--hover: 95%;
 
+					text-align:                 center;
 					backdrop-filter:            blur(0.25rem);
 					background-color:           var(--nav);
 					block-size:                 3rcap;
@@ -35,10 +40,11 @@
 					inline-size:                3rcap;
 					margin:                     -0.25rem;
 					place-items:                center;
-					transform:                  var(--transform, 0);
+					transform:                  var(--slide, translateX(calc(100% + var(--gutter))) rotate(45deg));
 					transition-duration:        250ms;
 					transition-property:        transform;
 					transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6); /* `easeInOutBack` */
+					transition-delay:           var(--delay, 0);
 					will-change:                transform;
 
 					&::after { border-radius: inherit }
@@ -48,13 +54,20 @@
 	}
 
 	/* Undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
-	:host-context(article.top) a { --transform: translateX(calc(100% + var(--gutter))) rotate(45deg) }
+	:host-context(article:not(.top)) li:first-child,
+	:host-context(article:not(.bottom)) li:last-child {
+		--delay: 1s;
+		--slide: 0;
+	}
 </style>
 
 <nav webc:root="override">
 	<menu>
 		<li>
 			<a href="#top">⤒</a>
+		</li>
+		<li>
+			<a href="#bottom">⤓</a>
 		</li>
 	</menu>
 </nav>
