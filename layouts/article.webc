@@ -19,8 +19,7 @@
 				article.focus()
 				article.addEventListener('blur', () => article.removeAttribute('tabindex'), { once: true })
 			}
-		}, { rootMargin: '0% 0% -99%'}, // Near-top, rounding.
-		).observe(article)
+		}, { rootMargin: '0% 0% -99%' }).observe(article)
 	}
 
 	window.addEventListener('beforeunload', () => sessionStorage.setItem('viewTransition', 'true'))
@@ -38,6 +37,8 @@
 			'onscrollend' in window
 				? window.addEventListener('scrollend', goToLink)
 				: setTimeout(goToLink, 333)
+
+			setTimeout(goToLink, 1000) // Fallback if it is already at the position.
 		}
 	})
 
