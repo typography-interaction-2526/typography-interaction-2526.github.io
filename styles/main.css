@@ -7,7 +7,7 @@ main {
 		[ all-start aside-start body-start middle-start five-start four-start intro-start left-start one-start recto-start right-start six-start three-start two-start verso-start ]
 		minmax(0, 1fr)
 		[ all-end aside-end body-end middle-end five-end four-end intro-end left-end one-end recto-end right-end six-end three-end two-end verso-end ];
-	padding-block-end:   calc(2 * var(--start));
+	padding-block-end:   var(--end);
 	padding-block-start: var(--start);
 	padding-inline:      var(--gutter);
 	position:            relative;

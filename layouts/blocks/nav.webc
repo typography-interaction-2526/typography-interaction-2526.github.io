@@ -1,0 +1,52 @@
+<style webc:scoped>
+	/* The container is the “shuttle” track. */
+	:host {
+		block-size:        100dvh;
+		display:           grid;
+		inset-block-start: 0;
+		justify-self:      end;
+		pointer-events:    none;
+		position:          sticky;
+		z-index:           1;
+
+		> menu {
+			inset-block-end:   var(--gutter--base);
+			margin-block:      var(--gutter--base);
+			margin-inline-end: var(--gutter);
+			place-self:        end;
+			pointer-events:    auto;
+			position:          sticky;
+
+			> li {
+				display:       grid;
+				margin-inline: initial; /* Override `typography`. */
+
+				> a {
+					--hover: 95%;
+
+					backdrop-filter:  blur(0.25rem);
+					background-color: var(--nav);
+					block-size:       3rcap;
+					border-radius:    100%;
+					color:            var(--background);
+					display:          block;
+					display:          grid;
+					filter:           drop-shadow(0 0.25rem 1rcap var(--nav));
+					inline-size:      3rcap;
+					margin:           -0.15rem;
+					place-items:      center;
+
+					&::after { border-radius: inherit }
+				}
+			}
+		}
+	}
+</style>
+
+<nav webc:root="override">
+	<menu>
+		<li>
+			<a href="#top">⤒</a>
+		</li>
+	</menu>
+</nav>

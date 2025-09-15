@@ -110,3 +110,6 @@ ti-preview,
 	font-size:   var(--size--pre);
 	font-weight: normal;
 }
+
+/* Nav. */
+article > nav { font-family: -apple-system, BlinkMacSystemFont, sans-serif }

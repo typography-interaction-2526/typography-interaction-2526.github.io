@@ -110,7 +110,14 @@
 	}
 
 	article {
+		align-items:               start;
+		display:                   grid;
+		grid-template-areas:       'header' 'print' 'main' 'bottom'; /* Stacked. */
 		scroll-margin-block-start: 0;
+
+		> header      { grid-area: header }
+		> print       { grid-area: print }
+		> nav, > main { grid-area: main } /* Overlapping. */
 
 		/* Space above anchor destination. */
 		[id] { scroll-margin-block: min(var(--gutter--base), var(--gutter)) }
@@ -132,7 +139,7 @@
 </style>
 
 <block webc:import="blocks/pages.webc">
-	<article>
+	<article id="top">
 		<block
 			webc:import="header.webc"
 			:class="$data.page.url === '/syllabus/' && 'screen'"
@@ -141,9 +148,10 @@
 			webc:if="$data.page.url === '/syllabus/'"
 			webc:import="print.webc"
 		></block>
+		<block webc:import="nav.webc"></block>
+		<!-- TODO Come back to this! -->
+		<!-- <block webc:import="toc.webc"></block> -->
 		<main>
-			<!-- TODO Come back to this! -->
-			<!-- <block webc:import="toc.webc"></block> -->
 			<section webc:if="$data.video">
 				<hgroup>
 					<h2
