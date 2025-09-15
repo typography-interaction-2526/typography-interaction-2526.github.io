@@ -56,7 +56,10 @@
 	@media (width >= 35em) { /* Landscape phones. */
 		--alley: 4rcap;
 
-		@media (height >= 27em), (width >= 60em) { --size--root: 24 } /* Tablets. */
+		@media (height >= 27em), (width >= 60em) { /* Tablets. */
+			--size--root: 24;
+			--tablet:     1;
+		}
 
 		@media (orientation: landscape), (width >= 60em) { --columns: 6 }
 	}
@@ -66,16 +69,22 @@
 	@media (width >= 84em) { --size--h2: 2rem }
 }
 
+@property --tablet {
+	inherits:      true;
+	initial-value: initial;
+	syntax:        '<integer>';
+}
+
 @property --columns {
 	inherits:      true;
 	initial-value: 1;
-	syntax:        '<number>';
+	syntax:        '<integer>';
 }
 
 @property --weight {
 	inherits:      true;
 	initial-value: 400; /* Default to `regular`. */
-	syntax:        '<number>';
+	syntax:        '<integer>';
 }
 
 /* TODO Declare `--size` and `--leading` with defaults, too? */

@@ -9,24 +9,28 @@
 		position:          sticky;
 		z-index:           1;
 
+		/* The actual menu. */
 		> menu {
 			--diameter: 2rcap;
 			--gap:      var(--diameter);
 			--duration: 250ms;
 			--easing:   cubic-bezier(0.68, -0.6, 0.32, 1.6); /* `easeInOutBack` */
 
-			--hover:  95%;
-			--shadow: var(--nav);
+			--inset: 2rcap;
+			--end:   var(--inset);
+
+			--hover:     95%;
+			--shadow:    var(--nav);
+			--overshoot: 0.25rem;
 
 			display:                    grid;
 			inset-block-end:            0;
 			margin-block-start:         calc(-1 * (var(--diameter) + var(--gap))); /* Offset `#top` one. */
 			overflow:                   hidden;
-			padding-block:              var(--gutter--base);
-			padding-inline-end:         var(--gutter);
-			padding-inline-start:       var(--gutter--base);
+			padding-block:              var(--end);
+			padding-inline-end:         var(--inset);
+			padding-inline-start:       var(--end);
 			place-self:                 end;
-			pointer-events:             auto;
 			position:                   sticky;
 			row-gap:                    var(--gap);
 			transform:                  var(--vertical, 0);
@@ -38,26 +42,32 @@
 			grid-template-columns:      var(--diameter);
 			grid-auto-rows:             var(--diameter);
 
+			@container style(--tablet) {
+				--end:   var(--gutter--base);
+				--inset: var(--gutter);
+			}
+
 			> li {
-				display:       grid;
-				margin-inline: initial; /* Override `typography`. */
+				display:                    grid;
+				margin-inline:              initial; /* Override `typography`. */
+				transform:                  var(--horizontal, translateX(calc(100% + var(--inset) + 2 * var(--overshoot))) rotate(90deg));
+				transition-delay:           var(--delay, 0);
+				transition-duration:        var(--duration);
+				transition-property:        transform;
+				transition-timing-function: var(--easing);
+				will-change:                transform;
+				pointer-events:             auto;
 
 				> a {
-					backdrop-filter:            blur(0.25rem);
-					background-color:           var(--nav);
-					border-radius:              100%;
-					color:                      color-mix(in srgb, var(--background), transparent 25%);
-					display:                    grid;
-					filter:                     drop-shadow(0 0.25rem 0.5rem var(--shadow));
-					margin:                     -0.25rem;
-					place-items:                center;
-					text-align:                 center;
-					transform:                  var(--horizontal, translateX(calc(100% + var(--gutter))) rotate(90deg));
-					transition-delay:           var(--delay, 0);
-					transition-duration:        var(--duration);
-					transition-property:        transform;
-					transition-timing-function: var(--easing);
-					will-change:                transform;
+					backdrop-filter:  blur(0.25rem);
+					background-color: var(--nav);
+					border-radius:    100%;
+					color:            color-mix(in srgb, var(--background), transparent 25%);
+					display:          grid;
+					filter:           drop-shadow(0 0.25rem 0.5rem var(--shadow));
+					margin:           calc(-1 * var(--overshoot));
+					place-items:      center;
+					text-align:       center;
 
 					&::after { border-radius: inherit }
 
