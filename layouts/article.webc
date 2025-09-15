@@ -144,7 +144,10 @@
 </style>
 
 <block webc:import="blocks/pages.webc">
-	<article id="top">
+	<article
+		class="top"
+		id="top"
+	>
 		<block
 			webc:import="header.webc"
 			:class="$data.page.url === '/syllabus/' && 'screen'"

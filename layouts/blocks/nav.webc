@@ -35,10 +35,10 @@
 					inline-size:                3rcap;
 					margin:                     -0.25rem;
 					place-items:                center;
-					transform:                  var(--translate, 0);
-					transition-duration:        100ms;
+					transform:                  var(--transform, 0);
+					transition-duration:        250ms;
 					transition-property:        transform;
-					transition-timing-function: ease-in-out;
+					transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6); /* `easeInOutBack` */
 					will-change:                transform;
 
 					&::after { border-radius: inherit }
@@ -48,7 +48,7 @@
 	}
 
 	/* Undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
-	:host-context(article.top) a { --translate: translateX(calc(100% + var(--gutter))) }
+	:host-context(article.top) a { --transform: translateX(calc(100% + var(--gutter))) rotate(45deg) }
 </style>
 
 <nav webc:root="override">
