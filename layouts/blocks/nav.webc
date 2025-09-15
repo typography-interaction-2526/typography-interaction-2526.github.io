@@ -10,41 +10,50 @@
 		z-index:           1;
 
 		> menu {
-			display:              grid;
-			inset-block-end:      0;
-			padding-block:        var(--gutter--base);
-			padding-inline-start: var(--gutter--base);
-			padding-inline-end:   var(--gutter);
-			place-self:           end;
-			pointer-events:       auto;
-			position:             sticky;
-			row-gap:              2rcap;
-			overflow:             hidden;
+			--timing: cubic-bezier(0.68, -0.6, 0.32, 1.6); /* `easeInOutBack` */
+
+			display:                    grid;
+			inset-block-end:            0;
+			margin-block-start:         -4rcap; /* Offset `#top` one. */
+			overflow:                   hidden;
+			padding-block:              var(--gutter--base);
+			padding-inline-end:         var(--gutter);
+			padding-inline-start:       var(--gutter--base);
+			place-self:                 end;
+			pointer-events:             auto;
+			position:                   sticky;
+			row-gap:                    2rcap;
+			transform:                  var(--vertical, 0);
+			transition-delay:           250ms;
+			transition-duration:        250ms;
+			transition-property:        transform;
+			transition-timing-function: var(--timing);
+			will-change:                transform;
 
 			> li {
+				block-size:    2rcap;
 				display:       grid;
+				inline-size:   2rcap;
 				margin-inline: initial; /* Override `typography`. */
 
 				> a {
 					--hover: 95%;
 
-					text-align:                 center;
 					backdrop-filter:            blur(0.25rem);
 					background-color:           var(--nav);
-					block-size:                 3rcap;
 					border-radius:              100%;
 					color:                      var(--background);
 					display:                    block;
 					display:                    grid;
-					filter:                     drop-shadow(0 0.25rem 1rcap var(--nav));
-					inline-size:                3rcap;
+					filter:                     drop-shadow(0 0.25rem 0.5rem var(--nav));
 					margin:                     -0.25rem;
 					place-items:                center;
-					transform:                  var(--slide, translateX(calc(100% + var(--gutter))) rotate(45deg));
+					text-align:                 center;
+					transform:                  var(--horizontal, translateX(calc(100% + var(--gutter))) rotate(90deg));
+					transition-delay:           var(--delay, 0);
 					transition-duration:        250ms;
 					transition-property:        transform;
-					transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6); /* `easeInOutBack` */
-					transition-delay:           var(--delay, 0);
+					transition-timing-function: var(--timing);
 					will-change:                transform;
 
 					&::after { border-radius: inherit }
@@ -56,11 +65,13 @@
 	/* Undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
 	:host-context(article:not(.top)) li:where(:first-child),
 	:host-context(article:not(.bottom)) li:where(:last-child) {
-		--delay: 1s;
-		--slide: 0;
+		--delay: 500ms;
+		--horizontal: 0;
 	}
 
-	:host-context(article:not(.visible)) li { --slide: initial }
+	:host-context(article.bottom) menu { --vertical: translateY(4rcap) } /* TODO Some less-brittle way? */
+
+	:host-context(article:not(.visible)) li { --horizontal: initial }
 </style>
 
 <nav webc:root="override">
