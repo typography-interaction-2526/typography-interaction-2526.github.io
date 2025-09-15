@@ -73,6 +73,11 @@
 		}
 	})
 
+	// Toggling nav stuff.
+	new IntersectionObserver(
+		([entry]) => article.classList.toggle('top', entry?.isIntersecting),
+	).observe(article.querySelector('header'))
+
 	// Line up to grid.
 	// document.addEventListener('keydown', (e) => {
 	// 	if (['ArrowUp', 'ArrowDown'].includes(e.key)) {
