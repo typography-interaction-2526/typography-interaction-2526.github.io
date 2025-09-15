@@ -3,17 +3,27 @@
 </script>
 
 <script>
-	// Ahead of HTMX, take us to the current “page.”
-	setTimeout(() => {
-		if (!window.location.hash) {
-			const article = document.querySelector('article')
+	const article = document.querySelector('article')
+	const hash = window.location.hash.slice(1)
 
-			article.scrollIntoView({ behavior: 'instant', block: 'start' })
-			article.setAttribute('tabindex', '-1')
-			article.focus()
-			article.addEventListener('blur', () => article.removeAttribute('tabindex'), { once: true })
-		}
-	}, 16.666)
+	// Scroll to the current ”page.”
+	if (!hash) {
+		sessionStorage.getItem('viewTransition')
+			? article.scrollIntoView({ behavior: 'instant', block: 'start' }) && sessionStorage.removeItem('viewTransition')
+			: article.scrollIntoView({ block: 'start' })
+
+		new IntersectionObserver(([entry], observer) => {
+			if (entry.isIntersecting) {
+				observer.disconnect()
+				article.setAttribute('tabindex', '-1')
+				article.focus()
+				article.addEventListener('blur', () => article.removeAttribute('tabindex'), { once: true })
+			}
+		}, { rootMargin: '0% 0% -99%'}, // Near-top, rounding.
+		).observe(article)
+	}
+
+	window.addEventListener('beforeunload', () => sessionStorage.setItem('viewTransition', 'true'))
 
 	document.addEventListener('click', (event) => {
 		if (event.target.matches?.('a[href^="/"]')) {
@@ -34,7 +44,7 @@
 	// Update the hash while scrolling through.
 	const sections = new Set()
 
-	document.querySelectorAll('article [id]:not(figure)').forEach((id) => {
+	article.querySelectorAll('[id]:not(figure)').forEach((id) => {
 		const section = id.closest('section')
 
 		if (section && !sections.has(section)) {
