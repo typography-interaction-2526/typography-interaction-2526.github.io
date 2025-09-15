@@ -119,7 +119,7 @@ We use semantic elements to help structure and describe our content—but also f
 
 [<cite>HTML Elements Reference – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 	MDN will always go deep; this is *all* the elements.
-<!-- .right .start .before--3 -->
+<!-- .right .start -->
 
 <figure @source="tag.svg"></figure>
 
@@ -211,7 +211,7 @@ All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs
 
 [<cite>HTML Attribute Reference – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)
 	There are a lot of them.
-<!-- .right .start .before--3 -->
+<!-- .right .start -->
 
 <figure @source="attr.svg"></figure>
 

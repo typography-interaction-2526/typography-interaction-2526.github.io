@@ -54,6 +54,8 @@
 		--alley: 4rcap;
 
 		@media (height >= 27em), (width >= 60em) { --size--root: 24 } /* Tablets. */
+
+		@media (orientation: landscape), (width >= 60em) { --columns: 6 }
 	}
 
 	@media (width >= 60em) { --alley: 6rcap }
@@ -61,7 +63,11 @@
 	@media (width >= 84em) { --size--h2: 2rem }
 }
 
-/* TODO Declare `--size` and `--leading` with defaults, too? */
+@property --columns {
+	inherits:      true;
+	initial-value: 1;
+	syntax:        '<number>';
+}
 
 @property --weight {
 	inherits:      true;

@@ -13,8 +13,6 @@ main {
 	position:            relative;
 	row-gap:             3rcap;
 
-	/* TODO Revise vertical spacing above/below! */
-
 	h1 { display: none } /* Don’t you dare. */
 
 	/* Headings. */
@@ -26,7 +24,11 @@ main {
 			--size:   var(--size--h2);
 			--weight: 500;
 
-			+ * { margin-block-start: 2rlh }
+			+ * {
+				margin-block-start: 2rlh;
+
+				@container style(--columns: 6) { + *:where(.recto, .right) { margin-block-start: 2rlh } }
+			}
 		}
 
 		&:has(> h3) {
@@ -36,7 +38,11 @@ main {
 			/* Back on the baseline. */
 			> h3 { margin-block-start: calc(1rcap - 1cap) }
 
-			+ * { margin-block-start: 1rlh }
+			+ * {
+				margin-block-start: 1rlh;
+
+				@container style(--columns: 6) { + *:where(.recto, .right) { margin-block-start: 1rlh } }
+			}
 		}
 
 		&:has(> h4) { --weight: 700 }
@@ -78,7 +84,11 @@ main {
 		&:where(:not([class]), :not(:where([class]:not(.balance)))) {
 			margin-block-start: 1lh;
 
-			&:where(:not(:last-child)) + * { margin-block-start: 1rlh }
+			&:where(:not(:last-child)) + * {
+				margin-block-start: 1rlh;
+
+				@container style(--columns: 6) { + *:where(.recto, .right) { margin-block-start: 1rlh } }
+			}
 		}
 
 		/* Not “tag” lists. */
@@ -396,7 +406,11 @@ main {
 
 				&::after { content: '' } /* Divider itself. */
 
-				+ * { margin-block-start: 3rlh } /* One more for divider. */
+				+ * {
+					margin-block-start: 3rlh; /* One more for divider. */
+
+					@container style(--columns: 6) { + *:where(.recto, .right) { margin-block-start: 3rlh } }
+				}
 			}
 		}
 
@@ -409,7 +423,7 @@ main {
 		margin-block-start:  calc(-1 * var(--start));
 		padding-block-start: var(--start);
 
-		@media (width >= 60em) { hgroup { margin-inline-end: 1cap } }
+		@container style(--columns: 6) { hgroup { margin-inline-end: 1cap } }
 	}
 
 	/* Dividers. */
@@ -457,7 +471,11 @@ main {
 
 		&:not(:where(:first-child)) { margin-block-start: 1rlh }
 
-		+ * { margin-block-start: 1rlh }
+		+ * {
+			margin-block-start: 1rlh;
+
+			@container style(--columns: 6) { + *:where(.recto, .right) { margin-block-start: 1rlh } }
+		}
 
 		/* Tighten underlines. */
 		a { background-position-y: calc(var(--enlargement) + 1cap + (1rlh - 1cap) / 2 - var(--stroke)) }
@@ -547,7 +565,7 @@ main {
 	.after--4 + *              { margin-block-start: 4rlh }
 
 	/* The actual columns. */
-	@media (orientation: landscape) and (width >= 35em), (width >= 60em) {
+	@container style(--columns: 6) {
 		grid-template-columns:
 			[ all-start body-start intro-start left-start one-start verso-start ]
 			minmax(0, 1fr)
