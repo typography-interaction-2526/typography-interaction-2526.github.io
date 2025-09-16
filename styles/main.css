@@ -109,8 +109,9 @@ main {
 			}
 
 			> :where(dd):has(> *:not(:only-child)) {
-				display: grid;
-				row-gap: 3rcap;
+				display:               grid;
+				grid-template-columns: minmax(0, 1fr);
+				row-gap:               3rcap; /* Back to `main` spacing. */
 			}
 		}
 
