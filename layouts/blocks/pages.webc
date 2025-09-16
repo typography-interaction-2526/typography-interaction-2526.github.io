@@ -19,8 +19,8 @@
 	const allPages = [...$data.collections.root, ...groupedPages.flat()]
 
 	export const pagePosition = (item, $data) => {
-		const index = allPages.findIndex((page) => page.url === item.url)
-		const currentIndex = allPages.findIndex((page) => page.url === $data.page.url)
+		const index = allPages.findIndex((page) => page.filePathStem === item.filePathStem)
+		const currentIndex = allPages.findIndex((page) => page.filePathStem === $data.page.filePathStem)
 
 		if (~currentIndex) {
 			switch (index) {
