@@ -73,7 +73,10 @@
 					:id="slugify(unit[0].data.unit)"
 				></block>
 			</li>
-			<li webc:for="item of unit">
+			<li
+				webc:for="item of unit"
+				:id="item.url === $data.page.url && 'current'"
+			>
 				<slot webc:if="item.url === $data.page.url"></slot>
 				<block
 					webc:else
