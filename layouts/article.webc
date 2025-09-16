@@ -130,9 +130,9 @@
 		grid-template-areas:       'header' 'print' 'main' 'bottom'; /* Stacked. */
 		scroll-margin-block-start: 0;
 
-		> header      { grid-area: header }
-		> print       { grid-area: print }
-		> nav, > main { grid-area: main } /* Overlapping. */
+		> header       { grid-area: header }
+		> header.print { grid-area: print }
+		> nav, > main  { grid-area: main } /* Overlapping. */
 
 		div#bottom {
 			grid-area:           bottom;
