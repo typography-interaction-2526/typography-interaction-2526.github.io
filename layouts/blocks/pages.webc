@@ -23,10 +23,10 @@
 		const currentIndex = allPages.findIndex((page) => page.url === $data.page.url)
 
 		switch (index) {
-		case currentIndex:
-			return 'current'
 		case currentIndex - 1:
 			return 'prev'
+		case currentIndex:
+			return 'current'
 		case currentIndex + 1:
 			return 'next'
 		default:
