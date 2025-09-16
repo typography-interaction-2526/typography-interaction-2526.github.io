@@ -77,14 +77,14 @@
 	}
 
 	/* Undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
-	:host-context(article:not(.top)) li:where(:first-child),
-	:host-context(article:not(.bottom)) li:where(:last-child) {
+	:host-context(article:not(.start)) li:where(:first-child),
+	:host-context(article:not(.end)) li:where(:last-child) {
 		--delay:      calc(2 * var(--duration));
 		--horizontal: 0;
 	}
 
 	/* TODO Some less-brittle way, knowing the size? */
-	:host-context(article.bottom) menu { --vertical: translateY(calc(var(--diameter) + var(--gap))) }
+	:host-context(article.end) menu { --vertical: translateY(calc(var(--diameter) + var(--gap))) }
 
 	:host-context(article:not(.visible)) li { --horizontal: initial }
 </style>
@@ -92,10 +92,10 @@
 <nav webc:root="override">
 	<menu>
 		<li>
-			<a href="#top">⤒</a>
+			<a href="#current">⤒</a>
 		</li>
 		<li>
-			<a href="#bottom">⤓</a>
+			<a href="#next">⤓</a>
 		</li>
 	</menu>
 </nav>
