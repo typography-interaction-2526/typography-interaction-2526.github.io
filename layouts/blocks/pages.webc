@@ -16,13 +16,14 @@
 		return Array.from(map.values())
 	})()
 
+	const allPages = [...$data.collections.root, ...groupedPages.flat()]
+
 	export const pagePosition = (item, $data) => {
 		if (item.url === $data.page.url) return 'current'
 
-		const unit = groupedPages.find((unitArr) => unitArr.some((page) => page.url === item.url))
-		if (!unit) return undefined
-		const idx = unit.findIndex((page) => page.url === item.url)
-		const currentIdx = unit.findIndex((page) => page.url === $data.page.url)
+		const idx = allPages.findIndex((page) => page.url === item.url)
+		const currentIdx = allPages.findIndex((page) => page.url === $data.page.url)
+		if (idx === -1 || currentIdx === -1) return undefined
 		if (idx === currentIdx - 1) return 'prev'
 		if (idx === currentIdx + 1) return 'next'
 		return undefined
@@ -69,7 +70,10 @@
 </style>
 
 <ul webc:root="override">
-	<li webc:for="item of [...$data.collections.root]">
+	<li
+		webc:for="item of [...$data.collections.root]"
+		:id="pagePosition(item, $data)"
+	>
 		<slot webc:if="item.url === $data.page.url"></slot>
 		<block
 			webc:else
