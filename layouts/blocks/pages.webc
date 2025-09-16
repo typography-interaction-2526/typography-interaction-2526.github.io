@@ -19,6 +19,7 @@
 	const allPages = [...$data.collections.root, ...groupedPages.flat()]
 
 	export const pagePosition = (item, $data) => {
+		// Use `.filePathStem` for consistent published/draft ordering (no `.url`)
 		const index = allPages.findIndex((page) => page.filePathStem === item.filePathStem)
 		const currentIndex = allPages.findIndex((page) => page.filePathStem === $data.page.filePathStem)
 
