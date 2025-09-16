@@ -89,13 +89,21 @@
 	:host-context(article:not(.visible)) li { --horizontal: initial }
 </style>
 
+<script>
+	// Adjust `#next` scrolling to the end.
+	document.querySelector('a[href="#next"]').onclick = (event) => {
+		event.preventDefault()
+		document.querySelector('#next').scrollIntoView({ block: 'end' })
+	}
+</script>
+
 <nav webc:root="override">
 	<menu>
 		<li>
 			<a href="#current">⤒</a>
 		</li>
 		<li>
-			<a href="#following">⤓</a>
+			<a href="#next">⤓</a>
 			<!-- TODO This breaks at the end of the year! -->
 		</li>
 	</menu>

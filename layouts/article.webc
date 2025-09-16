@@ -137,8 +137,8 @@
 		}
 	}
 
-	/* TODO Better way at the stroke offset? */
-	#following { scroll-margin-block: calc(100dvh - var(--size--h1) * 0.079) }
+	/* TODO Figure out stroke offset here! */
+	#next { scroll-margin-block-end: calc(var(--size--h1) * 0.079) }
 
 	::view-transition-old(root) { animation: none }
 

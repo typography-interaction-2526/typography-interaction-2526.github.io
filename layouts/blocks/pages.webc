@@ -30,12 +30,11 @@
 				return 'current'
 			case currentIndex + 1:
 				return 'next'
-			case currentIndex + 2:
-				return 'following'
 			default:
 				return undefined
 			}
 		}
+		return undefined
 	}
 </script>
 
