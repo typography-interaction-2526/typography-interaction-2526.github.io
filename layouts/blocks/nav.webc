@@ -95,7 +95,8 @@
 			<a href="#current">⤒</a>
 		</li>
 		<li>
-			<a href="#next">⤓</a>
+			<a href="#following">⤓</a>
+			<!-- TODO This breaks at the end of the year! -->
 		</li>
 	</menu>
 </nav>
