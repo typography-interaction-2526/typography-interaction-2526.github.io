@@ -5,5 +5,10 @@
 	},
 	"files.associations": {
 		"*.webc": "html"
-	}
+	},
+	"stylelint.validate": [
+		"css",
+		"html",
+		"webc"
+	]
 }
