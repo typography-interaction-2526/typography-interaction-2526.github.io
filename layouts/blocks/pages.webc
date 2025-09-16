@@ -22,19 +22,19 @@
 		const index = allPages.findIndex((page) => page.url === item.url)
 		const currentIndex = allPages.findIndex((page) => page.url === $data.page.url)
 
-		if (currentIndex === -1) return undefined
-
-		switch (index) {
-		case currentIndex - 1:
-			return 'prev'
-		case currentIndex:
-			return 'current'
-		case currentIndex + 1:
-			return 'next'
-		case currentIndex + 2:
-			return 'following'
-		default:
-			return undefined
+		if (~currentIndex) {
+			switch (index) {
+			case currentIndex - 1:
+				return 'prev'
+			case currentIndex:
+				return 'current'
+			case currentIndex + 1:
+				return 'next'
+			case currentIndex + 2:
+				return 'following'
+			default:
+				return undefined
+			}
 		}
 	}
 </script>
