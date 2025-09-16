@@ -49,9 +49,9 @@
 	</li>
 </ul>
 <script>
-	const students = document.getElementById('students')
+	const students = document.querySelector('#students')
 	const shuffleStudents = () => students.append(...[...students.children].sort(() => Math.random() - 0.5))
 
 	shuffleStudents()
-	document.getElementById('shuffle').onclick = () => shuffleStudents()
+	document.querySelector('#shuffle').onclick = () => shuffleStudents()
 </script>
