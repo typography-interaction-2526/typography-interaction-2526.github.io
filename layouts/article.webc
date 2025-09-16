@@ -105,7 +105,7 @@
 		background-color: black;
 		scroll-behavior:  smooth;
 
-		::selection { background-color: color-mix(in srgb, white, transparent 1%) } /* Tricks Safari. */
+		::selection { background-color: color-mix(in srgb, var(--accent), transparent) }
 	}
 
 	article {
