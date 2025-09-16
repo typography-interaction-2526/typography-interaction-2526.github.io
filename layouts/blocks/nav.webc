@@ -17,7 +17,6 @@
 			--easing:   cubic-bezier(0.68, -0.6, 0.32, 1.6); /* `easeInOutBack` */
 
 			--inset: 2rcap;
-			--end:   var(--inset);
 
 			--hover:     95%;
 			--shadow:    var(--nav);
@@ -27,9 +26,9 @@
 			inset-block-end:            0;
 			margin-block-start:         calc(-1 * (var(--diameter) + var(--gap))); /* Offset `#top` one. */
 			overflow:                   hidden;
-			padding-block:              var(--end);
+			padding-block:              var(--inset);
 			padding-inline-end:         var(--inset);
-			padding-inline-start:       var(--end);
+			padding-inline-start:       var(--inset);
 			place-self:                 end;
 			position:                   sticky;
 			row-gap:                    var(--gap);
@@ -42,10 +41,7 @@
 			grid-template-columns:      var(--diameter);
 			grid-auto-rows:             var(--diameter);
 
-			@container style(--tablet) {
-				--end:   var(--gutter--base);
-				--inset: var(--gutter);
-			}
+			@container style(--tablet) { --inset: var(--gutter--base) }
 
 			> li {
 				display:                    grid;
