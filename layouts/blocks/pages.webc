@@ -15,6 +15,11 @@
 		}
 		return Array.from(map.values())
 	})()
+
+	export const pagePosition = (item, $data) => {
+		if (item.url === $data.page.url) return 'current'
+		return undefined
+	}
 </script>
 
 <style webc:scoped>
@@ -75,7 +80,7 @@
 			</li>
 			<li
 				webc:for="item of unit"
-				:id="item.url === $data.page.url && 'current'"
+				:id="pagePosition(item, $data)"
 			>
 				<slot webc:if="item.url === $data.page.url"></slot>
 				<block
