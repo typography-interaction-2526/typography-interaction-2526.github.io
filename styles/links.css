@@ -189,7 +189,7 @@ summary {
 	:is(li, p):where(:has(> a > cite)) {
 		padding-block-start: calc(1rcap - 1cap); /* Back on baseline. */
 
-		&:where(p:only-child) > :where(a:has(> cite)) { inline-size: initial } /* To the grid. */
+		&:where(li, p:only-child) > :where(a:has(> cite)) { inline-size: initial } /* To the grid. */
 
 		/* With additional text after (Markdown adds the `br`). */
 		&:has(> br) {
