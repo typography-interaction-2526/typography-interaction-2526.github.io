@@ -92,8 +92,8 @@
 <script>
 	// Adjust `#next` scrolling to the end.
 	document.querySelector('a[href="#next"]').onclick = (event) => {
-		event.preventDefault()
-		document.querySelector('#next').scrollIntoView({ block: 'end' })
+		event.preventDefault();
+		(document.querySelector('#next') || document.querySelector('#current')).scrollIntoView({ block: 'end' })
 	}
 </script>
 
@@ -104,7 +104,6 @@
 		</li>
 		<li>
 			<a href="#next">⤓</a>
-			<!-- TODO This breaks at the end of the year! -->
 		</li>
 	</menu>
 </nav>
