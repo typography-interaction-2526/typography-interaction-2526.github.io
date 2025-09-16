@@ -18,6 +18,13 @@
 
 	export const pagePosition = (item, $data) => {
 		if (item.url === $data.page.url) return 'current'
+
+		const unit = groupedPages.find((unitArr) => unitArr.some((page) => page.url === item.url))
+		if (!unit) return undefined
+		const idx = unit.findIndex((page) => page.url === item.url)
+		const currentIdx = unit.findIndex((page) => page.url === $data.page.url)
+		if (idx === currentIdx - 1) return 'prev'
+		if (idx === currentIdx + 1) return 'next'
 		return undefined
 	}
 </script>
