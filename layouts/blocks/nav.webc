@@ -24,6 +24,8 @@
 			--overshoot: 0.25rem;
 
 			display:                    grid;
+			grid-auto-rows:             var(--diameter);
+			grid-template-columns:      var(--diameter);
 			inset-block-end:            0;
 			margin-block-start:         calc(-1 * (var(--diameter) + var(--gap))); /* Offset `#top` one. */
 			overflow:                   hidden;
@@ -39,21 +41,17 @@
 			transition-property:        transform;
 			transition-timing-function: var(--easing);
 			will-change:                transform;
-			grid-template-columns:      var(--diameter);
-			grid-auto-rows:             var(--diameter);
-
-			@container style(--tablet) { --inset: var(--gutter--base) }
 
 			> li {
 				display:                    grid;
 				margin-inline:              initial; /* Override `typography`. */
+				pointer-events:             auto;
 				transform:                  var(--horizontal, translateX(calc(100% + var(--inset) + 2 * var(--overshoot))) rotate(90deg));
 				transition-delay:           var(--delay, 0);
 				transition-duration:        var(--duration);
 				transition-property:        transform;
 				transition-timing-function: var(--easing);
 				will-change:                transform;
-				pointer-events:             auto;
 
 				> a {
 					backdrop-filter:  blur(0.25rem);
@@ -72,6 +70,9 @@
 					@supports (font: -apple-system-body) { --shadow: color-mix(in srgb, var(--nav), transparent) }
 				}
 			}
+
+			/* Larger breaks. */
+			@container style(--tablet) { --inset: var(--gutter--base) }
 		}
 	}
 
