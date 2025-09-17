@@ -83,6 +83,21 @@ s {
 	}
 }
 
+:is(sup, sub) {
+	font-size:                 66%;
+	-webkit-text-stroke-width: 0.075em; /* First instance was in `700`! */
+}
+
+sup {
+	vertical-align: text-top;
+
+	&:has(+ sub) {
+		margin-inline-end: -0.2em;
+
+		+ sub { margin-inline-start: -0.25em }
+	}
+}
+
 .balance      { text-wrap: balance }
 .caps         { text-transform: uppercase }
 .nowrap, nobr { text-wrap: nowrap }
