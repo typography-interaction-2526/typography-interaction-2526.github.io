@@ -357,7 +357,10 @@ main {
 			--size:   initial;
 			--weight: 700;
 
+			align-items:        baseline;
 			color:              var(--color);
+			column-gap:         2cap;
+			display:            flex;
 			grid-column:        aside;
 			margin-block-start: 1rlh;
 			text-transform:     uppercase;
@@ -366,7 +369,6 @@ main {
 				--block: 1ex;
 
 				display:           inline-block;
-				margin-inline-end: 2cap;
 
 				cite {
 					--icon:        '→';
@@ -375,6 +377,8 @@ main {
 
 					&::after { position: initial }
 				}
+
+				+ span { text-box: trim-both cap alphabetic }
 			}
 
 			&:where(:not(:last-child)) {
