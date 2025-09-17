@@ -140,6 +140,11 @@ main {
 				inset-block-start: 0;
 				inset-inline-end:  calc(100% - var(--right));
 			}
+
+			&:where(:has(> p:first-child > strong:only-child))::before {
+				font-weight:               700;
+				-webkit-text-stroke-width: 0.015em; /* Match `strong` */
+			}
 		}
 	}
 
