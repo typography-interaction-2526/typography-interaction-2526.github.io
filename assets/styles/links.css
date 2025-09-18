@@ -87,6 +87,9 @@ summary {
 		&::after { content: initial }
 
 		&:where(:not(s)):active { background-color: var(--highlight) }
+
+		/* Stop background at the underline. */
+		> :is(code, kbd, samp) { padding-block-end: 0.1em }
 	}
 }
 
@@ -133,7 +136,7 @@ summary {
 		> cite {
 			position: relative;
 
-			> code {
+			> :is(code, kbd, samp) {
 				background-color:  initial;
 				font-size:         inherit;
 				inset-block-start: -0.1em;
