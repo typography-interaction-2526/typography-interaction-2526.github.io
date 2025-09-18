@@ -97,6 +97,8 @@ export default (eleventyConfig) => {
 		.use(markdownItDeflist)
 		.use(markdownItHeaderSections)
 		.use(markdownItAnchor, {
+			// TODO Apostrophes!
+			// TODO Inline overrides don’t work (search `#external`)!
 			// TODO This has broken `abbr` in headings?
 			permalink: markdownItAnchor.permalink.linkAfterHeader({
 				assistiveText: (title) => `“${title}”`,
