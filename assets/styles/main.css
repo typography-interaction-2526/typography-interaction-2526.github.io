@@ -163,12 +163,12 @@ main {
 
 	ol {
 		counter-reset:       index;
-		margin-inline-start: 1em;
+		margin-inline-start: 1.1em;
 
 		> li::before {
 			content:           counters(index, '.') '.';
 			counter-increment: index;
-			inline-size:       1em;
+			inline-size:       1.1em;
 			inset-block-start: 0;
 			inset-inline-end:  100%;
 		}
