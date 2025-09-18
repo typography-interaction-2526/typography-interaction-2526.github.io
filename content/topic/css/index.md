@@ -63,7 +63,7 @@ There are three ways it can be added:
 1. Via `<style>` elements in HTML documents
 1. As separate/external `.css` files, via `<link>` elements
 
-### 1.&emsp;Inline with `style=`
+### 1.&emsp;Inline with `style=` <!-- #inline -->
 
 This is the most straightforward way to add styles, directly as [*attributes*](/topic/html/#attributes) in HTML tags:
 <!-- .balance -->
@@ -82,7 +82,7 @@ Seems obvious. However this has some downsides—imagine you want to style all o
 
 It makes it hard to read, and hard to change and maintain—you’d have to update every single instance. (In software, we’d refer to this as [*brittle*](https://en.wikipedia.org/wiki/Software_brittleness)—meaning it is easy to break.)
 
-### 2.&emsp;`<style>` in HTML
+### 2.&emsp;`<style>` in HTML <!-- #in-html -->
 
 <div class="center verso">
 
@@ -116,7 +116,7 @@ The rules are written written with selectors—more on those, below. But importa
 
 </div>
 
-### 3.&emsp;External with `<link>`
+### 3.&emsp;External with `<link>` <!-- #external -->
 
 <div class="verso">
 
@@ -245,9 +245,9 @@ Selectors are used to *target* certain HTML elements within the page. These can 
 1. Classes (written `.class-name`&thinsp;)
 1. Identifiers (and `#some-id`&thinsp;)
 
-### 1. By Element Type: `p` `a` `main` etc.
+### 1. By Element Type: `p` `a` `main` etc. <!-- #element -->
 
-If you want to change the styles for all instances of a given HTML element, you drop the <nobr>`<` `>`</nobr> from the tag for an element selector. These are called [*type selectors*](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors):
+If you want to change the styles for all instances of a given HTML element, you drop the <nobr>`<` `>`</nobr> from the tag for an element selector. These are called [*type selectors*](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors):
 
 <figure
 	@caption="Note that CSS has different `/* comment syntax */` too."
@@ -256,7 +256,7 @@ If you want to change the styles for all instances of a given HTML element, you 
 	>
 </figure>
 
-### 2. With a Class: `.class-name`
+### 2. With a Class: `.class-name` <!-- #class -->
 
 But maybe you don’t want to style all of the paragraphs. You can then use a `class` to [target specific instances](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors). They are  added as an *[attribute](/topic/html/#attributes)* on the element you want to target:
 <!-- .balance -->
@@ -274,7 +274,7 @@ You can use these over and over, on any kind of element. And individual elements
 We’ll talk about how conflicting rules are handled, below.
 <!-- .note -->
 
-### 3. With an Identifier: `#some-id`
+### 3. With an Identifier: `#some-id` <!-- #id -->
 
 You can also use an `id`, which is a kind of [special attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id) that can only be used *once* in an HTML document. These are useful thus useful for targeting singular things—like your navigation, the document title, specific headings, etc:
 <!-- .balance -->
