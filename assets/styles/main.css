@@ -523,6 +523,9 @@ main {
 
 		* { color: inherit } /* For `abbr`. */
 
+		/* TODO this doubles up opacities! */
+		code { -webkit-text-stroke-width: 0.01em }
+
 		/* TODO `role` instead? */
 	}
 
