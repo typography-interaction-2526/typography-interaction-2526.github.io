@@ -71,7 +71,7 @@ ti-preview {
 	--editor-line-height:          1rlh;
 
 	--tab-bar-active-background: transparent;
-	--tab-bar-active-foreground: color-mix(in srgb, var(--background), transparent 20%);
+	--tab-bar-active-foreground: var(--background);
 	--tab-bar-active-highlight:  transparent;
 	--tab-bar-background:        transparent;
 	--tab-bar-filter:            var(--blur);
@@ -109,7 +109,7 @@ ti-preview {
 	--syntax-macroName:    #e06c75;
 	--syntax-propertyName: dodgerblue;
 	--syntax-operator:     color-mix(in srgb, var(--accent), transparent 33%);
-	--syntax-comment:      color-mix(in srgb, var(--accent), transparent 66%);
+	--syntax-comment:      color-mix(in srgb, var(--accent), transparent 50%);
 	--syntax-meta:         dodgerblue;
 	--syntax-punctuation:  color-mix(in srgb, var(--accent), transparent 33%);
 	--syntax-invalid:      var(--accent);

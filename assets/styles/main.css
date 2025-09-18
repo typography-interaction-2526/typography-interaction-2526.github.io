@@ -18,6 +18,7 @@ main {
 
 	/* Headings. */
 	hgroup {
+		grid-column: all;
 		inline-size: fit-content;
 		position:    relative;
 
@@ -301,10 +302,7 @@ main {
 			}
 
 			/* Code previews. */
-			&:not([src*="https://"])[src*='/preview'] {
-				/* aspect-ratio: initial; */
-				inline-size:  100%;
-			}
+			&:not([src*="https://"])[src*='/preview'] { inline-size:  100% }
 		}
 
 		&.multiply { img, object, iframe { mix-blend-mode: multiply } }
@@ -335,6 +333,8 @@ main {
 
 		p { max-inline-size: initial }
 
+		code { -webkit-text-stroke-width: 0.01em }
+
 		> p:has(mark) {
 			--weight:  700;
 			--size:    var(--size--h3);
@@ -343,6 +343,8 @@ main {
 			margin-block-start: calc(1rcap - 1cap); /* Back on baseline. */
 
 			&:last-child { margin-block-start: 1rlh }
+
+			code { font-size: inherit }
 		}
 
 		&.reverse {
