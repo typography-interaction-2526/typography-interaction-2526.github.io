@@ -1,36 +1,36 @@
 <link
 	webc:bucket="base"
-	href="../../styles/variables.css"
+	href="../../assets/styles/variables.css"
 	rel="stylesheet"
 >
 <link
 	webc:bucket="base"
-	href="../../styles/fonts.css"
+	href="../../assets/styles/fonts.css"
 	rel="stylesheet"
 >
 <link
 	webc:bucket="base"
-	href="../../styles/typography.css"
+	href="../../assets/styles/typography.css"
 	rel="stylesheet"
 >
 <link
 	webc:bucket="base"
-	href="../../styles/links.css"
+	href="../../assets/styles/links.css"
 	rel="stylesheet"
 >
 <link
 	webc:bucket="base"
-	href="../../styles/code.css"
+	href="../../assets/styles/code.css"
 	rel="stylesheet"
 >
 <link
 	webc:bucket="base"
-	href="../../styles/main.css"
+	href="../../assets/styles/main.css"
 	rel="stylesheet"
 >
 <link
 	webc:bucket="print"
-	href="../../styles/print.css"
+	href="../../assets/styles/print.css"
 	rel="stylesheet"
 >
 <style
@@ -38,7 +38,7 @@
 	@raw="`
 		@layer reset, base, components, print;
 
-		@import url('/styles/reset.css') layer(reset);
+		@import url('/assets/reset.css') layer(reset);
 		@import url('${getBundleFileUrl('css', 'base')}') layer(base);
 		@import url('${getBundleFileUrl('css', 'print')}') layer(print) print;
 	`"
