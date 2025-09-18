@@ -99,17 +99,27 @@ main {
 			/* Item inset. */
 			> :where(dd, dt, li) { padding-inline-start: 2cap }
 
-			/* ”Markers.” */
 			> :where(dt, li) {
 				position: relative;
 
+
+				/* ”Markers.” */
 				&::before {
 					position: absolute;
 					text-box: trim-both cap alphabetic;
 				}
 
+				/* For poking `code` out of lists. */
+				.all { max-inline-size: calc(var(--page) - 5cap) }
+
 				/* `cite` in lists (“for next week”). */
 				> :where(p:has(> a > cite)) + * { margin-block-start: 1rlh }
+
+				> :where(dl, ol, ul) {
+					margin-block-start: initial;
+
+					&:where(:not(:last-child)) + * { margin-block-start: initial }
+				}
 			}
 
 			> :where(dd):has(> *:not(:only-child)) {
@@ -448,7 +458,7 @@ main {
 			background-color:   var(--color);
 			block-size:         var(--stroke);
 			border-radius:      calc(var(--stroke) / 2);
-			inline-size:        calc(100vw - 2 * var(--gutter));
+			inline-size:       	var(--page);
 			inset-block-end:    calc(-1 * var(--stroke) / 2 - 1rlh);
 			inset-inline-start: calc(-1 * var(--stroke) / 2);
 			position:           absolute;
