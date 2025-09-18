@@ -70,6 +70,17 @@ ti-preview {
 	--editor-font-size:            var(--size--pre);
 	--editor-line-height:          1rlh;
 
+	--tab-bar-active-background: transparent;
+	--tab-bar-active-foreground: var(--accent);
+	--tab-bar-active-highlight:  transparent;
+	--tab-bar-background:        color-mix(in srgb, var(--background), transparent 80%);
+	--tab-bar-filter:            var(--blur);
+	--tab-bar-font-family:       var(--editor-font-family);
+	--tab-bar-font-size:         var(--editor-font-size);
+	--tab-bar-foreground:        var(--syntax-comment);
+	--tab-bar-margin:            0 0 0.65rcap;
+	--tab-bar-padding:           1rcap;
+
 	--editor-padding:              0.65rcap 1rcap 0.35rcap;
 	--editor-selection-background: color-mix(in srgb, var(--accent), transparent 80%);
 

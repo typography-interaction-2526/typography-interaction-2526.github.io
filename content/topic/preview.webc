@@ -9,6 +9,9 @@
 </script>
 
 <style>
+	/* TODO make this unit-aware! */
+	:root { --background: var(--background--1) }
+
 	html,
 	body,
 	pre,

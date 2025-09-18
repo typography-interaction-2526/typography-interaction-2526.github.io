@@ -54,7 +54,7 @@
 				will-change:                transform;
 
 				> a {
-					backdrop-filter:  blur(0.25rem);
+					backdrop-filter:  var(--blur);
 					background-color: var(--nav);
 					border-radius:    100%;
 					color:            color-mix(in srgb, var(--background), transparent 25%);
