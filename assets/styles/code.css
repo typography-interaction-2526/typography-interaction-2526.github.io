@@ -20,7 +20,7 @@ samp {
 }
 
 /* Tighten keyboard/menu combos. */
-:where(nobr):has(:where(kbd, samp)) :where(kbd, samp):not(:first-child) { margin-inline-start: -0.4em }
+:where(nobr):has(:where(code, kbd, samp)) :where(code, kbd, samp):not(:first-child) { margin-inline-start: -0.4em }
 
 pre {
 	background-color: var(--pre);
