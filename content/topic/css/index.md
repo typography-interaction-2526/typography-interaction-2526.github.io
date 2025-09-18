@@ -26,7 +26,7 @@ CSS is the standard language/format for styling web pages, which specifies what 
 
 - [<cite>Wakamai Fondue</cite>](https://wakamaifondue.com)
 	“What can my font do?”
-<!-- .right style="--rows: 6" -->
+<!-- .right .rows--6 -->
 
 In our ongoing analogy, CSS is the *skin* of the web. [Just like HTML](/topic/html), at its most basic it is still just text, in a file, on a computer. It can live inside HTML documents themselves, but is more commonly seen on its own with the extension `.css`
 
@@ -82,7 +82,7 @@ Seems obvious. However this has some downsides—imagine you want to style all o
 
 It makes it hard to read, and hard to change and maintain—you’d have to update every single instance. (In software, we’d refer to this as [*brittle*](https://en.wikipedia.org/wiki/Software_brittleness)—meaning it is easy to break.)
 
-### 2.&emsp;Along Comes `<style>`
+### 2.&emsp;`<style>` in HTML
 
 <div class="center verso">
 
@@ -192,9 +192,9 @@ Even though it is used to style HTML elements, [the syntax of CSS](https://devel
 
 - [<cite>CSS Reference – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 	Their exhaustive list goes into the hundreds.
-<!-- .link-list .right style="--rows: 2" -->
+<!-- .right .rows--2 -->
 
-The [curly brackets](https://en.wikipedia.org/wiki/Bracket#Curly_brackets) `{ }` (also known as *mustaches* or *handlebars*, for their shape) enclose all the declarations you want to apply to a given selector. These *declarations* are in turn made up of *properties* and *values*.
+The [curly brackets](https://en.wikipedia.org/wiki/Bracket#Curly_brackets) <nobr>`{` `}`</nobr> (also known as *mustaches* or *handlebars*, for their shape) enclose all the declarations you want to apply to a given selector. These *declarations* are in turn made up of *properties* and *values*.
 
 Properties are always separated from their corresponding values by a colon `:`, and each declaration line has to end in a semicolon `;`. (It’s just how it is!) Also, there are no spaces between values and their units (like `20px`)! You will get used to it.
 
@@ -239,28 +239,26 @@ Selectors are used to *target* certain HTML elements within the page. These can 
 
 - [<cite>Selectors – web.dev</cite>](https://web.dev/learn/css/selectors)
 	Google, too.
-<!-- .link-list .right style="--rows: 2" -->
+<!-- .right .rows--2 -->
 
-1. Elements
-1. Classes
-1. Identifiers (&#8198;`id`&#8198;)
-<!-- .bold -->
+1. Elements (like <nobr>`p` `a` `main`</nobr> etc.)
+1. Classes (written `.class-name`&thinsp;)
+1. Identifiers (and `#some-id`&thinsp;)
 
-### 1. By Element Type
+### 1. By Element Type: `p` `a` `main` etc.
 
-If you want to change the styles for all instances of a given HTML element, you drop the `<` `>` from the tag for an element selector. These are called [*type selectors*](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors):
-<!-- .balance -->
+If you want to change the styles for all instances of a given HTML element, you drop the <nobr>`<` `>`</nobr> from the tag for an element selector. These are called [*type selectors*](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors):
 
 <figure
-	@caption="Note that CSS has different `/* comment syntax */`, too."
+	@caption="Note that CSS has different `/* comment syntax */` too."
 	@source="element/preview/?active=style.css"
-	style="--lines: 10"
+	style="--lines: 12"
 	>
 </figure>
 
-### 2. With a Class
+### 2. With a Class: `.class-name`
 
-But maybe you don’t want to style all of the paragraphs. You can then use a `class` to [target specific instances](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors). They are  added as an *[attribute](/topic/html/#attributes)* on the element you want to target:
+But maybe you don’t want to style all of the paragraphs. You can then use a `class` to [target specific instances](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors). They are  added as an *[attribute](/topic/html/#attributes)* on the element you want to target:
 <!-- .balance -->
 
 <figure
@@ -271,12 +269,12 @@ But maybe you don’t want to style all of the paragraphs. You can then use a `c
 
 The *value* here is our class name, which we write in CSS by prefixing with a `.` as with `.highlight` and `.faded`.
 
-You can use these over and over, on any kind of element. And individual elements can have *multiple* classes, too. Class names can be whatever you want—there are whole methodologies about what to call these things. They are the most common way to target things in CSS.
+You can use these over and over, on any kind of element. And individual elements can have *multiple* classes, too. Class names can be whatever you want—there are whole methodologies about what to call these things! (And many an argument.) They are the most common way to target things in CSS, especially at scale.
 
 We’ll talk about how conflicting rules are handled, below.
-<!-- .secondary -->
+<!-- .note -->
 
-### 3. With an Identifier
+### 3. With an Identifier: `#some-id`
 
 You can also use an `id`, which is a kind of [special attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id) that can only be used *once* in an HTML document. These are useful thus useful for targeting singular things—like your navigation, the document title, specific headings, etc:
 <!-- .balance -->
@@ -287,7 +285,7 @@ You can also use an `id`, which is a kind of [special attribute](https://develop
 	>
 </figure>
 
-These are prefixed by `#` in CSS, as with `#title` and `#introduction`. They can also be used as [link destinations](/topic/html/#attributes).
+These are prefixed by `#` in CSS, as with `#title` and `#introduction`. They can also be used as [link destinations](/topic/html/#id)!
 
 ## Fancy Selectors
 
@@ -461,7 +459,7 @@ We haven’t even talked about that first *C&thinsp;*! Remember, it stands for [
 
 - [<cite>The CSS Cascade</cite>](https://2019.wattenberger.com/blog/css-cascade)
 	A much nicer interactive explanation from [Amelia Wattenberger](https://wattenberger.com/).
-<!-- .link-list .right style="--rows: 3" -->
+<!-- .right .rows--3 -->
 
 This means that when there is a tie (like two classes applying the same property), the *lowest* rule wins—literally the one further down within a CSS document, or within a style tag. If you have multiple CSS documents with `<link>` element, the lower linked document will take precedence:
 
