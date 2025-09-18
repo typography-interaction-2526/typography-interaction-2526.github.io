@@ -4,8 +4,6 @@
 	const week = 4
 </script>
 
-
-
 ## CSS stands for *Cascading Style Sheets*
 
 CSS is the standard language/format for styling web pages, which specifies what the page’s HTML will look like in the browser.
@@ -56,8 +54,6 @@ That said, I'll comment that style sheets constitute a wormhole into unspeakabl
 
 </blockquote>
 
-
-
 ## Where CSS Lives
 
 Before we get into CSS itself, let’s talk about how it is incorporated with HTML. There are three ways it can be added:
@@ -67,7 +63,6 @@ Before we get into CSS itself, let’s talk about how it is incorporated with HT
 1. Via `<style>` elements in HTML documents
 1. As separate/external `.css` files, via `<link>` elements
 <!-- .all .bold -->
-
 
 ### 1.&emsp;Inline with `style=`
 
@@ -89,8 +84,6 @@ Seems obvious. However this has some downsides—imagine you want to style all 
 
 It makes it hard to read, and hard to change and <nobr>maintain—you’d</nobr> have to update every single instance. (In software, we’d refer to this as [*brittle*](https://en.wikipedia.org/wiki/Software_brittleness)—meaning it is easy to break.)
 <!-- .add-before--2 -->
-
-
 
 ### 2.&emsp;Along Comes `<style>`
 <!-- .add-after -->
@@ -179,8 +172,6 @@ p {
 We’ll talk more about [<em>specificity</em>](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) later, but it is worth noting that the *inline* approach takes precedent over other methods—under the “closest, then lowest” logic.
 <!-- .add-before--3 .balance .bold -->
 
-
-
 ## Separation of Concerns
 
 [*Separation of Concerns*](https://en.wikipedia.org/wiki/Separation_of_concerns) is an ideology that code should be split up into sections that are responsible for a single behavior—the smaller, the better. In the case of websites—our HTML, CSS, and JS can be seen as *content*, *form*, and *function*. (Or in our anatomical analogy: *skeleton*, *skin*, and *muscles*.) These are different *concerns*.
@@ -206,8 +197,6 @@ Properties are always separated from their corresponding values by a colon `:
 
 There are [many, many CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference). We’ll go over some in our exercise, but look through these to become more familiar.
 <!-- .balance .bold .scale--h4 -->
-
-
 
 ### Ergonomics
 
@@ -236,8 +225,6 @@ P { COLOR: RED; }
 
 </div>
 
-
-
 ## Basic Selectors
 
 Selectors are used to *target* certain HTML elements within the page. These can get pretty complicated, but we’ll look at the three simplest and most common targeting methods to start:
@@ -265,7 +252,6 @@ If you want to change the styles for all instances of a given HTML element, y
 	style="--lines: 10"
 	>
 </figure>
-
 
 ### 2. With a Class
 
@@ -297,8 +283,6 @@ You can also use an `id`, which is a kind of [special attribute](https://deve
 </figure>
 
 These are prefixed by `#` in CSS, as with `#title` and `#introduction`. They can also be used as [link destinations](/topic/html/#attributes).
-
-
 
 ## Fancy Selectors
 
@@ -370,8 +354,6 @@ Last, you will often want to target something based on its relationship to ot
 
 Importantly, combinators can only target elements top-down, meaning that it can only “see” elements *before* and *above* themselves—meaning their *previous <em>(older?)</em> siblings* or their *parents*. This directionality somewhat corresponds with the *cascade*, which we’ll talk about shortly.
 
-
-
 ## The Golden Age of CSS
 
 ### `:has()` Has Changed Things!
@@ -387,7 +369,6 @@ div:has(p) { background-color: red; }
 The property is applied *on* the parent (here, the `div`) based on the presence of the child (the `p`). You can use any selector, in either position. This is *very* powerful, especially with dynamic content.
 
 Safari and Chrome both [added support](https://caniuse.com/css-has) a couple years back; Firefox was late last year. So it isn’t yet considered *[baseline (widely available)](https://web.dev/baseline)* yet—but because of how game-changing it is, folks are rapidly adopting.
-
 
 ### Oh Also, Nesting?!
 
@@ -466,8 +447,6 @@ You could write a *long* book (and many people have) about CSS <nobr>specificit
 
 Suffice it to say *it’s complicated*. The easiest way to avoid specificity problems is generally to stay at the same level throughout your HTML, usually by just using classes throughout.
 
-
-
 ## Oh Right, the Cascade
 
 We haven’t even talked about that first *C&thinsp;*! Remember, it stands for [*cascading*](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade).
@@ -487,8 +466,6 @@ This means that when there is a tie (like two classes applying the same propert
 	>
 </figure>
 
-
-
 ## And Inheritance
 
 To add even more confusion, [some CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance) set on a parent also apply to their children—such as `color` or `font-family`. Most spacing/layout properties, like `width` and `margin` do not. (More on those, next week.)
@@ -507,8 +484,6 @@ This allows you to quickly set some properties globally, without having many br
 	style="--lines: 12"
 	>
 </figure>
-
-
 
 ## Color and Type Properties
 
@@ -566,8 +541,6 @@ Once you’ve got a `font-family` in, there are additional properties to contr
 	>
 </figure>
 
-
-
 ## Resets
 
 As we talked about [last week](/topic/html/#user-agent-styles), browsers have their own, built-in way that they display HTML elements. These *<nobr>user-agent</nobr> styles* are specific, somewhat, to each platform and each browser.
@@ -587,7 +560,6 @@ Here is a [simple, modern one](https://elad2412.github.io/the-new-css-reset/) f
 
 This is what we use here for our course site!
 <!-- .secondary -->
-
 
 <blockquote
 	@attribution="Håkon Wium Lie"
