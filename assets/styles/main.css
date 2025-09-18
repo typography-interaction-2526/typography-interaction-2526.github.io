@@ -107,6 +107,9 @@ main {
 					position: absolute;
 					text-box: trim-both cap alphabetic;
 				}
+
+				/* `cite` in lists (“for next week”). */
+				> :where(p:has(> a > cite)) + * { margin-block-start: 1rlh }
 			}
 
 			> :where(dd):has(> *:not(:only-child)) {
