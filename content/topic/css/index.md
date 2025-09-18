@@ -263,7 +263,7 @@ But maybe you don’t want to style all of the paragraphs. You can then use a `
 
 <figure
 	@source="class/preview"
-	style="--lines: 16"
+	style="--lines: 18"
 	>
 </figure>
 
@@ -281,7 +281,7 @@ You can also use an `id`, which is a kind of [special attribute](https://develop
 
 <figure
 	@source="id/preview"
-	style="--lines: 14"
+	style="--lines: 16"
 	>
 </figure>
 

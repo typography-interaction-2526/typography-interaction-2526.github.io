@@ -71,11 +71,11 @@ ti-preview {
 	--editor-line-height:          1rlh;
 
 	--tab-bar-active-background: transparent;
-	--tab-bar-active-foreground: var(--accent);
+	--tab-bar-active-foreground: color-mix(in srgb, var(--background), transparent 20%);
 	--tab-bar-active-highlight:  transparent;
-	--tab-bar-background:        color-mix(in srgb, var(--background), transparent 80%);
+	--tab-bar-background:        transparent;
 	--tab-bar-filter:            var(--blur);
-	--tab-bar-font-family:       var(--editor-font-family);
+	--tab-bar-font-family:       'OCR B Bold', ui-monospace, monospace;
 	--tab-bar-font-size:         var(--editor-font-size);
 	--tab-bar-foreground:        var(--syntax-comment);
 	--tab-bar-margin:            0 0 0.65rcap;
@@ -91,7 +91,7 @@ ti-preview {
 	--syntax-heading:      #e06c75;
 	--syntax-emphasis:     #acb2be;
 	--syntax-strong:       #acb2be;
-	--syntax-keyword:      #ff7b72;
+	--syntax-keyword:      tomato;
 	--syntax-atom:         var(--accent);
 	--syntax-bool:         dodgerblue;
 	--syntax-url:          #56b6c2;

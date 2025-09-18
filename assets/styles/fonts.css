@@ -35,6 +35,12 @@
 	src:         url('../assets/fonts/ocr-b--original.otf') format('opentype');
 }
 
+/* For explicit `ti-preview` use. */
+@font-face {
+	font-family: 'OCR B Bold';
+	src:         url('../assets/fonts/ocr-b--original.otf') format('opentype');
+}
+
 :where(:root) {
 	/* Some basic bounding-box metrics. */
 	--bottom:    0.228em;
