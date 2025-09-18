@@ -194,25 +194,24 @@ Even though it is used to style HTML elements, [the syntax of CSS](https://devel
 	Their exhaustive list goes into the hundreds.
 <!-- .link-list .right style="--rows: 2" -->
 
-The [curly brackets](https://en.wikipedia.org/wiki/Bracket#Curly_brackets) `{` `}` (also known as *mustaches* or *handlebars*, for their shape) enclose all the declarations you want to apply to a given selector. These *declarations* are in turn made up of *properties* and *values*.
+The [curly brackets](https://en.wikipedia.org/wiki/Bracket#Curly_brackets) `{ }` (also known as *mustaches* or *handlebars*, for their shape) enclose all the declarations you want to apply to a given selector. These *declarations* are in turn made up of *properties* and *values*.
 
-Properties are always separated from their corresponding values by a colon `:`, and each declaration line has to end in a semicolon `;`. (It’s just how it is!) Also, there are no spaces between values and their units (like `20px`)! You will get used to it.
+Properties are always separated from their corresponding values by a colon `:`, and each declaration line has to end in a semicolon `;`. (It’s just how it is!) Also, there are no spaces between values and their units (like `20px`)! You will get used to it.
 
 <figure @source="rule.svg"></figure>
 
-There are [many, many CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference). We’ll go over some in our exercise, but look through these to become more familiar.
-<!-- .balance .bold .scale--h4 -->
+There are [many, many, many CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference). We’ll go over some in our exercises, but look through these to become more familiar.
+<!-- .intro -->
 
 ### Ergonomics
 
 <div class="verso">
 
-Just [like HTML](/topic/html/#case-whitespace-tabs-line-breaks), CSS generally does not care about capitalization, extra white space, or line breaks. Folks generally use tabs/indenting to indicate hierarchy, but again it is just whatever makes it easier for you!
+Just [like HTML](/topic/html/#case-whitespace-tabs-line-breaks), CSS *usually* does not care about capitalization, extra white space, or line breaks. Folks generally use tabs/indenting to indicate hierarchy, but again it is just whatever makes it easier for you!
 
 Capitalization <em>does</em> matter when using `id` or classes as selectors, which have to match the HTML to target correctly.
 
-Like with HTML, it’s easiest just to be consistent and stick to lowercase!
-<!-- .add-before .bold .scale--h4 -->
+Like with HTML, it’s easiest just to be consistent and stick to lowercase (and no spaces)!
 
 </div>
 
@@ -221,11 +220,12 @@ Like with HTML, it’s easiest just to be consistent and stick to lowercase!
 ```css
 p {
 	color: red;
+	font-family: 'Gorton', sans-serif;
 }
 
 /* Is the same as… */
 
-P { COLOR: RED; }
+P{COLOR:RED;FONT-FAMILY:'GORTON',SANS-SERIF;}
 ```
 
 </div>
