@@ -9,22 +9,22 @@
 CSS is the standard language/format for styling web pages, which specifies what the page’s HTML will look like in the browser.
 <!-- .balance -->
 
-- [<letter-bullet @title="CSS – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [<cite>CSS – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS)
 	MDN, as is custom.
 
-- [<letter-bullet @title="Basics of CSS"></letter-bullet>](https://www.youtube.com/watch?v=BUZIaTHm_oE)
+- [<cite>Basics of CSS</cite>](https://www.youtube.com/watch?v=BUZIaTHm_oE)
 	Another ASMR introduction from Laurel.
 
-- [<letter-bullet @bullet="W" @title="Google’s *web.dev* CSS Course"></letter-bullet>](https://web.dev/learn/css/)
+- [<cite>Google’s *web.dev* CSS Course</cite>](https://web.dev/learn/css/)
 	Different order from ours, but pretty good.
 
-- [<letter-bullet @title="HTML Color Codes"></letter-bullet>](https://htmlcolorcodes.com/)
+- [<cite>HTML Color Codes</cite>](https://htmlcolorcodes.com/)
 	Too many ads, but some nice tools for color.
 
-- [<letter-bullet @title="Google Fonts"></letter-bullet>](https://fonts.google.com)
+- [<cite>Google Fonts</cite>](https://fonts.google.com)
 	We’ll use this for free font families.
 
-- [<letter-bullet @title="Wakamai Fondue"></letter-bullet>](https://wakamaifondue.com)
+- [<cite>Wakamai Fondue</cite>](https://wakamaifondue.com)
 	“What can my font do?”
 <!-- .balance .link-list .right style="--rows: 6" -->
 
@@ -182,10 +182,10 @@ It's *much* easier to understand how it all comes together if you keep the code
 
 Even though it is used to style HTML elements, [the syntax of CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax) is very different. CSS *rules* are made up of *selectors*—used to target certain elements—and then the *declarations* that you want to apply to them. *For this thing, do this!*
 
-- [<letter-bullet @bullet="S" @title="CSS Syntax – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax)
+- [<cite>CSS Syntax – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax)
 	They really need to update their diagrams.
 
-- [<letter-bullet @bullet="R" @title="CSS Reference – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+- [<cite>CSS Reference – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 	Their exhaustive list goes into the hundreds.
 <!-- .link-list .right style="--rows: 2" -->
 
@@ -229,10 +229,10 @@ P { COLOR: RED; }
 
 Selectors are used to *target* certain HTML elements within the page. These can get pretty complicated, but we’ll look at the three simplest and most common targeting methods to start:
 
-- [<letter-bullet @title="Type, Class, and ID Selectors – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+- [<cite>Type, Class, and ID Selectors – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
 	MDN again, as we do.
 
-- [<letter-bullet @title="Selectors – web.dev"></letter-bullet>](https://web.dev/learn/css/selectors)
+- [<cite>Selectors – web.dev</cite>](https://web.dev/learn/css/selectors)
 	Google, too.
 <!-- .link-list .right style="--rows: 2" -->
 
@@ -429,10 +429,10 @@ But in the realm of this course, we encourage you to embrace recent developments
 
 The first three targeting methods (`element`, `.class`, `#id`) are listed in increasing order of [*specificity*](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity), meaning that a class trumps an element rule, and an `id` trumps a class. `id`s are thus *more specific* than classes, which are *more specific* than element selectors. (And you shouldn’t really use them, but inline styles beat them all.) Take this example:
 
-- [<letter-bullet @title="Specifics on CSS Specificity – CSS Tricks"></letter-bullet>](https://css-tricks.com/specifics-on-css-specificity/)
+- [<cite>Specifics on CSS Specificity – CSS Tricks</cite>](https://css-tricks.com/specifics-on-css-specificity/)
 	A brief overview of a very complicated thing.
 
-- [<letter-bullet @bullet="C" @title="Specificity Calculator"></letter-bullet>](https://specificity.keegan.st)
+- [<cite>Specificity Calculator</cite>](https://specificity.keegan.st)
 	Compare selector values and see who wins.
 <!-- .link-list .right -->
 
@@ -451,10 +451,10 @@ Suffice it to say *it’s complicated*. The easiest way to avoid specificity p
 
 We haven’t even talked about that first *C&thinsp;*! Remember, it stands for [*cascading*](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade).
 
-- [<letter-bullet @title="Introducing the CSS Cascade – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade)
+- [<cite>Introducing the CSS Cascade – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade)
 	MDN is particularly *dry* on this one.
 
-- [<letter-bullet @title="The CSS Cascade"></letter-bullet>](https://2019.wattenberger.com/blog/css-cascade)
+- [<cite>The CSS Cascade</cite>](https://2019.wattenberger.com/blog/css-cascade)
 	A much nicer interactive explanation from [Amelia Wattenberger](https://wattenberger.com/).
 <!-- .link-list .right style="--rows: 3" -->
 
@@ -471,7 +471,7 @@ This means that when there is a tie (like two classes applying the same propert
 To add even more confusion, [some CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance) set on a parent also apply to their children—such as `color` or `font-family`. Most spacing/layout properties, like `width` and `margin` do not. (More on those, next week.)
 <!-- .balance -->
 
-[<letter-bullet @title="Inheritance – web.dev"></letter-bullet>](https://web.dev/learn/css/inheritance)
+[<cite>Inheritance – web.dev</cite>](https://web.dev/learn/css/inheritance)
 	Google is better on this one.
 <!-- .link-list .right -->
 
@@ -494,7 +494,7 @@ Alright, so all this has been about *targeting* elements—what about actually s
 Besides the basic examples above, [*color*](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) can be specified in a few different ways:
 <!-- .balance -->
 
-[<letter-bullet @title="CSS Colors – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_colors)
+[<cite>CSS Colors – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_colors)
 	Come for the picker, stay for all the info.
 <!-- .link-list .right -->
 
@@ -511,7 +511,7 @@ Named colors are quick to work with when you know a few, but `hsla` offers a�
 
 Then perhaps most importantly, you’ll always be customizing your [typography](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals). Remember, the web is text *all the way down*:
 
-[<letter-bullet @title="Fundamental Text and Font Styling – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+[<cite>Fundamental Text and Font Styling – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 	All your properties.
 <!-- .link-list .right -->
 
@@ -530,7 +530,7 @@ Web font licensing is a *Whole Big Thing*—so let’s start out by making use 
 Once you’ve got a `font-family` in, there are additional properties to control the typography:
 <!-- .balance -->
 
-[<letter-bullet @title="Web Typography –<br>Interneting Is Hard"></letter-bullet>](https://internetingishard.netlify.app/html-and-css/web-typography)
+[<cite>Web Typography –<br>Interneting Is Hard</cite>](https://internetingishard.netlify.app/html-and-css/web-typography)
 	A more qualitative take.
 <!-- .link-list .right -->
 
