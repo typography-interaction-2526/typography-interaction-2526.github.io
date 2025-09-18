@@ -245,7 +245,7 @@ Selectors are used to *target* certain HTML elements within the page. These can 
 1. Classes (written `.class-name`&thinsp;)
 1. Identifiers (and `#some-id`&thinsp;)
 
-### 1. By Element Type: `p` `a` `main` etc. <!-- #element -->
+### 1. By Element Type: `p` `a` `main` etc. <!-- #element .all -->
 
 If you want to change the styles for all instances of a given HTML element, you drop the <nobr>`<` `>`</nobr> from the tag for an element selector. These are called [*type selectors*](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors):
 
@@ -256,7 +256,7 @@ If you want to change the styles for all instances of a given HTML element, you 
 	>
 </figure>
 
-### 2. With a Class: `.class-name` <!-- #class -->
+### 2. With a Class: `.class-name` <!-- #class .all -->
 
 But maybe you don’t want to style all of the paragraphs. You can then use a `class` to [target specific instances](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors). They are  added as an *[attribute](/topic/html/#attributes)* on the element you want to target:
 <!-- .balance -->
@@ -274,7 +274,7 @@ You can use these over and over, on any kind of element. And individual elements
 We’ll talk about how conflicting rules are handled, below.
 <!-- .note -->
 
-### 3. With an Identifier: `#some-id` <!-- #id -->
+### 3. With an Identifier: `#some-id` <!-- #id .all -->
 
 You can also use an `id`, which is a kind of [special attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id) that can only be used *once* in an HTML document. These are useful thus useful for targeting singular things—like your navigation, the document title, specific headings, etc:
 <!-- .balance -->
@@ -289,7 +289,7 @@ These are prefixed by `#` in CSS, as with `#title` and `#introduction`. If you 
 
 ## Fancy Selectors
 
-### Combinations and Groups: `selector.selector`
+### Combinations and Groups: `selector.selector` <!-- .all -->
 
 You can use combinations of the above *elements*, *classes*, and *identifiers* to be even more specific—however, this likely means you just need to rethink your HTML structure. (We’ll unpack *specificity*, below.)
 
@@ -301,7 +301,7 @@ More commonly, you might apply declarations to multiple selectors, called *group
 	>
 </figure>
 
-### With Specific Attributes: `selector[attribute]`
+### With Specific Attributes: `selector[attribute]` <!-- .all -->
 
 You can use the various [attributes](/topic/html/#attributes) as selectors too, using square brackets <nobr>`[` `]`</nobr>. These are usually very similar to using *classes*, but can help you [differentiate things](https://css-tricks.com/attribute-selectors/) like internal and external links, for example:
 <!-- .balance -->
@@ -312,7 +312,7 @@ You can use the various [attributes](/topic/html/#attributes) as selectors too, 
 	>
 </figure>
 
-### Pseudo-Classes: `selector:state` `selector:instance`
+### Pseudo-Classes: `selector:state` `selector:instance` <!-- .all -->
 
 These are [special selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes), added to `element`, `class`, or `id`, separated with `:`, which target unique *states* or *instances* of HTML elements. You’ll often see these used to target [link states](https://web.dev/learn/css/pseudo-classes/#historic-states):
 
@@ -331,7 +331,7 @@ Other common pseudo-Class examples have to do with [counts and positions](https:
 	>
 </figure>
 
-### Pseudo-Elements: `selector::pseudo`
+### Pseudo-Elements: `selector::pseudo` <!-- .all -->
 
 Slightly different the various [pseudo-*elements*](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements), which let you style a particular *part* of an element. You’ll most often see these as `::before` and `::after`, which let us insert things around text—or targeting first letters/lines:
 <!-- .balance -->
@@ -343,7 +343,7 @@ Slightly different the various [pseudo-*elements*](https://developer.mozilla.org
 	>
 </figure>
 
-### Finally, Combinators: `>` `+` `~`
+### Finally, Combinators: `>` `+` `~` <!-- .all -->
 
 Last, you will often want to target something based on its relationship to other elements—its *siblings* or its *parents*. For this, CSS has [*combinators*](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators), which let you relate all the various selectors we’ve learned about here together:
 <!-- .balance -->
@@ -358,7 +358,7 @@ Importantly, combinators can only target elements top-down, meaning that it can 
 
 ## The Golden Age of CSS
 
-### `:has()` Really …Has Changed Things!
+### `:has()` Really …Has Changed Things! <!-- .all -->
 
 For many, *many* years folks have wanted a “parent selector” in CSS—meaning a way to apply a style to a parent/container based on one of its children. This has not been possible before, as we mentioned above.
 

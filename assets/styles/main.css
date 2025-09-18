@@ -18,7 +18,6 @@ main {
 
 	/* Headings. */
 	hgroup {
-		grid-column: all;
 		inline-size: fit-content;
 		position:    relative;
 
@@ -536,6 +535,8 @@ main {
 		grid-row: span var(--rows, 1);
 
 		/* TODO These need space above/below on mobile. */
+
+		> hgroup { grid-column: all }
 	}
 
 	/* TODO Organize these! */
