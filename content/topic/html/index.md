@@ -15,7 +15,7 @@ HTML is the standard markup language/format for creating web pages, containing t
 
 - [<cite>Organizing Files for the Web</cite>](https://docs.google.com/presentation/d/101TEdtacOFZhCwebijcJaX0h1BpDwhAm2SJhE3jW89c/edit#slide=id.g331f24f572_4_0)
 	[Sasha Portis](https://sashaportis.com) on (web) file-naming, for when you get to saving.
-<!-- .right style="--rows: 4" -->
+<!-- .right .rows--4 -->
 
 In our ongoing analogy, HTML is the _skeleton_ of the web. At its most basic it is a text file, in a folder on a computer, with a `.html` extension—*text, with instructions.*
 
