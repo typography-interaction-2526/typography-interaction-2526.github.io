@@ -26,7 +26,7 @@ CSS is the standard language/format for styling web pages, which specifies what 
 
 - [<cite>Wakamai Fondue</cite>](https://wakamaifondue.com)
 	“What can my font do?”
-<!-- .balance .link-list .right style="--rows: 6" -->
+<!-- .right style="--rows: 6" -->
 
 In our ongoing analogy, CSS is the *skin* of the web. [Just like HTML](/topic/html), at its most basic it is still just text, in a file, on a computer. It can live inside HTML documents themselves, but is more commonly seen on its own with the extension `.css`
 
@@ -35,10 +35,9 @@ CSS came after HTML, first proposed by [Håkon Wium Lie](https://www.w3.org/Styl
 - CSS 1, 1996
 - CSS 2, 1998
 - CSS 3, 1999
-<!-- .bold -->
 
-For the past decade or so, features have been added incrementally by browsers “within” the CSS 3 “standard.” That’s how it goes, these days.
-<!-- .secondary -->
+For the past decade or so, features have been added incrementally by browsers “within” the CSS 3 “standard” (as it was/is with HTML). That’s how it goes, these days.
+<!-- .note -->
 
 <blockquote
 	@attribution="James D. Mason"
@@ -55,13 +54,14 @@ I'll comment that style sheets constitute a wormhole into unspeakable universes.
 
 ## Where CSS Lives
 
-Before we get into CSS itself, let’s talk about how it is incorporated with HTML. There are three ways it can be added:
-<!-- .balance -->
+Before we get into the CSS syntax itself, let’s talk about how it is incorporated with your HTML.
+
+There are three ways it can be added:
+<!-- .intro-->
 
 1. *Inline* on HTML tags themselves
 1. Via `<style>` elements in HTML documents
 1. As separate/external `.css` files, via `<link>` elements
-<!-- .all .bold -->
 
 ### 1.&emsp;Inline with `style=`
 
@@ -73,7 +73,6 @@ This is the most straightforward way to add styles, directly as [*attributes*](/
 ```
 
 Seems obvious. However this has some downsides—imagine you want to style all of your paragraphs in the same way, and with multiple properties:
-<!-- .add-before--2 -->
 
 ```html <!-- .all -->
 <p style="color: red; font-family: sans-serif;">This text will be red!</p>
@@ -82,12 +81,10 @@ Seems obvious. However this has some downsides—imagine you want to style all o
 ```
 
 It makes it hard to read, and hard to change and maintain—you’d have to update every single instance. (In software, we’d refer to this as [*brittle*](https://en.wikipedia.org/wiki/Software_brittleness)—meaning it is easy to break.)
-<!-- .add-before--2 -->
 
 ### 2.&emsp;Along Comes `<style>`
-<!-- .add-after -->
 
-<div class="verso" style="align-self: center">
+<div class="center verso">
 
 So the next way that was added to the standard was using a special HTML element, `<style>`, that wraps blocks of CSS that then apply to an entire document. They go up in the `<head>` of our [HTML documents](/topic/html/#the-basic-document).
 
@@ -120,9 +117,8 @@ The rules are written written with selectors—more on those, below. But importa
 </div>
 
 ### 3.&emsp;External with `<link>`
-<!-- .add-after -->
 
-<div class="verso" style="align-self: end">
+<div class="verso">
 
 So this is already much better, allowing us to style whole pages easily and consistently. But what about when we have *multiple* pages?
 
@@ -130,9 +126,10 @@ If you wanted a whole site to use the same styles, you’d have to duplicate the
 
 </div>
 
-<div class="recto">
+<div class="after--2 recto">
 
 ```html
+<!-- `index.html` -->
 <!doctype html>
 <html>
 	<head>
@@ -149,7 +146,7 @@ If you wanted a whole site to use the same styles, you’d have to duplicate the
 
 </div>
 
-<div class="verso add-before--3">
+<div class="verso">
 
 And then in a separate `style.css` file (in this case, in the same directory as our HTML file), we can have the same rules as before—no need for the outside wrapping `<style>` tag.
 
@@ -160,6 +157,7 @@ This will apply to any page that we add the `<link>` to, and updating the styles
 <div class="recto">
 
 ```css
+/* `style.css` */
 p {
 	color: red;
 	font-family: sans-serif;
@@ -168,14 +166,22 @@ p {
 
 </div>
 
-We’ll talk more about [<em>specificity</em>](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) later, but it is worth noting that the *inline* approach takes precedent over other methods—under the “closest, then lowest” logic.
-<!-- .add-before--3 .balance .bold -->
+We’ll talk more about *[specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)* later, but know that the *inline* approach takes precedent over other methods—under the “closest, then lowest” logic.
+<!-- .intro .before--2 -->
 
 ## Separation of Concerns
 
-[*Separation of Concerns*](https://en.wikipedia.org/wiki/Separation_of_concerns) is an ideology that code should be split up into sections that are responsible for a single behavior—the smaller, the better. In the case of websites—our HTML, CSS, and JS can be seen as *content*, *form*, and *function*. (Or in our anatomical analogy: *skeleton*, *skin*, and *muscles*.) These are different *concerns*.
+[*Separation of Concerns*](https://en.wikipedia.org/wiki/Separation_of_concerns) is an ideology that code should be split up into sections that are responsible for a single behavior—the smaller, the better. In the case of websites—our HTML, CSS, and JS map to the different behaviors of *content*, *form*, and *function*. (Or in our anatomical analogy: *skeleton*, *skin*, and *muscles*.) These are different *concerns*.
 
-It's *much* easier to understand how it all comes together if you keep the code for those three behaviors in separate files. Your IDE will be easier to use; your diffs more sensical; you’ll know where to start looking to figure something out.
+It's *much* easier to understand how it all comes together if you keep the code for these three behaviors in separate files. Your IDE will be easier to use; your diffs more sensical; you’ll know where to start looking to figure something out.
+
+<aside>
+
+<mark>In this house, our styles are external</mark>
+
+You might see inline or in-HTML styles elsewhere. But we shouldn’t see them in your code! They are a sign something has gone wrong—and that you (or your [resource](https://typography-interaction-2526.github.io/syllabus/#code-plagiarism)) don’t understand.
+
+</aside>
 
 ## CSS Rules
 
