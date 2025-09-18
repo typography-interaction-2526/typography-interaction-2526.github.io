@@ -28,6 +28,8 @@
 
 	document.addEventListener('click', (event) => {
 		if (event.target.matches?.('a[href^="/"]')) {
+	 		if (event.metaKey || event.ctrlKey) return
+
 			event.preventDefault()
 
 			const header = document.querySelector(`header a[href="${event.target.getAttribute('href').split('#')[0]}"]`).closest('header')
