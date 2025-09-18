@@ -133,6 +133,13 @@ summary {
 		> cite {
 			position: relative;
 
+			> code {
+				background-color:  initial;
+				font-size:         inherit;
+				inset-block-start: -0.1em;
+				position:          relative;
+			}
+
 			&::after {
 				content:           var(--icon, '↓');
 				inset-block-start: var(--block);
