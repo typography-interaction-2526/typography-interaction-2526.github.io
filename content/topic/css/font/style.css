@@ -5,13 +5,13 @@
 body { font-family: 'Work Sans', sans-serif; }
 
 /* Size is the first thing you’ll want to adjust. */
-li:nth-child(1) { font-size: 28px; }
-li:nth-child(2) { font-size: 10px; }
-/* Browsers usually default to 16px. */
+li:nth-child(1) { font-size: 3rem; }
+li:nth-child(2) { font-size: 0.75rem; }
+/* Browsers usually default to 1rem = 16px. */
 
 /* Then the space between your lines, relative to your font-size. */
 li:nth-child(3) { line-height: 200%; }
-/* This could also be written as “32px”, or just “2”. */
+/* This could also be written as “2em”, or just “2”. */
 
 /* You can specify different weights. */
 li:nth-child(4) { font-weight: 100; }
@@ -33,7 +33,7 @@ li:nth-child(11) { text-decoration: line-through; }
 /* Decoration should be paired with a tag, like <em> or <del>. */
 
 li:nth-child(12) { text-align: center; } /* Default is “left”. */
-li:nth-child(13) { text-align: justify; }
-li:nth-child(14) { text-align: right; }
+li:nth-child(13) { text-align: justify; } /* Careful here… */
+li:nth-child(14) { text-align: right; } /* Only sparingly! */
 
-li + li { margin-top: 1em }
+li + li { margin-top: 2em }

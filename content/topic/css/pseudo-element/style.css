@@ -7,7 +7,7 @@ h1::after {
 
 p::first-letter {
 	color: red;
-	font-size: larger;
+	font-size: 3em;
 	font-weight: bold;
 }
 

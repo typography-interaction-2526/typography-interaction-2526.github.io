@@ -312,7 +312,7 @@ Generally speaking, HTML doesn’t care about capitalization, extra white space,
 
 [<cite>How Whitespace Is Handled – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Whitespace)
 	It depends! It always depends.
-<!-- .link-list .right style="--lines: 2" -->
+<!-- .right .rows--2 -->
 
 The browser parses both of these in the exact same way:
 <!-- .intro .before--3 .after -->

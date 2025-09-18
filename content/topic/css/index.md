@@ -9,7 +9,7 @@
 CSS is the standard language/format for styling web pages, which specifies what the page’s HTML will look like in the browser.
 <!-- .balance -->
 
-- [<cite>CSS – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [<cite>CSS – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS)
 	MDN, as is custom.
 
 - [<cite>Basics of CSS</cite>](https://www.youtube.com/watch?v=BUZIaTHm_oE)
@@ -187,10 +187,10 @@ You might see inline or in-HTML styles elsewhere. But we shouldn’t see them in
 
 Even though it is used to style HTML elements, [the syntax of CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax) is very different. CSS *rules* are made up of *selectors*—used to target certain elements—and then the *declarations* that you want to apply to them. *For this thing, do this!*
 
-- [<cite>CSS Syntax – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax)
+- [<cite>CSS Syntax – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Syntax)
 	They really need to update their diagrams.
 
-- [<cite>CSS Reference – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+- [<cite>CSS Reference – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
 	Their exhaustive list goes into the hundreds.
 <!-- .right .rows--2 -->
 
@@ -234,10 +234,10 @@ P{COLOR:RED;FONT-FAMILY:'GORTON',SANS-SERIF;}
 
 Selectors are used to *target* certain HTML elements within the page. These can get pretty complicated, but we’ll look at the three simplest and most common targeting methods to start:
 
-- [<cite>Type, Class, and ID Selectors – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
+- [<cite>Type, Class, and ID Selectors – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
 	MDN again, as we do.
 
-- [<cite>Selectors – web.dev</cite>](https://web.dev/learn/css/selectors)
+- [<cite>Selectors – web.dev</cite>](https://web.dev/learn/css/selectors)
 	Google, too.
 <!-- .right .rows--2 -->
 
@@ -285,73 +285,72 @@ You can also use an `id`, which is a kind of [special attribute](https://develop
 	>
 </figure>
 
-These are prefixed by `#` in CSS, as with `#title` and `#introduction`. They can also be used as [link destinations](/topic/html/#id)!
+These are prefixed by `#` in CSS, as with `#title` and `#introduction`. If you remember, they can also be used as [link destinations](/topic/html/#id)!
 
 ## Fancy Selectors
 
-### Combinations and Groups
+### Combinations and Groups: `selector.selector`
 
-You can use combinations of the above *elements*, *classes*, and *`id`* to be even more specific—however, this likely means you just need to rethink your HTML structure. (We’ll unpack *specificity*, below.)
+You can use combinations of the above *elements*, *classes*, and *identifiers* to be even more specific—however, this likely means you just need to rethink your HTML structure. (We’ll unpack *specificity*, below.)
 
 More commonly, you might apply declarations to multiple selectors, called *group selectors*, with a <nobr>comma-delineated</nobr> [selector list](https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list):
 
 <figure
 	@source="group/preview/?active=style.css"
-	style="--lines: 14"
-	>
-</figure>
-
-### With Specific Attributes
-
-You can use the various [attributes](/topic/html/#attributes) as selectors, too. These are usually very similar to using *classes*, but can help you [differentiate things](https://css-tricks.com/attribute-selectors/) like internal and external links, for example:
-<!-- .balance -->
-
-<figure
-	@source="attribute/preview/?active=style.css"
-	style="--lines: 10"
-	>
-</figure>
-
-### Pseudo-Classes
-
-These are [special selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes), added to `element`, `class`, or `id` which target unique *states* or *instances* of HTML elements. You’ll often see these used to target [link states](https://web.dev/learn/css/pseudo-classes/#historic-states):
-<!-- .balance -->
-
-<figure
-	@caption="`:hover` also works on any element, not just links!"
-	@source="pseudo-link/preview/?active=style.css"
-	style="--lines: 13"
-	>
-</figure>
-
-Other common examples have to do with [counts and positions](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes):
-
-<figure
-	@source="pseudo-child/preview/?active=style.css"
 	style="--lines: 16"
 	>
 </figure>
 
-### Pseudo-Elements
+### With Specific Attributes: `selector[attribute]`
 
-Slightly different the various [pseudo-*elements*](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements), which let you style a particular *part* of an element. You’ll most often see these as `::before` and `::after`, which let us insert things around text:
+You can use the various [attributes](/topic/html/#attributes) as selectors too, using square brackets <nobr>`[` `]`</nobr>. These are usually very similar to using *classes*, but can help you [differentiate things](https://css-tricks.com/attribute-selectors/) like internal and external links, for example:
+<!-- .balance -->
+
+<figure
+	@source="attribute/preview/?active=style.css"
+	style="--lines: 12"
+	>
+</figure>
+
+### Pseudo-Classes: `selector:state` `selector:instance`
+
+These are [special selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes), added to `element`, `class`, or `id`, separated with `:`, which target unique *states* or *instances* of HTML elements. You’ll often see these used to target [link states](https://web.dev/learn/css/pseudo-classes/#historic-states):
+
+<figure
+	@caption="Note that `:hover` works on any element, not just links!"
+	@source="pseudo-link/preview/?active=style.css"
+	style="--lines: 15"
+	>
+</figure>
+
+Other common pseudo-Class examples have to do with [counts and positions](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes). The [syntax for these](https://css-tip.com/quantity-queries/) can be complicated, but they are very powerful:
+
+<figure
+	@source="pseudo-child/preview/?active=style.css"
+	style="--lines: 18"
+	>
+</figure>
+
+### Pseudo-Elements: `selector::pseudo`
+
+Slightly different the various [pseudo-*elements*](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements), which let you style a particular *part* of an element. You’ll most often see these as `::before` and `::after`, which let us insert things around text—or targeting first letters/lines:
 <!-- .balance -->
 
 <figure
 	@caption="Note the difference in `:` for pseudo-selectors and `::` for pseudo-elements."
 	@source="pseudo-element/preview/?active=style.css"
-	style="--lines: 19"
+	style="--lines: 21"
 	>
 </figure>
 
-### Finally, Combinators
+### Finally, Combinators: `>` `+` `~`
 
 Last, you will often want to target something based on its relationship to other elements—its *siblings* or its *parents*. For this, CSS has [*combinators*](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators), which let you relate all the various selectors we’ve learned about here together:
 <!-- .balance -->
 
 <figure
 	@source="combinator/preview/?active=style.css"
-	style="--lines: 17"
+	style="--lines: 19"
 	>
 </figure>
 
@@ -359,7 +358,7 @@ Importantly, combinators can only target elements top-down, meaning that it can 
 
 ## The Golden Age of CSS
 
-### `:has()` Has Changed Things!
+### `:has()` Really …Has Changed Things!
 
 For many, *many* years folks have wanted a “parent selector” in CSS—meaning a way to apply a style to a parent/container based on one of its children. This has not been possible before, as we mentioned above.
 
@@ -369,9 +368,7 @@ CSS has [finally added](https://webkit.org/blog/13096/css-has-pseudo-class/) the
 div:has(p) { background-color: red; }
 ```
 
-The property is applied *on* the parent (here, the `div`) based on the presence of the child (the `p`). You can use any selector, in either position. This is *very* powerful, especially with dynamic content.
-
-Safari and Chrome both [added support](https://caniuse.com/css-has) a couple years back; Firefox was late last year. So it isn’t yet considered *[baseline (widely available)](https://web.dev/baseline)* yet—but because of how game-changing it is, folks are rapidly adopting.
+The property is applied *on* the parent (here, the `div`) based on the presence of the child (the `p`). You can use any selector, in either position. This is *very* powerful, especially with dynamic content. All the major browsers have *[baseline (widely available)](https://web.dev/baseline)* support for it now.
 
 ### Oh Also, Nesting?!
 
@@ -379,6 +376,9 @@ While we’re on the subject of cutting-edge additions to CSS—[even more recen
 <!-- .balance -->
 
 This more straightforward style of writing [descendent/child selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator) was popularized by the ubiquitous [SASS extension](https://sass-lang.com)—which improved the ergonomics of CSS ahead of the language incorporating new features.
+<!-- .after--2 -->
+
+<!-- TODO Add example! Also :is/:where? -->
 
 <div class="verso add-before">
 
@@ -415,46 +415,60 @@ footer {
 
 </div>
 
-…to make the hierarchical relationship self-evident, less redundant, and easier to change—especially as your stylesheets inevitably grow! Each level (generation?) can be any CSS selector.
-<!-- .add-before--2 -->
+…to make the hierarchical relationship self-evident, less redundant, and easier to change—especially as your stylesheets inevitably grow! Each level (generation?) can be any CSS selector.
+<!-- .before--2 -->
+
+These can dramatically improve your editing experience!
+<!-- .intro -->
 
 <aside>
 
-These can dramatically improve your editing experience. This course site makes *heavy* use of `:has` and nesting, as an example. But it also breaks on old browsers (as some of you have seen).
+<mark>Embrace new developments when possible</mark>
 
-In the “Real World,” you might work on projects that have to support older browsers—and so you won’t be able to always use new, modern developments.
+Our course site makes *heavy* use of `:has` / nesting, for example!
 
-But in the realm of this course, we encourage you to embrace recent developments!
+Out in the “Real World,” you might work on projects that have to support older browsers—and so you won’t be able to always use such new, modern developments.
+
+But in the experimental realm of this course, we encourage you to explore all recent developments!
 
 </aside>
 
 ## Specificity
 
-The first three targeting methods (`element`, `.class`, `#id`) are listed in increasing order of [*specificity*](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity), meaning that a class trumps an element rule, and an `id` trumps a class. `id`s are thus *more specific* than classes, which are *more specific* than element selectors. (And you shouldn’t really use them, but inline styles beat them all.) Take this example:
+We can’t talk about CSS without talking about *specificity*—bane of many a front-end developer.
+<!-- .balance -->
 
-- [<cite>Specifics on CSS Specificity – CSS Tricks</cite>](https://css-tricks.com/specifics-on-css-specificity/)
+- [<cite>Specifics on CSS Specificity – CSS Tricks</cite>](https://css-tricks.com/specifics-on-css-specificity/)
 	A brief overview of a very complicated thing.
 
 - [<cite>Specificity Calculator</cite>](https://specificity.keegan.st)
 	Compare selector values and see who wins.
-<!-- .link-list .right -->
+<!-- .right .rows--3 -->
+
+The first three targeting methods (`element`, `.class`, `#id`) are listed in increasing order of [*specificity*](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity), meaning that a class trumps an element rule, and an `id` trumps a class. Identifiers are thus *more specific* than classes, which are *more specific* than element selectors. (And you shouldn’t really use them, but inline styles beat them all.) Take this example:
 
 <figure
 	@source="specificity/preview/?active=style.css"
-	style="--lines: 11"
+	style="--lines: 13"
 	>
 </figure>
 
 You could write a *long* book (and many people have) about CSS specificity—the myriad of ways that some CSS rules take precedent over others. It is often one the more frustrating parts (especially when working with legacy code that is poorly considered).
 <!-- .balance -->
 
-Suffice it to say *it’s complicated*. The easiest way to avoid specificity problems is generally to stay at the same level throughout your HTML, usually by just using classes throughout.
+<aside>
+
+<mark>Management recommends `.class` use</mark>
+
+Suffice it to say *it’s complicated.* The easiest way to avoid specificity problems is generally to stay at the same level throughout your HTML, usually by just using classes throughout.
+
+</aside>
 
 ## Oh Right, the Cascade
 
-We haven’t even talked about that first *C&thinsp;*! Remember, it stands for [*cascading*](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade).
+Yikes, we haven’t even talked about that first *C&thinsp;*! Remember, it stands for [*cascading*](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade).
 
-- [<cite>Introducing the CSS Cascade – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade)
+- [<cite>Introducing the CSS Cascade – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade)
 	MDN is particularly *dry* on this one.
 
 - [<cite>The CSS Cascade</cite>](https://2019.wattenberger.com/blog/css-cascade)
@@ -464,19 +478,19 @@ We haven’t even talked about that first *C&thinsp;*! Remember, it stands for [
 This means that when there is a tie (like two classes applying the same property), the *lowest* rule wins—literally the one further down within a CSS document, or within a style tag. If you have multiple CSS documents with `<link>` element, the lower linked document will take precedence:
 
 <figure
+	@caption="Try to avoid relying on this or even having it come up! This is one of the reasons people are frustrated by CSS."
 	@source="cascade/preview/"
-	style="--lines: 14"
+	style="--lines: 16"
 	>
 </figure>
 
 ## And Inheritance
 
-To add even more confusion, [some CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance) set on a parent also apply to their children—such as `color` or `font-family`. Most spacing/layout properties, like `width` and `margin` do not. (More on those, next week.)
-<!-- .balance -->
+To add even more confusion, [some CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance) set on a parent also apply to their children—such as `color` or `font-family`. Most spacing/layout properties, like `width` and `margin` do not. (More on those, next week.)
 
-[<cite>Inheritance – web.dev</cite>](https://web.dev/learn/css/inheritance)
+[<cite>Inheritance – web.dev</cite>](https://web.dev/learn/css/inheritance)
 	Google is better on this one.
-<!-- .link-list .right -->
+<!-- .right -->
 
 This allows you to quickly set some properties globally, without having many brittle/redundant rules, as we did before:
 <!-- .balance -->
@@ -484,7 +498,7 @@ This allows you to quickly set some properties globally, without having many bri
 <figure
 	@caption="All the children inherit the `body` styles. Ah, finally, `sans-serif`."
 	@source="inheritance/preview/?active=style.css"
-	style="--lines: 12"
+	style="--lines: 14"
 	>
 </figure>
 
@@ -497,31 +511,36 @@ Alright, so all this has been about *targeting* elements—what about actually s
 Besides the basic examples above, [*color*](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value) can be specified in a few different ways:
 <!-- .balance -->
 
-[<cite>CSS Colors – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_colors)
+[<cite>CSS Colors – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_colors)
 	Come for the picker, stay for all the info.
-<!-- .link-list .right -->
+<!-- .right -->
 
 <figure
 	@caption="There are [147 <em>named</em>](https://htmlcolorcodes.com/color-names/) CSS colors! `tomato` is a favorite."
 	@source="color/preview/?active=style.css"
-	style="--lines: 20"
+	style="--lines: 31"
 	>
 </figure>
 
-Named colors are quick to work with when you know a few, but `hsla` offers a more intuitive way to adjust and work with colors. These can also all be applied to `background-color` (and `border`, but we’ll talk about that next week).
+Named colors are quick to work with when you know a few, but [`hsla`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl) (and recently, [`color-mix`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix)) offer a much more intuitive/human way to adjust and work with colors and transparency.
+<!-- .balance -->
+
+These can also all be applied to `background-color` (and `border`, but we’ll talk about that next week).
+<!-- .note -->
 
 ### Fonts
 
-Then perhaps most importantly, you’ll always be customizing your [typography](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals). Remember, the web is text *all the way down*:
+Then perhaps most importantly, you’ll always be customizing your [typography](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)—starting with the [`font-family` property](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family). Remember, the web is text *all the way down*:
+<!-- .balance -->
 
-[<cite>Fundamental Text and Font Styling – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+[<cite>Fundamental Text and Font Styling – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
 	All your properties.
-<!-- .link-list .right -->
+<!-- .right -->
 
 <figure
 	@caption="With great power comes great responsibility."
 	@source="font-family/preview/?active=style.css"
-	style="--lines: 20"
+	style="--lines: 30"
 	>
 </figure>
 
@@ -530,17 +549,17 @@ Web font licensing is a *Whole Big Thing*—so let’s start out by making use o
 
 ### Other Type Properties
 
-Once you’ve got a `font-family` in, there are additional properties to control the typography:
+Once you’ve got a `font-family` in, there are many additional properties to control the typography:
 <!-- .balance -->
 
 [<cite>Web Typography –<br>Interneting Is Hard</cite>](https://internetingishard.netlify.app/html-and-css/web-typography)
 	A more qualitative take.
-<!-- .link-list .right -->
+<!-- .right -->
 
 <figure
-	@caption="For now, you can just specify units in `px` to match Figma. We’ll talk about other *absolute* and *relative* units soon."
+	@caption="For now, just eyeball your units in `rem`, focusing on relationships. We’ll talk about other *absolute* and *relative* units soon."
 	@source="font/preview/?active=style.css"
-	style="--lines: 20"
+	style="--lines: 31"
 	>
 </figure>
 
@@ -553,16 +572,16 @@ This is [the “look” we have been seeing](http://contemporary-home-computing.
 Often, when you are working towards your own design, you will find yourself fighting against these built-in styles. So many designers/front-end folk instead start with [*resets*](https://meyerweb.com/eric/tools/css/reset/)—a semi-standard collection of CSS rules that “zero out” the browser’s built-in styles.
 
 This means you have to write everything yourself, but you have more control and aren’t building on unknown foundations. And things should be (more) consistent, across browsers and platforms.
-<!-- .add-after--2 -->
+<!-- .after--2 -->
 
-Here is a [simple, modern one](https://elad2412.github.io/the-new-css-reset/) for your `<head>`:
+Here is a [simple, modern one](https://typography-interaction-2526.github.io/assets/reset.css) for your `<head>`:
 
 ```html <!-- .all -->
-<link href="https://typography-interaction-2425.github.io/assets/reset.css" rel="stylesheet">
+<link href="https://typography-interaction-2526.github.io/assets/reset.css" rel="stylesheet">
 ```
 
 This is what we use here for our course site!
-<!-- .secondary -->
+<!-- .note -->
 
 <blockquote
 	@attribution="Håkon Wium Lie"
@@ -571,6 +590,8 @@ This is what we use here for our course site!
 
 The author of HTML documents has no influence over the presentation. Indeed, if conflicts arise the user should have the last word, but one should also allow the author to attach style hints.
 
-The last point has especially been a source of much frustration among professions that are used to be in control of paper-based publishing. This proposal tries to soften the tension between the author and the reader.
+The last point has especially been a source of much frustration among professions that are used to being in control of paper-based publishing.
+
+This proposal tries to soften the tension between the author and the reader.
 
 </blockquote>

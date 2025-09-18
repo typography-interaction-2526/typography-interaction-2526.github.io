@@ -1,5 +1,5 @@
 /* Importing from Google Fonts. These have to be at the top! */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap');
 
 /* These will depend on your user’s platform and browser. */
 li:nth-child(1) { font-family: serif; }
@@ -13,8 +13,8 @@ li:nth-child(6) { font-family: 'Futura', 'Verdana', sans-serif; }
 /* But the user has to have them installed on their device. */
 /* Otherwise it will “fall back” to the next/right value. */
 
-/* The `@import` above lets you use this on any computer.  */
-li:nth-child(7) { font-family: 'Roboto Condensed', sans-serif; }
+/* The `@import` above lets you use the font on any computer.  */
+li:nth-child(7) { font-family: 'National Park', sans-serif; }
 
 /* You can also host fonts along with your site files. */
 @font-face {
@@ -25,4 +25,4 @@ li:nth-child(7) { font-family: 'Roboto Condensed', sans-serif; }
 /* And then reference them, as above. */
 li:nth-child(8) { font-family: 'Playfair', serif; }
 
-li + li { margin-top: 1em }
+li + li { margin-top: 2em }

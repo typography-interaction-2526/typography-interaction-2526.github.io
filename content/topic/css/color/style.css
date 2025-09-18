@@ -15,14 +15,17 @@ li:nth-child(5) { color: rgba(30, 144, 255, 50%); }
 li:nth-child(6) { color: hsla(210, 100%, 56%, 0.5); }
 /* Alpha as a percentage, 0–100%, or a decimal, 0–1. */
 
-li:nth-child(7) {
+/* Nowadays you can “mix” colors. */
+li:nth-child(7) { color: color-mix(in srgb, dodgerblue, tomato); }
+
+li:nth-child(8) {
 	color: dodgerblue;
 	opacity: 0.5; /* This will affect everything, not just text! */
 }
 
-li:nth-child(8) {
+li:nth-child(9) {
 	color: white;
 	background-color: dodgerblue; /* Same for backgrounds! */
 }
 
-li + li { margin-top: 1em } /* Just for the demo. */
+li + li { margin-top: 2em } /* Just for the demo. */
