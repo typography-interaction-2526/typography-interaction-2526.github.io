@@ -17,7 +17,7 @@ import stripTags from 'striptags'
 
 export default (eleventyConfig) => {
 	// Setup.
-	eleventyConfig.addBundle('css', { toFileDirectory: 'styles' })
+	eleventyConfig.addBundle('css', { toFileDirectory: 'assets' })
 	eleventyConfig.addGlobalData('layout', 'article.webc')
 	eleventyConfig.addPlugin(webC, { components: 'components/**/*.webc' })
 	eleventyConfig.setFrontMatterParsingOptions({
@@ -31,7 +31,7 @@ export default (eleventyConfig) => {
 	eleventyConfig.addWatchTarget('**/*.js')
 
 	// Slide these on over.
-	eleventyConfig.addPassthroughCopy('styles/reset.css')
+	eleventyConfig.addPassthroughCopy('assets/reset.css')
 	eleventyConfig.addPassthroughCopy('assets/**/*.(ico|otf|pdf|png)')
 	eleventyConfig.addPassthroughCopy('content/**/*.(gif|jpg|png|svg)')
 	eleventyConfig.addPassthroughCopy({'node_modules/@parsons/ti-preview/dist/bundled/**/*.*': 'assets/ti-preview'})
