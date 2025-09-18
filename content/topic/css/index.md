@@ -47,10 +47,9 @@ For the past decade or so, features have been added incrementally by browsers �
 
 The change in relationship between generator and consumer of information is going to take some getting used to.
 
-…
-<!-- .secondary -->
+•••
 
-That said, I'll comment that style sheets constitute a wormhole into unspeakable universes. People start thinking they'll just set up a little file in SGML or something else, and soon it grows [uncontrollable].
+I'll comment that style sheets constitute a wormhole into unspeakable universes. People start thinking they'll just set up a little file […] and soon it grows uncontrollable.
 
 </blockquote>
 

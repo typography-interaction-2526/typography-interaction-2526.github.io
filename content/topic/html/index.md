@@ -524,7 +524,7 @@ This is what the web was, before CSS! But as a designer, rarely what you want. W
 
 In case of conflict, consider users over authors over implementors over specifiers over theoretical purity.
 
-…
+•••
 
 Of course, it is preferred to make things better for multiple constituencies at once.
 
