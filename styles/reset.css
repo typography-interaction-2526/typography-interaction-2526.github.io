@@ -17,7 +17,7 @@ html {
 }
 
 /* Reapply the pointer cursor for anchor tags. */
-a, button { cursor: revert }
+a, button, summary { cursor: revert }
 
 /* Remove list styles (bullets/numbers). */
 ol, ul, menu, summary { list-style: none }
