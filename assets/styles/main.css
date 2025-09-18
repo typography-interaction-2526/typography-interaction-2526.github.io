@@ -301,7 +301,7 @@ main {
 			}
 
 			/* Code previews. */
-			&:not([src*="https://"])[src$='/preview'] {
+			&:not([src*="https://"])[src*='/preview'] {
 				/* aspect-ratio: initial; */
 				inline-size:  100%;
 			}
