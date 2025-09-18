@@ -29,7 +29,7 @@ CSS is the standard language/format for styling web pages, which specifies what 
 
 In our ongoing analogy, CSS is the *skin* of the web. [Just like HTML](/topic/html), at its most basic it is still just text, in a file, on a computer. It can live inside HTML documents themselves, but is more commonly seen on its own with the extension `.css`
 
-CSS came after HTML, first proposed by [Håkon Wium Lie](https://www.w3.org/Style/CSS20/history.html) in 1994—who was working with our friend Tim at CERN and wanted more control over the presentation of web pages. (Tim was *against* the idea, thinking it should be up to each user—he lost.) It’s had three major revisions that have grown the vocabulary:
+CSS came after HTML, first proposed by [H<span class="a-ring">å</span>kon Wium Lie](https://www.w3.org/Style/CSS20/history.html) in 1994—who was working with our friend Tim at CERN and wanted more control over the presentation of web pages. (Tim was *against* the idea, thinking it should be up to each user—he lost.) It’s had three major revisions that have grown the vocabulary:
 
 - CSS 1, 1996
 - CSS 2, 1998
@@ -583,7 +583,7 @@ This is what we use here for our course site!
 <!-- .note -->
 
 <blockquote
-	@attribution="Håkon Wium Lie"
+	@attribution="H<span class='a-ring cap'>å</span>kon Wium Lie"
 	@citation="https://www.w3.org/People/howcome/p/cascade.html"
 	>
 
@@ -594,3 +594,23 @@ The last point has especially been a source of much frustration among profession
 This proposal tries to soften the tension between the author and the reader.
 
 </blockquote>
+
+<style>
+	.a-ring {
+		position: relative;
+
+		&::before {
+			-webkit-text-stroke-width: 0.03em;
+			content:                   '°';
+			font-size:                 66%;
+			inset-block-start:         -0.45em;
+			inset-inline-start:        0.1em;
+			position:                  absolute;
+		}
+
+		&.cap::before {
+			font-size:          75%;
+			inset-block-start:  -0.9em;
+			inset-inline-start: 0.24em;
+		}
+	}
