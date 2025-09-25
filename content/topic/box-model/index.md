@@ -9,13 +9,13 @@
 The first thing we need to understand is how CSS sizes elements. This is called the [*the box model*](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model), as everything on the web begins as a rectangle.
 <!-- .balance -->
 
-- [<letter-bullet @title="Introduction to CSS Layout – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction)
+- [<cite>Introduction to CSS Layout – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction)
 	As usual.
 
-- [<letter-bullet @title="Layout – web.dev"></letter-bullet>](https://web.dev/learn/css/layout/)
+- [<cite>Layout – web.dev</cite>](https://web.dev/learn/css/layout/)
 	This gets into `grid` and `flex`; we’ll talk about those next unit.
 
-- [<letter-bullet @bullet="C" @title="Learn CSS Layout"></letter-bullet>](https://learnlayout.com)
+- [<cite>Learn CSS Layout</cite>](https://learnlayout.com)
 	An old-but-still-good run-through.
 <!-- .balance .link-list .right style="--rows: 3" -->
 
@@ -65,7 +65,7 @@ We’ve pulled our [CSS reset](/topic/css#resets) into the `<head>` for all of t
 Next comes [*padding*](https://developer.mozilla.org/en-US/docs/Web/CSS/padding), which extends the element’s area around the content. It’s easiest to think of this as an *inset* (if we’ve made our `box-sizing` the logical `border-box`, above):
 <!-- .balance -->
 
-[<letter-bullet @title="Padding – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
+[<cite>Padding – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 	There is no `P` Train.
 <!-- .link-list .right -->
 
@@ -80,7 +80,7 @@ Next comes [*padding*](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 *Padding*—and many other properties, like *border* and <nobr>*margin*—</nobr>can be specified with a [*shorthand* property](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties) to make it easier to use the same spacing all around, or shared top/bottom and left/right.
 <!-- .balance .add-after--3 -->
 
-[<letter-bullet @title="Shorthand Properties – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties)
+[<cite>Shorthand Properties – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties)
 	There are some `S` shuttles though.
 <!-- .link-list .right -->
 
@@ -130,7 +130,7 @@ section {
 Then we have [*border*](https://developer.mozilla.org/en-US/docs/Web/CSS/border). Border is… the border around an element. It has its own `border-width`, `border-color`, and also `border-style`:
 <!-- .balance -->
 
-[<letter-bullet @title="Border – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
+[<cite>Border – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
 	Our first non-text design element! You are allowed.
 <!-- .link-list .right -->
 
@@ -159,7 +159,7 @@ Then we have [*border*](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
 The last part of our box is [*margin*](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)—the space *around* an element, empty/white-space area that is used to separate an element from its *siblings*. Like *padding* and *border*, you can specify it all around or on individual sides:
 <!-- .balance -->
 
-[<letter-bullet @title="Margin – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
+[<cite>Margin – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
 	The space between things.
 <!-- .link-list .right -->
 
@@ -194,7 +194,7 @@ Also [margins *collapse*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_B
 You can also now define all your box model properties using [*logical* directions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values)—meaning instead of *physical* (`top`/`bottom`, `left`/`right`) orientations, you can [map your rules](https://adrianroselli.com/2019/11/css-logical-properties.html) to the *flow* of the text (`block-start`/<wbr>`block-end`, `inline-start`/<wbr>`inline-end`).
 <!-- .balance -->
 
-[<letter-bullet @bullet="L" @title="CSS Logical Properties"></letter-bullet>](https://adrianroselli.com/2019/11/css-logical-properties.html)
+[<cite>CSS Logical Properties</cite>](https://adrianroselli.com/2019/11/css-logical-properties.html)
 	[Adrian Roselli](https://adrianroselli.com/) has a very thorough explanation.
 <!-- .link-list .right -->
 
@@ -238,7 +238,7 @@ This allows your design/styles to behave in a *logically* (if not *physically*) 
 Okay, so we have all these box properties—but how do we specify the dimensions? CSS has many [*length units*](https://developer.mozilla.org/en-US/docs/Web/CSS/length), used for `width`, `height`, and also  `padding`, `border`, `margin`, and even `font-size`. (Picas, anyone?) We’ll look at some common ones.
 <!-- .balance -->
 
-[<letter-bullet @bullet="L" @title="`<length>` – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/CSS/length)
+[<cite>`<length>` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/length)
 	*Length* is used by many properties!
 <!-- .link-list .right -->
 
@@ -385,7 +385,7 @@ CSS is big and massive and overwhelming and sometimes indefensibly nonsensical�
 With an idea of how elements take up space, now we’ll look at how they exist and move together in the [*document flow*](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow). The CSS property `position` [sets this relationship](https://developer.mozilla.org/en-US/docs/Web/CSS/position).
 <!-- .balance -->
 
-[<letter-bullet @title="Position – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+[<cite>Position – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 	Interesting web work often uses `position`.
 <!-- .link-list .right -->
 
@@ -499,7 +499,7 @@ No amount of internal *z-index* adjustments can break something out of that grou
 In our [HTML introduction](/topic/html#block-elements) we briefly talked about *block* and *inline* elements, as set by the user-agent styles. These are the first two examples of [the *display* property](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
 <!-- .balance -->
 
-[<letter-bullet @title="Display – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+[<cite>Display – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
 	Our `block` and `inline` elements (and later, `grid` and `flex`).
 <!-- .link-list .right -->
 
@@ -587,7 +587,7 @@ Keep in mind that `display: none;`, `visibility: hidden;`, and `opacity: 0;` onl
 Oh right, floats. Sometimes you’ll want to have an image or block flow within a block of text. There are a lot of ways to do this now, but the oldest (and sometimes still the trickiest) is a [*float*](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats).
 <!-- .balance -->
 
-[<letter-bullet @title="Floats – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats)
+[<cite>Floats – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats)
 	You don’t see these used as much, anymore!
 <!-- .link-list .right -->
 
