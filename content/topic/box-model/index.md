@@ -98,10 +98,10 @@ Know that `padding`—and many other properties, like `border` and <nobr>`margin
 <div class="recto before--2 center">
 
 ```css
-section { padding: 20px; }
-section { padding: 20px 40px; }
-section { padding: 20px 40px 80px; }
-section { padding: 20px 40px 80px 40px; }
+section { padding: 1rem; }
+section { padding: 1rem 2rem; }
+section { padding: 1rem 2rem 4rem; }
+section { padding: 1rem 2rem 4rem 2rem; }
 ```
 
 </div>
@@ -116,10 +116,10 @@ These three- and four-value rules are often harder to read and quickly understan
 
 ```css
 section {
-	padding-top: 20px;
-	padding-bottom: 80px;
-	padding-right: 40px;
-	padding-left: 40px;
+	padding-top: 1rem;
+	padding-bottom: 4rem;
+	padding-right: 2rem;
+	padding-left: 2rem;
 }
 ```
 
@@ -203,28 +203,28 @@ In left-to-right, horizontal writing modes (as in English):
 
 ```css <!-- .verso -->
 /* These horizontal physical directions: */
-padding-left: 10px;
-padding-right: 10px;
+padding-left: 1rem;
+padding-right: 1rem;
 
 /* Map to these logical directions: */
-padding-inline-start: 10px;
-padding-inline-end: 10px;
+padding-inline-start: 1rem;
+padding-inline-end: 1rem;
 
 /* And this combined property: */
-padding-inline: 10px;
+padding-inline: 1rem;
 ```
 
 ```css <!-- .recto -->
 /* Same for the vertical directions: */
-margin-top: 20px;
-margin-bottom: 20px;
+margin-top: 1rem;
+margin-bottom: 1rem;
 
 /* Mapping to these: */
-margin-block-start: 20px;
-margin-block-end: 20px;
+margin-block-start: 1rem;
+margin-block-end: 1rem;
 
 /* And this shorthand for both: */
-margin-block: 20px;
+margin-block: 1rem;
 ```
 
 This `start` / `end` terminology will come up later with `flexbox` and `grid`, so it isn’t a bad habit&thinsp;/&thinsp;mindset to get into!
@@ -335,8 +335,8 @@ Sometimes you might want to use these together! Or otherwise do some math. For t
 <div class="add-before recto">
 
 ```css
-.absolute-and-relative {
-	width: calc(50% - 20px);
+.flexible-and-fixed {
+	width: calc(50% - 1rem);
 }
 
 .computer-do-the-math {
@@ -358,15 +358,15 @@ You’ll often want to set limits/constraints on values—particularly with flex
 
 ```css
 .constrained-width {
-	min-width: 200px;
+	min-width: 12rem;
 	width: 50%;
-	max-width: 400px;
+	max-width: 24rem;
 }
 
 .constrained-height {
-	min-height: 100px;
+	min-height: 6rem;
 	height: 100%;
-	max-height: 200px;
+	max-height: 12rem;
 }
 
 /* Handy to watch your line lengths! */
