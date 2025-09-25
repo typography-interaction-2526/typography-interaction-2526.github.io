@@ -1,6 +1,6 @@
 section:nth-child(1) {
 	border-radius: 50%; /* Relative to size. */
-	border: 0.1rem dotted deepskyblue;
+	border: 0.25rem dotted deepskyblue;
 }
 
 section:nth-child(2) {
@@ -9,7 +9,7 @@ section:nth-child(2) {
 }
 
 section:nth-child(3) {
-	border: 0.5rem solid tomato;
-	border-bottom-right-radius: 3rem;
-	border-top-left-radius: 3rem;
+	border-end-end-radius: 3rem;
+	border-start-start-radius: 3rem;
+	border: 1rem solid tomato;
 }

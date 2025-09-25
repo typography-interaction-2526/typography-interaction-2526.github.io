@@ -75,7 +75,7 @@ Next comes [`padding`](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 	>
 </figure>
 
-### A Sidebar About Shorthand
+### A Sidebar About *Shorthand*
 
 Know that `padding`—and many other properties, including `border` and <nobr>`margin`—</nobr>can be specified with a [*shorthand* property](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties) to make it easier to use the same spacing all around, or shared top/bottom and left/right.
 <!-- .balance -->
@@ -125,7 +125,7 @@ section {
 
 </div>
 
-### And Logical Properties <!-- .before--2 -->
+### …and *Logical* Properties <!-- .before--2 -->
 
 You can also now define all your box model properties using [*logical* directions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values)—meaning instead of *physical* (`top`/`bottom`, `left`/`right`) orientations, you can [map your rules](https://adrianroselli.com/2019/11/css-logical-properties.html) to the *flow* of the text (`block-start`/<wbr>`block-end`, `inline-start`/<wbr>`inline-end`).
 <!-- .balance -->
@@ -183,7 +183,7 @@ This allows your design/styles to behave in a *logically* (if not *physically*) 
 
 <aside>
 
-<mark>Logical properties make more sense</mark>
+<mark>Logical properties make sense</mark>
 
 This is a real mental model shift—for your instructors, too! We’re going to try using/referencing logical properties exclusively this year. It is the correct and modern way!
 
@@ -199,22 +199,26 @@ Back to our box model, moving outwards, with [`border`](https://developer.mozill
 <!-- .right -->
 
 <figure
-	@caption="The shorthand `border-top` property value order here doesn’t matter! Isn’t CSS logical."
+	@caption="The shorthand `border-block-start` property value order here doesn’t matter! Isn’t CSS *…logical*."
 	@source="border/preview/?active=style.css"
-	style="--lines: 11"
+	style="--lines: 13"
 	>
 </figure>
+
+The various `border-style` options:
 
 <figure
 	@caption="Look at all those borders."
 	@source="border-style/preview/?active=style.css"
-	style="--lines: 18"
+	style="--lines: 23"
 	>
 </figure>
 
+And fun with `border-radius`:
+
 <figure
 	@source="border-radius/preview/?active=style.css"
-	style="--lines: 17"
+	style="--lines: 19"
 	>
 </figure>
 
@@ -335,7 +339,7 @@ These are distinctly and intrinsically *web* measurements.
 	width: 1ch; /* 1ch is one letter. */
 }
 
-/* Relative to :root font-size. */
+/* Relative to `:root` font-size. */
 .rem {
 	height: 12rem;
 	width: 2.4rem;

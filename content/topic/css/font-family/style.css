@@ -25,4 +25,4 @@ li:nth-child(7) { font-family: 'National Park', sans-serif; }
 /* And then reference them, as above. */
 li:nth-child(8) { font-family: 'Playfair', serif; }
 
-li + li { margin-top: 2em }
+li + li { margin-block-start: 2em }

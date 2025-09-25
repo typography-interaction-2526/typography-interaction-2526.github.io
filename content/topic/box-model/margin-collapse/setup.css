@@ -1,11 +1,11 @@
 /* Same as before. */
 body {
 	font-family: sans-serif;
-	padding: 2rem;
+	padding: 1rem;
 }
 
 section {
-	border-top: solid black 0.5rem;
+	border-block-start: solid black 0.25rem;
 	padding: 1rem;
 }
 

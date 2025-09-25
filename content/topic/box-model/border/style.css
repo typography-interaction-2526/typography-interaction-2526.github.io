@@ -1,9 +1,9 @@
 /* Setup styles are moved to the other file! */
 
-section { border-top: solid black 0.5rem; }
+section { border-block-start: solid black 0.25rem; }
 
 section {
-	border-top-color: black; /* Non-shorthand, same thing! */
-	border-top-style: solid;
-	border-top-width: 0.5rem;
+	border-block-start-color: black; /* Non-shorthand, same thing! */
+	border-block-start-style: solid;
+	border-block-start-width: 0.25rem;
 }

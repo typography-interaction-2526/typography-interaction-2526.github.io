@@ -1,13 +1,13 @@
 aside {
 	background-color: gold;
 	float: left;
-	margin-right: 1rem;
+	margin-inline-end: 1rem;
 	padding: 1rem;
 	width: 12rem;
 }
 
 section:nth-child(2) aside {
 	float: right;
-	margin-left: 1rem;
-	margin-right: initial;
+	margin-inline-start: 1rem;
+	margin-inline-end: initial;
 }

@@ -28,4 +28,4 @@ li:nth-child(9) {
 	background-color: dodgerblue; /* Same for backgrounds! */
 }
 
-li + li { margin-top: 2em } /* Just for the demo. */
+li + li { margin-block-start: 2em } /* Just for the demo. */
