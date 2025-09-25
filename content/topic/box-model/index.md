@@ -20,16 +20,13 @@ The first thing we need to understand is how CSS sizes elements. This is called
 
 By default, all browsers’ *user-agent styles* have an unfortunate default—`box-sizing: content-box;`—which means that the `padding` (and `border`) exists *outside* the content `width` or `height`—so `padding` (and `border`) is then an *outset.*
 
-But this is often unintuitive for designers and doesn’t fit with most web design patterns—so it is very, *very* common (nearly universal) to instead override this to `box-sizing: border-box;`—which makes `padding` and `border` exist *inside* the content dimensions. Then `padding` (and `border`) is easier to think of as an *inset*.
-
-[W3C](https://www.w3.org/TR/css-box-3/) probably got this default wrong. Good ol’ CSS!
-<!-- .add-before -->
+But this is often unintuitive for designers and doesn’t fit with most web design patterns—so it is very, *very* common (nearly universal) to instead override this to `box-sizing: border-box;`—which makes `padding` and `border` exist *inside* the content dimensions. Then `padding` (and `border`) is easier to think of as an *inset*. [W3C](https://www.w3.org/TR/css-box-3/) might have got this default wrong. Good ol’ CSS!
+<!-- .before--3 -->
 
 <figure
 	@caption="With `box-sizing: content-box;` per the spec."
 	@source="box-model.svg"
 	class="verso"
-	style="row-gap: var(--typography--line--2)"
 	>
 </figure>
 
@@ -37,66 +34,68 @@ But this is often unintuitive for designers and doesn’t fit with most web desi
 	@caption="With `box-sizing: border-box;` the defacto standard. Most [CSS resets](/topic/css#resets) will do this for you! Like we said, very common."
 	@source="box-model-border.svg"
 	class="recto"
-	style="row-gap: var(--typography--line--2)"
 	>
 </figure>
 
-Let’s take a look at this box, going *inside-to-outside*.
-<!-- .balance .bold .scale--h4 -->
+Let’s take a look at this box, going *inside-to-outside.*
+<!-- .intro -->
 
 ## Content
 
-The *content area* is the guts of the element, usually text or an image. Its dimensions are defined by that content, but also can be specified directly via `width` or `height`. (More on those soon.)
+The *content area* is the guts of the element, usually text or an image. Its dimensions are defined by that content, but also can be specified directly via `width` or `height`—or `inline-size` and `block-size`. (More on those soon.)
 <!-- .balance -->
 
 <figure
+	@caption="Be sure to look at the HTML here! It’s a similar structure throughout."
 	@source="content/preview/?active=style.css"
-	style="--lines: 9"
+	style="--lines: 11"
 	>
 </figure>
 
 <aside>
 
-We’ve pulled our [CSS reset](/topic/css#resets) into the `<head>` for all of these examples, so we are only seeing the styles that are expressly written out here—no defaults!
+<mark>Note: all styles shown are explicit</mark>
+
+We’ve pulled our standard [CSS reset](/topic/css#resets) into the `<head>` for all of these examples, so we are only seeing the styles that are expressly written out here—no defaults!
 
 </aside>
 
 ## Padding
 
-Next comes [*padding*](https://developer.mozilla.org/en-US/docs/Web/CSS/padding), which extends the element’s area around the content. It’s easiest to think of this as an *inset* (if we’ve made our `box-sizing` the logical `border-box`, above):
+Next comes [`padding`](https://developer.mozilla.org/en-US/docs/Web/CSS/padding), which extends the element’s area around the content. It’s easiest to think of this as an *inset* (if we’ve made our `box-sizing` the logical `border-box`, above):
 <!-- .balance -->
 
 [<cite>Padding – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
-	There is no `P` Train.
-<!-- .link-list .right -->
+	There will be many of these.
+<!-- .right -->
 
 <figure
 	@source="padding/preview/?active=style.css"
-	style="--lines: 12; margin-block-end: initial"
+	style="--lines: 14"
 	>
 </figure>
 
 ### A Sidebar About Shorthand
 
-*Padding*—and many other properties, like *border* and <nobr>*margin*—</nobr>can be specified with a [*shorthand* property](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties) to make it easier to use the same spacing all around, or shared top/bottom and left/right.
-<!-- .balance .add-after--3 -->
+Know that `padding`—and many other properties, like `border` and <nobr>`margin`—</nobr>can be specified with a [*shorthand* property](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties) to make it easier to use the same spacing all around, or shared top/bottom and left/right.
+<!-- .balance -->
 
 [<cite>Shorthand Properties – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties)
-	There are some `S` shuttles though.
-<!-- .link-list .right -->
+	Be wary of the siren call of shorthand properties!
+<!-- .right -->
 
-<div class="verso">
+<div class="verso before--2">
 
 |     |     |
 | --- | --- |
-|1 value  | &emsp;<span class="secondary">All Directions&thinsp;/&thinsp;Sides</span> |
-|2 values | &emsp;`top/bottom` `left/right` |
-|3 values | &emsp;`top` `left/right` `bottom` |
-|4 values | &emsp;`top` `right` `bottom`  `left` |
+|1 value:<br><br>  | All Directions/Sides           |
+|2 values:<br><br> | `top/bottom` `left/right`      |
+|3 values:<br><br> | `top` `left/right` `bottom`    |
+|4 values:<br><br> | `top` `right` `bottom`  `left` |
 
 </div>
 
-<div class="recto add-after--3" style="align-self: center">
+<div class="recto before--2 center">
 
 ```css
 section { padding: 20px; }
@@ -107,13 +106,13 @@ section { padding: 20px 40px 80px 40px; }
 
 </div>
 
-<div class="balance verso" style="align-self: center">
+<div class="balance verso before--2 center">
 
-These three- and four-value rules are often harder to read and quickly understand though, so we tend to avoid them. You can always write the individual directions out, for clarity!
+These three- and four-value rules are often harder to read and quickly understand though, so we tend to avoid them. You can *always* write the individual directions out, for clarity! (And cleaner diffs.)
 
 </div>
 
-<div class="recto">
+<div class="recto before--2">
 
 ```css
 section {
@@ -128,12 +127,12 @@ section {
 
 ## Border
 
-Then we have [*border*](https://developer.mozilla.org/en-US/docs/Web/CSS/border). Border is… the border around an element. It has its own `border-width`, `border-color`, and also `border-style`:
+Then we have [`border`](https://developer.mozilla.org/en-US/docs/Web/CSS/border). Border is… the border around an element. It has its own `border-width`, `border-color`, and also `border-style`:
 <!-- .balance -->
 
 [<cite>Border – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
 	Our first non-text design element! You are allowed.
-<!-- .link-list .right -->
+<!-- .right -->
 
 <figure
 	@caption="The shorthand `border-top` property value order here doesn’t matter! Isn’t CSS logical."
@@ -157,12 +156,12 @@ Then we have [*border*](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
 
 ## Margin
 
-The last part of our box is [*margin*](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)—the space *around* an element, empty/white-space area that is used to separate an element from its *siblings*. Like *padding* and *border*, you can specify it all around or on individual sides:
+The last part of our box is [`margin`](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)—the space *around* an element, empty/white-space area that is used to separate an element from its *siblings*. Like *padding* and `border`, you can specify it all around or on individual sides:
 <!-- .balance -->
 
 [<cite>Margin – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
 	The space between things.
-<!-- .link-list .right -->
+<!-- .right -->
 
 <figure
 	@source="margin/preview/?active=style.css"
@@ -170,7 +169,7 @@ The last part of our box is [*margin*](https://developer.mozilla.org/en-US/docs/
 	>
 </figure>
 
-Margin has a couple tricks up its sleeve. First, it can have *negative* values—which will eat up/remove space between elements. (*Padding* and *border* only take up space.) Just add a minus before the value and watch it bring things closer together:
+Margin has a couple tricks up its sleeve. First, it can have *negative* values—which will eat up/remove space between elements. (*Padding* and `border` only take up space.) Just add a minus before the value and watch it bring things closer together:
 <!-- .balance -->
 
 <figure
@@ -197,7 +196,7 @@ You can also now define all your box model properties using [*logical* direction
 
 [<cite>CSS Logical Properties</cite>](https://adrianroselli.com/2019/11/css-logical-properties.html)
 	[Adrian Roselli](https://adrianroselli.com/) has a very thorough explanation.
-<!-- .link-list .right -->
+<!-- .right -->
 
 In left-to-right, horizontal writing modes (as in English):
 <!-- .add-before--2 .add-after -->
@@ -241,7 +240,7 @@ Okay, so we have all these box properties—but how do we specify the dimensions
 
 [<cite>`<length>` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/length)
 	*Length* is used by many properties!
-<!-- .link-list .right -->
+<!-- .right -->
 
 ### Absolute Units
 
@@ -388,7 +387,7 @@ With an idea of how elements take up space, now we’ll look at how they exist a
 
 [<cite>Position – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 	Interesting web work often uses `position`.
-<!-- .link-list .right -->
+<!-- .right -->
 
 ### Static
 
@@ -502,7 +501,7 @@ In our [HTML introduction](/topic/html#block-elements) we briefly talked about *
 
 [<cite>Display – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
 	Our `block` and `inline` elements (and later, `grid` and `flex`).
-<!-- .link-list .right -->
+<!-- .right -->
 
 ### Block
 
@@ -590,7 +589,7 @@ Oh right, floats. Sometimes you’ll want to have an image or block flow within 
 
 [<cite>Floats – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats)
 	You don’t see these used as much, anymore!
-<!-- .link-list .right -->
+<!-- .right -->
 
 ### Left and Right
 
