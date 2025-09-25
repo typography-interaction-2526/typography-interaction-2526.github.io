@@ -6,8 +6,7 @@
 
 ## Boxes Within Boxes
 
-The first thing we need to understand is how CSS sizes elements. This is called the [*the box model*](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model), as everything on the web begins as a rectangle.
-<!-- .balance -->
+The first thing we need to understand is how CSS sizes elements. This is called the [*the box model*](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model), as everything on the web begins as a rectangle.
 
 - [<cite>Introduction to CSS Layout – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction)
 	As usual.
@@ -17,11 +16,13 @@ The first thing we need to understand is how CSS sizes elements. This is called 
 
 - [<cite>Learn CSS Layout</cite>](https://learnlayout.com)
 	An old-but-still-good run-through.
-<!-- .balance .link-list .right style="--rows: 3" -->
+<!-- .right .rows--4 -->
 
-By default, all browsers’ *user-agent styles* have an unfortunate default—`box-sizing: content-box;`—which means that the padding (and border) exists *outside* the content width or height—so padding (and border) is then an *outset.*
+By default, all browsers’ *user-agent styles* have an unfortunate default—`box-sizing: content-box;`—which means that the `padding` (and `border`) exists *outside* the content `width` or `height`—so `padding` (and `border`) is then an *outset.*
 
-But this is often unintuitive for designers and doesn’t fit with most web design patterns—so it is very, *very* common (nearly universal) to instead override this to `box-sizing: border-box;`—which makes padding and border exist *inside* the content dimensions. Then padding (and border) is easier to think of as an *inset*. [W3C](https://www.w3.org/TR/css-box-3/) probably got this default wrong. Good ol’ CSS!
+But this is often unintuitive for designers and doesn’t fit with most web design patterns—so it is very, *very* common (nearly universal) to instead override this to `box-sizing: border-box;`—which makes `padding` and `border` exist *inside* the content dimensions. Then `padding` (and `border`) is easier to think of as an *inset*.
+
+[W3C](https://www.w3.org/TR/css-box-3/) probably got this default wrong. Good ol’ CSS!
 <!-- .add-before -->
 
 <figure
