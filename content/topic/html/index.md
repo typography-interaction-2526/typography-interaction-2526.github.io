@@ -270,7 +270,7 @@ Source: `src` <!-- #src -->
 Dimensions: `width` / `height` <!-- #dimensions -->
 
 :	```html
-	<img src="example.jpg" width="200px" height="200px">
+	<img src="example.jpg" width="200" height="200">
 	```
 
 	The `width` and `height` attributes of `<img>` provide size information for images.
