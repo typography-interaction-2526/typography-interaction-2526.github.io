@@ -1,6 +1,6 @@
 body {
 	font-family: sans-serif;
-	padding: 20px; /* “Inset” on the whole page`. */
+	padding: 20px; /* An “inset” on the whole page. */
 }
 
 section { padding: 10px; } /* And again inside each of these. */
