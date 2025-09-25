@@ -35,7 +35,7 @@
 	--pre:  color-mix(in srgb, var(--color), transparent 20%);
 
 	--nav:  color-mix(in srgb, var(--color), transparent);
-	--blur: blur(0.25rem);
+	--blur: blur(0.333rem);
 
 	--background--root: gainsboro;
 
