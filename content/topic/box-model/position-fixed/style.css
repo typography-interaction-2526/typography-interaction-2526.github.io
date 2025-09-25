@@ -1,7 +1,7 @@
 section:nth-child(3) {
 	background-color: gold;
-	left: 30px;
+	left: 3rem;
 	position: fixed;
-	top: 30px;
+	top: 3rem;
 	width: 66%;
 }

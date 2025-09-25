@@ -1,9 +1,9 @@
 body {
 	font-family: sans-serif;
-	padding: 20px; /* An “inset” on the whole page. */
+	padding: 2rem; /* An “inset” on the whole page. */
 }
 
-section { padding: 10px; } /* And again inside each of these. */
+section { padding: 1rem; } /* And again inside each of these. */
 
 section:nth-child(1) { background-color: deepskyblue; }
 section:nth-child(2) { background-color: gold; }

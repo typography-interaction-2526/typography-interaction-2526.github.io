@@ -1,13 +1,13 @@
 aside {
 	background-color: gold;
 	float: left;
-	margin-right: 10px;
-	padding: 10px;
-	width: 100px;
+	margin-right: 1rem;
+	padding: 1rem;
+	width: 12rem;
 }
 
 section:nth-child(2) aside {
 	float: right;
-	margin-left: 10px;
+	margin-left: 1rem;
 	margin-right: initial;
 }

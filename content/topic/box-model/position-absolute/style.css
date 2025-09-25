@@ -1,8 +1,8 @@
 section:nth-child(3) {
 	background-color: gold;
-	left: 30px;
+	left: 3rem;
 	position: absolute; /* Here, in relation to body. */
-	top: 30px;
+	top: 3rem;
 	width: 66%;
 }
 
@@ -12,7 +12,7 @@ section:nth-child(5) {
 }
 
 section:nth-child(5) p {
-	bottom: 30px;
+	bottom: 3rem;
 	position: absolute; /* From the parent section. */
-	right: 30px;
+	right: 3rem;
 }

@@ -1,8 +1,8 @@
 section:nth-child(3) {
 	background-color: gold;
-	left: 30px;
+	left: 3rem;
 	position: sticky;
-	top: 30px;
+	top: 3rem;
 	width: 66%;
 }
 

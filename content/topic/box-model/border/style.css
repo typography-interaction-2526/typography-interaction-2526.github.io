@@ -1,9 +1,9 @@
 /* Setup styles are moved to the other file! */
 
-section { border-top: solid black 4px; }
+section { border-top: solid black 0.5rem; }
 
 section {
 	border-top-color: black; /* Non-shorthand, same thing! */
 	border-top-style: solid;
-	border-top-width: 4px;
+	border-top-width: 0.5rem;
 }

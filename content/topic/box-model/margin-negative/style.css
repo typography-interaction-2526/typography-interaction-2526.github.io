@@ -1,11 +1,11 @@
 /* This applies to 2 and 3, as before. */
-section:not(:first-child) { margin-top: 40px; }
+section:not(:first-child) { margin-top: 4rem; }
 
 /* But this negates/subtracts some of it. */
-section:first-child { margin-bottom: -20px; }
+section:first-child { margin-bottom: -2rem; }
 
 /* You can even pull things *out* from their bounds. */
 section:nth-child(3) {
-	margin-left: -20px;
-	margin-right: -20px;
+	margin-left: -2rem;
+	margin-right: -2rem;
 }

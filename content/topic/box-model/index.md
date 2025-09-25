@@ -246,9 +246,8 @@ Margin has a couple tricks up its sleeve. First, it can have *negative* valuesâ€
 Also [margins *collapse*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing), meaning that they are sometimes combined into a single value (the largest) between two elements. This happens most often on adjacent siblings, and is both useful and an absolute pain:
 <!-- .balance -->
 
-<!-- TODO Update units in example! -->
 <figure
-	@caption="You might expect the margin between the first two `section` to be `100px`, but it is only `60px`! They have *collapsed* to the larger value."
+	@caption="You might expect the margin between the first two `section` to be `10rem`, but it is only `6rem`! They have *collapsed* to the larger value."
 	@source="margin-collapse/preview/?active=style.css"
 	style="--lines: 9"
 	>

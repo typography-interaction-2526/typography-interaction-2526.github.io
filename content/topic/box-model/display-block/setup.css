@@ -1,13 +1,13 @@
 /* Same as before. */
 body {
 	font-family: sans-serif;
-	padding: 20px;
+	padding: 2rem;
 }
 
 section {
 	background-color: deepskyblue;
-	border-top: solid black 4px;
-	padding: 10px;
+	border-top: solid black 0.5rem;
+	padding: 1rem;
 }
 
-section:not(:first-child) { margin-top: 20px; }
+section:not(:first-child) { margin-top: 2rem; }

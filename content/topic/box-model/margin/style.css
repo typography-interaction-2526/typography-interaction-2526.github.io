@@ -1,7 +1,7 @@
 /* Every one but the first one. */
-section:not(:first-child) { margin-top: 40px; }
+section:not(:first-child) { margin-top: 4rem; }
 
 /* You can push in from the sides! */
-section:nth-child(2) { margin-right: 40px; }
+section:nth-child(2) { margin-right: 4rem; }
 
-section:nth-child(3) { margin-left: 40px; }
+section:nth-child(3) { margin-left: 4rem; }

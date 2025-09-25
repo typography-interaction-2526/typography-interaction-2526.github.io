@@ -1,4 +1,4 @@
-section {border-width: 4px } /* All of them; easier to see! */
+section {border-width: 0.5rem } /* All of them; easier to see! */
 
 section:nth-child(1) { border-style: none; }
 section:nth-child(2) { border-style: hidden; }
@@ -12,4 +12,4 @@ section:nth-child(9) { border-style: inset; }
 section:nth-child(10) { border-style: outset; }
 
 /* Every one but the first one. */
-section:not(:first-child) { margin-top: 10px; }
+section:not(:first-child) { margin-top: 1rem; }
