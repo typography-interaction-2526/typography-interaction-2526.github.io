@@ -134,7 +134,7 @@ You can also now define all your box model properties using [*logical* directio
 	[Adrian Roselli](https://adrianroselli.com/) has a very thorough explanation.
 <!-- .right -->
 
-In left-to-right, horizontal writing modes (as in English):
+In horizontal, left-to-right writing modes (as in English):
 <!-- .before--2 -->
 
 ```css <!-- .verso -->
@@ -148,6 +148,12 @@ padding-inline-end: 1rem;
 
 /* And this combined property: */
 padding-inline: 1rem;
+
+/* Also this physical dimension: */
+width: 20rem;
+
+/* Becomes this logical one: */
+inline-size: 20rem;
 ```
 
 ```css <!-- .recto -->
@@ -161,13 +167,27 @@ padding-block-end: 1rem;
 
 /* And this shorthand for both: */
 padding-block: 1rem;
+
+/* This physical size: */
+height: 20rem;
+
+/* Becomes this logical one: */
+block-size: 20rem;
 ```
 
-This `start` / `end` terminology will come up later with `flexbox` and `grid`, so it is a good habit/mindset to get into! We’re going to try using it exclusively.
+This `start` / `end` terminology will come up later with `flexbox` and `grid`, so it is a good habit/mindset to get into!
 <!-- .balance .note -->
 
 This allows your design/styles to behave in a *logically* (if not *physically*) consistent way across languages with varied [writing modes](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode) and different [text directions](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir). You can write styles that work even when your site is translated! (And the two-direction shorthand is nice, here.)
 <!-- .before--2 -->
+
+<aside>
+
+<mark>Logical properties make more sense</mark>
+
+This is a real mental model shift—for your instructors, too! We’re going to try using/referencing logical properties exclusively this year. It is the correct and modern way!
+
+</aside>
 
 ## Border
 
