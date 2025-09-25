@@ -62,7 +62,7 @@ We’ve pulled our standard [CSS reset](/topic/css#resets) into the `<head>` for
 
 ## Padding
 
-Next comes [`padding`](https://developer.mozilla.org/en-US/docs/Web/CSS/padding), which extends the element’s area around the content. It’s easiest to think of this as an *inset* (if we’ve made our `box-sizing` the logical `border-box`, above):
+Next comes [`padding`](https://developer.mozilla.org/en-US/docs/Web/CSS/padding), which extends the element’s area around the content. It’s easiest to think of this as an *inset* (if we’ve made our `box-sizing` the more-intuitive `border-box`, above):
 <!-- .balance -->
 
 [<cite>Padding – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
@@ -77,7 +77,7 @@ Next comes [`padding`](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 
 ### A Sidebar About Shorthand
 
-Know that `padding`—and many other properties, like `border` and <nobr>`margin`—</nobr>can be specified with a [*shorthand* property](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties) to make it easier to use the same spacing all around, or shared top/bottom and left/right.
+Know that `padding`—and many other properties, including `border` and <nobr>`margin`—</nobr>can be specified with a [*shorthand* property](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties) to make it easier to use the same spacing all around, or shared top/bottom and left/right.
 <!-- .balance -->
 
 [<cite>Shorthand Properties – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties)
@@ -108,7 +108,7 @@ section { padding: 1rem 2rem 4rem 2rem; }
 
 <div class="balance verso before--2 center">
 
-These three- and four-value rules are often harder to read and quickly understand though, so we tend to avoid them. You can *always* write the individual directions out, for clarity! (And cleaner diffs.)
+These three- and four-value rules are often harder to read and quickly understand though, so we tend to avoid them. You can *always* write the individual directions out, for clarity! (And cleaner diffs, with whole-line changes.)
 
 </div>
 
@@ -124,6 +124,50 @@ section {
 ```
 
 </div>
+
+### And Logical Properties <!-- .before--2 -->
+
+You can also now define all your box model properties using [*logical* directions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values)—meaning instead of *physical* (`top`/`bottom`, `left`/`right`) orientations, you can [map your rules](https://adrianroselli.com/2019/11/css-logical-properties.html) to the *flow* of the text (`block-start`/<wbr>`block-end`, `inline-start`/<wbr>`inline-end`).
+<!-- .balance -->
+
+[<cite>CSS Logical Properties</cite>](https://adrianroselli.com/2019/11/css-logical-properties.html)
+	[Adrian Roselli](https://adrianroselli.com/) has a very thorough explanation.
+<!-- .right -->
+
+In left-to-right, horizontal writing modes (as in English):
+<!-- .before--2 -->
+
+```css <!-- .verso -->
+/* These horizontal physical directions: */
+padding-left: 1rem;
+padding-right: 1rem;
+
+/* Map to these logical directions: */
+padding-inline-start: 1rem;
+padding-inline-end: 1rem;
+
+/* And this combined property: */
+padding-inline: 1rem;
+```
+
+```css <!-- .recto -->
+/* Same for the vertical directions: */
+padding-top: 1rem;
+padding-bottom: 1rem;
+
+/* Mapping to these: */
+padding-block-start: 1rem;
+padding-block-end: 1rem;
+
+/* And this shorthand for both: */
+padding-block: 1rem;
+```
+
+This `start` / `end` terminology will come up later with `flexbox` and `grid`, so it is a good habit/mindset to get into! We’re going to try using it exclusively.
+<!-- .balance .note -->
+
+This allows your design/styles to behave in a *logically* (if not *physically*) consistent way across languages with varied [writing modes](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode) and different [text directions](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir). You can write styles that work even when your site is translated! (And the two-direction shorthand is nice, here.)
+<!-- .before--2 -->
 
 ## Border
 
@@ -188,50 +232,6 @@ Also [margins *collapse*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_B
 	style="--lines: 9"
 	>
 </figure>
-
-## Logical Properties
-
-You can also now define all your box model properties using [*logical* directions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values)—meaning instead of *physical* (`top`/`bottom`, `left`/`right`) orientations, you can [map your rules](https://adrianroselli.com/2019/11/css-logical-properties.html) to the *flow* of the text (`block-start`/<wbr>`block-end`, `inline-start`/<wbr>`inline-end`).
-<!-- .balance -->
-
-[<cite>CSS Logical Properties</cite>](https://adrianroselli.com/2019/11/css-logical-properties.html)
-	[Adrian Roselli](https://adrianroselli.com/) has a very thorough explanation.
-<!-- .right -->
-
-In left-to-right, horizontal writing modes (as in English):
-<!-- .add-before--2 .add-after -->
-
-```css <!-- .verso -->
-/* These horizontal physical directions: */
-padding-left: 1rem;
-padding-right: 1rem;
-
-/* Map to these logical directions: */
-padding-inline-start: 1rem;
-padding-inline-end: 1rem;
-
-/* And this combined property: */
-padding-inline: 1rem;
-```
-
-```css <!-- .recto -->
-/* Same for the vertical directions: */
-margin-top: 1rem;
-margin-bottom: 1rem;
-
-/* Mapping to these: */
-margin-block-start: 1rem;
-margin-block-end: 1rem;
-
-/* And this shorthand for both: */
-margin-block: 1rem;
-```
-
-This `start` / `end` terminology will come up later with `flexbox` and `grid`, so it isn’t a bad habit&thinsp;/&thinsp;mindset to get into!
-<!-- .balance .secondary -->
-
-This allows your design/styles to behave in a *logically* (if not *physically*) consistent way across languages with varied [writing modes](https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode) and different [text directions](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir). You can write styles that work even when your site is translated! (And the shorthand is nice, here.)
-<!-- .add-before -->
 
 ## And Their Units
 
