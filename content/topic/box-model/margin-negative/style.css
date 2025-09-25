@@ -5,7 +5,5 @@ section:not(:first-child) { margin-block-start: 4rem; }
 section:first-child { margin-block-end: -2rem; }
 
 /* You can even pull things *out* from their bounds. */
-section:nth-child(3) {
-	margin-inline-end: -2rem;
-	margin-inline-start: -2rem;
-}
+section:nth-child(3) { margin-inline: -1rem; }
+/* Note the logical shorthand! */

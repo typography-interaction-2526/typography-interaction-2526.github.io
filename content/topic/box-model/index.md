@@ -224,7 +224,7 @@ And fun with `border-radius`:
 
 ## Margin
 
-The last part of our box is [`margin`](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)—the space *around* an element, empty/white-space area that is used to separate an element from its *siblings*. Like *padding* and `border`, you can specify it all around or on individual sides:
+The last part of our box is [`margin`](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)—the space *around* an element, empty/white-space area that is used to separate an element from its *siblings*. Like `padding` and `border`, you can specify it all around or on individual sides:
 <!-- .balance -->
 
 [<cite>Margin – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
@@ -232,12 +232,13 @@ The last part of our box is [`margin`](https://developer.mozilla.org/en-US/docs/
 <!-- .right -->
 
 <figure
+	@caption="This is away to *suggest* a multi-column feeling while keeping your reading flow clear."
 	@source="margin/preview/?active=style.css"
-	style="--lines: 9"
+	style="--lines: 11"
 	>
 </figure>
 
-Margin has a couple tricks up its sleeve. First, it can have *negative* values—which will eat up/remove space between elements. (*Padding* and `border` only take up space.) Just add a minus before the value and watch it bring things closer together:
+Margin has a couple tricks up its sleeve. First, it can have *negative* values—which will eat up/remove space between elements. (`padding` and `border` only take up space.) Just add a minus before the value and watch it bring things closer together:
 <!-- .balance -->
 
 <figure
@@ -247,13 +248,13 @@ Margin has a couple tricks up its sleeve. First, it can have *negative* values�
 	>
 </figure>
 
-Also [margins *collapse*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing), meaning that they are sometimes combined into a single value (the largest) between two elements. This happens most often on adjacent siblings, and is both useful and an absolute pain:
+Also [margins *collapse*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing), meaning that they are sometimes combined into a single value (whichever is largest) between two elements. This happens most often on adjacent siblings, and is both useful and an absolute pain:
 <!-- .balance -->
 
 <figure
 	@caption="You might expect the margin between the first two `section` to be `10rem`, but it is only `6rem`! They have *collapsed* to the larger value."
 	@source="margin-collapse/preview/?active=style.css"
-	style="--lines: 9"
+	style="--lines: 13"
 	>
 </figure>
 
