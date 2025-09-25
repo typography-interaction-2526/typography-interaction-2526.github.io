@@ -93,12 +93,16 @@
 		--left:   0.089em;
 		--right:  0.135em;
 		--stroke: 0.089em;
+
+		:is(sup, sub) { -webkit-text-stroke-width: 0.045em }
 	}
 
 	@container style(--weight: 700) {
 		--left:   0.119em;
 		--right:  0.119em;
 		--stroke: 0.119em;
+
+		:is(sup, sub) { -webkit-text-stroke-width: 0.075em }
 	}
 }
 

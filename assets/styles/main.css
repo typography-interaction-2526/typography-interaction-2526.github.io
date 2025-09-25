@@ -334,6 +334,8 @@ main {
 
 		code { -webkit-text-stroke-width: 0.01em }
 
+		sub { -webkit-text-stroke-width:}
+
 		> p:has(mark) {
 			--weight:  700;
 			--size:    var(--size--h3);

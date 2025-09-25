@@ -83,10 +83,7 @@ s {
 	}
 }
 
-:is(sup, sub) {
-	font-size:                 66%;
-	-webkit-text-stroke-width: 0.075em; /* First instance was in `700`! */
-}
+:is(sup, sub) { font-size: 66% }
 
 sup {
 	vertical-align: text-top;
