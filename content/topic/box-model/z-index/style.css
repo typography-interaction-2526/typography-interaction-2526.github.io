@@ -1,0 +1,12 @@
+section:nth-child(3) {
+	background-color: gold;
+	left: 30px;
+	position: sticky;
+	top: 30px;
+	width: 66%;
+}
+
+section:nth-child(even) { /* Every other one! */
+	position: relative;
+	z-index: 1;
+}

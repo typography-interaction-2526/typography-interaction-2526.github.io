@@ -1,0 +1,5 @@
+/* Lower two, again. */
+section:not(:first-child) { margin-top: 40px; }
+
+/* On the bottom of the first one. */
+section:first-child { margin-bottom: 60px; }

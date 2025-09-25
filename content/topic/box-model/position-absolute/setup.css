@@ -1,0 +1,13 @@
+/* Same as before. */
+body {
+	font-family: sans-serif;
+	padding: 20px;
+}
+
+section {
+	background-color: deepskyblue;
+	border-top: solid black 4px;
+	padding: 10px;
+}
+
+section:not(:first-child) { margin-top: 20px; }

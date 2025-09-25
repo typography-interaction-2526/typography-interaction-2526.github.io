@@ -1,0 +1,18 @@
+section:nth-child(3) {
+	background-color: gold;
+	left: 30px;
+	position: absolute; /* Here, in relation to body. */
+	top: 30px;
+	width: 66%;
+}
+
+section:nth-child(5) {
+	background-color: tomato;
+	position: relative; /* The closest relative ancestor. */
+}
+
+section:nth-child(5) p {
+	bottom: 30px;
+	position: absolute; /* From the parent section. */
+	right: 30px;
+}
