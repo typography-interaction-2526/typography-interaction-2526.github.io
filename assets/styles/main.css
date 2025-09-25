@@ -233,8 +233,6 @@ main {
 		}
 
 		tr:not(:first-child) td, tr:not(:first-child) th { border-block-start: 1rcap solid transparent }
-
-		td:last-child { text-align: end } /* Ersatz tabular numbers. */
 	}
 
 	/* TODO Move this to component? (And flatten that into native/Markdown?) */
