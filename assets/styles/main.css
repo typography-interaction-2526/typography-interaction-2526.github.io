@@ -546,6 +546,7 @@ main {
 	.start  { align-self: start }
 	.stack  { figure { margin: initial } }
 	.center { align-self: center }
+	.end    { align-self: end }
 
 	*:has(> .sticky) {
 		/* TODO This breaks `baseline` alignment! */
