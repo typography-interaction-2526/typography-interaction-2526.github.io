@@ -1,6 +1,7 @@
 section:nth-child(1) {
 	border-radius: 50%; /* Relative to size. */
 	border: 0.25rem dotted deepskyblue;
+	text-align: center;
 }
 
 section:nth-child(2) {
@@ -9,7 +10,7 @@ section:nth-child(2) {
 }
 
 section:nth-child(3) {
-	border-end-end-radius: 3rem;
+	border-end-end-radius: 3rem; /* This logical syntax is tricky. */
 	border-start-start-radius: 3rem;
 	border: 1rem solid tomato;
 }

@@ -1,7 +1,7 @@
 section:nth-child(3) {
 	background-color: gold;
-	left: 3rem;
+	inline-size: 66%;
+	inset-block-start: 3rem;
+	inset-inline-start: 3rem;
 	position: sticky;
-	top: 3rem;
-	width: 66%;
 }

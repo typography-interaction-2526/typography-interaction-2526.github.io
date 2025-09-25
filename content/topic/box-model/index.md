@@ -218,7 +218,7 @@ And fun with `border-radius`:
 
 <figure
 	@source="border-radius/preview/?active=style.css"
-	style="--lines: 19"
+	style="--lines: 20"
 	>
 </figure>
 
