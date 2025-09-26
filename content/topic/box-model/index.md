@@ -267,18 +267,18 @@ Okay, so now we have all these box properties—but how do we specify the dimens
 	*Length* is used by many properties!
 <!-- .right -->
 
-### Absolute Units
-
 <div class="balance body center">
 
-Maybe the easiest ones to understand, these are fixed to physical (well, sort of) sizes. In general, we try and avoid these as they are necessarily *brittle*. Remember: the web is not a physical medium!
+### Absolute Units
+
+Maybe the easiest ones to understand, these are fixed to physical (well, sort of) sizes. In general, we try and avoid these as they are necessarily *brittle*. Remember: the web is not a “physical” medium!
 
 With the many vagaries of screen size and density, the physical/ruler lengths will only be correct when you print. And maybe not even then!
 <!-- .note -->
 
 </div>
 
-<div class="add-before right">
+<div class="before--3 right">
 
 ```css
 .pixels {
@@ -295,6 +295,11 @@ With the many vagaries of screen size and density, the physical/ruler lengths wi
 	block-size: 84mm;
 	inline-size: 400mm;
 }
+
+.pt {
+	block-size: 12pt;
+	inline-size: 72pt;
+}
 ```
 
 </div>
@@ -303,7 +308,7 @@ With the many vagaries of screen size and density, the physical/ruler lengths wi
 
 <div class="balance verso">
 
-<div class="before--4 sticky" style="inset-block-start: 40vh">
+<div class="before--2 sticky" style="inset-block-start: 45vh; margin-block-end: 2rlh">
 
 Most of the time we want to use *relative* units, which depend on and respond to their context—particularly as we think ahead to *responsive* design.
 
@@ -320,7 +325,7 @@ These are distinctly and intrinsically *web* measurements.
 /* Relative to nearest “sized” ancestor. */
 .percentage {
 	block-size: 90%;
-	inline-size: 85%;
+	inline-size: 75%;
 }
 
 /* Relative to viewport height/width. */
@@ -329,32 +334,40 @@ These are distinctly and intrinsically *web* measurements.
 	inline-size: 80vw;
 }
 
-/* Relative to element font-size. */
-.em {
-	block-size: 14em; /* `1em` is “one line.” */
-	inline-size: 4.8em;
-}
-
-/* Also relative to font size */
-.ch {
-	inline-size: 1ch; /* Roughly one letter. */
-}
-
-/* Relative to `:root` font-size. */
+/* Relative to `:root`/`html` font-size. */
+/* These define our typographic systems! */
 .rem {
 	block-size: 12rem;
 	inline-size: 2.4rem;
 }
-/* These create our typographic systems! */
+
+/* These are relative to an element’s font-size. */
+/* `1em` is “one line.” */
+.em { block-size: 14em; }
+
+/* The cap height. */
+.cap { block-size: 1cap; }
+
+/* Roughly one letter width. */
+.ch { inline-size: 1ch; }
+
+/* The x-height. */
+.ex { block-size: 1ex; }
+
+/* A line-height (baseline to baseline). */
+.lh { block-size: 1lh; }
+
+/* These all have `:root`-relative versions too: */
+/* `rch` `rcap` `rex` `rlh` */
 ```
 
 </div>
 
-### Combine Them With a `calc`
+### Combine Them With a `calc()` <!-- .before--3 -->
 
-<div class="balance verso" style="align-self: center">
+<div class="balance center verso">
 
-Sometimes you might want to use these together! Or otherwise do some math. For this we have the [*calc* function](https://developer.mozilla.org/en-US/docs/Web/CSS/calc()).
+Often you will want to use different units together! Mixing types or otherwise doing some maths. For this we have the [`calc()` function](https://developer.mozilla.org/en-US/docs/Web/CSS/calc()).
 
 </div>
 
@@ -362,7 +375,7 @@ Sometimes you might want to use these together! Or otherwise do some math. For t
 
 ```css
 .flexible-and-fixed {
-	inline-size: calc(50% - 1rem);
+	inline-size: calc(50% - 2rem);
 }
 
 .computer-do-the-math {
@@ -374,13 +387,19 @@ Sometimes you might want to use these together! Or otherwise do some math. For t
 
 ### Limit/Constrain Them
 
-<div class="balance verso" style="align-self: center">
+<div class="balance start before--2 verso">
 
-You’ll often want to set limits/constraints on values—particularly with flexible, *relative* units (and *responsive design*, which we’ll talk about soon.) You can usually set [*minimums*](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width) and [*maximums*](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) by using the prefixes `min-` and `max-`.
+<div class="before sticky" style="inset-block-start: 45vh; margin-block-end: 2rlh">
+
+You’ll often want to set limits/constraints on values—particularly with flexible, *relative* units (and *responsive design*, which we’ll talk about soon.)
+
+You can usually set [*minimums*](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width) and [*maximums*](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) by using the prefixes `min-` and `max-`.
 
 </div>
 
-<div class="add-before recto">
+</div>
+
+<div class="recto">
 
 ```css
 .constrained-width {
@@ -403,8 +422,11 @@ p {
 
 </div>
 
-CSS is big and massive and overwhelming and sometimes indefensibly nonsensical—but remember that you can do a surprising amount with just these basic properties! No matter how complex it gets, it always comes back to these basics.
-<!-- .add-before--3 .balance .bold .scale--h4 -->
+CSS is big and massive and overwhelming and sometimes indefensibly nonsensical—but remember that you can do a surprising amount with just these basic properties!
+<!-- .intro .before--4 -->
+
+No matter how complex it gets, it really always comes back to these basics.
+<!-- .intro -->
 
 ## Position
 
