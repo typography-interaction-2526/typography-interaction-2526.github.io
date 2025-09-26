@@ -29,24 +29,23 @@ For real layout, the we first need to understand how CSS sizes elements—and ho
 
 </blockquote>
 
-By default, all browsers’ *user-agent styles* have an unfortunate default—`box-sizing: content-box;`—which means that the `padding` (and `border`) exists *outside* the content `width` or `height`—so `padding` (and `border`) is then an *outset.*
-<!-- .before--4 -->
-
-But this is often unintuitive for designers and doesn’t fit with most web design patterns—so it is very, *very* common (nearly universal) to instead override this to `box-sizing: border-box;`—which makes `padding` and `border` exist *inside* the content dimensions. Then `padding` (and `border`) is easier to think of as an *inset*. [W3C](https://www.w3.org/TR/css-box-3/) might have got this default wrong. Good ol’ CSS!
-
 <figure
 	@caption="With `box-sizing: content-box;` per the spec."
 	@source="box-model.svg"
-	class="verso"
+	class="before--4 verso"
 	>
 </figure>
 
 <figure
 	@caption="With `box-sizing: border-box;` the defacto standard. Most [CSS resets](/topic/css#resets) will do this for you! Like we said, very common."
 	@source="box-model-border.svg"
-	class="recto"
+	class="before--4 recto"
 	>
 </figure>
+
+By default, all browsers’ *user-agent styles* have an unfortunate default—`box-sizing: content-box;`—which means that the `padding` (and `border`) exists *outside* the content `inline-size`/`width` or `block-size`/`height`—so `padding` (and `border`) is then an *outset.*
+
+But this is often unintuitive for designers and doesn’t fit with most web design patterns—so it is very, *very* common (nearly universal) to instead override this to `box-sizing: border-box;`—which makes `padding` and `border` exist *inside* the content dimensions. Then `padding` (and `border`) is easier to think of as an *inset*. [W3C](https://www.w3.org/TR/css-box-3/) might have got this default wrong. Good ol’ CSS!
 
 Let’s take a look at this box, going *inside-to-outside.*
 <!-- .intro -->
