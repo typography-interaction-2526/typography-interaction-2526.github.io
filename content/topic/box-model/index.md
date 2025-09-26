@@ -25,7 +25,7 @@ For real layout, the we first need to understand how CSS sizes elements—and ho
 	@citation="https://readings.design/PDF/ThePrinciplesoftheNewTypography.pdf"
 >
 
-Use the effectiveness of the former “background” quite deliberately, and consider the blank white spaces on the paper as formal elements just as much as the areas of black type.
+…Use the effectiveness of the former “background” quite deliberately, and consider the blank white spaces on the paper as formal elements just as much as the areas of black type.
 
 </blockquote>
 
