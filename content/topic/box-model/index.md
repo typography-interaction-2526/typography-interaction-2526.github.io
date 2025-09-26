@@ -4,9 +4,10 @@
 	const week = 5
 </script>
 
-## Boxes Within Boxes
+## Boxes Within Boxes Within Boxes Within Boxes
 
-The first thing we need to understand is how CSS sizes elements. This is called the [*the box model*](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model), as everything on the web begins as a rectangle.
+For real layout, the we first need to understand how CSS sizes elements—and how we can add space between them. This is called the [*the box model*](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model), as everything on the web begins as a rectangle.
+<!-- .start style="margin-block-start: initial" -->
 
 - [<cite>Introduction to CSS Layout – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction)
 	As usual.
@@ -16,12 +17,23 @@ The first thing we need to understand is how CSS sizes elements. This is called
 
 - [<cite>Learn CSS Layout</cite>](https://learnlayout.com)
 	An old-but-still-good run-through.
-<!-- .right .rows--4 -->
+<!-- .right .rows--3 -->
+
+&nbsp;
+
+<blockquote
+	@attribution="Jan Tschichold"
+	@citation="https://readings.design/PDF/ThePrinciplesoftheNewTypography.pdf"
+>
+
+Use the effectiveness of the former “background” quite deliberately, and consider the blank white spaces on the paper as formal elements just as much as the areas of black type.
+
+</blockquote>
 
 By default, all browsers’ *user-agent styles* have an unfortunate default—`box-sizing: content-box;`—which means that the `padding` (and `border`) exists *outside* the content `width` or `height`—so `padding` (and `border`) is then an *outset.*
+<!-- .before--4 -->
 
 But this is often unintuitive for designers and doesn’t fit with most web design patterns—so it is very, *very* common (nearly universal) to instead override this to `box-sizing: border-box;`—which makes `padding` and `border` exist *inside* the content dimensions. Then `padding` (and `border`) is easier to think of as an *inset*. [W3C](https://www.w3.org/TR/css-box-3/) might have got this default wrong. Good ol’ CSS!
-<!-- .before--3 -->
 
 <figure
 	@caption="With `box-sizing: content-box;` per the spec."
@@ -707,7 +719,6 @@ We’ll cover these next unit! They’ll make your (layout) life easier.
 <blockquote
 	@attribution="H<span class='a-ring cap'>å</span>kon Wium Lie"
 	@citation="https://lists.w3.org/Archives/Public/www-style/1995Jun/0003.html"
-	class="mono"
 	>
 
 <div webc:raw>

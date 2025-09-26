@@ -25,11 +25,7 @@ main {
 			--size:   var(--size--h2);
 			--weight: 500;
 
-			+ * {
-				margin-block-start: 2rlh;
-
-				@container style(--columns: 6) { + *:where(.recto, .right) { margin-block-start: 2rlh } }
-			}
+			+ * { margin-block-start: 2rlh }
 		}
 
 		&:has(> h3) {
