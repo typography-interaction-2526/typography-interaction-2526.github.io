@@ -614,3 +614,4 @@ This proposal tries to soften the tension between the author and the reader.
 			inset-inline-start: 0.24em;
 		}
 	}
+</style>

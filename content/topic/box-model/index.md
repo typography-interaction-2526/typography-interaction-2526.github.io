@@ -644,7 +644,7 @@ Keep in mind that `display: none;`, `visibility: hidden;`, and `opacity: 0;` onl
 
 ## What About Floats?
 
-Oh right, floats. Sometimes you’ll want to have an image or block flow within a block of text. There are a lot of ways to do this now, but the oldest (and sometimes still the trickiest) is a [*float*](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats).
+Oh right, floats. Sometimes you’ll want to have an image or block flow within a block of text. There are a lot of ways to do this now, but the oldest (and sometimes still the trickiest) is a [`float`](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats).
 <!-- .balance -->
 
 [<cite>Floats – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats)
@@ -653,7 +653,7 @@ Oh right, floats. Sometimes you’ll want to have an image or block flow within 
 
 ### Left and Right
 
-The declarations `float: left;` and `float: right;` take an element out of the normal flow and place it on the left or right side of its parent container.
+The declarations `float: inline-start;` and `float: inline-end;` take an element out of the normal flow and place it on the left or right side of its parent container.
 <!-- .balance -->
 
 Any text *siblings* will then flow around the element—like a *text wrap*—filling up any available space to its side. They will go as far up as the top of the *floated element*:
@@ -661,20 +661,20 @@ Any text *siblings* will then flow around the element—like a *text wrap*—fil
 
 <figure
 	@source="float/preview/?active=style.css"
-	style="--lines: 15"
+	style="--lines: 17"
 	>
 </figure>
 
 ### Don’t Forget to `clear`
 
-Since this takes the floated element out of the *flow*, if we want the following element (often another text block, like a `<p>`) to not move up it needs to be *cleared* with `clear: left;` , `clear: right;`, or `clear: both;`.
+Since this takes the floated element out of the *flow*, if we want the following element (often another text block, like a `<p>`) to not move up it needs to be *cleared* with `clear: inline-start;` , `clear: inline-end;`, or `clear: both;`.
 <!-- .balance -->
 
 Applied on the following element, it will make it stay entirely below (clear of) the *floated* element:
 <!-- .balance -->
 
 <figure
-	@caption="Uh oh, classic *float* problem on the second one."
+	@caption="Uh oh, classic `float` problem on the second one."
 	@source="float-clear/preview/?active=style.css"
 	style="--lines: 19"
 	>
@@ -689,14 +689,14 @@ You can solve this broken look with a [*clearfix hack*](https://developer.mozill
 <figure
 	@caption="Much better. `:after` is a pseudo-element—which acts here as a last child that clears the `div`."
 	@source="float-clearfix/preview/?active=style.css"
-	style="--lines: 21"
+	style="--lines: 23"
 	>
 </figure>
 
-Generally, folks try and avoid floats—they aren’t common in modern design patterns and have been giving people headaches for… *decades* now.
-<!-- .balance -->
+Generally, folks try and avoid floats—they aren’t common in modern design patterns and have been giving people headaches for… decades now.
+<!-- .intro -->
 
-They require you to know how long your content is and also how big your viewport/page will be—*both* things that you don’t always have control over in responsive/<wbr>mobile 2024. But sometimes they are still the only thing that can do what you need!
+They require you to know how long your content is and also how big your viewport/page will be—*both* things that you don’t always have control over in responsive/<wbr>mobile 2025. But sometimes they are still the only thing that can do what you need!
 <!-- .balance -->
 
 ### … `flex` and `grid`?
@@ -705,7 +705,7 @@ We’ll cover these next unit! They’ll make your (layout) life easier.
 <!-- .intro -->
 
 <blockquote
-	@attribution="Håkon Wium Lie"
+	@attribution="H<span class='a-ring cap'>å</span>kon Wium Lie"
 	@citation="https://lists.w3.org/Archives/Public/www-style/1995Jun/0003.html"
 	class="mono"
 	>
@@ -737,3 +737,24 @@ a bit too simple.
 </pre>
 
 </blockquote>
+
+<style>
+	.a-ring {
+		position: relative;
+
+		&::before {
+			-webkit-text-stroke-width: 0.03em;
+			content:                   '°';
+			font-size:                 66%;
+			inset-block-start:         -0.45em;
+			inset-inline-start:        0.1em;
+			position:                  absolute;
+		}
+
+		&.cap::before {
+			font-size:          75%;
+			inset-block-start:  -0.9em;
+			inset-inline-start: 0.24em;
+		}
+	}
+</style>
