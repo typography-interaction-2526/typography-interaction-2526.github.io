@@ -12,6 +12,4 @@ section:nth-child(2) aside {
 	margin-inline-start: 1rem;
 }
 
-p:last-child {
-	clear: inline-start;
-}
+p:last-child { clear: inline-start; }

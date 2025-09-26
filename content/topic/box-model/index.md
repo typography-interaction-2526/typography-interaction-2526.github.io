@@ -548,7 +548,7 @@ No amount of internal `z-index` adjustments can “break” something out of tha
 
 ## Display
 
-In our [HTML introduction](/topic/html#block-elements) we briefly talked about *block* and *inline* elements, as set by the user-agent styles. These are the first two examples of [the *display* property](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
+In our [HTML introduction](/topic/html#block-elements) we briefly talked about `block` and `inline` elements—as set by the user-agent styles. These are the first two examples of [the `display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
 <!-- .balance -->
 
 [<cite>Display – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
@@ -557,81 +557,89 @@ In our [HTML introduction](/topic/html#block-elements) we briefly talked about *
 
 ### Block
 
-So as we discussed, most HTML elements are *block-level* by default. But you can also set `display: block;` manually on an *inline* element, too. This would mean that it starts on a new line, takes up the full width available, and you can specify a `height`, `width`, and use `margin` above and below:
+As we discussed, most HTML elements are *block-level* by default. But you can also set `display: block;` manually on an `inline` element, too. This would mean that it starts on a new line, takes up the full width available, and you can specify a `block-size`, `inline-size`, and use `margin` above and below:
 <!-- .balance -->
 
 <figure
 	@caption="Whenever you are linking a whole area (like an image and text together), safe bet that you want `block`."
 	@source="display-block/preview/?active=style.css"
-	style="--lines: 13"
+	style="--lines: 15"
 	>
 </figure>
 
 ### Inline
 
-And going the other way, you can make *block* elements switch to *inline* with `display: inline;`. They will no longer start on their own lines, will only take up as much space as their content/children, and don’t accept `height` and `width` (or any `-top`/`-bottom`) properties:
+And then going the other way, you can make `block` elements switch to `inline` with `display: inline;`. They will no longer start on their own lines, will only take up as much space as their content/children, and *don’t* accept `block-size` or `inline-size` (or any `-block-start`/`-block-end`) properties:
 <!-- .balance -->
 
 <figure
-	@caption="The `white-space` property `pre`-vents the spaces in the paragraphs from collapsing."
+	@caption="The [`white-space` property `pre`](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space)-vents the spaces in the paragraphs from collapsing!"
 	@source="display-inline/preview/?active=style.css"
-	style="--lines: 11"
+	style="--lines: 13"
 	>
 </figure>
 
 ### But Also `inline-block`
 
-You can also combine the qualities of *block* and *inline* with `display: inline-block;`. These elements take `height` and `width` (and vertical `margin`) like *block-level* elements, but do not start on their own line:
+You can also combine the qualities of `block` and `inline` with `display: inline-block;`. These elements take `block-size` and `inline-size` (and vertical `margin`) like *block-level* elements, but do not start on their own line:
 <!-- .balance -->
 
 <figure
 	@source="display-inline-block/preview/?active=style.css"
-	style="--lines: 15"
+	style="--lines: 17"
 	>
 </figure>
 
 ### And Sometimes `none`
 
-Setting `display: none;` hides an element visually from the document—as well as taking it out of the *flow*. (Keep in mind the HTML is still there, if someone opens up the source code.)
+Setting `display: none;` hides an element visually (and from screen readers) in the document—as well as taking it out of the *flow*. (Keep in mind the HTML is still there, if someone opens up the source code.)
 <!-- .balance -->
 
-This is a common way to hide/show (by setting another *display* property) elements on the page, but it will *reflow* the document when applied—as if the element is actually added/removed from the HTML:
+This is a common way to hide/show (by setting another `display` property) elements on the page, but it will *reflow* the document when applied—as if the element is actually added/removed from the HTML:
 <!-- .balance -->
 
 <figure
 	@caption="Poof. Like it wasn’t even there."
 	@source="display-none/preview/?active=style.css"
-	style="--lines: 6"
+	style="--lines: 8"
 	>
 </figure>
 
 ### …vs. Visibility?
 
-You can also hide something [visually](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility) without taking it out of the document *flow,* which is useful when you don’t want the page to jump/*reflow* when something appears/disappears.
+You can also hide something visually *without* taking it out of the document *flow,* which is useful when you don’t want the page to jump/*reflow* when something appears/disappears.
 <!-- .balance -->
+
+[<cite>Visibility – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility)
+	This also hides elements from assistive technologies (screen readers).
+<!-- .right .rows--2 -->
 
 Setting `visibility: hidden;` keeps the space an element had before, but makes it invisible and unable to be interacted with. The value `visible` is the default:
 <!-- .balance -->
 
 <figure
 	@source="visibility/preview/?active=style.css"
-	style="--lines: 6"
+	style="--lines: 8"
 	>
 </figure>
 
 ### …vs. Opacity?
 
-Another way to hide an element visually is to adjust [its opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity), which uses values on a scale from 0–1. This differs from `visibility` because elements with no (or partial) opacity can still be interacted with:
+Another way to hide an element visually is to adjust `opacity`, which uses values on a scale from `0`&NoBreak;–&NoBreak;`1` or `0%`&NoBreak;–&NoBreak;`100%`. This differs from `visibility` because elements with no (or partial) opacity can still be interacted with:
 <!-- .balance -->
+
+[<cite>Opacity – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
+	The entire element *and* its descendents are adjusted, as one.
+<!-- .right  -->
 
 <figure
 	@caption="You can still select the text (or click links) of not-fully-opaque elements."
 	@source="opacity/preview/?active=style.css"
-	style="--lines: 6"
+	style="--lines: 8"
 	>
 </figure>
 
-Keep in mind that `display: none;`, `visibility: hidden;`, and `opacity: 0;` only hide things in the *rendered* browser view. The HTML is still visible in the source code!
+Keep in mind that `display: none;`, `visibility: hidden;`, and `opacity: 0;` only hide things in the *rendered* browser view. The HTML is always still visible in the source code!
 <!-- .balance -->
 
 ## What About Floats?
