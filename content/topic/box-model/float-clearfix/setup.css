@@ -10,4 +10,4 @@ section {
 	padding: 1rem;
 }
 
-section:not(:first-child) { margin-block-start: 2rem; }
+section:not(:first-child) { margin-block-start: 1rem; }

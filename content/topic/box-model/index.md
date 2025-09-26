@@ -702,7 +702,7 @@ They require you to know how long your content is and also how big your viewport
 ### … `flex` and `grid`?
 
 We’ll cover these next unit! They’ll make your (layout) life easier.
-<!-- .balance .bold .scale--h4 -->
+<!-- .intro -->
 
 <blockquote
 	@attribution="Håkon Wium Lie"
