@@ -260,7 +260,7 @@ Also [margins *collapse*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_B
 
 ## And Their Units
 
-Okay, so we have all these box properties—but how do we specify the dimensions? CSS has many [*length units*](https://developer.mozilla.org/en-US/docs/Web/CSS/length), used for `width`, `height`, and also  `padding`, `border`, `margin`, and even `font-size`. (Picas, anyone?) We’ll look at some common ones.
+Okay, so now we have all these box properties—but how do we specify the dimensions? CSS has many [*length units*](https://developer.mozilla.org/en-US/docs/Web/CSS/length), used for `inline-size`, `block-size`, and also  `padding`, `border`, `margin`, and even `font-size`. (Picas, anyone?) We’ll look at some common ones.
 <!-- .balance -->
 
 [<cite>`<length>` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/length)
@@ -269,31 +269,31 @@ Okay, so we have all these box properties—but how do we specify the dimensions
 
 ### Absolute Units
 
-<div class="balance verso" style="align-self: center">
+<div class="balance body center">
 
-Maybe the easiest ones to understand, fixed to physical (well, sort of) sizes.
+Maybe the easiest ones to understand, these are fixed to physical (well, sort of) sizes. In general, we try and avoid these as they are necessarily *brittle*. Remember: the web is not a physical medium!
 
-With the many vagaries of screen size and density, the physical/ruler lengths will only be correct when you print. And maybe not even then.
-<!-- .secondary -->
+With the many vagaries of screen size and density, the physical/ruler lengths will only be correct when you print. And maybe not even then!
+<!-- .note -->
 
 </div>
 
-<div class="add-before recto">
+<div class="add-before right">
 
 ```css
 .pixels {
-	height: 360px;
-	width: 720px;
+	block-size: 360px;
+	inline-size: 720px;
 }
 
 .inches {
-	height: 5in;
-	width: 10in;
+	block-size: 5in;
+	inline-size: 10in;
 }
 
 .mm {
-	height: 84mm;
-	width: 400mm;
+	block-size: 84mm;
+	inline-size: 400mm;
 }
 ```
 
@@ -303,12 +303,12 @@ With the many vagaries of screen size and density, the physical/ruler lengths wi
 
 <div class="balance verso">
 
-<div class="add-before--3 add-after--3 sticky">
+<div class="before--4 sticky" style="inset-block-start: 40vh">
 
-Otherwise you can use *relative* units, which depend on and respond to their context.
+Most of the time we want to use *relative* units, which depend on and respond to their context—particularly as we think ahead to *responsive* design.
 
 These are distinctly and intrinsically *web* measurements.
-<!-- .secondary -->
+<!-- .note -->
 
 </div>
 
@@ -317,34 +317,35 @@ These are distinctly and intrinsically *web* measurements.
 <div class="add-before recto">
 
 ```css
-/* Relative to nearest sized ancestor. */
+/* Relative to nearest “sized” ancestor. */
 .percentage {
-	height: 90%;
-	width: 85%;
+	block-size: 90%;
+	inline-size: 85%;
 }
 
 /* Relative to viewport height/width. */
 .viewport {
-	height: 75vh;
-	width: 80vw;
+	block-size: 75vh;
+	inline-size: 80vw;
 }
 
 /* Relative to element font-size. */
 .em {
-	height: 14em; /* 1em is one line. */
-	width: 4.8em;
+	block-size: 14em; /* `1em` is “one line.” */
+	inline-size: 4.8em;
 }
 
 /* Also relative to font size */
 .ch {
-	width: 1ch; /* 1ch is one letter. */
+	inline-size: 1ch; /* Roughly one letter. */
 }
 
 /* Relative to `:root` font-size. */
 .rem {
-	height: 12rem;
-	width: 2.4rem;
+	block-size: 12rem;
+	inline-size: 2.4rem;
 }
+/* These create our typographic systems! */
 ```
 
 </div>
@@ -361,11 +362,11 @@ Sometimes you might want to use these together! Or otherwise do some math. For t
 
 ```css
 .flexible-and-fixed {
-	width: calc(50% - 1rem);
+	inline-size: calc(50% - 1rem);
 }
 
 .computer-do-the-math {
-	width: calc(100% / 12);
+	inline-size: calc(100% / 12);
 }
 ```
 
@@ -383,20 +384,20 @@ You’ll often want to set limits/constraints on values—particularly with flex
 
 ```css
 .constrained-width {
-	min-width: 12rem;
-	width: 50%;
-	max-width: 24rem;
+	min-inline-size: 12rem;
+	inline-size: 50%;
+	max-inline-size: 24rem;
 }
 
 .constrained-height {
-	min-height: 6rem;
-	height: 100%;
-	max-height: 12rem;
+	min-block-size: 6rem;
+	block-size: 100%;
+	max-block-size: 12rem;
 }
 
 /* Handy to watch your line lengths! */
 p {
-	max-width: 65ch; /* 65ish letters. */
+	max-inline-size: 65ch; /* 65ish letters. */
 }
 ```
 
