@@ -699,7 +699,7 @@ Generally, folks try and avoid floats—they aren’t common in modern design pa
 They require you to know how long your content is and also how big your viewport/page will be—*both* things that you don’t always have control over in responsive/<wbr>mobile 2025. But sometimes they are still the only thing that can do what you need!
 <!-- .balance -->
 
-### … `flex` and `grid`?
+### What about `flex` and `grid`?
 
 We’ll cover these next unit! They’ll make your (layout) life easier.
 <!-- .intro -->
@@ -710,31 +710,30 @@ We’ll cover these next unit! They’ll make your (layout) life easier.
 	class="mono"
 	>
 
-<pre>
-E.g.:
+<div webc:raw>
+<code style="font-size: 50%; font-weight: normal; inline-size: fit-content;">E.g.:
 ____________
-
- H1 has a 1 character margin
-
- So does H2
-
-     P starts here and could
-     go on forever. Wow, a 5
-     character left margin
-     sure looks great!
-      _____
-     | + + | Wow, you can do
-     |  @  | images as well?
-     | --- | Then you'll
-     |_____| want a 1 character
-     margin on the left side.
-     Until, you're below the
-     image that is.
-
-This is where we [find] the
-simple stacked box model is
-a bit too simple.
-</pre>
+ 
+H1 has a 1 character margin
+ 
+So does H2
+ 
+	P starts here and could
+	go on forever. Wow, a 5
+	character left margin
+	sure looks great!
+	_____
+	| + + | Wow, you can do
+	|  @  | images as well?
+	| --- | Then you'll
+	|_____| want a 1 character
+	margin on the left side.
+	Until, you're below the
+	image that is.
+ 
+This is where we [find] the simple
+stacked box model is a bit too simple.</code>
+</div>
 
 </blockquote>
 
