@@ -403,7 +403,7 @@ Often you will want to use different units together! Mixing types or otherwise d
 
 You’ll often want to set limits/constraints on values—particularly with flexible, `relative` units (and *responsive design*, which we’ll talk about soon.)
 
-You can usually set [*minimums*](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width) and [*maximums*](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) by using the prefixes `min-` and `max-`.
+You can usually set [*minimums*](https://developer.mozilla.org/en-US/docs/Web/CSS/min-inline-size) and [*maximums*](https://developer.mozilla.org/en-US/docs/Web/CSS/max-block-size) by using the prefixes `min-` and `max-`.
 
 </div>
 
