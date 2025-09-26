@@ -310,7 +310,7 @@ With the many vagaries of screen size and density, the physical/ruler lengths wi
 
 <div class="before--2 sticky" style="inset-block-start: 45vh; margin-block-end: 2rlh">
 
-Most of the time we want to use *relative* units, which depend on and respond to their context—particularly as we think ahead to *responsive* design.
+Most of the time we want to use `relative` units, which depend on and respond to their context—particularly as we think ahead to *responsive* design.
 
 These are distinctly and intrinsically *web* measurements.
 <!-- .note -->
@@ -391,7 +391,7 @@ Often you will want to use different units together! Mixing types or otherwise d
 
 <div class="before sticky" style="inset-block-start: 45vh; margin-block-end: 2rlh">
 
-You’ll often want to set limits/constraints on values—particularly with flexible, *relative* units (and *responsive design*, which we’ll talk about soon.)
+You’ll often want to set limits/constraints on values—particularly with flexible, `relative` units (and *responsive design*, which we’ll talk about soon.)
 
 You can usually set [*minimums*](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width) and [*maximums*](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width) by using the prefixes `min-` and `max-`.
 
@@ -439,83 +439,83 @@ With an idea of how elements take up space, now we’ll look at how they exist a
 
 ### Static
 
-By default, every element is *static*—just meaning its normal, stacked position in the document.
+By default, every element is `static`—just meaning its normal, stacked position in the document.
 <!-- .balance -->
 
 You’ll rarely, if ever, actually set this yourself—it’s the default!
-<!-- .secondary -->
+<!-- .note -->
 
 <figure
-	@caption="Nothing changes here—`static` is the default."
+	@caption="Nothing changes here—`static` is the default. Be sure to scroll these examples!"
 	@source="position-static/preview/?active=style.css"
-	style="--lines: 12"
+	style="--lines: 13"
 	>
 </figure>
 
 ### Relative
 
-The first thing we might want to do is adjust an element *from* that normal *static* position, which we can do with *relative* positioning.
+The first thing we might want to do is adjust an element *from* that normal `static` position, which we can do with `relative` positioning.
 <!-- .balance -->
 
-Once you have set `position: relative;` you can use the  `top`, `right`, `bottom`, and `left` values (with any of the units, above) to move the element away from its default, normal position in the flow:
+Once you have set `position: relative;` you can use the logical `inset-block-start`, `inset-inline-end`, `inset-block-end`, and `inset-inline-start` values (with any of [the units](#and-their-units), above) to move the element away from its default, normal position in the flow:
 <!-- .balance -->
 
 <figure
-	@caption="The element still exists/takes up space in the *flow*."
+	@caption="Note the space—the element still exists/takes up space in the *flow*."
 	@source="position-relative/preview/?active=style.css"
-	style="--lines: 12"
+	style="--lines: 13"
 	>
 </figure>
 
 ### Absolute
 
-*Absolute* positioning is somewhat similar to *relative*—but instead of placing an element in relation to its own default position, it uses the position of its nearest *positioned* ancestor as the origin.
+`absolute` positioning is somewhat similar to `relative`—but instead of placing an element in relation to its own default position, it uses the position of its nearest *positioned* ancestor as the origin.
 <!-- .balance -->
 
-So *absolute* elements will go “up the tree” of parents and wrapper elements until they find one set to anything other than default/<nobr>`static`—</nobr>then the same offset properties the element around from there.
+So `absolute` elements will go “up the tree” of parents and wrapper elements until they find one set to anything other than default/<nobr>`static`—</nobr>then the same offset properties the element around from there.
 <!-- .balance -->
 
 Importantly, `position: absolute;` also *removes* the element from the normal document flow—meaning it takes up *no space* in the page layout.
 <!-- .balance -->
 
-This is often used for exacting, specific design elements.
-<!-- .secondary -->
+This is often used for exacting, specific design element placement. But it is inherently *brittle*&NoBreak;!
+<!-- .note -->
 
 <figure
 	@caption="The element is out of the *flow*, and placed according to the `relative` parent."
 	@source="position-absolute/preview/?active=style.css"
-	style="--lines: 20"
+	style="--lines: 22"
 	>
 </figure>
 
 ### Fixed
 
-*Fixed* positioning also removes the element from the document flow, but it places elements with relation to the *browser viewport*—the boundaries of the window or device.
+`fixed` positioning also removes the element from the document flow, but it places elements with relation to the *browser viewport*—the boundaries of the window or device.
 <!-- .balance -->
 
 So `position: fixed;` brings the element *completely* out of the page’s normal flow, like it is sitting on its own separate layer.
 <!-- .balance -->
 
 This is often used for things like navigation elements.
-<!-- .secondary -->
+<!-- .note -->
 
 <figure
 	@caption="Try doing this in print."
 	@source="position-fixed/preview/?active=style.css"
-	style="--lines: 12"
+	style="--lines: 13"
 	>
 </figure>
 
 ### Sticky
 
-The most recent addition to the *position* party, `position: sticky;` elements are placed according to the normal flow of the document, like *static,* until their nearest *scrolling ancestor* (usually the viewport) moves past them. The element is then *stuck* in relation to this element.
+The most recent addition to the *position* party, `position: sticky;` elements are placed according to the normal flow of the document, like `static`, until their nearest *scrolling ancestor* (usually the viewport) moves past them. The element is then *stuck* in relation to this element.
 <!-- .balance -->
 
 This is often used for headers on tables and lists.
-<!-- .secondary -->
+<!-- .note -->
 
 <figure
-	@caption="This always feels very *web*-y."
+	@caption="You’ll hear Michael say this a lot: this always feels very *web*-y."
 	@source="position-sticky/preview/?active=style.css"
 	style="--lines: 12"
 	>
@@ -523,23 +523,27 @@ This is often used for headers on tables and lists.
 
 ### “Depth”
 
-Okay, [*z-index*](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index) is not strictly *positioning*—it is a separate property. You can see that all these *position* properties have given us ways to make things overlap, and `z-index` is how we can decide the *front-to-back* ordering (think [*<nobr>z-axis</nobr>*](https://en.wikipedia.org/wiki/Cartesian_coordinate_system#Three_dimensions)).
+Okay, `z-index` is not strictly *positioning*—it is a separate property. You can see that all these `position` properties have given us ways to make things overlap, and `z-index` is how we can decide the *front-to-back* ordering (think [*<nobr>z-axis</nobr>*](https://en.wikipedia.org/wiki/Cartesian_coordinate_system#Three_dimensions)).
 <!-- .balance -->
 
+[<cite>Z-Index – MDN</cite>]((https://developer.mozilla.org/en-US/docs/Web/CSS/z-index))
+	This can be tricky to work with!
+<!-- .right -->
+
 By default, items that are lower in the HTML (coming *after* each other) are in front of higher, earlier elements:
-<!-- .balance -->
+<!-- .balance .before--2 -->
 
 <figure
 	@caption="The two `position` properties both create new stacking contexts, `z-index: 1;` moves even elements in front."
 	@source="z-index/preview/?active=style.css"
-	style="--lines: 14"
+	style="--lines: 16"
 	>
 </figure>
 
-A whole lot of things make a new [*stacking context*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) (including most `position` changes) which is kind of like a *group* (or a Figma *frame*) that has its own internal depth/overlap order.
+A whole lot of things make a new [*stacking context*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) (including most `position` changes) which is kind of like a *group* (or a Figma *frame*) that has its own internal depth/overlap order.
 <!-- .balance -->
 
-No amount of internal *z-index* adjustments can break something out of that group—which is one of the reasons why *z* can be really difficult to understand and tricky to use. But you can always adjust the *z-index* of the group, as we do here!
+No amount of internal `z-index` adjustments can “break” something out of that group—which is one of the reasons why *z* can be really difficult to understand and tricky to use. But you can always adjust the `z-index` of the group, as we do here!
 <!-- .balance -->
 
 ## Display

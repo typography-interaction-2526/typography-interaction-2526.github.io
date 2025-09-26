@@ -3,16 +3,16 @@ section:nth-child(3) {
 	inline-size: 66%;
 	inset-block-start: 3rem;
 	inset-inline-start: 3rem;
-	position: absolute; /* Here, in relation to body. */
+	position: absolute; /* Here, in relation to `body`. */
 }
 
 section:nth-child(5) {
 	background-color: tomato;
 	position: relative; /* The closest relative ancestor. */
-}
 
-section:nth-child(5) p {
-	inset-block-end: 3rem;
-	inset-inline-end: 3rem;
-	position: absolute; /* From the parent section. */
+	p {
+		inset-block-end: 3rem;
+		inset-inline-end: 3rem;
+		position: absolute; /* From the parent section. */
+	}
 }
