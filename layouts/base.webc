@@ -18,7 +18,7 @@
 			type="image/x-icon"
 		>
 		<link
-			href="/assets/icons/touch.png"
+			:href="`/assets/icons/touch${unitNumber ? '--' + unitNumber : ''}.png`"
 			rel="apple-touch-icon"
 		>
 		<template
