@@ -100,10 +100,16 @@
 <nav webc:root="override">
 	<menu>
 		<li>
-			<a href="#current">⤒</a>
+			<a
+				aria-label="Top"
+				href="#current"
+			>⤒</a>
 		</li>
 		<li>
-			<a href="#next">⤓</a>
+			<a
+				aria-label="Bottom"
+				href="#next"
+			>⤓</a>
 		</li>
 	</menu>
 </nav>
