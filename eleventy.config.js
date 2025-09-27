@@ -32,7 +32,7 @@ export default (eleventyConfig) => {
 
 	// Slide these on over.
 	eleventyConfig.addPassthroughCopy('assets/reset.css')
-	eleventyConfig.addPassthroughCopy('assets/**/*.(ico|otf|pdf|png)')
+	eleventyConfig.addPassthroughCopy('assets/**/*.(ico|otf|pdf|png|svg)')
 	eleventyConfig.addPassthroughCopy('content/**/*.(gif|jpg|png|svg)')
 	eleventyConfig.addPassthroughCopy({'node_modules/@parsons/ti-preview/dist/bundled/**/*.*': 'assets/ti-preview'})
 
