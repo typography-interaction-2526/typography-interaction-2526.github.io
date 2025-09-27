@@ -18,6 +18,11 @@
 			type="image/x-icon"
 		>
 		<link
+			:href="`/assets/icons/favicon${unitNumber ? '--' + unitNumber : ''}.svg`"
+			rel="icon"
+			type="image/svg+xml"
+		>
+		<link
 			:href="`/assets/icons/touch${unitNumber ? '--' + unitNumber : ''}.png`"
 			rel="apple-touch-icon"
 		>
