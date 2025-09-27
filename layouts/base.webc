@@ -12,7 +12,7 @@
 		>
 		<title @text="stripTags(markdown(title || course.title))"></title>
 		<link
-			:href="/assets/icons/favicon.ico"
+			href="/assets/icons/favicon.ico"
 			rel="icon"
 			sizes="64x64"
 			type="image/x-icon"
