@@ -1,3 +1,4 @@
+import image from '@11ty/eleventy-img'
 import webC from '@11ty/eleventy-plugin-webc'
 
 import markdownIt from 'markdown-it'
@@ -149,6 +150,8 @@ export default (eleventyConfig) => {
 	eleventyConfig.addFilter('stripTags', (content) => stripTags(String(content)))
 	eleventyConfig.addFilter('displayDate', (date) => new Date(date).toLocaleDateString('en-US', { day: 'numeric', month: 'short', timeZone: 'UTC' })
 		.replace(/(\w{3})/, (month) => month === 'May' ? month : month + '.'))
+
+	eleventyConfig.addFilter('inlineSvg', async (svg) => (await image(svg, { dryRun: true, formats: ['svg'] }))?.svg?.[0]?.buffer?.toString())
 
 	// Transform words for faux-italics.
 	eleventyConfig.addTransform('italicSpans', function(html) {

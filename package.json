@@ -29,6 +29,7 @@
 	},
 	"dependencies": {
 		"@11ty/eleventy": ">=4.0.0-alpha.0 <5.0.0",
+		"@11ty/eleventy-img": "^6.0.4",
 		"@11ty/eleventy-plugin-webc": "github:11ty/eleventy-plugin-webc",
 		"@11ty/webc": "github:11ty/webc",
 		"@mdit-vue/plugin-component": "^2.1.4",

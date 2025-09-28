@@ -28,7 +28,7 @@
 			grid-template-columns:      var(--diameter);
 			inset-block-end:            0;
 			margin-block-start:         calc(-1 * (var(--diameter) + var(--gap))); /* Offset `#top` one. */
-			overflow:                   hidden;
+			overflow:                   clip;
 			padding-block:              var(--inset);
 			padding-inline-end:         var(--inset);
 			padding-inline-start:       var(--inset);
@@ -62,11 +62,18 @@
 					filter:           drop-shadow(0 0.25rem 0.5rem var(--shadow));
 					margin:           calc(-1 * var(--overshoot));
 					place-items:      center;
-					text-align:       center;
 
 					&::after { border-radius: inherit }
 
-					/* Safari renders a heavier shadow? */
+					> svg {
+						block-size:   1rcap;
+						opacity:      75%;
+						stroke:       var(--background);
+						stroke-width: var(--stroke);
+					}
+
+					&[href='#next'] > svg { rotate: 180deg }
+
 					@supports (font: -apple-system-body) { --shadow: color-mix(in srgb, var(--nav), transparent) }
 				}
 			}
@@ -101,15 +108,17 @@
 	<menu>
 		<li>
 			<a
+				@html="inlineSvg('assets/icons/arrow-bar.svg')"
 				aria-label="Top"
 				href="#current"
-			>⤒</a>
+			></a>
 		</li>
 		<li>
 			<a
+				@html="inlineSvg('assets/icons/arrow-bar.svg')"
 				aria-label="Bottom"
 				href="#next"
-			>⤓</a>
+			></a>
 		</li>
 	</menu>
 </nav>
