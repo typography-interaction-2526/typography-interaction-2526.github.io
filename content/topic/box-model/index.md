@@ -8,10 +8,10 @@
 For real layout, the we first need to understand how CSS sizes elements—and how we can add space between them. This is called the [*the box model*](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model), as everything on the web begins as a rectangle.
 <!-- .start style="margin-block-start: initial" -->
 
-- [<cite>Introduction to CSS Layout – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction)
+- [<cite>Introduction to CSS Layout – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction)
 	As usual.
 
-- [<cite>Layout – web.dev</cite>](https://web.dev/learn/css/layout/)
+- [<cite>Layout – web.dev</cite>](https://web.dev/learn/css/layout/)
 	This gets into `grid` and `flex`; we’ll talk about those next unit.
 
 - [<cite>Learn CSS Layout</cite>](https://learnlayout.com)
@@ -75,7 +75,7 @@ We’ve pulled our standard [CSS reset](/topic/css#resets) into the `<head>` for
 Next comes [`padding`](https://developer.mozilla.org/en-US/docs/Web/CSS/padding), which extends the element’s area around the content. It’s easiest to think of this as an *inset* (if we’ve made our `box-sizing` the more-intuitive `border-box`, above):
 <!-- .balance -->
 
-[<cite>Padding – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
+[<cite>Padding – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 	There will be many of these.
 <!-- .right -->
 
@@ -90,7 +90,7 @@ Next comes [`padding`](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
 Know that `padding`—and many other properties, including `border` and <nobr>`margin`—</nobr>can be specified with a [*shorthand* property](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties) to make it easier to use the same spacing all around, or shared top/bottom and left/right.
 <!-- .balance -->
 
-[<cite>Shorthand Properties – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties)
+[<cite>Shorthand Properties – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties)
 	Be wary of the siren call of shorthand properties!
 <!-- .right -->
 
@@ -204,7 +204,7 @@ This is a real mental model shift—for your instructors, too! We’re going to
 Back to our box model, moving outwards, with [`border`](https://developer.mozilla.org/en-US/docs/Web/CSS/border). Border is… the border around an element. It has its own `border-width`, `border-color`, and also `border-style`:
 <!-- .balance -->
 
-[<cite>Border – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
+[<cite>Border – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/border)
 	Our first non-text design element! You are allowed.
 <!-- .right -->
 
@@ -237,7 +237,7 @@ And fun with `border-radius`:
 The last part of our box is [`margin`](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)—the space *around* an element, empty/white-space area that is used to separate an element from its *siblings*. Like `padding` and `border`, you can specify it all around or on individual sides:
 <!-- .balance -->
 
-[<cite>Margin – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
+[<cite>Margin – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/margin)
 	The space between things.
 <!-- .right -->
 
@@ -273,7 +273,7 @@ Also [margins *collapse*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_B
 Okay, so now we have all these box properties—but how do we specify the dimensions? CSS has many [*length units*](https://developer.mozilla.org/en-US/docs/Web/CSS/length), used for `inline-size`, `block-size`, and also  `padding`, `border`, `margin`, and even `font-size`. (Picas, anyone?) We’ll look at some common ones.
 <!-- .balance -->
 
-[<cite>`<length>` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/length)
+[<cite>`<length>` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/length)
 	*Length* is used by many properties!
 <!-- .right -->
 
@@ -443,7 +443,7 @@ No matter how complex it gets, it really always comes back to these basics.
 With an idea of how elements take up space, now we’ll look at how they exist and move together in the [*document flow*](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow). The CSS property `position` [sets this relationship](https://developer.mozilla.org/en-US/docs/Web/CSS/position).
 <!-- .balance -->
 
-[<cite>Position – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+[<cite>Position – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 	Interesting web work often uses `position`.
 <!-- .right -->
 
@@ -561,7 +561,7 @@ No amount of internal `z-index` adjustments can “break” something out of tha
 In our [HTML introduction](/topic/html#block-elements) we briefly talked about `block` and `inline` elements—as set by the user-agent styles. These are the first two examples of [the `display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display).
 <!-- .balance -->
 
-[<cite>Display – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+[<cite>Display – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
 	Our `block` and `inline` elements (and later, `grid` and `flex`).
 <!-- .right -->
 
@@ -620,7 +620,7 @@ This is a common way to hide/show (by setting another `display` property) elemen
 You can also hide something visually *without* taking it out of the document *flow,* which is useful when you don’t want the page to jump/*reflow* when something appears/disappears.
 <!-- .balance -->
 
-[<cite>Visibility – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility)
+[<cite>Visibility – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility)
 	This also hides elements from assistive technologies (screen readers).
 <!-- .right .rows--2 -->
 
@@ -638,7 +638,7 @@ Setting `visibility: hidden;` keeps the space an element had before, but makes i
 Another way to hide an element visually is to adjust `opacity`, which uses values on a scale from `0`&NoBreak;–&NoBreak;`1` or `0%`&NoBreak;–&NoBreak;`100%`. This differs from `visibility` because elements with no (or partial) opacity can still be interacted with:
 <!-- .balance -->
 
-[<cite>Opacity – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
+[<cite>Opacity – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
 	The entire element *and* its descendents are adjusted, as one.
 <!-- .right  -->
 
@@ -657,7 +657,7 @@ Keep in mind that `display: none;`, `visibility: hidden;`, and `opacity: 0;` onl
 Oh right, floats. Sometimes you’ll want to have an image or block flow within a block of text. There are a lot of ways to do this now, but the oldest (and sometimes still the trickiest) is a [`float`](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats).
 <!-- .balance -->
 
-[<cite>Floats – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats)
+[<cite>Floats – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats)
 	You don’t see these used as much, anymore!
 <!-- .right -->
 

@@ -7,7 +7,7 @@
 
 HTML is the standard markup language/format for creating web pages, containing the content and structure of a page as a series of *elements*.
 
-- [<cite>HTML – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML) \
+- [<cite>HTML – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML) \
 	When in doubt, refer to the MDN documentation!
 
 - [<cite>Basics of HTML</cite>](https://www.youtube.com/watch?v=CkzbI1Tv_rQ)\
@@ -117,7 +117,7 @@ We use semantic elements to help structure and describe our content—but also f
 [Elements](https://developer.mozilla.org/en-US/docs/Glossary/Element) are composed of *tags* and their content:
 <!-- .intro .body -->
 
-[<cite>HTML Elements Reference – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+[<cite>HTML Elements Reference – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 	MDN will always go deep; this is *all* the elements.
 <!-- .right .start -->
 
@@ -209,7 +209,7 @@ There are [many, many HTML elements](https://developer.mozilla.org/en-US/docs/We
 All HTML elements can have [attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes), which provide more information about the element:
 <!-- .intro .body -->
 
-[<cite>HTML Attribute Reference – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)
+[<cite>HTML Attribute Reference – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)
 	There are a lot of them.
 <!-- .right .start -->
 
@@ -310,7 +310,7 @@ Class: `class` <!-- #class -->
 
 Generally speaking, HTML doesn’t care about capitalization, extra white space, or line breaks (one exception, [below](#inline-whitespace)). The browser will just read everything from left to right, as if it is one long, running sentence. So the shouty `<html>` and quieter `<html>` are interpreted the same.
 
-[<cite>How Whitespace Is Handled – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Whitespace)
+[<cite>How Whitespace Is Handled – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Whitespace)
 	It depends! It always depends.
 <!-- .right .rows--2 -->
 
@@ -371,7 +371,7 @@ Code is read more often than it is written. Code should always be written in a w
 `<figure>`
 `<footer>`
 `<form>`
-<span class="nowrap">`<h1>` – `<h6>`</span>
+<span class="nowrap">`<h1>` – `<h6>`</span>
 <!-- .three -->
 
 `<header>`
