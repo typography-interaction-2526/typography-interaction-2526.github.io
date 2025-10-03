@@ -167,6 +167,7 @@ main {
 			inline-size:       1.1em;
 			inset-block-start: 0;
 			inset-inline-end:  100%;
+			white-space:       nowrap;
 		}
 
 		&:has(:nth-child(10)) {
