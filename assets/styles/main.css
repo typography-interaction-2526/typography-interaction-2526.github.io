@@ -233,12 +233,13 @@ main {
 	}
 
 	/* TODO Move this to component? (And flatten that into native/Markdown?) */
+	:where(&, section) > figure { grid-column: all }
+
 	figure {
-		align-items:           start;
-		display:               grid;
-		grid-column:           all;
-		position:              relative;
-		row-gap:               1rlh;
+		align-items: start;
+		display:     grid;
+		position:    relative;
+		row-gap:     1rlh;
 
 		&:where(:not(:first-child)), &:where(:not(:last-child)) + * { margin-block-start: 2rlh }
 
