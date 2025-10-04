@@ -7,13 +7,13 @@
 There is no single *best* browser; they are all kind of differently bad, in [different ways](https://en.wikipedia.org/wiki/Anna_Karenina_principle).
 <!-- .balance .bold .scale--h4 -->
 
-- [<letter-bullet @title="Chrome DevTools"></letter-bullet>](https://developer.chrome.com/docs/devtools/) \
+- [<cite>Chrome DevTools</cite>](https://developer.chrome.com/docs/devtools/) \
 We’ll be using these.
 
-- [<letter-bullet @title="Safari Web Development Tools"></letter-bullet>](https://developer.apple.com/safari/tools/)
+- [<cite>Safari Web Development Tools</cite>](https://developer.apple.com/safari/tools/)
 Got some long-overdue love in [*Sonoma*](https://developer.apple.com/videos/play/wwdc2023/10118), but [little since](https://webkit.org/blog/15865/webkit-features-in-safari-18-0/#web-inspector).
 
-- [<letter-bullet @title="Firefox DevTools User Docs"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Tools)
+- [<cite>Firefox DevTools User Docs</cite>](https://developer.mozilla.org/en-US/docs/Tools)
 Spiritual successor to [*Firebug*](https://thehistoryoftheweb.com/checking-under-the-hood-of-code/), the first suite.
 <!-- .link-list .right style="--rows: 3" -->
 
