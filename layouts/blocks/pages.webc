@@ -51,7 +51,7 @@
 			background-color: var(--background);
 
 			/* Unit title “headers.” */
-			> ul > li:first-child { background-color: var(--background--alt) }
+			> header { background-color: var(--background--alt) }
 
 			/* Unit colors. */
 			&:nth-child(4) {
@@ -94,14 +94,11 @@
 		></block>
 	</li>
 	<li webc:for="unit of groupedPages">
+		<block
+			webc:import="header.webc"
+			:id="slugify(unit[0].data.unit)"
+		></block>
 		<ul>
-			<!-- TODO Also add “empties” for Thanksgiving/Winter/Spring break? -->
-			<li>
-				<block
-					webc:import="header.webc"
-					:id="slugify(unit[0].data.unit)"
-				></block>
-			</li>
 			<li
 				webc:for="item of unit"
 				:id="pagePosition(item, $data)"
