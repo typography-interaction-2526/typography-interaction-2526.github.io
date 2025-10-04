@@ -11,9 +11,7 @@
 
 <style webc:scoped>
 	:host {
-		--size:   var(--size--h1);
-
-		position: relative;
+		--size: var(--size--h1);
 
 		/* Page links. */
 		> a {
@@ -66,34 +64,15 @@
 			display:          block;
 		}
 
-		/* Future pages. */
-		&:has(> a:not([href])) > a { opacity: var(--disabled--opacity) }
-
 		/* Unit titles. */
-		&:not(:has(a > hgroup)) {
-			a { padding-block: 0.5cap }
+		&:not(:has(a > hgroup)) { a { padding-block: 0.5cap } }
 
-			/* TODO There is definitely a less-redundant way to do this. */
-			&:has(> a:not([href]))::before {--color: var(--disabled) }
-		}
+		/* Future pages. */
+		&:has(> a:not([href])) { --color: var(--disabled) }
 	}
 
-	/* Flip the next divider off (unless it has a link) with undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
-	:host-context(li:has(> header > a:not([href])) + *):has(> a:not([href]))::before { --color: var(--disabled) }
-
-	/* Another on the end of lists, feels better. */
-	:host-context(li:last-child:has(> header > a[href]))::after {
-		background-color: var(--color);
-		block-size:       var(--stroke);
-		content:          '';
-		display:          block;
-		inset-block-end:  calc(-1 * var(--stroke));
-		inset-inline:     0;
-		position:         absolute;
-		z-index:          1;
-	}
-
-	/* TODO This doesn’t work across units, but obviated by override above. */
+	/* Flip the next divider on with undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
+	:host-context(li:has(> header:only-child > a[href]) + li)::before { --color: black }
 </style>
 
 <header webc:root="override">
