@@ -2,6 +2,7 @@
 	const draft = true
 	const title = 'DevTools (Web Inspector)'
 	const week = 7
+	const order = 2
 </script>
 
 There is no single *best* browser; they are all kind of differently bad, in [different ways](https://en.wikipedia.org/wiki/Anna_Karenina_principle).

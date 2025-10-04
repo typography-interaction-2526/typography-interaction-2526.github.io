@@ -2,6 +2,7 @@
 	const draft = true
 	const title = 'Responsive Design'
 	const week = 7
+	const order = 1
 </script>
 
 <blockquote

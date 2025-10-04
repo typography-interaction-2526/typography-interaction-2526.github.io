@@ -4,7 +4,11 @@
 	export const groupedPages = (() => {
 		const pages = [...$data.collections.pages]
 			.filter((page) => page.data.week)
-			.sort((a, b) => (a.data.week - b.data.week) || (typeOrder.indexOf(a.data.type) - typeOrder.indexOf(b.data.type)))
+			.sort((a, b) =>
+				(a.data.week - b.data.week) ||
+				(typeOrder.indexOf(a.data.type) - typeOrder.indexOf(b.data.type)) ||
+				(a.data.order ?? 0) - (b.data.order ?? 0),
+			)
 
 		const map = new Map()
 
