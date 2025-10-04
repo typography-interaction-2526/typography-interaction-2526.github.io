@@ -28,8 +28,6 @@
 
 </blockquote>
 
-
-
 ## What Is Responsive Design?
 
 Let’s first take a minute to talk about *responsive design*. This term was coined in 2010 or so [by Ethan Marcotte](https://alistapart.com/article/responsive-web-design/)—wrapping a name around a [*progressive enhancement*](https://alistapart.com/article/understandingprogressiveenhancement/) and [*mobile-first*](https://www.lukew.com/ff/entry.asp?933) web design approach/<wbr>philosophy that had been growing in the mid-2000s (sometimes called *liquid, flexible, fluid,* or *elastic* design).
@@ -65,8 +63,6 @@ There was a confluence of events that allowed this: modern, <nobr>self-updatin
 	style="align-self: start"
 	>
 </figure>
-
-
 
 ## The Viewport <!-- .add-after -->
 
@@ -117,8 +113,6 @@ You’ll [see this `meta` element](https://developer.mozilla.org/en-US/docs/Web/
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
-
-
 This `meta` element tells the browser *not* to do this scaling. It says, *“I have a responsive design! Render me at my actual size. My content can reflow.”*
 <!-- .add-before .add-after--3 .secondary -->
 
@@ -138,8 +132,6 @@ We call the portion of the page visible at one time [the *viewport*](https://
 	class="recto"
 	>
 </figure>
-
-
 
 ## Media Queries
 
@@ -166,8 +158,6 @@ These blocks are like any other CSS—if there are multiple conditions that are 
 ```
 
 </div>
-
-
 
 ## Width-Based Breakpoints
 
@@ -227,8 +217,6 @@ This width rule/test/criteria uses the same syntax as [length properties](/topic
 	>
 </figure>
 
-
-
 ## Height-Based, Too
 
 <div class="verso">
@@ -243,8 +231,8 @@ This example is the same *breakpoint* of `500px` as before, but now using `h
 <figure
 	@caption="These code examples are responsive, <nobr>themselves—</nobr>stacking like this when they are narrow."
 	@source="media-height-min-max/preview/?active=style.css"
-	style="--lines: 19; --rows: 2; align-self: end; margin-block-end: initial;"
 	class="recto"
+	style="--lines: 19; --rows: 2; align-self: end; margin-block-end: initial;"
 	>
 </figure>
 
@@ -258,8 +246,6 @@ We’ll talk about this in detail later [with JavaScript](https://developer.mozi
 
 </div>
 
-
-
 ## Orientation
 
 You can also be less specific about your width/height and instead use `orientation`—like when you rotate your phone. The queries use the wonderfully tenacious names/values of `portrait` or `landscape`:
@@ -270,8 +256,6 @@ You can also be less specific about your width/height and instead use `orientati
 	style="--lines: 11"
 	>
 </figure>
-
-
 
 ## And&thinsp;/Or Combinations
 
@@ -298,8 +282,6 @@ There is also a `not` [logic operator](https://developer.mozilla.org/en-US/docs
 
 Why say `not` `portrait` when you can just say `landscape`?
 <!-- .secondary .add-before -->
-
-
 
 ## Mobile-First Design
 
@@ -336,8 +318,6 @@ This goes “with the grain,” following the general CSS pattern/paradigm of t
 
 Mobile can be the *majority* of your traffic—[especially internationally](https://gs.statcounter.com/platform-market-share/desktop-mobile/worldwide)! Think of *mobile-first* design as a form of accessibility, in this light. Not everyone has your MacBook Pro.
 <!-- .add-before .bold .scale--h4 -->
-
-
 
 ## Briefly, CSS Variables
 
@@ -385,13 +365,9 @@ You’ll often declare a set of variables for mobile—type sizes, spacing, an
 
 They’ll help you avoid unwanted cascade (applying the same property), especially across breakpoints. But they also help to facilitate *design system* thinking—focusing your design on the relative *relationships* of things.
 
-
-
 ## Other Media Features
 
 By far, the most common media queries will be *width*/<wbr>*height*/<wbr>*orientation*—for adjusting your layouts across devices. But `@media` has some [more tricks](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_features) up its sleeve in testing for other browser features. We’ll look at some of the handy/common ones.
-
-
 
 ### `screen` vs. `print`
 
@@ -403,8 +379,6 @@ In all of our above examples, there is an implied *[media type](https://devel
 	style="--lines: 20"
 	>
 </figure>
-
-
 
 ### `hover`
 
@@ -421,8 +395,6 @@ Mobile *touch-based* systems don’t have this behavior (and often react oddly 
 
 Hover states are a good feature for *progressive-enhancement*, as we did here—to add them in *after* you have a working mobile design. Since maybe a third to a half of your audience (depending on your project) won’t see them, don’t rely on them being seen!
 
-
-
 ### `prefers-color-scheme`
 
 You see this one more and more these days—switching up a site’s styles based on whether the user is in *light* or *dark mode*, popularized by the ol’ iPhone again:
@@ -434,10 +406,7 @@ You see this one more and more these days—switching up a site’s styles base
 	>
 </figure>
 
-
 Sometimes this feels appropriate—especially in products/applications, like maybe a messaging service. But sometimes the color scheme of a site is its *brand*, and probably shouldn’t change based on this query. It’s up to you! Continuing our ongoing discussion of who has the control.
-
-
 
 ### `prefers-contrast`&thinsp;, `prefers-reduced-motion` <!-- style="--typography--leading: 1.5" -->
 

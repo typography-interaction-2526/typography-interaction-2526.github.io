@@ -23,8 +23,6 @@ You have always [been able to](https://blog.jim-nielsen.com/2020/the-spirit-of-v
 
 You’ll often hear people (Michael) call it the *Web Inspector*, or just *The Inspector*. It’s going to be your best (Web) friend, showing you everything that the browser has *parsed* to display your pages.
 
-
-
 ## Inspecting Pages
 
 <div class="add-after--3 verso" style="align-self: stretch; justify-content: center">
@@ -43,7 +41,6 @@ You can also hit <kbd>⌘&thinsp;~&thinsp;Ctrl</kbd> <kbd>⌥&thinsp;~&thinsp;Al
 	>
 </figure>
 
-
 By default, you’ll see the tools open on the right side of the page. Depending on how big your screen is, they might be laid out a bit <nobr>differently—</nobr>but the basics are usually the same:
 <!-- .add-before--3 .balance -->
 
@@ -53,7 +50,6 @@ By default, you’ll see the tools open on the right side of the page. Dependin
 	style="--height: 90vh"
 	>
 </figure>
-
 
 <div class="add-before--3 verso" style="align-self: center">
 
@@ -68,9 +64,6 @@ The Customize <samp>⋮</samp> button will let you change the side they appear o
 	style="align-items: end"
 	>
 </figure>
-
-
-
 
 ## Elements Panel
 
@@ -95,8 +88,6 @@ The <samp>flex</samp>&thinsp;/&thinsp;<samp>grid</samp> badges toggle their layo
 Handy tip: <kbd>⌘&thinsp;~&thinsp;Ctrl</kbd> <kbd>F</kbd> in here will let you search for elements or text by name/<wbr>class/<wbr>contents!
 <!-- .balance .secondary .recto -->
 
-
-
 ## St<span style="margin-inline-start: 0.05em">y</span>les Tab
 
 <div class="left">
@@ -118,7 +109,6 @@ On the right, you can see the sum *Computed* (or *rendered*) values of all the
 You can type specific CSS properties/values into both <samp>Filter</samp> boxes to quickly narrow things down!
 <!-- .balance .secondary .recto -->
 
-
 You can make changes in Elements or Styles, and the edits will be immediately visible on the page *as if you had edited the source files*. It’s useful to try things out quickly&zwj;—or diagnose where problems/<wbr>conflicts arise.
 <!-- .add-before--3 .balance .bold .scale--h4 -->
 
@@ -128,17 +118,14 @@ Keep in mind these changes are temporary—any edits in the DevTools will be l
 
 </aside>
 
-
-
 ## Device Mode
 
 Enter *device mode* with the little phone/laptop <samp style="-webkit-text-stroke-width: 0.05rem">◲</samp> button, in the upper left of the DevTools:
 <!-- .balance -->
 
-
 <figure
-	@source="device.png"
 	@caption="Be sure to <em>refresh</em> with <kbd>⌘&thinsp;~&thinsp;Ctrl</kbd> <kbd>R</kbd> if the page doesn’t rescale correctly when you enter this mode! They sometimes don’t, depending on how they are built—especially with JS shenanigans."
+	@source="device.png"
 	class="shadow"
 	style="--height: 90vh"
 	>
@@ -158,22 +145,20 @@ Remember that you are not targeting specific devices here&zwj;—you are lookin
 </div>
 
 <figure
-	@source="responsive.png"
 	@caption="The *Device List* is… *ancient* and inaccurate—they don’t account for the browser’s own interface, so they are all too tall!"
+	@source="responsive.png"
 	class="center shadow"
 	style="--lines: 14.5; align-self: start; position: relative; inset-inline-start: var(--layout--alley)"
 	>
 </figure>
 
 <figure
-	@source="options.png"
 	@caption="The *More Options* menu here has some handy tricks!"
+	@source="options.png"
 	class="right shadow"
 	style="--lines: 7.5; align-self: start; position: relative; inset-inline-start: var(--layout--alley)"
 	>
 </figure>
-
-
 
 <aside>
 
@@ -182,7 +167,6 @@ Always make sure to check your work on the *real thing*, as much as possible!
 This is just a quicker preview, but isn’t always perfectly accurate&zwj;—and also won’t reflect any platform-specific behaviors around scrolling or rotating. (We’re looking at you, [i&thinsp;OS Safari](https://bugs.webkit.org/show_bug.cgi?id=141832).)
 
 </aside>
-
 
 ## The Console
 
@@ -206,8 +190,8 @@ You can also hit <kbd>⌘&thinsp;~&thinsp;Ctrl</kbd> <kbd>⌥&thinsp;~&thinsp;Al
 </figure>
 
 <figure
-	@source="console.png"
 	@caption="The Console opened under Elements/Styles."
+	@source="console.png"
 	class="shadow"
 	style="--height: 90vh"
 	>
