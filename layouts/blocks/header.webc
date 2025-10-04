@@ -13,6 +13,11 @@
 	:host {
 		--size: var(--size--h1);
 
+		/* Dividers. */
+		border-block-color:       var(--color);
+		border-block-start-style: solid;
+		border-block-width:       var(--stroke);
+
 		/* Page links. */
 		> a {
 			border-radius:   calc(var(--enlargement) * 2);
@@ -53,31 +58,29 @@
 			@media (width >= 37.5em) { flex-direction: row }
 		}
 
-		/* Dividers. */
-		&::before,
-		&:has(~ main)::after {
-			background-color: var(--color);
-			block-size:       var(--stroke);
-			content:          '';
-			display:          block;
+		/* Divider between when open. */
+		&:has(~ main) { border-block-end-style: solid }
+
+		/* Hanging one over next. */
+		&:where(:has(> a[href]))::after {
+			background-color:  var(--color);
+			block-size:        var(--stroke);
+			content:           '';
+			display:           block;
+			inset-block-start: 100%;
+			inset-inline:      0;
+			position:          absolute;
+			z-index:           1;
 		}
 
-		/* Unit titles. */
+		/* Keep it within for the unit headers. */
+		&:has(+ ul) { position: relative }
+
+		/* Unit titles, breaks. */
 		&:not(:has(a > hgroup)) { a { padding-block: 0.5cap } }
 
 		/* Future pages. */
-		&:has(> a:not([href])) {
-			a { opacity: var(--disabled--opacity) }
-			&::before { --color: var(--disabled) }
-		}
-	}
-
-	/* Flip the next dividers on with undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
-	:host-context(li:has(> article) + li)::before,
-	:host-context(li:has(> header:only-child > a[href]) + li)::before,
-	:host-context(li:has(> ul > li:last-child > header > a[href]) + li):has(+ ul)::before,
-	:host-context(li:has(> ul > li:last-child > article) + li):has(+ ul)::before {
-		--color: black;
+		&:where(:has(> a:not([href]))) { opacity: var(--disabled--opacity) }
 	}
 </style>
 
