@@ -86,17 +86,17 @@
 
 <header
 	webc:root="override"
-	:id="!item && slugify(unit?.[0].data.unit)"
+	:id="!title && !item && slugify(unit?.[0].data.unit)"
 >
+	<a webc:if="title">
+		<p @text="title"></p>
+	</a>
 	<a
-		webc:if="!item"
+		webc:elseif="!item"
 		:href="unit.some(unit => unit?.url) && `#${slugify(unit[0].data.unit)}`"
 	>
 		<p @html="`Unit Nº ${unit[0].data.unitNumber}: “${markdown(unit[0].data.unit)}”`"></p>
 		<p @text="`Wks. ${weekRange(unit[0].data.unitNumber)}`"></p>
-	</a>
-	<a webc:elseif="title">
-		<p @text="title"></p>
 	</a>
 	<a
 		webc:else
