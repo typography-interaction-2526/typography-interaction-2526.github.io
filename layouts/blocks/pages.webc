@@ -97,16 +97,30 @@
 	<li webc:for="unit of groupedPages">
 		<block webc:import="header.webc"></block>
 		<ul>
-			<li
+			<template
+				webc:nokeep
 				webc:for="item of unit"
-				:id="pagePosition(item, $data)"
 			>
-				<slot webc:if="item.url === $data.page.url"></slot>
-				<block
-					webc:else
-					webc:import="header.webc"
-				></block>
-			</li>
+				<li :id="pagePosition(item, $data)">
+					<slot webc:if="item.url === $data.page.url"></slot>
+					<block
+						webc:else
+						webc:import="header.webc"
+					></block>
+				</li>
+				<li webc:if="item.data.week === 13">
+					<block
+						webc:import="header.webc"
+						@title="Thanksgiving"
+					></block>
+				</li>
+				<li webc:if="item.data.week === 23">
+					<block
+						webc:import="header.webc"
+						@title="Spring Break"
+					></block>
+				</li>
+			</template>
 		</ul>
 	</li>
 </ul>
