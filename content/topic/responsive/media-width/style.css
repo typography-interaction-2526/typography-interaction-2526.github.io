@@ -1,0 +1,5 @@
+section { background-color: aquamarine; }
+
+@media (min-width: 500px) {
+	section { background-color: coral; }
+}

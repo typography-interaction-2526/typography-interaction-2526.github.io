@@ -1,0 +1,18 @@
+:root { --background: aquamarine; }
+
+section { background-color: var(--background); }
+
+@media screen and (min-width: 500px) {
+	:root { --background: coral; }
+}
+
+@media print {
+	:root { --background: white; }
+
+	section {
+		border: 2px solid black;
+		font-family: serif;
+		font-size: 18pt;
+		padding: 0.5in;
+	}
+}

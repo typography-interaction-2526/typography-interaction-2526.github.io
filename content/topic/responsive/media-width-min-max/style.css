@@ -1,0 +1,13 @@
+section { background-color: aquamarine; }
+
+@media (min-width: 500px) {
+	section:first-child { background-color: coral; }
+}
+
+@media (width: 500px) {
+	section:nth-child(2) { background-color: orange; }
+}
+
+@media (max-width: 500px) {
+	section:last-child { background-color: gold; }
+}
