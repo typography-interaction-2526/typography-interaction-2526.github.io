@@ -139,7 +139,7 @@ We call the portion of the page visible at one time [the *viewport*](https://dev
 
 Responsive design could only really flourish when CSS (and browsers) added the `@media` [*at-rule*](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries) around the same time.
 
-These are colloquially called *media queries*, and they allow us to check if screen is a certain width or resolution (or other features, which we’ll <nobr>get to)—</nobr>and then apply selective CSS only in that scenario/situation. These let site layouts *respond* intentionally to different devices, for the first time.
+These are colloquially called *media queries*, and they allow us to check if screen is a certain width or resolution (or other features, which we’ll get to)—and then apply selective CSS only in that scenario/situation. These let site layouts *respond* intentionally to different devices, for the first time.
 
 Practically, these are blocks of CSS—a little bit like [*selectors*](/topic/css/#basic-selectors) that contain other selectors—but which only apply conditionally when the test/criteria is met.
 
@@ -229,7 +229,7 @@ This example is the same *breakpoint* of `500px` as before, but now using `heigh
 </div>
 
 <figure
-	@caption="These code examples are responsive, <nobr>themselves—</nobr>stacking like this when they are narrow."
+	@caption="These code examples are responsive, themselves—stacking like this when they are narrow."
 	@source="media-height-min-max/preview/?active=style.css"
 	class="recto"
 	style="--lines: 19; --rows: 2; align-self: end; margin-block-end: initial;"

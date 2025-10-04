@@ -41,7 +41,7 @@ You can also hit <kbd>⌘&thinsp;~&thinsp;Ctrl</kbd> <kbd>⌥&thinsp;~&thinsp;Al
 	>
 </figure>
 
-By default, you’ll see the tools open on the right side of the page. Depending on how big your screen is, they might be laid out a bit <nobr>differently—</nobr>but the basics are usually the same:
+By default, you’ll see the tools open on the right side of the page. Depending on how big your screen is, they might be laid out a bit differently—but the basics are usually the same:
 <!-- .add-before--3 .balance -->
 
 <figure
@@ -53,7 +53,7 @@ By default, you’ll see the tools open on the right side of the page. Depending
 
 <div class="add-before--3 verso" style="align-self: center">
 
-The Customize <samp>⋮</samp> button will let you change the side they appear on, or undock the tools out entirely into a separate <nobr>window—</nobr>sometimes easier on a laptop/<wbr>small screen:
+The Customize <samp>⋮</samp> button will let you change the side they appear on, or undock the tools out entirely into a separate window—sometimes easier on a laptop/<wbr>small screen:
 <!-- .balance -->
 
 </div>
