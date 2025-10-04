@@ -71,11 +71,13 @@
 		&:has(> a:not([href])) { --color: var(--disabled) }
 	}
 
-	/* Flip the next divider on with undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
-	:host-context(li:has(> header:only-child > a[href]) + li)::before { --color: black }
-
-	/* Same across nested unit lists. */
-	:host-context(li:has(> ul > li:last-child > header > a[href]) + li):has(+ ul)::before { --color: black }
+	/* Flip the next dividers on with undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
+	:host-context(li:has(> article) + li)::before,
+	:host-context(li:has(> header:only-child > a[href]) + li)::before,
+	:host-context(li:has(> ul > li:last-child > header > a[href]) + li):has(+ ul)::before,
+	:host-context(li:has(> ul > li:last-child > article) + li):has(+ ul)::before {
+		--color: black;
+	}
 </style>
 
 <header webc:root="override">
