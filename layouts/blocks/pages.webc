@@ -17,6 +17,7 @@
 			if (!map.has(unit)) map.set(unit, [])
 			map.get(unit).push(page)
 		}
+
 		return Array.from(map.values())
 	})()
 
@@ -94,10 +95,7 @@
 		></block>
 	</li>
 	<li webc:for="unit of groupedPages">
-		<block
-			webc:import="header.webc"
-			:id="slugify(unit[0].data.unit)"
-		></block>
+		<block webc:import="header.webc"></block>
 		<ul>
 			<li
 				webc:for="item of unit"
