@@ -1,7 +1,8 @@
-<!---
-const title = 'DevTools <span class="parens">(</span>Web Inspector<span class="parens">)</span>'
-const order = 7
---->
+<script front-matter>
+	const draft = true
+	const title = 'DevTools (Web Inspector)'
+	const week = 7
+</script>
 
 There is no single *best* browser; they are all kind of differently bad, in [different ways](https://en.wikipedia.org/wiki/Anna_Karenina_principle).
 <!-- .balance .bold .scale--h4 -->

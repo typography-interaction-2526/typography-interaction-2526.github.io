@@ -1,7 +1,8 @@
-<!---
-const title = 'Responsive Design'
-const order = 6
---->
+<script front-matter>
+	const draft = true
+	const title = 'Responsive Design'
+	const week = 7
+</script>
 
 <blockquote
 	@attribution="Bruce Lee"
