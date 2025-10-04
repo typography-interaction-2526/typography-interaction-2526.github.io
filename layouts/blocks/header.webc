@@ -35,8 +35,6 @@
 				-webkit-text-stroke-width: 0.01em;
 				text-transform:            uppercase;
 
-				/* TODO any way to matte this and avoid the `--disabled--opacity`? */
-
 				/* Range/dates at the end. */
 				&:last-child {
 					align-self:  start;
@@ -68,7 +66,10 @@
 		&:not(:has(a > hgroup)) { a { padding-block: 0.5cap } }
 
 		/* Future pages. */
-		&:has(> a:not([href])) { --color: var(--disabled) }
+		&:has(> a:not([href])) {
+			a { opacity: var(--disabled--opacity) }
+			&::before { --color: var(--disabled) }
+		}
 	}
 
 	/* Flip the next dividers on with undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
