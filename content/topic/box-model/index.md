@@ -137,7 +137,7 @@ section {
 
 ### …and *Logical* Properties <!-- .before--2 -->
 
-You can also now define all your box model properties using [*logical* directions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values)—meaning instead of *physical* (`top`/`bottom`, `left`/`right`) orientations, you can [map your rules](https://adrianroselli.com/2019/11/css-logical-properties.html) to the *flow* of the text (`block-start`/<wbr>`block-end`, `inline-start`/<wbr>`inline-end`).
+You can also now define all your box model properties using [*logical* directions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values)—meaning instead of *physical* (`top`/`bottom`, `left`/`right`) orientations, you can [map your rules](https://adrianroselli.com/2019/11/css-logical-properties.html) to the *flow* of the text (`block-start``block-end`, `inline-start`/`inline-end`).
 <!-- .balance -->
 
 [<cite>CSS Logical Properties</cite>](https://adrianroselli.com/2019/11/css-logical-properties.html)
@@ -706,7 +706,7 @@ You can solve this broken look with a [*clearfix hack*](https://developer.mozill
 Generally, folks try and avoid floats—they aren’t common in modern design patterns and have been giving people headaches for… decades now.
 <!-- .intro -->
 
-They require you to know how long your content is and also how big your viewport/page will be—*both* things that you don’t always have control over in responsive/<wbr>mobile 2025. But sometimes they are still the only thing that can do what you need!
+They require you to know how long your content is and also how big your viewport/page will be—*both* things that you don’t always have control over in responsive/mobile 2025. But sometimes they are still the only thing that can do what you need!
 <!-- .balance -->
 
 ### What about `flex` and `grid`?

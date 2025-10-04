@@ -19,7 +19,7 @@ Spiritual successor to [*Firebug*](https://thehistoryoftheweb.com/checking-under
 
 Many developers use [Chrome](https://www.google.com/chrome) for [its popularity](https://gs.statcounter.com/browser-market-share), before testing in other browsers. It also arguably has the most robust set of *DevTools*—though [Safari](https://www.apple.com/safari/) and [Firefox](https://developer.mozilla.org/en-US/docs/Tools) have their own versions, too. Much of this is just preference, but ultimately you’ll want to see what your visitors are seeing.
 
-You have always [been able to](https://blog.jim-nielsen.com/2020/the-spirit-of-view-source/#how-browsers-do-view-source-today-on-mac) <samp>View Source</samp>, from [the earliest days&thinsp;/<wbr>browsers](https://thehistoryoftheweb.com/checking-under-the-hood-of-code/)—remember that the open web has *always* trafficked in source code. But we’ll use DevTools for the same reason we use an IDE—more comfortable ergonomics, specifically around building for the web.
+You have always [been able to](https://blog.jim-nielsen.com/2020/the-spirit-of-view-source/#how-browsers-do-view-source-today-on-mac) <samp>View Source</samp>, from [the earliest days&thinsp;/browsers](https://thehistoryoftheweb.com/checking-under-the-hood-of-code/)—remember that the open web has *always* trafficked in source code. But we’ll use DevTools for the same reason we use an IDE—more comfortable ergonomics, specifically around building for the web.
 
 You’ll often hear people (Michael) call it the *Web Inspector*, or just *The Inspector*. It’s going to be your best (Web) friend, showing you everything that the browser has *parsed* to display your pages.
 
@@ -53,7 +53,7 @@ By default, you’ll see the tools open on the right side of the page. Depending
 
 <div class="add-before--3 verso" style="align-self: center">
 
-The Customize <samp>⋮</samp> button will let you change the side they appear on, or undock the tools out entirely into a separate window—sometimes easier on a laptop/<wbr>small screen:
+The Customize <samp>⋮</samp> button will let you change the side they appear on, or undock the tools out entirely into a separate window—sometimes easier on a laptop/small screen:
 <!-- .balance -->
 
 </div>
@@ -69,9 +69,9 @@ The Customize <samp>⋮</samp> button will let you change the side they appear o
 
 <div class="left">
 
-The top part of the tools is [*the DOM*](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)&zwj;—you can expand/<wbr>collapse all the nested HTML *elements* on the opened page.
+The top part of the tools is [*the DOM*](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)&zwj;—you can expand/collapse all the nested HTML *elements* on the opened page.
 
-The first <samp>↖</samp> button in the upper-left lets you mouse over on the page, and will then show you that element nested/<wbr>hierarchically within the DOM.
+The first <samp>↖</samp> button in the upper-left lets you mouse over on the page, and will then show you that element nested/hierarchically within the DOM.
 
 The second <samp style="-webkit-text-stroke-width: 0.05rem">◲</samp> button (more about this [below](#device-mode)) toggles the *Device Toolbar*, a.k.a. “responsive mode.”
 
@@ -85,7 +85,7 @@ The <samp>flex</samp>&thinsp;/&thinsp;<samp>grid</samp> badges toggle their layo
 	>
 </figure>
 
-Handy tip: <kbd>⌘&thinsp;~&thinsp;Ctrl</kbd> <kbd>F</kbd> in here will let you search for elements or text by name/<wbr>class/<wbr>contents!
+Handy tip: <kbd>⌘&thinsp;~&thinsp;Ctrl</kbd> <kbd>F</kbd> in here will let you search for elements or text by name/class/contents!
 <!-- .balance .secondary .recto -->
 
 ## St<span style="margin-inline-start: 0.05em">y</span>les Tab
@@ -94,7 +94,7 @@ Handy tip: <kbd>⌘&thinsp;~&thinsp;Ctrl</kbd> <kbd>F</kbd> in here will let you
 
 The area below is for the styles. It shows whatever *CSS properties* apply to the element you have selected above, in the *DOM*/Elements panel.
 
-These are ordered (somewhat unintuitively) in a *more*-[specific](/topic/css/#specificity), *reverse*-[cascade](/topic/css/#oh-right-the-cascade) sequence—inline styles at the top, external and internal stylesheets, then *user-agent* styles at the bottom—with any cascading/<wbr>conflicting rules crossed out, as you go down.
+These are ordered (somewhat unintuitively) in a *more*-[specific](/topic/css/#specificity), *reverse*-[cascade](/topic/css/#oh-right-the-cascade) sequence—inline styles at the top, external and internal stylesheets, then *user-agent* styles at the bottom—with any cascading/conflicting rules crossed out, as you go down.
 
 On the right, you can see the sum *Computed* (or *rendered*) values of all the rules that apply—regardless of where they come from. These represent *exactly* what the browser is showing to you for the selected element.
 
@@ -109,7 +109,7 @@ On the right, you can see the sum *Computed* (or *rendered*) values of all the r
 You can type specific CSS properties/values into both <samp>Filter</samp> boxes to quickly narrow things down!
 <!-- .balance .secondary .recto -->
 
-You can make changes in Elements or Styles, and the edits will be immediately visible on the page *as if you had edited the source files*. It’s useful to try things out quickly&zwj;—or diagnose where problems/<wbr>conflicts arise.
+You can make changes in Elements or Styles, and the edits will be immediately visible on the page *as if you had edited the source files*. It’s useful to try things out quickly&zwj;—or diagnose where problems/conflicts arise.
 <!-- .add-before--3 .balance .bold .scale--h4 -->
 
 <aside>

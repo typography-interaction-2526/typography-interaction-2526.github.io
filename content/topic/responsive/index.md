@@ -30,7 +30,7 @@
 
 ## What Is Responsive Design?
 
-Let’s first take a minute to talk about *responsive design*. This term was coined in 2010 or so [by Ethan Marcotte](https://alistapart.com/article/responsive-web-design/)—wrapping a name around a [*progressive enhancement*](https://alistapart.com/article/understandingprogressiveenhancement/) and [*mobile-first*](https://www.lukew.com/ff/entry.asp?933) web design approach/<wbr>philosophy that had been growing in the mid-2000s (sometimes called *liquid, flexible, fluid,* or *elastic* design).
+Let’s first take a minute to talk about *responsive design*. This term was coined in 2010 or so [by Ethan Marcotte](https://alistapart.com/article/responsive-web-design/)—wrapping a name around a [*progressive enhancement*](https://alistapart.com/article/understandingprogressiveenhancement/) and [*mobile-first*](https://www.lukew.com/ff/entry.asp?933) web design approach/philosophy that had been growing in the mid-2000s (sometimes called *liquid, flexible, fluid,* or *elastic* design).
 
 - [<cite>Responsive Design – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 	A pretty nice overview.
@@ -180,7 +180,7 @@ Width tends to vary the most across devices—from the `375px`–`428px` of your
 
 Since this `width` is usually our primary design constraint (`height` being handled through scrolling), we need *width-based* media queries to adjust our layouts across this wide range, lest our designs fall.
 
-This is done in steps, at different widths, that we call *breakpoints*&zwj;—the window/<wbr>device/<wbr>viewport sizes where the content *starts to break*, if it is not adjusted.
+This is done in steps, at different widths, that we call *breakpoints*&zwj;—the window/device/viewport sizes where the content *starts to break*, if it is not adjusted.
 
 <blockquote
 	@attribution="Josh Brewer"
@@ -195,7 +195,7 @@ You might add a breakpoint because lines of text get too short or too long, beco
 
 You can add as many *breakpoints* as you need to make your page/design work across devices. Don’t think of these as written *for* specific devices; write *for* your design and your content!
 
-There are very, *very* few layouts that won’t need some amount of horizontal responsiveness/<wbr>breakpoints!
+There are very, *very* few layouts that won’t need some amount of horizontal responsiveness/breakpoints!
 <!-- .add-before--3 .balance .bold .scale--h4 -->
 
 In this example, we would refer to `500px` as our *breakpoint*:
@@ -367,7 +367,7 @@ They’ll help you avoid unwanted cascade (applying the same property), especial
 
 ## Other Media Features
 
-By far, the most common media queries will be *width*/<wbr>*height*/<wbr>*orientation*—for adjusting your layouts across devices. But `@media` has some [more tricks](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_features) up its sleeve in testing for other browser features. We’ll look at some of the handy/common ones.
+By far, the most common media queries will be *width*/*height*/*orientation*—for adjusting your layouts across devices. But `@media` has some [more tricks](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_features) up its sleeve in testing for other browser features. We’ll look at some of the handy/common ones.
 
 ### `screen` vs. `print`
 
