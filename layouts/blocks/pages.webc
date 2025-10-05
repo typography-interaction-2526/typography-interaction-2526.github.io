@@ -104,6 +104,7 @@
 		<li webc:if="index === 3">
 			<block
 				webc:import="header.webc"
+				:enable="unit[0].url"
 				@title="Winter Break"
 			></block>
 		</li>
@@ -114,6 +115,13 @@
 					webc:nokeep
 					webc:for="item of unit"
 				>
+					<li webc:if="item.data.week === 24">
+						<block
+							webc:import="header.webc"
+							:enable="item.url"
+							@title="Spring Break"
+						></block>
+					</li>
 					<li :id="pagePosition(item, $data)">
 						<slot webc:if="item.url === $data.page.url"></slot>
 						<block
@@ -121,16 +129,12 @@
 							webc:import="header.webc"
 						></block>
 					</li>
+					<!--- This is after to avoid dupes on 14. --->
 					<li webc:if="item.data.week === 13">
 						<block
 							webc:import="header.webc"
+							:enable="item.url"
 							@title="Thanksgiving Week"
-						></block>
-					</li>
-					<li webc:if="item.data.week === 23">
-						<block
-							webc:import="header.webc"
-							@title="Spring Break"
 						></block>
 					</li>
 				</template>
