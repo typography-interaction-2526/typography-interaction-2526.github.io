@@ -13,7 +13,6 @@ Just as in nature systems of order govern the growth and structure of animate an
 
 </blockquote>
 
-
 ## From Flex to Grid
 
 [CSS grid layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids#line-based_placement) (from here on, just *grid*) is another, even more recent addition to CSS, continuing on from where [*flexbox*](/topic/flexbox/) left off. While flex is primarily a *one-dimensional* layout system—focused on horizontal *or* vertical arrangements—grid is *two-dimensional* system, integrating the two directions together.
@@ -50,8 +49,6 @@ Grid truly supplants many of the previous box model layout approaches (like `f
 
 There are many novel, powerful uses for *grid*—it is really the backbone of modern web layout. Let’s take a look.
 <!-- .add-before .balance .bold .scale--h4 -->
-
-
 
 ## Grid Terminology
 
@@ -194,13 +191,10 @@ As a general rule: whenever you are writing the same exact code over and over, 
 
 </aside>
 
-
-
 ## Container <span class="parens">(</span>Parent<span class="parens">)</span> Properties
 
 Again, *grid* is a lot like *flex*—primarily properties that are applied on a container/parent element.
 <!-- .balance -->
-
 
 ### `grid-template-columns`&thinsp;, `grid-template-rows`
 
@@ -227,8 +221,6 @@ So for many uses, you will only need to specify your column <nobr>structure—<
 	>
 </figure>
 
-
-
 ### `grid-auto-columns`&thinsp;, `grid-auto-rows`
 
 By default, these *implicit grid* tracks are sized `auto` (the largest content), but you can also specify their size—often [a *height*](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows) for the `grid-auto-rows`:
@@ -242,20 +234,16 @@ By default, these *implicit grid* tracks are sized `auto` (the largest content),
 
 But `grid-auto-columns` only comes up if you force the columns to wrap with `grid-auto-flow: column;` as in the earlier example. Again—height is usually not our main constraint, with scrolling!
 
-
-
 ### `gap`&thinsp;, `column-gap`&thinsp;, `row-gap`
 
 *Grid* also shares the `gap`, `column-gap`, and `row-gap` [properties with *flex*](/topic/flexbox/#gap-row-gap-and-column-gap)—to add gutters between the *tracks*. The syntax and behavior is the same:
 
 <figure
-	@source="grid-gap/preview/?active=style.css"
 	@caption="You rarely see a `grid` without a `gap`."
+	@source="grid-gap/preview/?active=style.css"
 	style="--lines: 18"
 	>
 </figure>
-
-
 
 ### `justify-items`
 
@@ -268,8 +256,6 @@ The terminology here is always a bit confusing, but think of it this way—in
 	style="--lines: 21"
 	>
 </figure>
-
-
 
 ### `align-items`
 
@@ -292,8 +278,6 @@ There are [also baseline align values](https://developer.mozilla.org/en-US/docs/
 	>
 </figure>
 
-
-
 ### `justify-content`&thinsp;, `align-content`
 
 If the total size of your grid is less than the container (because of your *explicit* column or row sizes), you can set the *overall* [justification](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) and [alignment](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content) within the container:
@@ -306,16 +290,12 @@ If the total size of your grid is less than the container (because of your *ex
 	>
 </figure>
 
-
-
 ### Shorthand?
 
 *Grid* also has [shorthand properties](https://developer.mozilla.org/en-US/docs/Web/CSS/grid) for many of these, like `grid`, `grid-template`, `place-items`, and `place-content`. However just like everything else, grid is complicated enough as it is! The shorthands really obfuscate the behavior, and aren’t worth the slightly tighter syntax.
 
 Okay, so this is mostly like flex! To the point where you can use them interchangeably for some layouts. *You get it.* But now let’s look at where grid offers more specific and powerful control.
 <!-- .balance .bold .scale--h4 .add-before--3 -->
-
-
 
 ### Using `repeat`
 
@@ -329,10 +309,8 @@ Okay, so this is mostly like flex! To the point where you can use them interchan
 	>
 </figure>
 
-
 Flex is [sometimes referred](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout) to in this way as *content-out*, while grid is a *layout-in* system.
 <!-- .balance .bold .scale--h4 -->
-
 
 ### `auto-fill`&thinsp;, `auto-fit`
 
@@ -345,8 +323,6 @@ You can also use the `repeat` function without specifying an exact number of c
 	style="--lines: 18"
 	>
 </figure>
-
-
 
 ### `grid-template-areas`
 
@@ -376,14 +352,10 @@ section {
 
 </div>
 
-
-
 ## Item <span class="parens">(</span>Child<span class="parens">)</span> Properties
 
 You can really start to see the power of *grid* when you use these properties on the individual *grid items* (children) within the containers. While the container (parent) properties usually make for uniform layouts, item (child) properties allow for unique structures.
 <!-- .balance -->
-
-
 
 ### `grid-area`
 
@@ -398,8 +370,6 @@ If you’ve defined `grid-template-areas` (as [above](#grid-template-areas)), yo
 
 This is the [kind of common layout](https://en.wikipedia.org/wiki/Holy_grail_(web_design)) that was *unnecessarily* hard before grid! It’s so much easier now.
 <!-- .balance .bold .scale--h4 -->
-
-
 
 ### `grid-column`&thinsp;, `grid-row`
 
@@ -438,7 +408,6 @@ And if you specify non-contiguous rows or columns, *grid* will create as many *
 </figure>
 
 Keep in mind that with both `grid-area` and `grid-column` / `grid-row`, you are able to tell multiple *grid items* to land in the same *cell*—there isn’t any kind of fancy/automatic collision-prevention. If this <em>is</em> what you want, you can use `z-index` to specify which one is visually [in front](/topic/box-model/#depth)!
-
 
 ### `justify-self`&thinsp;, `align-self`
 

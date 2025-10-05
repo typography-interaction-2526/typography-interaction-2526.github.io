@@ -38,8 +38,6 @@ Let me know what you think………
 (I DON’T KNOW IF WE TOLD YOU, BUT HTML [USED TO SHOUT](https://www.w3.org/TR/html40/struct/global.html).)
 <!-- .secondary -->
 
-
-
 ## Image Formats!
 
 There are several commonly used image formats on the web, each with their own purpose:
@@ -127,7 +125,6 @@ After *years* of discussion and [competing standards](https://xkcd.com/927/), s
 You still can’t go wrong with GIF/JPG/PNG/SVG&thinsp;s, used appropriately.
 <!-- .scale--h4 .bold .add-before -->
 
-
 ## Sizing and Containers
 
 If you remember *waaaay* back to our [HTML intro](/topic/html/#common-elements), images are a special HTML element:
@@ -140,16 +137,15 @@ If you remember *waaaay* back to our [HTML intro](/topic/html/#common-elements)
 The `src` attribute can point to a local image file (as it does here—a JPG in the same directory) or an external URL! The `alt` provides a description for [accessibility/screen readers](https://axesslab.com/alt-texts/).
 <!-- .add-before -->
 
-
 ### Intrinsic and Inline
 
 By default, images will scale to their *intrinsic* size—the (`1x`) pixel dimensions of the file itself—and are *inline* elements:
 <!-- .balance  -->
 
 <figure
+	@caption="This image file is 250 pixels wide, and is (likely) blurry on your (probably) high-resolution display. Also note the extra space at the bottom, from `display: inline;`"
 	@source="image/preview"
 	@style="--lines: 15"
-	@caption="This image file is 250 pixels wide, and is (likely) blurry on your (probably) high-resolution display. Also note the extra space at the bottom, from `display: inline;`"
 	>
 </figure>
 
@@ -179,13 +175,11 @@ So you’ll often want to set images to `display: block;`, and then control t
 <!-- .add-before--3 -->
 
 <figure
+	@caption="This image file is intrinsically 1600 pixels wide."
 	@source="block/preview/?active=style.css"
 	@style="--lines: 14"
-	@caption="This image file is intrinsically 1600 pixels wide."
 	>
 </figure>
-
-
 
 ## `object-fit`
 
@@ -196,13 +190,11 @@ CSS also added the [`object-fit`](https://developer.mozilla.org/en-US/docs/Web/C
 	<!-- .link-list .right style="--rows: 2" -->
 
 <figure
+	@caption="Note the `height` on the section, otherwise the container would still resize to the image. Adjust the divider to see the behavior!"
 	@source="object-fit/preview/?active=style.css"
 	@style="--lines: 19"
-	@caption="Note the `height` on the section, otherwise the container would still resize to the image. Adjust the divider to see the behavior!"
 	>
 </figure>
-
-
 
 ## `aspect-ratio`
 
@@ -216,13 +208,11 @@ This is not *just* for images (you can use it on any element!), but commonly co
 <!-- .add-before--3 .balance -->
 
 <figure
+	@caption="Note that without the `object-fit: cover;`, Tim would be distorted to the ratio! Don’t distort Tim (or generally, most images) unless you really mean to."
 	@source="aspect-ratio/preview/?active=style.css"
 	@style="--lines: 12"
-	@caption="Note that without the `object-fit: cover;`, Tim would be distorted to the ratio! Don’t distort Tim (or generally, most images) unless you really mean to."
 	>
 </figure>
-
-
 
 ## `background-image`
 
@@ -236,9 +226,9 @@ However this isn’t very semantic, as it blurs the content/<wbr>presentation bo
 <!-- .add-before--3 -->
 
 <figure
+	@caption="I wouldn’t use something like this as a `background`. Mind your legibility!"
 	@source="background/preview/?active=style.css"
 	@style="--lines: 12"
-	@caption="I wouldn’t use something like this as a `background`. Mind your legibility!"
 	>
 </figure>
 
@@ -250,8 +240,6 @@ Ask yourself, “would this page make sense if I couldn’t see this image?”
 
 </aside>
 
-
-
 ## `figure` / `figcaption`
 
 Speaking of semantics—HTML also has a [`figure`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure) element that you can use to associate an image (or other visual) with a visible [`figcaption`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption) description or legend. These containers formally link the meaning/context of the elements together:
@@ -260,11 +248,10 @@ Speaking of semantics—HTML also has a [`figure`](https://developer.mozilla.or
 	Many of your images should be in `figure` containers.
 	<!-- .link-list .right style="--rows: 2" -->
 
-
 <figure
+	@caption="These can also be used to group things like videos, illustrations, and diagrams with their captions. There can be multiple visuals in each `figure`, if needed."
 	@source="figure/preview/?active=style.css"
 	@style="--lines: 10"
-	@caption="These can also be used to group things like videos, illustrations, and diagrams with their captions. There can be multiple visuals in each `figure`, if needed."
 	>
 </figure>
 
@@ -275,8 +262,6 @@ Including visible captions is a good example of a [“curb-cut” approach](
 Always strive for this kind of broad benefit (a.k.a. *universal* design) in all your work.
 
 </aside>
-
-
 
 ## Responsive Images with `picture` / `source`
 
@@ -294,18 +279,16 @@ Our venerable `<img>` element added some control for this with the addition of t
 The `<picture>` element is a wrapper/<wbr>container for an `<img>`, giving it alternate `<source>` tags that offer different image files for different scenarios. They use [media-query-like](/topic/responsive/#media-queries) syntax to change what image is loaded and displayed:
 
 <figure
+	@caption="This is all in the HTML; there is no (relevant) CSS. Adjust the divider to see the swaps!"
 	@source="picture/preview"
 	@style="--lines: 19"
-	@caption="This is all in the HTML; there is no (relevant) CSS. Adjust the divider to see the swaps!"
 	>
 </figure>
-
 
 Note that you still include the `<img>` as a *fallback*—put your largest size there. We’ve found it helpful to follow the same *mobile-first* philosophy here as you do in the rest of your code—putting your smaller images first, and your larger lower. You can have as many `<source>` elements as you need—for image sizing, crops, or both.
 
 Responsive images (like the rest of this) can get [very complicated](https://web.dev/learn/design/picture-element/), very quickly—so always start with the basics (and mobile) first.
 <!-- .add-before .balance .bold .scale--h4 -->
-
 
 ## SVG&thinsp;s for UI
 
@@ -332,9 +315,9 @@ In addition to being our only vector/scaleable format, SVGs have another trick u
 <!-- .add-before--3 -->
 
 <figure
+	@caption="Be sure to look at the `styles.css`—targeting the SVG nodes just like any other HTML elements!"
 	@source="svg/preview"
 	@style="--lines: 20"
-	@caption="Be sure to look at the `styles.css`—targeting the SVG nodes just like any other HTML elements!"
 	>
 </figure>
 
@@ -349,7 +332,6 @@ When targeting (or directly editing) SVG contents, note they have [slightly dif
 A picture is often said to be worth a thousand words. Similarly, an interface is worth a thousand pictures.
 
 </blockquote>
-
 
 <!-- Talk about file-sizes? -->
 <!-- How you make images? -->

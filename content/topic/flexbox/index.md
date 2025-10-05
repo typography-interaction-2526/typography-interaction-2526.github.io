@@ -22,8 +22,6 @@
 
 And let us tell you—being a web designer was a *whole lot harder* before flex came on the front-end scene. (Hence the “Finally.”) Notice, for instance, that we haven’t talked about any *vertical* centering at all yet—you don’t want to know! And you don’t have to worry about it. Flex encapsulates a lot of practical, helpful design paradigms in its system.
 
-
-
 ## Main&thinsp;/Cross Axes
 
 Flexbox is a *one-dimensional* layout system—meaning it is (usually) focused on arranging items either horizontally in rows, or vertically in columns.
@@ -56,8 +54,6 @@ These are called the *axes*. The one running in the direction of your flex ite
 ```
 
 </div>
-
-
 
 ## Start&thinsp;/End, Justify/Align
 
@@ -99,16 +95,12 @@ For columns (rotated): `justify` moves items top/bottom, `align` moves left&thi
 
 </div>
 
-
-
 ### Shorthand
 
 Like a lot of CSS, *flex* has [shorthand](https://developer.mozilla.org/en-US/docs/Web/CSS/flex) [properties](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow).
 
 But again, we would avoid them—the system can be hard enough to understand. This will be true when we get to `grid` as <nobr>well—</nobr>often being a little bit more verbose in your code will make things easier to understand, especially starting out.
 <!-- .balance -->
-
-
 
 ## Container <span class="parens">(</span>Parent<span class="parens">)</span> Properties
 
@@ -123,7 +115,6 @@ There is also `display: inline-flex;` which behaves the same, but the parent be
 Figma’s [*auto layout*](https://help.figma.com/hc/en-us/articles/360040451373-Explore-auto-layout-properties) system maps [almost directly](https://medium.com/timeless/figmas-flexbox-cdebb6968c29) to flexbox, in defining rows or columns and then distributing items—and is likewise applied on the parent&thinsp;/container.
 
 </aside>
-
 
 ### `flex-direction`
 
@@ -145,10 +136,7 @@ You can also combine these with a `-reverse` suffix, which visually reorders th
 	>
 </figure>
 
-
 Keep in mind that all flex reordering is only *visual*—it obviously can’t change the order in your HTML. This means that keyboard navigation and screen readers still sequence through the items as they are in your code. So for good, logical accessibility, keep in mind the semantic reading order!
-
-
 
 ### `flex-wrap`
 
@@ -161,7 +149,6 @@ Since flexbox is *one-dimensional*, by default it will try to cram everything 
 	style="--lines: 20"
 	>
 </figure>
-
 
 <aside>
 
@@ -178,7 +165,6 @@ There is also a `-reverse` suffix when wrapping, which will sequence items from
 	style="--lines: 20"
 	>
 </figure>
-
 
 ### `justify-content`
 
@@ -223,8 +209,6 @@ And for the vertical:
 	>
 </figure>
 
-
-
 ### `align-content`
 
 When we have a flex element with `flex-wrap` set, we can also position the *lines* within the parent/container with [the `align-content` property](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)—akin to `justify-content` with each line:
@@ -239,7 +223,6 @@ When we have a flex element with `flex-wrap` set, we can also position the *li
 
 And `align-content` can also be used with a vertical/<wbr>`flex-direction: column;` axis, not shown here. This doesn’t often come up, as you have to specify/know a height to force a column wrap.
 <!-- .balance -->
-
 
 ### `gap`&thinsp;, `row-gap`&thinsp;, and `column-gap`
 
@@ -260,14 +243,9 @@ Note that the `justify`, `align`, and `gap` properties are also shared (in name
 
 </aside>
 
-
 ## Item <span class="parens">(</span>Child<span class="parens">)</span> Properties
 
-
-
 Flexbox is *usually* applied on the parent/container. But once you’ve set `display: flex;` on an element, there are also some individual override properties that can be given to its children, *flex items*.
-
-
 
 ### `order`
 
@@ -280,8 +258,6 @@ Kind of like the `-reverse` suffix—you can individually apply [the `order` p
 </figure>
 
 Other order-based selectors (like `:first-child`) won’t be fooled by this reordering—as you can see, we used them here. They still use the HTML order. And again, this change is only *visual*—so don’t use it when screen reader/content sequence accessibility is a concern!
-
-
 
 ### `flex-grow` and `flex-shrink`
 
@@ -298,8 +274,6 @@ It takes a *unitless* proportional value, akin to fractions or a factor/multi
 And `flex-shrink` works the same way—defining what proportion an element should shrink when forced to by the flex layout. The most use you’ll see of this is `flex-shrink: 0;`&thinsp;, which tells all the *other* items to shrink instead!
 <!-- .balance -->
 
-
-
 ### `flex-basis`
 
 [The `flex-basis` property](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis) is a little like `width` and `height`—depending on your *main axis*. It defines what the child item’s content box size should be *before* any remaining space is distributed.
@@ -315,7 +289,6 @@ This defaults to `auto`, which falls back to any specified `width` or `height
 	>
 </figure>
 
-
 ### `align-self`
 
 Finally, we have an individual override for an [`align-items`](#align-items) property set on the parent—[the `align-self` property](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)—which adjusts (with the same keywords/values) the alignment of the *specific* child item it is applied to:
@@ -325,7 +298,6 @@ Finally, we have an individual override for an [`align-items`](#align-items) p
 	style="--lines: 25"
 	>
 </figure>
-
 
 This is a lot of stuff! Flex can sometimes be tough to wrap one’s head around, but it is *so much better* than `float` and `width` and `margin` shenanigans.
 <!-- .balance .bold .scale--h4 -->

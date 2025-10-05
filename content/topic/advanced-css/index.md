@@ -21,8 +21,6 @@ A good pattern to follow in web (and all) development is to use each technology 
 Let’s look at some examples.
 <!-- .bold .scale--h4 -->
 
-
-
 ## Overflows and Scrolling
 
 An [*overflow*](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow) in CSS happens when there is too much content to fit in a container—usually because you have manually constrained its `height` or `width`. (By default, the browser will try to show you everything!)
@@ -55,14 +53,12 @@ Importantly, this creates a new [*stacking context*](https://developer.mozilla.
 You can also *excerpt* text (perhaps on a landing page) with the [`text-overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow) (for a single line) or [`-webkit-line-clamp`](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp) (for multiple lines) properties—which will add [an ellipsis](https://en.wikipedia.org/wiki/Ellipsis) <samp>…</samp> where the text overflows. Only do this when the full text is available on a subsequent page:
 <!-- .balance -->
 
-
 <figure
-	@source="text-overflow/preview/?active=style.css"
 	@caption="This `-webkit` stuff is hokey, but still how it is done!"
+	@source="text-overflow/preview/?active=style.css"
 	style="--lines: 17"
 	>
 </figure>
-
 
 ## Precise Text Positioning
 
@@ -89,8 +85,6 @@ Let’s avoid it. We can use [pseudo-elements](/topic/css/#pseudo-elements), `::
 
 Figma is actually *ahead* of CSS here with its recent [<samp>Vertical Trim</samp> option](https://dodonut.com/blog/everything-you-need-to-know-about-figma-s-vertical-trim-feature/). But the code for this kind of thing will get *much* easier in coming years with the analogous [`text-box-trim` and `text-box-edge`](https://css-tricks.com/two-css-properties-for-trimming-text-box-whitespace/) properties! [Soon](https://developer.apple.com/documentation/safari-release-notes/safari-18_2-release-notes).
 <!-- .balance -->
-
-
 
 ## Text Ragging (Kinda)
 
@@ -120,8 +114,6 @@ Somewhat similar to `&shy;`, the [`<wbr>`](https://developer.mozilla.org/en-US/d
 	>
 </figure>
 
-
-
 ### `<nobr>` and `&nbsp;`
 
 More often, you’ll want to keep certain words *together*—to avoid a [widow or orphan](/topic/typography/#widows-and-orphans), or to keep important/related text together—like in dates, *November 8*, or with  names like *van Zanten*.
@@ -137,8 +129,6 @@ You can also use a manual `&nbsp;` entity between words:
 	>
 </figure>
 
-
-
 ### `text-wrap: balance;`
 
 After many, many years of patient, typographic waiting (and [some JS](https://github.com/adobe/balance-text) [shenanigans](https://www.ctrl.blog/entry/text-wrap-balance.html)) we now have [growing browser support](https://developer.chrome.com/docs/css-ui/css-text-wrap-balance) for “balancing” uneven line lengths with [`text-wrap: balance;`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap)&thinsp;:
@@ -150,7 +140,6 @@ After many, many years of patient, typographic waiting (and [some JS](https:/
 	style="--lines: 9"
 	>
 </figure>
-
 
 ## Hanging Punctuation (Sorta)
 
@@ -178,8 +167,6 @@ These strategies only work if you can *manually* edit your text content, which i
 Do it when you can—and give more attention to your large headings, then your body copy and so-on, going down your hierarchy.
 
 </aside>
-
-
 
 ## Filters!
 
@@ -268,8 +255,6 @@ You shouldn’t use `transform` for <nobr>layout—</nobr>as in, don’t use `t
 Use `transform` only for what other properties *can’t* accomplish!
 <!-- .balance .bold .scale--h4 -->
 
-
-
 ## Transitions!
 
 CSS [transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) allow us to move nicely between CSS property values.
@@ -342,8 +327,6 @@ Often, CSS transitions will be used *with* JavaScript when adding/removing class
 
 Nearly all CSS properties can be transitioned—but keep in mind that changes that cause a *reflow* (re-triggering *layout*, sometimes called *paint*) [are slow](https://web.dev/animations-guide/#triggers) and can make your page feel glitchy—especially when you start having many of them. Each in-between state causes the browser to re-render your entire document! So stick to changes of `color`, `opacity`, and `transform` for the smoothest performance.
 
-
-
 ## And Animations!
 
 Sometimes, transitioning a property from one value to another isn’t <nobr>enough—</nobr>you may need more complicated (or repeating) motion behavior. CSS [animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) allow precise state sequencing with `@keyframes` (akin to… *keyframes* or a timeline in other software contexts).
@@ -388,7 +371,6 @@ Importantly, we then define the actual keyframes of an animation in a separat
 	style="--lines: 20"
 	>
 </figure>
-
 
 <blockquote
 	@attribution="Stan Lee"
