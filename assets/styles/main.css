@@ -323,8 +323,9 @@ main {
 				inline-size: 100%;
 
 				@media (width < 35em) {
-					aspect-ratio: 1 / 2;
-					block-size:   initial;
+					aspect-ratio:   1 / 2;
+					block-size:     initial;
+					max-block-size: calc(round(78svh, 1rcap));
 				}
 			}
 		}
