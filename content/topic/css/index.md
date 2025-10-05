@@ -195,7 +195,7 @@ Even though it is used to style HTML elements, [the syntax of CSS](https://devel
 
 The [curly brackets](https://en.wikipedia.org/wiki/Bracket#Curly_brackets) <nobr>`{` `}`</nobr> (also known as *mustaches* or *handlebars*, for their shape) enclose all the declarations you want to apply to a given selector. These *declarations* are in turn made up of *properties* and *values*.
 
-Properties are always separated from their corresponding values by a colon `:`, and each declaration line has to end in a semicolon `;`. (It’s just how it is!) Also, there are no spaces between values and their units (like `20px`)! You will get used to it.
+Properties are always separated from their corresponding values by a colon `:`, and each declaration line has to end in a semicolon `;`. (It’s just how it is!) Also, there are no spaces between values and their units (like `2rem`)! You will get used to it.
 
 <figure @source="rule.svg"></figure>
 

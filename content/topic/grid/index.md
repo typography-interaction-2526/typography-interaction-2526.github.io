@@ -163,7 +163,7 @@ Grid also introduces some specific new [length units](/topic/box-model/#and-thei
 	```css
 	.flexible-sidebar {
 		display: grid;
-		grid-template-columns: 1fr minmax(200px, 400px);
+		grid-template-columns: 1fr minmax(12rem, 25rem);
 	}
 	```
 
