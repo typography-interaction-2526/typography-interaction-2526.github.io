@@ -449,7 +449,7 @@ main {
 					@container style(--columns: 6) { margin-block-start: 2rlh }
 				}
 
-				+ section {
+				+ :is(section, blockquote) {
 					margin-block-start: 2rlh;
 
 					@container style(--columns: 6) { margin-block-start: 4rlh }
