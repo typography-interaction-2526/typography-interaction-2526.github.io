@@ -1,6 +1,6 @@
 ol {
 	display: flex;
-	height: 60px;
+	height: 4rem;
 }
 
 ol:nth-child(1) { justify-content: start; } /* Default. */

@@ -1,6 +1,6 @@
 ol {
 	display: grid;
-	grid-auto-rows: 80px; /* Give the implicit tracks a size. */
+	grid-auto-rows: 6rem; /* Give the implicit tracks a size. */
 	grid-auto-columns: 1fr;
 }
 

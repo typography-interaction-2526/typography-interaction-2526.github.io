@@ -1,7 +1,7 @@
 ol {
 	display: grid;
-	grid-template-columns: 120px 60px; /* Force a wrap. */
-	gap: 10px;
+	grid-template-columns: 8rem 4rem; /* Force a wrap. */
+	gap: 1rem;
 	justify-content: space-evenly; /* Horizontally. */
 	align-content: center; /* Vertically. */
 	height: 85vh; /* So the alignment has an effect. */

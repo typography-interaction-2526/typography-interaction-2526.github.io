@@ -1,7 +1,7 @@
 ol {
 	display: grid;
 	grid-template-columns: 2fr 1fr;
-	grid-template-rows: 100px 60vh 100px;
+	grid-template-rows: 6rem 60vh 6rem;
 }
 
 li:first-child {

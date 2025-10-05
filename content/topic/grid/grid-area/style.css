@@ -1,7 +1,7 @@
 body {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 100px 65vh 100px;
+	grid-template-rows: 6rem 65vh 6rem;
 	grid-template-areas:
 		'header header header'
 		'main   main   aside '

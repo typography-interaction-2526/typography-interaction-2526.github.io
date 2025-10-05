@@ -1,6 +1,6 @@
 ol {
 	display: flex;
-	min-height: 120px;
+	min-height: 8rem;
 }
 
 ol:first-child { flex-direction: row-reverse; }

@@ -10,7 +10,7 @@ section { background-color: var(--background); }
 	:root { --background: white; }
 
 	section {
-		border: 2px solid black;
+		border: 0.25rem solid black;
 		font-family: serif;
 		font-size: 18pt;
 		padding: 0.5in;

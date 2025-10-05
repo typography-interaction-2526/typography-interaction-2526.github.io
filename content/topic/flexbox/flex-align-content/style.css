@@ -1,10 +1,10 @@
 ol {
 	display: flex;
 	flex-wrap: wrap;
-	height: 120px;
+	height: 8rem;
 }
 
-li { width: 120px; } /* So they wrap. */
+li { width: 8rem; } /* So they wrap. */
 
 ol:nth-child(1) { align-content: stretch; } /* Default. */
 ol:nth-child(2) { align-content: start; }

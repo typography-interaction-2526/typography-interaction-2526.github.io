@@ -1,11 +1,11 @@
 body {
 	font-family: sans-serif;
-	padding: 20px;
+	padding: 1rem;
 }
 
 body > * {
 	background-color: tomato;
-	border-bottom: 2px solid firebrick;
-	border-right: 2px solid firebrick;
-	padding: 5px;
+	border-bottom: 0.25rem solid firebrick;
+	border-right: 0.25rem solid firebrick;
+	padding: 1rem;
 }

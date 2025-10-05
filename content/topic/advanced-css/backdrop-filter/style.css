@@ -9,7 +9,7 @@ section::after {
 }
 
 section:first-child::after {
-	backdrop-filter: blur(8px); /* `blur` is a common use. */
+	backdrop-filter: blur(0.5rem); /* `blur` is a common use. */
 	background-color: color-mix(in srgb, #333, transparent) /* Shade it. */
 }
 

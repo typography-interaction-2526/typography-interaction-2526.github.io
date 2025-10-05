@@ -1,6 +1,6 @@
 ol {
 	display: flex;
-	height: 120px;
+	height: 8rem;
 }
 
 ol:nth-child(1) { align-items: stretch; } /* Default. */

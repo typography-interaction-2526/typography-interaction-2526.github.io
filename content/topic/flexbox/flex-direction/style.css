@@ -1,6 +1,6 @@
 /* Setup styles in the other file. */
 
-ol { min-height: 120px; }
+ol { min-height: 8rem; }
 
 ol:nth-child(2),
 ol:nth-child(3) {
