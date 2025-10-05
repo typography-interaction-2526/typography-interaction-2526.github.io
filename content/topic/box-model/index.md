@@ -6,7 +6,7 @@
 ## Boxes Within Boxes Within Boxes Within Boxes
 
 For real layout, the we first need to understand how CSS sizes elements—and how we can add space between them. This is called the [*the box model*](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model), as everything on the web begins as a rectangle.
-<!-- .start style="margin-block-start: initial" -->
+<!-- .start style="min-block-size: calc(7rlh - 1rcap)" -->
 
 - [<cite>Introduction to CSS Layout – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction)
 	As usual.
@@ -16,9 +16,7 @@ For real layout, the we first need to understand how CSS sizes elements—and ho
 
 - [<cite>Learn CSS Layout</cite>](https://learnlayout.com)
 	An old-but-still-good run-through.
-<!-- .right .rows--3 -->
-
-&nbsp;
+<!-- .right .rows--2 -->
 
 <blockquote
 	@attribution="Jan Tschichold"
@@ -135,7 +133,7 @@ section {
 
 </div>
 
-### …and *Logical* Properties <!-- .before--2 -->
+### …and *Logical* Properties <!-- .before--4 -->
 
 You can also now define all your box model properties using [*logical* directions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values)—meaning instead of *physical* (`top`/`bottom`, `left`/`right`) orientations, you can [map your rules](https://adrianroselli.com/2019/11/css-logical-properties.html) to the *flow* of the text (`block-start``block-end`, `inline-start`/`inline-end`).
 <!-- .balance -->
