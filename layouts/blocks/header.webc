@@ -80,11 +80,28 @@
 		&:not(:has(a > hgroup)) { a { padding-block: 0.5cap } }
 
 		/* Future pages. */
-		&:where(:has(> a:not([href]))) { opacity: var(--disabled--opacity) }
+		&:where(:has(> a:not([href]))) {
+			border-block-color: var(--disabled);
+
+			> a { opacity: var(--disabled--opacity) }
+		}
 	}
 
 	/* Darken breaks with undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
-	:host-context(header + ul > li):has(a > p:only-child) { background-color: var(--disabled) }
+	:host-context(header + ul > li):has(a > p:only-child) a::before {
+		background-color: var(--disabled);
+		content:          '';
+		inset:            0;
+		position:         absolute;
+	}
+
+	/* Fake line match above. */
+	:host-context(li:has(#winter-break)):has(a:not([href])) {
+		border-block-color: color-mix(in srgb, var(--background--3), var(--color) var(--disabled--opacity));
+		opacity:            100%;
+
+		> a { opacity: var(--disabled--opacity) }
+	}
 </style>
 
 <header
