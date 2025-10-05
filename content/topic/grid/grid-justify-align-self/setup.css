@@ -1,0 +1,13 @@
+body {
+	font-family: sans-serif;
+	padding: 20px;
+}
+
+ol { background-color: gold; }
+
+li {
+	background-color: tomato;
+	border-bottom: 2px solid firebrick;
+	border-right: 2px solid firebrick;
+	padding: 5px;
+}

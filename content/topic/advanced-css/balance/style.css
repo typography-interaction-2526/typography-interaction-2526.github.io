@@ -1,0 +1,7 @@
+section {
+	text-align: center;
+}
+
+section:nth-child(2) {
+	text-wrap: balance;
+}

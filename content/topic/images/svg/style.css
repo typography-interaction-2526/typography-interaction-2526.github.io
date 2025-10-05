@@ -1,0 +1,19 @@
+body {
+	padding: 20px;
+	display: grid; /* Just for some separation. */
+	row-gap: 20px;
+}
+
+svg {
+	background-color: deepskyblue; /* Just to see the edges! */
+
+	line {
+		stroke: tomato;
+		stroke-width: 4;
+	}
+
+	polyline {
+		fill: gold;
+		stroke: none; /* Override the attribute in the code. */
+	}
+}

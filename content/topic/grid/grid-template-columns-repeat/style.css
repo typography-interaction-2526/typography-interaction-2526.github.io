@@ -1,0 +1,14 @@
+ol {
+	--columns: 4;
+
+	display: grid;
+	grid-template-columns: repeat(var(--columns), 1fr);
+}
+
+@media (min-width: 500px) {
+	ol { --columns: 6; }
+}
+
+@media (min-width: 600px) {
+	ol { --columns: 8; }
+}

@@ -1,0 +1,26 @@
+body {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 100px 65vh 100px;
+	grid-template-areas:
+		'header header header'
+		'main   main   aside '
+		'footer footer aside ';
+}
+
+header {
+	background-color: crimson;
+	grid-area: header;
+}
+
+main {
+	background-color: hotpink;
+	grid-area: main;
+}
+
+aside {
+	background-color: lightsalmon;
+	grid-area: aside;
+}
+
+footer { grid-area: footer; }

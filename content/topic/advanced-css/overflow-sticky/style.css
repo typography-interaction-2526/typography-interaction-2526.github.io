@@ -1,0 +1,11 @@
+/* Other styles are the same as before. */
+
+h2 {
+	left: 0;
+	position: sticky;
+	top: 0;
+}
+
+section:nth-child(2) h2 { margin-top: 1.5em }
+
+section:nth-child(3) h2 { margin-left: 3em }

@@ -1,0 +1,10 @@
+/* Setup styles in the other file. */
+
+ol { min-height: 120px; }
+
+ol:nth-child(2),
+ol:nth-child(3) {
+	display: flex;
+}
+
+ol:nth-child(3) { flex-direction: column; }

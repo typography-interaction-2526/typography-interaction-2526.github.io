@@ -1,0 +1,10 @@
+ol {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+
+ol:first-child { gap: 10px; }
+
+ol:nth-child(2) { column-gap: 10px; }
+
+ol:last-child { row-gap: 10px; }
