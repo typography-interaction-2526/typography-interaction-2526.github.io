@@ -25,7 +25,11 @@ main {
 			--size:   var(--size--h2);
 			--weight: 500;
 
-			+ * { margin-block-start: 2rlh }
+			+ * {
+				margin-block-start: 1rlh;
+
+				@container style(--columns: 6) { margin-block-start: 2rlh }
+			}
 		}
 
 		&:has(> h3) {
@@ -180,6 +184,8 @@ main {
 	/* Link lists with our “tag” style. */
 	ul:where(:has(li > a > cite, li > p:only-child > a > cite)) {
 		grid-template-columns: minmax(auto, max-content);
+
+		@container style(--columns: 1) { margin-block: 1rlh }
 	}
 
 	/* TODO Longer text-after-cite blows up the common width of these! */
@@ -241,7 +247,11 @@ main {
 		position:    relative;
 		row-gap:     1rlh;
 
-		&:where(:not(:first-child)), &:where(:not(:last-child)) + * { margin-block-start: 2rlh }
+		&:where(:not(:first-child)), &:where(:not(:last-child)) + * {
+			margin-block-start: 1rlh;
+
+			@container style(--columns: 6) { margin-block-start: 2rlh }
+		}
 
 		> figcaption {
 			align-items:       baseline;
@@ -331,7 +341,11 @@ main {
 
 		/* TODO `::selection` override here! Wasn‘t working. */
 
-		&:where(:not(:first-child)), &:where(:not(:last-child)) + * { margin-block-start: 2rlh }
+		&:where(:not(:first-child)), &:where(:not(:last-child)) + * {
+			margin-block-start: 1rlh;
+
+			@container style(--columns: 6) { margin-block-start: 2rlh }
+		}
 
 		p { max-inline-size: initial }
 
@@ -375,9 +389,16 @@ main {
 
 		> ol { row-gap: 1rlh }
 
-		&:where(:not(:first-child)), &:where(:not(:last-child)) + * { margin-block-start: 4rlh }
+		&:where(:not(:first-child)), &:where(:not(:last-child)) + * {
+			margin-block-start: 2rlh;
 
-		&:has(+ p > a > cite) { margin-block-end: 1rlh }
+			@container style(--columns: 6) {
+				margin-block-start: 4rlh;
+
+				&:has(+ p > a > cite) { margin-block-end: 1rlh }
+			}
+		}
+
 
 		/* TODO Consolidate this with `figure` one! Figure out overrides. */
 		+ p:has(a > cite) {
@@ -409,8 +430,17 @@ main {
 			}
 
 			&:where(:not(:last-child)) {
-				+ *:not(section) { margin-block-start: 2rlh }
-				+ section { margin-block-start: 5rlh }
+				+ *:not(section) {
+					margin-block-start: 1rlh;
+
+					@container style(--columns: 6) { margin-block-start: 2rlh }
+				}
+
+				+ section {
+					margin-block-start: 2rlh;
+
+					@container style(--columns: 6) { margin-block-start: 4rlh }
+				}
 			}
 		}
 	}
@@ -419,18 +449,19 @@ main {
 		--size:   var(--size--h2);
 		--weight: 500;
 
-		block-size:         1rcap; /* Keep on baseline. */
-		grid-column:        all;
-		margin-block-end:   1rlh;
-		margin-block-start: 2rlh;
+		block-size:   1rcap; /* Keep on baseline. */
+		grid-column:  all;
+		margin-block: 1rlh;
 
 		&::after { content: '' } /* Divider itself. */
+
+		@container style(--columns: 6) { margin-block-start: 2rlh }
 	}
 
 	/* Heading spacing, lower for cascade. */
 	section:where(:not(:first-child)) {
 		&:where(:has(> hgroup > h2)) {
-			margin-block-start: 4rlh;
+			margin-block-start: 2rlh;
 
 			> hgroup {
 				/* TODO This is off on mobile. */
@@ -440,14 +471,25 @@ main {
 				&::after { content: '' } /* Divider itself. */
 
 				+ * {
-					margin-block-start: 3rlh; /* One more for divider. */
+					margin-block-start: 2rlh; /* One more for divider. */
 
-					@container style(--columns: 6) { + *:where(.recto, .right) { margin-block-start: 3rlh } }
+					@container style(--columns: 6) {
+						margin-block-start: 3rlh;
+
+						+ *:where(.recto, .right) { margin-block-start: 3rlh }
+					}
 				}
 			}
+
+			@container style(--columns: 6) { margin-block-start: 4rlh }
 		}
 
-		&:where(:has(> hgroup > h3)) { margin-block-start: 3rlh }
+		&:where(:has(> hgroup > h3)) {
+			margin-block-start: 2rlh;
+
+			@container style(--columns: 6) { margin-block-start: 3rlh }
+		}
+
 		&:where(:has(> hgroup > h4)) { margin-block-start: 1rlh }
 	}
 
@@ -594,14 +636,34 @@ main {
 	.before--0          { margin-block-start: initial }
 	.before, .before--1 { margin-block-start: 1rlh }
 	.before--2          { margin-block-start: 2rlh }
-	.before--3          { margin-block-start: 3rlh }
-	.before--4          { margin-block-start: 4rlh }
+
+	.before--3 {
+		margin-block-start: 2rlh;
+
+		@container style(--columns: 6) { margin-block-start: 3rlh }
+	}
+
+	.before--4 {
+		margin-block-start: 2rlh;
+
+		@container style(--columns: 6) { margin-block-start: 4rlh }
+	}
 
 	.after--0 + *              { margin-block-start: initial }
 	:is(.after, .after--1) + * { margin-block-start: 1rlh }
 	.after--2 + *              { margin-block-start: 2rlh }
-	.after--3 + *              { margin-block-start: 3rlh }
-	.after--4 + *              { margin-block-start: 4rlh }
+
+	.after--3 + * {
+		margin-block-start: 2rlh;
+
+		@container style(--columns: 6) { margin-block-start: 3rlh }
+	}
+
+	.after--4 + * {
+		margin-block-start: 2rlh;
+
+		@container style(--columns: 6) { margin-block-start: 4rlh }
+	}
 
 	/* The actual columns. */
 	@container style(--columns: 6) {
