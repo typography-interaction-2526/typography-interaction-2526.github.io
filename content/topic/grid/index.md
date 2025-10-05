@@ -42,7 +42,7 @@ Just as in nature systems of order govern the growth and structure of animate an
 We had some of this two-dimensionality with [<nobr>flex-wrap</nobr>](/topic/flexbox/#flex-wrap), but grid offers us much more structure and control.
 <!-- .balance .secondary -->
 
-Grid is *a lot* like flex (this will be a running theme)—<wbr>a [*display*](https://developer.mozilla.org/en-US/docs/Web/CSS/display) property applied on a parent/<wbr>container element. This `display: grid;` tells its (immediate) children/<wbr>*grid items* how they should be laid out. Also like flex, there is `display: inline-grid;` which behaves the same internally—<wbr>but with the parent behaving as an inline element.
+Grid is *a lot* like flex (this will be a running theme)—a [*display*](https://developer.mozilla.org/en-US/docs/Web/CSS/display) property applied on a parent/container element. This `display: grid;` tells its (immediate) children/*grid items* how they should be laid out. Also like flex, there is `display: inline-grid;` which behaves the same internally—but with the parent behaving as an inline element.
 <!-- .add-before--3 -->
 
 Grid truly supplants many of the previous box model layout approaches (like `float`, `margin`-centering, etc.) and, like flex, works much closer to how we *think* about layouts *as designers*. It can still get complicated, but makes most layouts (especially responsive ones) much, much easier to implement.
@@ -67,7 +67,7 @@ Track
 
 Cell
 
-: The intersection of a horizontal and vertical track. This is different from a *grid item*—the cell is the spot/placement, the item is the actual <nobr>element—</nobr>since as you’ll see, you can position *items* in an arbitrary *cell*.
+: The intersection of a horizontal and vertical track. This is different from a *grid item*—the cell is the spot/placement, the item is the actual element—since as you’ll see, you can position *items* in an arbitrary *cell*.
 <!-- .secondary -->
 
 Area
@@ -139,7 +139,7 @@ Grid also introduces some specific new [length units](/topic/box-model/#and-the
 	}
 	```
 
-	You can use these last three values in grid properties <em>(</em>`min-`, `max-`, and `fit-content`<em>)</em>, as we’ll see <nobr>below—</nobr>but they are also usable anywhere [length units](/topic/box-model/#and-their-units) work—like `width` or `height`. <!-- .add-before .secondary -->
+	You can use these last three values in grid properties <em>(</em>`min-`, `max-`, and `fit-content`<em>)</em>, as we’ll see below—but they are also usable anywhere [length units](/topic/box-model/#and-their-units) work—like `width` or `height`. <!-- .add-before .secondary -->
 
 </div>
 
@@ -191,7 +191,7 @@ As a general rule: whenever you are writing the same exact code over and over, 
 
 </aside>
 
-## Container <span class="parens">(</span>Parent<span class="parens">)</span> Properties
+## Container (Parent) Properties
 
 Again, *grid* is a lot like *flex*—primarily properties that are applied on a container/parent element.
 <!-- .balance -->
@@ -211,7 +211,7 @@ Setting `display: grid;` won’t do much until you also declare some [columns](
 Again like *flex*, there is similar behavior on the horizontal/vertical *axes*—with the defaults around horizontal/row based behavior since width is usually our constraint (with pages scrolling vertically).
 <!-- .balance -->
 
-So for many uses, you will only need to specify your column <nobr>structure—</nobr><wbr>leaving the rows to create themselves, as needed. This is called an *implicit grid* (vs. an *explicit grid* that we set/define):
+So for many uses, you will only need to specify your column structure—leaving the rows to create themselves, as needed. This is called an *implicit grid* (vs. an *explicit grid* that we set/define):
 <!-- .balance -->
 
 <figure
@@ -247,7 +247,7 @@ But `grid-auto-columns` only comes up if you force the columns to wrap with `gr
 
 ### `justify-items`
 
-Also [like *flex*](/topic/flexbox/#justify-content) (there’s a pattern here), we can position items within the <nobr>tracks—</nobr>but now we have control over both axes and the overall placement. To start, `justify-items` positions all the *grid items* along their row axis.
+Also [like *flex*](/topic/flexbox/#justify-content) (there’s a pattern here), we can position items within the tracks—but now we have control over both axes and the overall placement. To start, `justify-items` positions all the *grid items* along their row axis.
 
 The terminology here is always a bit confusing, but think of it this way—in *grid*, the main axis is *always* the horizontal row. So *justify* always means left/right, and *align* always means top/bottom. Easier to remember than flex! No flipping axes:
 
@@ -352,7 +352,7 @@ section {
 
 </div>
 
-## Item <span class="parens">(</span>Child<span class="parens">)</span> Properties
+## Item (Child) Properties
 
 You can really start to see the power of *grid* when you use these properties on the individual *grid items* (children) within the containers. While the container (parent) properties usually make for uniform layouts, item (child) properties allow for unique structures.
 <!-- .balance -->

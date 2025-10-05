@@ -106,7 +106,7 @@ The [hyphens](https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens) property
 
 ### `<wbr>`
 
-Somewhat similar to `&shy;`, the [`<wbr>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr) is a (void/<wbr>empty) HTML element that denotes a *word break* opportunity—a bit like an optional `<br>`! You can use these to control where single long word will wrap, *without* a hyphen:
+Somewhat similar to `&shy;`, the [`<wbr>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr) is a (void/empty) HTML element that denotes a *word break* opportunity—a bit like an optional `<br>`! You can use these to control where single long word will wrap, *without* a hyphen:
 
 <figure
 	@source="wbr/preview/?active=index.html"
@@ -162,7 +162,7 @@ When in doubt, [*The Elements of Typographic Style*](https://readings.design/PD
 
 <aside>
 
-These strategies only work if you can *manually* edit your text content, which is not always feasible—with templating/<wbr>content management systems, editors, time, and so on.
+These strategies only work if you can *manually* edit your text content, which is not always feasible—with templating/content management systems, editors, time, and so on.
 
 Do it when you can—and give more attention to your large headings, then your body copy and so-on, going down your hierarchy.
 
@@ -177,7 +177,7 @@ CSS can apply visual effects on elements—adjusting their graphical display *af
 	<!-- .link-list .right style="--rows: 2" -->
 
 <figure
-	@caption="Note that multiple filters are applied in <nobr>*sequence*—</nobr>changing the order changes the result."
+	@caption="Note that multiple filters are applied in *sequence—*changing the order changes the result."
 	@source="filter/preview/?active=style.css"
 	style="--lines: 23"
 	>
@@ -250,7 +250,7 @@ Keep in mind that these transformations are applied *after* the rest of the C
 	>
 </figure>
 
-You shouldn’t use `transform` for <nobr>layout—</nobr>as in, don’t use `translate` when `margin`, `padding`, `flex`, or `grid` can achieve your layout. This is *bad* practice, and usually very brittle! Especially when working responsively.
+You shouldn’t use `transform` for layout—as in, don’t use `translate` when `margin`, `padding`, `flex`, or `grid` can achieve your layout. This is *bad* practice, and usually very brittle! Especially when working responsively.
 
 Use `transform` only for what other properties *can’t* accomplish!
 <!-- .balance .bold .scale--h4 -->
@@ -263,7 +263,7 @@ CSS [transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitio
 	Every state change is better with some easing.
 	<!-- .link-list .right style="--rows: 2" -->
 
-Instead of having a property take effect *immediately* when a pseudo-class is applied (or later, and more commonly, with <nobr>JS—</nobr><wbr>a proper class), we can tell a CSS property to *transition* from one value to another over a given amount of time (`duration`), and with a specific acceleration (`timing-function`), or a delay. Motion can quickly get very complex!
+Instead of having a property take effect *immediately* when a pseudo-class is applied (or later, and more commonly, with JS—a proper class), we can tell a CSS property to *transition* from one value to another over a given amount of time (`duration`), and with a specific acceleration (`timing-function`), or a delay. Motion can quickly get very complex!
 
 You’ll often see a `transition` in shorthand:
 <!-- .add-before--3 -->
@@ -329,7 +329,7 @@ Nearly all CSS properties can be transitioned—but keep in mind that changes th
 
 ## And Animations!
 
-Sometimes, transitioning a property from one value to another isn’t <nobr>enough—</nobr>you may need more complicated (or repeating) motion behavior. CSS [animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) allow precise state sequencing with `@keyframes` (akin to… *keyframes* or a timeline in other software contexts).
+Sometimes, transitioning a property from one value to another isn’t enough—you may need more complicated (or repeating) motion behavior. CSS [animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) allow precise state sequencing with `@keyframes` (akin to… *keyframes* or a timeline in other software contexts).
 <!-- .balance -->
 
 - [<cite>Using CSS Animations – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)

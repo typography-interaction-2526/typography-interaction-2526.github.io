@@ -10,7 +10,7 @@ Let’s look at the specifics around using images on the web! (Finally.)
 	Pretty good overview.
 
 - [<cite>Choose the Right Image Format – web.dev</cite>](https://web.dev/choose-the-right-image-format/)
-	Also discusses *Retina*/<wbr>High DPI (Hi&thinsp;DPI) screens.
+	Also discusses *Retina*/High DPI (Hi&thinsp;DPI) screens.
 	<!-- .link-list .right style="--rows: 3" -->
 
 Remember that images *weren’t* a part of the [early web](/topic/everything/#when-was-the-web-invented), and so—much like CSS—can feel somewhat “bolted on” and are still often tricky to work with. (Our guy Tim Berners-Lee was even [reticent](https://www.wired.com/1997/04/a-brief-history-of-html/)). It has gotten much better recently, though!
@@ -105,7 +105,7 @@ TKTKTK -->
 
 ### “Modern” Formats
 
-After *years* of discussion and [competing standards](https://xkcd.com/927/), several “modern” replacement formats are starting to gain browser support and developer/<wbr>designer traction. They are all designed to overcome the various shortcomings of the legacy formats above—usually around compression efficiency. But it’s still a confusing, evolving mess out there! Here are some you might encounter:
+After *years* of discussion and [competing standards](https://xkcd.com/927/), several “modern” replacement formats are starting to gain browser support and developer/designer traction. They are all designed to overcome the various shortcomings of the legacy formats above—usually around compression efficiency. But it’s still a confusing, evolving mess out there! Here are some you might encounter:
 
 - [<cite>AVIF</cite>](https://en.wikipedia.org/wiki/AVIF)
 	*AV1 Image File Format*, the new(est) replacement for everything. It… *might* be the next big one.
@@ -147,11 +147,11 @@ By default, images will scale to their *intrinsic* size—the (`1x`) pixel dim
 	>
 </figure>
 
-This intrinsic/inline behavior is rarely what you want, <nobr>though—</nobr>more often your image should be sized *from* your design, not vice-versa. Also by default the image is scaled to [CSS pixels](https://tomroth.com.au/dpr/), so it is blurry on modern *HiDPI* (a.k.a. [*retina*](https://en.wikipedia.org/wiki/Retina_display) / `2x`, even `3x`) screens—which is really most of us, these days.
+This intrinsic/inline behavior is rarely what you want, though—more often your image should be sized *from* your design, not vice-versa. Also by default the image is scaled to [CSS pixels](https://tomroth.com.au/dpr/), so it is blurry on modern *HiDPI* (a.k.a. [*retina*](https://en.wikipedia.org/wiki/Retina_display) / `2x`, even `3x`) screens—which is really most of us, these days.
 
 <aside>
 
-Most [resets (like ours)](/topic/css/#resets) include a `max-width: 100%` for <nobr>images—</nobr>otherwise, large images will often poke out of their containers, by default!
+Most [resets (like ours)](/topic/css/#resets) include a `max-width: 100%` for images—otherwise, large images will often poke out of their containers, by default!
 
 </aside>
 
@@ -214,13 +214,13 @@ This is not *just* for images (you can use it on any element!), but commonly co
 
 ## `background-image`
 
-You can also use images as backgrounds on elements with the [`background-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image), [<nobr>`background-size`</nobr>](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size), and [`background-origin`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin) <nobr>properties—</nobr>particularly if you want to put something in front of them, like text.
+You can also use images as backgrounds on elements with the [`background-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image), [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size), and [`background-origin`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin) properties—particularly if you want to put something in front of them, like text.
 
 - [<cite>`background-image` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
 	Careful with these.
 	<!-- .link-list .right style="--rows: 2" -->
 
-However this isn’t very semantic, as it blurs the content/<wbr>presentation boundaries—since the image paths are moved into your CSS, and there is no `alt` text description available for screen-readers. So you should *only* use this for contextual or decorative images—not actual content:
+However this isn’t very semantic, as it blurs the content/presentation boundaries—since the image paths are moved into your CSS, and there is no `alt` text description available for screen-readers. So you should *only* use this for contextual or decorative images—not actual content:
 <!-- .add-before--3 -->
 
 <figure
@@ -265,7 +265,7 @@ Always strive for this kind of broad benefit (a.k.a. *universal* design) in al
 
 With regards to their layout, you make images responsive in the same way you (should) make all your page structure responsive—by writing [*mobile-first*](/topic/responsive/#mobile-first-design) front-end for their containers. You can change their flow, size, shape, and <nobr>so-on</nobr>—all via the box you put them in.
 
-But using images introduces some additional considerations, going across breakpoints. You might want to serve/<wbr>show *different* images at different sizes—whether for dimensional (file-size, bandwidth, performance) or art-direction (scale, crop) reasons. The exact same image `src` file is *rarely* ideal at both `375px` and `2560px`.
+But using images introduces some additional considerations, going across breakpoints. You might want to serve/show *different* images at different sizes—whether for dimensional (file-size, bandwidth, performance) or art-direction (scale, crop) reasons. The exact same image `src` file is *rarely* ideal at both `375px` and `2560px`.
 
 Our venerable `<img>` element added some control for this with the addition of the [`srcset`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset) and [`sizes`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes) attributes. But we think it is much easier (at least ergonomically) to skip right into using the modern [`picture` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture). { .four-before }
 <!-- .add-before--3 -->
@@ -274,7 +274,7 @@ Our venerable `<img>` element added some control for this with the addition of t
 	These containers allow you to make your `img` responsive.
 	<!-- .link-list .right style="--rows: 2" -->
 
-The `<picture>` element is a wrapper/<wbr>container for an `<img>`, giving it alternate `<source>` tags that offer different image files for different scenarios. They use [media-query-like](/topic/responsive/#media-queries) syntax to change what image is loaded and displayed:
+The `<picture>` element is a wrapper/container for an `<img>`, giving it alternate `<source>` tags that offer different image files for different scenarios. They use [media-query-like](/topic/responsive/#media-queries) syntax to change what image is loaded and displayed:
 
 <figure
 	@caption="This is all in the HTML; there is no (relevant) CSS. Adjust the divider to see the swaps!"

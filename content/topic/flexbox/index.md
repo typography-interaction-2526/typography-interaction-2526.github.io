@@ -99,10 +99,10 @@ For columns (rotated): `justify` moves items top/bottom, `align` moves left&thi
 
 Like a lot of CSS, *flex* has [shorthand](https://developer.mozilla.org/en-US/docs/Web/CSS/flex) [properties](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-flow).
 
-But again, we would avoid them—the system can be hard enough to understand. This will be true when we get to `grid` as <nobr>well—</nobr>often being a little bit more verbose in your code will make things easier to understand, especially starting out.
+But again, we would avoid them—the system can be hard enough to understand. This will be true when we get to `grid` as well—often being a little bit more verbose in your code will make things easier to understand, especially starting out.
 <!-- .balance -->
 
-## Container <span class="parens">(</span>Parent<span class="parens">)</span> Properties
+## Container (Parent) Properties
 
 Unlike most (…all?) of the CSS we’ve been introduced to, *flex* is applied on a *parent* element—but actually adjusts the layout of the *children*. An element with `display: flex;` is really telling you what its kids are going to be doing.
 <!-- .balance -->
@@ -140,7 +140,7 @@ Keep in mind that all flex reordering is only *visual*—it obviously can’t ch
 
 ### `flex-wrap`
 
-Since flexbox is *one-dimensional*, by default it will try to cram everything into one <nobr>line—</nobr>even when there is not enough room! But you can tell it to *wrap* onto additional lines by adding [the `flex-wrap: wrap;` property/<wbr>value](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) (set to `nowrap` by default):
+Since flexbox is *one-dimensional*, by default it will try to cram everything into one line—even when there is not enough room! But you can tell it to *wrap* onto additional lines by adding [the `flex-wrap: wrap;` property/value](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) (set to `nowrap` by default):
 <!-- .balance -->
 
 <figure
@@ -160,7 +160,7 @@ There is also a `-reverse` suffix when wrapping, which will sequence items from
 <!-- .add-before--3 .balance -->
 
 <figure
-	@caption="You could do some weird, unique layouts with <nobr>these—</nobr>but keep in mind the order is still only *visual*!"
+	@caption="You could do some weird, unique layouts with these—but keep in mind the order is still only *visual*!"
 	@source="flex-wrap-reverse/preview/?active=style.css"
 	style="--lines: 20"
 	>
@@ -171,7 +171,7 @@ There is also a `-reverse` suffix when wrapping, which will sequence items from
 So most of what we’ve seen here is… somewhat possible using `float` and `position`—though not at all easily and only when you know the size/counts of your content.
 <!-- .balance -->
 
-But [the `justify-content` property](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) is where flexbox starts to allow novel layouts, by dividing up the extra&thinsp;/available free space between elements—akin to *distribute* options in Figma&thinsp;/<wbr>Adobe applications. `justify-content` does this on our *main axis*:
+But [the `justify-content` property](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) is where flexbox starts to allow novel layouts, by dividing up the extra&thinsp;/available free space between elements—akin to *distribute* options in Figma&thinsp;/Adobe applications. `justify-content` does this on our *main axis*:
 <!-- .add-before--2 .balance -->
 
 <figure
@@ -184,7 +184,7 @@ But [the `justify-content` property](https://developer.mozilla.org/en-US/docs/W
 When our *main axis* is vertical, with `flex-direction: column;`&thinsp;:
 
 <figure
-	@caption="These *only* works with the `height` to justify within&zwj;—<wbr>otherwise the container would cinch up to the content height, as usual."
+	@caption="These *only* works with the `height` to justify within&zwj;—otherwise the container would cinch up to the content height, as usual."
 	@source="flex-justify-content-column/preview/?active=style.css"
 	style="--lines: 19"
 	>
@@ -221,7 +221,7 @@ When we have a flex element with `flex-wrap` set, we can also position the *li
 	>
 </figure>
 
-And `align-content` can also be used with a vertical/<wbr>`flex-direction: column;` axis, not shown here. This doesn’t often come up, as you have to specify/know a height to force a column wrap.
+And `align-content` can also be used with a vertical/`flex-direction: column;` axis, not shown here. This doesn’t often come up, as you have to specify/know a height to force a column wrap.
 <!-- .balance -->
 
 ### `gap`&thinsp;, `row-gap`&thinsp;, and `column-gap`
@@ -243,7 +243,7 @@ Note that the `justify`, `align`, and `gap` properties are also shared (in name
 
 </aside>
 
-## Item <span class="parens">(</span>Child<span class="parens">)</span> Properties
+## Item (Child) Properties
 
 Flexbox is *usually* applied on the parent/container. But once you’ve set `display: flex;` on an element, there are also some individual override properties that can be given to its children, *flex items*.
 
