@@ -185,12 +185,24 @@ main {
 	ul:where(:has(li > a > cite, li > p:only-child > a > cite)) {
 		grid-template-columns: minmax(auto, max-content);
 
-		@container style(--columns: 1) { margin-block: 1rlh }
+		@container style(--columns: 1) {
+			margin-block-start: 1rlh;
+
+			+ * { margin-block-start: 1rlh }
+		}
 	}
 
 	/* TODO Longer text-after-cite blows up the common width of these! */
 
-	*:where(:not(li)) > p:where(:has(a > cite)) { justify-self: start }
+	*:where(:not(li)) > p:where(:has(a > cite)) {
+		justify-self: start;
+
+		@container style(--columns: 1) {
+			margin-block-start: 1rlh;
+
+			+ * { margin-block-start: 1rlh }
+		}
+	}
 
 	/* More space above these when they aren’t manually in-columns. */
 	ul,
