@@ -29,5 +29,5 @@ section {
 section:not(:first-child) {
 	--background: gold; /* Only for this element. */
 
-	margin-top: var(--spacing);
+	margin-block-start: var(--spacing);
 }

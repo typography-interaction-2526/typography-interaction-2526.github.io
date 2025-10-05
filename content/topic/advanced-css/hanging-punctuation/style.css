@@ -1,15 +1,15 @@
 section { padding: var(--base) calc(2 * var(--base)); }
 h2 { line-height: 90%; }
-p { margin-top: var(--base); }
+p { margin-block-start: var(--base); }
 
 section:nth-child(2) h2::first-letter { /* Target via pseudo-element. */
 	color: tomato; /* There is no `last-letter`, unforunately. */
-	margin-left: -0.4em; /* Adjusted to the width of the `“` */
+	margin-inline-start: -0.4em; /* Adjusted to the width of the `“` */
 }
 
 section:nth-child(3) h2::before {
 	content: '“'; /* Add the quotes themselves via pseudo-elements. */
-	margin-left: -0.5em;
+	margin-inline-start: -0.5em;
 }
 section:nth-child(3) h2::after { content: '”'; }
 

@@ -5,4 +5,4 @@ body {
 
 section { padding: 1rem; }
 
-p:not(:first-child) { margin-top: 1rem; }
+p:not(:first-child) { margin-block-start: 1rem; }

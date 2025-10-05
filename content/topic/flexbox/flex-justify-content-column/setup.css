@@ -6,7 +6,7 @@ body {
 ol { background-color: gold; }
 li {
 	background-color: tomato;
-	border-bottom: 0.25rem solid firebrick;
-	border-right: 0.25rem solid firebrick;
+	border-block-end: 0.25rem solid firebrick;
+	border-inline-end: 0.25rem solid firebrick;
 	padding: 1rem;
 }

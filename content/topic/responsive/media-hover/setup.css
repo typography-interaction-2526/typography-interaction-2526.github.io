@@ -11,5 +11,5 @@ section {
 aside,
 section:not(:first-child),
 p:not(:first-child) {
-	margin-top: 1rem;
+	margin-block-start: 1rem;
 }

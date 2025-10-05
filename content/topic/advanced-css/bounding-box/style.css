@@ -10,8 +10,8 @@ h2 {
 	visibility: hidden; /* We don’t need to see it or click it. */
 }
 
-.precise::before { margin-top: var(--inset--top); }
-.precise::after { margin-bottom: var(--inset--bottom); }
+.precise::before { margin-block-start: var(--inset--top); }
+.precise::after { margin-block-end: var(--inset--bottom); }
 
 .precise {
 	--inset--top:    -0.2em; /* Font/line-height-dependent! */
@@ -20,7 +20,7 @@ h2 {
 	--inset--right:  -0.06em;
 
 	display: flow-root; /* Cinch the height. */
-	margin-left: var(--inset--left);
-	margin-right: var(--inset--right);
+	margin-inline-end: var(--inset--right);
+	margin-inline-start: var(--inset--left);
 	width: fit-content; /* Cinch the width. */
 }
