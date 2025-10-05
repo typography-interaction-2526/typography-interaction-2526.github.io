@@ -17,25 +17,25 @@ Just as in nature systems of order govern the growth and structure of animate an
 
 [CSS grid layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids#line-based_placement) (from here on, just *grid*) is another, even more recent addition to CSS, continuing on from where [*flexbox*](/topic/flexbox/) left off. While flex is primarily a *one-dimensional* layout system—focused on horizontal *or* vertical arrangements—grid is *two-dimensional* system, integrating the two directions together.
 
-- [<letter-bullet @title="A Complete Guide to Grid – CSS Tricks"></letter-bullet>](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [<cite>A Complete Guide to Grid – CSS Tricks</cite>](https://css-tricks.com/snippets/css/complete-guide-grid/)
 	The *grid* version of the *flexbox* classic.
 
-- [<letter-bullet @title="CSS Grid Layout: A New Layout Module for the Web"></letter-bullet>](https://webkit.org/blog/7434/css-grid-layout-a-new-layout-module-for-the-web/)
+- [<cite>CSS Grid Layout: A New Layout Module for the Web</cite>](https://webkit.org/blog/7434/css-grid-layout-a-new-layout-module-for-the-web/)
 	WebKit (Safari’s) overview, from 2017.
 
-- [<letter-bullet @title="Basic Concepts of Grid Layout - MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- [<cite>Basic Concepts of Grid Layout - MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
 	Back to MDN.
 
-- [<letter-bullet @title="Basics of CSS Grid"></letter-bullet>](https://www.youtube.com/watch?v=FEnRpy9Xfes)
+- [<cite>Basics of CSS Grid</cite>](https://www.youtube.com/watch?v=FEnRpy9Xfes)
 	From web guru [Jen Simmons](https://jensimmons.com).
 
-- [<letter-bullet @title="Flexbox vs. CSS Grid"></letter-bullet>](https://www.youtube.com/watch?v=hs3piaN4b5I)
+- [<cite>Flexbox vs. CSS Grid</cite>](https://www.youtube.com/watch?v=hs3piaN4b5I)
 	Jen unpacks when to use each regime.
 
-- [<letter-bullet @title="Grid by Example"></letter-bullet>](https://gridbyexample.com/examples/)
+- [<cite>Grid by Example</cite>](https://gridbyexample.com/examples/)
 	Loads of examples.
 
-- [<letter-bullet @title="Grid Garden"></letter-bullet>](https://cssgridgarden.com)
+- [<cite>Grid Garden</cite>](https://cssgridgarden.com)
 	Like the Froggy game, but for grid.
 	<!-- .link-list .right style="--rows: 6" -->
 

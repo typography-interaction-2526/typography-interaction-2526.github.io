@@ -6,10 +6,10 @@
 
 Let’s look at the specifics around using images on the web! (Finally.)
 
-- [<letter-bullet @title="Images in HTML – MDN">](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [<cite>Images in HTML – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 	Pretty good overview.
 
-- [<letter-bullet @bullet="F" @title="Choose the Right Image Format – web.dev">](https://web.dev/choose-the-right-image-format/)
+- [<cite>Choose the Right Image Format – web.dev</cite>](https://web.dev/choose-the-right-image-format/)
 	Also discusses *Retina*/<wbr>High DPI (Hi&thinsp;DPI) screens.
 	<!-- .link-list .right style="--rows: 3" -->
 
@@ -43,7 +43,7 @@ Let me know what you think………
 There are several commonly used image formats on the web, each with their own purpose:
 <!-- .add-after--3 .balance .bold .scale--h4 -->
 
-[<letter-bullet @bullet="G" @title="`.gif`&numsp;Graphics Interchange Format">](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format)
+[<cite>`.gif`&numsp;Graphics Interchange Format</cite>](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format)
 
 :	<img src="tim.gif">
 
@@ -53,7 +53,7 @@ There are several commonly used image formats on the web, each with their own 
 
 	Eric and I say GIF with a hard *G* (as in *gift*), and we are your instructors and are right. <!-- .secondary -->
 
-[<letter-bullet @bullet="J" @title="`.jpg`&numsp;Joint Photographic [Experts] Group">](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image)
+[<cite>`.jpg`&numsp;Joint Photographic [Experts] Group</cite>](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image)
 
 :	<img src="tim.jpg">
 
@@ -63,7 +63,7 @@ There are several commonly used image formats on the web, each with their own 
 
 	Folks pretty much always call these *jay-pegs*. <!-- .secondary -->
 
-[<letter-bullet @bullet="N" @title="`.png`&numsp;Portable Network Graphics">](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics)
+[<cite>`.png`&numsp;Portable Network Graphics</cite>](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics)
 
 :	<img src="tim.png">
 
@@ -75,7 +75,7 @@ There are several commonly used image formats on the web, each with their own 
 
 	Many people use the acronym; you’ll also sometimes hear *pings*. <!-- .secondary -->
 
-[<letter-bullet @bullet="S" @title="`.svg`&numsp;Scalable Vector Graphics">](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics)
+[<cite>`.svg`&numsp;Scalable Vector Graphics</cite>](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics)
 
 :	<img src="tim.svg">
 
@@ -86,8 +86,6 @@ There are several commonly used image formats on the web, each with their own 
 	Everyone says *S-V-G*. <!-- .secondary -->
 
 <style>
-	.letter-bullet code { --color--foreground--override: revert-layer }
-
 	dt {
 		margin-inline-start:  -0.25em;
 		padding-inline-start: initial;
@@ -101,24 +99,24 @@ There are several commonly used image formats on the web, each with their own 
 	}
 </style>
 
-### Filesize
+<!-- ### Filesize
 
-TKTKTK
+TKTKTK -->
 
 ### “Modern” Formats
 
 After *years* of discussion and [competing standards](https://xkcd.com/927/), several “modern” replacement formats are starting to gain browser support and developer/<wbr>designer traction. They are all designed to overcome the various shortcomings of the legacy formats above—usually around compression efficiency. But it’s still a confusing, evolving mess out there! Here are some you might encounter:
 
-- [<letter-bullet @title="AVIF"></letter-bullet>](https://en.wikipedia.org/wiki/AVIF)
+- [<cite>AVIF</cite>](https://en.wikipedia.org/wiki/AVIF)
 	*AV1 Image File Format*, the new(est) replacement for everything. It… *might* be the next big one.
 
-- [<letter-bullet @bullet="F" @title="HEIC&thinsp;/&thinsp;HEIF"></letter-bullet>](https://en.wikipedia.org/wiki/High_Efficiency_Image_File_Format)
+- [<cite>HEIC&thinsp;/&thinsp;HEIF</cite>](https://en.wikipedia.org/wiki/High_Efficiency_Image_File_Format)
 	*High Efficiency Image File Format*, intended to replace JPG&thinsp;s—you might have seen `.heic` from your iPhones and annoying folks.
 
-- [<letter-bullet @title="JPEG XL"></letter-bullet>](https://en.wikipedia.org/wiki/JPEG_XL)
+- [<cite>JPEG XL</cite>](https://en.wikipedia.org/wiki/JPEG_XL)
 	I guess the “L” is for long-term? This is a competitor to AVIF as the *One Format to Rule Them All*.
 
-- [<letter-bullet @title="WebP"></letter-bullet>](https://en.wikipedia.org/wiki/WebP)
+- [<cite>WebP</cite>](https://en.wikipedia.org/wiki/WebP)
 	*Web Picture format*, Google’s been pushing this since 2010—the first of these improved formats. Finally has pretty wide support.
 <!-- .link-list .balance -->
 
@@ -163,7 +161,7 @@ In the past, you would manually set an image size within your HTML via special
 <!-- .balance .add-after -->
 
 ```html <!-- style="max-inline-size: var(--layout--page)" -->
-<img src="tim.jpg" alt="Tim Berners-Lee at a computer." width="230" height="150">
+<img alt="Tim Berners-Lee at a computer." height="150" src="tim.jpg" width="230">
 ```
 No units, even.
 <!-- .secondary -->
@@ -185,7 +183,7 @@ So you’ll often want to set images to `display: block;`, and then control t
 
 CSS also added the [`object-fit`](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) and corresponding [`object-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position) properties for sizing images *within* their containers—as if the image file is a child of `img`. This is usually used when setting an `img` to fill a container:
 
-- [<letter-bullet @bullet="F" @title="`object-fit` – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
+- [<cite>`object-fit` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
 	This used to be much harder!
 	<!-- .link-list .right style="--rows: 2" -->
 
@@ -200,7 +198,7 @@ CSS also added the [`object-fit`](https://developer.mozilla.org/en-US/docs/Web/C
 
 CSS also added an [`aspect-ratio` property](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio) to control the width-to-height ratio of an element—maintaining this relationship as an element scales. (This used to be [*unnecessarily* hard](https://css-tricks.com/aspect-ratio-boxes/) to achieve. CSS heights are always weird! You kids have it easy.)
 
-- [<letter-bullet @bullet="A" @title="`aspect-ratio` – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio)
+- [<cite>`aspect-ratio` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio)
 	So much easier now.
 	<!-- .link-list .right style="--rows: 2" -->
 
@@ -218,7 +216,7 @@ This is not *just* for images (you can use it on any element!), but commonly co
 
 You can also use images as backgrounds on elements with the [`background-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image), [<nobr>`background-size`</nobr>](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size), and [`background-origin`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin) <nobr>properties—</nobr>particularly if you want to put something in front of them, like text.
 
-- [<letter-bullet @bullet="B" @title="`background-image` – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
+- [<cite>`background-image` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
 	Careful with these.
 	<!-- .link-list .right style="--rows: 2" -->
 
@@ -244,7 +242,7 @@ Ask yourself, “would this page make sense if I couldn’t see this image?”
 
 Speaking of semantics—HTML also has a [`figure`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure) element that you can use to associate an image (or other visual) with a visible [`figcaption`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption) description or legend. These containers formally link the meaning/context of the elements together:
 
-- [<letter-bullet @bullet="F" @title="`figure` – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
+- [<cite>`figure` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
 	Many of your images should be in `figure` containers.
 	<!-- .link-list .right style="--rows: 2" -->
 
@@ -272,7 +270,7 @@ But using images introduces some additional considerations, going across breakpo
 Our venerable `<img>` element added some control for this with the addition of the [`srcset`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset) and [`sizes`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes) attributes. But we think it is much easier (at least ergonomically) to skip right into using the modern [`picture` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture). { .four-before }
 <!-- .add-before--3 -->
 
-- [<letter-bullet @bullet="R" @title="`picture` – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)
+- [<cite>`picture` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)
 	These containers allow you to make your `img` responsive.
 	<!-- .link-list .right style="--rows: 2" -->
 
@@ -294,10 +292,10 @@ Responsive images (like the rest of this) can get [very complicated](https://web
 
 SVGs are a (digital) designers best friend—mixing the adaptability and maintainability of code with the freedom and flexibility of visual design.
 
-- [<letter-bullet @bullet="V" @title="Including Vector Graphics in HTML – MDN">](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML#what_is_svg)
+- [<cite>Including Vector Graphics in HTML – MDN">](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML#what_is_svg)
 	Good overview.
 
-- [<letter-bullet @bullet="S" @title="How to Code SVG Icons by Hand">](https://www.aleksandrhovhannisyan.com/blog/svg-tutorial/)
+- [<cite>How to Code SVG Icons by Hand">](https://www.aleksandrhovhannisyan.com/blog/svg-tutorial/)
 	Aleksandr Hovhannisyan goes deep on making SVGs. This is how the *Pros* do.
 	<!-- .link-list .right style="--rows: 3" -->
 

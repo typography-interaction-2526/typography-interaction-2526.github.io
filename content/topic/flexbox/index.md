@@ -8,13 +8,13 @@
 
 [*Flexbox*](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox), short for *flexible boxes*—which folks will often just shorten all the way to *flex*&zwj;—is a later (mid-2010s, slow adoption) addition to CSS.
 
-- [<letter-bullet @bullet="G" @title="CSS Flexbox Layout Guide – CSS Tricks"></letter-bullet>](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [<cite>CSS Flexbox Layout Guide – CSS Tricks</cite>](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 	This page is a classic! It probably bought [Chris Coyier](https://chriscoyier.net) a house.
 
-- [<letter-bullet @bullet="C" @title="Basic Concepts of Flexbox – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+- [<cite>Basic Concepts of Flexbox – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
 	Can’t go wrong.
 
-- [<letter-bullet @title="Flexbox Froggy"></letter-bullet>](https://flexboxfroggy.com/)
+- [<cite>Flexbox Froggy</cite>](https://flexboxfroggy.com/)
 	A little game.
 <!-- .link-list .right style="--rows: 4" -->
 
