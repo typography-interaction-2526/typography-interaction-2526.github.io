@@ -161,7 +161,7 @@ In the past, you would manually set an image size within your HTML via special `
 <!-- .balance .add-after -->
 
 ```html <!-- style="max-inline-size: var(--layout--page)" -->
-<img alt="Tim Berners-Lee at a computer." height="150" src="tim.jpg" width="230">
+<img src="tim.jpg" alt="Tim Berners-Lee at a computer." width="230" height="150">
 ```
 No units, even.
 <!-- .secondary -->
