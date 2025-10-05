@@ -5,41 +5,41 @@
 </script>
 
 <blockquote
-	@attribution="William of Ockham"
+	@attribution="William of Ockham"
 	@citation="https://mathshistory.st-andrews.ac.uk/Biographies/Ockham"
 	>
 
-It is vain to do with more what can be done with less.
+It is vain to do with more what can be done with less.
 
 </blockquote>
 
-Our HTML/CSS focus up to this point has been relatively broad, to start with the basics. Here we want to sand down some of the rough edges, and introduce you to some specific, advanced techniques you can use to refine and enliven your work—still with just CSS, no JavaScript (yet)!
+Our HTML/CSS focus up to this point has been relatively broad, to start with the basics. Here we want to sand down some of the rough edges, and introduce you to some specific, advanced techniques you can use to refine and enliven your work—still with just CSS, no JavaScript (yet)!
 <!-- .add-before--3 -->
 
-A good pattern to follow in web (and all) development is to use each technology *only* for what it does *best*—using HTML for semantic meaning, CSS to handle how we form a page, and, later, JavaScript to introduce more interaction. But even before we get to JS, we can start to layer in some more liveliness in our CSS.
+A good pattern to follow in web (and all) development is to use each technology *only* for what it does *best*—using HTML for semantic meaning, CSS to handle how we form a page, and, later, JavaScript to introduce more interaction. But even before we get to JS, we can start to layer in some more liveliness in our CSS.
 
 Let’s look at some examples.
 <!-- .bold .scale--h4 -->
 
 ## Overflows and Scrolling
 
-An [*overflow*](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow) in CSS happens when there is too much content to fit in a container—usually because you have manually constrained its `height` or `width`. (By default, the browser will try to show you everything!)
+An [*overflow*](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow) in CSS happens when there is too much content to fit in a container—usually because you have manually constrained its `height` or `width`. (By default, the browser will try to show you everything!)
 
-- [<cite>Overflowing Content – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-	There are going to be a lot of MDNs, here.
+- [<cite>Overflowing Content – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+	There are going to be a lot of MDNs, here.
 <!-- .link-list .right style="--rows: 2" -->
 
-We can use this behavior *intentionally* to crop our content or create scrolling areas:
+We can use this behavior *intentionally* to crop our content or create scrolling areas:
 <!-- .balance -->
 
 <figure
-	@caption="Some of you have already discovered these!"
+	@caption="Some of you have already discovered these!"
 	@source="overflow/preview/?active=style.css"
 	style="--lines: 21"
 	>
 </figure>
 
-Importantly, this creates a new [*stacking context*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)—which means things with `position` (and some other properties) will now use the overflow container as their reference/origin:
+Importantly, this creates a new [*stacking context*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)—which means things with `position` (and some other properties) will now use the overflow container as their reference/origin:
 <!-- .balance -->
 
 <figure
@@ -48,9 +48,9 @@ Importantly, this creates a new [*stacking context*](https://developer.mozilla.
 	>
 </figure>
 
-### `text-overflow` and `-webkit-line-clamp`
+### `text-overflow` and `-webkit-line-clamp`
 
-You can also *excerpt* text (perhaps on a landing page) with the [`text-overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow) (for a single line) or [`-webkit-line-clamp`](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp) (for multiple lines) properties—which will add [an ellipsis](https://en.wikipedia.org/wiki/Ellipsis) <samp>…</samp> where the text overflows. Only do this when the full text is available on a subsequent page:
+You can also *excerpt* text (perhaps on a landing page) with the [`text-overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow) (for a single line) or [`-webkit-line-clamp`](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp) (for multiple lines) properties—which will add [an ellipsis](https://en.wikipedia.org/wiki/Ellipsis) <samp>…</samp> where the text overflows. Only do this when the full text is available on a subsequent page:
 <!-- .balance -->
 
 <figure
@@ -62,39 +62,39 @@ You can also *excerpt* text (perhaps on a landing page) with the [`text-overflo
 
 ## Precise Text Positioning
 
-HTML renders a lot of extra space around text elements, called the [*line box*](https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align) (or, in design software parlance, the *bounding box*).
+HTML renders a lot of extra space around text elements, called the [*line box*](https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align) (or, in design software parlance, the *bounding box*).
 
-- [<cite>Font Metrics, <nobr>Line-Height</nobr> and Vertical-&zwj;Align</cite>](https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align)
-	A deep-dive on type positioning.
+- [<cite>Font Metrics, <nobr>Line-Height</nobr> and Vertical-&zwj;Align</cite>](https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align)
+	A deep-dive on type positioning.
 
-- [<cite>Vertical Spacing and Line-Height in Design Systems – Google Fonts</cite>](https://fonts.google.com/knowledge/using_type/vertical_spacing_and_line_height_in_design_systems)
+- [<cite>Vertical Spacing and Line-Height in Design Systems – Google Fonts</cite>](https://fonts.google.com/knowledge/using_type/vertical_spacing_and_line_height_in_design_systems)
 	It’s all very complicated.
 	<!-- .link-list .right style="--rows: 3" -->
 
-It is based on the `font-family`, the `font-size`, and the `line-height`, which basically means it is different all the time—and crucially, often different from Adobe/Figma to HTML. This makes it difficult to position type precisely—especially at large, expressive sizes like your headings! It’s always annoying, and you’ll often be adding/subtracting your spacing (`margin` or `padding`) to account for it, if you want to line everything up *just right*, optically.
+It is based on the `font-family`, the `font-size`, and the `line-height`, which basically means it is different all the time—and crucially, often different from Adobe/Figma to HTML. This makes it difficult to position type precisely—especially at large, expressive sizes like your headings! It’s always annoying, and you’ll often be adding/subtracting your spacing (`margin` or `padding`) to account for it, if you want to line everything up *just right*, optically.
 
-Let’s avoid it. We can use [pseudo-elements](/topic/css/#pseudo-elements), `::after` / `::before`—which are entirely created by CSS, not in your DOM—to negate this vertical space with a negative margin. By doing this on the pseudo-elements, we can still position the parent element normally, otherwise:
+Let’s avoid it. We can use [pseudo-elements](/topic/css/#pseudo-elements), `::after` / `::before`—which are entirely created by CSS, not in your DOM—to negate this vertical space with a negative margin. By doing this on the pseudo-elements, we can still position the parent element normally, otherwise:
 <!-- .add-before--3 -->
 
 <figure
-	@caption="Here we also move the text with `margin-left` and `margin-right`, though usually this adjustment is much more minor (to the point of ignoring)."
+	@caption="Here we also move the text with `margin-left` and `margin-right`, though usually this adjustment is much more minor (to the point of ignoring)."
 	@source="bounding-box/preview/?active=style.css"
 	style="--lines: 20"
 	>
 </figure>
 
-Figma is actually *ahead* of CSS here with its recent [<samp>Vertical Trim</samp> option](https://dodonut.com/blog/everything-you-need-to-know-about-figma-s-vertical-trim-feature/). But the code for this kind of thing will get *much* easier in coming years with the analogous [`text-box-trim` and `text-box-edge`](https://css-tricks.com/two-css-properties-for-trimming-text-box-whitespace/) properties! [Soon](https://developer.apple.com/documentation/safari-release-notes/safari-18_2-release-notes).
+Figma is actually *ahead* of CSS here with its recent [<samp>Vertical Trim</samp> option](https://dodonut.com/blog/everything-you-need-to-know-about-figma-s-vertical-trim-feature/). But the code for this kind of thing will get *much* easier in coming years with the analogous [`text-box-trim` and `text-box-edge`](https://css-tricks.com/two-css-properties-for-trimming-text-box-whitespace/) properties! [Soon](https://developer.apple.com/documentation/safari-release-notes/safari-18_2-release-notes).
 <!-- .balance -->
 
 ## Text Ragging (Kinda)
 
-We’ve gone on-and-on about how you can’t treat the web like print—always [perfectly ragging](/topic/typography/#ragging) your text for nice, smooth blocks. In modern (responsive) web design we don’t always know what our text will be, nor where it will wrap!
+We’ve gone on-and-on about how you can’t treat the web like print—always [perfectly ragging](/topic/typography/#ragging) your text for nice, smooth blocks. In modern (responsive) web design we don’t always know what our text will be, nor where it will wrap!
 
-But we can do a handful of things to make for *better* ragging/wraps, given the unknowns—judiciously using `hyphens`&thinsp;/&thinsp;`&shy;`, `<wbr>`, `<nobr>` and `&nbsp;`, and `balance` to *somewhat* control your line breaks.
+But we can do a handful of things to make for *better* ragging/wraps, given the unknowns—judiciously using `hyphens`&thinsp;/&thinsp;`&shy;`, `<wbr>`, `<nobr>` and `&nbsp;`, and `balance` to *somewhat* control your line breaks.
 
-### `hyphens` / `&shy;`
+### `hyphens` / `&shy;`
 
-The [hyphens](https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens) property allows long, multi-syllable words to be [hyphenated](https://en.wikipedia.org/wiki/Hyphen#Justification_and_line-wrapping) when they wrap across multiple lines. This can be done automatically by the browser, or by manually inserting `&shy;` (for [*soft hyphen*](https://en.wikipedia.org/wiki/Soft_hyphen)) as an [HTML entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity):
+The [hyphens](https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens) property allows long, multi-syllable words to be [hyphenated](https://en.wikipedia.org/wiki/Hyphen#Justification_and_line-wrapping) when they wrap across multiple lines. This can be done automatically by the browser, or by manually inserting `&shy;` (for [*soft hyphen*](https://en.wikipedia.org/wiki/Soft_hyphen)) as an [HTML entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity):
 <!-- .balance -->
 
 <figure
@@ -106,7 +106,7 @@ The [hyphens](https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens) property
 
 ### `<wbr>`
 
-Somewhat similar to `&shy;`, the [`<wbr>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr) is a (void/empty) HTML element that denotes a *word break* opportunity—a bit like an optional `<br>`! You can use these to control where single long word will wrap, *without* a hyphen:
+Somewhat similar to `&shy;`, the [`<wbr>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr) is a (void/empty) HTML element that denotes a *word break* opportunity—a bit like an optional `<br>`! You can use these to control where single long word will wrap, *without* a hyphen:
 
 <figure
 	@source="wbr/preview/?active=index.html"
@@ -116,14 +116,14 @@ Somewhat similar to `&shy;`, the [`<wbr>`](https://developer.mozilla.org/en-US/d
 
 ### `<nobr>` and `&nbsp;`
 
-More often, you’ll want to keep certain words *together*—to avoid a [widow or orphan](/topic/typography/#widows-and-orphans), or to keep important/related text together—like in dates, *November 8*, or with  names like *van Zanten*.
+More often, you’ll want to keep certain words *together*—to avoid a [widow or orphan](/topic/typography/#widows-and-orphans), or to keep important/related text together—like in dates, *November 8*, or with  names like *van Zanten*.
 
-You can wrap multiple words (or whole phrases) in a [`<nobr>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nobr) tag—keeping in mind that like `<em>` or `<strong>`, the default behavior is cleared by most [resets](/topic/css/#resets) (ours included)—so you have to restore the property in CSS.
+You can wrap multiple words (or whole phrases) in a [`<nobr>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nobr) tag—keeping in mind that like `<em>` or `<strong>`, the default behavior is cleared by most [resets](/topic/css/#resets) (ours included)—so you have to restore the property in CSS.
 
-You can also use a manual `&nbsp;` entity between words:
+You can also use a manual `&nbsp;` entity between words:
 
 <figure
-	@caption="On a Mac, you can insert an *encoded* `&&zwj;nbsp;` with <kbd>⌥</kbd> <kbd>Space</kbd>. (It’s seemingly [much harder](https://superuser.com/a/1414666) on Windows.) This works in many programs, not just your IDE! It’s harder to see, but easier to read."
+	@caption="On a Mac, you can insert an *encoded* `&&zwj;nbsp;` with <kbd>⌥</kbd> <kbd>Space</kbd>. (It’s seemingly [much harder](https://superuser.com/a/1414666) on Windows.) This works in many programs, not just your IDE! It’s harder to see, but easier to read."
 	@source="nobr-nbsp/preview/?active=index.html"
 	style="--lines: 21"
 	>
@@ -131,11 +131,11 @@ You can also use a manual `&nbsp;` entity between words:
 
 ### `text-wrap: balance;`
 
-After many, many years of patient, typographic waiting (and [some JS](https://github.com/adobe/balance-text) [shenanigans](https://www.ctrl.blog/entry/text-wrap-balance.html)) we now have [growing browser support](https://developer.chrome.com/docs/css-ui/css-text-wrap-balance) for “balancing” uneven line lengths with [`text-wrap: balance;`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap)&thinsp;:
+After many, many years of patient, typographic waiting (and [some JS](https://github.com/adobe/balance-text) [shenanigans](https://www.ctrl.blog/entry/text-wrap-balance.html)) we now have [growing browser support](https://developer.chrome.com/docs/css-ui/css-text-wrap-balance) for “balancing” uneven line lengths with [`text-wrap: balance;`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap)&thinsp;:
 <!-- .balance -->
 
 <figure
-	@caption="This is particularly noticeable (and helpful) for centered text! There is also [`pretty`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap#pretty), but Safari [doesn’t support it](https://caniuse.com/mdn-css_properties_text-wrap_pretty) yet."
+	@caption="This is particularly noticeable (and helpful) for centered text! There is also [`pretty`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap#pretty), but Safari [doesn’t support it](https://caniuse.com/mdn-css_properties_text-wrap_pretty) yet."
 	@source="balance/preview/?active=style.css"
 	style="--lines: 9"
 	>
@@ -143,11 +143,11 @@ After many, many years of patient, typographic waiting (and [some JS](https:/
 
 ## Hanging Punctuation (Sorta)
 
-Ideally we could set punctuation *outside* of our text blocks, for visual alignment based solely on the letters—a traditional design technique called [*hanging punctuation*](https://en.wikipedia.org/wiki/Hanging_punctuation). (There is actually a [CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/hanging-punctuation) for this, but only Safari supports it!) But we can still approximate the behavior, at least for quotes:
+Ideally we could set punctuation *outside* of our text blocks, for visual alignment based solely on the letters—a traditional design technique called [*hanging punctuation*](https://en.wikipedia.org/wiki/Hanging_punctuation). (There is actually a [CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/hanging-punctuation) for this, but only Safari supports it!) But we can still approximate the behavior, at least for quotes:
 <!-- .balance -->
 
-- [<cite>`::before` and `::after` – CSS Tricks</cite>](https://css-tricks.com/almanac/selectors/a/after-and-before/)
-	Another great CSS Tricks article.
+- [<cite>`::before` and `::after` – CSS Tricks</cite>](https://css-tricks.com/almanac/selectors/a/after-and-before/)
+	Another great CSS Tricks article.
 	<!-- .link-list .right style="--rows: 2" -->
 
 <figure
@@ -157,14 +157,14 @@ Ideally we could set punctuation *outside* of our text blocks, for visual align
 	>
 </figure>
 
-When in doubt, [*The Elements of Typographic Style*](https://readings.design/PDF/the_elements_of_typographic_style.pdf) explains these conventions. But also, as Bringhurst says, *“read the text before designing it.”* Always put yourself in the mind of your reader!
+When in doubt, [*The Elements of Typographic Style*](https://readings.design/PDF/the_elements_of_typographic_style.pdf) explains these conventions. But also, as Bringhurst says, *“read the text before designing it.”* Always put yourself in the mind of your reader!
 <!-- .bold .scale--h4 .add-before--3 -->
 
 <aside>
 
-These strategies only work if you can *manually* edit your text content, which is not always feasible—with templating/content management systems, editors, time, and so on.
+These strategies only work if you can *manually* edit your text content, which is not always feasible—with templating/content management systems, editors, time, and so on.
 
-Do it when you can—and give more attention to your large headings, then your body copy and so-on, going down your hierarchy.
+Do it when you can—and give more attention to your large headings, then your body copy and so-on, going down your hierarchy.
 
 </aside>
 
@@ -172,8 +172,8 @@ Do it when you can—and give more attention to your large headings, then your b
 
 CSS can apply visual effects on elements—adjusting their graphical display *after* they are laid out and rendered in the page—with the [`filter` property](https://developer.mozilla.org/en-US/docs/Web/CSS/filter):
 
-- [<cite>Filter – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
-	Back to MDN.
+- [<cite>Filter – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
+	Back to MDN.
 	<!-- .link-list .right style="--rows: 2" -->
 
 <figure
@@ -183,7 +183,7 @@ CSS can apply visual effects on elements—adjusting their graphical display *af
 	>
 </figure>
 
-These also correspond to [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter) values—which apply the effect to the page *behind* an element! You’ll often use these in conjunction with `opacity` or a [`mix-blend-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode) for interesting Photoshop/Figma-like layer-blending effects:
+These also correspond to [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter) values—which apply the effect to the page *behind* an element! You’ll often use these in conjunction with `opacity` or a [`mix-blend-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode) for interesting Photoshop/Figma-like layer-blending effects:
 <!-- .balance -->
 
 <figure
@@ -198,24 +198,24 @@ These also correspond to [`backdrop-filter`](https://developer.mozilla.org/en-US
 Beyond our standard sizing and layout afforded by CSS, you can also *visually* manipulate elements using CSS [transforms](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)—scaling, skewing, translating, or rotating elements *after* they are laid out in the DOM. It’s like grabbing the “corner handles” in Adobe/Figma!
 <!-- .add-after--3 -->
 
-- [<cite>Transform – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
+- [<cite>Transform – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
 	These are fun.
 	<!-- .link-list .right style="--rows: 2" -->
 
 `scale()` / `scaleX()` / `scaleY()` / `scaleZ()` / `scale3d()` <!-- style="line-height: 1.5" -->
-: Change the displayed size of the element—as if it is an image.
+: Change the displayed size of the element—as if it is an image.
 
 `skew()` / `skewX()` / `skewY()`
-: Tilt an element to the left or right, like turning a rectangle into a parallelogram.
+: Tilt an element to the left or right, like turning a rectangle into a parallelogram.
 
 `translate()` / `translateX()` / `translateY()` / `translate3d()` <!-- style="line-height: 1.5" -->
-: Move an element left/right and up/down, and also in three-dimensional space.
+: Move an element left/right and up/down, and also in three-dimensional space.
 
 `rotate()` / `rotate3d()`
 : Rotate the element.
 
 `perspective()`
-: Doesn’t affect the element itself, sets the distance between the user and the <nobr>three-dimensional</nobr> plane.
+: Doesn’t affect the element itself, sets the distance between the user and the <nobr>three-dimensional</nobr> plane.
 <!-- .balance -->
 
 The units for these are all a bit different; [MDN is your friend](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) here, as usual. You can apply single or multiple transforms, which are written *space-separated* and applied one after the other:
@@ -240,32 +240,32 @@ The units for these are all a bit different; [MDN is your friend](https://develo
 ```
 </div>
 
-Keep in mind that these transformations are applied *after* the rest of the CSS is parsed, and thus treat your element a bit like an image. And like `overflow`, above, `transform` also creates a new [*stacking context*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) for its children:
+Keep in mind that these transformations are applied *after* the rest of the CSS is parsed, and thus treat your element a bit like an image. And like `overflow`, above, `transform` also creates a new [*stacking context*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) for its children:
 <!-- .add-before--3 .balance -->
 
 <figure
-	@caption="Note how the elements *don’t* take up more space in the document flow/layout—but they *do* cause an overflow!"
+	@caption="Note how the elements *don’t* take up more space in the document flow/layout—but they *do* cause an overflow!"
 	@source="transform/preview/?active=style.css"
 	style="--lines: 18"
 	>
 </figure>
 
-You shouldn’t use `transform` for layout—as in, don’t use `translate` when `margin`, `padding`, `flex`, or `grid` can achieve your layout. This is *bad* practice, and usually very brittle! Especially when working responsively.
+You shouldn’t use `transform` for layout—as in, don’t use `translate` when `margin`, `padding`, `flex`, or `grid` can achieve your layout. This is *bad* practice, and usually very brittle! Especially when working responsively.
 
-Use `transform` only for what other properties *can’t* accomplish!
+Use `transform` only for what other properties *can’t* accomplish!
 <!-- .balance .bold .scale--h4 -->
 
 ## Transitions!
 
 CSS [transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) allow us to move nicely between CSS property values.
 
-- [<cite>Using CSS Transitions – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [<cite>Using CSS Transitions – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
 	Every state change is better with some easing.
 	<!-- .link-list .right style="--rows: 2" -->
 
-Instead of having a property take effect *immediately* when a pseudo-class is applied (or later, and more commonly, with JS—a proper class), we can tell a CSS property to *transition* from one value to another over a given amount of time (`duration`), and with a specific acceleration (`timing-function`), or a delay. Motion can quickly get very complex!
+Instead of having a property take effect *immediately* when a pseudo-class is applied (or later, and more commonly, with JS—a proper class), we can tell a CSS property to *transition* from one value to another over a given amount of time (`duration`), and with a specific acceleration (`timing-function`), or a delay. Motion can quickly get very complex!
 
-You’ll often see a `transition` in shorthand:
+You’ll often see a `transition` in shorthand:
 <!-- .add-before--3 -->
 
 <div class="verso add-before--3">
@@ -291,7 +291,7 @@ You’ll often see a `transition` in shorthand:
 
 </div>
 
-You can also control how different properties of an element transition independently, with a *comma-separated* list:
+You can also control how different properties of an element transition independently, with a *comma-separated* list:
 <!-- .balance .add-before--3 .add-after -->
 
 ```css
@@ -312,10 +312,10 @@ You can also control how different properties of an element transition indepen
 
 </div>
 
-Sometimes the shorthand here is easier than discrete properties, where you have to maintain the same order across all of them. It’s all the same to the computer!
+Sometimes the shorthand here is easier than discrete properties, where you have to maintain the same order across all of them. It’s all the same to the computer!
 <!-- .secondary .balance -->
 
-Often, CSS transitions will be used *with* JavaScript when adding/removing classes, to make a state change less abrupt. For now, we’ll use [*pseudo-classes*](/topic/css/#pseudo-classes) to demonstrate:
+Often, CSS transitions will be used *with* JavaScript when adding/removing classes, to make a state change less abrupt. For now, we’ll use [*pseudo-classes*](/topic/css/#pseudo-classes) to demonstrate:
 <!-- .add-before--3 .balance -->
 
 <figure
@@ -325,18 +325,18 @@ Often, CSS transitions will be used *with* JavaScript when adding/removing class
 	>
 </figure>
 
-Nearly all CSS properties can be transitioned—but keep in mind that changes that cause a *reflow* (re-triggering *layout*, sometimes called *paint*) [are slow](https://web.dev/animations-guide/#triggers) and can make your page feel glitchy—especially when you start having many of them. Each in-between state causes the browser to re-render your entire document! So stick to changes of `color`, `opacity`, and `transform` for the smoothest performance.
+Nearly all CSS properties can be transitioned—but keep in mind that changes that cause a *reflow* (re-triggering *layout*, sometimes called *paint*) [are slow](https://web.dev/animations-guide/#triggers) and can make your page feel glitchy—especially when you start having many of them. Each in-between state causes the browser to re-render your entire document! So stick to changes of `color`, `opacity`, and `transform` for the smoothest performance.
 
 ## And Animations!
 
-Sometimes, transitioning a property from one value to another isn’t enough—you may need more complicated (or repeating) motion behavior. CSS [animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) allow precise state sequencing with `@keyframes` (akin to… *keyframes* or a timeline in other software contexts).
+Sometimes, transitioning a property from one value to another isn’t enough—you may need more complicated (or repeating) motion behavior. CSS [animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) allow precise state sequencing with `@keyframes` (akin to… *keyframes* or a timeline in other software contexts).
 <!-- .balance -->
 
-- [<cite>Using CSS Animations – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
-	Some of you already got into these!
+- [<cite>Using CSS Animations – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+	Some of you already got into these!
 	<!-- .link-list .right style="--rows: 2" -->
 
-To create a keyframe animation, we define an element’s initial state in CSS—then an `animation` property, which includes timing and behavior, as well as an animation name (something that you make up). Again, you’ll often see these in shorthand:
+To create a keyframe animation, we define an element’s initial state in CSS—then an `animation` property, which includes timing and behavior, as well as an animation name (something that you make up). Again, you’ll often see these in shorthand:
 <!-- .add-before--3 .add-after .balance -->
 
 <div class="verso">
@@ -362,11 +362,11 @@ section {
 
 </div>
 
-Importantly, we then define the actual keyframes of an animation in a separate *at-rule*. Each *keyframe* is specified with a percentage of the animation’s duration, and can specify multiple properties—a bit like *selectors* for the time:
+Importantly, we then define the actual keyframes of an animation in a separate *at-rule*. Each *keyframe* is specified with a percentage of the animation’s duration, and can specify multiple properties—a bit like *selectors* for the time:
 <!-- .balance .add-before--3 -->
 
 <figure
-	@caption="Don’t go overboard! A little animation goes a long way."
+	@caption="Don’t go overboard! A little animation goes a long way."
 	@source="animation/preview/?active=style.css"
 	style="--lines: 20"
 	>
@@ -377,6 +377,6 @@ Importantly, we then define the actual keyframes of an animation in a separat
 	@citation="https://en.wikipedia.org/wiki/With_great_power_comes_great_responsibility"
 	>
 
-With great power there must also come great responsibility.
+With great power there must also come great responsibility.
 
 </blockquote>
