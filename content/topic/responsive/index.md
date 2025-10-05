@@ -309,7 +309,7 @@ If it doesn’t work on mobile, it doesn’t work.
 	Similarly, this means writing your styles for mobile… first, *then* adding `min-width` breakpoints (cascading below them) to *progressively enhance* your design as it scales up.
 
 <figure
-	@caption="Note we added a `main` container. The `width` here are kind of tricky—but this will be much easier with `grid`, we promise!"
+	@caption="Note we added a `main` container. The `inline-size` here are kind of tricky—but this will be much easier with `grid`, we promise!"
 	@source="media-mobile-first/preview/?active=style.css"
 	style="--lines: 19"
 	>

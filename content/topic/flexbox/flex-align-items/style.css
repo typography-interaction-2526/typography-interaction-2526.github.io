@@ -1,6 +1,6 @@
 ol {
+	block-size: 8rem;
 	display: flex;
-	height: 8rem;
 }
 
 ol:nth-child(1) { align-items: stretch; } /* Default. */

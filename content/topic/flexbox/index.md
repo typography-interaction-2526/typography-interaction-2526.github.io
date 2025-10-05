@@ -184,7 +184,7 @@ But [the `justify-content` property](https://developer.mozilla.org/en-US/docs/We
 When our *main axis* is vertical, with `flex-direction: column;`&thinsp;:
 
 <figure
-	@caption="These *only* works with the `height` to justify within&zwj;—otherwise the container would cinch up to the content height, as usual."
+	@caption="These *only* works with the `block-size` to justify within&zwj;—otherwise the container would cinch up to the content height, as usual."
 	@source="flex-justify-content-column/preview/?active=style.css"
 	style="--lines: 19"
 	>
@@ -215,7 +215,7 @@ When we have a flex element with `flex-wrap` set, we can also position the *line
 <!-- .balance -->
 
 <figure
-	@caption="These wouldn’t do anything without the `height` and the `flex-wrap`."
+	@caption="These wouldn’t do anything without the `block-size` and the `flex-wrap`."
 	@source="flex-align-content/preview/?active=style.css"
 	style="--lines: 19"
 	>
@@ -276,14 +276,14 @@ And `flex-shrink` works the same way—defining what proportion an element shoul
 
 ### `flex-basis`
 
-[The `flex-basis` property](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis) is a little like `width` and `height`—depending on your *main axis*. It defines what the child item’s content box size should be *before* any remaining space is distributed.
+[The `flex-basis` property](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis) is a little like `inline-size` and `block-size`—depending on your *main axis*. It defines what the child item’s content box size should be *before* any remaining space is distributed.
 <!-- .balance -->
 
-This defaults to `auto`, which falls back to any specified `width` or `height`&zwj;—and if those aren’t present, will just use the size of the content. You specify this `flex-basis` with [length units](/topic/box-model/#and-their-units) like `%` and `px` :
+This defaults to `auto`, which falls back to any specified `inline-size` or `block-size`&zwj;—and if those aren’t present, will just use the size of the content. You specify this `flex-basis` with [length units](/topic/box-model/#and-their-units) like `%` and `px` :
 <!-- .balance -->
 
 <figure
-	@caption="You are [usually fine](https://stackoverflow.com/a/34355447) just specifying `width` / `height`."
+	@caption="You are [usually fine](https://stackoverflow.com/a/34355447) just specifying `inline-size` / `block-size`."
 	@source="flex-basis/preview/?active=style.css"
 	style="--lines: 12"
 	>
@@ -299,7 +299,7 @@ Finally, we have an individual override for an [`align-items`](#align-items) pro
 	>
 </figure>
 
-This is a lot of stuff! Flex can sometimes be tough to wrap one’s head around, but it is *so much better* than `float` and `width` and `margin` shenanigans.
+This is a lot of stuff! Flex can sometimes be tough to wrap one’s head around, but it is *so much better* than `float` and `inline-size` and `margin` shenanigans.
 <!-- .balance .bold .scale--h4 -->
 
 Much of what you look at on the web is laid out in flex (and its followup which we keep hinting at, CSS Grid).

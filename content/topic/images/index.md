@@ -94,7 +94,7 @@ There are several commonly used image formats on the web, each with their own pu
 	}
 
 	dd img {
-		height: var(--typography--line--3);
+		block-size: var(--typography--line--3);
 		align-self: start;
 	}
 </style>
@@ -151,7 +151,7 @@ This intrinsic/inline behavior is rarely what you want, though—more often your
 
 <aside>
 
-Most [resets (like ours)](/topic/css/#resets) include a `max-width: 100%` for images—otherwise, large images will often poke out of their containers, by default!
+Most [resets (like ours)](/topic/css/#resets) include a `max-inline-size: 100%` for images—otherwise, large images will often poke out of their containers, by default!
 
 </aside>
 
@@ -188,7 +188,7 @@ CSS also added the [`object-fit`](https://developer.mozilla.org/en-US/docs/Web/C
 	<!-- .link-list .right style="--rows: 2" -->
 
 <figure
-	@caption="Note the `height` on the section, otherwise the container would still resize to the image. Adjust the divider to see the behavior!"
+	@caption="Note the `block-size` on the section, otherwise the container would still resize to the image. Adjust the divider to see the behavior!"
 	@source="object-fit/preview/?active=style.css"
 	@style="--lines: 19"
 	>

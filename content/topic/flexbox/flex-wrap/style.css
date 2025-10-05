@@ -1,7 +1,7 @@
 ol {
 	display: flex;
 	flex-wrap: nowrap; /* Default. */
-	min-height: 8rem;
+	min-block-size: 8rem;
 }
 
 ol:not(:first-child) { flex-wrap: wrap; }
@@ -12,4 +12,4 @@ ol:nth-child(4) {
 }
 
 /* Force the wrap. */
-ol:nth-child(4) { max-height: 8rem; }
+ol:nth-child(4) { max-block-size: 8rem; }

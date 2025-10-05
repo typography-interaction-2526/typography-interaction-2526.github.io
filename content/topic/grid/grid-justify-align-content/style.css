@@ -1,8 +1,8 @@
 ol {
-	display: grid;
-	grid-template-columns: 8rem 4rem; /* Force a wrap. */
-	gap: 1rem;
-	justify-content: space-evenly; /* Horizontally. */
 	align-content: center; /* Vertically. */
-	height: 85vh; /* So the alignment has an effect. */
+	block-size: 85vh; /* So the alignment has an effect. */
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: 8rem 4rem; /* Force a wrap. */
+	justify-content: space-evenly; /* Horizontally. */
 }

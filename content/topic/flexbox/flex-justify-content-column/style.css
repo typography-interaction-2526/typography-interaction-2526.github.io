@@ -1,7 +1,7 @@
 body {
+	block-size: 100vh; /* Force a height. */
 	display: flex; /* Puts the `ol` in a row! */
 	column-gap: 1rem; /* Will talk about this, below. */
-	height: 100vh; /* Force a height. */
 }
 
 ol {

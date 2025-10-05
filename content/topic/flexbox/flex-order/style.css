@@ -1,6 +1,6 @@
 ol {
+	block-size: 8rem;
 	display: flex;
-	height: 8rem;
 }
 
 li { order: 0; } /* Default. */

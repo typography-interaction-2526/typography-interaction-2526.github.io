@@ -15,7 +15,7 @@ section {
 h2 { font-size: calc(var(--base) * 3); }
 
 /* Limit the height. */
-section:not(:first-child) { height: calc(var(--base) * 7); }
+section:not(:first-child) { block-size: calc(var(--base) * 7); }
 
 section:nth-child(2) { overflow: visible; } /* Default. */
 
@@ -35,5 +35,5 @@ section:nth-child(5) {
 
 section:nth-child(5) * {
 	flex-shrink: 0; /* Don’t shrink! */
-	width: 90%; /* Always peek the next block. */
+	inline-size: 90%; /* Always peek the next block. */
 }

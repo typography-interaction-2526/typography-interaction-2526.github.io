@@ -1,7 +1,7 @@
 ol {
 	display: flex;
 	flex-wrap: wrap-reverse;
-	min-height: 8rem;
+	min-block-size: 8rem;
 }
 
 ol:nth-child(2) { flex-direction: row-reverse; }
@@ -10,5 +10,5 @@ ol:nth-child(3) { flex-direction: column; }
 
 ol:nth-child(4) {
 	flex-direction: column-reverse;
-	max-height: 8rem; /* Force the wrap. */
+	max-block-size: 8rem; /* Force the wrap. */
 }

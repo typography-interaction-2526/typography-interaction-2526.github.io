@@ -139,7 +139,7 @@ Grid also introduces some specific new [length units](/topic/box-model/#and-thei
 	}
 	```
 
-	You can use these last three values in grid properties <em>(</em>`min-`, `max-`, and `fit-content`<em>)</em>, as we’ll see below—but they are also usable anywhere [length units](/topic/box-model/#and-their-units) work—like `width` or `height`. <!-- .add-before .secondary -->
+	You can use these last three values in grid properties <em>(</em>`min-`, `max-`, and `fit-content`<em>)</em>, as we’ll see below—but they are also usable anywhere [length units](/topic/box-model/#and-their-units) work—like `inline-size` or `block-size`. <!-- .add-before .secondary -->
 
 </div>
 

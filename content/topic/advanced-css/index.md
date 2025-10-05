@@ -23,7 +23,7 @@ Let’s look at some examples.
 
 ## Overflows and Scrolling
 
-An [*overflow*](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow) in CSS happens when there is too much content to fit in a container—usually because you have manually constrained its `height` or `width`. (By default, the browser will try to show you everything!)
+An [*overflow*](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow) in CSS happens when there is too much content to fit in a container—usually because you have manually constrained its `block-size` or `inline-size`. (By default, the browser will try to show you everything!)
 
 - [<cite>Overflowing Content – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
 	There are going to be a lot of MDNs, here.

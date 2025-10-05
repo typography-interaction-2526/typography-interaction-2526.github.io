@@ -20,7 +20,7 @@ h2 {
 	--inset--right:  -0.06em;
 
 	display: flow-root; /* Cinch the height. */
+	inline-size: fit-content; /* Cinch the width. */
 	margin-inline-end: var(--inset--right);
 	margin-inline-start: var(--inset--left);
-	width: fit-content; /* Cinch the width. */
 }

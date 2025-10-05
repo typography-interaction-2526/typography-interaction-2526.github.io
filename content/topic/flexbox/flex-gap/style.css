@@ -1,7 +1,7 @@
 ol {
+	block-size: 8rem;
 	display: flex;
 	flex-wrap: wrap;
-	height: 8rem;
 }
 
 ol:nth-child(1) { gap: 1rem; }
