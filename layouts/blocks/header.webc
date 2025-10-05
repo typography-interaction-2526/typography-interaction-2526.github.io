@@ -82,6 +82,9 @@
 		/* Future pages. */
 		&:where(:has(> a:not([href]))) { opacity: var(--disabled--opacity) }
 	}
+
+	/* Darken breaks with undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
+	:host-context(header + ul > li):has(a > p:only-child) { background-color: var(--disabled) }
 </style>
 
 <header
