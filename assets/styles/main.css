@@ -297,7 +297,14 @@ main {
 			}
 
 			/* Code previews. */
-			&:not([src*="https://"])[src*='/preview'] { inline-size:  100% }
+			&:not([src*="https://"])[src*='/preview'] {
+				inline-size: 100%;
+
+				@media (width < 35em) {
+					aspect-ratio: 1 / 2;
+					block-size:   initial;
+				}
+			}
 		}
 
 		&.multiply { img, object, iframe { mix-blend-mode: multiply } }

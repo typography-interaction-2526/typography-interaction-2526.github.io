@@ -71,7 +71,7 @@ ti-preview {
 	--editor-line-height:          1rlh;
 
 	--tab-bar-active-background: transparent;
-	--tab-bar-active-foreground: var(--background);
+	--tab-bar-active-foreground: var(--accent);
 	--tab-bar-active-highlight:  transparent;
 	--tab-bar-background:        transparent;
 	--tab-bar-filter:            var(--blur);
