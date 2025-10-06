@@ -405,11 +405,7 @@ main {
 		&:where(:not(:first-child)), &:where(:not(:last-child)) + * {
 			margin-block-start: 2rlh;
 
-			@container style(--columns: 6) {
-				margin-block-start: 4rlh;
-
-				&:has(+ p > a > cite) { margin-block-end: 1rlh }
-			}
+			@container style(--columns: 6) { margin-block-start: 4rlh }
 		}
 
 
@@ -423,7 +419,7 @@ main {
 			column-gap:         2cap;
 			display:            flex;
 			grid-column:        aside;
-			margin-block-start: 1rlh;
+			margin-block-start: 2rlh;
 			text-transform:     uppercase;
 
 			> a:has(cite) {
@@ -443,13 +439,7 @@ main {
 			}
 
 			&:where(:not(:last-child)) {
-				+ *:not(section) {
-					margin-block-start: 1rlh;
-
-					@container style(--columns: 6) { margin-block-start: 2rlh }
-				}
-
-				+ :is(section, blockquote) {
+				+ * {
 					margin-block-start: 2rlh;
 
 					@container style(--columns: 6) { margin-block-start: 4rlh }
