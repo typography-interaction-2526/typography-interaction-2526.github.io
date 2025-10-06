@@ -420,14 +420,14 @@ Increasingly, this is how many “print” documents are created—starting as w
 
 ### `hover`
 
-Another common one is `hover`, used to detect whether a browser has an input device that supports *hovering*—which really just means a mouse, usually on laptop/desktop computers.
+Another common feature is [`hover`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/hover), used to detect whether a browser has an input device that supports *hovering*—which really just means a mouse, usually on laptop/desktop computers.
 
 Mobile *touch-based* systems don’t have this behavior (and often react oddly to `:hover` CSS, “eating taps”), so you should adjust your interfaces to work in the absence of this state:
 
 <figure
 	@caption="If you view this on your phone, the `aside` should be visible without interaction. On your computer, you’ll have to mouse over the `div`. Note how this is written with a [*mobile-first*](#mobile-first-design) style, only adding the hover state later/lower for folks who have it!"
 	@source="media-hover/preview/?active=style.css"
-	style="--lines: 11"
+	style="--lines: 13"
 	>
 </figure>
 
