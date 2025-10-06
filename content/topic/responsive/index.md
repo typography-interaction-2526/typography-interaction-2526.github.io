@@ -431,11 +431,11 @@ Mobile *touch-based* systems don’t have this behavior (and often react oddly t
 	>
 </figure>
 
-Hover states are a good feature for *progressive-enhancement*, as we did here—to add them in *after* you have a working mobile design. Since maybe a third to a half of your audience (depending on your project) won’t see them, don’t rely on them being seen!
+Hover states are a good feature for *progressive-enhancement*, as we did here—to add them in *after* you have a working mobile design. Maybe a third to a half of your audience (depending on your project) won’t see them—so don’t rely on them being seen!
 
 ### `prefers-color-scheme`
 
-You see this one more and more these days—switching up a site’s styles based on whether the user is in *light* or *dark mode*, popularized by the ol’ iPhone again:
+You see this one more and more these days—[`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) for switching up a site’s styles based on whether the user is in *light* or *dark mode*, popularized by the ol’ iPhone again:
 
 <figure
 	@caption="You’ll see this differently depending on whether your system is in light or dark mode."
@@ -444,13 +444,16 @@ You see this one more and more these days—switching up a site’s styles based
 	>
 </figure>
 
-Sometimes this feels appropriate—especially in products/applications, like maybe a messaging service. But sometimes the color scheme of a site is its *brand*, and probably shouldn’t change based on this query. It’s up to you! Continuing our ongoing discussion of who has the control.
+Sometimes this feels appropriate—especially in products/applications, like maybe a messaging service. But sometimes the color scheme of a site is its *brand* (like ours), and probably shouldn’t change based on this query. It’s up to you! Continuing our ongoing discussion of who has the control.
 
-### `prefers-contrast`&thinsp;, `prefers-reduced-motion` <!-- style="--typography--leading: 1.5" -->
+### `prefers-contrast`, `prefers-reduced-motion` <!-- .all style="line-height: 2rlh" -->
 
-These last two are primarily concerned with [accessiblity](https://developer.mozilla.org/en-US/docs/Web/Accessibility)—for folks who run their device/browser with animations turned off, or in a high-contrast mode to help with their vision:
+These last two are primarily concerned with [accessiblity](https://developer.mozilla.org/en-US/docs/Web/Accessibility)—[`prefers-contrast`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast) for folks who run their device/browser in a high-contrast mode to help with their vision, or [`prefers-reduced-motion`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) for those who have animations turned off for vestibular reasons.
 
-```css <!-- .verso style="align-self: center" -->
+Or these are just their preferences! None of your business.
+<!-- .note -->
+
+```css <!-- .verso .center -->
 :root {
 	--background: lightgray;
 	--foreground: slategray;
@@ -470,13 +473,14 @@ p {
 ```
 
 <figure
-	@caption="The corresponding settings in i&hairsp;OS."
+	@caption="The corresponding settings in i&NoBreak;OS."
 	@source="contrast.png"
+	class="recto"
 	style="grid-column: four-start / five-end"
 	>
 </figure>
 
-```css <!-- .verso style="align-self: center" -->
+```css <!-- .verso .center -->
 button {
 	animation: some-slick-animation;
 }
@@ -488,7 +492,7 @@ button {
 
 <figure
 	@source="motion.png"
-	class="right"
+	class="recto"
 	style="grid-column: four-start / five-end"
 	>
 </figure>
