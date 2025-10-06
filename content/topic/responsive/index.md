@@ -215,7 +215,7 @@ This width rule/test/criteria uses math [comparison operators](https://css-trick
 <!-- .balance -->
 
 <figure
-	@caption="Again, drag the divide to see rules apply. Exact matches (like the  `width = 36rem` here) are rarely useful!"
+	@caption="Again, drag the divide to see rules apply. Exact matches (like the  `width = 35rem` here) are rarely useful!"
 	@source="media-width-min-max/preview/?active=style.css"
 	style="--lines: 17"
 	>
@@ -227,7 +227,7 @@ This width rule/test/criteria uses math [comparison operators](https://css-trick
 
 You can also use `height` in the same way—though again, with the usual vertical scrolling paradigm, <nobr>height-based</nobr> adjustments aren’t as necessary or anywhere nearly as common as `width`.
 
-This example is the same *breakpoint* of `36rem` as before, but now using `height`:
+This example is the same *breakpoint* of `35rem` as before, but now using `height`:
 <!-- .balance -->
 
 </div>
@@ -250,24 +250,24 @@ We’ll talk about this in detail later [with JavaScript](https://developer.mozi
 
 ## Orientation
 
-You can also be less specific about your width/height and instead use `orientation`—like when you rotate your phone. The queries use the wonderfully tenacious names/values of `portrait` or `landscape`:
+You can also be less specific about your `width`/`height` and instead use `orientation`—like when you rotate your phone. The queries use the wonderfully tenacious names/values of `portrait` or `landscape`:
 
 <figure
 	@caption="Everything was a painting before it was a photograph or a [web page](/topic/everything)."
 	@source="media-orientation/preview/?active=style.css"
-	style="--lines: 11"
+	style="--lines: 13"
 	>
 </figure>
 
 ## And&thinsp;/Or Combinations
 
-And speaking of *conditional statements*—you can also merge multiple media queries into one test/check, using `and`. This is often used for a range (to apply something *between* two breakpoints) or to combine `width` and `height` checks, together:
+And speaking of *conditional statements*—you can also merge multiple media queries into one test/check, using `and`. This is often used for a range (to apply something *between* two breakpoints) or to combine `width` and `height` checks, together:
 <!-- .balance -->
 
 <figure
-	@caption="The demo here is taller than `300px`, for the second one."
+	@caption="The demo here is taller than `20rem`, for the second one."
 	@source="media-and/preview/?active=style.css"
-	style="--lines: 11"
+	style="--lines: 13"
 	>
 </figure>
 
@@ -276,14 +276,15 @@ You can also use comma-separated queries (similar to [*selector lists*](/topic/c
 <figure
 	@caption="Note that you could do this with `and`, as in the example above, by just swapping the colors. Code logic!"
 	@source="media-or/preview/?active=style.css"
-	style="--lines: 7"
+	style="--lines: 9"
 	>
 </figure>
 
-There is also a `not` [logic operator](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries#not_logic_in_media_queries)—which will reverse the meaning of the media query. But this syntax gets confusing fast—especially with things like `min` / `max` rules making for double-negatives. So it is easier to avoid!
+There is also a `not` [logic operator](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries#not_logic_in_media_queries)—which will reverse the meaning of the media query. But this syntax gets confusing fast—especially with things like `>`/`<` rules making for double-negatives. So it is easier to avoid!
+<!-- .balance -->
 
 Why say `not` `portrait` when you can just say `landscape`?
-<!-- .secondary .add-before -->
+<!-- .note -->
 
 ## Mobile-First Design
 

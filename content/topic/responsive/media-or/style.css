@@ -1,5 +1,5 @@
 section { background-color: aquamarine; }
 
-@media (max-width: 500px), (min-width: 600px) {
+@media (width < 35rem), (width > 40rem) {
 	section { background-color: gold; }
 }
