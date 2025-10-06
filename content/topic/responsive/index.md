@@ -66,54 +66,52 @@ There was a confluence of events that allowed this: modern, <nobr>self-updating<
 ## The Viewport
 
 There wasn’t much of a *mobile web*, prior to the iPhone. *Some* sites had barebones [WAP](https://en.wikipedia.org/wiki/Wireless_Application_Protocol) mobile versions, designed for the tiny screens and limited hardware of the era.
-<!-- style="align-self: center; margin-block: initial" -->
+<!-- .balance .center -->
 
 <figure
 	@caption="This is how the *Times* looked on your [Razr](https://en.wikipedia.org/wiki/Motorola_Razr)."
 	@citation="https://wapreview.com/164/"
 	@source="wap.jpg"
-	class="right"
-	style="--lines: 6; margin-block: initial"
+	class="right before--3"
+	style="--lines: 6"
 	>
 </figure>
 
 When the iPhone came on the scene, most desktop websites still didn’t have narrow/smaller (let alone flexible) layouts—so the phone would instead [*scale* or *zoom out*](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html) a desktop site design down to fit.
-<!-- style="align-self: center -->
+<!-- .balance .center -->
 
 <figure
 	@caption="The iPhone’s introduction is worth a watch. Safari!"
 	@citation="https://youtube.com/watch?v=VQKMoT-6XSg&t=2474"
 	@source="intro.png"
-	class="add-before--3 right"
-	style="--lines: 6; margin-block: initial"
+	class="right before--2"
+	style="--lines: 6"
 	>
 </figure>
 
 Websites at the time were often designed to a [standard width](https://960.gs) (usually `960px`), which the phone shrank down to its `320px` screen—and then the user could zoom in or out, scrolling around to view the whole page. It somewhat worked—and all the content was there, unlike most mobile sites—but it was less than ideal.
-<!-- style="align-self: center -->
+<!-- .balance .center -->
 
 <figure
 	@caption="Their full desktop site scaled down, on an iPhone. Simpler times, those."
 	@citation="https://web.archive.org/web/20070111094339/http://www.apple.com/iphone/internet/"
 	@source="nytimes.png"
-	class="add-before--3 right"
-	style="margin-block: initial"
+	class="right before--2"
 	>
 </figure>
 
 </div>
 
-### Viewport `meta` Tag
+### Viewport `<meta>` Tag
 
 You’ll [see this `meta` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag) in the `head` of most websites, now:
-<!-- .add-before--3 -->
 
 ```html
-<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 ```
 
 This `meta` element tells the browser *not* to do this scaling. It says, *“I have a responsive design! Render me at my actual size. My content can reflow.”*
-<!-- .add-before .add-after--3 .secondary -->
+<!-- .note -->
 
 <div class="add-before--3 verso" style="align-self: end">
 
