@@ -391,7 +391,7 @@ Variables are how you build *design systems.* Like relative type scaling, they h
 
 By far, the most common media queries will be *width*/*height*/*orientation*—for adjusting your layouts across devices. But `@media` has some [more tricks](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_features) up its sleeve in testing for other browser features. We’ll look at some of the handy/common ones.
 
-### `screen` vs. `print`
+### `screen` <small>vs.</small> `print`
 
 In all of our above examples, there is an implied *[media type](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_types)* of `screen`—since that is usually what we are concerned with, on the web. But there is also one for `print`! You can use these to segment styles to one medium or the other:
 

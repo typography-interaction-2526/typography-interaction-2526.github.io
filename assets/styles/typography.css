@@ -46,6 +46,8 @@ td:first-child {
 		/* Negates the `skew`. */
 		span { display: contents }
 	}
+
+	small { text-transform: initial }
 }
 
 h5, h6 { display: none }
@@ -96,6 +98,5 @@ sup {
 }
 
 .balance      { text-wrap: balance }
-.caps         { text-transform: uppercase }
 .nowrap, nobr { text-wrap: nowrap }
 .pretty       { text-wrap: pretty }

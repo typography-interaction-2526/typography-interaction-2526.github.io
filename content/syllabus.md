@@ -411,7 +411,7 @@ As tutors are only available a limited number of hours per week, it is advisable
 
 ### Code Plagiarism
 
-Students may find code similar to our exercises or projects elsewhere online. But the copying or adapting of *any* code beyond our provided course material (lectures, exercises, demos), without attribution, is not allowed under any circumstances. This *includes* from LLMs, [more below](#llms-and-artificial-intelligence).
+Students may find code similar to our exercises or projects elsewhere online. But the copying or adapting of *any* code beyond our provided course material (lectures, exercises, demos), without attribution, is not allowed under any circumstances. This *includes* from LLM&NoBreak;s, [more below](#llms-and-artificial-intelligence).
 
 If adapting, with attribution, students must explain the usage and demonstrate an understanding of how the code works. We will have in-person code reviews to facilitate and guage this understanding.
 
@@ -446,7 +446,7 @@ Copying, pasting, or autocompleting code in the absence of an attribution and ex
 
 </aside>
 
-### LLM<span style="text-transform: initial">s</span> and “Artificial Intelligence” <!-- .print--break -->
+### LLM<small>s</small> and “Artificial Intelligence” <!-- .print--break -->
 
 Relatedly, there has been much discussion and developments in our field (and others) around [*large language models*](https://en.wikipedia.org/wiki/Large_language_model), a.k.a. “artificial intelligence.”
 
