@@ -10,7 +10,7 @@ a { text-decoration: underline; }
 
 @media print {
 	:root {
-		--background: white;
+		--background: initial; /* Resets this. */
 
 		font-size: 18pt; /* Absolute units! */
 	}
