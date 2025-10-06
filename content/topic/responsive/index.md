@@ -30,12 +30,14 @@ There was a confluence of events that allowed this: modern, <nobr>self-updating<
 	@caption="A typical/example *responsive* layout, adjusting the content to reflow based on the device width."
 	@source="responsive-1.svg"
 	class="verso before--3"
+	style="filter: drop-shadow(0px 0px 36px rgb(0 0 0 / 10%))"
 	>
 </figure>
 
 <figure
 	@source="responsive-2.svg"
 	class="recto start before--3"
+	style="filter: drop-shadow(0px 0px 36px rgb(0 0 0 / 10%))"
 	>
 </figure>
 
@@ -113,12 +115,12 @@ You’ll [see this `meta` element](https://developer.mozilla.org/en-US/docs/Web/
 This `meta` element tells the browser *not* to do this scaling. It says, *“I have a responsive design! Render me at my actual size. My content can reflow.”*
 <!-- .note -->
 
-<div class="add-before--3 verso" style="align-self: end">
+<div class="verso end">
 
-The `width=device-width` tells the browser to use whatever the screen’s actual pixel dimension is, and the `initial-scale=1` sets the starting zoom for the page to 100%. This is how the browser knows how to make the page respond, and how our CSS rules know what width to use.
+The `width=device-width` tells the browser to use whatever the screen’s *actual* pixel dimension is, and the `initial-scale=1` sets the starting zoom for the page to 100%. This is how the browser knows how to make the page respond, and how our CSS rules know what `width` to use.
 
-We call the portion of the page visible at one time [the *viewport*](https://developer.mozilla.org/en-US/docs/Web/CSS/Viewport_concepts).
-<!-- .add-before--3 .balance .bold .scale--h4 style="margin-block-end: initial" -->
+We call the portion of the page visible at one time [*the viewport*](https://developer.mozilla.org/en-US/docs/Web/CSS/Viewport_concepts).
+<!-- .intro -->
 
 </div>
 
@@ -144,9 +146,9 @@ These blocks are like any other CSS—if there are multiple conditions that are 
 
 </div>
 
-<div class="add-before--3 recto">
+<div class="recto">
 
-```css <!-- .sticky style="top: 33vh" -->
+```css <!-- .sticky style="top: 40vh" -->
 /* Our CSS has all been out here! */
 
 @media some-criteria-or-rule {
