@@ -137,10 +137,10 @@ summary {
 			position: relative;
 
 			> :is(code, kbd, samp) {
-				background-color:  initial;
-				font-size:         inherit;
-				inset-block-start: -0.1em;
-				position:          relative;
+				background-color: initial;
+				font-size:        inherit;
+				padding:          initial;
+				position:         relative;
 			}
 
 			&::after {
