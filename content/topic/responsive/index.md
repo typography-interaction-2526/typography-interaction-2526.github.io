@@ -410,6 +410,14 @@ In all of our above examples, there is an implied *[media type](https://develope
 	>
 </figure>
 
+<aside>
+
+<mark>Remember: [Everything is a webpage](/topic/everything/#an-ever-present-visual-medium)</mark>
+
+Increasingly, this is how many “print” documents are created—starting as webpages with `print` styles. When you get [a PDF](https://pagedjs.org) [ticket](https://weasyprint.org)/[receipt](https://www.princexml.com) or [even read](https://www.w3.org/2012/12/global-publisher/slides/Day2/P1-w3c-paris-hachette.pdf) [a book](https://www.xml.com/articles/2017/02/20/beyond-xml-making-books-html/), it’s likely styled HTML! Your Kindle’s [`EPUB` files](https://en.wikipedia.org/wiki/EPUB) are just HTML/CSS, too!
+
+</aside>
+
 ### `hover`
 
 Another common one is `hover`, used to detect whether a browser has an input device that supports *hovering*—which really just means a mouse, usually on laptop/desktop computers.
