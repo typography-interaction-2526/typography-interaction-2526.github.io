@@ -166,20 +166,24 @@ There are many media queries we can use, but we’ll start with *width*—which 
 
 Width tends to vary the most across devices—from the `375px`–`428px` of your phones, through to the ~`1440px`–`1680px` of your laptops, and then on up to the ~`2560px`–`3440px` you might see with large, desktop displays.
 
+We still use `width` here (not the [logical property](/topic/box-model/#and-logical-properties) `inline-size`) because we are referencing the physical device, agnostic of language.
+<!-- .note -->
+
 </div>
 
 <figure
-	@caption="This is from more than a dozen years ago, now. It’s only gotten worse!"
+	@caption="This is from more than a dozen years ago, now. It’s really only gotten worse!"
 	@citation="https://www.flickr.com/photos/brad_frost/7387824246"
 	@source="devices.jpg"
-	class="recto"
-	style="--lines: 10.5; align-self: stretch"
+	class="recto start"
+	style="--lines: 11"
 	>
 </figure>
 
 Since this `width` is usually our primary design constraint (`height` being handled through scrolling), we need *width-based* media queries to adjust our layouts across this wide range, lest our designs fall.
 
-This is done in steps, at different widths, that we call *breakpoints*&zwj;—the window/device/viewport sizes where the content *starts to break*, if it is not adjusted.
+This is done in steps, at different widths, that we call *breakpoints*&zwj;—the window/device/viewport sizes where the content *starts to break,* if it is not adjusted.
+<!-- .intro -->
 
 <blockquote
 	@attribution="Josh Brewer"
@@ -190,29 +194,30 @@ This is done in steps, at different widths, that we call *breakpoints*&zwj;—th
 
 </blockquote>
 
-You might add a breakpoint because lines of text get too short or too long, becoming hard to read. It might be to prevent a grid of images from becoming too small on a phone—while you can have many columns on desktop, often you can only have one or two on mobile.
+You might add a breakpoint because lines of text get too short or too long, becoming hard to read. It might be to prevent a grid of images from becoming too small on a phone—while you can have many columns on desktop, often you can only have one (or two) on mobile.
 
-You can add as many *breakpoints* as you need to make your page/design work across devices. Don’t think of these as written *for* specific devices; write *for* your design and your content!
+You can add as many *breakpoints* as you need to make your page/design work across devices. Don’t think of these as written *for* specific devices; write *for* your design and for your content!
 
 There are very, *very* few layouts that won’t need some amount of horizontal responsiveness/breakpoints!
-<!-- .add-before--3 .balance .bold .scale--h4 -->
+<!-- .intro -->
 
-In this example, we would refer to `500px` as our *breakpoint*:
-<!-- .add-before--3 -->
+In this example, we would refer to `32rem` as our *breakpoint*:
+<!-- .before--3 -->
 
 <figure
 	@caption="Drag the code/example divide to the left to see it respond to the media query! You can <nobr>double-click</nobr> to reset it."
 	@source="media-width/preview/?active=style.css"
-	style="--lines: 7"
+	style="--lines: 9"
 	>
 </figure>
 
-This width rule/test/criteria uses the same syntax as [length properties](/topic/box-model/#and-their-units), meaning you can use `min-width`, `width`, and `max-width`:
+This width rule/test/criteria uses math [comparison operators](https://css-tricks.com/the-new-css-media-query-range-syntax/#aa-new-comparison-operators)—meaning you can use `<` `>` `=` `<=` `>=` :
+<!-- .balance -->
 
 <figure
-	@caption="Again, drag the divide to see rules apply. Exact matches (like the  `width: 500px;` here) are rarely useful!"
+	@caption="Again, drag the divide to see rules apply. Exact matches (like the  `width = 36rem` here) are rarely useful!"
 	@source="media-width-min-max/preview/?active=style.css"
-	style="--lines: 15"
+	style="--lines: 17"
 	>
 </figure>
 
