@@ -272,7 +272,7 @@ You can also be less specific about your `width`/`height` and instead use `orien
 	>
 </figure>
 
-## And&thinsp;/Or Combinations
+## And/Or Combinations
 
 And speaking of *conditional statements*—you can also merge multiple media queries into one test/check, using `and`. This is often used for a range (to apply something *between* two breakpoints) or to combine `width` and `height` checks, together:
 <!-- .balance -->
@@ -299,7 +299,7 @@ There is also a `not` [logic operator](https://developer.mozilla.org/en-US/docs/
 Why say `not` `portrait` when you can just say `landscape`?
 <!-- .note -->
 
-## Mobile-First Design
+## *Mobile-First* Design
 
 So this can all get very complicated, very quickly—especially with complex designs, overlapping rules, and the wide ranges of devices to consider.
 
@@ -389,22 +389,30 @@ Variables are how you build *design systems.* Like relative type scaling, they h
 
 ## Other Media Features
 
-By far, the most common media queries will be *width*/*height*/*orientation*—for adjusting your layouts across devices. But `@media` has some [more tricks](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_features) up its sleeve in testing for other browser features. We’ll look at some of the handy/common ones.
+By far, the most common media queries will be *width*/*height*/*orientation*—for adjusting your layouts across devices. But `@media` has some more tricks up its sleeve in testing for other browser features. We’ll look at some of the handy/common ones.
+
+[<cite>`@media` types/features - MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_features)
+	There are many of these! Meet your users where they are.
+<!-- .right -->
 
 ### `screen` <small>vs.</small> `print`
 
-In all of our above examples, there is an implied *[media type](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_types)* of `screen`—since that is usually what we are concerned with, on the web. But there is also one for `print`! You can use these to segment styles to one medium or the other:
+In all of our above examples, there is an implied *[media type](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_types)* of `screen`—since that is usually what we are concerned with, on the web. But there is also one for <nobr>`print`&thinsp;!</nobr> You can use these to segment styles to one medium or the other:
+
+[<cite>CSS paged media - MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_paged_media)
+	There are also some print-specific properties available.
+<!-- .right -->
 
 <figure
-	@caption="You can see the `print` style in action by going [directly to the example](media-print/), then <kbd>⌘&thinsp;~&thinsp;Ctrl</kbd> <kbd>P</kbd> to print. It is still *A Thing*, though often forgotten about in modern web design/projects."
+	@caption="You can see the `print` style in action by going [directly to the example](media-print/), then <nobr><kbd>⌘</kbd> <kbd>P</kbd></nobr> to print. It is still *A Thing*, though often forgotten about in modern web design/projects."
 	@source="media-print/preview/?active=style.css"
-	style="--lines: 20"
+	style="--lines: 22"
 	>
 </figure>
 
 ### `hover`
 
-Another common one is `hover`, used to detect whether a browser has an input device that supports *hovering*—which really just means a mouse, on laptop/desktop computers.
+Another common one is `hover`, used to detect whether a browser has an input device that supports *hovering*—which really just means a mouse, usually on laptop/desktop computers.
 
 Mobile *touch-based* systems don’t have this behavior (and often react oddly to `:hover` CSS, “eating taps”), so you should adjust your interfaces to work in the absence of this state:
 

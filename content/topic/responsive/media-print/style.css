@@ -2,17 +2,22 @@
 
 section { background-color: var(--background); }
 
-@media screen and (min-width: 500px) {
+a { text-decoration: underline; }
+
+@media screen and (width > 35rem) {
 	:root { --background: coral; }
 }
 
 @media print {
-	:root { --background: white; }
+	:root {
+		--background: white;
+
+		font-size: 18pt; /* Absolute units! */
+	}
 
 	section {
 		border: 0.25rem solid black;
 		font-family: serif;
-		font-size: 18pt;
 		padding: 0.5in;
 	}
 }
