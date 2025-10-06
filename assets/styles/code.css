@@ -101,7 +101,7 @@ ti-preview {
 	--syntax-literal:      lightskyblue;
 	--syntax-string:       lightskyblue;
 	--syntax-number:       dodgerblue;
-	--syntax-variableName: #ffa657;
+	--syntax-variableName: orange;
 	--syntax-definition:   #d2a8ff;
 	--syntax-typeName:     limegreen;
 	--syntax-namespace:    #e5c07b;
