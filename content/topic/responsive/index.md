@@ -5,6 +5,40 @@
 	const order = 1
 </script>
 
+## What’s all this about *Responsive Design*?
+
+This term was coined in 2010 or so [by Ethan Marcotte](https://alistapart.com/article/responsive-web-design/)—wrapping a name around a [*progressive enhancement*](https://alistapart.com/article/understandingprogressiveenhancement/) and [*mobile-first*](https://www.lukew.com/ff/entry.asp?933) web design approach/philosophy that had been growing in the mid-2000s (sometimes called *liquid, flexible, fluid,* or *elastic* design).
+
+- [<cite>Responsive Design – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
+	A pretty nice overview.
+
+- [<cite>Beginner's Guide to Media Queries – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
+	Slightly overlapping, but also good.
+
+- [<cite>Using Media Queries – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features)
+	Okay, that’s probably enough MDN.
+
+- [<cite>Using CSS Custom Properties – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+	Sorry, last one! For now.
+<!-- .right .rows--4 -->
+
+Instead of building, designing, and serving a desktop site and a separate, minimal mobile version (if you even did at all)—you could instead adapt *one* site to work across devices. This is responsive design.
+
+There was a confluence of events that allowed this: modern, <nobr>self-updating</nobr> browsers, and then the explosion of *the mobile web*—precipitated, in no small part, by the *iPhone* in 2007. It ran a desktop-class browser (in terms of functionality), which hadn’t been available in a small screen before. And with its crazy success—and the subsequent proliferation of its paradigm in *Android*—the web, and then world, scrambled to *respond*.
+
+<figure
+	@caption="A typical/example *responsive* layout, adjusting the content to reflow based on the device width."
+	@source="responsive-1.svg"
+	class="verso before--3"
+	>
+</figure>
+
+<figure
+	@source="responsive-2.svg"
+	class="recto start before--3"
+	>
+</figure>
+
 <blockquote
 	@attribution="Bruce Lee"
 	@citation="https://www.youtube.com/watch?v=UE8QBufrxCA"
@@ -29,43 +63,7 @@
 
 </blockquote>
 
-## What Is Responsive Design?
-
-Let’s first take a minute to talk about *responsive design*. This term was coined in 2010 or so [by Ethan Marcotte](https://alistapart.com/article/responsive-web-design/)—wrapping a name around a [*progressive enhancement*](https://alistapart.com/article/understandingprogressiveenhancement/) and [*mobile-first*](https://www.lukew.com/ff/entry.asp?933) web design approach/philosophy that had been growing in the mid-2000s (sometimes called *liquid, flexible, fluid,* or *elastic* design).
-
-- [<cite>Responsive Design – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
-	A pretty nice overview.
-
-- [<cite>Beginner's Guide to Media Queries – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
-	Slightly overlapping, but also good.
-
-- [<cite>Using Media Queries – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features)
-	Okay, that’s probably enough MDN.
-
-- [<cite>Using CSS Custom Properties – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
-	Sorry, last one! For now.
-<!-- .link-list .right style="--rows: 3" -->
-
-Instead of building, designing, and serving a desktop site and a separate, minimal mobile version (if you even did at all)—you could instead adapt *one* site.
-
-There was a confluence of events that allowed this: modern, <nobr>self-updating</nobr> browsers, and then the explosion of *the mobile web*—precipitated, in no small part, by the *iPhone* in 2007. It ran a desktop-class browser (in terms of functionality), which hadn’t been available in a small screen before. And with its crazy success—and the subsequent proliferation of its paradigm in *Android*—the web, and then world, scrambled to *respond*.
-
-<figure
-	@caption="A typical/example *responsive* layout, adjusting the content to reflow based on the device width."
-	@source="responsive-1.svg"
-	class="verso"
-	style="margin-block-end: initial; --height: 732px"
-	>
-</figure>
-
-<figure
-	@source="responsive-2.svg"
-	class="recto"
-	style="align-self: start"
-	>
-</figure>
-
-## The Viewport <!-- .add-after -->
+## The Viewport
 
 There wasn’t much of a *mobile web*, prior to the iPhone. *Some* sites had barebones [WAP](https://en.wikipedia.org/wiki/Wireless_Application_Protocol) mobile versions, designed for the tiny screens and limited hardware of the era.
 <!-- style="align-self: center; margin-block: initial" -->
