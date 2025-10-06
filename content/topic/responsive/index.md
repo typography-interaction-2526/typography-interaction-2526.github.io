@@ -329,7 +329,7 @@ If it doesn’t work on mobile, it doesn’t work.
 <figure
 	@caption="Note we added a `main` container. The `inline-size` here are kind of tricky—but this will be much easier with `grid`, we promise!"
 	@source="media-mobile-first/preview/?active=style.css"
-	style="--lines: 25"
+	style="--lines: 24"
 	>
 </figure>
 
@@ -342,23 +342,23 @@ Mobile can be the majority of your traffic—[especially internationally](https:
 
 [Custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) (folks almost always say *CSS variables*) aren’t strictly a part of *responsive design* or *media queries*, per se—but they come up very often in modern, mobile-first practice and we’ll introduce them briefly, here. They allow you codify the relationships in your design.
 
-[<l<cite>CSS Custom Properties Guide – CSS Tricks</cite>](https://css-tricks.com/a-complete-guide-to-custom-properties/)
+[<cite>CSS Custom Properties Guide – CSS Tricks</cite>](https://css-tricks.com/a-complete-guide-to-custom-properties/)
 	Web guru [Chris Coyier’s](https://chriscoyier.net/) robust overview.
-<!-- .link-list .right style="--rows: 1" -->
+<!-- .right -->
 
-<div class="add-before--3 balance verso">
+<div class="before--3 balance verso">
 
-These bring another programming concept of [*variables*](https://en.wikipedia.org/wiki/Variable_(computer_science)) into CSS. These are shorthand entities for values we want to reuse throughout a document&zwj;—or, in a responsive context, want to modify at certain breakpoints.
+These bring another programming concept of [*variables*](https://en.wikipedia.org/wiki/Variable_(computer_science)) into CSS. These are shorthand entities for values we want to reuse throughout a document&zwj;—or, in a responsive context, want to modify at certain breakpoints.
 
-Changing the value of a *variable* changes it everywhere it is referenced—no copy/pasting or find/replacing. (You could think of a color *swatch*, if you are in an Adobe mindset.) Again, these are just for you—it is all the same to the computer. More ergonomics!
+Changing the value of a *variable* changes it everywhere it is referenced—no copy/pasting or find/replacing. You could think of a color *swatch*, if you are in an Adobe mindset; other tech folks call these *tokens*. Again, these are just for you—it is all the same to the computer. More ergonomics!
 
 In your CSS, you *declare* (set) these with a `--` prefix in front of a subjective name you make up. And you *reference* (use) them by wrapping that variable name in `var()`.
 
 </div>
 
-<div class="recto add-before--3">
+<div class="recto before--3">
 
-```css <!-- .sticky style="inset-block-start: 33vh;" -->
+```css <!-- .sticky style="inset-block-start: 35vh;" -->
 :root {
 	--brand-color: #e42a1d; /* Declare it. */
 }
@@ -370,19 +370,22 @@ In your CSS, you *declare* (set) these with a `--` prefix in front of a subjecti
 
 </div>
 
-You can use these as values for *any* [CSS property](/topic/css/#css-rules)—colors, spacing, etc.—anything you use multiple times and want to be consistent, give a memoriable name to, or easily change all together:
-<!-- .add-before--3 .balance -->
+You can use these as values for *any* [CSS property](/topic/css/#css-rules)—colors, spacing, etc.—anything you use multiple times and want to be consistent, give a memorable name to, or easily change all together:
+<!-- .before--3 -->
 
 <figure
 	@caption="Changing the spacing here is *easy*, even though we use it a bunch."
 	@source="css-variable/preview/?active=style.css"
-	style="--lines: 19"
+	style="--lines: 21"
 	>
 </figure>
 
-You’ll often declare a set of variables for mobile—type sizes, spacing, and so on—and then adjust them, once, for desktop. No need to write all the properties out again, with all their own redundant media-queries! Variables are *great*. It used to be *so much harder*.
+You’ll often declare a set of variables for mobile—type sizes, spacing, and so on—and then adjust them, once, for desktop. No need to write all the properties out again, with all their own redundant media-queries! Variables are *great*. It used to be *so much harder*.
 
 They’ll help you avoid unwanted cascade (applying the same property), especially across breakpoints. But they also help to facilitate *design system* thinking—focusing your design on the relative *relationships* of things.
+
+Variables are how you build *design systems.* Like relative type scaling, they help to identify, catalyze, and maintain relationships in your work.
+<!-- .intro -->
 
 ## Other Media Features
 
