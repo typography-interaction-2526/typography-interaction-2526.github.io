@@ -6,10 +6,10 @@
 
 Let’s look at the specifics around using images on the web! (Finally.)
 
-- [<cite>Images in HTML – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [<cite>Images in HTML – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 	Pretty good overview.
 
-- [<cite>Choose the Right Image Format – web.dev</cite>](https://web.dev/choose-the-right-image-format/)
+- [<cite>Choose the Right Image Format – web.dev</cite>](https://web.dev/choose-the-right-image-format/)
 	Also discusses *Retina*/High DPI (Hi&thinsp;DPI) screens.
 	<!-- .link-list .right style="--rows: 3" -->
 
@@ -183,7 +183,7 @@ So you’ll often want to set images to `display: block;`, and then control thei
 
 CSS also added the [`object-fit`](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) and corresponding [`object-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position) properties for sizing images *within* their containers—as if the image file is a child of `img`. This is usually used when setting an `img` to fill a container:
 
-- [<cite>`object-fit` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
+- [<cite>`object-fit` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
 	This used to be much harder!
 	<!-- .link-list .right style="--rows: 2" -->
 
@@ -198,7 +198,7 @@ CSS also added the [`object-fit`](https://developer.mozilla.org/en-US/docs/Web/C
 
 CSS also added an [`aspect-ratio` property](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio) to control the width-to-height ratio of an element—maintaining this relationship as an element scales. (This used to be [*unnecessarily* hard](https://css-tricks.com/aspect-ratio-boxes/) to achieve. CSS heights are always weird! You kids have it easy.)
 
-- [<cite>`aspect-ratio` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio)
+- [<cite>`aspect-ratio` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio)
 	So much easier now.
 	<!-- .link-list .right style="--rows: 2" -->
 
@@ -216,7 +216,7 @@ This is not *just* for images (you can use it on any element!), but commonly com
 
 You can also use images as backgrounds on elements with the [`background-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image), [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size), and [`background-origin`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin) properties—particularly if you want to put something in front of them, like text.
 
-- [<cite>`background-image` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
+- [<cite>`background-image` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
 	Careful with these.
 	<!-- .link-list .right style="--rows: 2" -->
 
@@ -242,7 +242,7 @@ Ask yourself, “would this page make sense if I couldn’t see this image?”
 
 Speaking of semantics—HTML also has a [`figure`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure) element that you can use to associate an image (or other visual) with a visible [`figcaption`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption) description or legend. These containers formally link the meaning/context of the elements together:
 
-- [<cite>`figure` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
+- [<cite>`figure` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
 	Many of your images should be in `figure` containers.
 	<!-- .link-list .right style="--rows: 2" -->
 
@@ -270,7 +270,7 @@ But using images introduces some additional considerations, going across breakpo
 Our venerable `<img>` element added some control for this with the addition of the [`srcset`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset) and [`sizes`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes) attributes. But we think it is much easier (at least ergonomically) to skip right into using the modern [`picture` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture). { .four-before }
 <!-- .add-before--3 -->
 
-- [<cite>`picture` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)
+- [<cite>`picture` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)
 	These containers allow you to make your `img` responsive.
 	<!-- .link-list .right style="--rows: 2" -->
 
@@ -292,7 +292,7 @@ Responsive images (like the rest of this) can get [very complicated](https://web
 
 SVGs are a (digital) designers best friend—mixing the adaptability and maintainability of code with the freedom and flexibility of visual design.
 
-- [<cite>Including Vector Graphics in HTML – MDN">](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML#what_is_svg)
+- [<cite>Including Vector Graphics in HTML – MDN">](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML#what_is_svg)
 	Good overview.
 
 - [<cite>How to Code SVG Icons by Hand">](https://www.aleksandrhovhannisyan.com/blog/svg-tutorial/)

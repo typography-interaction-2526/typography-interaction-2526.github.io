@@ -17,7 +17,7 @@ Just as in nature systems of order govern the growth and structure of animate an
 
 [CSS grid layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids#line-based_placement) (from here on, just *grid*) is another, even more recent addition to CSS, continuing on from where [*flexbox*](/topic/flexbox/) left off. While flex is primarily a *one-dimensional* layout system—focused on horizontal *or* vertical arrangements—grid is *two-dimensional* system, integrating the two directions together.
 
-- [<cite>A Complete Guide to Grid – CSS Tricks</cite>](https://css-tricks.com/snippets/css/complete-guide-grid/)
+- [<cite>A Complete Guide to Grid – CSS Tricks</cite>](https://css-tricks.com/snippets/css/complete-guide-grid/)
 	The *grid* version of the *flexbox* classic.
 
 - [<cite>CSS Grid Layout: A New Layout Module for the Web</cite>](https://webkit.org/blog/7434/css-grid-layout-a-new-layout-module-for-the-web/)

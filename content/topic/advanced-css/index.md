@@ -25,7 +25,7 @@ Let’s look at some examples.
 
 An [*overflow*](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow) in CSS happens when there is too much content to fit in a container—usually because you have manually constrained its `block-size` or `inline-size`. (By default, the browser will try to show you everything!)
 
-- [<cite>Overflowing Content – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [<cite>Overflowing Content – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
 	There are going to be a lot of MDNs, here.
 <!-- .link-list .right style="--rows: 2" -->
 
@@ -67,7 +67,7 @@ HTML renders a lot of extra space around text elements, called the [*line box*](
 - [<cite>Font Metrics, <nobr>Line-Height</nobr> and Vertical-&zwj;Align</cite>](https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align)
 	A deep-dive on type positioning.
 
-- [<cite>Vertical Spacing and Line-Height in Design Systems – Google Fonts</cite>](https://fonts.google.com/knowledge/using_type/vertical_spacing_and_line_height_in_design_systems)
+- [<cite>Vertical Spacing and Line-Height in Design Systems – Google Fonts</cite>](https://fonts.google.com/knowledge/using_type/vertical_spacing_and_line_height_in_design_systems)
 	It’s all very complicated.
 	<!-- .link-list .right style="--rows: 3" -->
 
@@ -146,7 +146,7 @@ After many, many years of patient, typographic waiting (and [some JS](https://gi
 Ideally we could set punctuation *outside* of our text blocks, for visual alignment based solely on the letters—a traditional design technique called [*hanging punctuation*](https://en.wikipedia.org/wiki/Hanging_punctuation). (There is actually a [CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/hanging-punctuation) for this, but only Safari supports it!) But we can still approximate the behavior, at least for quotes:
 <!-- .balance -->
 
-- [<cite>`::before` and `::after` – CSS Tricks</cite>](https://css-tricks.com/almanac/selectors/a/after-and-before/)
+- [<cite>`::before` and `::after` – CSS Tricks</cite>](https://css-tricks.com/almanac/selectors/a/after-and-before/)
 	Another great CSS Tricks article.
 	<!-- .link-list .right style="--rows: 2" -->
 
@@ -172,7 +172,7 @@ Do it when you can—and give more attention to your large headings, then your b
 
 CSS can apply visual effects on elements—adjusting their graphical display *after* they are laid out and rendered in the page—with the [`filter` property](https://developer.mozilla.org/en-US/docs/Web/CSS/filter):
 
-- [<cite>Filter – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
+- [<cite>Filter – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
 	Back to MDN.
 	<!-- .link-list .right style="--rows: 2" -->
 
@@ -198,7 +198,7 @@ These also correspond to [`backdrop-filter`](https://developer.mozilla.org/en-US
 Beyond our standard sizing and layout afforded by CSS, you can also *visually* manipulate elements using CSS [transforms](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)—scaling, skewing, translating, or rotating elements *after* they are laid out in the DOM. It’s like grabbing the “corner handles” in Adobe/Figma!
 <!-- .add-after--3 -->
 
-- [<cite>Transform – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
+- [<cite>Transform – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
 	These are fun.
 	<!-- .link-list .right style="--rows: 2" -->
 
@@ -259,7 +259,7 @@ Use `transform` only for what other properties *can’t* accomplish!
 
 CSS [transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) allow us to move nicely between CSS property values.
 
-- [<cite>Using CSS Transitions – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [<cite>Using CSS Transitions – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
 	Every state change is better with some easing.
 	<!-- .link-list .right style="--rows: 2" -->
 
@@ -332,7 +332,7 @@ Nearly all CSS properties can be transitioned—but keep in mind that changes th
 Sometimes, transitioning a property from one value to another isn’t enough—you may need more complicated (or repeating) motion behavior. CSS [animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) allow precise state sequencing with `@keyframes` (akin to… *keyframes* or a timeline in other software contexts).
 <!-- .balance -->
 
-- [<cite>Using CSS Animations – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [<cite>Using CSS Animations – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 	Some of you already got into these!
 	<!-- .link-list .right style="--rows: 2" -->
 

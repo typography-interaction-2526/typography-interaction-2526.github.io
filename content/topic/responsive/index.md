@@ -9,16 +9,16 @@
 
 This term was coined in 2010 or so [by Ethan Marcotte](https://alistapart.com/article/responsive-web-design/)—wrapping a name around a [*progressive enhancement*](https://alistapart.com/article/understandingprogressiveenhancement/) and [*mobile-first*](https://www.lukew.com/ff/entry.asp?933) web design approach/philosophy that had been growing in the mid-2000s (sometimes called *liquid, flexible, fluid,* or *elastic* design).
 
-- [<cite>Responsive Design – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
+- [<cite>Responsive Design – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 	A pretty nice overview.
 
-- [<cite>Beginner's Guide to Media Queries – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
+- [<cite>Beginner's Guide to Media Queries – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries)
 	Slightly overlapping, but also good.
 
-- [<cite>Using Media Queries – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features)
+- [<cite>Using Media Queries – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features)
 	Okay, that’s probably enough MDN.
 
-- [<cite>Using CSS Custom Properties – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+- [<cite>Using CSS Custom Properties – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 	Sorry, last one! For now.
 <!-- .right .rows--4 -->
 
@@ -303,10 +303,10 @@ Why say `not` `portrait` when you can just say `landscape`?
 
 So this can all get very complicated, very quickly—especially with complex designs, overlapping rules, and the wide ranges of devices to consider.
 
-- [<cite>Mobile First – A Book Apart</cite>](http://www.ferrispark.com/audio/DOCUMENTS/mobile-first.pdf)
+- [<cite>Mobile First – A Book Apart</cite>](http://www.ferrispark.com/audio/DOCUMENTS/mobile-first.pdf)
 	[Luke Wroblewski](https://lukew.com/) wrote the book (and [the deck](https://static.lukew.com/MobileFirst_LukeW.pdf)).
 
-- [<cite>Progressive Enhancement – Wikipedia</cite>](https://en.wikipedia.org/wiki/Progressive_enhancement)
+- [<cite>Progressive Enhancement – Wikipedia</cite>](https://en.wikipedia.org/wiki/Progressive_enhancement)
 	The term coined by [Steve Champeon](https://www.webstandards.org/about/members/schampeo/index.html) and [Nick Finck](https://nickfinck.com/) in [2003](https://hesketh.com/publications/inclusive_web_design_for_the_future/).
 <!-- .link-list .right style="--rows: 3" -->
 
@@ -339,7 +339,7 @@ Mobile can be the *majority* of your traffic—[especially internationally](http
 
 [Custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) (folks almost always say *CSS variables*) aren’t strictly a part of *responsive design* or *media queries*, per se—but they come up very often in modern, mobile-first practice and we’ll introduce them briefly, here. They allow you codify the relationships in your design.
 
-[<l<cite>CSS Custom Properties Guide – CSS Tricks</cite>](https://css-tricks.com/a-complete-guide-to-custom-properties/)
+[<l<cite>CSS Custom Properties Guide – CSS Tricks</cite>](https://css-tricks.com/a-complete-guide-to-custom-properties/)
 	Web guru [Chris Coyier’s](https://chriscoyier.net/) robust overview.
 <!-- .link-list .right style="--rows: 1" -->
 
