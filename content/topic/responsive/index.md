@@ -166,9 +166,6 @@ There are many media queries we can use, but we’ll start with *width*—which 
 
 Width tends to vary the most across devices—from the `375px`–`428px` of your phones, through to the ~`1440px`–`1680px` of your laptops, and then on up to the ~`2560px`–`3440px` you might see with large, desktop displays.
 
-We still use `width` here (not the [logical property](/topic/box-model/#and-logical-properties) `inline-size`) because we are referencing the physical device, agnostic of language.
-<!-- .note -->
-
 </div>
 
 <figure
@@ -179,6 +176,14 @@ We still use `width` here (not the [logical property](/topic/box-model/#and-logi
 	style="--lines: 11"
 	>
 </figure>
+
+<aside>
+
+<mark>Physical directions remain in use</mark>
+
+Note that we still use `width` here—not the [logical property](/topic/box-model/#and-logical-properties) `inline-size`—because we are referencing the *physical* device characteristics, agnostic of the language being displayed.
+
+</aside>
 
 Since this `width` is usually our primary design constraint (`height` being handled through scrolling), we need *width-based* media queries to adjust our layouts across this wide range, lest our designs fall.
 
@@ -220,6 +225,14 @@ This width rule/test/criteria uses math [comparison operators](https://css-trick
 	style="--lines: 17"
 	>
 </figure>
+
+<aside>
+
+<mark>Use modern syntax when possible</mark>
+
+You’ll see lots of material out there referencing `min-width` or `max-width` media queries—but we will be using the modern (and much more intuitive) [range operator syntax](https://web.dev/articles/media-query-range-syntax) shown here.
+
+</aside>
 
 ## Height-Based, Too
 
