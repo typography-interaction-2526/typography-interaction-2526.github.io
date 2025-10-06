@@ -1,9 +1,9 @@
 section { background-color: aquamarine; }
 
-@media (width > 35rem) and (width < 40rem) {
+@media (width > 35rem) and (width < 45rem) {
 	section:first-child { background-color: gold; }
 }
 
-@media (width > 40rem) and (height > 20rem) {
+@media (width > 45rem) and (height > 20rem) {
 	section:last-child { background-color: orange; }
 }
