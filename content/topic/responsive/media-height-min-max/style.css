@@ -1,13 +1,13 @@
 section { background-color: aquamarine; }
 
-@media (min-height: 400px) {
+@media (height > 36rem) {
 	section:first-child { background-color: coral; }
 }
 
-@media (height: 400px) {
+@media (height = 36rem) {
 	section:nth-child(2) { background-color: orange; }
 }
 
-@media (max-height: 400px) {
+@media (height < 36rem) {
 	section:last-child { background-color: gold; }
 }

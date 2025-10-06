@@ -223,11 +223,11 @@ This width rule/test/criteria uses math [comparison operators](https://css-trick
 
 ## Height-Based, Too
 
-<div class="verso">
+<div class="verso center">
 
-You can also use `height` in the same way—though again, with the usual vertical scrolling paradigm, <nobr>height-based</nobr> adjustments aren’t as necessary or anywhere nearly as common.
+You can also use `height` in the same way—though again, with the usual vertical scrolling paradigm, <nobr>height-based</nobr> adjustments aren’t as necessary or anywhere nearly as common as `width`.
 
-This example is the same *breakpoint* of `500px` as before, but now using `height`:
+This example is the same *breakpoint* of `36rem` as before, but now using `height`:
 <!-- .balance -->
 
 </div>
@@ -236,17 +236,15 @@ This example is the same *breakpoint* of `500px` as before, but now using `heigh
 	@caption="These code examples are responsive, themselves—stacking like this when they are narrow."
 	@source="media-height-min-max/preview/?active=style.css"
 	class="recto"
-	style="--lines: 19; --rows: 2; align-self: end; margin-block-end: initial;"
+	style="--lines: 24"
 	>
 </figure>
 
-<div class="add-before--3 verso" style="align-self: end">
-
 In a broader code and programming context, it can be helpful to think of media queries as [conditional *if* statements](https://en.wikipedia.org/wiki/Conditional_(computer_programming)).
-<!-- .balance .bold .scale--h4 -->
+<!-- .intro -->
 
 We’ll talk about this in detail later [with JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else), where conditionals are ubiquitous and powerful. You may have also heard of [*If This Then That*](https://ifttt.com), which takes its name from this kind of logic.
-<!-- .balance .secondary -->
+<!-- .note -->
 
 </div>
 
