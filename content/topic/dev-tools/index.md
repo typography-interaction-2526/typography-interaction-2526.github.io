@@ -138,7 +138,7 @@ Enter *device mode* with the little phone/laptop <samp style="-webkit-text-strok
 	>
 </figure>
 
-<figure @source="device-bar.svg" style="justify-self: center"></figure>
+<figure @source="device-bar.svg"></figure>
 
 <div class="center left">
 
