@@ -262,7 +262,7 @@ To wrap up the semester (and course), we’ll round out our knowledge of the web
 - [<cite>Material Design 1</cite>](https://m1.material.io/)
 	Google, 2014
 
-- [<cite>i&NoBreak;OS Human Interface Guidelines</cite>](https://www.evl.uic.edu/datsoupi/420_14/docs/MobileHIG.pdf)
+- [<cite><small>i</small>OS Human Interface Guidelines</cite>](https://www.evl.uic.edu/datsoupi/420_14/docs/MobileHIG.pdf)
 	Apple, 2014
 
 &nbsp;

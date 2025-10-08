@@ -6,31 +6,32 @@
 </script>
 
 There is no single *best* browser; they are all kind of differently bad, in [different ways](https://en.wikipedia.org/wiki/Anna_Karenina_principle).
-<!-- .balance .bold .scale--h4 -->
+<!-- .intro .body -->
 
 - [<cite>Chrome DevTools</cite>](https://developer.chrome.com/docs/devtools/) \
 We’ll be using these.
 
 - [<cite>Safari Web Development Tools</cite>](https://developer.apple.com/safari/tools/)
-Got some long-overdue love in [*Sonoma*](https://developer.apple.com/videos/play/wwdc2023/10118), but [little since](https://webkit.org/blog/15865/webkit-features-in-safari-18-0/#web-inspector).
+Got some long-overdue love back in [*Sonoma*](https://developer.apple.com/videos/play/wwdc2023/10118), but [little](https://webkit.org/blog/15865/webkit-features-in-safari-18-0/#web-inspector) [since](https://webkit.org/blog/17333/webkit-features-in-safari-26-0/#web-inspector).
 
 - [<cite>Firefox DevTools User Docs</cite>](https://developer.mozilla.org/en-US/docs/Tools)
 Spiritual successor to [*Firebug*](https://thehistoryoftheweb.com/checking-under-the-hood-of-code/), the first suite.
-<!-- .link-list .right style="--rows: 3" -->
+<!-- .right .rows--4 -->
 
-Many developers use [Chrome](https://www.google.com/chrome) for [its popularity](https://gs.statcounter.com/browser-market-share), before testing in other browsers. It also arguably has the most robust set of *DevTools*—though [Safari](https://www.apple.com/safari/) and [Firefox](https://developer.mozilla.org/en-US/docs/Tools) have their own versions, too. Much of this is just preference, but ultimately you’ll want to see what your visitors are seeing.
+Many developers use [Chrome](https://www.google.com/chrome) for [its popularity/hegemony](https://gs.statcounter.com/browser-market-share), before testing in other browsers. It also arguably has the most robust set of *DevTools*—though [Safari](https://www.apple.com/safari/) and [Firefox](https://developer.mozilla.org/en-US/docs/Tools) have their own versions, too. Much of this is just preference, but ultimately you’ll want to see what your visitors are seeing.
+<!-- .before -->
 
-You have always [been able to](https://blog.jim-nielsen.com/2020/the-spirit-of-view-source/#how-browsers-do-view-source-today-on-mac) <samp>View Source</samp>, from [the earliest days&thinsp;/browsers](https://thehistoryoftheweb.com/checking-under-the-hood-of-code/)—remember that the open web has *always* trafficked in source code. But we’ll use DevTools for the same reason we use an IDE—more comfortable ergonomics, specifically around building for the web.
+You have always [been able to](https://blog.jim-nielsen.com/2020/the-spirit-of-view-source/#how-browsers-do-view-source-today-on-mac) <samp>View Source</samp>, from [the earliest days/browsers](https://thehistoryoftheweb.com/checking-under-the-hood-of-code/)—remember that the open web has *always* trafficked in source code. But we’ll use DevTools for the same reason we use an IDE—more comfortable ergonomics, specifically around building for the web.
 
 You’ll often hear people (Michael) call it the *Web Inspector*, or just *The Inspector*. It’s going to be your best (Web) friend, showing you everything that the browser has *parsed* to display your pages.
 
 ## Inspecting Pages
 
-<div class="add-after--3 verso" style="align-self: stretch; justify-content: center">
+<div class="after--3 center verso">
 
-In Chrome, you can bring them up by right-clicking on any element/part of a page and clicking <samp>Inspect</samp>&thinsp;:
+In Chrome, you can bring them up by right-clicking on any element/part of a page and clicking <samp>Inspect</samp>&#x202F;:
 
-You can also hit <kbd>⌘&thinsp;~&thinsp;Ctrl</kbd> <kbd>⌥&thinsp;~&thinsp;Alt</kbd> <kbd>I</kbd>&thinsp;.
+You can also hit <nobr><kbd>⌘</kbd> <kbd>⌥</kbd> <kbd>I</kbd></nobr>&#x202F;.
 <!-- .secondary -->
 
 </div>
@@ -48,13 +49,12 @@ By default, you’ll see the tools open on the right side of the page. Depending
 <figure
 	@source="dev-tools.png"
 	class="shadow"
-	style="--height: 90vh"
 	>
 </figure>
 
-<div class="add-before--3 verso" style="align-self: center">
+<div class="before--3 center verso">
 
-The Customize <samp>⋮</samp> button will let you change the side they appear on, or undock the tools out entirely into a separate window—sometimes easier on a laptop/small screen:
+The Customize <samp style="-webkit-text-stroke-width: 0.05rem">⋮</samp> button will let you change the side they appear on, or undock the tools out entirely into a separate window—sometimes easier on a laptop/small screen:
 <!-- .balance -->
 
 </div>
@@ -62,60 +62,67 @@ The Customize <samp>⋮</samp> button will let you change the side they appear o
 <figure
 	@source="customize.svg"
 	class="recto"
-	style="align-items: end"
+	style="justify-content: end"
 	>
 </figure>
 
 ## Elements Panel
 
-<div class="left">
+<div class="verso">
 
-The top part of the tools is [*the DOM*](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)&zwj;—you can expand/collapse all the nested HTML *elements* on the opened page.
+The top part of the tools is [*the DOM*](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)&NoBreak;—you can expand/collapse all the nested HTML *elements* on the opened page.
 
 The first <samp>↖</samp> button in the upper-left lets you mouse over on the page, and will then show you that element nested/hierarchically within the DOM.
 
 The second <samp style="-webkit-text-stroke-width: 0.05rem">◲</samp> button (more about this [below](#device-mode)) toggles the *Device Toolbar*, a.k.a. “responsive mode.”
 
-The <samp>flex</samp>&thinsp;/&thinsp;<samp>grid</samp> badges toggle their layout overlays on the page.
+The <samp>flex</samp>/<samp>grid</samp> badges toggle their layout overlays on the page.
 
 </div>
 
 <figure
 	@source="elements.svg"
-	style="align-self: center; align-items: end; grid-column: center-start / all-end"
+	class="center recto"
+	style="justify-content: end"
 	>
 </figure>
 
-Handy tip: <kbd>⌘&thinsp;~&thinsp;Ctrl</kbd> <kbd>F</kbd> in here will let you search for elements or text by name/class/contents!
-<!-- .balance .secondary .recto -->
+Handy tip: <nobr><kbd>⌘</kbd> <kbd>F</kbd></nobr> in here will let you search for elements or text by name/class/contents!
+<!-- .note .recto .before--0 style="text-align: right"-->
 
-## St<span style="margin-inline-start: 0.05em">y</span>les Tab
+## Styles Tab
 
-<div class="left">
+<div class="verso">
 
 The area below is for the styles. It shows whatever *CSS properties* apply to the element you have selected above, in the *DOM*/Elements panel.
 
-These are ordered (somewhat unintuitively) in a *more*-[specific](/topic/css/#specificity), *reverse*-[cascade](/topic/css/#oh-right-the-cascade) sequence—inline styles at the top, external and internal stylesheets, then *user-agent* styles at the bottom—with any cascading/conflicting rules crossed out, as you go down.
+These are ordered (somewhat unintuitively) in a *more*-[specific](/topic/css/#specificity), *reverse*-[cascade](/topic/css/#oh-right-the-cascade) sequence—inline styles at the top, external and internal stylesheets, then *user-agent* styles at the bottom—with any cascading/conflicting rules crossed out, as you go down.
 
-On the right, you can see the sum *Computed* (or *rendered*) values of all the rules that apply—regardless of where they come from. These represent *exactly* what the browser is showing to you for the selected element.
+On the right, you can see the sum *Computed* (or *rendered*) values of all the rules that apply—regardless of where they come from. These represent *exactly* what the browser is showing to you for the selected element.
 
 </div>
 
 <figure
 	@source="styles.svg"
-	style="align-self: center; align-items: end; grid-column: center-start / all-end"
+	class="center recto"
+	style="justify-content: end"
 	>
 </figure>
 
 You can type specific CSS properties/values into both <samp>Filter</samp> boxes to quickly narrow things down!
-<!-- .balance .secondary .recto -->
+<!-- .note .recto .before--0 style="text-align: right" -->
 
-You can make changes in Elements or Styles, and the edits will be immediately visible on the page *as if you had edited the source files*. It’s useful to try things out quickly&zwj;—or diagnose where problems/conflicts arise.
-<!-- .add-before--3 .balance .bold .scale--h4 -->
+You can make changes in Elements or Styles, and the edits will be immediately visible on the page *as if you had edited the source files*!
+<!-- .intro .before--3 -->
+
+It’s useful to try things out quickly—and diagnose where problems/conflicts arise.
+<!-- .intro .before--0 -->
 
 <aside>
 
-Keep in mind these changes are temporary—any edits in the DevTools will be lost when you leave or reload the page! They are just for you.
+<mark>Warning: DevTools edits are ephemeral</mark>
+
+Keep in mind that these changes are only *temporary*—any edits in the DevTools will be lost when you leave or reload the page! They are just for you.
 
 </aside>
 
@@ -125,31 +132,30 @@ Enter *device mode* with the little phone/laptop <samp style="-webkit-text-strok
 <!-- .balance -->
 
 <figure
-	@caption="Be sure to <em>refresh</em> with <kbd>⌘&thinsp;~&thinsp;Ctrl</kbd> <kbd>R</kbd> if the page doesn’t rescale correctly when you enter this mode! They sometimes don’t, depending on how they are built—especially with JS shenanigans."
+	@caption="Be sure to <em>refresh</em> with <nobr><kbd>⌘</kbd> <kbd>R</kbd></nobr> if the page doesn’t rescale correctly when you enter this mode! They sometimes don’t, depending on how they are built—especially with JS shenanigans."
 	@source="device.png"
 	class="shadow"
-	style="--height: 90vh"
 	>
 </figure>
 
-<figure @source="device-bar.svg"></figure>
+<figure @source="device-bar.svg" style="justify-self: center"></figure>
 
-<div class="add-before--3 left">
+<div class="center left">
 
-Generally, use the <samp>Responsive</samp> mode that lets you type in specific pixel dimensions for width/height. Or you can use the divided bar underneath to quickly jump through common/ballpark widths.
+Generally, use the <samp>Responsive</samp> mode that lets you type in specific pixel dimensions for width/height. Or you can use the divided bar underneath to quickly jump through common/ballpark widths.
 
-The *Preview Zoom* also allows you to approximate views *larger* than your current screen! You can specify larger dimensions, and it will scale down to show the entire viewport. This is great for developing on a laptop&zwj;—it won’t be precise, but it’ll give you some idea of big screens.
+The *Preview Zoom* also allows you to approximate views *larger* than your current screen! You can specify larger dimensions, and it will scale down to show the entire viewport. This is great for developing on a laptop—it won’t be precise, but it’ll give you some idea of big screens.
 
-Remember that you are not targeting specific devices here&zwj;—you are looking for when your design/content *breaks!*
-<!-- .secondary -->
+Remember that you are not targeting specific devices here—you are looking for when your design/content *breaks*!
+<!-- .note -->
 
 </div>
 
 <figure
 	@caption="The *Device List* is… *ancient* and inaccurate—they don’t account for the browser’s own interface, so they are all too tall!"
 	@source="responsive.png"
-	class="center shadow"
-	style="--lines: 14.5; align-self: start; position: relative; inset-inline-start: var(--layout--alley)"
+	class="start middle shadow"
+	style="--lines: 14.5; position: relative; inset-inline-start: var(--alley)"
 	>
 </figure>
 
@@ -157,17 +163,19 @@ Remember that you are not targeting specific devices here&zwj;—you are looking
 	@caption="The *More Options* menu here has some handy tricks!"
 	@source="options.png"
 	class="right shadow"
-	style="--lines: 7.5; align-self: start; position: relative; inset-inline-start: var(--layout--alley)"
+	style="--lines: 7.5; position: relative; inset-inline-start: var(--alley)"
 	>
 </figure>
 
 <aside>
 
-Always make sure to check your work on the *real thing*, as much as possible!
+<mark>Always check your work on the *real thing*</mark>
 
-This is just a quicker preview, but isn’t always perfectly accurate&zwj;—and also won’t reflect any platform-specific behaviors around scrolling or rotating. (We’re looking at you, [i&thinsp;OS Safari](https://bugs.webkit.org/show_bug.cgi?id=141832).)
+This is just a quicker preview, but isn’t always perfectly accurate—and also won’t reflect any platform-specific behaviors around scrolling or rotating. (We’re looking at you, [<small>i</small>OS Safari](https://developer.apple.com/forums/thread/800125).)
 
 </aside>
+
+<!---
 
 ## The Console
 
@@ -178,8 +186,8 @@ The console is used to help you work with [JavaScript](/topic/javascript), by *l
 
 If your tools are already open, you can show the <samp>Console</samp> (as a drawer) with the Customize <samp>⋮</samp> button, or as a whole panel to the right of <samp>Elements</samp>.
 
-You can also hit <kbd>⌘&thinsp;~&thinsp;Ctrl</kbd> <kbd>⌥&thinsp;~&thinsp;Alt</kbd> <kbd>J</kbd>&thinsp; to go right there!
-<!-- .secondary -->
+You can also hit <nobr><kbd>⌘</kbd> <kbd>⌥</kbd> <kbd>J</kbd></nobr> to go right there!
+<!-- .note -->
 
 </div>
 
@@ -194,7 +202,6 @@ You can also hit <kbd>⌘&thinsp;~&thinsp;Ctrl</kbd> <kbd>⌥&thinsp;~&thinsp;Al
 	@caption="The Console opened under Elements/Styles."
 	@source="console.png"
 	class="shadow"
-	style="--height: 90vh"
 	>
 </figure>
 

@@ -29,15 +29,13 @@ There was a confluence of events that allowed this: modern, <nobr>self-updating<
 <figure
 	@caption="A typical/example *responsive* layout, adjusting the content to reflow based on the device width."
 	@source="responsive-1.svg"
-	class="verso before--3"
-	style="filter: drop-shadow(0px 0px 36px rgb(0 0 0 / 10%))"
+	class="verso before--3 shadow"
 	>
 </figure>
 
 <figure
 	@source="responsive-2.svg"
-	class="recto start before--3"
-	style="filter: drop-shadow(0px 0px 36px rgb(0 0 0 / 10%))"
+	class="recto start before--3 shadow"
 	>
 </figure>
 
@@ -450,7 +448,7 @@ Sometimes this feels appropriate—especially in products/applications, like may
 
 These last two are primarily concerned with [accessiblity](https://developer.mozilla.org/en-US/docs/Web/Accessibility)—[`prefers-contrast`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast) for folks who run their device/browser in a high-contrast mode to help with their vision, or [`prefers-reduced-motion`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) for those who have animations turned off for vestibular reasons.
 
-Or these are just their preferences! None of your business.
+Or these are just their preference! None of your business.
 <!-- .note -->
 
 ```css <!-- .verso .center -->
