@@ -10,13 +10,22 @@ code, kbd, samp {
 kbd,
 samp {
 	background-color:    var(--code);
-	border-radius:       var(--stroke);
+	border-radius:       calc(2 * var(--stroke));
 	inset-block-start:   0.03em;
 	line-height:         initial;
 	padding-block-end:   0.2em;
 	padding-block-start: 0.3em;
 	padding-inline:      0.5em;
 	user-select:         all;
+}
+
+kbd {
+	background-color: transparent;
+	border-radius:    calc(3 * var(--stroke));
+	outline-color:    color-mix(in srgb, currentcolor, transparent 15%);
+	outline-offset:   -0.125em;
+	outline-style:    solid;
+	outline-width:    0.125em;
 }
 
 /* Tighten keyboard/menu combos. */

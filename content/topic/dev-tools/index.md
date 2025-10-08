@@ -74,7 +74,7 @@ The top part of the tools is [*the DOM*](https://developer.mozilla.org/en-US/do
 
 The first <samp>↖</samp> button in the upper-left lets you mouse over on the page, and will then show you that element nested/hierarchically within the DOM.
 
-The second <samp style="-webkit-text-stroke-width: 0.05rem">◲</samp> button (more about this [below](#device-mode)) toggles the *Device Toolbar*, a.k.a. “responsive mode.”
+The second <samp style="-webkit-text-stroke-width: 0.05rem">⿸</samp> button (more about this [below](#device-mode)) toggles the *Device Toolbar*, a.k.a. “responsive mode.”
 
 The <samp>flex</samp>/<samp>grid</samp> badges toggle their layout overlays on the page.
 
@@ -128,8 +128,7 @@ Keep in mind that these changes are only *temporary*—any edits in the DevTools
 
 ## Device Mode
 
-Enter *device mode* with the little phone/laptop <samp style="-webkit-text-stroke-width: 0.05rem">◲</samp> button, in the upper left of the DevTools:
-<!-- .balance -->
+Enter *device mode* with the little phone/laptop <samp style="-webkit-text-stroke-width: 0.05rem">⿸</samp> button, <br>in the upper left of the DevTools:
 
 <figure
 	@caption="Be sure to <em>refresh</em> with <nobr><kbd>⌘</kbd> <kbd>R</kbd></nobr> if the page doesn’t rescale correctly when you enter this mode! They sometimes don’t, depending on how they are built—especially with JS shenanigans."
