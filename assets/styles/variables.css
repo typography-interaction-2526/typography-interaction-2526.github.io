@@ -73,7 +73,7 @@
 
 @property --tablet {
 	inherits:      true;
-	initial-value: initial;
+	initial-value: 0;
 	syntax:        '<integer>';
 }
 
