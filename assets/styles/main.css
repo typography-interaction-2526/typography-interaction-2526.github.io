@@ -583,7 +583,7 @@ main {
 		/* TODO `role` instead? */
 	}
 
-	.shadow { filter: drop-shadow(0 0.5rlh 1rlh rgb(0 0 0 / 33%)) }
+	.shadow { filter: drop-shadow(0 0.5rlh 1rlh rgb(0 0 0 / 25%)) }
 
 	/* Manual column placements. */
 	:where(.all, .aside, .body, .middle, .five, .four, .left, .one, .recto, .right, .six, .three, .two, .verso) {
