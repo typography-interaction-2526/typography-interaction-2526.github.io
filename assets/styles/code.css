@@ -28,6 +28,13 @@ kbd {
 	outline-width:    0.125em;
 }
 
+samp {
+	background-color: color-mix(in srgb, currentcolor, transparent 85%);
+	border-radius:    3em;
+	margin-inline:    -0.1em;
+	padding-inline:   0.75em;
+}
+
 /* Tighten keyboard/menu combos. */
 :where(nobr):has(:where(code, kbd, samp)) :where(code, kbd, samp):not(:first-child) { margin-inline-start: -0.4em }
 

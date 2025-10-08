@@ -76,7 +76,7 @@ The first <samp>↖</samp> button in the upper-left lets you mouse over on the p
 
 The second <samp style="-webkit-text-stroke-width: 0.05rem">⿸</samp> button (more about this [below](#device-mode)) toggles the *Device Toolbar*, a.k.a. “responsive mode.”
 
-The <samp>flex</samp>/<samp>grid</samp> badges toggle their layout overlays on the page.
+The <samp>flex</samp>&#x202F;/<samp>grid</samp> badges (pills?) toggle their layout overlays on the page.
 
 </div>
 
@@ -94,7 +94,7 @@ Handy tip: <nobr><kbd>⌘</kbd> <kbd>F</kbd></nobr> in here will let you search 
 
 <div class="verso">
 
-The area below is for the styles. It shows whatever *CSS properties* apply to the element you have selected above, in the *DOM*/Elements panel.
+The area below is for the styles. It shows whatever *CSS properties* apply to the element you have selected above, in the DOM/Elements panel.
 
 These are ordered (somewhat unintuitively) in a *more*-[specific](/topic/css/#specificity), *reverse*-[cascade](/topic/css/#oh-right-the-cascade) sequence—inline styles at the top, external and internal stylesheets, then *user-agent* styles at the bottom—with any cascading/conflicting rules crossed out, as you go down.
 
