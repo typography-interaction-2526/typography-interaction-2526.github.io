@@ -103,26 +103,26 @@ ti-preview {
 	--editor-width: 64.25%; /* End of body column. */
 
 	--syntax-text:             var(--accent);
-	--syntax-link:             #c678dd;
-	--syntax-heading:          #e06c75;
-	--syntax-emphasis:         #acb2be;
-	--syntax-strong:           #acb2be;
+	--syntax-link:             mediumorchid;
+	--syntax-heading:          tomato;
+	--syntax-emphasis:         var(--syntax-comment);
+	--syntax-strong:           var(--syntax-comment);
 	--syntax-keyword:          tomato;
 	--syntax-atom:             var(--accent);
 	--syntax-bool:             dodgerblue;
-	--syntax-url:              #56b6c2;
-	--syntax-labelName:        #61afef;
-	--syntax-inserted:         #98c379;
-	--syntax-deleted:          #e06c75;
+	--syntax-url:              darkturquoise;
+	--syntax-labelName:        cornflowerblue;
+	--syntax-inserted:         darkseagreen;
+	--syntax-deleted:          tomato;
 	--syntax-literal:          lightskyblue;
 	--syntax-string:           lightskyblue;
 	--syntax-number:           dodgerblue;
 	--syntax-variableName:     orange;
-	--syntax-definition:       #d2a8ff;
+	--syntax-definition:       plum;
 	--syntax-typeName:         limegreen;
-	--syntax-namespace:        #e5c07b;
+	--syntax-namespace:        khaki;
 	--syntax-className:        dodgerblue;
-	--syntax-macroName:        #e06c75;
+	--syntax-macroName:        tomato;
 	--syntax-propertyName:     dodgerblue;
 	--syntax-operator:         color-mix(in srgb, var(--accent), transparent 33%);
 	--syntax-comment:          color-mix(in srgb, var(--accent), transparent 50%);
