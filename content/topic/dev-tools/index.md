@@ -170,7 +170,7 @@ The *Preview Zoom* also allows you to approximate views *larger* than your curre
 	>
 </figure>
 
-Remember that you are not targeting specific devices here—you are looking for when your design/content *breaks*!
+Remember that you are not targeting specific devices; you are looking for when your design/content *breaks*!
 <!-- .intro -->
 
 <aside>
