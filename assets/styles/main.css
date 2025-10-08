@@ -290,9 +290,9 @@ main {
 		img,
 		object,
 		iframe {
-			--height: calc(var(--lines) * 1rlh - 1rcap);
+			--height--fallback: calc(var(--lines) * 1rlh - 1rcap);
 
-			block-size:      var(--height);
+			block-size:      var(--height, var(--height--fallback));
 			max-block-size:  calc(round(85svh, 1rcap));
 			max-inline-size: 100%;
 		}

@@ -39,7 +39,7 @@ You can also hit <nobr><kbd>⌘</kbd> <kbd>⌥</kbd> <kbd>I</kbd></nobr>&#x202F;
 <figure
 	@source="right-click.png"
 	class="right shadow"
-	style="--lines: 10"
+	style="--height: 273px"
 	>
 </figure>
 
@@ -83,7 +83,7 @@ The <samp>flex</samp>/<samp>grid</samp> badges toggle their layout overlays on t
 <figure
 	@source="elements.svg"
 	class="center recto"
-	style="justify-content: end"
+	style="justify-content: end; margin-inline-start: -1em"
 	>
 </figure>
 
@@ -105,7 +105,7 @@ On the right, you can see the sum *Computed* (or *rendered*) values of all the 
 <figure
 	@source="styles.svg"
 	class="center recto"
-	style="justify-content: end"
+	style="justify-content: end; margin-inline-start: -1em"
 	>
 </figure>
 
@@ -144,28 +144,34 @@ Enter *device mode* with the little phone/laptop <samp style="-webkit-text-strok
 
 Generally, use the <samp>Responsive</samp> mode that lets you type in specific pixel dimensions for width/height. Or you can use the divided bar underneath to quickly jump through common/ballpark widths.
 
-The *Preview Zoom* also allows you to approximate views *larger* than your current screen! You can specify larger dimensions, and it will scale down to show the entire viewport. This is great for developing on a laptop—it won’t be precise, but it’ll give you some idea of big screens.
-
-Remember that you are not targeting specific devices here—you are looking for when your design/content *breaks*!
-<!-- .note -->
+The *Preview Zoom* also allows you to approximate views *larger* than your current screen! You can specify larger dimensions, and it will scale down to show the entire viewport. This is great for developing on a laptop—it won’t be precise, but it’ll give you some idea of big screens.
 
 </div>
 
+<style>
+	@container style(--columns: 6) {
+		div.center.left { margin-inline-end: calc(-1 * var(--alley)) }
+	}
+</style>
+
 <figure
-	@caption="The *Device List* is… *ancient* and inaccurate—they don’t account for the browser’s own interface, so they are all too tall!"
+	@caption="The <samp>Device List</samp> is… *ancient* and inaccurate—they don’t account for the browser’s own interface, so they are all too tall!"
 	@source="responsive.png"
 	class="start middle shadow"
-	style="--lines: 14.5; position: relative; inset-inline-start: var(--alley)"
+	style="--height: 489px; position: relative; inset-inline-start: calc( 2 * var(--alley))"
 	>
 </figure>
 
 <figure
-	@caption="The *More Options* menu here has some handy tricks!"
+	@caption="The <samp>More Options</samp> menu here has some handy tricks!"
 	@source="options.png"
 	class="right shadow"
-	style="--lines: 7.5; position: relative; inset-inline-start: var(--alley)"
+	style="--height: 260px; position: relative; inset-inline-start: var(--alley)"
 	>
 </figure>
+
+Remember that you are not targeting specific devices here—you are looking for when your design/content *breaks*!
+<!-- .intro -->
 
 <aside>
 
