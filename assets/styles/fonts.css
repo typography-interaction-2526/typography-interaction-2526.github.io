@@ -113,7 +113,7 @@ code, kbd, samp {
 }
 
 /* Only scale down inline ones. */
-:where(p, li:where(:not(:has(header))), dd, figcaption) :is(code, kbd, samp) { font-size: var(--size--code) }
+:where(p, li:where(:not(:has(header))), dd, figcaption, td) :is(code, kbd, samp) { font-size: var(--size--code) }
 
 ti-preview,
 :where(pre) code {
