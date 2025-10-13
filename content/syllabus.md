@@ -403,7 +403,7 @@ That said: if there are still questions—particularly logistical or content one
 
 ### Additional Technical Help <!-- .print--break -->
 
-For more specific technical instruction and questions, Parsons has dedicated CD-program tutors available to help students with HTML, CSS, and JavaScript—as well as offering general design critiques and feedback. They should be available midway through Fall semester, and usually have drop-in schedules. More info will be provided as available.
+For more specific technical instruction and questions, Parsons has dedicated CD-program tutors available to help students with HTML, CSS, and JavaScript—as well as offering general design critiques and feedback. Their [drop-in schedules](https://parsonscd.notion.site/student-resources) are available midway through the semester.
 
 The University Learning Center also offers its own [tutoring sessions](https://www.newschool.edu/learning-center/); these are by-appointment.
 
