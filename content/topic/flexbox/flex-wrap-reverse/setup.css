@@ -11,5 +11,5 @@ li {
 	background-color: tomato;
 	border-block-end: 0.1rem solid firebrick;
 	border-inline-end: 0.1rem solid firebrick;
-	padding: 1rem;
+	padding: 0.5rem;
 }
