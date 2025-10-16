@@ -453,7 +453,7 @@ You see this one more and more these days—[`prefers-color-scheme`](https://dev
 
 Sometimes this feels appropriate—especially in products/applications, like maybe a messaging service. But sometimes the color scheme of a site is its *brand* (like ours), and probably shouldn’t change based on this query. It’s up to you! Continuing our ongoing discussion of who has the control.
 
-### `prefers-contrast` / `prefers-reduced-motion` <!-- .all style="line-height: 2rlh" -->
+### `prefers-contrast` / `prefers-reduced-motion` <!-- .all -->
 
 These last two are primarily concerned with [accessiblity](https://developer.mozilla.org/en-US/docs/Web/Accessibility)—[`prefers-contrast`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast) for folks who run their device/browser in a high-contrast mode to help with their vision, or [`prefers-reduced-motion`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) for those who have animations turned off for vestibular reasons.
 
