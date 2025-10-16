@@ -128,7 +128,7 @@ After specifying an element as *flex*, we can set its main axis with the [`flex
 <figure
 	@caption="The first list is `display: block;` by default. Also note that we gave them all a `min-block-size`, to show `start`/`end`!"
 	@source="flex-direction/preview/?active=style.css"
-	style="--lines: 14"
+	style="--lines: 15"
 	>
 </figure>
 
@@ -145,29 +145,31 @@ Keep in mind that all flex reordering is only *visual*—it obviously can’t ch
 
 ### `flex-wrap`
 
-Since flexbox is *one-dimensional*, by default it will try to cram everything into one line—even when there is not enough room! But you can tell it to *wrap* onto additional lines by adding [the `flex-wrap: wrap;` property/value](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) (set to `nowrap` by default):
+Since flexbox is *one-dimensional*, by default it will try to cram everything into one line—even when there is not enough room! But you can tell it to *wrap* onto additional lines by adding the [`flex-wrap: wrap;` property/value](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) (set to `nowrap` by default):
 <!-- .balance -->
 
 <figure
 	@caption="Without the height restriction, the last one would just grow taller, by default."
 	@source="flex-wrap/preview/?active=style.css"
-	style="--lines: 20"
+	style="--lines: 22"
 	>
 </figure>
 
 <aside>
 
-You *can* use this to make grids, and it is sometimes sufficient. But but [the more recent CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) properties will give you more control! We’ll talk about `grid` shortly!
+<mark>If you want to make a grid, use (CSS) grid</mark>
+
+You *can* use this to make grids, and it is sometimes sufficient. But but [the more recent CSS Grid](/topic/grid/) properties will give you more control! We’ll talk about `grid` shortly!
 
 </aside>
 
 There is also a `-reverse` suffix when wrapping, which will sequence items from `end` to `start`:
-<!-- .add-before--3 .balance -->
+<!-- .before--3 .balance -->
 
 <figure
 	@caption="You could do some weird, unique layouts with these—but keep in mind the order is still only *visual*!"
 	@source="flex-wrap-reverse/preview/?active=style.css"
-	style="--lines: 20"
+	style="--lines: 22"
 	>
 </figure>
 
@@ -176,22 +178,22 @@ There is also a `-reverse` suffix when wrapping, which will sequence items from 
 So most of what we’ve seen here is… somewhat possible using `float` and `position`—though not at all easily and only when you know the size/counts of your content.
 <!-- .balance -->
 
-But [the `justify-content` property](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) is where flexbox starts to allow novel layouts, by dividing up the extra/available free space between elements—akin to *distribute* options in Figma/Adobe applications. `justify-content` does this on our *main axis*:
+But the [`justify-content` property](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) is where flexbox starts to allow novel layouts, by dividing up the extra/available free space between elements—akin to *distribute* options in Figma/Adobe applications. `justify-content` does this on our *main axis*:
 <!-- .add-before--2 .balance -->
 
 <figure
-	@caption="The `start` / `end` values [have some nuance](https://csslayout.news/whats-the-difference-between-the-alignment-values-of-start-flex-start-and-self-start/) with different writing directions, but this doesn’t come up often."
+	@caption="The `start`/`end` values [have some nuance](https://csslayout.news/whats-the-difference-between-the-alignment-values-of-start-flex-start-and-self-start/) with different writing directions, but this doesn’t come up often."
 	@source="flex-justify-content/preview/?active=style.css"
-	style="--lines: 15.25"
+	style="--lines: 15"
 	>
 </figure>
 
 When our *main axis* is vertical, with `flex-direction: column;`&#x202F;:
 
 <figure
-	@caption="These *only* works with the `block-size` to justify within—otherwise the container would cinch up to the content height, as usual."
+	@caption="These only works with the `block-size` to *justify* within—otherwise the container would cinch up to the content height, as usual."
 	@source="flex-justify-content-column/preview/?active=style.css"
-	style="--lines: 19"
+	style="--lines: 21"
 	>
 </figure>
 
@@ -202,7 +204,7 @@ And then perpendicular to `justify` along the *main axis*, flexbox has [the `ali
 
 <figure
 	@source="flex-align-items/preview/?active=style.css"
-	style="--lines: 22.25"
+	style="--lines: 25"
 	>
 </figure>
 
@@ -210,7 +212,7 @@ And for the vertical:
 
 <figure
 	@source="flex-align-items-column/preview/?active=style.css"
-	style="--lines: 21.25"
+	style="--lines: 22"
 	>
 </figure>
 
@@ -222,12 +224,12 @@ When we have a flex element with `flex-wrap` set, we can also position the *line
 <figure
 	@caption="These wouldn’t do anything without the `block-size` and the `flex-wrap`."
 	@source="flex-align-content/preview/?active=style.css"
-	style="--lines: 19"
+	style="--lines: 21"
 	>
 </figure>
 
-And `align-content` can also be used with a vertical/`flex-direction: column;` axis, not shown here. This doesn’t often come up, as you have to specify/know a height to force a column wrap.
-<!-- .balance -->
+`align-content` can also be used with a vertical/`flex-direction: column;` axis, not shown here. This doesn’t often come up, as you have to specify/know a height to force a column wrap.
+<!-- .note -->
 
 ### `gap` / `row-gap` / `column-gap`
 
@@ -238,13 +240,15 @@ Flex added support for [intuitive `gap` properties](https://developer.mozilla.or
 <figure
 	@caption="Note the last one, `gap` are really *minimums* and only apply when there isn’t otherwise space."
 	@source="flex-gap/preview/?active=style.css"
-	style="--lines: 22.25"
+	style="--lines: 25"
 	>
 </figure>
 
 <aside>
 
-Note that the `justify`, `align`, and `gap` properties are also shared (in name and behavior) with `display: grid;`, when we get there!
+<mark>`flex` and `grid` share vocabulary</mark>
+
+Note that the `justify`, `align`, and `gap` properties are also shared (in name and behavior) with [CSS Grid](/topic/grid/), up next!
 
 </aside>
 
@@ -255,16 +259,17 @@ Flexbox is *usually* applied on the parent/container. But once you’ve set `dis
 ### `order`
 
 Kind of like the `-reverse` suffix—you can individually apply [the `order` property](https://developer.mozilla.org/en-US/docs/Web/CSS/order) to a *flex item* (child). Items with the same/tied order (like everything with the default of `order: 0;`&#x202F;) will be displayed in their HTML/source order:
+<!-- .balance -->
 
 <figure
 	@source="flex-order/preview/?active=style.css"
-	style="--lines: 23"
+	style="--lines: 25"
 	>
 </figure>
 
-Other order-based selectors (like `:first-child`) won’t be fooled by this reordering—as you can see, we used them here. They still use the HTML order. And again, this change is only *visual*—so don’t use it when screen reader/content sequence accessibility is a concern!
+Other order-based selectors (like `:first-child`) won’t be fooled by this reordering—as you can see, we used them here. They still use the HTML/DOM order. And again, this change is only *visual*—so don’t use it when screen reader/content sequence accessibility is a concern!
 
-### `flex-grow` and `flex-shrink`
+### `flex-grow` / `flex-shrink`
 
 These properties tell the flex items to… [`grow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow) or [`shrink`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink), if necessary—defining the amount of available/remaining space in the container an element should take up—filling the whole container, like [bento boxes](https://en.wikipedia.org/wiki/Bento).
 
@@ -272,7 +277,7 @@ It takes a *unitless* proportional value, akin to fractions or a factor/multipli
 
 <figure
 	@source="flex-grow-shrink/preview/?active=style.css"
-	style="--lines: 22.125"
+	style="--lines: 25"
 	>
 </figure>
 
@@ -281,7 +286,7 @@ And `flex-shrink` works the same way—defining what proportion an element shoul
 
 ### `flex-basis`
 
-[The `flex-basis` property](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis) is a little like `inline-size` and `block-size`—depending on your *main axis*. It defines what the child item’s content box size should be *before* any remaining space is distributed.
+The [`flex-basis` property](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis) is a little like `inline-size` and `block-size`—depending on your *main axis*. It defines what the child item’s content box size should be *before* any remaining space is distributed.
 <!-- .balance -->
 
 This defaults to `auto`, which falls back to any specified `inline-size` or `block-size`—and if those aren’t present, will just use the size of the content. You specify this `flex-basis` with [length units](/topic/box-model/#and-their-units) like `%` and `px` :
@@ -290,7 +295,7 @@ This defaults to `auto`, which falls back to any specified `inline-size` or `blo
 <figure
 	@caption="You are [usually fine](https://stackoverflow.com/a/34355447) just specifying `inline-size` / `block-size`."
 	@source="flex-basis/preview/?active=style.css"
-	style="--lines: 12"
+	style="--lines: 14"
 	>
 </figure>
 
@@ -305,7 +310,7 @@ Finally, we have an individual override for an [`align-items`](#align-items) pro
 </figure>
 
 This is a lot of stuff! Flex can sometimes be tough to wrap one’s head around, but it is *so much better* than `float` and `inline-size` and `margin` shenanigans.
-<!-- .balance .bold .scale--h4 -->
+<!-- .balance -->
 
-Much of what you look at on the web is laid out in flex (and its followup which we keep hinting at, CSS Grid).
-<!-- .balance .bold .scale--h4 -->
+Much of what you look at on the web is laid out in flexbox (and its followup which we keep mentioning, [CSS Grid](/topic/grid/)).
+<!-- .intro -->

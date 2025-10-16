@@ -1,6 +1,6 @@
 /* Setup styles in the other file. */
 
-ol { min-block-size: 8rem; }
+ol { min-block-size: 9rem; }
 
 ol:nth-child(2),
 ol:nth-child(3) {

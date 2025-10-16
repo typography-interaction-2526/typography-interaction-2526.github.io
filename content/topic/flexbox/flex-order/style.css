@@ -1,9 +1,9 @@
 ol {
-	block-size: 8rem;
+	block-size: 9rem;
 	display: flex;
 }
 
-li { order: 0; } /* Default. */
+li { order: 0; } /* Default, will use the DOM order. */
 
 li:nth-child(1) {
 	background-color: crimson;
