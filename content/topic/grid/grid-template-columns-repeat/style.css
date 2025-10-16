@@ -5,10 +5,10 @@ ol {
 	grid-template-columns: repeat(var(--columns), 1fr);
 }
 
-@media (min-width: 500px) {
+@media (width > 550px) {
 	ol { --columns: 6; }
 }
 
-@media (min-width: 600px) {
+@media (width > 700px) {
 	ol { --columns: 8; }
 }
