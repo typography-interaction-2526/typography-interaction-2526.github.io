@@ -55,29 +55,26 @@ So human activity itself has, since the earliest times, been distinguished by t
 ## Grid Terminology
 
 Grid introduces us to some new vocabulary:
-<!-- .bold .scale--h4 .add-after--3 -->
+<!-- .intro -->
 
 Line
 
 : The dividing lines that define the grid, vertical or horizontal. (Think *gutters*.)
-<!-- .secondary -->
 
 Track
 
 : The horizontal or vertical space between the lines. (Think *rows* and *columns*.)
-<!-- .secondary -->
 
 Cell
 
 : The intersection of a horizontal and vertical track. This is different from a *grid item*—the cell is the spot/placement, the item is the actual element—since as you’ll see, you can position *items* in an arbitrary *cell*.
-<!-- .secondary -->
 
 Area
 
-: <span class="secondary">You can combine one or more adjacent grid cells into a rectangular *area.* Often you give these a subjective name, for convenience/ergonomics.</span>
-<!-- .verso .balance style="margin-block-end: initial" -->
+: You can combine one or more adjacent grid cells into a rectangular *area.* Often you give these a subjective name, for convenience/ergonomics.
+<!-- .verso .balance -->
 
-<div class="recto sticky" style="align-self: start">
+<div class="recto start sticky">
 
 <figure @source="terminology.svg"></figure>
 
