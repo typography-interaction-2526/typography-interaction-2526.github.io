@@ -36,8 +36,11 @@ main {
 			--size:   var(--size--h3);
 			--weight: 700;
 
-			/* Back on the baseline. */
-			> h3 { margin-block-start: calc(1rcap - 1cap) }
+			> h3 {
+				margin-block-start: calc(1rcap - 1cap); /* Back on the baseline. */
+
+				&:has(code) { line-height: 2rlh } /* Prevent wrapping overlaps. */
+			}
 
 			+ * {
 				margin-block-start: 1rlh;
