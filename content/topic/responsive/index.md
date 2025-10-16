@@ -188,7 +188,7 @@ Note that we still use `width` here—not the [logical property](/topic/box-mode
 
 We’ve changed our mind on this, since we went through initially: while `em`/`rem` are [technically *correct*](https://keithjgrant.com/posts/2023/05/px-vs-em-in-media-queries/) for media queries, we’ve decided [the tooling](/topic/dev-tools/#device-mode) around this is unclear.
 
-We will now be using `px`, for ease of understanding.
+We will now allow `px`, for ease of understanding.
 
 </aside>
 
@@ -213,7 +213,7 @@ You can add as many *breakpoints* as you need to make your page/design work acro
 There are very, *very* few layouts that won’t need some amount of horizontal responsiveness/breakpoints!
 <!-- .intro -->
 
-In this example, we would refer to `32rem` as our *breakpoint*:
+In this example, we would refer to ~~`35rem`~~ `550px` as our *breakpoint*:
 <!-- .before--3 -->
 
 <figure
@@ -227,7 +227,7 @@ This width rule/test/criteria uses math [comparison operators](https://css-trick
 <!-- .balance -->
 
 <figure
-	@caption="Again, drag the divide to see rules apply. Exact matches (like the  `width = 35rem` here) are rarely useful!"
+	@caption="Again, drag the divide to see rules apply. Exact matches (like the  `width = 550px` here) are rarely useful!"
 	@source="media-width-min-max/preview/?active=style.css"
 	style="--lines: 17"
 	>
@@ -247,7 +247,7 @@ You’ll see lots of material out there referencing `min-width` or `max-width` m
 
 You can also use `height` in the same way—though again, with the usual vertical scrolling paradigm, <nobr>height-based</nobr> adjustments aren’t as necessary or anywhere nearly as common as `width`.
 
-This example is the same *breakpoint* of `35rem` as before, but now using `height`:
+This example is the same *breakpoint* of `550px` as before, but now using `height`:
 <!-- .balance -->
 
 </div>
@@ -285,7 +285,7 @@ And speaking of *conditional statements*—you can also merge multiple media que
 <!-- .balance -->
 
 <figure
-	@caption="The demo here is taller than `20rem`, for the second one."
+	@caption="The demo here is taller than `300px`, for the second one."
 	@source="media-and/preview/?active=style.css"
 	style="--lines: 13"
 	>

@@ -6,14 +6,14 @@ main {
 
 section { background-color: aquamarine; }
 
-@media (width > 35rem) {
+@media (width > 550px) {
 	section {
 		background-color: gold;
 		inline-size: calc((100% - 1rem) / 2);
 	}
 }
 
-@media (width > 45rem) {
+@media (width > 700px) {
 	section {
 		background-color: orange;
 		inline-size: calc((100% - 3rem) / 4);

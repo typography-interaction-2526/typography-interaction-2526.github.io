@@ -5,7 +5,7 @@
 	font-size: 100%;
 }
 
-@media (width > 35rem) {
+@media (width > 550px) {
 	:root {
 		--spacing: 2rem;
 
