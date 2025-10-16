@@ -384,7 +384,10 @@ main {
 		&.reverse {
 			background-color: var(--color);
 
-			* { --color: white }
+			* {
+				--color: white;
+				--code: color-mix(in srgb, currentcolor, transparent 85%);
+			}
 		}
 	}
 

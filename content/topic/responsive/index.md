@@ -182,6 +182,16 @@ Note that we still use `width` here—not the [logical property](/topic/box-mode
 
 </aside>
 
+<aside class="reverse" id="px-queries">
+
+<mark>Management will accept `px` in queries</mark>
+
+We’ve changed our mind on this, since we went through initially: while `em`/`rem` are [technically *correct*](https://keithjgrant.com/posts/2023/05/px-vs-em-in-media-queries/) for media queries, we’ve decided [the tooling](/topic/dev-tools/#device-mode) around this is unclear.
+
+We will now be using `px`, for ease of understanding.
+
+</aside>
+
 Since this `width` is usually our primary design constraint (`height` being handled through scrolling), we need *width-based* media queries to adjust our layouts across this wide range, lest our designs fall.
 
 This is done in steps, at different widths, that we call *breakpoints*&zwj;—the window/device/viewport sizes where the content *starts to break,* if it is not adjusted.
