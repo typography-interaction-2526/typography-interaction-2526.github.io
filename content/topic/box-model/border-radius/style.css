@@ -1,6 +1,6 @@
 section:nth-child(1) {
 	border-radius: 50%; /* Relative to size. */
-	border: 0.25rem dotted deepskyblue;
+	border: 0.5rem dotted deepskyblue;
 	text-align: center;
 }
 

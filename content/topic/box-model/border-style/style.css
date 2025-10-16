@@ -1,4 +1,4 @@
-section { border-width: 0.25rem; } /* All of them; easier to see! */
+section { border-width: 0.5rem; } /* All of them; easier to see! */
 
 section:nth-child(1) { border-style: none; }
 section:nth-child(2) { border-style: hidden; }
