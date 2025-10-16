@@ -536,6 +536,8 @@ main {
 
 		/* Optically match the `h3`. */
 		-webkit-text-stroke-width: 0.02em;
+
+		code { -webkit-text-stroke-width: 0.01em; }
 	}
 
 	:where(p.intro) {

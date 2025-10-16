@@ -30,7 +30,7 @@
 	Like the Froggy game, but for grid.
 <!-- .right .rows--6 -->
 
-We had some of this two-dimensionality with [<nobr>flex-wrap</nobr>](/topic/flexbox/#flex-wrap), but grid offers us *much* more structure and control.
+We had some of this two-dimensionality with [`flex-wrap`](/topic/flexbox/#flex-wrap), but grid offers us *much* more structure and control.
 <!-- .note -->
 
 Grid is *a lot* like flex (this will be a running theme)—a [*display*](https://developer.mozilla.org/en-US/docs/Web/CSS/display) property applied on a parent/container element. This `display: grid;` tells its (immediate) children/*grid items* how they should be laid out. Also like flex, there is `display: inline-grid;` which behaves the same internally—but with the parent behaving as an inline element.
@@ -87,17 +87,17 @@ Area
 <div class="sticky">
 
 Grid also introduces some specific new [length units](/topic/box-model/#and-their-units):
-<!-- .balance .bold .scale--h4 style="margin-block-end: initial" -->
+<!-- .intro -->
 
 </div>
 
 </div>
 
-<div class="aside add-before--2">
+<div class="balance before--2" style="grid-column: middle-start / all-end">
 
 `fr`
 
-: This [new unit](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#the_fr_unit) represents a *fraction* of the available space in the grid container—usually, *width*. This is very similar to using whole numbers in `flex-basis`. This is very handy; you’ll use it a lot with grid:
+: This [new unit](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#the_fr_unit) represents a *fraction* of the available space in the grid container—usually, `inline-size` (*width*). This is very similar to using whole numbers in `flex-basis`. It is very handy; you’ll use it a lot with grid:
 
 	```css
 	.two-thirds-one-third {
@@ -108,7 +108,7 @@ Grid also introduces some specific new [length units](/topic/box-model/#and-thei
 
 `min-content`
 
-: The [*intrinsic* minimum width](https://developer.mozilla.org/en-US/docs/Web/CSS/min-content) of an element. With text, this is the longest single word:
+: The [*intrinsic* minimum size](https://developer.mozilla.org/en-US/docs/Web/CSS/min-content) of an element. With text, this is the longest single word:
 
 	```css
 	.narrow-sidebar {
@@ -138,22 +138,22 @@ Grid also introduces some specific new [length units](/topic/box-model/#and-thei
 	}
 	```
 
-	You can use these last three values in grid properties <em>(</em>`min-`, `max-`, and `fit-content`<em>)</em>, as we’ll see below—but they are also usable anywhere [length units](/topic/box-model/#and-their-units) work—like `inline-size` or `block-size`. <!-- .add-before .secondary -->
+	You can use these last three values in grid properties <em>(</em>`min-`, `max-`, and `fit-content`<em>)</em>, as we’ll see below—but they are also usable anywhere [length units](/topic/box-model/#and-their-units) work—like `inline-size` or `block-size`. <!-- .before .note -->
 
 </div>
 
-<div class="left add-before--3 add-after--3">
+<div class="left before--4">
 
 <div class="sticky">
 
-…and also [functions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions) to use the units: { .four-before .two-after }
-<!-- .balance .bold .scale--h4 style="margin-block-end: initial" -->
+…and also [functions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions) to use the units:
+<!-- .intro -->
 
 </div>
 
 </div>
 
-<div class="aside add-before--2 add-after--3">
+<div class="balance before--3" style="grid-column: middle-start / all-end">
 
 `minmax()`
 
@@ -186,7 +186,9 @@ Grid also introduces some specific new [length units](/topic/box-model/#and-thei
 
 <aside>
 
-As a general rule: whenever you are writing the same exact code over and over, there is *probably* a shorter way. [Don’t repeat yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)&#x202F;! Stay DRY.
+<mark>Hand-repeating code is brittle and boring</mark>
+
+As a general rule: whenever you are writing the same exact code over and over, there is almost certainly a shorter way. Refactor to avoid it; [Don’t repeat yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)! Stay *DRY.*
 
 </aside>
 

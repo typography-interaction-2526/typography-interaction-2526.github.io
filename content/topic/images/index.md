@@ -267,7 +267,7 @@ With regards to their layout, you make images responsive in the same way you (sh
 
 But using images introduces some additional considerations, going across breakpoints. You might want to serve/show *different* images at different sizes—whether for dimensional (file-size, bandwidth, performance) or art-direction (scale, crop) reasons. The exact same image `src` file is *rarely* ideal at both `375px` and `2560px`.
 
-Our venerable `<img>` element added some control for this with the addition of the [`srcset`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset) and [`sizes`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes) attributes. But we think it is much easier (at least ergonomically) to skip right into using the modern [`picture` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture). { .four-before }
+Our venerable `<img>` element added some control for this with the addition of the [`srcset`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset) and [`sizes`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes) attributes. But we think it is much easier (at least ergonomically) to skip right into using the modern [`picture` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture).
 <!-- .add-before--3 -->
 
 - [<cite>`picture` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)
