@@ -4,15 +4,6 @@
 	const week = 8
 </script>
 
-<blockquote
-	@attribution="Josef M<span class='dieresis'>ü</span>ller-Brockmann"
-	@citation="https://monoskop.org/images/a/a4/Mueller-Brockmann_Josef_Grid_Systems_in_Graphic_Design_Raster_Systeme_fuer_die_Visuele_Gestaltung_English_German_no_OCR.pdf"
-	>
-
-Just as in nature systems of order govern the growth and structure of animate and inanimate matter, so human activity itself has, since the earliest times, been distinguished by the quest for order.
-
-</blockquote>
-
 ## From Flex to Grid
 
 [CSS grid layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids#line-based_placement) (from here on, just *grid*) is another, even more recent addition to CSS, continuing on from where [*flexbox*](/topic/flexbox/) left off. While flex is primarily a *one-dimensional* layout system—focused on horizontal *or* vertical arrangements—grid is *two-dimensional* system, integrating the two directions together.
@@ -39,16 +30,27 @@ Just as in nature systems of order govern the growth and structure of animate an
 	Like the Froggy game, but for grid.
 <!-- .right .rows--6 -->
 
-We had some of this two-dimensionality with [<nobr>flex-wrap</nobr>](/topic/flexbox/#flex-wrap), but grid offers us much more structure and control.
-<!-- .balance .secondary -->
+We had some of this two-dimensionality with [<nobr>flex-wrap</nobr>](/topic/flexbox/#flex-wrap), but grid offers us *much* more structure and control.
+<!-- .note -->
 
 Grid is *a lot* like flex (this will be a running theme)—a [*display*](https://developer.mozilla.org/en-US/docs/Web/CSS/display) property applied on a parent/container element. This `display: grid;` tells its (immediate) children/*grid items* how they should be laid out. Also like flex, there is `display: inline-grid;` which behaves the same internally—but with the parent behaving as an inline element.
-<!-- .add-before--3 -->
+<!-- .before--3 -->
 
 Grid truly supplants many of the previous box model layout approaches (like `float`, `margin`-centering, etc.) and, like flex, works much closer to how we *think* about layouts *as designers*. It can still get complicated, but makes most layouts (especially responsive ones) much, much easier to implement.
 
 There are many novel, powerful uses for *grid*—it is really the backbone of modern web layout. Let’s take a look.
-<!-- .add-before .balance .bold .scale--h4 -->
+<!-- .intro .body -->
+
+<blockquote
+	@attribution="Josef M<span class='dieresis'>ü</span>ller-Brockmann"
+	@citation="https://monoskop.org/images/a/a4/Mueller-Brockmann_Josef_Grid_Systems_in_Graphic_Design_Raster_Systeme_fuer_die_Visuele_Gestaltung_English_German_no_OCR.pdf"
+	>
+
+As in nature, systems of order govern the growth and structure of animate and inanimate matter.
+
+So human activity itself has, since the earliest times, been distinguished by the quest for order.
+
+</blockquote>
 
 ## Grid Terminology
 
