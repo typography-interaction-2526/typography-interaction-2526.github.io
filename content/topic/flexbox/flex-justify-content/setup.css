@@ -9,7 +9,7 @@ ol:not(:first-child) { margin-block-start: 1rem; }
 
 li {
 	background-color: tomato;
-	border-block-end: 0.25rem solid firebrick;
-	border-inline-end: 0.25rem solid firebrick;
+	border-block-end: 0.1rem solid firebrick;
+	border-inline-end: 0.1rem solid firebrick;
 	padding: 1rem;
 }
