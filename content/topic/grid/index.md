@@ -187,7 +187,7 @@ Grid also introduces some specific new [length units](/topic/box-model/#and-thei
 
 <aside>
 
-As a general rule: whenever you are writing the same exact code over and over, there is *probably* a shorter way. [Don’t repeat yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)&thinsp;! Stay DRY.
+As a general rule: whenever you are writing the same exact code over and over, there is *probably* a shorter way. [Don’t repeat yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)&#x202F;! Stay DRY.
 
 </aside>
 
@@ -196,7 +196,7 @@ As a general rule: whenever you are writing the same exact code over and over, t
 Again, *grid* is a lot like *flex*—primarily properties that are applied on a container/parent element.
 <!-- .balance -->
 
-### `grid-template-columns`&thinsp;, `grid-template-rows`
+### `grid-template-columns` / `grid-template-rows`
 
 Setting `display: grid;` won’t do much until you also declare some [columns](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns) or [rows](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows), with *grid template*. You can specify `grid-template-columns`, `grid-template-rows`, or both. These properties are followed by a *track list* of the size for each track:
 <!-- .balance -->
@@ -221,7 +221,7 @@ So for many uses, you will only need to specify your column structure—leaving 
 	>
 </figure>
 
-### `grid-auto-columns`&thinsp;, `grid-auto-rows`
+### `grid-auto-columns` / `grid-auto-rows`
 
 By default, these *implicit grid* tracks are sized `auto` (the largest content), but you can also specify their size—often [a *height*](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows) for the `grid-auto-rows`:
 <!-- .balance -->
@@ -234,7 +234,7 @@ By default, these *implicit grid* tracks are sized `auto` (the largest content),
 
 But `grid-auto-columns` only comes up if you force the columns to wrap with `grid-auto-flow: column;` as in the earlier example. Again—height is usually not our main constraint, with scrolling!
 
-### `gap`&thinsp;, `column-gap`&thinsp;, `row-gap`
+### `gap` / `column-gap` / `row-gap`
 
 *Grid* also shares the `gap`, `column-gap`, and `row-gap` [properties with *flex*](/topic/flexbox/#gap-row-gap-and-column-gap)—to add gutters between the *tracks*. The syntax and behavior is the same:
 
@@ -278,7 +278,7 @@ There are [also baseline align values](https://developer.mozilla.org/en-US/docs/
 	>
 </figure>
 
-### `justify-content`&thinsp;, `align-content`
+### `justify-content` / `align-content`
 
 If the total size of your grid is less than the container (because of your *explicit* column or row sizes), you can set the *overall* [justification](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) and [alignment](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content) within the container:
 <!-- .balance -->
@@ -312,7 +312,7 @@ Okay, so this is mostly like flex! To the point where you can use them interchan
 Flex is [sometimes referred](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout) to in this way as *content-out*, while grid is a *layout-in* system.
 <!-- .balance .bold .scale--h4 -->
 
-### `auto-fill`&thinsp;, `auto-fit`
+### `auto-fill` / `auto-fit`
 
 You can also use the `repeat` function without specifying an exact number of columns, instead using `auto-fill` or `auto-fit` to [automatically define](https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/) your columns—making a grid inherently responsive without any media queries! These are great for controlling an even-column layout without much overhead:
 <!-- .balance -->
@@ -371,7 +371,7 @@ If you’ve defined `grid-template-areas` (as [above](#grid-template-areas)), yo
 This is the [kind of common layout](https://en.wikipedia.org/wiki/Holy_grail_(web_design)) that was *unnecessarily* hard before grid! It’s so much easier now.
 <!-- .balance .bold .scale--h4 -->
 
-### `grid-column`&thinsp;, `grid-row`
+### `grid-column` / `grid-row`
 
 You can also control *item* placement in unnamed (and *implicit*) grid areas with the `grid-column` and `grid-row` properties.
 
@@ -409,7 +409,7 @@ And if you specify non-contiguous rows or columns, *grid* will create as many *i
 
 Keep in mind that with both `grid-area` and `grid-column` / `grid-row`, you are able to tell multiple *grid items* to land in the same *cell*—there isn’t any kind of fancy/automatic collision-prevention. If this <em>is</em> what you want, you can use `z-index` to specify which one is visually [in front](/topic/box-model/#depth)!
 
-### `justify-self`&thinsp;, `align-self`
+### `justify-self` / `align-self`
 
 Finally, just like flex—you can position individual *grid items* within their *tracks* using `justify-self` and `align-self`. The syntax is the same as [align in flex](/topic/flexbox/#align-self), again—but as with `justify-items` / `align-items` above, you don’t have to flip axes:
 <!-- .balance -->

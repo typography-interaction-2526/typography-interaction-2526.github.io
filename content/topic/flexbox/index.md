@@ -6,7 +6,7 @@
 
 ## A Long Time Coming
 
-[*Flexbox*](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox), short for *flexible boxes*—which folks will often just shorten all the way to *flex*&zwj;—is a later (mid-2010s, slow adoption) addition to CSS.
+[*Flexbox*](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox), short for *flexible boxes*—which folks will often just shorten all the way to *flex*—is a later (mid-2010s, slow adoption) addition to CSS.
 
 - [<cite>CSS Flexbox Layout Guide – CSS Tricks</cite>](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 	This page is a classic! It probably bought [Chris Coyier](https://chriscoyier.net) a house.
@@ -22,7 +22,7 @@
 
 And let us tell you—being a web designer was a *whole lot harder* before flex came on the front-end scene. (Hence the “Finally.”) Notice, for instance, that we haven’t talked about any *vertical* centering at all yet—you don’t want to know! And you don’t have to worry about it. Flex encapsulates a lot of practical, helpful design paradigms in its system.
 
-## Main&thinsp;/Cross Axes
+## Main/Cross Axes
 
 Flexbox is a *one-dimensional* layout system—meaning it is (usually) focused on arranging items either horizontally in rows, or vertically in columns.
 
@@ -55,12 +55,12 @@ These are called the *axes*. The one running in the direction of your flex items
 
 </div>
 
-## Start&thinsp;/End, Justify/Align
+## Start/End, Justify/Align
 
-Flex also lets us position elements along/within the axes, in both directions&zwj;—in relation to the `start` or the `end` of the direction.
+Flex also lets us position elements along/within the axes, in both directions—in relation to the `start` or the `end` of the direction.
 <!-- .balance -->
 
-For the *main* axis, you `justify`&thinsp;; for the *cross* axis, you `align`&thinsp;:
+For the *main* axis, you `justify`&#x202F;; for the *cross* axis, you `align`&#x202F;:
 <!-- .add-after--2 .add-before--3 .bold .scale--h4 .balance .all -->
 
 <div class="verso">
@@ -74,7 +74,7 @@ For the *main* axis, you `justify`&thinsp;; for the *cross* axis, you `align`&th
 }
 ```
 
-For rows (the default): `justify` moves items left&thinsp;/right, `align` moves top/bottom.
+For rows (the default): `justify` moves items left/right, `align` moves top/bottom.
 <!-- .add-before .balance .bold -->
 
 </div>
@@ -90,7 +90,7 @@ For rows (the default): `justify` moves items left&thinsp;/right, `align` moves 
 }
 ```
 
-For columns (rotated): `justify` moves items top/bottom, `align` moves left&thinsp;/right.
+For columns (rotated): `justify` moves items top/bottom, `align` moves left/right.
 <!-- .add-before .balance .bold -->
 
 </div>
@@ -112,13 +112,13 @@ There is also `display: inline-flex;` which behaves the same, but the parent beh
 
 <aside>
 
-Figma’s [*auto layout*](https://help.figma.com/hc/en-us/articles/360040451373-Explore-auto-layout-properties) system maps [almost directly](https://medium.com/timeless/figmas-flexbox-cdebb6968c29) to flexbox, in defining rows or columns and then distributing items—and is likewise applied on the parent&thinsp;/container.
+Figma’s [*auto layout*](https://help.figma.com/hc/en-us/articles/360040451373-Explore-auto-layout-properties) system maps [almost directly](https://medium.com/timeless/figmas-flexbox-cdebb6968c29) to flexbox, in defining rows or columns and then distributing items—and is likewise applied on the parent/container.
 
 </aside>
 
 ### `flex-direction`
 
-After specifying an element as *flex*, we can set its main axis with [the `flex-direction` property](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction). By default (you don’t have to write it), this behaves as `flex-direction: row;`—so you’ll generally only be adding it when you want something going vertical, with `flex-direction: column;`&thinsp;:
+After specifying an element as *flex*, we can set its main axis with [the `flex-direction` property](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction). By default (you don’t have to write it), this behaves as `flex-direction: row;`—so you’ll generally only be adding it when you want something going vertical, with `flex-direction: column;`&#x202F;:
 
 <figure
 	@caption="The first list is `display: block;` by default. Also note that we gave them all a `min-height`, to show start/end!"
@@ -171,7 +171,7 @@ There is also a `-reverse` suffix when wrapping, which will sequence items from 
 So most of what we’ve seen here is… somewhat possible using `float` and `position`—though not at all easily and only when you know the size/counts of your content.
 <!-- .balance -->
 
-But [the `justify-content` property](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) is where flexbox starts to allow novel layouts, by dividing up the extra&thinsp;/available free space between elements—akin to *distribute* options in Figma&thinsp;/Adobe applications. `justify-content` does this on our *main axis*:
+But [the `justify-content` property](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) is where flexbox starts to allow novel layouts, by dividing up the extra/available free space between elements—akin to *distribute* options in Figma/Adobe applications. `justify-content` does this on our *main axis*:
 <!-- .add-before--2 .balance -->
 
 <figure
@@ -181,10 +181,10 @@ But [the `justify-content` property](https://developer.mozilla.org/en-US/docs/We
 	>
 </figure>
 
-When our *main axis* is vertical, with `flex-direction: column;`&thinsp;:
+When our *main axis* is vertical, with `flex-direction: column;`&#x202F;:
 
 <figure
-	@caption="These *only* works with the `block-size` to justify within&zwj;—otherwise the container would cinch up to the content height, as usual."
+	@caption="These *only* works with the `block-size` to justify within—otherwise the container would cinch up to the content height, as usual."
 	@source="flex-justify-content-column/preview/?active=style.css"
 	style="--lines: 19"
 	>
@@ -224,7 +224,7 @@ When we have a flex element with `flex-wrap` set, we can also position the *line
 And `align-content` can also be used with a vertical/`flex-direction: column;` axis, not shown here. This doesn’t often come up, as you have to specify/know a height to force a column wrap.
 <!-- .balance -->
 
-### `gap`&thinsp;, `row-gap`&thinsp;, and `column-gap`
+### `gap` / `row-gap` / `column-gap`
 
 While you could use *margin* to separate your flex children, it would apply to the items on the outer edges, too. (Hence our many `:not(:first-child)` selectors for `margin` in the examples, so far.)
 
@@ -249,7 +249,7 @@ Flexbox is *usually* applied on the parent/container. But once you’ve set `dis
 
 ### `order`
 
-Kind of like the `-reverse` suffix—you can individually apply [the `order` property](https://developer.mozilla.org/en-US/docs/Web/CSS/order) to a *flex item* (child). Items with the same/tied order (like everything with the default of `order: 0;`&thinsp;) will be displayed in their HTML/source order:
+Kind of like the `-reverse` suffix—you can individually apply [the `order` property](https://developer.mozilla.org/en-US/docs/Web/CSS/order) to a *flex item* (child). Items with the same/tied order (like everything with the default of `order: 0;`&#x202F;) will be displayed in their HTML/source order:
 
 <figure
 	@source="flex-order/preview/?active=style.css"
@@ -271,7 +271,7 @@ It takes a *unitless* proportional value, akin to fractions or a factor/multipli
 	>
 </figure>
 
-And `flex-shrink` works the same way—defining what proportion an element should shrink when forced to by the flex layout. The most use you’ll see of this is `flex-shrink: 0;`&thinsp;, which tells all the *other* items to shrink instead!
+And `flex-shrink` works the same way—defining what proportion an element should shrink when forced to by the flex layout. The most use you’ll see of this is `flex-shrink: 0;`&#x202F;, which tells all the *other* items to shrink instead!
 <!-- .balance -->
 
 ### `flex-basis`
@@ -279,7 +279,7 @@ And `flex-shrink` works the same way—defining what proportion an element shoul
 [The `flex-basis` property](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis) is a little like `inline-size` and `block-size`—depending on your *main axis*. It defines what the child item’s content box size should be *before* any remaining space is distributed.
 <!-- .balance -->
 
-This defaults to `auto`, which falls back to any specified `inline-size` or `block-size`&zwj;—and if those aren’t present, will just use the size of the content. You specify this `flex-basis` with [length units](/topic/box-model/#and-their-units) like `%` and `px` :
+This defaults to `auto`, which falls back to any specified `inline-size` or `block-size`—and if those aren’t present, will just use the size of the content. You specify this `flex-basis` with [length units](/topic/box-model/#and-their-units) like `%` and `px` :
 <!-- .balance -->
 
 <figure

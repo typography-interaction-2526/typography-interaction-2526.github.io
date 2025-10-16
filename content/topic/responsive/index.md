@@ -194,7 +194,7 @@ We will now allow `px`, for ease of understanding.
 
 Since this `width` is usually our primary design constraint (`height` being handled through scrolling), we need *width-based* media queries to adjust our layouts across this wide range, lest our designs fall.
 
-This is done in steps, at different widths, that we call *breakpoints*&zwj;—the window/device/viewport sizes where the content *starts to break,* if it is not adjusted.
+This is done in steps, at different widths, that we call *breakpoints*—the window/device/viewport sizes where the content *starts to break,* if it is not adjusted.
 <!-- .intro -->
 
 <blockquote
@@ -340,7 +340,7 @@ If it doesn’t work on mobile, it doesn’t work.
 	>
 </figure>
 
-This goes “[with the grain](/week/7/#reading-discussion),” following the general CSS pattern/paradigm of the cascade—and is much, much, *much* easier than adjusting desktop front-end after the fact. (Trust us.) Always think *mobile-first*&thinsp;!
+This goes “[with the grain](/week/7/#reading-discussion),” following the general CSS pattern/paradigm of the cascade—and is much, much, *much* easier than adjusting desktop front-end after the fact. (Trust us.) Always think *mobile-first*&#x202F;!
 
 Mobile can be the majority of your traffic—[especially internationally](https://gs.statcounter.com/platform-market-share/desktop-mobile/worldwide)! We’d like you to think of *mobile-first* design as a form of accessibility, in this light. Not everyone has your MacBook Pro.
 <!-- .intro -->
@@ -355,7 +355,7 @@ Mobile can be the majority of your traffic—[especially internationally](https:
 
 <div class="before--3 balance verso">
 
-These bring another programming concept of [*variables*](https://en.wikipedia.org/wiki/Variable_(computer_science)) into CSS. These are shorthand entities for values we want to reuse throughout a document&zwj;—or, in a responsive context, want to modify at certain breakpoints.
+These bring another programming concept of [*variables*](https://en.wikipedia.org/wiki/Variable_(computer_science)) into CSS. These are shorthand entities for values we want to reuse throughout a document—or, in a responsive context, want to modify at certain breakpoints.
 
 Changing the value of a *variable* changes it everywhere it is referenced—no copy/pasting or find/replacing. You could think of a color *swatch*, if you are in an Adobe mindset; other tech folks call these *tokens*. Again, these are just for you—it is all the same to the computer. More ergonomics!
 
@@ -404,7 +404,7 @@ By far, the most common media queries will be *width*/*height*/*orientation*—f
 
 ### `screen` <small>vs.</small> `print`
 
-In all of our above examples, there is an implied *[media type](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_types)* of `screen`—since that is usually what we are concerned with, on the web. But there is also one for <nobr>`print`&thinsp;!</nobr> You can use these to segment styles to one medium or the other:
+In all of our above examples, there is an implied *[media type](https://developer.mozilla.org/en-US/docs/Web/CSS/@media#media_types)* of `screen`—since that is usually what we are concerned with, on the web. But there is also one for <nobr>`print`&#x202F;!</nobr> You can use these to segment styles to one medium or the other:
 
 [<cite>CSS paged media - MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_paged_media)
 	There are also some print-specific properties available.
@@ -453,7 +453,7 @@ You see this one more and more these days—[`prefers-color-scheme`](https://dev
 
 Sometimes this feels appropriate—especially in products/applications, like maybe a messaging service. But sometimes the color scheme of a site is its *brand* (like ours), and probably shouldn’t change based on this query. It’s up to you! Continuing our ongoing discussion of who has the control.
 
-### `prefers-contrast`, `prefers-reduced-motion` <!-- .all style="line-height: 2rlh" -->
+### `prefers-contrast` / `prefers-reduced-motion` <!-- .all style="line-height: 2rlh" -->
 
 These last two are primarily concerned with [accessiblity](https://developer.mozilla.org/en-US/docs/Web/Accessibility)—[`prefers-contrast`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast) for folks who run their device/browser in a high-contrast mode to help with their vision, or [`prefers-reduced-motion`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) for those who have animations turned off for vestibular reasons.
 
