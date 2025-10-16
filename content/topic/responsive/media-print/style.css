@@ -17,7 +17,7 @@ a { text-decoration: underline; }
 	}
 
 	section {
-		border: 0.25rem solid black;
+		border: 4pt solid black;
 		font-family: serif;
 		padding: 0.5in;
 	}
