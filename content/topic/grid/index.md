@@ -5,7 +5,7 @@
 </script>
 
 <blockquote
-	@attribution="Josef Müller-Brockmann"
+	@attribution="Josef M<span class='dieresis'>ü</span>ller-Brockmann"
 	@citation="https://monoskop.org/images/a/a4/Mueller-Brockmann_Josef_Grid_Systems_in_Graphic_Design_Raster_Systeme_fuer_die_Visuele_Gestaltung_English_German_no_OCR.pdf"
 	>
 
@@ -422,7 +422,7 @@ Finally, just like flex—you can position individual *grid items* within their 
 </figure>
 
 <blockquote
-	@attribution="Josef Müller-Brockmann"
+	@attribution="Josef M<span class='dieresis'>ü</span>ller-Brockmann"
 	@citation="https://www.niggli.ch/en/produkt/the-graphic-artist-and-his-design-problems/"
 	>
 
@@ -431,3 +431,18 @@ The grid system is an aid, not a guarantee.
 It permits a number of possible uses and each designer can look for a solution appropiate to [their] personal style. But one must learn how to use the grid; it is an art that requires practice.
 
 </blockquote>
+
+<style>
+	.dieresis {
+		position: relative;
+
+		&::before {
+			content:           '••';
+			font-size:         75%;
+			inset-block-start: -1em;
+			text-align:        center;
+			inset-inline:      0;
+			position:          absolute;
+		}
+	}
+</style>
