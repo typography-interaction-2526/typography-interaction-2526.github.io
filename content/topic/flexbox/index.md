@@ -123,7 +123,10 @@ Figma’s *[auto layout](https://help.figma.com/hc/en-us/articles/360040451373-E
 
 ### `flex-direction`
 
-After specifying an element as *flex*, we can set its main axis with the [`flex-direction` property](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction). By default (you don’t have to write it), this behaves as `flex-direction: row;`—so you’ll generally only be adding it when you want something going vertical, with `flex-direction: column;`&#x202F;:
+After specifying an element as *flex*, we can set its main axis with the `flex-direction` property. By default (you don’t have to write it), this behaves as `flex-direction: row;`—so you’ll generally only be adding it when you want something going vertical, with `flex-direction: column;`&#x202F;:
+
+[<cite>`flex-direction` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction)
+<!-- .right -->
 
 <figure
 	@caption="The first list is `display: block;` by default. Also note that we gave them all a `min-block-size`, to show `start`/`end`!"
@@ -145,8 +148,11 @@ Keep in mind that all flex reordering is only *visual*—it obviously can’t ch
 
 ### `flex-wrap`
 
-Since flexbox is *one-dimensional*, by default it will try to cram everything into one line—even when there is not enough room! But you can tell it to *wrap* onto additional lines by adding the [`flex-wrap: wrap;` property/value](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap) (set to `nowrap` by default):
+Since flexbox is *one-dimensional*, by default it will try to cram everything into one line—even when there is not enough room! But you can tell it to *wrap* onto additional lines by adding the `flex-wrap: wrap;` property/value (set to `nowrap` by default):
 <!-- .balance -->
+
+[<cite>`flex-wrap` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-wrap)
+<!-- .right -->
 
 <figure
 	@caption="Without the height restriction, the last one would just grow taller, by default."
@@ -175,11 +181,12 @@ There is also a `-reverse` suffix when wrapping, which will sequence items from 
 
 ### `justify-content`
 
-So most of what we’ve seen here is… somewhat possible using `float` and `position`—though not at all easily and only when you know the size/counts of your content.
-<!-- .balance -->
+So most of what we’ve seen here is… somewhat possible using `float` and `position`—though not at all easily and only when you know the size/counts of your content.
 
-But the [`justify-content` property](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content) is where flexbox starts to allow novel layouts, by dividing up the extra/available free space between elements—akin to *distribute* options in Figma/Adobe applications. `justify-content` does this on our *main axis*:
-<!-- .add-before--2 .balance -->
+[<cite>`justify-content` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)
+<!-- .right -->
+
+But the `justify-content` property is where flexbox starts to allow novel layouts, by dividing up the extra/available free space between elements—akin to *distribute* options in Figma/Adobe applications. `justify-content` does this on our *main axis*:
 
 <figure
 	@caption="The `start`/`end` values [have some nuance](https://csslayout.news/whats-the-difference-between-the-alignment-values-of-start-flex-start-and-self-start/) with different writing directions, but this doesn’t come up often."
@@ -199,8 +206,11 @@ When our *main axis* is vertical, with `flex-direction: column;`&#x202F;:
 
 ### `align-items`
 
-And then perpendicular to `justify` along the *main axis*, flexbox has [the `align-items` property](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items) to position elements along the *cross axis*. It has similar values:
+And then perpendicular to `justify` along the *main axis*, flexbox has the `align-items` property to position elements along the *cross axis*. It has similar values:
 <!-- .balance -->
+
+[<cite>`align-items` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
+<!-- .right -->
 
 <figure
 	@source="flex-align-items/preview/?active=style.css"
@@ -218,8 +228,11 @@ And for the vertical:
 
 ### `align-content`
 
-When we have a flex element with `flex-wrap` set, we can also position the *lines* within the parent/container with [the `align-content` property](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)—akin to `justify-content` with each line:
+When we have a flex element with `flex-wrap` set, we can also position the *lines* within the parent/container with the `align-content` property—akin to `justify-content` with each line:
 <!-- .balance -->
+
+[<cite>`align-content` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)
+<!-- .right -->
 
 <figure
 	@caption="These wouldn’t do anything without the `block-size` and the `flex-wrap`."
@@ -234,8 +247,14 @@ When we have a flex element with `flex-wrap` set, we can also position the *line
 ### `gap` / `row-gap` / `column-gap`
 
 While you could use *margin* to separate your flex children, it would apply to the items on the outer edges, too. (Hence our many `:not(:first-child)` selectors for `margin` in the examples, so far.)
+<!-- .balance -->
 
-Flex added support for [intuitive `gap` properties](https://developer.mozilla.org/en-US/docs/Web/CSS/gap), which fix this problem—by applying spacing only *between* children. This is particularly helpful with dynamic, wrapping content and responsive designs—where you won’t always know which element ends or starts a line (to take their margin off):
+- [<cite>`gap` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/gap)
+- [<cite>`row-gap` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/row-gap)
+- [<cite>`column-gap` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap)
+<!-- .right .rows--2 -->
+
+Flex added support for intuitive [`gap` properties](https://developer.mozilla.org/en-US/docs/Web/CSS/gap), which fix this problem—by applying spacing only *between* children. This is particularly helpful with dynamic, wrapping content and responsive designs—where you won’t always know which element ends or starts a line (to take their margin off):
 
 <figure
 	@caption="Note the last one, `gap` are really *minimums* and only apply when there isn’t otherwise space."
@@ -258,8 +277,11 @@ Flexbox is *usually* applied on the parent/container. But once you’ve set `dis
 
 ### `order`
 
-Kind of like the `-reverse` suffix—you can individually apply [the `order` property](https://developer.mozilla.org/en-US/docs/Web/CSS/order) to a *flex item* (child). Items with the same/tied order (like everything with the default of `order: 0;`&#x202F;) will be displayed in their HTML/source order:
+Kind of like the `-reverse` suffix—you can individually apply the `order` property to a *flex item* (child). Items with the same/tied order (like everything with the default of `order: 0;`&#x202F;) will be displayed in their HTML/source order:
 <!-- .balance -->
+
+[<cite>`order` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/order)
+<!-- .right -->
 
 <figure
 	@source="flex-order/preview/?active=style.css"
@@ -271,9 +293,13 @@ Other order-based selectors (like `:first-child`) won’t be fooled by this reor
 
 ### `flex-grow` / `flex-shrink`
 
-These properties tell the flex items to… [`grow`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow) or [`shrink`](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink), if necessary—defining the amount of available/remaining space in the container an element should take up—filling the whole container, like [bento boxes](https://en.wikipedia.org/wiki/Bento).
+These properties tell the flex items to… `grow` or `shrink`, if necessary—defining the amount of available/remaining space in the container an element should take up—filling the whole container, like [bento boxes](https://en.wikipedia.org/wiki/Bento).
 
-It takes a *unitless* proportional value, akin to fractions or a factor/multiplier. If you give one flexed child `flex-grow: 1;` it will take up all the extra space; another element with `flex-grow: 2;` would then take twice as much of that space as the first one (the available space with 3 total units):
+- [<cite>`flex-grow` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow)
+- [<cite>`flex-shrink` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink)
+<!-- .right .rows--2 -->
+
+It takes a *unitless* proportional value, akin to fractions or a factor/multiplier. If you give one flexed child `flex-grow: 1;` it will take up all the extra space; another element with `flex-grow: 2;` would then take twice as much of that space as the first one (the available space with 3 total units):
 
 <figure
 	@source="flex-grow-shrink/preview/?active=style.css"
@@ -286,8 +312,11 @@ And `flex-shrink` works the same way—defining what proportion an element shoul
 
 ### `flex-basis`
 
-The [`flex-basis` property](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis) is a little like `inline-size` and `block-size`—depending on your *main axis*. It defines what the child item’s content box size should be *before* any remaining space is distributed.
+The `flex-basis` property is a little like `inline-size` and `block-size`—depending on your *main axis*. It defines what the child item’s content box size should be *before* any remaining space is distributed.
 <!-- .balance -->
+
+[<cite>`flex-basis` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis)
+<!-- .right -->
 
 This defaults to `auto`, which falls back to any specified `inline-size` or `block-size`—and if those aren’t present, will just use the size of the content. You specify this `flex-basis` with [length units](/topic/box-model/#and-their-units) like `%` and `px` :
 <!-- .balance -->
@@ -301,7 +330,10 @@ This defaults to `auto`, which falls back to any specified `inline-size` or `blo
 
 ### `align-self`
 
-Finally, we have an individual override for an [`align-items`](#align-items) property set on the parent—[the `align-self` property](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)—which adjusts (with the same keywords/values) the alignment of the *specific* child item it is applied to:
+Finally, we have an individual override for an [`align-items`](#align-items) property set on the parent—the `align-self` property—which adjusts (with the same keywords/values) the alignment of the *specific* child item it is applied to:
+
+[<cite>`align-self` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self)
+<!-- .right -->
 
 <figure
 	@source="flex-align-self/preview/?active=style.css"
