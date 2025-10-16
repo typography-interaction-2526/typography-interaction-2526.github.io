@@ -550,6 +550,11 @@ main {
 			visibility:         hidden;
 		}
 
+		code, kbd, samp {
+			padding-block-end:   0.1em;
+			padding-block-start: 0.2em;
+		}
+
 		&:not(:where(:first-child)) { margin-block-start: 1rlh }
 
 		+ * {

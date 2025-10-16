@@ -37,7 +37,7 @@ Just as in nature systems of order govern the growth and structure of animate an
 
 - [<cite>Grid Garden</cite>](https://cssgridgarden.com)
 	Like the Froggy game, but for grid.
-	<!-- .link-list .right style="--rows: 6" -->
+<!-- .right .rows--6 -->
 
 We had some of this two-dimensionality with [<nobr>flex-wrap</nobr>](/topic/flexbox/#flex-wrap), but grid offers us much more structure and control.
 <!-- .balance .secondary -->

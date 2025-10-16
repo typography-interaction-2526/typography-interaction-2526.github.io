@@ -16,24 +16,27 @@
 
 - [<cite>Flexbox Froggy</cite>](https://flexboxfroggy.com/)
 	A little game.
-<!-- .link-list .right style="--rows: 4" -->
+<!-- .right .rows--4 -->
 
 *Flex* was created to facilitate and allow CSS layouts that [*the box model*](/topic/box-model/) (despite its `float` and `position`) either made difficult, brittle, or even impossible. It is a *[display](/topic/box-model/#display)* property. It’s extremely useful and widely-used.
 
 And let us tell you—being a web designer was a *whole lot harder* before flex came on the front-end scene. (Hence the “Finally.”) Notice, for instance, that we haven’t talked about any *vertical* centering at all yet—you don’t want to know! And you don’t have to worry about it. Flex encapsulates a lot of practical, helpful design paradigms in its system.
 
-## Main/Cross Axes
+## Main and Cross Axes
 
-Flexbox is a *one-dimensional* layout system—meaning it is (usually) focused on arranging items either horizontally in rows, or vertically in columns.
+Flexbox is a *one-dimensional* layout system—meaning it is (*…usually*) focused on arranging items either horizontally in rows, or vertically in columns.
 
-These are called the *axes*. The one running in the direction of your flex items is your *main axis*; perpendicular to this is your *cross axis*:
-<!-- .add-after--2 .add-before--3 .bold .scale--h4 .balance  -->
+These are called the *axes*.
+<!-- .intro .after--0 -->
+
+The one running in the direction of your flex items is your *main axis*; perpendicular to this is your *cross axis*:
+<!-- .intro  -->
 
 <div class="verso">
 
-<figure @source="axes-row.svg" style="margin-block-end: initial"></figure>
+<figure @source="axes-row.svg"></figure>
 
-```css <!-- .add-before style="inline-size: 100%" -->
+```css <!-- .before--0 style="inline-size: 100%" -->
 .some-container {
 	display: flex;
 	flex-direction: row; /* Default! */
@@ -44,9 +47,9 @@ These are called the *axes*. The one running in the direction of your flex items
 
 <div class="recto">
 
-<figure @source="axes-column.svg" style="margin-block-end: initial"></figure>
+<figure @source="axes-column.svg"></figure>
 
-```css <!-- .add-before style="inline-size: 100%" -->
+```css <!-- .before--0 style="inline-size: 100%" -->
 .some-container {
 	display: flex;
 	flex-direction: column; /* Rotated! */
@@ -61,37 +64,37 @@ Flex also lets us position elements along/within the axes, in both directions—
 <!-- .balance -->
 
 For the *main* axis, you `justify`&#x202F;; for the *cross* axis, you `align`&#x202F;:
-<!-- .add-after--2 .add-before--3 .bold .scale--h4 .balance .all -->
+<!-- .intro -->
 
 <div class="verso">
 
-<figure @source="justify-align-row.svg" style="margin-block-end: initial"></figure>
+<figure @source="justify-align-row.svg"></figure>
 
-```css <!-- .add-before style="inline-size: 100%" -->
+```css <!-- .before--0 style="inline-size: 100%" -->
 .some-container {
 	display: flex;
 	flex-direction: row; /* Default! */
 }
 ```
 
-For rows (the default): `justify` moves items left/right, `align` moves top/bottom.
-<!-- .add-before .balance .bold -->
+For rows (the default): `justify` moves items inline (left/right); `align` moves block (top/bottom).
+<!-- .note -->
 
 </div>
 
 <div class="recto">
 
-<figure @source="justify-align-column.svg" style="margin-block-end: initial"></figure>
+<figure @source="justify-align-column.svg"></figure>
 
-```css <!-- .add-before style="inline-size: 100%" -->
+```css <!-- .before--0 style="inline-size: 100%" -->
 .some-container {
 	display: flex;
 	flex-direction: column; /* Rotated! */
 }
 ```
 
-For columns (rotated): `justify` moves items top/bottom, `align` moves left/right.
-<!-- .add-before .balance .bold -->
+For columns (rotated): `justify` moves items block (top/bottom); `align` moves inline (left/right).
+<!-- .note -->
 
 </div>
 
@@ -108,22 +111,24 @@ Unlike most (…all?) of the CSS we’ve been introduced to, *flex* is applied o
 <!-- .balance -->
 
 There is also `display: inline-flex;` which behaves the same, but the parent behaves as an `inline` element while its children are flexing. You don’t see it used very much.
-<!-- .balance .secondary -->
+<!-- .note -->
 
 <aside>
 
-Figma’s [*auto layout*](https://help.figma.com/hc/en-us/articles/360040451373-Explore-auto-layout-properties) system maps [almost directly](https://medium.com/timeless/figmas-flexbox-cdebb6968c29) to flexbox, in defining rows or columns and then distributing items—and is likewise applied on the parent/container.
+<mark>Design tools offer approximations</mark>
+
+Figma’s *[auto layout](https://help.figma.com/hc/en-us/articles/360040451373-Explore-auto-layout-properties)* system maps [almost directly](https://medium.com/timeless/figmas-flexbox-cdebb6968c29) to flexbox, in defining rows or columns and then distributing items—and is likewise applied on the parent/container.
 
 </aside>
 
 ### `flex-direction`
 
-After specifying an element as *flex*, we can set its main axis with [the `flex-direction` property](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction). By default (you don’t have to write it), this behaves as `flex-direction: row;`—so you’ll generally only be adding it when you want something going vertical, with `flex-direction: column;`&#x202F;:
+After specifying an element as *flex*, we can set its main axis with the [`flex-direction` property](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-direction). By default (you don’t have to write it), this behaves as `flex-direction: row;`—so you’ll generally only be adding it when you want something going vertical, with `flex-direction: column;`&#x202F;:
 
 <figure
-	@caption="The first list is `display: block;` by default. Also note that we gave them all a `min-height`, to show start/end!"
+	@caption="The first list is `display: block;` by default. Also note that we gave them all a `min-block-size`, to show `start`/`end`!"
 	@source="flex-direction/preview/?active=style.css"
-	style="--lines: 13.333"
+	style="--lines: 14"
 	>
 </figure>
 
@@ -132,7 +137,7 @@ You can also combine these with a `-reverse` suffix, which visually reorders the
 
 <figure
 	@source="flex-direction-reverse/preview/?active=style.css"
-	style="--lines: 10"
+	style="--lines: 12"
 	>
 </figure>
 
@@ -152,7 +157,7 @@ Since flexbox is *one-dimensional*, by default it will try to cram everything in
 
 <aside>
 
-You *can* use this to make grids, and it is sometimes sufficient. But but [the more recent CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) properties will give you more control! We’ll talk about `grid` next week!
+You *can* use this to make grids, and it is sometimes sufficient. But but [the more recent CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) properties will give you more control! We’ll talk about `grid` shortly!
 
 </aside>
 
