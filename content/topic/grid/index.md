@@ -202,7 +202,7 @@ Again, grid is a lot like flex—primarily properties that are applied on a cont
 Setting `display: grid;` won’t do much until you also declare some columns or rows. You can specify `grid-template-columns`, `grid-template-rows`, or both. These properties are followed by a *track list* of the size for each track:
 <!-- .balance -->
 
-- [<cite>`grid-template-columns` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns)
+- [<cite>`grid-template-`<wbr>`columns` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns)
 - [<cite>`grid-template-rows` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows)
 <!-- .right -->
 

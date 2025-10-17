@@ -135,6 +135,7 @@ summary {
 		/* TODO Consolidate these! */
 		> cite {
 			position: relative;
+			word-break: break-word; /* TODO This is deprecated? */
 
 			> :is(code, kbd, samp) {
 				background-color: initial;
