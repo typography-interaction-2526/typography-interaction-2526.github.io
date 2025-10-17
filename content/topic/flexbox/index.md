@@ -29,9 +29,9 @@ These are called the *axes*.
 <!-- .intro .after--0 -->
 
 The one running in the direction of your flex items is your *main axis*; perpendicular to this is your *cross axis*:
-<!-- .intro  -->
+<!-- .intro -->
 
-<div class="verso">
+<div class="verso before--2">
 
 <figure @source="axes-row.svg"></figure>
 
@@ -44,7 +44,7 @@ The one running in the direction of your flex items is your *main axis*; perpend
 
 </div>
 
-<div class="recto">
+<div class="recto before--2">
 
 <figure @source="axes-column.svg"></figure>
 
@@ -65,7 +65,7 @@ Flex also lets us position elements along/within the axes, in both directions—
 For the *main* axis, you `justify`&#x202F;; for the *cross* axis, you `align`&#x202F;:
 <!-- .intro -->
 
-<div class="verso">
+<div class="verso before--2">
 
 <figure @source="justify-align-row.svg"></figure>
 
@@ -81,7 +81,7 @@ For rows (the default): `justify` moves items inline (left/right); `align` moves
 
 </div>
 
-<div class="recto">
+<div class="recto before--2">
 
 <figure @source="justify-align-column.svg"></figure>
 
