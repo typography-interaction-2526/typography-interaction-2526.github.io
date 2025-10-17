@@ -203,6 +203,7 @@ Setting `display: grid;` won’t do much until you also declare some columns or 
 
 - [<cite>`grid-template-`<wbr>`columns` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns)
 - [<cite>`grid-template-rows` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows)
+	Define your *tracks*.
 <!-- .right -->
 
 <figure
@@ -232,6 +233,7 @@ By default, these *implicit grid* tracks are sized `auto` (the largest content),
 
 - [<cite>`grid-auto-columns` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-columns)
 - [<cite>`grid-auto-rows` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows)
+	Lets the content create the *tracks*.
 <!-- .right -->
 
 <figure
@@ -250,7 +252,7 @@ Grid also shares the `gap`, `column-gap`, and `row-gap` [properties with flex](/
 - [<cite>`gap` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/gap)
 - [<cite>`row-gap` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/row-gap)
 - [<cite>`column-gap` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap)
-	These are the exact same!
+	The exact same as with [flex](/topic/flexbox/#gap-row-gap-and-column-gap)!
 <!-- .right -->
 
 <figure
@@ -282,7 +284,7 @@ And `align-items` directly corresponds to the [flex values](/topic/flexbox/#alig
 <!-- .balance -->
 
 [<cite>`align-items` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items)
-Same as flex, again!
+Same as [flex](/topic/flexbox/#align-items), again!
 <!-- .right -->
 
 <figure
@@ -308,12 +310,13 @@ If the total size of your grid is less than the container (because of your *expl
 
 - [<cite>`justify-content` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content)
 - [<cite>`align-content` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/align-content)
+	When there is extra space.
 <!-- .right -->
 
 <figure
 	@caption="Again, [this is just](/topic/flexbox/#justify-content) [like flex](/topic/flexbox/#align-items)! Same syntax, same behavior—you get the idea. Grid is like *Flex+*."
 	@source="grid-justify-align-content/preview/?active=style.css"
-	style="--lines: 10"
+	style="--lines: 12"
 	>
 </figure>
 
@@ -427,6 +430,7 @@ You can also control *item* placement in unnamed (and *implicit*) grid areas wit
 
 - [<cite>`grid-column` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column)
 - [<cite>`grid-row` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row)
+	Where should the item go?
 <!-- .right .rows--2 -->
 
 These take two values, divided with a `/` (because CSS is inconsistent), which specify the *start line* and *end line*. There is also a `span` value for bridging across tracks:
