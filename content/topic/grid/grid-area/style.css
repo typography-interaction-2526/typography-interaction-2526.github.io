@@ -5,12 +5,12 @@ body {
 	grid-template-areas:
 		'header header header'
 		'main   main   aside '
-		'footer footer aside ';
+		'footer footer aside '; /* Set up our grid. */
 }
 
 header {
 	background-color: crimson;
-	grid-area: header;
+	grid-area: header; /* Assign the item/children! */
 }
 
 main {
