@@ -427,14 +427,18 @@ Increasingly, this is how many “print” documents are created—starting as w
 
 ### `hover`
 
-Another common feature is [`hover`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/hover), used to detect whether a browser has an input device that supports *hovering*—which really just means a mouse, usually on laptop/desktop computers.
+Another common feature is `hover`, used to detect whether a browser has an input device that supports *hovering*—which really just means a mouse, usually on laptop/desktop computers.
+
+[<cite>`hover` - MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/hover)
+	Mobile devices don’t have this!
+<!-- .right -->
 
 Mobile *touch-based* systems don’t have this behavior (and often react oddly to `:hover` CSS, “eating taps”), so you should adjust your interfaces to work in the absence of this state:
 
 <figure
 	@caption="If you view this on your phone, the `aside` should be visible without interaction. On your computer, you’ll have to mouse over the `div`. Note how this is written with a [*mobile-first*](#mobile-first-design) style, only adding the hover state later/lower for folks who have it!"
 	@source="media-hover/preview/?active=style.css"
-	style="--lines: 13"
+	style="--lines: 14"
 	>
 </figure>
 
@@ -442,7 +446,11 @@ Hover states are a good feature for *progressive-enhancement*, as we did here—
 
 ### `prefers-color-scheme`
 
-You see this one more and more these days—[`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) for switching up a site’s styles based on whether the user is in *light* or *dark mode*, popularized by the ol’ iPhone again:
+You see this one more and more these days—`prefers-color-scheme` for switching up a site’s styles based on whether the user is in *light* or *dark mode*, popularized by the ol’ iPhone again:
+
+[<cite>`prefers-color-`<wbr>`scheme` - MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
+	Michael prefers `dark`; Rijk prefers `light`.
+<!-- .right -->
 
 <figure
 	@caption="You’ll see this differently depending on whether your system is in light or dark mode."
@@ -455,15 +463,21 @@ Sometimes this feels appropriate—especially in products/applications, like may
 
 ### `prefers-contrast` / `prefers-reduced-motion` <!-- .all -->
 
-These last two are primarily concerned with [accessiblity](https://developer.mozilla.org/en-US/docs/Web/Accessibility)—[`prefers-contrast`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast) for folks who run their device/browser in a high-contrast mode to help with their vision, or [`prefers-reduced-motion`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion) for those who have animations turned off for vestibular reasons.
+These last two are primarily concerned with [accessiblity](https://developer.mozilla.org/en-US/docs/Web/Accessibility)—`prefers-contrast` for folks who run their device/browser in a high-contrast mode to help with their vision, or `prefers-reduced-motion` for those who have animations turned off for vestibular reasons.
+
+- [<cite>`prefers-contrast` - MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast)
+- [<cite>`prefers-reduced-`<wbr>`motion` - MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
+	You can think of both subtlety and motion as progressive enhancements.
+<!-- .right .rows--2 -->
 
 Or these are just their preference! None of your business.
 <!-- .note -->
 
 ```css <!-- .verso .center -->
 :root {
-	--background: lightgray;
-	--foreground: slategray;
+	/* Default to high contrast… */
+	--background: white;
+	--foreground: black;
 }
 
 p {
@@ -471,10 +485,12 @@ p {
 	color: var(--foreground);
 }
 
-@media (prefers-contrast: more) {
+/* When “Increase Contrast” is *not* enabled. */
+@media (prefers-contrast: no-preference) {
 	:root {
-		--background: white;
-		--foreground: black;
+		/* …use designer/subtle/nuanced colors. */
+		--background: lightgray;
+		--foreground: slategray;
 	}
 }
 ```
@@ -488,12 +504,11 @@ p {
 </figure>
 
 ```css <!-- .verso .center -->
-button {
-	animation: some-slick-animation;
-}
-
-@media (prefers-reduced-motion: reduce) {
-	button { animation: none; }
+/* When “Reduce Motion” is *not* enabled. */
+@media (prefers-reduced-motion: no-preference) {
+	button {
+		animation: some-slick-animation;
+	}
 }
 ```
 

@@ -2,6 +2,7 @@ section { background-color: aquamarine; }
 
 aside { background: gold; }
 
+/* When their device supports `hover`. */
 @media (hover: hover) {
 	aside { visibility: hidden; }
 
