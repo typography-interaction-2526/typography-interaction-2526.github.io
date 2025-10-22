@@ -220,16 +220,17 @@ Do it when feasible—and give more attention to your large headings, then your 
 
 ## Filters!
 
-CSS can apply visual effects on elements—adjusting their graphical display *after* they are laid out and rendered in the page—with the [`filter` property](https://developer.mozilla.org/en-US/docs/Web/CSS/filter):
+CSS can apply visual effects on elements—adjusting their graphical display *after* they are laid out and rendered in the page—with the `filter` property:
+<!-- .balance -->
 
 - [<cite>Filter – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
 	Back to MDN.
-	<!-- .link-list .right style="--rows: 2" -->
+<!-- .right  -->
 
 <figure
-	@caption="Note that multiple filters are applied in *sequence—*changing the order changes the result."
+	@caption="Note that multiple filters are applied in *sequence*—changing the order changes the end/rendered result."
 	@source="filter/preview/?active=style.css"
-	style="--lines: 23"
+	style="--lines: 24"
 	>
 </figure>
 
