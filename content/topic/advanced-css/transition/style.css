@@ -1,6 +1,6 @@
 section:hover {
 	background-color: aquamarine;
-	transform: scale(105%);
+	transform: scale(110%);
 }
 
 section:nth-child(2) {

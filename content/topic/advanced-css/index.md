@@ -323,14 +323,15 @@ CSS [transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitio
 
 - [<cite>Using CSS Transitions – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
 	Every state change is better with some easing.
-	<!-- .link-list .right style="--rows: 2" -->
+<!-- .right .rows--2 -->
 
 Instead of having a property take effect *immediately* when a pseudo-class is applied (or later, and more commonly, with JS—a proper class), we can tell a CSS property to *transition* from one value to another over a given amount of time (`duration`), and with a specific acceleration (`timing-function`), or a delay. Motion can quickly get very complex!
+<!-- .balance -->
 
 You’ll often see a `transition` in shorthand:
-<!-- .add-before--3 -->
+<!-- .before--3 -->
 
-<div class="verso add-before--3">
+<div class="verso before">
 
 ```css
 .some-cool-transition {
@@ -340,7 +341,7 @@ You’ll often see a `transition` in shorthand:
 
 </div>
 
-<div class="recto add-before--3 add-after--2">
+<div class="recto before">
 
 ```css
 .some-cool-transition {
@@ -354,17 +355,15 @@ You’ll often see a `transition` in shorthand:
 </div>
 
 You can also control how different properties of an element transition independently, with a *comma-separated* list:
-<!-- .balance .add-before--3 .add-after -->
+<!-- .balance .before--3 -->
 
-```css
+```css <!-- .verso .before -->
 .some-cool-transition {
 	transition: background-color 2s linear, transform 1s ease-in-out;
 }
 ```
 
-<div class="add-before">
-
-```css
+```css <!-- .recto .before -->
 .some-cool-transition {
 	transition-duration: 2s, 1s;
 	transition-property: background-color, transform;
@@ -372,18 +371,16 @@ You can also control how different properties of an element transition independe
 }
 ```
 
-</div>
-
 Sometimes the shorthand here is easier than discrete properties, where you have to maintain the same order across all of them. It’s all the same to the computer!
-<!-- .secondary .balance -->
+<!-- .note -->
 
-Often, CSS transitions will be used *with* JavaScript when adding/removing classes, to make a state change less abrupt. For now, we’ll use [*pseudo-classes*](/topic/css/#pseudo-classes) to demonstrate:
-<!-- .add-before--3 .balance -->
+Often, CSS transitions will be used *with* JavaScript when adding/removing classes, to make a state change less abrupt. For now, we’ll use [*pseudo-classes*](/topic/css/#pseudo-classes-selector-state-selector-instance) to demonstrate:
+<!-- .before--3 .balance -->
 
 <figure
 	@caption="You can get even more control over the easing with a [custom curve function](https://easings.net)."
 	@source="transition/preview/?active=style.css"
-	style="--lines: 13"
+	style="--lines: 15"
 	>
 </figure>
 
@@ -391,19 +388,19 @@ Nearly all CSS properties can be transitioned—but keep in mind that changes th
 
 ## And Animations!
 
-Sometimes, transitioning a property from one value to another isn’t enough—you may need more complicated (or repeating) motion behavior. CSS [animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) allow precise state sequencing with `@keyframes` (akin to… *keyframes* or a timeline in other software contexts).
+Sometimes, transitioning a property from one value to another isn’t enough—you may need more complicated (or repeating) motion behavior. CSS `animation` allows precise state sequencing with `@keyframes` (akin to… *keyframes* or a timeline in other software contexts).
 <!-- .balance -->
 
 - [<cite>Using CSS Animations – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 	Some of you already got into these!
-	<!-- .link-list .right style="--rows: 2" -->
+<!-- .right .rows--2 -->
 
 To create a keyframe animation, we define an element’s initial state in CSS—then an `animation` property, which includes timing and behavior, as well as an animation name (something that you make up). Again, you’ll often see these in shorthand:
-<!-- .add-before--3 .add-after .balance -->
+<!-- .before--3 .balance -->
 
 <div class="verso">
 
-```css
+```css <!-- .before .verso -->
 section {
 	animation: blinking 3s infinite ease-in-out;
 }
@@ -411,9 +408,7 @@ section {
 
 </div>
 
-<div class="recto">
-
-```css
+```css <!-- .before .recto -->
 section {
 	animation-duration: 3s;
 	animation-iteration-count: infinite;
@@ -422,15 +417,13 @@ section {
 }
 ```
 
-</div>
-
-Importantly, we then define the actual keyframes of an animation in a separate *at-rule*. Each *keyframe* is specified with a percentage of the animation’s duration, and can specify multiple properties—a bit like *selectors* for the time:
-<!-- .balance .add-before--3 -->
+Importantly, we then define the actual keyframes of an animation in a separate [*at-rule*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_syntax/At-rule). Each *keyframe* is specified with a percentage of the animation’s duration, and can specify multiple properties—a bit like *selectors* for the time:
+<!-- .balance .before--3 -->
 
 <figure
 	@caption="Don’t go overboard! A little animation goes a long way."
 	@source="animation/preview/?active=style.css"
-	style="--lines: 20"
+	style="--lines: 22"
 	>
 </figure>
 
