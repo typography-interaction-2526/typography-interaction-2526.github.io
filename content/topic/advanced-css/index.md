@@ -142,7 +142,6 @@ Somewhat related/similar to `&shy;`, the `<wbr>` is a <nobr>(void/empty)</nobr> 
 [<cite>`wbr` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr)
 	These are often needed with slashes/URLs.
 <!-- .right -->
-<!-- TODO URLs throughout! -->
 
 <figure
 	@source="wbr/preview/?active=index.html"
@@ -173,11 +172,15 @@ You can also use a manual `&nbsp;` entity between words:
 
 ### `text-wrap: balance;`
 
-After many, many years of patient, typographic waiting (and [some JS](https://github.com/adobe/balance-text) [shenanigans](https://www.ctrl.blog/entry/text-wrap-balance.html)) we now have [growing browser support](https://developer.chrome.com/docs/css-ui/css-text-wrap-balance) for “balancing” uneven line lengths with [`text-wrap: balance;`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap)&thinsp;:
+After many, many years of patient, typographic waiting (and [some JS](https://github.com/adobe/balance-text) [shenanigans](https://www.ctrl.blog/entry/text-wrap-balance.html)) we now have widespread (and mostly even) [browser support](https://caniuse.com/css-text-wrap-balance) for “balancing” uneven line lengths with `text-wrap: balance;`&#x202F;:
 <!-- .balance -->
 
+[<cite>`text-wrap` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap)
+	Don’t overuse/abuse this in running text, though!
+<!-- .right -->
+
 <figure
-	@caption="This is particularly noticeable (and helpful) for centered text! There is also [`pretty`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap#pretty), but Safari [doesn’t support it](https://caniuse.com/mdn-css_properties_text-wrap_pretty) yet."
+	@caption="This is particularly noticeable (and helpful) for centered text! There is also [`pretty`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap#pretty), but Safari *just* started [to support it](https://caniuse.com/mdn-css_properties_text-wrap_pretty) and Firefox still doesn’t."
 	@source="balance/preview/?active=style.css"
 	style="--lines: 9"
 	>
