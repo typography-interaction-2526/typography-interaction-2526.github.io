@@ -136,28 +136,40 @@ The `hyphens` property allows long, multi-syllable words to be [hyphenated](http
 
 ### `<wbr>`
 
-Somewhat similar to `&shy;`, the [`<wbr>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr) is a (void/empty) HTML element that denotes a *word break* opportunity—a bit like an optional `<br>`! You can use these to control where single long word will wrap, *without* a hyphen:
+Somewhat related/similar to `&shy;`, the `<wbr>` is a <nobr>(void/empty)</nobr> HTML element that denotes a *word break* opportunity—a bit like an optional `<br>`&#x202F;! You can use these to manually control where single long word will wrap, *without* a hyphen:
+<!-- .balance -->
+
+[<cite>`wbr` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/wbr)
+	These are often needed with slashes/URLs.
+<!-- .right -->
+<!-- TODO URLs throughout! -->
 
 <figure
 	@source="wbr/preview/?active=index.html"
-	style="--lines: 18"
+	style="--lines: 20"
 	>
 </figure>
 
-### `<nobr>` and `&nbsp;`
+### `<nobr>` / `&nbsp;`
 
-More often, you’ll want to keep certain words *together*—to avoid a [widow or orphan](/topic/typography/#widows-and-orphans), or to keep important/related text together—like in dates, *November 8*, or with  names like *van Zanten*.
+But much more often, you’ll want to keep certain words *together*—to avoid a [widow or orphan](/topic/typography/#widows-and-orphans), or to keep important/related text together—like in dates, *October 24*, or with  names like *van Zanten*.
 
-You can wrap multiple words (or whole phrases) in a [`<nobr>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nobr) tag—keeping in mind that like `<em>` or `<strong>`, the default behavior is cleared by most [resets](/topic/css/#resets) (ours included)—so you have to restore the property in CSS.
+[<cite>`nobr` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nobr)
+	This is *technically* deprecated. But [one of your instructors](https://michaelfehrenbach.com) is a “stan.”
+<!-- .right .rows--2 -->
+
+You can wrap multiple words (or whole phrases) in a `<nobr>` tag—keeping in mind that like `<em>` or `<strong>`, the default behavior is cleared by most [resets](/topic/css/#resets) (ours included)—so you have to restore the property in CSS.
 
 You can also use a manual `&nbsp;` entity between words:
 
 <figure
-	@caption="On a Mac, you can insert an *encoded* `&&zwj;nbsp;` with <kbd>⌥</kbd> <kbd>Space</kbd>. (It’s seemingly [much harder](https://superuser.com/a/1414666) on Windows.) This works in many programs, not just your IDE! It’s harder to see, but easier to read."
+	@caption="On a Mac, you can insert an *encoded* `&&zwj;nbsp;` with <nobr><kbd>⌥</kbd> <kbd>Space</kbd></nobr>&#x202F;. (It’s apparently [much harder](https://superuser.com/a/1414666) on Windows.) This works in many programs, not just your IDE! It’s harder to see, but easier to read."
 	@source="nobr-nbsp/preview/?active=index.html"
-	style="--lines: 21"
+	style="--lines: 23"
 	>
 </figure>
+
+<!-- DOWN TO HERE -->
 
 ### `text-wrap: balance;`
 
