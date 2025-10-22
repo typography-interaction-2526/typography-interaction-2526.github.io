@@ -52,7 +52,7 @@ Importantly, this creates a new *stacking context*—which means things with `po
 	>
 </figure>
 
-### `text-overflow` / `-webkit-line-clamp`
+### `text-overflow` / `-webkit-line-clamp`
 
 You can also *excerpt* text (perhaps on a landing page) with the `text-overflow` (for a single line) or `-webkit-line-clamp` (for multiple lines) properties—which will add [an ellipsis](https://en.wikipedia.org/wiki/Ellipsis) <samp>…</samp> where the text overflows. Only do this when the full text is available on a subsequent page:
 <!-- .balance -->
@@ -82,7 +82,7 @@ You have probably noticed that HTML renders a lot of extra space around text ele
 
 It is based on the `font-family`, the `font-size`, and the `line-height`, which basically means it is different all the time—and crucially, often different from Adobe/Figma to HTML. This makes it difficult to position type precisely—especially at large, expressive sizes like your headings! It’s always annoying, and you’ll often be adding/subtracting your spacing (`margin` or `padding`) to account for it, if you want to line everything up *just right*, optically.
 
-Let’s avoid it. We can use [pseudo-elements](/topic/css/#pseudo-elements), `::after` / `::before`—which you may remember are entirely created by CSS, not in your HTML—to negate this vertical space with a negative margin. By doing this on the pseudo-elements, we can still position the parent element normally, otherwise:
+Let’s avoid it. We can use [pseudo-elements](/topic/css/#pseudo-elements), `::after`&#x202F;/&thinsp;`::before`—which you may remember are entirely created by CSS, not in your HTML—to negate this vertical space with a negative margin. By doing this on the pseudo-elements, we can still position the parent element normally, otherwise:
 <!-- .balance .before--3 -->
 
 <figure
@@ -114,11 +114,11 @@ After a decade of workarounds and discussion, both shipping Chrome and Safari [n
 
 ## Text Ragging (Kinda)
 
-We’ve gone on-and-on about how you can’t treat the web like print—always [perfectly ragging](/topic/typography/#ragging) your text for nice, smooth blocks. In modern (responsive) web design we don’t always know what our text will be, nor where it will wrap!
+We’ve gone on-and-on about how you can’t treat the web like print—always [perfectly ragging](/topic/typography/#ragging) your text for nice, smooth blocks. In modern (responsive) web design we don’t always know what our text will be, nor where it will wrap!
 
-But we can do a handful of things to make for *better* ragging/wraps, given the unknowns—judiciously using `hyphens`&thinsp;/&thinsp;`&shy;`, `<wbr>`, `<nobr>` and `&nbsp;`, and `balance` to *somewhat* control your line breaks.
+But we can do a handful of things to make for *better* ragging/wraps, given the unknowns—judiciously using `hyphens`&#x202F;/&thinsp;`&shy;`, `<wbr>`, `<nobr>` and `&nbsp;`, and `balance` to *somewhat* control your line breaks.
 
-### `hyphens` / `&shy;`
+### `hyphens` / `&shy;`
 
 The [hyphens](https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens) property allows long, multi-syllable words to be [hyphenated](https://en.wikipedia.org/wiki/Hyphen#Justification_and_line-wrapping) when they wrap across multiple lines. This can be done automatically by the browser, or by manually inserting `&shy;` (for [*soft hyphen*](https://en.wikipedia.org/wiki/Soft_hyphen)) as an [HTML entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity):
 <!-- .balance -->
@@ -228,16 +228,16 @@ Beyond our standard sizing and layout afforded by CSS, you can also *visually* m
 	These are fun.
 	<!-- .link-list .right style="--rows: 2" -->
 
-`scale()` / `scaleX()` / `scaleY()` / `scaleZ()` / `scale3d()` <!-- style="line-height: 1.5" -->
+`scale()`&#x202F;/&thinsp;`scaleX()`&#x202F;/&thinsp;`scaleY()`&#x202F;/&thinsp;`scaleZ()`&#x202F;/&thinsp;`scale3d()` <!-- style="line-height: 1.5" -->
 : Change the displayed size of the element—as if it is an image.
 
-`skew()` / `skewX()` / `skewY()`
+`skew()`&#x202F;/&thinsp;`skewX()`&#x202F;/&thinsp;`skewY()`
 : Tilt an element to the left or right, like turning a rectangle into a parallelogram.
 
-`translate()` / `translateX()` / `translateY()` / `translate3d()` <!-- style="line-height: 1.5" -->
+`translate()`&#x202F;/&thinsp;`translateX()`&#x202F;/&thinsp;`translateY()`&#x202F;/&thinsp;`translate3d()` <!-- style="line-height: 1.5" -->
 : Move an element left/right and up/down, and also in three-dimensional space.
 
-`rotate()` / `rotate3d()`
+`rotate()`&#x202F;/&thinsp;`rotate3d()`
 : Rotate the element.
 
 `perspective()`
