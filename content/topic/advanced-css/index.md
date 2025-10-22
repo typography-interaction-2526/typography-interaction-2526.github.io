@@ -82,7 +82,7 @@ You have probably noticed that HTML renders a lot of extra space around text ele
 
 It is based on the `font-family`, the `font-size`, and the `line-height`, which basically means it is different all the time—and crucially, often different from Adobe/Figma to HTML. This makes it difficult to position type precisely—especially at large, expressive sizes like your headings! It’s always annoying, and you’ll often be adding/subtracting your spacing (`margin` or `padding`) to account for it, if you want to line everything up *just right*, optically.
 
-Let’s avoid it. We can use [pseudo-elements](/topic/css/#pseudo-elements), `::after`&#x202F;/&thinsp;`::before`—which you may remember are entirely created by CSS, not in your HTML—to negate this vertical space with a negative margin. By doing this on the pseudo-elements, we can still position the parent element normally, otherwise:
+Let’s avoid it. We can use [pseudo-elements](/topic/css/#pseudo-elements-selector-pseudo), `::after`&#x202F;/&thinsp;`::before`—which you may remember are entirely created by CSS, not in your HTML—to negate this vertical space with a negative margin. By doing this on the pseudo-elements, we can still position the parent element normally, otherwise:
 <!-- .balance .before--3 -->
 
 <figure
@@ -188,28 +188,33 @@ After many, many years of patient, typographic waiting (and [some JS](https://gi
 
 ## Hanging Punctuation (Sorta)
 
-Ideally we could set punctuation *outside* of our text blocks, for visual alignment based solely on the letters—a traditional design technique called [*hanging punctuation*](https://en.wikipedia.org/wiki/Hanging_punctuation). (There is actually a [CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/hanging-punctuation) for this, but only Safari supports it!) But we can still approximate the behavior, at least for quotes:
+Ideally we could set punctuation *outside* of our text blocks, for visual alignment based solely on the letters—a traditional design technique called [*hanging punctuation*](https://en.wikipedia.org/wiki/Hanging_punctuation). (There *is* actually a [CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/hanging-punctuation) for this, but [only Safari](https://caniuse.com/?search=hanging-punctuation) supports it! …ish.) But we can still approximate the behavior, at least for quotes:
 <!-- .balance -->
 
 - [<cite>`::before` and `::after` – CSS Tricks</cite>](https://css-tricks.com/almanac/selectors/a/after-and-before/)
-	Another great CSS Tricks article.
-	<!-- .link-list .right style="--rows: 2" -->
+	Another great *CSS Tricks* article.
+	<!-- .right -->
 
 <figure
-	@caption="Note that the quotes are *not* in the HTML in the last example!"
+	@caption="Note that the quotes are *not* in the HTML here in the last example! [Pseudo-elements](/topic/css/#pseudo-elements-selector-pseudo) again, `::before` and `::after`."
 	@source="hanging-punctuation/preview/?active=style.css"
-	style="--lines: 22"
+	style="--lines: 24"
 	>
 </figure>
 
-When in doubt, [*The Elements of Typographic Style*](https://readings.design/PDF/the_elements_of_typographic_style.pdf) explains these conventions. But also, as Bringhurst says, *“read the text before designing it.”* Always put yourself in the mind of your reader!
-<!-- .bold .scale--h4 .add-before--3 -->
+When in doubt, [*The Elements of Typographic Style*](https://readings.design/PDF/the_elements_of_typographic_style.pdf) explains these conventions. But also, as Bringhurst says, “read the text before designing it.”
+<!-- .intro .after--0 -->
+
+Always put yourself in the mind of your reader!
+<!-- .intro -->
 
 <aside>
 
+<mark>Reminder: *There is no perfect layout*</mark>
+
 These strategies only work if you can *manually* edit your text content, which is not always feasible—with templating/content management systems, editors, time, and so on.
 
-Do it when you can—and give more attention to your large headings, then your body copy and so-on, going down your hierarchy.
+Do it when feasible—and give more attention to your large headings, then your body copy, etc. going down your hierarchy.
 
 </aside>
 

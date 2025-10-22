@@ -1,5 +1,5 @@
-section { padding: var(--base) calc(2 * var(--base)); }
-h2 { line-height: 90%; }
+section { padding: calc(3 * var(--base)); }
+
 p { margin-block-start: var(--base); }
 
 section:nth-child(2) h2::first-letter { /* Target via pseudo-element. */
@@ -9,7 +9,7 @@ section:nth-child(2) h2::first-letter { /* Target via pseudo-element. */
 
 section:nth-child(3) h2::before {
 	content: '“'; /* Add the quotes themselves via pseudo-elements. */
-	margin-inline-start: -0.5em;
+	margin-inline-start: -0.5em; /* Manually adjust this. */
 }
 section:nth-child(3) h2::after { content: '”'; }
 
