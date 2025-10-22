@@ -74,7 +74,7 @@ You can also *excerpt* text (perhaps on a landing page) with the `text-overflow`
 
 You have probably noticed that HTML renders a lot of extra space around text elements, called the *line box* (or, in design software parlance, the *bounding box*).
 
-- [<cite>Font Metrics, <nobr>Line-Height</nobr> and Vertical-&zwj;Align</cite>](https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align)
+- [<cite>Font Metrics, Line-&NoBreak;Height and Vertical-&NoBreak;Align</cite>](https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align)
 	A deep-dive on type positioning.
 - [<cite>Vertical Spacing and Line-Height in Design Systems – Google Fonts</cite>](https://fonts.google.com/knowledge/using_type/vertical_spacing_and_line_height_in_design_systems)
 	It’s all very complicated.
@@ -162,13 +162,11 @@ You can wrap multiple words (or whole phrases) in a `<nobr>` tag—keeping in mi
 You can also use a manual `&nbsp;` entity between words:
 
 <figure
-	@caption="On a Mac, you can insert an *encoded* `&&zwj;nbsp;` with <nobr><kbd>⌥</kbd> <kbd>Space</kbd></nobr>&#x202F;. (It’s apparently [much harder](https://superuser.com/a/1414666) on Windows.) This works in many programs, not just your IDE! It’s harder to see, but easier to read."
+	@caption="On a Mac, you can insert an *encoded* `&&NoBreak;nbsp;` with <nobr><kbd>⌥</kbd> <kbd>Space</kbd></nobr>&#x202F;. (It’s apparently [much harder](https://superuser.com/a/1414666) on Windows.) This works in many programs, not just your IDE! It’s harder to see, but easier to read."
 	@source="nobr-nbsp/preview/?active=index.html"
 	style="--lines: 23"
 	>
 </figure>
-
-<!-- DOWN TO HERE -->
 
 ### `text-wrap: balance;`
 
@@ -234,45 +232,58 @@ CSS can apply visual effects on elements—adjusting their graphical display *af
 	>
 </figure>
 
-These also correspond to [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter) values—which apply the effect to the page *behind* an element! You’ll often use these in conjunction with `opacity` or a [`mix-blend-mode`](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode) for interesting Photoshop/Figma-like layer-blending effects:
+These have corresponding `backdrop-filter` values—which apply the effect to the page *behind* an element! You’ll often use these in conjunction with an [`opacity` (or semi-transparent `color`)](/topic/css/#color) or a `mix-blend-mode` for interesting Photoshop/Figma-like layer-blending effects:
 <!-- .balance -->
+
+- [<cite>`backdrop-filter` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter)
+- [<cite>`mix-blend-mode` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode)
+	Often used together.
+<!-- .right  -->
 
 <figure
 	@caption="These are “hot rn.”"
 	@source="backdrop-filter/preview/?active=style.css"
-	style="--lines: 21"
+	style="--lines: 24"
 	>
 </figure>
 
 ## Transforms!
 
-Beyond our standard sizing and layout afforded by CSS, you can also *visually* manipulate elements using CSS [transforms](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)—scaling, skewing, translating, or rotating elements *after* they are laid out in the DOM. It’s like grabbing the “corner handles” in Adobe/Figma!
-<!-- .add-after--3 -->
+<div class="body">
 
-- [<cite>Transform – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
-	These are fun.
-	<!-- .link-list .right style="--rows: 2" -->
+Beyond our standard sizing and layout afforded by CSS, you can also *visually* manipulate elements using CSS [transforms](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)—scaling, skewing, translating, or rotating elements *after* they are laid out in the DOM. It’s like grabbing the “corner handles” in Adobe/Figma!
+<!-- .after--3 -->
 
-`scale()`&#x202F;/&thinsp;`scaleX()`&#x202F;/&thinsp;`scaleY()`&#x202F;/&thinsp;`scaleZ()`&#x202F;/&thinsp;`scale3d()` <!-- style="line-height: 1.5" -->
+`scale()`&#x202F;/&thinsp;`scaleX()`&#x202F;/&thinsp;`scaleY()`&#x202F;/&thinsp;`scaleZ()`&#x202F;/&thinsp;`scale3d()`
 : Change the displayed size of the element—as if it is an image.
 
 `skew()`&#x202F;/&thinsp;`skewX()`&#x202F;/&thinsp;`skewY()`
 : Tilt an element to the left or right, like turning a rectangle into a parallelogram.
 
-`translate()`&#x202F;/&thinsp;`translateX()`&#x202F;/&thinsp;`translateY()`&#x202F;/&thinsp;`translate3d()` <!-- style="line-height: 1.5" -->
+`translate()`&#x202F;/&thinsp;`translateX()`&#x202F;/&thinsp;`translateY()`&#x202F;/&thinsp;`translate3d()`
 : Move an element left/right and up/down, and also in three-dimensional space.
 
 `rotate()`&#x202F;/&thinsp;`rotate3d()`
 : Rotate the element.
 
 `perspective()`
-: Doesn’t affect the element itself, sets the distance between the user and the <nobr>three-dimensional</nobr> plane.
+: Doesn’t affect the element itself, but sets the distance between the user and the <nobr>three-dimensional</nobr> plane.
 <!-- .balance -->
 
-The units for these are all a bit different; [MDN is your friend](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) here, as usual. You can apply single or multiple transforms, which are written *space-separated* and applied one after the other:
-<!-- .add-before--3 .balance -->
+</div>
 
-<div class="left add-before--3">
+<div class="right">
+
+[<cite>Transform – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
+	These are fun—but should *not* be used for actual layout!
+<!-- .sticky -->
+
+</div>
+
+The units for these are all a bit different; [MDN is your friend](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function) here, as usual. You can apply single or multiple transforms, which are written *space-separated* and applied one after the other:
+<!-- .before--3 .balance -->
+
+<div class="left before--1">
 
 ```css
 .rotated {
@@ -282,7 +293,7 @@ The units for these are all a bit different; [MDN is your friend](https://develo
 
 </div>
 
-<div class="add-before--3" style="grid-column: left-end / five-end">
+<div class="before--1" style="grid-column: left-end / five-end">
 
 ```css
 .rotated-and-scaled {
@@ -291,20 +302,20 @@ The units for these are all a bit different; [MDN is your friend](https://develo
 ```
 </div>
 
-Keep in mind that these transformations are applied *after* the rest of the CSS is parsed, and thus treat your element a bit like an image. And like `overflow`, above, `transform` also creates a new [*stacking context*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) for its children:
-<!-- .add-before--3 .balance -->
+Keep in mind that these transformations are applied *after* the rest of the CSS is parsed, and thus treat your element a bit like an image. And like `overflow` [above](#overflows-and-scrolling), `transform` also creates a new [*stacking context*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) for its children:
+<!-- .before--2 .balance -->
 
 <figure
 	@caption="Note how the elements *don’t* take up more space in the document flow/layout—but they *do* cause an overflow!"
 	@source="transform/preview/?active=style.css"
-	style="--lines: 18"
+	style="--lines: 20"
 	>
 </figure>
 
 You shouldn’t use `transform` for layout—as in, don’t use `translate` when `margin`, `padding`, `flex`, or `grid` can achieve your layout. This is *bad* practice, and usually very brittle! Especially when working responsively.
 
-Use `transform` only for what other properties *can’t* accomplish!
-<!-- .balance .bold .scale--h4 -->
+Use transform only for what other properties can’t accomplish!
+<!-- .intro -->
 
 ## Transitions!
 

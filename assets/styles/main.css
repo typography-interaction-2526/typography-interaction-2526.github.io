@@ -218,7 +218,10 @@ main {
 	dl {
 		row-gap: inherit;
 
-		> dt:where(:not(:first-of-type)) { margin-block-start: 1rlh }
+		> dt {
+			&:where(:not(:first-of-type)) { margin-block-start: 1rlh }
+			&:where(:has(code:not(:only-child))) { line-height: 2rlh }
+		}
 	}
 
 	/* TODO More structure here! */
