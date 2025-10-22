@@ -1,26 +1,27 @@
 h2 {
-	/* Just to see things better, a transparent blue. */
+	/* Just to see things better, and a transparent blue. */
+	font-size: calc(var(--base) * 5);
 	background-color: hsla(200, 100%, 50%, 33%);
 }
 
 .precise::before,
 .precise::after {
-	content: ''; /* Gives us an “empty” one to work with. */
+	content: ''; /* Gives us “empty” pseudos to work with. */
 	display: block;
 	visibility: hidden; /* We don’t need to see it or click it. */
 }
 
-.precise::before { margin-block-start: var(--inset--top); }
-.precise::after { margin-block-end: var(--inset--bottom); }
+.precise::before { margin-block-start: var(--block--start); }
+.precise::after { margin-block-end: var(--block--start); }
 
 .precise {
-	--inset--top:    -0.2em; /* Font/line-height-dependent! */
-	--inset--bottom: -0.23em;
-	--inset--left:   -0.07em;
-	--inset--right:  -0.06em;
+	--block--start:  -0.2em;  /* Font/line-height-dependent! */
+	--block--end:    -0.23em; /* Just adjust until you get it. */
+	--inline--start: -0.07em;
+	--inline--end:   -0.06em;
 
-	display: flow-root; /* Cinch the height. */
-	inline-size: fit-content; /* Cinch the width. */
-	margin-inline-end: var(--inset--right);
-	margin-inline-start: var(--inset--left);
+	display: flow-root; /* Cinches the `block-size`. */
+	inline-size: fit-content; /* Cinches the `inline-size`. */
+	margin-inline-end: var(--inline--end);
+	margin-inline-start: var(--inline--start);
 }

@@ -52,7 +52,7 @@ Importantly, this creates a new *stacking context*—which means things with `po
 	>
 </figure>
 
-### `text-overflow` and `-webkit-line-clamp`
+### `text-overflow` / `-webkit-line-clamp`
 
 You can also *excerpt* text (perhaps on a landing page) with the `text-overflow` (for a single line) or `-webkit-line-clamp` (for multiple lines) properties—which will add [an ellipsis](https://en.wikipedia.org/wiki/Ellipsis) <samp>…</samp> where the text overflows. Only do this when the full text is available on a subsequent page:
 <!-- .balance -->
@@ -72,29 +72,45 @@ You can also *excerpt* text (perhaps on a landing page) with the `text-overflow`
 
 ## Precise Text Positioning
 
-HTML renders a lot of extra space around text elements, called the [*line box*](https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align) (or, in design software parlance, the *bounding box*).
+You have probably noticed that HTML renders a lot of extra space around text elements, called the *line box* (or, in design software parlance, the *bounding box*).
 
 - [<cite>Font Metrics, <nobr>Line-Height</nobr> and Vertical-&zwj;Align</cite>](https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align)
 	A deep-dive on type positioning.
-
 - [<cite>Vertical Spacing and Line-Height in Design Systems – Google Fonts</cite>](https://fonts.google.com/knowledge/using_type/vertical_spacing_and_line_height_in_design_systems)
 	It’s all very complicated.
-	<!-- .link-list .right style="--rows: 3" -->
+<!-- .right .rows--3 -->
 
-It is based on the `font-family`, the `font-size`, and the `line-height`, which basically means it is different all the time—and crucially, often different from Adobe/Figma to HTML. This makes it difficult to position type precisely—especially at large, expressive sizes like your headings! It’s always annoying, and you’ll often be adding/subtracting your spacing (`margin` or `padding`) to account for it, if you want to line everything up *just right*, optically.
+It is based on the `font-family`, the `font-size`, and the `line-height`, which basically means it is different all the time—and crucially, often different from Adobe/Figma to HTML. This makes it difficult to position type precisely—especially at large, expressive sizes like your headings! It’s always annoying, and you’ll often be adding/subtracting your spacing (`margin` or `padding`) to account for it, if you want to line everything up *just right*, optically.
 
-Let’s avoid it. We can use [pseudo-elements](/topic/css/#pseudo-elements), `::after` / `::before`—which are entirely created by CSS, not in your DOM—to negate this vertical space with a negative margin. By doing this on the pseudo-elements, we can still position the parent element normally, otherwise:
-<!-- .add-before--3 -->
+Let’s avoid it. We can use [pseudo-elements](/topic/css/#pseudo-elements), `::after` / `::before`—which you may remember are entirely created by CSS, not in your HTML—to negate this vertical space with a negative margin. By doing this on the pseudo-elements, we can still position the parent element normally, otherwise:
+<!-- .balance .before--3 -->
 
 <figure
-	@caption="Here we also move the text with `margin-left` and `margin-right`, though usually this adjustment is much more minor (to the point of ignoring)."
+	@caption="Here we also move the text with `margin-inline-start` and `margin-inline-end`, though usually this adjustment is much more minor (to the point of ignoring)."
 	@source="bounding-box/preview/?active=style.css"
-	style="--lines: 20"
+	style="--lines: 24"
 	>
 </figure>
 
-Figma is actually *ahead* of CSS here with its recent [<samp>Vertical Trim</samp> option](https://dodonut.com/blog/everything-you-need-to-know-about-figma-s-vertical-trim-feature/). But the code for this kind of thing will get *much* easier in coming years with the analogous [`text-box-trim` and `text-box-edge`](https://css-tricks.com/two-css-properties-for-trimming-text-box-whitespace/) properties! [Soon](https://developer.apple.com/documentation/safari-release-notes/safari-18_2-release-notes).
+### `text-box` is coming
+
+Figma was actually *ahead* of CSS here with its [recent <samp>Vertical Trim</samp> option](https://help.figma.com/hc/en-us/articles/360039956634-Explore-text-properties#h_01H96FW9Z3W7J7Z2HEN8V17BZT). The code for this kind of thing is getting *much* easier with the analogous `text-box-trim` and `text-box-edge` properties! These will negate all this pseudo-element, negative-margin dance with one line of code.
 <!-- .balance -->
+
+- [<cite>`text-box` - MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/text-box)
+- [<cite>`text-box-trim` - web.dev</cite>](https://developer.chrome.com/blog/css-text-box-trim)
+	So… much… easier!
+<!-- .right -->
+
+<aside>
+
+<mark>Caution: uneven browser support</mark>
+
+After a decade of workarounds and discussion, both shipping Chrome and Safari [now support](https://caniuse.com/css-text-box-trim) the super-easy `text-box` properties! But Firefox still does not, and it might be some time there.
+
+(This course site uses these heavily—among the reasons it appears slightly broken in Firefox/older browsers!)
+
+</aside>
 
 ## Text Ragging (Kinda)
 
