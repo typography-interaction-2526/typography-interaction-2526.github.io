@@ -120,13 +120,17 @@ But we can do a handful of things to make for *better* ragging/wraps, given the 
 
 ### `hyphens` / `&shy;`
 
-The [hyphens](https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens) property allows long, multi-syllable words to be [hyphenated](https://en.wikipedia.org/wiki/Hyphen#Justification_and_line-wrapping) when they wrap across multiple lines. This can be done automatically by the browser, or by manually inserting `&shy;` (for [*soft hyphen*](https://en.wikipedia.org/wiki/Soft_hyphen)) as an [HTML entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity):
+The `hyphens` property allows long, multi-syllable words to be [hyphenated](https://en.wikipedia.org/wiki/Hyphen#Justification_and_line-wrapping) when they wrap across multiple lines. This can be done automatically by the browser, or by manually inserting `&shy;` (for [*soft hyphen*](https://en.wikipedia.org/wiki/Soft_hyphen)) as an [HTML entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity):
 <!-- .balance -->
 
+- [<cite>`hyphens` - MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens)
+	This depends on the browser and [`lang`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/lang), unless you manually add `&shy;`.
+<!-- .right -->
+
 <figure
-	@caption='Note `<html lang="en">` is needed for Chrome—as the `auto` property works from each browser’s different, internal (and usually, only English) dictionary—so this all has somewhat limited utility/reliability.'
+	@caption='Note `<html lang="en">` is needed—as the `auto` property works from each browser’s different, internal (and usually, only English) dictionary—so this all has somewhat limited utility/reliability/consistency.'
 	@source="hyphens/preview/?active=style.css"
-	style="--lines: 18"
+	style="--lines: 15"
 	>
 </figure>
 
