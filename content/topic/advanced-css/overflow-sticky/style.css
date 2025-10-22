@@ -6,6 +6,7 @@ h2 {
 	position: sticky;
 }
 
+/* Just so they clip/“peek” their containers. */
 section:nth-child(2) h2 { margin-block-start: 1.5em }
 
-section:nth-child(3) h2 { margin-inline-start: 3em }
+section:nth-child(3) h2 { margin-inline-start: 66% }

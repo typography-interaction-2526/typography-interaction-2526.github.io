@@ -3,7 +3,7 @@ body {
 
 	display: grid;
 	font-family: 'Helvetica', sans-serif;
-	gap: var(--base);
+	gap: calc(2 * var(--base));
 	padding: var(--base);
 }
 
@@ -24,7 +24,7 @@ section:nth-child(2) {
 
 section:nth-child(3) {
 	display: flex; /* Horizontal layout. */
-	gap: var(--base);
+	gap: calc(2 * var(--base));
 	overflow-x: auto; /* Scroll horizontally! */
 	overflow-y: hidden;
 }

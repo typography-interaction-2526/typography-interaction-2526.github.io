@@ -3,7 +3,7 @@ body {
 
 	display: grid;
 	font-family: 'Helvetica', sans-serif;
-	gap: var(--base);
+	gap: calc(2 * var(--base));
 	padding: var(--base);
 }
 
@@ -22,18 +22,20 @@ section:nth-child(2) { overflow: visible; } /* Default. */
 section:nth-child(3) { overflow: hidden; } /* “Crop” contents. */
 
 section:nth-child(4) {
+	background-color: orange;
 	overflow-x: hidden;
 	overflow-y: auto; /* Scroll vertically! */
 }
 
 section:nth-child(5) {
+	background-color: tomato;
 	display: flex; /* Horizontal layout. */
-	gap: var(--base);
+	gap: calc(2 * var(--base));
 	overflow-x: auto; /* Scroll horizontally! */
 	overflow-y: hidden;
 }
 
 section:nth-child(5) * {
 	flex-shrink: 0; /* Don’t shrink! */
-	inline-size: 90%; /* Always peek the next block. */
+	inline-size: 85%; /* Always “peek” the next block. */
 }

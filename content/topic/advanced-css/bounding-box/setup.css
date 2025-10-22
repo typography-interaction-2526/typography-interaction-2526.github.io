@@ -3,7 +3,7 @@ body {
 
 	display: grid;
 	font-family: 'Helvetica', sans-serif;
-	gap: var(--base);
+	gap: calc(2 * var(--base));
 	padding: var(--base);
 }
 

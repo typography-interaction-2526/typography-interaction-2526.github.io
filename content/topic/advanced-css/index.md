@@ -4,6 +4,8 @@
 	const week = 9
 </script>
 
+Our HTML/CSS focus up to this point has been relatively broad, to start with the basics. Here we want to sand down some of the rough edges, and introduce you to some specific, advanced techniques you can use to refine and enliven your work—still with just CSS, no JavaScript (yet)!
+
 <blockquote
 	@attribution="William of Ockham"
 	@citation="https://mathshistory.st-andrews.ac.uk/Biographies/Ockham"
@@ -13,50 +15,58 @@ It is vain to do with more what can be done with less.
 
 </blockquote>
 
-Our HTML/CSS focus up to this point has been relatively broad, to start with the basics. Here we want to sand down some of the rough edges, and introduce you to some specific, advanced techniques you can use to refine and enliven your work—still with just CSS, no JavaScript (yet)!
-<!-- .add-before--3 -->
-
-A good pattern to follow in web (and all) development is to use each technology *only* for what it does *best*—using HTML for semantic meaning, CSS to handle how we form a page, and, later, JavaScript to introduce more interaction. But even before we get to JS, we can start to layer in some more liveliness in our CSS.
+A good pattern to follow in web (and all) development is to use each technology *only* for what it does *best*—using HTML for semantic meaning, CSS to handle how we form a page, and, later, JavaScript to introduce more interaction. But even before we get to JS, we can start to layer in some more interest and liveliness with our CSS.
 
 Let’s look at some examples.
-<!-- .bold .scale--h4 -->
+<!-- .intro -->
 
 ## Overflows and Scrolling
 
-An [*overflow*](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow) in CSS happens when there is too much content to fit in a container—usually because you have manually constrained its `block-size` or `inline-size`. (By default, the browser will try to show you everything!)
+An `overflow` in CSS happens when there is too much content to fit in a container—usually because you have manually constrained its `block-size` or `inline-size`. (By default, the browser will try to show you everything!)
+<!-- .balance -->
 
+- [<cite>`overflow` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)
 - [<cite>Overflowing Content – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
 	There are going to be a lot of MDNs, here.
-<!-- .link-list .right style="--rows: 2" -->
+<!-- .right .rows--2 -->
 
-We can use this behavior *intentionally* to crop our content or create scrolling areas:
+But we can use this behavior *intentionally* to crop our content, or create interally-scrolling areas:
 <!-- .balance -->
 
 <figure
-	@caption="Some of you have already discovered these!"
 	@source="overflow/preview/?active=style.css"
-	style="--lines: 21"
+	style="--lines: 23"
 	>
 </figure>
 
-Importantly, this creates a new [*stacking context*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)—which means things with `position` (and some other properties) will now use the overflow container as their reference/origin:
-<!-- .balance -->
+Importantly, this creates a new *stacking context*—which means things with `position` (namely, `position: sticky`)—and some other properties—will now use the `overflow` container as their reference/origin:
+<!-- .balance .before--3 -->
+
+- [<cite>The stacking context – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
+	*Always* confusing; think of these as *frames* or *groups* in Figma.
+<!-- .right -->
 
 <figure
 	@source="overflow-sticky/preview/?active=style.css"
-	style="--lines: 18; margin-block-end: initial"
+	style="--lines: 16"
 	>
 </figure>
 
 ### `text-overflow` and `-webkit-line-clamp`
 
-You can also *excerpt* text (perhaps on a landing page) with the [`text-overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow) (for a single line) or [`-webkit-line-clamp`](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp) (for multiple lines) properties—which will add [an ellipsis](https://en.wikipedia.org/wiki/Ellipsis) <samp>…</samp> where the text overflows. Only do this when the full text is available on a subsequent page:
+You can also *excerpt* text (perhaps on a landing page) with the `text-overflow` (for a single line) or `-webkit-line-clamp` (for multiple lines) properties—which will add [an ellipsis](https://en.wikipedia.org/wiki/Ellipsis) <samp>…</samp> where the text overflows. Only do this when the full text is available on a subsequent page:
 <!-- .balance -->
 
+- [<cite>`text-overflow` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow)
+	For single lines…
+- [<cite>`-webkit-line-clamp` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp)
+	And multiple lines!
+<!-- .right -->
+
 <figure
-	@caption="This `-webkit` stuff is hokey, but still how it is done!"
+	@caption="This `-webkit` stuff is hokey, but still how it is done! Browsers are weird."
 	@source="text-overflow/preview/?active=style.css"
-	style="--lines: 17"
+	style="--lines: 18"
 	>
 </figure>
 
