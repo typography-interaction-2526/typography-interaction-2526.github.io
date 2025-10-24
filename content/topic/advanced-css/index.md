@@ -199,10 +199,10 @@ Ideally we could set punctuation *outside* of our text blocks, for visual alignm
 	>
 </figure>
 
-When in doubt, [*The Elements of Typographic Style*](https://readings.design/PDF/the_elements_of_typographic_style.pdf) explains these conventions. But also, as Bringhurst says, “read the text before designing it.”
+When in doubt, [*The Elements of Typographic Style*](https://readings.design/PDF/the_elements_of_typographic_style.pdf) explains these conventions.
 <!-- .intro .after--0 -->
 
-Always put yourself in the mind of your reader!
+But also, as Bringhurst says, “read the text before designing it.” Always put yourself in the mind of your reader!
 <!-- .intro -->
 
 <aside>
