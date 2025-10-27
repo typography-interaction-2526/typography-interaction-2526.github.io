@@ -7,14 +7,18 @@ section:nth-child(2) h2::first-letter { /* Target via pseudo-element. */
 	margin-inline-start: -0.4em; /* Adjusted to the width of the `“` */
 }
 
-section:nth-child(3) h2::before {
-	content: '“'; /* Add the quotes themselves via pseudo-elements. */
-	margin-inline-start: -0.5em; /* Manually adjust this. */
-}
-section:nth-child(3) h2::after { content: '”'; }
+section:nth-child(3) h2 {
+	/* Nested `&` selector again for less repetition. */
+	&::before {
+		content: '“'; /* Add the quotes themselves via pseudo-elements. */
+		margin-inline-start: -0.5em; /* Manually adjust this. */
+	}
 
-section:nth-child(3) h2::before,
-section:nth-child(3) h2::after {
-	color: tomato;
-	font-family: serif; /* You have much more control this way! */
+	&::after { content: '”'; }
+
+	&::before,
+	&::after {
+		color: tomato;
+		font-family: serif; /* You have much more control this way! */
+	}
 }

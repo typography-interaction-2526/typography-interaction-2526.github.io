@@ -27,9 +27,9 @@ section:nth-child(3) {
 	gap: calc(2 * var(--base));
 	overflow-x: auto; /* Scroll horizontally! */
 	overflow-y: hidden;
-}
 
-section:nth-child(3) * {
-	flex-shrink: 0; /* Don’t shrink! */
-	inline-size: 90%; /* Always peek the next block. */
+	* {
+		flex-shrink: 0; /* Don’t shrink! */
+		inline-size: 85%; /* Always “peek” the next block. */
+	}
 }

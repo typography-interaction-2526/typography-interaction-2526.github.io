@@ -4,16 +4,6 @@ h2 {
 	background-color: hsla(200, 100%, 50%, 33%);
 }
 
-.precise::before,
-.precise::after {
-	content: ''; /* Gives us “empty” pseudos to work with. */
-	display: block;
-	visibility: hidden; /* We don’t need to see it or click it. */
-}
-
-.precise::before { margin-block-start: var(--block--start); }
-.precise::after { margin-block-end: var(--block--start); }
-
 .precise {
 	--block--start:  -0.2em;  /* Font/line-height-dependent! */
 	--block--end:    -0.23em; /* Just adjust until you get it. */
@@ -24,4 +14,15 @@ h2 {
 	inline-size: fit-content; /* Cinches the `inline-size`. */
 	margin-inline-end: var(--inline--end);
 	margin-inline-start: var(--inline--start);
+
+	/* The `&` (nested selector) here just means `.precise`. */
+	&::before,
+	&::after {
+		content: ''; /* Gives us “empty” pseudos to work with. */
+		display: block;
+		visibility: hidden; /* We don’t need to see it or click it. */
+	}
+
+	&::before { margin-block-start: var(--block--start); }
+	&::after { margin-block-end: var(--block--start); }
 }

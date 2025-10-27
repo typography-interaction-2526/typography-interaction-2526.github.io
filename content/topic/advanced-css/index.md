@@ -87,7 +87,7 @@ Let’s avoid it. We can use [pseudo-elements](/topic/css/#pseudo-elements-selec
 <figure
 	@caption="Here we also move the text with `margin-inline-start` and `margin-inline-end`, though usually this adjustment is much more minor (to the point of ignoring)."
 	@source="bounding-box/preview/?active=style.css"
-	style="--lines: 24"
+	style="--lines: 31"
 	>
 </figure>
 
@@ -115,7 +115,7 @@ After a decade of workarounds and discussion, both shipping Chrome and Safari [n
 
 We’ve gone on-and-on about how you can’t treat the web like print—always [perfectly ragging](/topic/typography/#ragging) your text for nice, smooth blocks. In modern (responsive) web design we don’t always know what our text will be, nor where it will wrap!
 
-But we can do a handful of things to make for *better* ragging/wraps, given the unknowns—judiciously using `hyphens`&#x202F;/&thinsp;`&shy;`, `<wbr>`, `<nobr>` and `&nbsp;`, and `balance` to *somewhat* control your line breaks.
+But we can do a handful of things to make for *better* ragging/wraps, given the unknowns—judiciously using `hyphens`&#x202F;/&thinsp;`&shy;`, `<wbr>`, `white-space`, `<nobr>` and `&nbsp;`, and `text-wrap` to *somewhat* control your line breaks.
 
 ### `hyphens` / `&shy;`
 
@@ -148,15 +148,17 @@ Somewhat related/similar to `&shy;`, the `<wbr>` is a <nobr>(void/empty)</nobr> 
 	>
 </figure>
 
-### `<nobr>` / `&nbsp;`
+### `white-space: nowrap;` / `<nobr>` / `&nbsp;`
 
 But much more often, you’ll want to keep certain words *together*—to avoid a [widow or orphan](/topic/typography/#widows-and-orphans), or to keep important/related text together—like in dates, *October 24*, or with  names like *van Zanten*.
 
-[<cite>`nobr` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nobr)
+- [<cite>`white-space` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space)
+	*Prevents* text from wrapping.
+- [<cite>`nobr` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nobr)
 	This is *technically* deprecated. But [one of your instructors](https://michaelfehrenbach.com) is a “stan.”
-<!-- .right .rows--2 -->
+<!-- .right .rows--3 -->
 
-You can wrap multiple words (or whole phrases) in a `<nobr>` tag—keeping in mind that like `<em>` or `<strong>`, the default behavior is cleared by most [resets](/topic/css/#resets) (ours included)—so you have to restore the property in CSS.
+You can keep multiple words (or whole phrases) together with `white-space: nowrap;`. Historically, the `<nobr>` tag applied this—keeping in mind that like `<em>` or `<strong>`the default behavior is cleared by most [resets](/topic/css/#resets) (ours included)—so likewise you have to restore the property in your own CSS.
 
 You can also use a manual `&nbsp;` entity between words:
 
@@ -193,13 +195,13 @@ Ideally we could set punctuation *outside* of our text blocks, for visual alignm
 	<!-- .right -->
 
 <figure
-	@caption="Note that the quotes are *not* in the HTML here in the last example! [Pseudo-elements](/topic/css/#pseudo-elements-selector-pseudo) again, `::before` and `::after`."
+	@caption="Note that the (pasted-in) [curly quotation marks](https://en.wikipedia.org/wiki/Quotation_mark) are *not* in the HTML here in the last example! [Pseudo-elements](/topic/css/#pseudo-elements-selector-pseudo) again, `::before` and `::after`."
 	@source="hanging-punctuation/preview/?active=style.css"
-	style="--lines: 24"
+	style="--lines: 28"
 	>
 </figure>
 
-When in doubt, [*The Elements of Typographic Style*](https://readings.design/PDF/the_elements_of_typographic_style.pdf) explains these conventions.
+When in doubt, *[The Elements of Typographic Style](https://readings.design/PDF/the_elements_of_typographic_style.pdf)* explains these conventions.
 <!-- .intro .after--0 -->
 
 But also, as Bringhurst says, “read the text before designing it.” Always put yourself in the mind of your reader!
@@ -220,7 +222,7 @@ Do it when feasible—and give more attention to your large headings, then your 
 CSS can apply visual effects on elements—adjusting their graphical display *after* they are laid out and rendered in the page—with the `filter` property:
 <!-- .balance -->
 
-- [<cite>Filter – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
+- [<cite>`filter` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/filter)
 	Back to MDN.
 <!-- .right  -->
 
@@ -242,7 +244,7 @@ These have corresponding `backdrop-filter` values—which apply the effect to th
 <figure
 	@caption="These are “hot rn.”"
 	@source="backdrop-filter/preview/?active=style.css"
-	style="--lines: 24"
+	style="--lines: 29"
 	>
 </figure>
 
@@ -273,7 +275,7 @@ Beyond our standard sizing and layout afforded by CSS, you can also *visually* m
 
 <div class="right">
 
-[<cite>Transform – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
+[<cite>`transform` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
 	These are fun—but should *not* be used for actual layout!
 <!-- .sticky -->
 
@@ -425,6 +427,9 @@ Importantly, we then define the actual keyframes of an animation in a separate [
 	style="--lines: 22"
 	>
 </figure>
+
+For accessibility, it is best-practice to *scope* your transitions and animations to folks who don’t mind the motion with [media queries](/topic/responsive/#prefers-contrast-prefers-reduced-motion).
+<!-- .intro -->
 
 <blockquote
 	@attribution="Stan Lee"
