@@ -448,7 +448,7 @@ Hover states are a good feature for *progressive-enhancement*, as we did here—
 
 You see this one more and more these days—`prefers-color-scheme` for switching up a site’s styles based on whether the user is in *light* or *dark mode*, popularized by the ol’ iPhone again:
 
-[<cite>`prefers-color-`<wbr>`scheme` - MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
+[<cite>`prefers-color-scheme` - MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)
 	Michael prefers `dark`; Rijk prefers `light`.
 <!-- .right -->
 
@@ -466,7 +466,7 @@ Sometimes this feels appropriate—especially in products/applications, like may
 These last two are primarily concerned with [accessiblity](https://developer.mozilla.org/en-US/docs/Web/Accessibility)—`prefers-contrast` for folks who run their device/browser in a high-contrast mode to help with their vision, or `prefers-reduced-motion` for those who have animations turned off for vestibular reasons.
 
 - [<cite>`prefers-contrast` - MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast)
-- [<cite>`prefers-reduced-`<wbr>`motion` - MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
+- [<cite>`prefers-reduced-motion` - MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
 	You can think of both subtlety and motion as progressive enhancements.
 <!-- .right .rows--2 -->
 

@@ -142,6 +142,7 @@ summary {
 				font-size:        inherit;
 				padding:          initial;
 				position:         relative;
+				white-space:      initial;
 			}
 
 			&::after {
