@@ -100,7 +100,7 @@ main {
 			/* TODO There has to be a simpler way to check for these! */
 
 			/* Item inset. */
-			> :where(dd, dt, li) { padding-inline-start: 2cap }
+			> :where(dd, dt, li) { padding-inline-start: 2rcap }
 
 			> :where(dt, li) {
 				position: relative;
