@@ -19,7 +19,7 @@ For real layout, the we first need to understand how CSS sizes elements—and ho
 <!-- .right .rows--2 -->
 
 <blockquote
-	@attribution="Jan Tschichold"
+	@attribution="Jan Tschichold, 1928"
 	@citation="https://readings.design/PDF/ThePrinciplesoftheNewTypography.pdf"
 >
 
@@ -713,7 +713,7 @@ We’ll cover these next unit! They’ll make your (layout) life easier.
 <!-- .intro -->
 
 <blockquote
-	@attribution="H<span class='a-ring cap'>å</span>kon Wium Lie"
+	@attribution="H<span class='a-ring cap'>å</span>kon Wium Lie, 1995"
 	@citation="https://lists.w3.org/Archives/Public/www-style/1995Jun/0003.html"
 	>
 

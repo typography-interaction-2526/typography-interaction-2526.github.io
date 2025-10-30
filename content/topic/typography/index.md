@@ -4,7 +4,7 @@
 </script>
 
 <blockquote
-	@attribution="Paul Elliman"
+	@attribution="Paul Elliman, 1998"
 	@citation="https://readings.design/PDF/MyTypographies.pdf"
 	>
 
@@ -291,7 +291,7 @@ What Are Things to Consider When Picking a Typeface?
 </details>
 
 <blockquote
-	@attribution="Michael Bierut"
+	@attribution="Michael Bierut, 2017"
 	@citation="https://www.fastcompany.com/90148989/how-pentagrams-michael-bierut-picks-a-typeface"
 	>
 

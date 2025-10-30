@@ -41,7 +41,7 @@ There are many novel, powerful uses for *grid*—it is really the backbone of mo
 <!-- .intro .body -->
 
 <blockquote
-	@attribution="Josef M<span class='dieresis'>ü</span>ller-Brockmann"
+	@attribution="Josef M<span class='dieresis'>ü</span>ller-Brockmann, 1961"
 	@citation="https://monoskop.org/images/a/a4/Mueller-Brockmann_Josef_Grid_Systems_in_Graphic_Design_Raster_Systeme_fuer_die_Visuele_Gestaltung_English_German_no_OCR.pdf"
 	>
 
@@ -487,7 +487,7 @@ Finally, just like flex—you can position individual *grid items* within their 
 </figure>
 
 <blockquote
-	@attribution="Josef M<span class='dieresis'>ü</span>ller-Brockmann"
+	@attribution="Josef M<span class='dieresis'>ü</span>ller-Brockmann, 1961"
 	@citation="https://www.niggli.ch/en/produkt/the-graphic-artist-and-his-design-problems/"
 	>
 

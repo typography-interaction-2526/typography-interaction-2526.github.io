@@ -39,7 +39,7 @@ For the past decade or so, features have been added incrementally by browsers �
 <!-- .note -->
 
 <blockquote
-	@attribution="James D. Mason"
+	@attribution="James D. Mason, 1994"
 	@citation="http://ksi.cpsc.ucalgary.ca/archives/HTML-WG/html-wg-94q4.messages/0279.html"
 	>
 
@@ -583,7 +583,7 @@ This is what we use here for our course site!
 <!-- .note -->
 
 <blockquote
-	@attribution="H<span class='a-ring cap'>å</span>kon Wium Lie"
+	@attribution="H<span class='a-ring cap'>å</span>kon Wium Lie, 1994"
 	@citation="https://www.w3.org/People/howcome/p/cascade.html"
 	>
 

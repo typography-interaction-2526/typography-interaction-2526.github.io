@@ -55,7 +55,7 @@ A catalyst in the formation of the internet was the Cold War. The threat of nucl
 </figure>
 
 <blockquote
-	@attribution="Paul Baran"
+	@attribution="Paul Baran, 2008"
 	@citation="https://www.vanityfair.com/news/2008/07/internet200807)"
 	>
 
@@ -211,7 +211,7 @@ And the web exploded from there.
 </figure>
 
 <blockquote
-	@attribution="Tim Berners-Lee"
+	@attribution="Tim Berners-Lee, 1998"
 	@citation="https://www.scienceandmediamuseum.org.uk/objects-and-stories/short-history-internet)"
 	>
 
@@ -266,7 +266,7 @@ In its openness, connectedness, and ubiquity, the web has come to dominate over 
 And in that latter role, we’ll need to learn how to swim. Our path into *design* then is to understand how these things are made and how they function. Their technological construction both empowers and constrains our work. You can’t separate the design from this foundation; the medium is inextricable from the end product.
 
 <blockquote
-	@attribution="Steve Jobs"
+	@attribution="Steve Jobs, 2003"
 	@citation="https://www.nytimes.com/2003/11/30/magazine/the-guts-of-a-new-machine.html"
 	>
 
@@ -331,7 +331,7 @@ Learning good, effective design in any medium necessitates knowing it thoroughly
 In your careers, the software, languages, and platforms might be different, and to some extent, are ever-changing–but the design ideas and considerations are analogous and universal. To understand design for the web is to understand interactive design. And in our lives today, to understand interactive design is to understand all design.
 
 <blockquote
-	@attribution="Abigail Disney"
+	@attribution="Abigail Disney, 2021"
 	@citation="https://www.theatlantic.com/ideas/archive/2021/06/abigail-disney-rich-protect-dynastic-wealth-propublica-tax/619212/"
 	>
 

@@ -39,7 +39,7 @@ There was a confluence of events that allowed this: modern, <nobr>self-updating<
 </figure>
 
 <blockquote
-	@attribution="Bruce Lee"
+	@attribution="Bruce Lee, 1971"
 	@citation="https://www.youtube.com/watch?v=UE8QBufrxCA"
 	>
 
@@ -52,7 +52,7 @@ There was a confluence of events that allowed this: modern, <nobr>self-updating<
 </blockquote>
 
 <blockquote
-	@attribution="Josh Clark"
+	@attribution="Josh Clark, 2012"
 	@citation="https://bigmedium.com/jhc/prez/mobile-myths.pdf"
 	>
 
@@ -106,7 +106,7 @@ Websites at the time were often designed to a [standard width](https://960.gs) (
 You’ll [see this `meta` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag) in the `head` of most websites, now:
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 ```
 
 This `meta` element tells the browser *not* to do this scaling. It says, *“I have a responsive design! Render me at my actual size. My content can reflow.”*
@@ -198,7 +198,7 @@ This is done in steps, at different widths, that we call *breakpoints*—the win
 <!-- .intro -->
 
 <blockquote
-	@attribution="Josh Brewer"
+	@attribution="Josh Brewer, 2012"
 	@citation="https://twitter.com/jbrewer/status/178528003402379265"
 	>
 
@@ -520,7 +520,7 @@ p {
 </figure>
 
 <blockquote
-	@attribution="Tim Berners-Lee"
+	@attribution="Tim Berners-Lee, 1997"
 	@citation="https://www.w3.org/Press/IPO-announce"
 	>
 

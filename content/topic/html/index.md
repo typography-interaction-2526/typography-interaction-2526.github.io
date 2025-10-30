@@ -42,7 +42,7 @@ We call these [*semantic* elements](https://developer.mozilla.org/en-US/docs/Glo
 </div>
 
 <blockquote
-	@attribution="Tim Berners-Lee"
+	@attribution="Tim Berners-Lee, 2001"
 	@citation="https://www.lassila.org/publications/2001/SciAm.pdf"
 	>
 
@@ -341,7 +341,7 @@ But obviously, the left one here is much more readable to us humans. We can use
 There are a lot of common patterns used—like indenting to indicate hierarchy/nesting. But there are also no wrong ways to do it! In HTML, spaces are code *ergonomics* for you—just like a good chair or desk—that allow you to work more comfortably.
 
 <blockquote
-	@attribution="Guido van Rossum"
+	@attribution="Guido van Rossum, 2001"
 	@citation="https://peps.python.org/pep-0008/"
 	>
 
@@ -518,7 +518,7 @@ We haven’t applied any styles/CSS here yet, so everything we see in these exam
 This is what the web was, before CSS! But as a designer, rarely what you want. We’ll get into writing our own styles in the coming weeks.
 
 <blockquote
-	@attribution="W3C, HTML Design Principles"
+	@attribution="W3C, HTML Design Principles, 2007"
 	@citation="https://www.w3.org/TR/html-design-principles/#priority-of-constituencies"
 	>
 

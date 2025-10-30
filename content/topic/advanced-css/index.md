@@ -6,7 +6,7 @@
 Our HTML/CSS focus up to this point has been relatively broad, to start with the basics. Here we want to sand down some of the rough edges, and introduce you to some specific, advanced techniques you can use to refine and enliven your work—still with just CSS, no JavaScript (yet)!
 
 <blockquote
-	@attribution="William of Ockham"
+	@attribution="William of Ockham, 1324"
 	@citation="https://mathshistory.st-andrews.ac.uk/Biographies/Ockham"
 	>
 
@@ -432,7 +432,7 @@ For accessibility, it is best-practice to *scope* your transitions and animation
 <!-- .intro -->
 
 <blockquote
-	@attribution="Stan Lee"
+	@attribution="Stan Lee, 1962"
 	@citation="https://en.wikipedia.org/wiki/With_great_power_comes_great_responsibility"
 	>
 
