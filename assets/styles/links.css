@@ -139,6 +139,7 @@ summary {
 
 			> :is(code, kbd, samp) {
 				background-color: initial;
+				color:            inherit;
 				font-size:        inherit;
 				padding:          initial;
 				position:         relative;
