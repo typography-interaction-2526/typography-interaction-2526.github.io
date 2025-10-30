@@ -275,32 +275,37 @@ Always strive for this kind of broad benefit (a.k.a. *universal design*) in all 
 
 ## Responsive Images
 
-### `picture` / `source`
-
 With regards to their layout, you make images responsive in the same way you (should) make all your page structure responsive—by writing [*mobile-first*](/topic/responsive/#mobile-first-design) front-end for their containers. You can change their flow, size, shape, and <nobr>so-on</nobr>—all via the box you put them in.
 
-But using images introduces some additional considerations, going across breakpoints. You might want to serve/show *different* images at different sizes—whether for dimensional (file-size, bandwidth, performance) or art-direction (scale, crop) reasons. The exact same image `src` file is *rarely* ideal at both `375px` and `2560px`.
+But using images introduces some additional considerations, going across breakpoints. You might want to serve/show *different* images at different sizes—whether for dimensional (file-size, bandwidth, performance) or <nobr>art-direction</nobr> (scale, crop) reasons.
 
-Our venerable `<img>` element added some control for this with the addition of the [`srcset`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset) and [`sizes`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes) attributes. But we think it is much easier (at least ergonomically) to skip right into using the modern [`picture` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture).
-<!-- .add-before--3 -->
+The exact same image file is *rarely* ideal at both `375px` and `2560px`.
+<!-- .intro -->
+
+### `picture` / `source`
+
+Our venerable `<img>` element added some control for this with the addition of the [`srcset`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset) and [`sizes`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes) attributes. But we think it is much easier (at least ergonomically) to skip right into using the modern `picture` container element.
 
 - [<cite>`picture` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture)
-	These containers allow you to make your `img` responsive.
-	<!-- .link-list .right style="--rows: 2" -->
+- [<cite>`source` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source)
+	These containers/children allow you to make your `img` responsive.
+<!-- .right .rows--2 -->
 
 The `<picture>` element is a wrapper/container for an `<img>`, giving it alternate `<source>` tags that offer different image files for different scenarios. They use [media-query-like](/topic/responsive/#media-queries) syntax to change what image is loaded and displayed:
 
 <figure
 	@caption="This is all in the HTML; there is no (relevant) CSS. Adjust the divider to see the swaps!"
 	@source="picture/preview"
-	@style="--lines: 19"
+	@style="--lines: 21"
 	>
 </figure>
 
 Note that you still include the `<img>` as a *fallback*—put your largest size there. We’ve found it helpful to follow the same *mobile-first* philosophy here as you do in the rest of your code—putting your smaller images first, and your larger lower. You can have as many `<source>` elements as you need—for image sizing, crops, or both.
 
+*Unlike* CSS’s cascade, though—the browser stops at the first “matching” image! (So it doesn’t download any unnecessary files.) Thus we use `width <` limiting queries here, instead of our usual `>`.
+
 Responsive images (like the rest of this) can get [very complicated](https://web.dev/learn/design/picture-element/), very quickly—so always start with the basics (and mobile) first.
-<!-- .add-before .balance .bold .scale--h4 -->
+<!-- .intro -->
 
 ## SVG<small>s</small> for UI
 

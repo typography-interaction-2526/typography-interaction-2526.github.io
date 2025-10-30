@@ -6,12 +6,13 @@
 		<link href="style.css" rel="stylesheet">
 	</head>
 	<body>
-		<section>
+		<figure>
 			<picture>
-				<source media="(max-width: 480px)" srcset="tim.jpg">
-				<source media="(max-width: 640px)" srcset="tim--md.jpg">
-				<img alt="Tim Berners-Lee at a computer." src="tim--lg.jpg">
+				<source media="(width < 450px)" srcset="tim.jpg">
+				<source media="(width < 550px)" srcset="tim--md.jpg">
+				<img src="tim--lg.jpg" alt="Tim Berners-Lee at a computer.">
 			</picture>
-		</section>
+			<figcaption>Tim Berners-Lee at a computer.</figcaption>
+		</figure>
 	</body>
 </html>
