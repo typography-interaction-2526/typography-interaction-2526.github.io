@@ -309,17 +309,17 @@ Responsive images (like the rest of this) can get [very complicated](https://web
 
 ## SVG<small>s</small> for UI
 
-SVG&NoBreak;s are a (digital) designers best friend—mixing the adaptability and maintainability of code with the freedom and flexibility of visual design.
+SVG&NoBreak;s are a (digital) designer’s best friend—mixing the adaptability and maintainability of code with the freedom and flexibility of visual design.
 
-- [<cite>Including Vector Graphics in HTML – MDN">](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML#what_is_svg)
+- [<cite>Including Vector Graphics in HTML – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML#what_is_svg)
 	Good overview.
 
-- [<cite>How to Code SVG Icons by Hand">](https://www.aleksandrhovhannisyan.com/blog/svg-tutorial/)
+- [<cite>How to Code SVG Icons by Hand</cite>](https://www.aleksandrhovhannisyan.com/blog/svg-tutorial/)
 	Aleksandr Hovhannisyan goes deep on making SVG&NoBreak;s. This is how the *Pros* do.
-	<!-- .link-list .right style="--rows: 3" -->
+<!-- .right .rows--3 -->
 
-Anything you can draw in Figma (or Sketch, or Illustrator before it) lends itself to this hybrid representation. It’s common to export out `.svg` vector work from a design program, but you can also create (or at least edit) these files yourself—just like any other code:
-<!-- .add-after -->
+Anything you can draw in Figma (or Sketch, or Illustrator before it) lends itself to this hybrid representation. It’s common to export out `.svg` vector work from a design program, but you can also create (or at least edit) these files yourself—just like any other code:
+<!-- .after -->
 
 ```html
 <svg width="48" height="40" viewBox="0 0 48 40" xmlns="http://www.w3.org/2000/svg">
@@ -328,17 +328,21 @@ Anything you can draw in Figma (or Sketch, or Illustrator before it) lends itsel
 </svg>
 ```
 
-In addition to being our only vector/scaleable format, SVG&NoBreak;s have another trick up their sleeve. You can use the files as a `src`, like all the examples above—but their code can also be included directly into your HTML. This is called *inlining* (though some folks say *embedding*):
-<!-- .add-before--3 -->
+In addition to being our only vector/scaleable format, SVG&NoBreak;s have another trick up their sleeve. You can use the files as a `src`, like all the examples above—but their code can also be included directly into your HTML! This is called *inlining* (though some folks say *embedding*):
+<!-- .before--3 -->
 
 <figure
 	@caption="Be sure to look at the `styles.css`—targeting the SVG nodes just like any other HTML elements!"
 	@source="svg/preview"
-	@style="--lines: 20"
+	@style="--lines: 21"
 	>
 </figure>
 
-When targeting (or directly editing) SVG contents, note they have [slightly different syntax](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes) than HTML/CSS—using `fill` and `stroke` instead of `color` and `border`, for example. Also remember that `width` and `height` attributes will fix the SVG size (just like on an `img`); use the [`viewBox` attribute](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox) if you want them to scale.
+When targeting (or directly editing) SVG contents, note they have slightly different syntax than HTML/CSS—using `fill` and `stroke` instead of `background-color` and `border`, for example. Also remember that `width` and `height` attributes will set the default SVG size (just like on an `img`)—but you can override this with your styles.
+
+- [<cite>Fills and strokes – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes)
+	HTML/CSS are nothing if not inconsistent.
+<!-- .right  -->
 
 <blockquote
 	@attribution="Ben Shneiderman, 1999"

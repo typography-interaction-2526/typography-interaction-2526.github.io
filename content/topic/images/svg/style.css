@@ -6,6 +6,7 @@ body {
 
 svg {
 	background-color: deepskyblue; /* Just to see the edges! */
+	block-size: 50vw;
 
 	line {
 		stroke: tomato;
@@ -14,6 +15,6 @@ svg {
 
 	polyline {
 		fill: gold;
-		stroke: none; /* Override the attribute in the code. */
+		stroke: none; /* Overrides the attribute in the code. */
 	}
 }
