@@ -85,37 +85,44 @@ There are several commonly used image formats on the web, each with their own pu
 	They store the vectors in code (a bit like HTML, we’ll see), and can be scaled cleanly for different sizes/resolutions. You can also target them with CSS, if they are *inlined* (embedded) directly into your DOM.
 
 	Everyone says *S-V-G*. <!-- .note -->
-<!-- .balance -->
-
-<style>
-	dt { margin-block-start: 2rlh }
-
-	dd img {
-		margin-block-start: 2rlh;
-		block-size:         calc(3rlh + 1rcap);
-		align-self:         start;
-	}
-</style>
+<!-- .balance #formats -->
 
 ### “Modern” Formats
 
 After *years* of discussion and [competing standards](https://xkcd.com/927/), several “modern” replacement formats are starting to gain browser support and developer/designer traction. They are all designed to overcome the various shortcomings of the legacy formats above—usually around compression efficiency. But it’s still a confusing, evolving mess out there! Here are some you might encounter:
 
-- [<cite>AVIF</cite>](https://en.wikipedia.org/wiki/AVIF)
-	*AV1 Image File Format*, the new(est) replacement for everything. It… *might* be the next big one.
+[<cite>AVIF</cite>](https://en.wikipedia.org/wiki/AVIF)
 
-- [<cite>HEIC&thinsp;/&thinsp;HEIF</cite>](https://en.wikipedia.org/wiki/High_Efficiency_Image_File_Format)
-	*High Efficiency Image File Format*, intended to replace JPG&thinsp;s—you might have seen `.heic` from your iPhones and annoying folks.
+:	*AV1 Image File Format*, the new(est) replacement for everything. It… *might* be the next big one.
+	<!-- .note -->
 
-- [<cite>JPEG XL</cite>](https://en.wikipedia.org/wiki/JPEG_XL)
-	I guess the “L” is for long-term? This is a competitor to AVIF as the *One Format to Rule Them All*.
+[<cite>HEIC&thinsp;/&thinsp;HEIF</cite>](https://en.wikipedia.org/wiki/High_Efficiency_Image_File_Format)
 
-- [<cite>WebP</cite>](https://en.wikipedia.org/wiki/WebP)
-	*Web Picture format*, Google’s been pushing this since 2010—the first of these improved formats. Finally has pretty wide support.
-<!-- .link-list .balance -->
+:	*High Efficiency Image File Format*, intended to replace JPG&NoBreak;s—you might have seen `.heic` from your iPhones, annoying folks.
+	<!-- .note -->
 
-You still can’t go wrong with GIF/JPG/PNG/SVG&thinsp;s, used appropriately.
-<!-- .scale--h4 .bold .add-before -->
+[<cite>JPEG XL</cite>](https://en.wikipedia.org/wiki/JPEG_XL)
+
+:	I guess the “L” is for long-term? This is a competitor to AVIF as the *One Format to Rule Them All*.
+	<!-- .note -->
+
+[<cite>WebP</cite>](https://en.wikipedia.org/wiki/WebP)
+
+:	<span class="note">*Web Picture format*, Google’s been pushing this since 2010—the first of these improved formats. Finally has pretty wide support.</span>
+<!-- .balance .before--2 -->
+
+You still can’t go wrong with <nobr>GIF&ZeroWidthSpace;/&ZeroWidthSpace;JPG&ZeroWidthSpace;/&ZeroWidthSpace;PNG&ZeroWidthSpace;/&ZeroWidthSpace;SVG<sub>s</sub></nobr>, used appropriately!
+<!-- .intro .before--2 -->
+
+<style>
+	#formats dt { margin-block-start: 2rlh }
+
+	dd img {
+		margin-block-start: 1rlh;
+		block-size:         calc(3rlh + 1rcap);
+		align-self:         start;
+	}
+</style>
 
 ## Sizing and Containers
 
