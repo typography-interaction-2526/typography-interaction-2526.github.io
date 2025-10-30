@@ -4,19 +4,23 @@
 	const week = 11
 </script>
 
+## A thousand words?
+
 Let’s look at the specifics around using images on the web! (Finally.)
 
-- [<cite>Images in HTML – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [<cite>HTML Images – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 	Pretty good overview.
 
 - [<cite>Choose the Right Image Format – web.dev</cite>](https://web.dev/choose-the-right-image-format/)
 	Also discusses *Retina*/High DPI (Hi&thinsp;DPI) screens.
 	<!-- .link-list .right style="--rows: 3" -->
+	Also discusses *Retina*/High DPI (Hi&NoBreak;DPI) screens.
+<!-- .right .rows--3 -->
 
 Remember that images *weren’t* a part of the [early web](/topic/everything/#when-was-the-web-invented), and so—much like CSS—can feel somewhat “bolted on” and are still often tricky to work with. (Our guy Tim Berners-Lee was even [reticent](https://www.wired.com/1997/04/a-brief-history-of-html/)). It has gotten much better recently, though!
 
 <blockquote
-	@attribution="Marc Andreessen"
+	@attribution="Marc Andreessen, 1993"
 	@citation="http://1997.webhistory.org/www.lists/www-talk.1993q1/0182.html"
 	>
 
@@ -24,19 +28,18 @@ I'd like to propose a new, optional HTML tag: `IMG`
 
 Required argument is `SRC="url"`.
 
-This names a bitmap or pixmap file for the browser to attempt to pull over the network and interpret as an image, to be embedded in the text at the point of the tag's occurrence. An example is:
+This names a bitmap file for the browser to attempt to pull over the network and interpret as an image, to be embedded in the text at the point of the tag's occurrence. An example is:
 
-`<IMG SRC="file://foobar.com/foo/bar/blargh.xbm">`
+`<IMG SRC="file://foobar.com/​foo/bar/blargh.xbm">`<!-- style="overflow-wrap: anywhere; white-space: normal" -->
 
 …
-<!-- .secondary -->
 
-Let me know what you think………
+Let me know what you think.&NoBreak;.&NoBreak;.&NoBreak;.&NoBreak;.&NoBreak;.&NoBreak;.&NoBreak;.&NoBreak;.
 
 </blockquote>
 
 (I DON’T KNOW IF WE TOLD YOU, BUT HTML [USED TO SHOUT](https://www.w3.org/TR/html40/struct/global.html).)
-<!-- .secondary -->
+<!-- .note -->
 
 ## Image Formats!
 
@@ -98,10 +101,6 @@ There are several commonly used image formats on the web, each with their own pu
 		align-self: start;
 	}
 </style>
-
-<!-- ### Filesize
-
-TKTKTK -->
 
 ### “Modern” Formats
 
@@ -322,7 +321,7 @@ In addition to being our only vector/scaleable format, SVGs have another trick u
 When targeting (or directly editing) SVG contents, note they have [slightly different syntax](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes) than HTML/CSS—using `fill` and `stroke` instead of `color` and `border`, for example. Also remember that `width` and `height` attributes will fix the SVG size (just like on an `img`); use the [`viewBox` attribute](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox) if you want them to scale.
 
 <blockquote
-	@attribution="Ben Shneiderman"
+	@attribution="Ben Shneiderman, 1999"
 	@citation="https://www.cs.umd.edu/~ben/papers/Shneiderman2001Supporting.pdf"
 	class="add-before--3"
 	>
@@ -331,5 +330,5 @@ A picture is often said to be worth a thousand words. Similarly, an interface is
 
 </blockquote>
 
-<!-- Talk about file-sizes? -->
-<!-- How you make images? -->
+<!-- TODO Talk about file-sizes? -->
+<!-- TODO How you make/save images? -->
