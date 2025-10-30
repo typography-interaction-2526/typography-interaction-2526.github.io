@@ -42,9 +42,9 @@ Let me know what you think.&NoBreak;.&NoBreak;.&NoBreak;.&NoBreak;.&NoBreak;.&No
 ## Image Formats!
 
 There are several commonly used image formats on the web, each with their own purpose:
-<!-- .add-after--3 .balance .bold .scale--h4 -->
+<!-- .intro -->
 
-[<cite>`.gif`&numsp;Graphics Interchange Format</cite>](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format)
+[<cite>`.gif` / Graphics Interchange Format</cite>](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format)
 
 :	<img src="tim.gif">
 
@@ -52,9 +52,9 @@ There are several commonly used image formats on the web, each with their own pu
 
 	GIF compression is primitive and so they can quickly have *huge* file-sizes—and can still slow down computers (downloading and rendering), even now. Be careful with these. (If you have longer motion needs, consider a proper [`video` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video).)
 
-	Eric and I say GIF with a hard *G* (as in *gift*), and we are your instructors and are right. <!-- .secondary -->
+	We say GIF with a hard *G* (as in *gift*), and we are your instructors and are right. <!-- .note -->
 
-[<cite>`.jpg`&numsp;Joint Photographic [Experts] Group</cite>](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image)
+[<cite>`.jpg` / Joint Photographic <br>[Experts] Group</cite>](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image)
 
 :	<img src="tim.jpg">
 
@@ -62,9 +62,9 @@ There are several commonly used image formats on the web, each with their own pu
 
 	The combination of busyness and blurriness in photos tends to hide the resulting *compression artifacts* better than simple illustrations/graphics, so JPG lives on as a common, widely-used image format. When you are looking at a photo online, it is almost certainly a JPG.
 
-	Folks pretty much always call these *jay-pegs*. <!-- .secondary -->
+	Folks pretty much always call these *jay-pegs*. <!-- .note -->
 
-[<cite>`.png`&numsp;Portable Network Graphics</cite>](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics)
+[<cite>`.png` / Portable Network Graphics</cite>](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics)
 
 :	<img src="tim.png">
 
@@ -74,9 +74,9 @@ There are several commonly used image formats on the web, each with their own pu
 
 	You’ll often use PNG&thinsp;s for illustrations and graphics—things with large areas of repeated colors—or where you need exact color accuracy, or the transparency. (But many of these should be SVG&thinsp;s, up next.) You *can* save photos as PNG&thinsp;s, but they will be much larger than JPG&thinsp;s. It’s a good “utility” format.
 
-	Many people use the acronym; you’ll also sometimes hear *pings*. <!-- .secondary -->
+	Many people use the acronym; you’ll also sometimes hear *pings*. <!-- .note -->
 
-[<cite>`.svg`&numsp;Scalable Vector Graphics</cite>](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics)
+[<cite>`.svg` / Scalable Vector Graphics</cite>](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics)
 
 :	<img src="tim.svg">
 
@@ -84,19 +84,16 @@ There are several commonly used image formats on the web, each with their own pu
 
 	They store the vectors in code (a bit like HTML, we’ll see), and can be scaled cleanly for different sizes/resolutions. You can also target them with CSS, if they are *inlined* (embedded) directly into your DOM.
 
-	Everyone says *S-V-G*. <!-- .secondary -->
+	Everyone says *S-V-G*. <!-- .note -->
+<!-- .balance -->
 
 <style>
-	dt {
-		margin-inline-start:  -0.25em;
-		padding-inline-start: initial;
-
-		&::before { display: none }
-	}
+	dt { margin-block-start: 2rlh }
 
 	dd img {
-		block-size: var(--typography--line--3);
-		align-self: start;
+		margin-block-start: 2rlh;
+		block-size:         calc(3rlh + 1rcap);
+		align-self:         start;
 	}
 </style>
 
