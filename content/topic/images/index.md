@@ -126,15 +126,15 @@ You still can’t go wrong with <nobr>GIF&ZeroWidthSpace;/&ZeroWidthSpace;JPG&Ze
 
 ## Sizing and Containers
 
-If you remember *waaaay* back to our [HTML intro](/topic/html/#common-elements), images are a special HTML element:
-<!-- .balance .add-after -->
+If you remember *waaaay* back to our [HTML intro](/topic/html/#images), images are a special HTML element:
+<!-- .balance .after -->
 
 ```html
 <img src="tim.jpg" alt="Tim Berners-Lee at a computer.">
 ```
 
 The `src` attribute can point to a local image file (as it does here—a JPG in the same directory) or an external URL! The `alt` provides a description for [accessibility/screen readers](https://axesslab.com/alt-texts/).
-<!-- .add-before -->
+<!-- .before .balance -->
 
 ### Intrinsic and Inline
 
@@ -142,17 +142,19 @@ By default, images will scale to their *intrinsic* size—the (`1x`) pixel dimen
 <!-- .balance  -->
 
 <figure
-	@caption="This image file is 250 pixels wide, and is (likely) blurry on your (probably) high-resolution display. Also note the extra space at the bottom, from `display: inline;`"
+	@caption="This image file is 250 (actual) pixels wide, and is (likely) blurry on your (probably) high-resolution display. Also note the extra space at the bottom, from `display: inline;`&#x202F;!"
 	@source="image/preview"
-	@style="--lines: 15"
+	@style="--lines: 17"
 	>
 </figure>
 
-This intrinsic/inline behavior is rarely what you want, though—more often your image should be sized *from* your design, not vice-versa. Also by default the image is scaled to [CSS pixels](https://tomroth.com.au/dpr/), so it is blurry on modern *HiDPI* (a.k.a. [*retina*](https://en.wikipedia.org/wiki/Retina_display) / `2x`, even `3x`) screens—which is really most of us, these days.
+This intrinsic/inline behavior is rarely what you want, though—more often your image should be sized *from* your design, not vice-versa. Also by default the image is scaled to [CSS pixels](https://tomroth.com.au/dpr/), so it is blurry on modern *Hi&NoBreak;DPI* (a.k.a. [*retina*](https://en.wikipedia.org/wiki/Retina_display)/`2x`, even `3x`) screens—which is really most of our screens, these days.
 
 <aside>
 
-Most [resets (like ours)](/topic/css/#resets) include a `max-inline-size: 100%` for images—otherwise, large images will often poke out of their containers, by default!
+<mark>Images must be controlled at all times</mark>
+
+Most [resets (like ours)](/topic/css/#resets) include a `max-inline-size: 100%` for images—otherwise, large images will often poke/overflow out of their containers, by default!
 
 </aside>
 
