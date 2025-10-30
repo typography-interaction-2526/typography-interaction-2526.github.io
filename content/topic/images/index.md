@@ -12,8 +12,6 @@ Let’s look at the specifics around using images on the web! (Finally.)
 	Pretty good overview.
 
 - [<cite>Choose the Right Image Format – web.dev</cite>](https://web.dev/choose-the-right-image-format/)
-	Also discusses *Retina*/High DPI (Hi&thinsp;DPI) screens.
-	<!-- .link-list .right style="--rows: 3" -->
 	Also discusses *Retina*/High DPI (Hi&NoBreak;DPI) screens.
 <!-- .right .rows--3 -->
 
