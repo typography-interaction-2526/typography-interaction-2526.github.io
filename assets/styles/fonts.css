@@ -87,6 +87,8 @@
 		--left:   0.079em;
 		--right:  0.139em;
 		--stroke: 0.079em;
+
+		:is(sup, sub) { -webkit-text-stroke-width: 0.035em }
 	}
 
 	@container style(--weight: 500) {
