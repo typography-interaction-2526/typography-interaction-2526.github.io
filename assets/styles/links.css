@@ -137,6 +137,8 @@ summary {
 			position: relative;
 			word-break: break-word; /* TODO This is deprecated? */
 
+			> abbr { color: inherit }
+
 			> :is(code, kbd, samp) {
 				background-color: initial;
 				color:            inherit;
