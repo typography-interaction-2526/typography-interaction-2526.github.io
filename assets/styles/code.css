@@ -9,14 +9,15 @@ code, kbd, samp {
 :where(*:not(pre)) > code,
 kbd,
 samp {
-	background-color:    var(--code);
-	border-radius:       calc(2 * var(--stroke));
-	inset-block-start:   0.03em;
-	line-height:         initial;
-	padding-block-end:   0.2em;
-	padding-block-start: 0.3em;
-	padding-inline:      0.5em;
-	user-select:         all;
+	background-color:     var(--code);
+	border-radius:        calc(2 * var(--stroke));
+	box-decoration-break: clone;
+	inset-block-start:    0.03em;
+	line-height:          initial;
+	padding-block-end:    0.2em;
+	padding-block-start:  0.3em;
+	padding-inline:       0.5em;
+	user-select:          all;
 }
 
 kbd {
