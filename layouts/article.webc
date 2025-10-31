@@ -120,7 +120,7 @@
 	article {
 		align-items:               start;
 		display:                   grid;
-		grid-template-areas:       'header' 'print' 'main' 'bottom'; /* Stacked. */
+		grid-template-areas:       'header' 'print' 'main'; /* Stacked. */
 		scroll-margin-block-start: 0;
 
 		> header       { grid-area: header }
