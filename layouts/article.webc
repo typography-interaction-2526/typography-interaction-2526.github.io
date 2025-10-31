@@ -177,7 +177,9 @@
 			webc:if="$data.page.url === '/syllabus/'"
 			webc:import="print.webc"
 		></block>
-		<block webc:import="nav.webc"></block>
+		<block webc:import="nav.webc">
+			<block webc:import="menu.webc"></block>
+		</block>
 		<!-- TODO Come back to this! -->
 		<!-- <block webc:import="toc.webc"></block> -->
 		<main>

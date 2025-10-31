@@ -13,5 +13,5 @@
 </style>
 
 <nav webc:root="override">
-	<block webc:import="menu.webc"></block>
+	<slot></slot>
 </nav>
