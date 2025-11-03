@@ -241,9 +241,7 @@ However this isn’t very semantic, as it blurs the content/presentation boundar
 
 <mark>Accessibility is your responsibility</mark>
 
-Always ask yourself, “would this page make sense if I couldn’t see this image?”
-
-[If the answer](https://www.w3.org/WAI/tutorials/images/decision-tree/) is “no,” then use an `<img>` with an `alt`, instead—using the `alt` text to convey the *meaning* of the image in your page.
+Always ask yourself, “would this page make sense if I couldn’t see this image?” [If the answer](https://www.w3.org/WAI/tutorials/images/decision-tree/) is “no,” then use an `<img>` with an `alt`, instead—using the `alt` text to convey the *meaning* of the image in your page.
 
 </aside>
 
@@ -296,7 +294,7 @@ The `<picture>` element is a wrapper/container for an `<img>`, giving it alterna
 <figure
 	@caption="This is all in the HTML; there is no (relevant) CSS. Adjust the divider to see the swaps!"
 	@source="picture/preview"
-	@style="--lines: 21"
+	@style="--lines: 22"
 	>
 </figure>
 
