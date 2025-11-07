@@ -57,7 +57,7 @@ There are several commonly used image formats on the web, each with their own pu
 
 :	<img src="tim.jpg">
 
-	Ancient-but-timeless raster/bitmap format that remains a good choice for photos. JPG&thinsp;s can compress images down to much, much smaller file-sizes with adjustable, *lossy* [compression ratios](https://en.wikipedia.org/wiki/JPEG#Effects_of_JPEG_compression).
+	Ancient-but-timeless raster/bitmap format that remains a good choice for photos. JPG&NoBreak;s can compress images down to much, much smaller file-sizes with adjustable, *lossy* [compression ratios](https://en.wikipedia.org/wiki/JPEG#Effects_of_JPEG_compression).
 
 	The combination of busyness and blurriness in photos tends to hide the resulting *compression artifacts* better than simple illustrations/graphics, so JPG lives on as a common, widely-used image format. When you are looking at a photo online, it is almost certainly a JPG.
 
@@ -67,11 +67,11 @@ There are several commonly used image formats on the web, each with their own pu
 
 :	<img src="tim.png">
 
-	Still raster/bitmap, but better than GIF&thinsp;s (if you don’t need animation) and JPG&thinsp;s (if you don’t care about file-size) as they can use [*lossless* compression](https://en.wikipedia.org/wiki/Portable_Network_Graphics#Advantages)—meaning they won’t leave crunchy edges around high-contrast areas.
+	Still raster/bitmap, but better than GIF&NoBreak;s (if you don’t need animation) and JPG&NoBreak;s (if you don’t care about file-size) as they can use [*lossless* compression](https://en.wikipedia.org/wiki/Portable_Network_Graphics#Advantages)—meaning they won’t leave crunchy edges around high-contrast areas.
 
 	They also support [<nobr>*alpha-channel*</nobr>](https://en.wikipedia.org/wiki/Alpha_compositing) (*partial/smooth/aliased/masked*) transparency, letting you overlay things on other backgrounds.
 
-	You’ll often use PNG&thinsp;s for illustrations and graphics—things with large areas of repeated colors—or where you need exact color accuracy, or the transparency. (But many of these should be SVG&thinsp;s, up next.) You *can* save photos as PNG&thinsp;s, but they will be much larger than JPG&thinsp;s. It’s a good “utility” format.
+	You’ll often use PNG&NoBreak;s for illustrations and graphics—things with large areas of repeated colors—or where you need exact color accuracy, or the transparency. (But many of these should be SVG&NoBreak;s, up next.) You *can* save photos as PNG&NoBreak;s, but they will be much larger than JPG&NoBreak;s. It’s a good “utility” format.
 
 	Many people use the acronym; you’ll also sometimes hear *pings*. <!-- .note -->
 
@@ -79,7 +79,7 @@ There are several commonly used image formats on the web, each with their own pu
 
 :	<img src="tim.svg">
 
-	Finally, a [vector format](https://en.wikipedia.org/wiki/Vector_graphics)! SVG&thinsp;s should be used for any icons, logos, or illustrations where you have access to the original source artwork for the vectors (shapes). You can also “hand” draw them yourself, in code! More on that [below](#svg-s-for-ui).
+	Finally, a [vector format](https://en.wikipedia.org/wiki/Vector_graphics)! SVG&NoBreak;s should be used for any icons, logos, or illustrations where you have access to the original source artwork for the vectors (shapes). You can also “hand” draw them yourself, in code! More on that [below](#svg-s-for-ui).
 
 	They store the vectors in code (a bit like HTML, we’ll see), and can be scaled cleanly for different sizes/resolutions. You can also target them with CSS, if they are *inlined* (embedded) directly into your DOM.
 
@@ -95,7 +95,7 @@ After *years* of discussion and [competing standards](https://xkcd.com/927/), se
 :	*AV1 Image File Format*, the new(est) replacement for everything. It… *might* be the next big one.
 	<!-- .note -->
 
-[<cite>HEIC&thinsp;/&thinsp;HEIF</cite>](https://en.wikipedia.org/wiki/High_Efficiency_Image_File_Format)
+[<cite>HEIC/HEIF</cite>](https://en.wikipedia.org/wiki/High_Efficiency_Image_File_Format)
 
 :	*High Efficiency Image File Format*, intended to replace JPG&NoBreak;s—you might have seen `.heic` from your iPhones, annoying folks.
 	<!-- .note -->
@@ -171,7 +171,6 @@ No units, even.
 But this *forces* the image into a fixed size, which usually doesn’t work well in our modern, responsive, many-device-width contexts.
 <!-- .before -->
 
-
 So you’ll often want to set images to `display: block;`&#x202F;, and then control their size/positioning via CSS—just like any other elements. Make sure your actual actual image dimensions are (at least) roughly twice their displayed, *CSS-pixel* size, so nothing is blurry:
 <!-- .before--3 -->
 
@@ -197,7 +196,6 @@ CSS also added the `object-fit` and corresponding `object-position` properties f
 	@style="--lines: 29"
 	>
 </figure>
-
 
 ### `aspect-ratio`
 
@@ -351,5 +349,6 @@ A picture is often said to be worth a thousand words. Similarly, an interface is
 
 </blockquote>
 
+<!-- TODO Re-using SVG without re-embedding -->
 <!-- TODO Talk about file-sizes? -->
 <!-- TODO How you make/save images? -->
