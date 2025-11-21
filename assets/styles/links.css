@@ -47,7 +47,7 @@ summary {
 }
 
 /* Inline links. */
-:where(dd, dt, figcaption, p, td, th, main li:not(:has(ol, p, section, ul))) {
+:where(dd, dt, figcaption, h2, h3, h4, p, td, th, main li:not(:has(ol, p, section, ul))) {
 	:where(s),
 	a:where(:not(:has(cite))) {
 		/* Rounded caps. */
