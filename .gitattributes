@@ -1,1 +1,2 @@
+*.md linguist-language=ecmarkup
 *.webc linguist-language=html
