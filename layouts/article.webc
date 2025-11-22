@@ -32,17 +32,21 @@
 
 			event.preventDefault()
 
-			const header = document.querySelector(`header a[href="${event.target.getAttribute('href').split('#')[0]}"]`).closest('header')
+			const href = event.target.getAttribute('href')
+			const header = document.querySelector(`header a[href="${href.split('#')[0]}"]`).closest('header')
 
-			header.scrollIntoView({ block: 'start' })
+			const goToLink = () => window.location = href
 
-			const goToLink = () => window.location = event.target.getAttribute('href')
-
-			'onscrollend' in window
-				? window.addEventListener('scrollend', goToLink)
-				: setTimeout(goToLink, 333)
-
-			setTimeout(goToLink, 1000) // Fallback if it is already at the position.
+			if ((new URL(href, window.location.origin)).pathname === window.location.pathname) {
+				header.scrollIntoView({ block: 'start' })
+			} else if (header.getBoundingClientRect().top === 0) {
+				goToLink()
+			} else {
+				('onscrollend' in window)
+					? window.addEventListener('scrollend', goToLink)
+					: setTimeout(goToLink, 500)
+				header.scrollIntoView({ block: 'start' })
+			}
 		}
 	})
 
