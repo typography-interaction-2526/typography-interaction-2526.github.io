@@ -1,3 +1,9 @@
+<script webc:setup>
+	export const thisWeek = [...$data.collections.weeks]
+		.filter((week) => !week?.data?.draft)
+		.reduce((maxWeek, week) => week.data.week > maxWeek.data.week ? week : maxWeek, { data: { week: -Infinity } })
+</script>
+
 <style webc:scoped>
 	:host {
 		--diameter: 2rcap;
@@ -23,33 +29,36 @@
 		place-self:                 end;
 		position:                   sticky;
 		row-gap:                    var(--gap);
-		transform:                  var(--vertical, 0);
-		transition-delay:           var(--duration);
-		transition-duration:        var(--duration);
-		transition-property:        transform;
-		transition-timing-function: var(--easing);
-		will-change:                transform;
 
 		> li {
 			display:                    grid;
 			margin-inline:              initial; /* Override `typography`. */
-			pointer-events:             auto;
-			transform:                  var(--horizontal, translateX(calc(100% + var(--inset) + 2 * var(--overshoot))) rotate(90deg));
-			transition-delay:           var(--delay, 0);
+			pointer-events:             none;
+			transform:                  var(--vertical, 0);
+			transition-delay:           var(--duration);
 			transition-duration:        var(--duration);
 			transition-property:        transform;
 			transition-timing-function: var(--easing);
 			will-change:                transform;
 
+			&:where(.end, .this:last-child) svg { rotate: 180deg }
+
 			> a {
-				backdrop-filter:  var(--blur);
-				background-color: var(--nav);
-				border-radius:    100%;
-				box-shadow: inset 0 0 var(--stroke) color-mix(in srgb, var(--background), transparent 66%);
-				display:          grid;
-				filter:           drop-shadow(0 0.2rem 0.5rem var(--shadow));
-				margin:           calc(-1 * var(--overshoot));
-				place-items:      center;
+				backdrop-filter:            var(--blur);
+				background-color:           var(--nav);
+				border-radius:              100%;
+				box-shadow:                 inset 0 0 var(--stroke) color-mix(in srgb, var(--background), transparent 66%);
+				display:                    grid;
+				filter:                     drop-shadow(0 0.2rem 0.5rem var(--shadow));
+				margin:                     calc(-1 * var(--overshoot));
+				place-items:                center;
+				pointer-events:             auto;
+				transform:                  var(--horizontal, translateX(calc(100% + var(--inset) + 2 * var(--overshoot))) rotate(90deg));
+				transition-delay:           var(--delay, 0);
+				transition-duration:        var(--duration);
+				transition-property:        transform;
+				transition-timing-function: var(--easing);
+				will-change:                transform;
 
 				&::after { border-radius: inherit }
 
@@ -60,7 +69,8 @@
 					stroke-width: var(--stroke);
 				}
 
-				&[href='#next'] > svg { rotate: 180deg }
+				/* Hide the bar on start/end ones. */
+				:where(&[href='#current'], &[href='#next']) .bar {display: none }
 
 				@supports (font: -apple-system-body) { --shadow: color-mix(in srgb, var(--nav), transparent) }
 			}
@@ -71,16 +81,25 @@
 	}
 
 	/* Undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
-	:host-context(article:not(.start)) li:where(:first-child),
-	:host-context(article:not(.end)) li:where(:last-child) {
-		--delay:      calc(2 * var(--duration));
+	:host-context(article:not(.start)) li.start,
+	:host-context(article:not(.end)) li.end {
+		--delay: calc(2 * var(--duration));
+	}
+
+	:host-context(article.visible) li.this { --delay: var(--duration) }
+
+	:host-context(article:not(.start)) li.start,
+	:host-context(article:not(.end)) li.end,
+	:host-context(article.visible) li.this {
 		--horizontal: 0;
 	}
 
 	/* TODO Some less-brittle way, knowing the size? */
-	:host-context(article.end) { --vertical: translateY(calc(var(--diameter) + var(--gap))) }
-
-	:host-context(article:not(.visible)) li { --horizontal: initial }
+	:host-context(article.end) li.start,
+	:host-context(article.start) li.this:first-child,
+	:host-context(article.end) li.this:first-child {
+		--vertical: translateY(calc(var(--diameter) + var(--gap)));
+	}
 </style>
 <script>
 	// Adjust `#next` scrolling to the end.
@@ -90,18 +109,38 @@
 	}
 </script>
 <menu webc:root="override">
-	<li>
+	<li
+		webc:if="($data.week > thisWeek.data.week) && ($data.page.url !== thisWeek.url)"
+		class="this"
+	>
+		<a
+			:href="thisWeek.url"
+			@html="inlineSvg('assets/icons/arrow-bar.svg')"
+			aria-label="This week"
+		></a>
+	</li>
+	<li class="start">
 		<a
 			@html="inlineSvg('assets/icons/arrow-bar.svg')"
 			aria-label="Start"
 			href="#current"
 		></a>
 	</li>
-	<li>
+	<li class="end">
 		<a
 			@html="inlineSvg('assets/icons/arrow-bar.svg')"
 			aria-label="End"
 			href="#next"
+		></a>
+	</li>
+	<li
+		webc:if="((!$data.week) || ($data.week < thisWeek.data.week)) && ($data.page.url !== thisWeek.url)"
+		class="this"
+	>
+		<a
+			:href="thisWeek.url"
+			@html="inlineSvg('assets/icons/arrow-bar.svg')"
+			aria-label="This week"
 		></a>
 	</li>
 </menu>
