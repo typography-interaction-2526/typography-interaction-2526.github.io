@@ -48,6 +48,8 @@ td:first-child {
 	}
 
 	small { text-transform: initial }
+
+	s { background-position-y: calc(var(--enlargement) + 0.43cap) }
 }
 
 h5, h6 { display: none }
