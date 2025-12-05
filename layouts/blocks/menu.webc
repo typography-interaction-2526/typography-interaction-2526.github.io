@@ -17,18 +17,16 @@
 		--shadow:    var(--nav);
 		--overshoot: 0.2rem;
 
-		display:                    grid;
-		grid-auto-rows:             var(--diameter);
-		grid-template-columns:      var(--diameter);
-		inset-block-end:            0;
-		margin-block-start:         calc(-1 * (var(--diameter) + var(--gap))); /* Offset `#top` one. */
-		overflow:                   clip;
-		padding-block:              var(--inset);
-		padding-inline-end:         var(--inset);
-		padding-inline-start:       var(--inset);
-		place-self:                 end;
-		position:                   sticky;
-		row-gap:                    var(--gap);
+		display:               grid;
+		grid-auto-rows:        var(--diameter);
+		grid-template-columns: var(--diameter);
+		inset-block-end:       0;
+		margin-block-start:    calc(-1 * (var(--diameter) + var(--gap))); /* Offset `#top` one. */
+		overflow:              clip;
+		padding:               var(--inset); /* TODO This is broken in Safari! */
+		place-self:            end;
+		position:              sticky;
+		row-gap:               var(--gap);
 
 		> li {
 			display:                    grid;
