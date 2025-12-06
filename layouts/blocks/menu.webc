@@ -11,7 +11,7 @@
 		--duration: 250ms;
 		--easing:   cubic-bezier(0.68, -0.6, 0.32, 1.6); /* `easeInOutBack` */
 
-		--inset: 2rcap;
+		--inset: var(--diameter);
 
 		--hover:     95%;
 		--shadow:    var(--nav);
@@ -29,7 +29,7 @@
 		row-gap:               var(--gap);
 
 		/* Larger breaks. */
-		@container style(--tablet: true) { --inset: var(--gutter--base) }
+		@container style(--tablet) { --inset: var(--gutter--base) }
 
 		> li {
 			display:                    grid;

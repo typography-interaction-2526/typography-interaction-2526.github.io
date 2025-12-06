@@ -72,9 +72,8 @@
 }
 
 @property --tablet {
-	inherits:      true;
-	initial-value: false;
-	syntax:        '<custom-ident>';
+	inherits: true;
+	syntax:   '<custom-ident>';
 }
 
 @property --columns {
