@@ -47,7 +47,8 @@
 	webc:keep
 	@raw="`@layer components { ${getBundle('css')} }`"
 ></style>
-<style
+<link
 	webc:keep
-	@raw="getBundle('css', 'unlayered')"
-></style>
+	:href="getBundleFileUrl('css', 'unlayered')"
+	rel="stylesheet"
+></link>
