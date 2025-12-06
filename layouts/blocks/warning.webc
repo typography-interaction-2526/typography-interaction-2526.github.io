@@ -1,22 +1,21 @@
 <!--- The `selector()` breaks inside `webc:scoped`, and we probably want these outside cascade layers. --->
 <style webc:bucket="unlayered">
 	#warning {
-		backdrop-filter:     blur(0.25em);
-		background-color:    rgb(0 0 0 / 90%);
-		border-radius:       1em;
-		display:             grid;
-		filter:              drop-shadow(0 0.5em 1em rgb(0 0 0 / 50%));
-		font-size:           85%;
-		inset-block-end:     1em;
-		inset-inline-end:    1em;
-		margin-inline-start: 1em;
-		max-inline-size:     60ch;
-		padding-block:       1em;
-		padding-inline:      1.5em;
-		position:            fixed;
-		row-gap:             0.75em;
-		text-transform:      initial;
-		z-index:             3; /* In front of `nav.webc` */
+		backdrop-filter:  blur(0.25em);
+		background-color: rgb(0 0 0 / 90%);
+		border-radius:    1em;
+		bottom:           1em;
+		display:          grid;
+		filter:           drop-shadow(0 0.5em 1em rgb(0 0 0 / 50%));
+		font-size:        85%;
+		margin-left:      1em;
+		max-width:        60ch;
+		padding:          1em 1.5em;
+		position:         fixed;
+		right:            1em;
+		row-gap:          0.75em;
+		text-transform:   initial;
+		z-index:          3; /* In front of `nav.webc` */
 	}
 
 	#warning > * {
