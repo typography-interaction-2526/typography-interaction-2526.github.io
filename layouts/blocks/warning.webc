@@ -27,10 +27,10 @@
 
 	#warning > h2 { font-weight: bold }
 
-	/* Shows without cascade layers… */
-	@layer { #warning { visibility: hidden } }
+	/* Hide with cascade layer and range syntax support… */
+	@layer { @media (width >= 0) { #warning { visibility: hidden } } }
 
-	/* …and other recent stuff we know we lean on heavily. */
+	/* …but show without other recent stuff we use. */
 	@supports
 		(not (color: color-mix(in srgb, red, red))) or
 		(not (container-type: size)) or
