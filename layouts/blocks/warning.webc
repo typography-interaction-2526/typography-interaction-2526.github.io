@@ -32,18 +32,23 @@
 
 	/* …and other recent stuff we know we lean on heavily. */
 	@supports
-		(not selector(&)) or
-		(not selector(:has(*))) or
 		(not (color: color-mix(in srgb, red, red))) or
 		(not (container: style(--x: ))) or
 		(not (grid-template-columns: subgrid)) or
 		(not (margin-inline: 0)) or
 		(not (text-box: trim-both)) or
+		(not (text-wrap: balance)) or
 		(not (top: 1cap)) or
+		(not (top: 1dvh)) or
 		(not (top: 1lh)) or
 		(not (top: 1rcap)) or
 		(not (top: 1rex)) or
-		(not (top: 1rlh))
+		(not (top: 1rlh)) or
+		(not (width > 1px)) or
+		(not selector(:has(*))) or
+		(not selector(:is(*))) or
+		(not selector(:where(*))) or
+		(not selector(&))
 	{
 		#warning { visibility: visible }
 	}
