@@ -23,7 +23,7 @@
 		inset-block-end:       0;
 		margin-block-start:    calc(-1 * (var(--diameter) + var(--gap))); /* Offset `#top` one. */
 		overflow:              clip;
-		padding:               var(--inset); /* TODO This is broken in Safari! */
+		padding:               var(--inset);
 		place-self:            end;
 		position:              sticky;
 		row-gap:               var(--gap);
