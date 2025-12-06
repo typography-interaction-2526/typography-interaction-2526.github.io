@@ -27,29 +27,30 @@
 
 	#warning > h2 { font-weight: bold }
 
-	/* Hide with cascade layer and range syntax support… */
-	@layer { @media (width >= 0) { #warning { visibility: hidden } } }
-
-	/* …but show without other recent stuff we use. */
-	@supports
-		(not (color: color-mix(in srgb, red, red))) or
-		(not (container-type: size)) or
-		(not (grid-template-columns: subgrid)) or
-		(not (margin-inline: 0)) or
-		(not (text-box: trim-both)) or
-		(not (text-wrap: balance)) or
-		(not (top: 1cap)) or
-		(not (top: 1dvh)) or
-		(not (top: 1lh)) or
-		(not (top: 1rcap)) or
-		(not (top: 1rex)) or
-		(not (top: 1rlh)) or
-		(not selector(:has(*))) or
-		(not selector(:is(*))) or
-		(not selector(:where(*))) or
-		(not selector(&))
-	{
-		#warning { visibility: visible }
+	/* Hide if it supports all the modern stuff we’re using. */
+	@layer {
+		@media (width >= 0) {
+			@supports
+				(color: color-mix(in srgb, red, red)) and
+				(container-type: size) and
+				(grid-template-columns: subgrid) and
+				(margin-inline: 0) and
+				(text-box: trim-both) and
+				(text-wrap: balance) and
+				(top: 1cap) and
+				(top: 1dvh) and
+				(top: 1lh) and
+				(top: 1rcap) and
+				(top: 1rex) and
+				(top: 1rlh) and
+				selector(:has(*)) and
+				selector(:is(*)) and
+				selector(:where(*)) and
+				selector(&)
+			{
+				#warning { visibility: hidden }
+			}
+		}
 	}
 </style>
 
