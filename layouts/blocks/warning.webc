@@ -33,7 +33,6 @@
 	/* …and other recent stuff we know we lean on heavily. */
 	@supports
 		(not (color: color-mix(in srgb, red, red))) or
-		(not (container: style(--x: ))) or
 		(not (grid-template-columns: subgrid)) or
 		(not (margin-inline: 0)) or
 		(not (text-box: trim-both)) or
@@ -44,7 +43,6 @@
 		(not (top: 1rcap)) or
 		(not (top: 1rex)) or
 		(not (top: 1rlh)) or
-		(not (width > 1px)) or
 		(not selector(:has(*))) or
 		(not selector(:is(*))) or
 		(not selector(:where(*))) or
