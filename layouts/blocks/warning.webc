@@ -16,7 +16,6 @@
 		position:            fixed;
 		row-gap:             0.75em;
 		text-transform:      initial;
-		visibility:          hidden;
 		z-index:             3; /* In front of `nav.webc` */
 	}
 
@@ -29,7 +28,10 @@
 
 	#warning > h2 { font-weight: bold }
 
-	/* Recent stuff we know we lean on heavily. */
+	/* Shows without cascade layers… */
+	@layer { #warning { visibility: hidden } }
+
+	/* …and other recent stuff we know we lean on heavily. */
 	@supports
 		(not selector(&)) or
 		(not selector(:has(*))) or
@@ -44,7 +46,7 @@
 	webc:root="override"
 	id="warning"
 >
-	<h2>If you’re seeing this, the site behind is likely (…very) broken!</h2>
-	<p>Hi, there. I use my course sites as little sandboxes to experiment with various “brand new” CSS properties, and your browser does not support (at least) one of them. Apologies. It should always work in current/updating Safari and Chrome.</p>
+	<h2>If you’re seeing this, the site behind is likely broken!</h2>
+	<p>Hi, there. I use my course sites as little sandboxes to experiment with various “brand new” CSS properties, and your browser does not support (at least) one of them. Apologies. It “should” always work in current/updating Safari and Chrome.</p>
 	<p>As I often tell my students: “do as I say, not as I do!” Cheers.</p>
 </aside>
