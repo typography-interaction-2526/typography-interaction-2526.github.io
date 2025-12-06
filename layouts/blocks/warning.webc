@@ -1,6 +1,6 @@
-
-<style webc:scoped>
-	:host {
+<!--- The `selector()` breaks inside `webc:scoped`, and we probably want these outside cascade layers. --->
+<style webc:bucket="unlayered">
+	#warning {
 		backdrop-filter:     blur(0.25em);
 		background-color:    rgb(0 0 0 / 90%);
 		border-radius:       1em;
@@ -20,18 +20,15 @@
 		z-index:             3; /* In front of `nav.webc` */
 	}
 
-	:host > * {
+	#warning > * {
 		color:       white;
 		font-size:   inherit;
 		font-weight: lighter;
 		text-box:    initial;
 	}
 
-	:host > h2 { font-weight: bold }
-</style>
+	#warning > h2 { font-weight: bold }
 
-<!-- The `selector()` breaks inside `webc:scoped`, above. -->
-<style>
 	/* Recent stuff we know we lean on heavily. */
 	@supports
 		(not selector(&)) or
@@ -39,11 +36,14 @@
 		(not (grid-template-columns: subgrid)) or
 		(not (text-box: trim-both))
 	{
-		body > aside:not(._) { visibility: visible }
+		#warning { visibility: visible }
 	}
 </style>
 
-<aside webc:root="override">
+<aside
+	webc:root="override"
+	id="warning"
+>
 	<h2>If you’re seeing this, the site behind is likely (very) broken!</h2>
 	<p>Hi, there. I use my course sites as sandboxes to experiment with various “brand new” CSS properties, and your browser does not support one of them. Apologies. It should always work in current/updating Safari and Chrome.</p>
 	<p>As I often tell my students: do as I say, not as I do! Cheers.</p>

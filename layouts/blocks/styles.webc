@@ -47,3 +47,7 @@
 	webc:keep
 	@raw="`@layer components { ${getBundle('css')} }`"
 ></style>
+<style
+	webc:keep
+	@raw="getBundle('css', 'unlayered')"
+></style>
