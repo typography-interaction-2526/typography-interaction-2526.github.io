@@ -10,7 +10,7 @@ export default {
 	'overrides': [
 		{
 			'customSyntax': 'postcss-html',
-			// 'files': ['**/*.html', '**/*.md', '**/*.webc'],
+			'files': ['**/*.html', '**/*.md', '**/*.webc'],
 		},
 		{
 			'files': ['layouts/blocks/styles.webc'],
