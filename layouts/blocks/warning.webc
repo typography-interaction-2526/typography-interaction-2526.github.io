@@ -33,6 +33,7 @@
 	/* …and other recent stuff we know we lean on heavily. */
 	@supports
 		(not (color: color-mix(in srgb, red, red))) or
+		(not (container-type: size)) or
 		(not (grid-template-columns: subgrid)) or
 		(not (margin-inline: 0)) or
 		(not (text-box: trim-both)) or
