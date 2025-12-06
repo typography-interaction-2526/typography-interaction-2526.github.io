@@ -14,10 +14,12 @@
 
 	--alley:        2rcap;
 	--gutter--base: calc(var(--alley) / 2);
-	--gutter:       max(var(--gutter--base), calc((100vw - (var(--max) / var(--size--root)) * 1rem) / 2));
+	--gutter:       calc(max(var(--gutter--base), calc((100vw - (var(--max) / var(--size--root)) * 1rem) / 2)) + var(--safe-area));
 	--page:         calc(100vw - 2 * var(--gutter));
 	--start:        min(var(--alley), calc(2 * var(--gutter)));
 	--end:          calc(2 * var(--start));
+
+	--safe-area: calc(env(safe-area-inset-left) * 0.61); // Optically even around island.
 
 	--disabled--opacity: 20%;
 	--disabled:          color-mix(in srgb, var(--color, currentcolor), transparent calc(100% - var(--disabled--opacity)));
