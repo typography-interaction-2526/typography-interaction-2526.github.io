@@ -31,6 +31,7 @@
 	@layer {
 		@media (width >= 0) {
 			@supports
+				(aspect-ratio: 1) and
 				(color: color-mix(in srgb, red, red)) and
 				(container-type: size) and
 				(grid-template-columns: subgrid) and
