@@ -350,7 +350,7 @@ main {
 		display:          grid;
 		grid-column:      aside;
 		outline-color:    var(--color);
-		outline-offset:   round(down, calc(-1 * var(--stroke) * 2), var(--rounding));
+		outline-offset:   round(up, calc(-1 * var(--stroke) * 2), var(--rounding));
 		outline-style:    solid;
 		outline-width:    round(up, calc(2 * var(--stroke)), var(--rounding));
 		padding:          1rlh;
