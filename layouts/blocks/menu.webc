@@ -28,6 +28,9 @@
 		position:              sticky;
 		row-gap:               var(--gap);
 
+		/* Larger breaks. */
+		@container style(--tablet: true) { --inset: var(--gutter--base) }
+
 		> li {
 			display:                    grid;
 			margin-inline:              initial; /* Override `typography`. */
@@ -73,9 +76,6 @@
 				@supports (font: -apple-system-body) { --shadow: color-mix(in srgb, var(--nav), transparent) }
 			}
 		}
-
-		/* Larger breaks. */
-		@container style(--tablet) { --inset: var(--gutter--base) }
 	}
 
 	/* Undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */

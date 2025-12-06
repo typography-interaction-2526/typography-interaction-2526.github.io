@@ -60,7 +60,7 @@
 
 		@media (height >= 27em), (width >= 60em) { /* Tablets. */
 			--size--root: 24;
-			--tablet:     1;
+			--tablet:     true;
 		}
 
 		@media (orientation: landscape), (width >= 60em) { --columns: 6 }
@@ -73,8 +73,8 @@
 
 @property --tablet {
 	inherits:      true;
-	initial-value: 0;
-	syntax:        '<integer>';
+	initial-value: false;
+	syntax:        '<custom-ident>';
 }
 
 @property --columns {
