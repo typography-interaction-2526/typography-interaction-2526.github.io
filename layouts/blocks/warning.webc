@@ -48,6 +48,8 @@
 		outline-width:  0.1em;
 	}
 
+	#warning button:focus:not(:focus-visible) { outline-color: transparent }
+
 	#warning svg { stroke-width: 0.1em }
 
 	/* Hide if it supports all the modern stuff we’re using. */
