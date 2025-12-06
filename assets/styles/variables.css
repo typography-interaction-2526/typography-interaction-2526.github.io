@@ -19,7 +19,7 @@
 	--start:        min(var(--alley), calc(2 * var(--gutter)));
 	--end:          calc(2 * var(--start));
 
-	--safe-area: calc(env(safe-area-inset-left) * 0.61); // Optically even around island.
+	--safe-area: calc(env(safe-area-inset-left) * 0.61); /* Optically even around island. */
 
 	--disabled--opacity: 20%;
 	--disabled:          color-mix(in srgb, var(--color, currentcolor), transparent calc(100% - var(--disabled--opacity)));
