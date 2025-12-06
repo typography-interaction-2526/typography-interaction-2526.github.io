@@ -86,6 +86,7 @@
 	}
 </style>
 
+<block webc:import="warning.webc"></block>
 <ul webc:root="override">
 	<li
 		webc:for="item of [...$data.collections.root]"

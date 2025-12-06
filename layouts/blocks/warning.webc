@@ -1,0 +1,36 @@
+
+<style webc:scoped>
+	:host {
+		backdrop-filter:     blur(0.25em);
+		background-color:    rgb(0 0 0 / 90%);
+		border-radius:       1.25em;
+		display:             grid;
+		display:             none;
+		filter:              drop-shadow(0 0.2em 0.5em rgb(0 0 0 / 50%));
+		font-size:           85%;
+		inset-block-end:     1em;
+		inset-inline-end:    1em;
+		margin-inline-start: 1em;
+		max-inline-size:     60ch;
+		padding-block:       1.25em;
+		padding-inline:      1.75em;
+		position:            fixed;
+		row-gap:             0.75em;
+		text-transform:      initial;
+		z-index:             1;
+	}
+
+	:host > * {
+		color:       white;
+		font-size:   inherit;
+		font-weight: lighter;
+	}
+
+	:host > h2 { font-weight: bold }
+</style>
+
+<aside webc:root="override">
+	<h2>If you’re seeing this, the site behind is likely (very) broken!</h2>
+	<p>Hi, there. I use my course sites as sandboxes to experiment with various “brand new” CSS properties, and your browser does not support one of them. Apologies. It should always work in current/updating Safari and Chrome.</p>
+	<p>As I often tell my students: do as I say, not as I do! Cheers.</p>
+</aside>
