@@ -84,6 +84,9 @@
 		/* For the dividers. */
 		li { position: relative }
 	}
+
+	/* For the `nav.webc` scroll tracks. */
+	:host-context(body >) { overflow: clip }
 </style>
 
 <block webc:import="warning.webc"></block>
