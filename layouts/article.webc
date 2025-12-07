@@ -174,11 +174,6 @@
 <block webc:import="blocks/pages.webc">
 	<article class="end start">
 		<block
-			webc:import="nav.webc"
-			class="before"
-		>
-		</block>
-		<block
 			webc:import="header.webc"
 			:class="$data.page.url === '/syllabus/' && 'screen'"
 		></block>
@@ -186,9 +181,7 @@
 			webc:if="$data.page.url === '/syllabus/'"
 			webc:import="print.webc"
 		></block>
-		<block webc:import="nav.webc">
-			<block webc:import="menu.webc"></block>
-		</block>
+		<block webc:import="nav.webc"></block>
 		<!-- TODO Come back to this! -->
 		<!-- <block webc:import="toc.webc"></block> -->
 		<main>
@@ -216,10 +209,5 @@
 				@html="content"
 			></template>
 		</main>
-		<block
-			webc:import="nav.webc"
-			class="after"
-		>
-		</block>
 	</article>
 </block>
