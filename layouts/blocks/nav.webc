@@ -23,13 +23,11 @@
 	}
 
 	:host.before {
-		align-items:     end;
 		grid-area:       header;
 		inset-block-end: 100%;
 	}
 
 	:host.after {
-		align-items:       start;
 		grid-area:         main;
 		inset-block-start: 100%;
 	}
