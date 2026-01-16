@@ -28,12 +28,14 @@ export default [
 			'no-console': 'warn',
 			'perfectionist/sort-imports': ['error', {
 				newlinesBetween: 'ignore',
+				newlinesInside: 'ignore',
 				order: 'asc',
 				partitionByNewLine: true,
 				type: 'natural',
 			}],
 			'perfectionist/sort-objects': ['error', {
 				newlinesBetween: 'ignore',
+				newlinesInside: 'ignore',
 				order: 'asc',
 				partitionByNewLine: true,
 				type: 'natural',
