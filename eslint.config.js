@@ -95,7 +95,6 @@ export default [
 			'@html-eslint/attrs-newline': ['error', { 'closeStyle': 'newline', 'ifAttrsMoreThan': 1 }],
 			'@html-eslint/element-newline': ['error', { 'inline': ['$inline', 'nobr'] }],
 			'@html-eslint/indent': ['error', 'tab'],
-			'@html-eslint/no-extra-spacing-text': 'error',
 			'@html-eslint/prefer-https': 'error',
 			'@html-eslint/require-closing-tags': ['error', { 'selfClosing': 'never'}],
 		},
