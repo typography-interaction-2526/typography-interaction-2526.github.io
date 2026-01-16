@@ -1,7 +1,8 @@
 <!--- The `selector()` breaks inside `webc:scoped`, and we probably want these outside cascade layers. --->
 <style webc:bucket="unlayered">
+	/* stylelint-disable plugin/use-logical-properties-and-values -- For old browsers! */
 	#warning {
-		animation:        showWarning 0.5s 2s forwards;
+		animation:        show-warning 0.5s 2s forwards;
 		backdrop-filter:  blur(0.25em);
 		background-color: rgb(255 0 0 / 75%);
 		border-radius:    1em;
@@ -11,7 +12,7 @@
 		font-size:        85%;
 		margin-left:      1em;
 		max-width:        60ch;
-		opacity:          0;
+		opacity:          0%;
 		padding:          1em 1.5em;
 		position:         fixed;
 		right:            1em;
@@ -20,10 +21,7 @@
 		z-index:          3; /* In front of `nav.webc` */
 	}
 
-	@keyframes showWarning { to { opacity: 1 } }
-	@keyframes hideWarning { to { visibility: hidden } }
-
-	#warning.closed { animation: hideWarning 0.5s forwards }
+	#warning.closed { animation: hide-warning 0.5s forwards }
 
 	#warning * {
 		color:       white;
@@ -58,6 +56,10 @@
 	#warning button:focus:not(:focus-visible) { outline-color: transparent }
 
 	#warning svg { stroke-width: 0.1em }
+
+	@keyframes show-warning { to { opacity: 100% } }
+
+	@keyframes hide-warning { to { visibility: hidden } }
 
 	/* Hide if it supports all the modern stuff we’re using. */
 	@layer {
