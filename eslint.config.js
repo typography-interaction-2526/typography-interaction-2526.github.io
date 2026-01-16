@@ -73,7 +73,7 @@ export default [
 			'@html-eslint/no-duplicate-attrs': 'error',
 			'@html-eslint/no-duplicate-class': 'error',
 			'@html-eslint/no-duplicate-id': 'error',
-			'@html-eslint/no-extra-spacing-attrs': 'error',
+			'@html-eslint/no-extra-spacing-attrs': ['error', { 'enforceBeforeSelfClose': true }],
 			'@html-eslint/no-invalid-entity': 'error',
 			'@html-eslint/no-multiple-empty-lines': ['error', { max: 1 }],
 			'@html-eslint/no-script-style-type': 'error',
