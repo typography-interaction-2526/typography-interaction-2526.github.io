@@ -99,6 +99,11 @@ export default [
 		plugins: { '@html-eslint': htmlPlugin },
 		rules: {
 			'@html-eslint/attrs-newline': ['error', { 'closeStyle': 'newline', 'ifAttrsMoreThan': 1 }],
+			'@html-eslint/sort-attrs': ['error', {
+				'priority': [
+					{ 'pattern': 'webc:*' },
+				],
+			}],
 		},
 	},
 	{
