@@ -76,27 +76,29 @@ export default [
 			'@html-eslint/no-extra-spacing-attrs': 'error',
 			'@html-eslint/no-invalid-entity': 'error',
 			'@html-eslint/no-multiple-empty-lines': ['error', { max: 1 }],
-			'@html-eslint/no-nested-interactive': 'error',
 			'@html-eslint/no-script-style-type': 'error',
 			'@html-eslint/no-trailing-spaces': 'error',
 			'@html-eslint/quotes': ['error', 'double'],
-			'@html-eslint/sort-attrs': ['error', {
-				'priority': [
-					{ 'pattern': 'webc:*' },
-				],
-			}],
 		},
 	},
 	{
-		files: ['**/*.html', '**/*.webc'], // Template/component-only.
+		files: ['**/*.html', '**/*.webc'], // Examples and template/component-only.
+		languageOptions: { parser: htmlParser },
+		plugins: { '@html-eslint': htmlPlugin },
+		rules: {
+			'@html-eslint/element-newline': ['error', { 'inline': ['$inline', 'img', 'nobr'] }],
+			'@html-eslint/indent': ['error', 'tab'],
+			'@html-eslint/no-nested-interactive': 'error',
+			'@html-eslint/prefer-https': 'error',
+			'@html-eslint/require-closing-tags': ['error', { 'selfClosing': 'never'}],
+		},
+	},
+	{
+		files: ['**/*.webc'], // Template/component-only.
 		languageOptions: { parser: htmlParser },
 		plugins: { '@html-eslint': htmlPlugin },
 		rules: {
 			'@html-eslint/attrs-newline': ['error', { 'closeStyle': 'newline', 'ifAttrsMoreThan': 1 }],
-			'@html-eslint/element-newline': ['error', { 'inline': ['$inline', 'nobr'] }],
-			'@html-eslint/indent': ['error', 'tab'],
-			'@html-eslint/prefer-https': 'error',
-			'@html-eslint/require-closing-tags': ['error', { 'selfClosing': 'never'}],
 		},
 	},
 	{
@@ -105,7 +107,6 @@ export default [
 		plugins: { '@html-eslint': htmlPlugin },
 		rules: {
 			'@html-eslint/prefer-https': 'warn',
-			'@html-eslint/require-closing-tags': ['warn', { 'selfClosing': 'never'}],
 		},
 	},
 ]
