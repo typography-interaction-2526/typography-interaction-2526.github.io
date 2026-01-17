@@ -99,7 +99,9 @@
 			aria-label="Close warning"
 		></button>
 	</header>
-	<p>Hi, there. I use these course sites as little sandboxes to experiment with and learn various “brand new” CSS properties—and your browser does not support (at least) one of them. Apologies. It “should” always work in current/updating Safari and Chrome!</p>
+	<p>
+		Hi, there. I use these course sites as little sandboxes to experiment with and learn various “brand new” CSS properties—and your browser does not support (at least) one of them. Apologies. It “should” always work in current/updating Safari and Chrome!
+	</p>
 </aside>
 <script>
 	const warning = document.querySelector('#warning')
