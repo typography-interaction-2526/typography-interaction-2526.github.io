@@ -25,7 +25,7 @@ export default {
 		'at-rule-empty-line-before': [
 			'always',
 			{
-				ignore: ['after-comment', 'first-nested'],
+				ignore: ['after-comment', 'blockless-after-same-name-blockless', 'first-nested'],
 			},
 		],
 		'comment-empty-line-before': [
@@ -39,6 +39,7 @@ export default {
 		'custom-property-pattern': '^[a-z0-9]+(-{1,2}[a-z0-9]([a-zA-Z0-9]+)?)*$',
 		'declaration-block-no-redundant-longhand-properties': null,
 		'declaration-block-single-line-max-declarations': 1,
+		'import-notation': 'string',
 		'media-feature-range-notation': null,
 		'no-descending-specificity': null,
 		'property-no-unknown': [
