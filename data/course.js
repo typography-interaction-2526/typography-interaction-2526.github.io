@@ -14,10 +14,10 @@ export default {
 	},
 	logistics: {
 		fall:   'PMCD 5001, CRN 4253/9023',
-		room:   '65 West 11th Street, Room 464',
+		room:   '63 Fifth Avenue, Room 620',
 		school: 'The New School, Parsons, MPS CD',
 		spring: 'PMCD 5002, CRN 3992/9589',
-		time:   'Fridays, 9–11:40am',
+		time:   'Wednesdays, 4–6:40pm',
 	},
 	syllabus: {
 		fall:   '/assets/PMCD_5001_F25.pdf',
