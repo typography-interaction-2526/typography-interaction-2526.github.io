@@ -9,7 +9,7 @@ export default {
 		google:  'https://drive.google.com/drive/folders/1QbtTy3UJrPtZkMMKrSDnwwWtuTxtMl1X',
 		slack:   'https://mpscd.slack.com/archives/C09A1HDNBBN',
 		submit:  'https://docs.google.com/forms/d/e/1FAIpQLSeDB8qsbtUEDeDoJ-xiDa6VbguZ6R5ZYX_7gYqKoZE76qW6xQ/viewform',
-		zoom:    'https://NewSchool.zoom.us/j/98496458429',
+		zoom:    'https://NewSchool.zoom.us/j/95059246038',
 		zoomAlt: 'https://newschool.zoom.us/my/mfehrenbach',
 	},
 	logistics: {
