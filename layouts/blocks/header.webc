@@ -106,7 +106,7 @@
 
 <header
 	webc:root="override"
-	:id="(title || unit?.[0].data.unit) && slugify(title || unit?.[0].data.unit)"
+	:id="!item && slugify(title || unit?.[0].data.unit)"
 >
 	<a
 		webc:if="title"
