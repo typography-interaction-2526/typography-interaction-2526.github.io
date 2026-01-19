@@ -108,7 +108,7 @@
 		<li webc:if="index === 3">
 			<block
 				webc:import="header.webc"
-				:enable="unit[0].url"
+				:@enable="unit[0].url"
 				@title="Winter Break"
 			></block>
 		</li>
@@ -122,7 +122,7 @@
 					<li webc:if="item.data.week === 24">
 						<block
 							webc:import="header.webc"
-							:enable="item.url"
+							:@enable="item.url"
 							@title="Spring Break"
 						></block>
 					</li>
@@ -137,14 +137,14 @@
 					<li webc:if="item.data.week === 13">
 						<block
 							webc:import="header.webc"
-							:enable="item.url"
+							:@enable="item.url"
 							@title="Thanksgiving Week"
 						></block>
 					</li>
 					<li webc:if="item.data.last">
 						<block
 							webc:import="header.webc"
-							:enable="item.url"
+							:@enable="item.url"
 							@title="The end"
 						></block>
 					</li>
