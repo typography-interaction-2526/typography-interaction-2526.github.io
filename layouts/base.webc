@@ -1,5 +1,6 @@
 <script front-matter>
 	const pageClass = (url) => (url != '/') ? String(url).split('/').filter((part) => part.length > 1)[0] : ''
+	const addNbsp = (string) => string.replace(' ', '\u00A0') // Prevent Safari from hiding words.
 </script>
 
 <!doctype html>
@@ -10,7 +11,7 @@
 			content="initial-scale=1, width=device-width, viewport-fit=cover"
 			name="viewport"
 		>
-		<title @text="stripTags(markdown(title || course.title))"></title>
+		<title @text="stripTags(addNbsp(markdown(title || course.title)))"></title>
 		<link
 			href="/assets/icons/favicon.ico"
 			rel="icon"
