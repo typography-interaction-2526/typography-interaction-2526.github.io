@@ -330,8 +330,9 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 | Exercises, Milestones          | 10% |
 | Engagement                     | 20% |
 | &nbsp;                         |     |
+| Project *Index*                | 10% |
 | Project Nº 4: *Links*          | 20% |
-| Project Nº 5: *Functions*      | 40% |
+| Project Nº 5: *Functions*      | 30% |
 
 ## Materials and Supplies
 
