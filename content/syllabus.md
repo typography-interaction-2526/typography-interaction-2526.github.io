@@ -298,9 +298,9 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 
 	Each unit begins with a set of readings to introduce the subject. Students are expected to read the required selections and synthesize their thoughts in a written response, prior to the next class. We are not looking for summarization, here—these should be personal reflections on the subjects, and are evaluated with this lens. We will then discuss these readings as a group.
 
-### Quizzes, Exercises, Milestones <!-- .print--break -->
+### ~~Quizzes,~~ Exercises, Milestones <!-- .print--break -->
 
-	Each unit will also have short quizzes on topic material, and specific, technical exercises and milestones that are assigned towards completion of the projects. Quizzes will occur in the class following new material; assignments are expected to be completed outside of class, before the next session. Some of these will be small; some of these will be large. They are *all* evaluated for completion and quality.
+	Each unit will also have ~~short quizzes on topic material, and~~ specific, technical exercises and milestones that are assigned towards completion of the projects. ~~Quizzes will occur in the class following new material;~~ assignments are expected to be completed outside of class, before the next session. Some of these will be small; some of these will be large. They are *all* evaluated for completion and quality.
 
 ### Projects
 
@@ -312,14 +312,14 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 
 ### Fall <!-- .fall -->
 
-|                                |     |
-| ------------------------------ | --- |
-| Engagement                     | 20% |
-| Reading Responses              | 10% |
-| Quizzes, Exercises, Milestones | 10% |
-| Project Nº 1: *Manuscript*     | 10% |
-| Project Nº 2: *Spread*         | 20% |
-| Project Nº 3: *Binding*        | 30% |
+|                                    |     |
+| ---------------------------------- | --- |
+| Engagement                         | 20% |
+| Reading Responses                  | 10% |
+| ~~Quizzes,~~ Exercises, Milestones | 10% |
+| Project Nº 1: *Manuscript*         | 10% |
+| Project Nº 2: *Spread*             | 20% |
+| Project Nº 3: *Binding*            | 30% |
 
 ### Spring <!-- .spring -->
 
@@ -327,7 +327,7 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 | ------------------------------ | --- |
 | Engagement                     | 20% |
 | Reading Responses              | 10% |
-| Quizzes, Exercises, Milestones | 10% |
+| Exercises, Milestones          | 10% |
 | Project Nº 4: *Links*          | 20% |
 | Project Nº 5: *Functions*      | 40% |
 
