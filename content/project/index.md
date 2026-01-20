@@ -36,7 +36,7 @@ Due Jan. 28
 
 Following our [fourth project](/project/4/), we’ll be adding it to our *Index*.
 
-In this milestone, we’d then like to see additional context provided—for you, and for the project links. This could be in images, a short description/write-up, or some combination or other approach. Put yourself in the mind of a visitor unfamiliar with you and with our course! And situate them.
+In this milestone, we’d then like to see additional context provided—for you, and for the project links. This could be in images, a short description/write-up, or some combination or other approach. Put yourself in the mind of a visitor unfamiliar with you and with our course! And situate them.
 
 Design-wise, this additional content will likely necessitate more layout considerations. Here we’d like a particular focus on the viewport—this is a contained experience, and we want it to feel considered and deliberate in the browser context.
 
@@ -78,7 +78,7 @@ Work on this page will extend across the Spring semester, and it is due after ev
 
 Importantly, we want this to be a reflection of your own personal design aesthetic. It needs to be functional, but above all, should imbue your taste in its design. We want it to be something you are proud of!
 
-We won’t be formally presenting this work, as with our other projects, but are happy to provide feedback during/after its completion.
+We won’t be formally presenting this work, as with our other projects, but are happy to provide feedback during/after its completion.
 
 ### Some basic requirements
 
