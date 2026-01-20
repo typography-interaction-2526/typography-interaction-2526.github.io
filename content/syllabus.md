@@ -13,30 +13,50 @@
 This first semester will focus on a mastery of type and layout concepts on the web.
 <!-- .intro -->
 
-Typography is the infrastructure of communication in nearly any visual medium. It provides the very first shape and form to written content, and as designers, it is our responsibility to do this with intention and care. Whether towards goals of expression itself or in the service of ideas, the designer must understand type to use it successfully. In this way, we are stewards of meaning.
+<div class="body">
 
-- <a :href="course.syllabus.fall"><cite>Submitted Version</cite></a>
-- <a :href="course.catalog.fall"><cite>Course Catalog</cite></a>
-<!-- .right .rows--2 .screen -->
+Typography is the infrastructure of communication in nearly any visual medium. It provides the very first shape and form to written content, and as designers, it is our responsibility to do this with intention and care. Whether towards goals of expression itself or in the service of ideas, the designer must understand type to use it successfully. In this way, we are stewards of meaning.
 
 Digital design, the web in particular, is inextricably linked with typography—from the very letters of code at its base to the words in arrangement we see on a screen. Type, thus, is the scaffolding in which all interaction design first rises. The very shape of the web, in its layouts, grid systems, and patterns—and its various technologies—all exist in the service of type, at their root. They provide the tools with which we can breathe a form and different, digital life into that meaning.
 
 In this class, students will learn intermediate and advanced methods in typography and layout as they concern interactive design. We will use web technologies as the lens to examine this subject—introducing the foundational, front-end languages of HTML (*HyperText Markup Language*) and CSS (*Cascading Style Sheets*) to achieve our designs. Students will understand the specific challenges of type in this medium, but also how it offers unique and particular forms to us as designers. They will learn the common tools and paradigms with which we practice, while developing their own visual, design vocabulary and critical understanding.
+
+</div>
+
+<div class="right screen">
+
+<div class="sticky">
+
+- <a :href="course.syllabus.fall"><cite>Submitted Version</cite></a>
+- <a :href="course.catalog.fall"><cite>Course Catalog</cite></a>
+
+</div>
 
 ### Spring <!-- .spring -->
 
 Our second semester will build on the type and layout foundations from the first, moving into interface design and interactive experiences on the web.
 <!-- .intro -->
 
-Interaction, interactive, interface, product, UI, UX designers—we are known by many names. These are all monikers for a digitally-native design practice. It is our responsibility, as practitioners in this increasingly consequential and broadening field, to both understand existing paradigms and help manifest, refine, and sustain purposeful new ones.
+<div class="body">
 
-- <a :href="course.syllabus.spring"><cite>Submitted Version</cite></a>
-- <a :href="course.catalog.spring"><cite>Course Catalog</cite></a>
-<!-- .right .rows--2 .screen -->
+Interaction, interactive, interface, product, UI, UX designers—we are known by many names. These are all monikers for a digitally-native design practice. It is our responsibility, as practitioners in this increasingly consequential and broadening field, to both understand existing paradigms and help manifest, refine, and sustain purposeful new ones.
 
 Contemporary digital design exists in the continuum of the ever-shifting, evolving, and ubiquitous web. Designers today work at many different scales and within many different systems. We act as mediators—not only for users, meaning, and experience—but with these systems themselves, as well. They shape our work and we shape them—at the meeting point, the *interface*, between things.
 
-In this class, students will learn to give form to and then work at these intersections. We will again use web technologies as our lens for the subject, building on our foundations in HTML and CSS by incorporating JS (*JavaScript*)—to give behavior, interaction, and life to our designs. We will survey modern approaches to front-end design and development, as our discipline has as many methodologies as we do names. There is no one way to do this work, nor one thing to do it for—and through our readings, discussions, exercises, and projects, students will understand and then situate themselves and their practice within the larger field.
+In this class, students will learn to give form to and then work at these intersections. We will again use web technologies as our lens for the subject, building on our foundations in HTML and CSS by incorporating JS (*JavaScript*)—to give behavior, interaction, and life to our designs. We will survey modern approaches to front-end design and development, as our discipline has as many methodologies as we do names. There is no one way to do this work, nor one thing to do it for—and through our readings, discussions, exercises, and projects, students will understand and then situate themselves and their practice within the larger field.
+
+</div>
+
+<div class="right screen">
+
+<div class="sticky">
+
+- <a :href="course.syllabus.spring"><cite>Submitted Version</cite></a>
+- <a :href="course.catalog.spring"><cite>Course Catalog</cite></a>
+
+</div>
+
+</div>
 
 ## Learning Outcomes <!-- .print--break -->
 
@@ -69,7 +89,7 @@ By the end of this semester, students will:
 
 - Understand the CMS (*Content Management System*) and API (*Application Programming Interface*) as software archetypes.
 
-- Be introduced to JavaScript and programming logic, the underlying concepts that make interactivity possible.
+- Be introduced to JavaScript and programming logic, the underlying concepts that make interactivity possible.
 
 - Gain an awareness of processes, methodologies, approaches, and systems in use in contemporary software development and on the web.
 
@@ -240,6 +260,7 @@ To wrap up the semester (and course), we’ll round out our knowledge of the web
 	Ted Chiang, 2024
 
 &nbsp;
+<!-- style="margin-block-start: initial" -->
 
 - [<cite>Human Interface Guidelines</cite>](https://andymatuschak.org/files/papers/Apple%20Human%20Interface%20Guidelines%201987.pdf)
 	Apple, 1987
@@ -266,6 +287,7 @@ To wrap up the semester (and course), we’ll round out our knowledge of the web
 	Apple, 2014
 
 &nbsp;
+<!-- style="margin-block-start: initial" -->
 
 - [<cite>Material Design 3</cite>](https://m3.material.io/)
 	Google, 2021 (*ongoing*)
@@ -276,7 +298,7 @@ To wrap up the semester (and course), we’ll round out our knowledge of the web
 - [<cite>Fluent 2 Design System</cite>](https://www.microsoft.com/design/fluent/)
 	Microsoft, 2023 (*ongoing*)
 
-#### Project Nº 5: *Functions*
+#### Project Nº 5: *Functions* <!-- .before--2 -->
 
 This unit will culminate with Project 5, *Functions*, which will be presented in class on April 22.
 <!-- .pretty -->
@@ -299,23 +321,24 @@ We’ll be looking for self-expression within the their now-familiar materials o
 
 ### Reading Responses
 
-	Each unit begins with a set of readings to introduce the subject. Students are expected to read the required selections and synthesize their thoughts in a written response, prior to the next class. We are not looking for summarization, here—these should be personal reflections on the subjects, and are evaluated with this lens. We will then discuss these readings as a group.
+Each unit begins with a set of readings to introduce the subject. Students are expected to read the required selections and synthesize their thoughts in a written response, prior to the next class. We are not looking for summarization, here—these should be personal reflections on the subjects, and are evaluated with this lens. We will then discuss these readings as a group.
 
 ### ~~Quizzes,~~ Exercises, Milestones <!-- .print--break -->
 
-	Each unit will also have ~~short quizzes on topic material, and~~ specific, technical exercises and milestones that are assigned towards completion of the projects. ~~Quizzes will occur in the class following new material;~~ assignments are expected to be completed outside of class, before the next session. Some of these will be small; some of these will be large. They are *all* evaluated for completion and quality.
+Each unit will also have ~~short quizzes on topic material, and~~ specific, technical exercises and milestones that are assigned towards completion of the projects. ~~Quizzes will occur in the class following new material;~~ assignments are expected to be completed outside of class, before the next session. Some of these will be small; some of these will be large. They are *all* evaluated for completion and quality.
 
 ### Engagement
 
-	Students are expected to actively and passionately participate in this course. This means more than showing up and turning things in on time—which should be a given. Beyond that baseline students should be curious, prepared, thoughtful, vocal, and intentional throughout the course. They should make us understand why they are here, and demonstrate to us that they care about themselves, their work, and each other—and ultimately, about this chosen profession.
+Students are expected to actively and passionately participate in this course. This means more than showing up and turning things in on time—which should be a given. Beyond that baseline students should be curious, prepared, thoughtful, vocal, and intentional throughout the course. They should make us understand why they are here, and demonstrate to us that they care about themselves, their work, and each other—and ultimately, about this chosen profession.
 
-	This engagement will be unavoidably reflected in the quality of students’ work—but we also evaluate this discretely based on their participation in and out of the classroom, with us and with their peers.
+This engagement will be unavoidably reflected in the quality of students’ work—but we also evaluate this discretely based on their participation in and out of the classroom, with us and with their peers.
 
 ### Projects
 
-	The bulk of the work for this class takes the form of projects. They are intended as opportunities for students to demonstrate the knowledge and skills learned in class while developing their own practice, and are evaluated in this light.
+The bulk of the work for this class takes the form of projects. They are intended as opportunities for students to demonstrate the knowledge and skills learned in class while developing their own practice, and are evaluated in this light.
 
-	There will be check-ins and reviews around each of these before the final due dates, when we will have critiques as a group. In addition to the quality of the project itself, students will be subject to an in-person code review and will also be assessed on the presentation of their work. More specific evaluation criteria will be delineated with each project’s introduction.
+There will be check-ins and reviews around each of these before the final due dates, when we will have critiques as a group. In addition to the quality of the project itself, students will be subject to an in-person code review and will also be assessed on the presentation of their work. More specific evaluation criteria will be delineated with each project’s introduction.
+<!-- .pretty -->
 
 ## Grade Calculation <!-- .print--break -->
 
