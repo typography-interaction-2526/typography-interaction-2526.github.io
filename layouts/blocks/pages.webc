@@ -23,6 +23,9 @@
 
 	const allPages = [...$data.collections.root, ...groupedPages.flat()]
 
+	// Add “Index” project at the end.
+	allPages.push($data.collections.pages.find((page) => page.data.permalink === '/project/index/' ))
+
 	export const pagePosition = (item, $data) => {
 		// Use `.filePathStem` for consistent published/draft ordering (no `.url`)
 		const index = allPages.findIndex((page) => page.filePathStem === item.filePathStem)
@@ -145,6 +148,16 @@
 			</ul>
 		</li>
 	</template>
+	<li
+		webc:for="item of [$data.collections.pages.find(page => page.data.permalink === '/project/index/')]"
+		:id="pagePosition(item, $data)"
+	>
+		<slot webc:if="item && item.url === $data.page.url"></slot>
+		<block
+			webc:else
+			webc:import="header.webc"
+		></block>
+	</li>
 	<li>
 		<block
 			webc:import="header.webc"
