@@ -278,12 +278,21 @@ To wrap up the semester (and course), we’ll round out our knowledge of the web
 
 #### Project Nº 5: *Functions*
 
-This unit, and the course, will culminate with Project 5, *Functions*, which will be presented in class on April 22.
+This unit will culminate with Project 5, *Functions*, which will be presented in class on April 22.
 <!-- .pretty -->
 
 Students will identify a problem and conceptualize how to solve it on the web. They will plan, design, and implement a novel solution towards this problem—incorporating data and interaction with the tools, technologies, and techniques they’ve learned in this course.
 
-We’ll first be looking for strong concepts—not limited to or by existing conventions—that push the grain of interaction design in new and interesting directions. And as the capstone for this course, we’re expecting the highest level of nuance and polish in the organizational, aesthetic, and technical aspects of these final projects.
+We’ll first be looking for strong concepts—not limited to or by existing conventions—that push the grain of interaction design in new and interesting directions. And as the capstone for this course, we’re expecting the highest level of nuance and polish in the organizational, aesthetic, and technical aspects of these final projects.
+<!-- .note -->
+
+#### Project *Index* <!-- .before--2 -->
+
+The Spring semester, and the entire course, end with the Project *Index*, which will be due on May 15.
+
+Students will build a landing page for themselves and their *Typography & Interaction* projects, providing links and context for them. They will update this with their finished projects, and refine it to deliberately and uniquely represent themselves and their work online.
+
+We’ll be looking for self-expression within the their now-familiar materials of the web—demonstrating an understanding of HTML, CSS, and JavaScript as a means to manifest a personal taste in this medium.
 <!-- .note -->
 
 ## Evaluation Criteria <!-- .print--break -->
