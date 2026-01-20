@@ -6,7 +6,10 @@ const getWeek = (data) => {
 	if (weeks?.length) {
 		let weekIndex = week - 1, unitIndex = weekIndex
 
-		let date = weeks[weekIndex]?.data.date
+		let date =
+			(data.type === 'project' && data.date)
+				? data.date // Override for “Index” project at end of semester.
+				: weeks[weekIndex]?.data.date
 		let weekOffset = 0
 
 		let unit = data.unit
