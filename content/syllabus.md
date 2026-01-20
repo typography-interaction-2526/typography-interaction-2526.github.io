@@ -105,7 +105,7 @@ The course is structured into thematic units, each bookended by readings on the 
 
 ### Unit Nº 1: *Type and the Web* <!-- .fall -->
 
-#### Weeks 1–6
+#### Weeks Nº 1–6
 
 We will focus on reviewing the core principles of typography, and introduce the web and its base technologies. Students will learn about HTML, semantic DOM, basic CSS, as well as type hierarchy and the use of custom typefaces for the web.
 <!-- .balance -->
@@ -139,7 +139,7 @@ We’ll be looking for the quality of responses, appropriate type selection and 
 
 ### Unit Nº 2: *There Is No Perfect Layout* <!-- .fall .print--break -->
 
-#### Weeks 7–10
+#### Weeks Nº 7–10
 
 Students will learn how to design and implement more complex, flexible layouts, while collaborating closely with a classmate. We’ll introduce responsive design, media query CSS, and advanced web type techniques.
 
@@ -172,7 +172,7 @@ Here we’re looking for successful design and development collaboration, box-mo
 
 ### Unit Nº 3: *Typography as Interface* <!-- .fall -->
 
-#### Weeks 11–15
+#### Weeks Nº 11–15
 
 In our final Fall unit, we will focus on creating advanced, multi-page layouts with grid systems, prototyping their flows, and exploring typography’s usage as interface elements for navigating a website.
 
@@ -205,7 +205,7 @@ We want to see effective multi-page design and navigation, advanced layouts (fle
 
 ### Unit Nº 4: *Interface as Interface* <!-- .spring -->
 
-#### Weeks 16–21
+#### Weeks Nº 16–21
 
 We will expand on our first-semester foundations in design, typography, HTML, and CSS—now incorporating images and other media while introducing JavaScript to enliven our work. Students will be introduced to a CMS and will work with an API.
 
@@ -238,7 +238,7 @@ In addition to our previous project requirements, here we’ll be looking for th
 
 ### Unit Nº 5: *If All You Have Is a Hammer, Everything Looks Like a Nail* <!-- .spring -->
 
-#### Weeks 22–30
+#### Weeks Nº 22–30
 
 To wrap up the semester (and course), we’ll round out our knowledge of the web’s intricacies—handling user input, managing state, constructing metadata. We will examine how our projects participate in and live elsewhere on the web, and outline real-world processes to make them come together.
 
@@ -337,7 +337,7 @@ This engagement will be unavoidably reflected in the quality of students’ work
 
 The bulk of the work for this class takes the form of projects. They are intended as opportunities for students to demonstrate the knowledge and skills learned in class while developing their own practice, and are evaluated in this light.
 
-There will be check-ins and reviews around each of these before the final due dates, when we will have critiques as a group. In addition to the quality of the project itself, students will be subject to an in-person code review and will also be assessed on the presentation of their work. More specific evaluation criteria will be delineated with each project’s introduction.
+There will be check-ins and reviews around each of these before the final due dates, when we will have critiques as a group. In addition to the quality of the project itself, students will be subject to an <nobr>in-person</nobr> code review and will also be assessed on the presentation of their work. More specific evaluation criteria will be delineated with each project’s introduction.
 <!-- .pretty -->
 
 ## Grade Calculation <!-- .print--break -->
@@ -448,7 +448,7 @@ As tutors are only available a limited number of hours per week, it is advisable
 
 Students may find code similar to our exercises or projects elsewhere online. But the copying or adapting of *any* code beyond our provided course material (lectures, exercises, demos), without attribution, is not allowed under any circumstances. This *includes* from LLM&NoBreak;s, [more below](#llms-and-artificial-intelligence).
 
-If adapting, with attribution, students must explain the usage and demonstrate an understanding of how the code works. We will have in-person code reviews to facilitate and guage this understanding.
+If adapting, with attribution, students must explain the usage and demonstrate an understanding of how the code works. We will have <nobr>in-person</nobr> code reviews to facilitate and guage this understanding.
 
 We have zero tolerance for any sort of plagiarism—which ranges from “verbatim copying” (copying-and-pasting) to “thorough paraphrasing” (changing names or rearranging) and “autocompleting” (with LLM-assisted editors). Students should also review the [Academic Integrity Policy](https://docs.google.com/document/d/175hXxUbLI8Jy7NEtbeoyX3Va_MQzXzgxzFUjj7hSkSU).
 
@@ -501,3 +501,4 @@ All CD classes adhere to the same [common program and university policies](http
 ## Acknowledgments
 
 We’d like to thank [Brendan Griffiths](https://brendangriffiths.com/), [Lynn Kiang](http://www.lynnkiang.com), [Andrew LeClair](https://andrewleclair.com), and the [extended MPS CD family](https://mpscd.parsons.edu/faculty/) for their support in the planning and running of this course. And thank you, for reading this far.
+<!-- .balance -->
