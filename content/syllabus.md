@@ -23,7 +23,7 @@ Digital design, the web in particular, is inextricably linked with typography—
 
 In this class, students will learn intermediate and advanced methods in typography and layout as they concern interactive design. We will use web technologies as the lens to examine this subject—introducing the foundational, front-end languages of HTML (*HyperText Markup Language*) and CSS (*Cascading Style Sheets*) to achieve our designs. Students will understand the specific challenges of type in this medium, but also how it offers unique and particular forms to us as designers. They will learn the common tools and paradigms with which we practice, while developing their own visual, design vocabulary and critical understanding.
 
-### Spring <!-- .spring inert -->
+### Spring <!-- .spring -->
 
 Our second semester will build on the type and layout foundations from the first, moving into interface design and interactive experiences on the web.
 <!-- .intro -->
@@ -58,7 +58,7 @@ By the end of this semester, students will:
 - Think critically and develop their own, distinct thoughts on the role of digital within the larger canon of design.
 <!-- .balance -->
 
-### Spring <!-- .spring inert -->
+### Spring <!-- .spring -->
 
 By the end of this semester, students will:
 <!-- .intro -->
@@ -183,7 +183,7 @@ Students will assemble a collection of texts from *Spread*, combined with their 
 We want to see effective multi-page design and navigation, advanced layouts (flexbox, grid), consistency across the pages and content, and polish/nuance.
 <!-- .note -->
 
-### Unit Nº 4: *Interface as Interface* <!-- .spring inert -->
+### Unit Nº 4: *Interface as Interface* <!-- .spring -->
 
 #### Weeks 16–21
 
@@ -216,7 +216,7 @@ Students will collaboratively assemble, connect, and present a collection using 
 In addition to our previous project requirements, here we’ll be looking for the effective use of images/media, meaningful interactive interface functionality, and your use of JavaScript.
 <!-- .note -->
 
-### Unit Nº 5: *If All You Have Is a Hammer, Everything Looks Like a Nail* <!-- .spring inert -->
+### Unit Nº 5: *If All You Have Is a Hammer, Everything Looks Like a Nail* <!-- .spring -->
 
 #### Weeks 22–30
 
@@ -321,7 +321,7 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 | Project Nº 2: *Spread*         | 20% |
 | Project Nº 3: *Binding*        | 30% |
 
-### Spring <!-- .spring inert -->
+### Spring <!-- .spring -->
 
 |                                |     |
 | ------------------------------ | --- |
