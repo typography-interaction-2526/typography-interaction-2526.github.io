@@ -43,7 +43,7 @@
 				goToLink()
 			} else {
 				('onscrollend' in window)
-					? window.addEventListener('scrollend', goToLink)
+					? (window.addEventListener('scrollend', goToLink), setTimeout(goToLink, 1000))
 					: setTimeout(goToLink, 500)
 				header.scrollIntoView({ block: 'start' })
 			}
