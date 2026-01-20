@@ -141,15 +141,14 @@
 							@title="Thanksgiving Week"
 						></block>
 					</li>
-					<li webc:if="item.data.last">
-						<block
-							webc:import="header.webc"
-							:@enable="item.url"
-							@title="The end"
-						></block>
-					</li>
 				</template>
 			</ul>
 		</li>
 	</template>
+	<li>
+		<block
+			webc:import="header.webc"
+			@title="The end"
+		></block>
+	</li>
 </ul>
