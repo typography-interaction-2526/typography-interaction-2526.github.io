@@ -2,6 +2,9 @@
 	export const thisWeek = [...$data.collections.weeks]
 		.filter((week) => !week?.data?.draft)
 		.reduce((maxWeek, week) => week.data.week > maxWeek.data.week ? week : maxWeek, { data: { week: -Infinity } })
+
+	export const thisWeekIsAfter = (data) =>
+		data.page?.url !== '/project/index/' && (!data.week || data.week < thisWeek.data.week)
 </script>
 
 <style webc:scoped>
@@ -108,7 +111,7 @@
 </script>
 <menu webc:root="override">
 	<li
-		webc:if="($data.week > thisWeek.data.week) && ($data.page.url !== thisWeek.url)"
+		webc:if="($data.page.url !== thisWeek.url) && !thisWeekIsAfter($data)"
 		class="this"
 	>
 		<a
@@ -132,7 +135,7 @@
 		></a>
 	</li>
 	<li
-		webc:if="((!$data.week) || ($data.week < thisWeek.data.week)) && ($data.page.url !== thisWeek.url)"
+		webc:if="($data.page.url !== thisWeek.url) && thisWeekIsAfter($data)"
 		class="this"
 	>
 		<a
