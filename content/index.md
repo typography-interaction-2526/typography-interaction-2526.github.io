@@ -38,10 +38,11 @@ We’ll be using this course site for our agendas, lectures, general class house
 		section {
 			align-self: start;
 
-			@container style(--columns: 1) { margin-block-start: 1rcap }
-			@container style(--columns: 6) { row-gap: 1rcap }
-
 			p.intro { margin-block-start: initial }
+
+			@container style(--columns: 1) { margin-block-start: 1rcap }
+
+			@container style(--columns: 6) { row-gap: 1rcap }
 		}
 	}
 </style>
