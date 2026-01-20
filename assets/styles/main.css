@@ -621,7 +621,7 @@ main {
 		align-self: stretch;
 
 		.sticky {
-			inset-block-start: 5rlh;
+			inset-block-start: 4rlh;
 			position:          sticky;
 
 			.intro { margin-block-start: initial }
