@@ -39,15 +39,23 @@
 
 			if ((new URL(href, window.location.origin)).pathname === window.location.pathname) {
 				header.scrollIntoView({ block: 'start' })
-			} else if (
-				header.getBoundingClientRect().top === 0 ||
-				(window.innerHeight + window.scrollY >= document.body.offsetHeight)
-			) {
-				goToLink()
 			} else {
-				('onscrollend' in window)
-					? window.addEventListener('scrollend', goToLink)
-					: setTimeout(goToLink, 500)
+				let scrolled = false
+
+				const handleScroll = () => {
+					scrolled = true
+
+					window.removeEventListener('scroll', handleScroll)
+
+					'onscrollend' in window
+						? window.addEventListener('scrollend', goToLink)
+						: setTimeout(goToLink, 500)
+				}
+
+				window.addEventListener('scroll', handleScroll)
+
+				setTimeout(() => !scrolled && goToLink(), 50)
+
 				header.scrollIntoView({ block: 'start' })
 			}
 		}
