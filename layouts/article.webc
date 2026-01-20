@@ -45,18 +45,16 @@
 				const handleScroll = () => {
 					scrolled = true
 
-					window.removeEventListener('scroll', handleScroll)
-
 					'onscrollend' in window
 						? window.addEventListener('scrollend', goToLink)
 						: setTimeout(goToLink, 500)
 				}
 
-				window.addEventListener('scroll', handleScroll)
+				window.addEventListener('scroll', handleScroll, { once: true })
+				header.scrollIntoView({ block: 'start' })
 
 				setTimeout(() => !scrolled && goToLink(), 50)
 
-				header.scrollIntoView({ block: 'start' })
 			}
 		}
 	})
