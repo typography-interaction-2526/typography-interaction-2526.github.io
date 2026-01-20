@@ -39,11 +39,14 @@
 
 			if ((new URL(href, window.location.origin)).pathname === window.location.pathname) {
 				header.scrollIntoView({ block: 'start' })
-			} else if (header.getBoundingClientRect().top === 0) {
+			} else if (
+				header.getBoundingClientRect().top === 0 ||
+				(window.innerHeight + window.scrollY >= document.body.offsetHeight)
+			) {
 				goToLink()
 			} else {
 				('onscrollend' in window)
-					? (window.addEventListener('scrollend', goToLink), setTimeout(goToLink, 1000))
+					? window.addEventListener('scrollend', goToLink)
 					: setTimeout(goToLink, 500)
 				header.scrollIntoView({ block: 'start' })
 			}
