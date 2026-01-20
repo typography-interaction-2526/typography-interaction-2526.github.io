@@ -577,6 +577,8 @@ main {
 		/* TODO `aria-label` instead? */
 	}
 
+	.right .intro { margin-block-start: initial } /* No space above in the rail. */
+
 	&:where(main) > :where(p.intro:first-child)::before { content: initial } /* Fix first. */
 
 	:where(.note),
@@ -623,8 +625,6 @@ main {
 		.sticky {
 			inset-block-start: 4rlh;
 			position:          sticky;
-
-			.intro { margin-block-start: initial }
 		}
 	}
 
