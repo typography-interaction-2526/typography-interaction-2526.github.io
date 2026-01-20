@@ -288,12 +288,6 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 
 ## Evaluation Criteria <!-- .print--break -->
 
-### Engagement
-
-	Students are expected to actively and passionately participate in this course. This means more than showing up and turning things in on time—which should be a given. Beyond that baseline students should be curious, prepared, thoughtful, vocal, and intentional throughout the course. They should make us understand why they are here, and demonstrate to us that they care about themselves, their work, and each other—and ultimately, about this chosen profession.
-
-	This engagement will be unavoidably reflected in the quality of students’ work—but we also evaluate this discretely based on their participation in and out of the classroom, with us and with their peers.
-
 ### Reading Responses
 
 	Each unit begins with a set of readings to introduce the subject. Students are expected to read the required selections and synthesize their thoughts in a written response, prior to the next class. We are not looking for summarization, here—these should be personal reflections on the subjects, and are evaluated with this lens. We will then discuss these readings as a group.
@@ -301,6 +295,12 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 ### ~~Quizzes,~~ Exercises, Milestones <!-- .print--break -->
 
 	Each unit will also have ~~short quizzes on topic material, and~~ specific, technical exercises and milestones that are assigned towards completion of the projects. ~~Quizzes will occur in the class following new material;~~ assignments are expected to be completed outside of class, before the next session. Some of these will be small; some of these will be large. They are *all* evaluated for completion and quality.
+
+### Engagement
+
+	Students are expected to actively and passionately participate in this course. This means more than showing up and turning things in on time—which should be a given. Beyond that baseline students should be curious, prepared, thoughtful, vocal, and intentional throughout the course. They should make us understand why they are here, and demonstrate to us that they care about themselves, their work, and each other—and ultimately, about this chosen profession.
+
+	This engagement will be unavoidably reflected in the quality of students’ work—but we also evaluate this discretely based on their participation in and out of the classroom, with us and with their peers.
 
 ### Projects
 
@@ -314,9 +314,10 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 
 |                                    |     |
 | ---------------------------------- | --- |
-| Engagement                         | 20% |
 | Reading Responses                  | 10% |
 | ~~Quizzes,~~ Exercises, Milestones | 10% |
+| Engagement                         | 20% |
+| &nbsp;                             |     |
 | Project Nº 1: *Manuscript*         | 10% |
 | Project Nº 2: *Spread*             | 20% |
 | Project Nº 3: *Binding*            | 30% |
@@ -325,9 +326,10 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 
 |                                |     |
 | ------------------------------ | --- |
-| Engagement                     | 20% |
 | Reading Responses              | 10% |
 | Exercises, Milestones          | 10% |
+| Engagement                     | 20% |
+| &nbsp;                         |     |
 | Project Nº 4: *Links*          | 20% |
 | Project Nº 5: *Functions*      | 40% |
 
