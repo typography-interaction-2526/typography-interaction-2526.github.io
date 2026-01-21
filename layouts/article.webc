@@ -27,12 +27,13 @@
 	window.addEventListener('beforeunload', () => sessionStorage.setItem('viewTransition', 'true'))
 
 	document.addEventListener('click', (event) => {
-		if (event.target.matches?.('a[href^="/"]')) {
+		const href = event.target.getAttribute('href')
+
+		if (href.startsWith('/') && !href.endsWith('.pdf')) {
 	 		if (event.metaKey || event.ctrlKey) return
 
 			event.preventDefault()
 
-			const href = event.target.getAttribute('href')
 			const header = document.querySelector(`header a[href="${href.split('#')[0]}"]`).closest('header')
 
 			const goToLink = () => window.location = href
