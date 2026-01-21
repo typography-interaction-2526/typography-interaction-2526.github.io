@@ -88,7 +88,7 @@ We won’t be formally presenting this work, as with our other projects, but ar
 
 - Include a brief README.md for the repo, too—with links to the *repos* for your projects.
 
--The page should also contain some basic contact information, at least an email—but the more connections to your online presence, the better: your portfolio, social networks, GitHub profile, etc.
+- The page should also contain some basic contact information, at least an email—but the more connections to your online presence, the better: your portfolio, social networks, GitHub profile, etc.
 
 - Of course, this will be a live, public URL.
 

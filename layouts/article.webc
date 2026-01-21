@@ -54,7 +54,6 @@
 				header.scrollIntoView({ block: 'start' })
 
 				setTimeout(() => !scrolled && goToLink(), 50)
-
 			}
 		}
 	})
