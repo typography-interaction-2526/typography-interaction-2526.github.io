@@ -250,14 +250,14 @@ To wrap up the semester (and course), we’ll round out our knowledge of the web
 - [<cite>TikTok’s Enshittification</cite>](https://pluralistic.net/2023/01/21/potemkin-ai/#hey-guys)
 	Cory Doctorow, 2023
 
-- [<cite>Chat&NoBreak;GPT Is a Blurry JPEG of the Web</cite>](https://web.archive.org/web/20230209152247/https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web)
-	Ted Chiang, 2023
-
 - [<cite>The Age of Average</cite>](https://www.alexmurrell.co.uk/articles/the-age-of-average)
 	Alex Murrell, 2023
 
 - [<cite>Why A.I. Isn’t Going to Make Art</cite>](https://web.archive.org/web/20240831102229/https://www.newyorker.com/culture/the-weekend-essay/why-ai-isnt-going-to-make-art)
 	Ted Chiang, 2024
+
+- [<cite>A notional design studio.</cite>](https://ethanmarcotte.com/wrote/a-notional-design-studio/)
+	Ethan Marcotte, 2025
 
 &nbsp;
 <!-- style="margin-block-start: initial" -->
