@@ -32,7 +32,7 @@ In this class, students will learn intermediate and advanced methods in typograp
 
 </div>
 
-### Spring <!-- .spring -->
+### Spring <!-- .spring .print--break -->
 
 Our second semester will build on the type and layout foundations from the first, moving into interface design and interactive experiences on the web.
 <!-- .intro -->
