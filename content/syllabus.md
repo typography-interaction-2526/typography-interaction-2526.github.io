@@ -454,7 +454,7 @@ As tutors are only available a limited number of hours per week, it is advisable
 
 Students may find code similar to our exercises or projects elsewhere online. But the copying or adapting of *any* code beyond our provided course material (lectures, exercises, demos), without attribution, is not allowed under any circumstances. This *includes* from LLM&NoBreak;s, [more below](#llms-and-artificial-intelligence).
 
-If adapting, with attribution, students must explain the usage and demonstrate an understanding of how the code works. We will have <nobr>in-person</nobr> code reviews to facilitate and guage this understanding.
+If adapting, with attribution, students must explain the usage and demonstrate an understanding of how the code works. We may have <nobr>in-person</nobr> code reviews to facilitate and gauge this understanding.
 
 We have zero tolerance for any sort of plagiarism—which ranges from “verbatim copying” (copying-and-pasting) to “thorough paraphrasing” (changing names or rearranging) and “autocompleting” (with LLM-assisted editors). Students should also review the [Academic Integrity Policy](https://docs.google.com/document/d/175hXxUbLI8Jy7NEtbeoyX3Va_MQzXzgxzFUjj7hSkSU).
 
@@ -502,7 +502,7 @@ We will take recordings of our sessions for students to reference later. As thes
 
 ## Attendance, Grading, and Other Policies
 
-All CD classes adhere to the same [common program and university policies](https://docs.google.com/document/d/1Su2tPo8ZW-EUVQ8svhCEDHYyKi93ugLLB2h8gc86Eoc).
+All CD classes adhere to the same [common program and university policies](https://docs.google.com/document/d/1u358io8doX_SVVMGqIM_oH5V0OIccneYu4Ww-uE55QM).
 <!-- .pretty -->
 
 ## Acknowledgments
