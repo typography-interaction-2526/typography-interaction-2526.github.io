@@ -171,6 +171,13 @@
 					text-decoration-skip-ink:  none;
 					text-decoration-thickness: var(--stroke);
 					text-underline-offset:     var(--descender);
+
+					/* Fix “ital” links (`inline-block` breaks). */
+					&:has(em) {
+						text-decoration: revert-layer;
+
+						em { border-block-end: var(--stroke) solid var(--color) }
+					}
 				}
 			}
 		}
