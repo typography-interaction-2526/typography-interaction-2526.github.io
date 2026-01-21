@@ -85,7 +85,7 @@ main {
 	/* Lists, lists, lists. */
 	:is(dl, ol, ul) {
 		/* Extra spacing around loosies. */
-		&:where(:not([class]), :not(:where([class]:not(.balance)))) {
+		&:where(:not([class], :first-child), :not(:where([class]:not(.balance)), :first-child)) {
 			margin-block-start: 1lh;
 
 			&:where(:not(:last-child)) + * {
@@ -358,7 +358,7 @@ main {
 		row-gap:          inherit;
 		text-align:       center;
 
-		/* TODO `::selection` override here! Wasn‘t working. */
+		::selection { --accent: var(--background) }
 
 		&:where(:not(:first-child)), &:where(:not(:last-child)) + * {
 			margin-block-start: 1rlh;
@@ -577,6 +577,8 @@ main {
 		/* TODO `aria-label` instead? */
 	}
 
+	.right .intro { margin-block-start: initial } /* No space above in the rail. */
+
 	&:where(main) > :where(p.intro:first-child)::before { content: initial } /* Fix first. */
 
 	:where(.note),
@@ -621,7 +623,7 @@ main {
 		align-self: stretch;
 
 		.sticky {
-			inset-block-start: 5rlh;
+			inset-block-start: 4rlh;
 			position:          sticky;
 		}
 	}

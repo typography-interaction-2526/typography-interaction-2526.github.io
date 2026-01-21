@@ -164,6 +164,13 @@ export default (eleventyConfig) => {
 
 	// TODO Use JSDOM for this?
 
+	// Fix numeros (Nº) slugifying to `-n-#`.
+	eleventyConfig.addTransform('removeNumeroSlug', function(html) {
+		return String(this.inputPath).endsWith('.md') && String(this.outputPath).endsWith('.html')
+			? html.replace(/-n-(\d+)/g, '-$1')
+			: html
+	})
+
 	// Table of contents.
 	eleventyConfig.addPlugin(pluginToc, {
 		ignoredElements: ['a'],

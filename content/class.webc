@@ -5,38 +5,39 @@
 
 <style>
 	div {
-		grid-column:           left;
 		grid-template-columns: minmax(auto, max-content);
 
-		> button { inline-size: initial }
+		button { inline-size: initial }
 
 		> p { margin-block-start: initial }
+
+		&.left { @container style(--columns: 1) { margin-block-start: 2rcap } }
 	}
 
 	#students {
-		column-gap:         var(--alley);
-		display:            grid;
-		grid-auto-flow:     column;
-		grid-column:        three / six;
-		grid-template-rows: repeat(calc(var(--count) / var(--rows, 1)), min-content);
+		column-gap:            var(--alley);
+		display:               grid;
+		grid-auto-columns:     minmax(0, 1fr);
+		grid-auto-flow:        column;
+		grid-column:           three / six;
+		grid-template-columns: initial;
+		grid-template-rows:    repeat(calc(var(--count) / 2), min-content);
 
-		@media (width >= 30em) {
-			--rows: 2;
+		> li { max-inline-size: 18ch } /* TODO Adjust this for the names? */
 
-			grid-auto-columns:     minmax(0, 1fr);
-			grid-template-columns: initial;
+		cite { white-space: nowrap }
 
-			> li { max-inline-size: 18ch } /* TODO Adjust this for the names? */
-		}
-
-		@media (orientation: landscape) and (width >= 35em), (width >= 60em) { margin-block-start: initial }
+		@container style(--columns: 6) { margin-block-start: initial }
 	}
 </style>
-<div>
-	<button id="shuffle">
-		<p>Shuffle</p>
-	</button>
-	<p><a href="https://docs.google.com/document/d/1En_aoZwgi3slvnv18JRrc-xucbYeG75tMyGsg1nFcA4"><cite>Who We Are</cite></a></p>
+
+<div class="left">
+	<div class="sticky">
+		<button id="shuffle">
+			<p>Shuffle</p>
+		</button>
+		<p><a href="https://docs.google.com/document/d/1En_aoZwgi3slvnv18JRrc-xucbYeG75tMyGsg1nFcA4"><cite>Who We Are</cite></a></p>
+	</div>
 </div>
 <ul
 	:style="`--count: ${$data.class.length}`"

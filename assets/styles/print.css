@@ -1,13 +1,11 @@
 @page {
-	margin:  1in 0;
+	margin:  0;
 	size:    letter;
 }
 
-@page :first { margin: 0 }
-
 :root {
+	--gutter: 1in;
 	--size--root: 16;
-	--gutter:     1in;
 
 	background-color: white;
 
@@ -15,131 +13,156 @@
 	body > ul > li > ul > li {
 		&:not(:has(article)) { display: none } /* Hide other sections. */
 
+		/* Toggles. */
+		.screen { display: none }
+		.print  { display: block }
+
 		article {
 			--background: white;
 
 			background-color: var(--background);
 			text-wrap:        pretty;
 
-			/* Toggles. */
-			.screen { display: none }
-			.print  { display: block }
-
-			/* Pagination. */
-			.print--break {
-				break-before:       page;
-				margin-block-start: var(--stroke);
-
-				/* TODO The lists are still busted, here! */
-				/* Don’t double-up. */
-				> hgroup > .print--break { break-before: initial }
-
-				/* Fix negative going to previous page. */
-				&:where(li) a:has(cite) { margin-block-start: initial }
-			}
-
 			/* Syllabus stuff. */
-			> header.print {
-				display:             grid;
-				margin-inline:       var(--gutter);
-				padding-block-start: 1in;
+			> main {
+				padding-block-start: initial;
 
-				* { grid-column: initial } /* Clear multi-column stuff. */
+				/* Strikethrough. */
+				s { display: none }
 
-				> hgroup {
-					--size: var(--size--h1);
+				/* Pagination. */
+				.print--break {
+					break-before:       page;
+					margin-block-start: var(--gutter);
 
-					display:           flex;
-					gap:               var(--alley);
-					padding-block-end: 1cap;
-					position:          relative;
-
-					h1 { display: block }
-
-					p {
-						--weight: 700;
-
-						font-size:      0.5em;
-						text-transform: uppercase;
-						text-wrap:      nowrap;
+					/* TODO The lists are still busted, here! */
+					/* Don’t double-up. */
+					> hgroup > .print--break {
+						break-before:       revert-layer;
+						margin-block-start: revert-layer;
 					}
 
-					&::after {
-						background-color: var(--color);
-						block-size:       var(--stroke);
-						border-radius:    var(--stroke);
-						content:          '';
-						display:          block;
-						inset-block-end:  calc(-1 * var(--stroke) / 2);
-						inset-inline:     0;
-						position:         absolute;
+					/* Fix negative going to previous page. */
+					&:where(li) a:has(cite) { margin-block-start: initial }
+				}
+
+				/* Per-semester. */
+				.fall { display: none }
+
+				/* .spring { display: none } */
+
+				/* Spring pagination tweaks. */
+				#project-4-links { margin-block-start: 1in }
+				#hig-ongoing { margin-block-start: 1.5in }
+				#projects { margin-block-start: 0.75in }
+				#class-policies { margin-block-start: 1.25in }
+
+				/* Semester headers. */
+				hgroup:has(h3:where([id^='fall'], [id^='spring'])) {
+					display: none;
+
+					+ * { margin-block-start: initial }
+				}
+
+				> header.print {
+					display:             grid;
+					padding-block-start: 1in;
+
+					* { grid-column: initial } /* Clear multi-column stuff. */
+
+					> hgroup {
+						--size: var(--size--h1);
+
+						display:           flex;
+						gap:               var(--alley);
+						padding-block-end: 1cap;
+						position:          relative;
+
+						h1 { display: block }
+
+						p {
+							--weight: 700;
+
+							font-size:      0.5em;
+							text-transform: uppercase;
+							text-wrap:      nowrap;
+						}
+
+						&::after {
+							background-color: var(--color);
+							block-size:       var(--stroke);
+							border-radius:    var(--stroke);
+							content:          '';
+							display:          block;
+							inset-block-end:  calc(-1 * var(--stroke) / 2);
+							inset-inline:     0;
+							position:         absolute;
+						}
 					}
-				}
 
-				/* Logistics. */
-				> section {
-					--leading: 1rlh;
-					--size: var(--size--h3);
-					--weight: 300;
+					/* Logistics. */
+					> section {
+						--leading: 1rlh;
+						--size: var(--size--h3);
+						--weight: 300;
 
-					display:                   grid;
-					margin-block-start:        1in;
-					row-gap:                   1ex;
-					-webkit-text-stroke-width: 0.01em;
+						display:                   grid;
+						margin-block-start:        1in;
+						row-gap:                   1ex;
+						-webkit-text-stroke-width: 0.01em;
 
-					/* TODO Consolidate with `.intro`, move to typography? */
-				}
-
-
-				/* Instructors. */
-				> ul {
-					--leading: 1rlh;
-					--size:    var(--size--note);
-					--weight:  500;
-
-					display:               grid;
-					grid-template-columns: minmax(auto, max-content);
-					margin-block-start:    5rcap;
-					row-gap:               3rcap;
-
-					span {
-						--color: var(--note);
-
-						margin-block-start: calc(1.5rcap);
-
-						a { --underline: initial } /* No underline. */
+						/* TODO Consolidate with `.intro`, move to typography? */
 					}
 
-					/* TODO Consolidate into typography too? */
-				}
 
-				+ main {
-					padding-block-start: initial;
+					/* Instructors. */
+					> ul {
+						--leading: 1rlh;
+						--size:    var(--size--note);
+						--weight:  500;
 
-					> section:first-child {
-						margin-block-start: 1in;
+						display:               grid;
+						grid-template-columns: minmax(auto, max-content);
+						margin-block-start:    5rcap;
+						row-gap:               3rcap;
 
-						> hgroup {
-							padding-block-end:  1cap;
-							position:           relative;
+						span {
+							--color: var(--note);
 
-							/* Divider above it. */
-							&::after {
-								background-color: currentcolor;
-								block-size:       var(--stroke);
-								border-radius:    calc(var(--stroke) / 2);
-								content:          '';
-								inset-block-end:  calc(-1 * var(--stroke) / 2);
-								inset-inline:     0;
-								position:         absolute;
+							margin-block-start: calc(1.5rcap);
+
+							a {
+								--underline:     initial;
+
+								text-decoration: initial;
 							}
+						}
+
+						/* TODO Consolidate into typography too? */
+					}
+				}
+
+				> section:first-of-type {
+					margin-block-start: 1in;
+
+					> hgroup {
+						padding-block-end:  1cap;
+						position:           relative;
+
+						/* Divider above it. */
+						&::after {
+							background-color: currentcolor;
+							block-size:       var(--stroke);
+							border-radius:    calc(var(--stroke) / 2);
+							content:          '';
+							inset-block-end:  calc(-1 * var(--stroke) / 2);
+							inset-inline:     0;
+							position:         absolute;
 						}
 					}
 				}
-			}
 
-			/* Fix inline links. */
-			> main {
+				/* Fix inline links. */
 				:where(dd, dt, figcaption, p, td, th, main li:not(:has(ol, p, section, ul))) a:where(:not(:has(cite))) {
 					--underline: initial;
 
@@ -149,17 +172,6 @@
 					text-decoration-thickness: var(--stroke);
 					text-underline-offset:     var(--descender);
 				}
-			}
-
-			/* Per-semester. */
-			/* .fall { display: none } */
-			.spring { display: none }
-
-			/* Semester headers. */
-			hgroup:has(h3:where([id^='fall'], [id^='spring'])) {
-				display: none;
-
-				+ * { margin-block-start: initial }
 			}
 		}
 	}

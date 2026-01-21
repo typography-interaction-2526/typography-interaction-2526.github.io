@@ -39,13 +39,21 @@
 
 			if ((new URL(href, window.location.origin)).pathname === window.location.pathname) {
 				header.scrollIntoView({ block: 'start' })
-			} else if (header.getBoundingClientRect().top === 0) {
-				goToLink()
 			} else {
-				('onscrollend' in window)
-					? window.addEventListener('scrollend', goToLink)
-					: setTimeout(goToLink, 500)
+				let scrolled = false
+
+				const handleScroll = () => {
+					scrolled = true
+
+					'onscrollend' in window
+						? window.addEventListener('scrollend', goToLink)
+						: setTimeout(goToLink, 500)
+				}
+
+				window.addEventListener('scroll', handleScroll, { once: true })
 				header.scrollIntoView({ block: 'start' })
+
+				setTimeout(() => !scrolled && goToLink(), 50)
 			}
 		}
 	})
@@ -177,14 +185,14 @@
 			webc:import="header.webc"
 			:class="$data.page.url === '/syllabus/' && 'screen'"
 		></block>
-		<block
-			webc:if="$data.page.url === '/syllabus/'"
-			webc:import="print.webc"
-		></block>
 		<block webc:import="nav.webc"></block>
 		<!-- TODO Come back to this! -->
 		<!-- <block webc:import="toc.webc"></block> -->
 		<main>
+			<block
+				webc:if="$data.page.url === '/syllabus/'"
+				webc:import="print.webc"
+			></block>
 			<section webc:if="$data.video">
 				<hgroup>
 					<h2
