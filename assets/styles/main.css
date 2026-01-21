@@ -471,7 +471,7 @@ main {
 	}
 
 	/* Heading spacing, lower for cascade. */
-	section:where(:not(:first-child)) {
+	section:where(:not(:first-child, .first)) {
 		&:where(:has(> hgroup > h2)) {
 			margin-block-start: 2rlh;
 
