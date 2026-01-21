@@ -437,18 +437,20 @@ When in doubt, [*The Elements of Typographic Style*](https://readings.design/PDF
 
 Where does one find typefaces? From *foundries*, again referencing the days when making type involved casting actual metal. While most computers now come with many good ones, there are many other places to get fonts. Here are some that we like:
 
+- [Adobe Fonts](https://fonts.google.com/)
 - [Comercial Type](https://commercialtype.com/)
 - [Dinamo](https://abcdinamo.com/)
 - [Forgotten Shapes](https://forgotten-shapes.com/)
+- [Google Fonts](https://fonts.google.com/)
 - [Grilli Type](https://www.grillitype.com/)
-- [Indian Type Foundry](https://www.indiantypefoundry.com/)/[Fontshare (Free!)](https://www.fontshare.com/)
+- [Indian Type Foundry](https://www.indiantypefoundry.com/)/[Fontshare (free!)](https://www.fontshare.com/)
 - [Klim](https://klim.co.nz/)
 - [Lineto](https://lineto.com/)
+- [Matthew Hinders-Anderson (free for non-commercial!)](https://wehtt.am/fonts/)
 - [MCKL](https://mckltype.com/)
 - [Order](https://order.design/otf)
-- [Typotheque](https://www.typotheque.com/)<br>
-- [Google Fonts](https://fonts.google.com/)
-- [Adobe Fonts](https://fonts.google.com/)
+- [Typographer (free for students!)](https://typographer.com)
+- [Typotheque](https://www.typotheque.com/)
 
 While not a type foundry itself, we include (and will use) *Google Fonts* resource because of its vast array of open-source typefaces. *Adobe Fonts* is similar, but requires a paid subscription.
 <!-- .note -->
