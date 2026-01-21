@@ -152,8 +152,9 @@
 			}
 
 			/* Per-semester. */
-			/* .fall { display: none } */
-			.spring { display: none }
+			.fall { display: none }
+
+			/* .spring { display: none } */
 
 			/* Semester headers. */
 			hgroup:has(h3:where([id^='fall'], [id^='spring'])) {
