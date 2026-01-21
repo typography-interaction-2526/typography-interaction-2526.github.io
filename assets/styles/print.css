@@ -33,11 +33,14 @@
 				/* Pagination. */
 				.print--break {
 					break-before:       page;
-					margin-block-start: var(--stroke);
+					margin-block-start: var(--gutter);
 
 					/* TODO The lists are still busted, here! */
 					/* Don’t double-up. */
-					> hgroup > .print--break { break-before: initial }
+					> hgroup > .print--break {
+						break-before:       revert-layer;
+						margin-block-start: revert-layer;
+					}
 
 					/* Fix negative going to previous page. */
 					&:where(li) a:has(cite) { margin-block-start: initial }
@@ -47,6 +50,12 @@
 				.fall { display: none }
 
 				/* .spring { display: none } */
+
+				/* Spring pagination tweaks. */
+				#project-4-links { margin-block-start: 1in }
+				#hig-ongoing { margin-block-start: 1.5in }
+				#projects { margin-block-start: 0.75in }
+				#class-policies { margin-block-start: 1.25in }
 
 				/* Semester headers. */
 				hgroup:has(h3:where([id^='fall'], [id^='spring'])) {
