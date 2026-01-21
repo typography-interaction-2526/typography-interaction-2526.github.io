@@ -116,7 +116,7 @@
 					/* TODO Consolidate into typography too? */
 				}
 
-				+ main {
+				~ main {
 					padding-block-start: initial;
 
 					> section:first-child {
