@@ -325,7 +325,7 @@ Each unit begins with a set of readings to introduce the subject. Students are e
 
 ### ~~Quizzes,~~ Exercises, Milestones <!-- .print--break -->
 
-Each unit will also have ~~short quizzes on topic material, and~~ specific, technical exercises and milestones that are assigned towards completion of the projects. ~~Quizzes will occur in the class following new material;~~ assignments are expected to be completed outside of class, before the next session. Some of these will be small; some of these will be large. They are *all* evaluated for completion and quality.
+Each unit will also have ~~short quizzes on topic material, and~~ specific, technical exercises and milestones that are assigned towards completion of the projects. ~~Quizzes will occur in the class following new material;~~ Assignments are expected to be completed outside of class, before the next session. Some of these will be small; some of these will be large. They are *all* evaluated for completion and quality.
 
 ### Engagement
 
