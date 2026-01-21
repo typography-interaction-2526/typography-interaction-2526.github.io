@@ -15,15 +15,16 @@
 	body > ul > li > ul > li {
 		&:not(:has(article)) { display: none } /* Hide other sections. */
 
+		/* Toggles. */
+		.screen { display: none }
+		.print  { display: block }
+
 		article {
 			--background: white;
 
 			background-color: var(--background);
 			text-wrap:        pretty;
 
-			/* Toggles. */
-			.screen { display: none }
-			.print  { display: block }
 
 			/* Pagination. */
 			.print--break {
