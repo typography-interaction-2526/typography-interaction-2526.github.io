@@ -358,7 +358,7 @@ main {
 		row-gap:          inherit;
 		text-align:       center;
 
-		/* TODO `::selection` override here! Wasn‘t working. */
+		::selection { --accent: var(--background) }
 
 		&:where(:not(:first-child)), &:where(:not(:last-child)) + * {
 			margin-block-start: 1rlh;
