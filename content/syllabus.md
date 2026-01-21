@@ -217,7 +217,7 @@ We will expand on our first-semester foundations in design, typography, HTML, an
 - [<cite>I Am a Handle</cite>](https://linedandunlined.com/archive/i-am-a-handle/)
 	Rob Giampietro, 2012
 
-- [<cite>Sometimes It Looks Like a Duck, Sometimes It Looks Like a Rabbit</cite>](https://linkedbyair.net/balkin.pdf)
+- [<cite>Sometimes It Looks Like a Duck, Sometimes It Looks Like a Rabbit</cite>](https://veryinteractive.net/pdfs/michaelson-sometimesitlookslikeaduck.pdf)
 	Jack Balkin, Dan Michaelson, 2012
 
 - [<cite>Laws of UX</cite>](https://lawsofux.com/)
