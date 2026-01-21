@@ -33,6 +33,9 @@
 	}
 </style>
 
-<nav webc:root="override">
+<nav
+	webc:root="override"
+	class="screen"
+>
 	<block webc:import="menu.webc"></block>
 </nav>
