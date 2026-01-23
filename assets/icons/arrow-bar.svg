@@ -1,5 +1,0 @@
-<svg viewBox="0 0 12 18" xmlns="http://www.w3.org/2000/svg" >
-	<line class="bar" x1="0" y1="0" x2="12" y2="0" stroke-linecap="round" vector-effect="non-scaling-stroke" />
-	<line x1="6" y1="2" x2="6" y2="18" stroke-linecap="round" vector-effect="non-scaling-stroke" />
-	<polyline points="0,8 6,2 12,8" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke" />
-</svg>

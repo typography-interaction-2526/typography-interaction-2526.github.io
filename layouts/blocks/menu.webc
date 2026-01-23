@@ -42,7 +42,7 @@
 			transition-timing-function: var(--easing);
 			will-change:                transform;
 
-			&:where(.end, .this:last-child) svg { rotate: 180deg }
+			&:where(.end) svg { rotate: 180deg }
 
 			> a {
 				backdrop-filter:            var(--blur);
@@ -69,9 +69,6 @@
 					stroke:       var(--background);
 					stroke-width: var(--stroke);
 				}
-
-				/* Hide the bar on start/end ones. */
-				:where(&[href='#current'], &[href='#next']) .bar {display: none }
 
 				@supports (font: -apple-system-body) { --shadow: color-mix(in srgb, var(--nav), transparent) }
 			}
@@ -116,20 +113,20 @@
 	>
 		<a
 			:href="thisWeek.url"
-			@html="inlineSvg('assets/icons/arrow-bar.svg')"
+			@html="inlineSvg('assets/icons/calendar.svg')"
 			aria-label="This week"
 		></a>
 	</li>
 	<li class="start">
 		<a
-			@html="inlineSvg('assets/icons/arrow-bar.svg')"
+			@html="inlineSvg('assets/icons/arrow.svg')"
 			aria-label="Start"
 			href="#current"
 		></a>
 	</li>
 	<li class="end">
 		<a
-			@html="inlineSvg('assets/icons/arrow-bar.svg')"
+			@html="inlineSvg('assets/icons/arrow.svg')"
 			aria-label="End"
 			href="#next"
 		></a>
@@ -140,7 +137,7 @@
 	>
 		<a
 			:href="thisWeek.url"
-			@html="inlineSvg('assets/icons/arrow-bar.svg')"
+			@html="inlineSvg('assets/icons/calendar.svg')"
 			aria-label="This week"
 		></a>
 	</li>
