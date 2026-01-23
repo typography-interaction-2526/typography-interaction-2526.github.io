@@ -158,7 +158,7 @@
 			webc:import="header.webc"
 		></block>
 	</li>
-	<li>
+	<li :id="$data.page.url === '/project/index/' && 'next'">
 		<block
 			webc:import="header.webc"
 			@title="The end"
