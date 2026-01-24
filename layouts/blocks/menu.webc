@@ -135,7 +135,7 @@
 		(document.querySelector('#next') || document.querySelector('#current')).scrollIntoView({ block: 'end' })
 	}
 </script>
-<svg>
+<svg style="display: none">
 	<defs>
 		<filter id="alpha">
 			<feColorMatrix type="luminanceToAlpha" />
