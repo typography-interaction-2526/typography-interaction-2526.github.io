@@ -108,9 +108,15 @@
 	}
 
 	/* Undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
-	:host-context(article.visible:not(.start) nav.current) li.start { --delay: calc(3 * var(--duration)) }
-	:host-context(article.visible:not(.end) nav.current) li.end { --delay: calc(2 * var(--duration)) }
-	:host-context(article.visible nav.current) li.this { --delay: var(--duration) }
+
+	/* &:nth-last-child(3) { --delay: calc(4 * var(--duration)) }
+			&:nth-last-child(2) { --delay: calc(3 * var(--duration)) }
+			&:last-child { --delay: calc(2 * var(--duration)) } */
+	:host-context(article.visible nav.current) li.this:first-child { --delay: calc(5 * var(--duration)) }
+	:host-context(article.visible.start nav.current) li.this:first-child { --delay: calc(4 * var(--duration)) }
+	:host-context(article.visible:not(.start) nav.current) li.start { --delay: calc(4 * var(--duration)) }
+	:host-context(article.visible:not(.end) nav.current) li.end { --delay: calc(3 * var(--duration)) }
+	:host-context(article.visible nav.current) li.this:last-child { --delay: calc(2 * var(--duration)) }
 
 	:host-context(article.visible:not(.start) nav.current) li.start,
 	:host-context(article.visible:not(.end) nav.current) li.end,
@@ -129,9 +135,15 @@
 	:host-context(nav.after) li.end svg { rotate: 0deg }
 
 	:host-context(article:not(.visible) nav.before) li.start,
-	:host-context(article:not(.visible) nav.after) li.end {
+	:host-context(article:not(.visible) nav.after) li.end,
+	:host-context(article:not(.visible) nav.before) li.this,
+	:host-context(article:not(.visible) nav.after) li.this {
 		--horizontal: 0;
 	}
+
+	:host-context(article:not(.visible) nav:where(.before, .after)) li:nth-last-child(2) { --delay: calc(3 * var(--duration)) }
+	:host-context(article:not(.visible) nav:where(.before, .after)) li:last-child { --delay: calc(2 * var(--duration)) }
+	:host-context(article.visible nav:where(.before, .after)) li:last-child { --delay: var(--duration) }
 </style>
 <script>
 	// Adjust `#next` scrolling to the end.
@@ -151,7 +163,7 @@
 </svg>
 <menu webc:root="override">
 	<li
-		webc:if="current && ($data.page.url !== thisWeek.url) && !thisWeekIsAfter($data)"
+		webc:if="($data.page.url !== thisWeek.url) && !thisWeekIsAfter($data)"
 		class="this"
 	>
 		<a
@@ -184,7 +196,7 @@
 		</a>
 	</li>
 	<li
-		webc:if="current && ($data.page.url !== thisWeek.url) && thisWeekIsAfter($data)"
+		webc:if="($data.page.url !== thisWeek.url) && thisWeekIsAfter($data)"
 		class="this"
 	>
 		<a
