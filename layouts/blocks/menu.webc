@@ -61,7 +61,7 @@
 				&::after { border-radius: inherit }
 
 				> div {
-					clip-path:     circle();
+					border-radius: 100%;
 					display:       grid;
 					mask-image:    radial-gradient(circle, black 65%, transparent 90%);
 					place-content: center;
@@ -78,10 +78,7 @@
 						}
 					}
 
-					@supports (font: -apple-system-body) {
-						background-color: color-mix(in srgb, black 15%, transparent);
-						clip-path:        circle(49%);
-					}
+					@supports (font: -apple-system-body) { background-color: color-mix(in srgb, black 15%, transparent) }
 				}
 
 				@media (any-hover: hover) {
