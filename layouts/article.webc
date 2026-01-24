@@ -183,10 +183,19 @@
 <block webc:import="blocks/pages.webc">
 	<article class="end start">
 		<block
+			webc:import="nav.webc"
+			:@before="true"
+			class="before"
+		></block>
+		<block
 			webc:import="header.webc"
 			:class="$data.page.url === '/syllabus/' && 'screen'"
 		></block>
-		<block webc:import="nav.webc"></block>
+		<block
+			webc:import="nav.webc"
+			:@current="true"
+			class="current"
+		></block>
 		<!-- TODO Come back to this! -->
 		<!-- <block webc:import="toc.webc"></block> -->
 		<main>
@@ -218,5 +227,10 @@
 				@html="content"
 			></template>
 		</main>
+		<block
+			webc:import="nav.webc"
+			:@after="true"
+			class="after"
+		></block>
 	</article>
 </block>

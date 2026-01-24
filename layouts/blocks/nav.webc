@@ -37,5 +37,10 @@
 	webc:root="override"
 	class="screen"
 >
-	<block webc:import="menu.webc"></block>
+	<block
+		webc:import="menu.webc"
+		:@after="after"
+		:@before="before"
+		:@current="current"
+	></block>
 </nav>
