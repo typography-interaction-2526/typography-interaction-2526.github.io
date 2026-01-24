@@ -1,4 +1,5 @@
-<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" >
-	<line x1="8" y1="0.5" x2="8" y2="16" stroke-linecap="round" vector-effect="non-scaling-stroke" />
-	<polyline points="2,6 8,0 14,6" fill="none" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" />
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+	<rect width="300%" height="300%" x="-100%" y="-100%" fill="white"/>
+	<line x1="8" y1="0.5" x2="8" y2="16" stroke-linecap="round" vector-effect="non-scaling-stroke" stroke="black" />
+	<polyline points="2,6 8,0 14,6" fill="none" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke" stroke="black"/>
 </svg>
