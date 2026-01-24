@@ -70,7 +70,6 @@
 						block-size:          1rcap;
 						filter:              url('#alpha');
 						opacity:             50%;
-						scale:               1;
 						stroke-width:        var(--stroke);
 
 						@supports (font: -apple-system-body) {
