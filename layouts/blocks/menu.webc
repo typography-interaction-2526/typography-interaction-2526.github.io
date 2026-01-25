@@ -105,10 +105,6 @@
 	}
 
 	/* Undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
-
-	/* &:nth-last-child(3) { --delay: calc(4 * var(--duration)) }
-			&:nth-last-child(2) { --delay: calc(3 * var(--duration)) }
-			&:last-child { --delay: calc(2 * var(--duration)) } */
 	:host-context(article.visible nav.current) li.this:first-child { --delay: calc(5 * var(--duration)) }
 	:host-context(article.visible.start nav.current) li.this:first-child { --delay: calc(4 * var(--duration)) }
 	:host-context(article.visible:not(.start) nav.current) li.start { --delay: calc(4 * var(--duration)) }
@@ -133,8 +129,7 @@
 
 	:host-context(article:not(.visible) nav.before) li.start,
 	:host-context(article:not(.visible) nav.after) li.end,
-	:host-context(article:not(.visible) nav.before) li.this,
-	:host-context(article:not(.visible) nav.after) li.this {
+	:host-context(article:not(.visible) nav:where(.before, .after)) li.this {
 		--horizontal: 0;
 	}
 
