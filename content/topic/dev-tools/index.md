@@ -148,7 +148,8 @@ The *Preview Zoom* also allows you to approximate views *larger* than your curre
 
 <style>
 	@container style(--columns: 6) {
-		div.center.left { margin-inline-end: calc(-1 * var(--alley)) }
+		div.center.left,
+		div.verso.pretty { margin-inline-end: calc(-1 * var(--alley)) }
 	}
 </style>
 
@@ -183,12 +184,11 @@ This is just a quicker preview, but isn’t always perfectly accurate—and also
 
 ## The Console
 
-<div class="add-before--2 verso" style="align-self: start">
+<div class="verso pretty" style="align-self: start">
 
-The console is used to help you work with [JavaScript](/topic/javascript), by *logging* messages (and any errors) from your code as it runs. It can also evaluate any JS, live.
-<!-- .balance -->
+The console is used to help you work with [JavaScript](/topic/javascript), by *logging* messages, warnings, and any errors from your code as it runs. It can also evaluate written/pasted JS, live.
 
-If your tools are already open, you can show the <samp>Console</samp> (as a drawer) with the Customize <samp>⋮</samp> button, or as a whole panel to the right of <samp>Elements</samp>.
+If your tools are already open, you can show the <samp>Console</samp> (as a drawer, below) with the Customize <samp>⋮</samp> button, or as a whole panel to the right of <samp>Elements</samp>.
 
 You can also hit <nobr><kbd>⌘</kbd> <kbd>⌥</kbd> <kbd>J</kbd></nobr> to go right there!
 <!-- .note -->
@@ -198,44 +198,41 @@ You can also hit <nobr><kbd>⌘</kbd> <kbd>⌥</kbd> <kbd>J</kbd></nobr> to go r
 <figure
 	@source="panel-drawer.svg"
 	class="recto"
-	style="align-items: end"
+	style="justify-content: end"
 	>
 </figure>
 
 <figure
 	@caption="The Console opened under Elements/Styles."
 	@source="console.png"
-	class="shadow"
+	class="shadow before--3 after--3"
 	>
 </figure>
 
 This area will show any [messages logged](https://developer.mozilla.org/en-US/docs/Web/API/console#outputting_text_to_the_console) from your JavaScript with `console.log()`.
-<!-- .balance .scale--h4 .bold .add-after--3 -->
+<!-- .intro -->
 
-<div class="left">
+<div class="balance verso">
 
-**<span style="color: goldenrod">Warnings</span>** and **<span style="color: firebrick">errors</span>** (like missing files, or bad JS syntax) will also be shown here—usually with clickable <samp>script.js:##</samp> line-numbers to the right, to take you directly to the problem. You can clear the *buffer* (what is showing) with the little crossed circle <samp>⊘︎</samp> when it gets cluttered.
+**<span style="color: gold">Warnings</span>** and **<span style="color: tomato">errors</span>** (like missing files, or bad JS syntax) will also be shown here—usually with clickable <samp>script.js:##</samp> line-numbers to the right, to take you directly to the problem. You can clear the *buffer* (what is showing) with the little crossed circle <samp>⊘︎</samp> when it gets cluttered.
 
-You can also evaluate and try your JavaScript here *directly*, by typing (with some nice auto-completion) into the bottom of the console—like `console.log('Hello, world!')` (note the quotes for a [*string*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)).
+You can also evaluate and try your JavaScript here *directly*, by typing (with some nice auto-completion) into the bottom of the console—like `console.log('Hello, world!')` (note the quotes for [a *string*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)).
 
-You can use this to test out parts of your code right away, like `document.querySelector('h1')`. If it *returns* (shows) your element in response, your selector is working!
+You can use this to test out parts of your code right away, like `document.querySelector('h1')`. If it *returns* (shows) your element in response, your selector is working!
 
 </div>
 
-<div style="align-self: stretch; grid-column: center-start / all-end">
+<div class="center recto">
 
-<figure
-	@source="console.svg"
-	style="align-items: end; margin-top: initial; position: sticky; top: var(--layout--spacing);"
-	>
-</figure>
+<!-- TODO Update this! -->
+<figure @source="console.svg"></figure>
 
 </div>
 
 <aside>
 
-When in (JavaScript) doubt, open your Console!
+<mark>Open Console in case of JavaScript emergency</mark>
 
-You can check variables by printing them out with `console.log('Variable: ' + variableName)`, or even just make sure that part of your code ran with `console.log('Made it here!')`.
+You can check your variables by printing them out with `console.log('Variable: ' + variableName)`, or even just make sure that part of your code ran with `console.log('Made it here!')`.
 
 </aside>
