@@ -94,27 +94,25 @@ You might see these inline events in old examples/code, but don’t use these no
 
 And again like CSS, JavaScript can be enclosed in its own special tag, the [`<script>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script). (These are also, somewhat confusingly, called *inline* scripts.) Anything inside the tag should be written in JavaScript syntax and will be executed *right away*—in the order/position of the tag within the HTML document.
 
-- [<letter-bullet @bullet="S" @title="`<script>` The Script element – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
+- [<cite>`<script>` The Script element – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
 	More minutia on using these in-HTML elements.
 
-- [<letter-bullet @bullet="V" @title="Storing the information you need — Variables – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Variablest)
+- [<cite>Storing the information you need—Variables – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Variables)
 	Variables are always going to make your life easier.
-	<!-- .link-list .right style="--rows: 3" -->
-
-<!--- Rail links for element and variables. --->
+<!-- .right .rows--3 -->
 
 Since this script isn’t directly *on* an element anymore (as above), we then have to identify the *target* element with [a `querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector), and then *attach* [the `click` event](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event) to it via [`addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener):
-<!-- .add-before--2 .balance -->
+<!-- .before--2 .balance -->
 
 <figure
-	@source="element/preview"
-	@style="--lines: 22"
+	@source="element/preview/?width=75%"
+	@style="--lines: 24"
 	@caption="Note the different `// comment syntax` for JS! And we had to add `cursor: pointer;` for the button in our CSS, to indicate it is actionable. Mind your affordances!"
 	>
 </figure>
 
 We also store (declare) the element here as a [*variable*](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables), to keep our code readable and reusable. These are a bit like their [CSS counterparts](/topic/responsive/#briefly-css-variables). Ergonomics!
-<!-- .balance .add-after--2 -->
+<!-- .balance .after--2 -->
 
 #### Oh Also, `<noscript>`
 
@@ -128,7 +126,7 @@ Some folks block/disable JavaScript—for performance or accessibility reasons,
 ```
 
 You can test these by [disabling JavaScript](https://developer.chrome.com/docs/devtools/javascript/disable/) in your DevTools.
-<!-- .secondary -->
+<!-- .note -->
 
 ### 3.&emsp;Separate&thinsp;/&thinsp;External `.js` Files
 
