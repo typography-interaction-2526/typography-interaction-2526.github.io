@@ -130,7 +130,7 @@ Keep in mind that these changes are only *temporary*—any edits in the DevTools
 Enter *device mode* with the little phone/laptop <samp style="-webkit-text-stroke-width: 0.05rem">⿸</samp> button, <br>in the upper left of the DevTools:
 
 <figure
-	@caption="Be sure to <em>refresh</em> with <nobr><kbd>⌘</kbd> <kbd>R</kbd></nobr> if the page doesn’t rescale correctly when you enter this mode! They sometimes don’t, depending on how they are built—especially with JS shenanigans."
+	@caption="Be sure to <em>hard-refresh</em> with <nobr><kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>R</kbd></nobr> (to clear the cache) if the page doesn’t rescale correctly when you enter this mode! They sometimes don’t, depending on how they are built—especially with JS shenanigans."
 	@source="device.png"
 	class="shadow"
 	>
