@@ -1,4 +1,4 @@
-// This is the same as before, setting up variables.
+// Similar to before, setting up variables.
 let button = document.querySelector('#example')
 let modal = document.querySelector('#dialog') // Now one for our `dialog`.
 let closeButton = modal.querySelector('.close') // Only looking within `modal`.
