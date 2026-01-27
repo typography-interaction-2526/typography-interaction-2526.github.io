@@ -62,10 +62,11 @@ The language has evolved so much that we can do a lot, here, and this is where 
 Very much [like CSS](/topic/css/#where-css-lives), JavaScript code can live in several places:
 <!-- .intro -->
 
+<!--- For future you: there is a “zero-width joiner” in the `<script>` here to fix syntax/linting. --->
 1. *Inline* as attributes on elements
-1. Inside `script` elements within HTML documents <!-- eslint-ignore-line -->
-1. As separate/external `.js` files *(the right way)*, via `src` attributes
-<!-- .all .bold -->
+1. Inside `<‍script>` elements within HTML documents
+1. As separate/external `.js` files *(the right way)*, via `src=""` attributes
+<!-- .all -->
 
 ### 1.&emsp;Inline Event Handlers
 
@@ -90,11 +91,11 @@ You might see these inline events in old examples/code, but don’t use these no
 
 </aside>
 
-### 2.&emsp;Wrapped in `<script>` Tags
+### 2.&emsp;Wrapped in `<‍script>` Tags
 
-And again like CSS, JavaScript can be enclosed in its own special tag, the [`<script>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script). (These are also, somewhat confusingly, called *inline* scripts.) Anything inside the tag should be written in JavaScript syntax and will be executed *right away*—in the order/position of the tag within the HTML document.
+And again like CSS, JavaScript can be enclosed in its own special tag, the [`<‍script>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script). (These are also, somewhat confusingly, called *inline* scripts.) Anything inside the tag should be written in JavaScript syntax and will be executed *right away*—in the order/position of the tag within the HTML document.
 
-- [<cite>`<script>` The Script element – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
+- [<cite>`<‍script>` The Script element – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
 	More minutia on using these in-HTML elements.
 
 - [<cite>Storing the information you need—Variables – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Variables)
@@ -130,7 +131,7 @@ You can test these by [disabling JavaScript](https://developer.chrome.com/docs/d
 
 ### 3.&emsp;Separate&thinsp;/&thinsp;External `.js` Files
 
-By far the most common, flexible way to include JavaScript is externally—again, like CSS. The difference here is that instead of a `<link>` element, we still use a (now empty) `<script>` tag, with the addition of a `src="filename.js"` attribute:
+By far the most common, flexible way to include JavaScript is externally—again, like CSS. The difference here is that instead of a `<link>` element, we still use a (now empty) `<‍script>` tag, with the addition of a `src="filename.js"` attribute:
 <!-- .after -->
 
 - [<cite>Document: `querySelector()` method – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
@@ -147,7 +148,7 @@ By far the most common, flexible way to include JavaScript is externally—again
 I’ve never liked this empty-tag syntax, what can you do.
 <!-- .note -->
 
-This will still run when the document gets to the `<script>` (and in its place/order) as before, and the `defer` attribute allows it to “see” the HTML (not yet loaded) below it.
+This will still run when the document gets to the `<‍script>` (and in its place/order) as before, and the `defer` attribute allows it to “see” the HTML (not yet loaded) below it.
 <!-- .before -->
 
 We can then move the script up into our `<head>`, along with our other external files:
