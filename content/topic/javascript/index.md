@@ -93,7 +93,7 @@ You might see these inline events in old examples/code, but don’t use these no
 
 ### 2.&emsp;Wrapped in `<‍script>` Tags
 
-And again like CSS, JavaScript can be enclosed in its own special tag, the [`<‍script>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script). (These are also, somewhat confusingly, called *inline* scripts.) Anything inside the tag should be written in JavaScript syntax and will be executed *right away*—in the order/position of the tag within the HTML document.
+And again like CSS, JavaScript can be enclosed in its own special tag, the [`<‍script>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script). (These are also, somewhat confusingly, called *inline* scripts.) Anything inside the tag should be written in JavaScript syntax and will be executed *right away*—in the order/position of the tag within the HTML document. (This is why you will often see them right before `</body>`, so they can “see” the whole page!)
 
 - [<cite>`<‍script>` The Script element – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
 	More minutia on using these in-HTML elements.
@@ -102,7 +102,7 @@ And again like CSS, JavaScript can be enclosed in its own special tag, the [`<
 	Variables are always going to make your life easier.
 <!-- .right .rows--3 -->
 
-Since this script isn’t directly *on* an element anymore (as above), we then have to identify the *target* element with [a `querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector), and then *attach* [the `click` event](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event) to it via [`addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener):
+Since this script isn’t directly *on* an element anymore (as above), we then have to identify the *target* element with [a `querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector), and then *attach* [the `onclick` event handler](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event) to it:
 <!-- .before--2 .balance -->
 
 <figure
@@ -112,7 +112,7 @@ Since this script isn’t directly *on* an element anymore (as above), we then
 	>
 </figure>
 
-We also store (declare) the element here as a [*variable*](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables), to keep our code readable and reusable. These are a bit like their [CSS counterparts](/topic/responsive/#briefly-css-variables). Ergonomics!
+We also *declare* (store) the element here as a [*variable*](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables), to keep our code readable and reusable. These are a bit like their [CSS counterparts](/topic/responsive/#briefly-css-variables). Mind your ergonomics!
 <!-- .balance .after--3 -->
 
 #### Oh Also, `<noscript>`
@@ -131,15 +131,12 @@ You can test these by [disabling JavaScript](https://developer.chrome.com/docs/d
 
 ### 3.&emsp;Separate&thinsp;/&thinsp;External `.js` Files
 
-By far the most common, flexible way to include JavaScript is externally—again, like CSS. The difference here is that instead of a `<link>` element, we still use a (now empty) `<‍script>` tag, with the addition of a `src="filename.js"` attribute:
+By far the most robust, flexible way to include JavaScript is externally—again, like CSS. The difference here is that instead of a `<link>` element, we still use a (now empty) `<‍script>` tag, with the addition of a `src="filename.js"` attribute:
 <!-- .after -->
 
-- [<cite>Document: `querySelector()` method – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
-	This is how you target HTML elements in JS.
-
-- [<cite>EventTarget: `addEventListener()` method – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
-	And then listen for *events* happening on them.
-<!-- .right .rows--4 -->
+- [<cite>`defer` property – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/defer)
+	Needed for `<head>` scripts to “see” your HTML!
+<!-- .right .rows--3 -->
 
 ```html
 <script defer src="script.js"></script>
@@ -148,11 +145,11 @@ By far the most common, flexible way to include JavaScript is externally—again
 I’ve never liked this empty-tag syntax, what can you do.
 <!-- .note -->
 
-This will still run when the document gets to the `<‍script>` (and in its place/order) as before, and the `defer` attribute allows it to “see” the HTML (not yet loaded) below it.
+This will still run when the document gets to the `<‍script>` (and in its place/order) as before—but the additional `defer` attribute allows it to “see” the HTML (not yet loaded) below it. Without this attribute, it doesn’t know about the rest of the page!
 <!-- .before -->
 
 We can then move the script up into our `<head>`, along with our other external files:
-<!-- .before--3 .balance -->
+<!-- .before--2 .balance -->
 
 <figure
 	@source="external/preview/?width=75%"
@@ -161,32 +158,39 @@ We can then move the script up into our `<head>`, along with our other external
 	>
 </figure>
 
-It’s the same JavaScript and behavior as the inline example above—but now moved over into a nice, separate, JS-syntax-highlighted file that can be re-used across pages. [*This is the way*](https://www.youtube.com/watch?v=Mw7zSQ7ja7Y).
+It’s the same exact JavaScript and behavior as the inline example above—but now moved over into a nice, separate, JS-syntax-highlighted file that can be re-used across pages. [*This is the way*](https://www.youtube.com/watch?v=Mw7zSQ7ja7Y).
 
 ## Adding&thinsp;/&thinsp;Removing a Class
 
-Okay, time for a more practical example: probably the most common thing you will use JS for—especially as we’re starting out—is simply to add or remove (toggle) a class from something when the user interacts with your page (such as clicking on a menu).
+Okay, time for a more practical example: probably the most common thing you will use JS for—especially as we’re starting out—is simply to add or remove (*toggle*) a class from something when the user interacts with your page (such as clicking on a menu).
 
-- [<letter-bullet @bullet="C" @title="Element: `classList` property – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
+- [<cite>Document: `querySelector()` method – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+	This is how you target HTML elements in JS.
+
+- [<cite>EventTarget: `addEventListener()` method – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+	And then listen for *events* happening on them—`.onclick` is a shorthand.
+
+- [<cite>Element: `classList` property – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
 	Controls the CSS classes on an element.
-	<!-- .link-list .right style="--rows: 2" -->
+<!-- .right .rows--4 -->
 
-Like with our [*transition*](/topic/advanced-css/#transitions) examples, the element needs two states in your CSS: *without* the class and then *with* the class. The JavaScript interaction/event will just switch between them, and our CSS `transition` will smooth out the… transition.
+Like with our [*transition*](/topic/advanced-css/#transitions) examples, the element needs two *states* in your CSS: *without* the class and then *with* the class. The JavaScript interaction/event will just switch between them, and our CSS `transition` will smooth out the change. Keep in mind here that the JS doesn’t (and shouldn’t/needn’t) do anything visual, itself! That is still the domain of our styles.
 
-We’ll again use `querySelector` and `addEventListener` to listen for clicks, but then modify [the `classList`](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) of a *different* element:
-<!-- .add-before--3 -->
+We’ll again [use `querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) to target our element—but now we’ll opt for the more [explicit `addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) to listen for clicks, then modify [the `classList`](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) of a *different* element—switching between our two states:
+<!-- .before--3 -->
 
 <figure
 	@source="classlist/preview/?active=style.css"
-	@style="--lines: 13"
+	@style="--lines: 15"
 	@caption="Note the [camelCase](https://en.wikipedia.org/wiki/Camel_case) variable names, which is the JavaScript convention. Longer, more-descriptive names will help as your code gets more complex."
 	>
 </figure>
 
-The class can be toggled on any element in your HTML (or sometimes, even just on `document.body` itself)! `querySelector` takes *any* CSS selector, even other classes. Also you an specifically use `classList.add` and `classList.remove`, if you don’t want the on-and-off behavior from `classList.toggle`!
+The class can be toggled on any element in your HTML (or sometimes, even just on `document.body` itself)! JavaScript’s `querySelector` takes *any* CSS selector, even other classes. Also you can specifically use `classList.add` and `classList.remove`, if you don’t want or need to separate the on-and-off behavior from `classList.toggle`&thinsp;!
+<!-- .balance -->
 
-You can do many, many things with this basic “add a class” JS! It’s the basis for much of the interactivity you see online.
-<!-- .scale--h4 .bold .balance .add-before-->
+You can do many, many things with this basic “toggle a class” JS! It’s the basis for much of the interactivity you see online.
+<!-- .intro -->
 
 ## Opening a Modal
 

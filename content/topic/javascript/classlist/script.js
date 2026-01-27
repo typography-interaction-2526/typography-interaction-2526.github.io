@@ -3,6 +3,7 @@ let highlightClass = 'highlight' // “Strings” (like a class name) are wrappe
 let textBlock = document.querySelector('section') // Any selector.
 let switchButton = document.querySelector('#example')
 
-switchButton.onclick = () => { // “Listen” for clicks.
+// You’ll often see this instead of the `.onclick` shorthand:
+switchButton.addEventListener('click', () => { // “Listen” for clicks.
 	textBlock.classList.toggle(highlightClass) // Toggle the class!
-}
+})
