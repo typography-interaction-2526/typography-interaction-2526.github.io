@@ -1,7 +1,7 @@
 /* 404 for the font. */
 @font-face {
 	font-family: 'Some Cool Font';
-	src:         url('/fonts/some-cool-font.woff') format('opentype');
+	src:         url('/fonts/some-cool-font.woff2') format('woff2');
 }
 
 
