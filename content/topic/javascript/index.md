@@ -4,28 +4,32 @@
 	const week = 17
 </script>
 
+## The *Muscles* of the Web
+
 JavaScript is the language/format for adding interactivity to a web page—based on actions or *events* from the user. Where do we even start with *JS*? (Everyone says *jay-ess*.) It is so massive and often seems unapproachable. So we’ll go through a bit of background, and then start with some very practical examples you might want in your work.
 
-- [<letter-bullet @bullet="B" @title="JavaScript Basics – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-There are *literally* millions of sites about JS, but let’s start with MDN.
+- [<cite>JavaScript: Adding interactivity – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
+	There are *literally* millions of sites about JS, but let’s start with MDN.
 
-- [<letter-bullet @title="JavaScript – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
-More MDN.
+- [<cite>JavaScript – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
+	Another MDN into.
 
-- [<letter-bullet @bullet="Q" @title="Highest-scored 'javascript' Questions – Stack Overflow"></letter-bullet>](https://stackoverflow.com/questions/tagged/javascript?tab=Votes)
-It’s like Reddit for code! (Always check the year on answers. Some are *old*&thinsp;!)
+- [<cite>Highest-scored JavaScript Questions – Stack Overflow</cite>](https://stackoverflow.com/questions/tagged/javascript?tab=Votes)
+	It’s like [Reddit](https://www.reddit.com/r/javascript/) for code! (Always check the year on answers. Some are *old*&hairsp;!)
 
-- [<letter-bullet @bullet="M" @title="The Modern Javascript Tutorial"></letter-bullet>](https://javascript.info)
-This reference goes very advanced/in-depth.
+- [<cite>The Modern Javascript Tutorial</cite>](https://javascript.info)
+	This reference goes very advanced/in-depth.
 
-- [<letter-bullet @title="Eloquent JavaScript"></letter-bullet>](https://eloquentjavascript.net)
-Also goes deep.
-	<!-- .link-list .right style="--rows: 4" -->
+- [<cite>Eloquent JavaScript</cite>](https://eloquentjavascript.net)
+	Also goes deep.
+<!-- .right .rows--5 -->
 
-Going back to [a very early analogy](/topic/everything/#even-things-that-aren-t-web-pages-are-web-page-like), JavaScript is the *muscles* of the web. Like [HTML](/topic/html) (the *bones*) and [CSS](/topic/css) (the *skin*), it is ultimately still just text that is parsed by our browsers. Like CSS, it can live within HTML documents, but is usually saved separately with the extension `.js`&thinsp;.
-<!-- .add-before--3 -->
+Going back to [a very early analogy](/topic/everything/#even-things-that-aren-t-web-pages-are-web-page-like), JavaScript is the *muscles* of the web. Like [HTML](/topic/html/) (the *bones*) and [CSS](/topic/css/) (the *skin*), it is ultimately still just text that is parsed by our browsers. Like CSS, it can live within HTML documents, but is usually saved separately with the extension `.js`&thinsp;.
+<!-- .before--3 -->
 
 JavaScript was first created by [Brendan Eich](https://brendaneich.com/2008/04/popularity/) over just *10 days* in 1995, and has been through a myriad of evolutions, paths, missteps, and enhancements [since then](https://en.wikipedia.org/wiki/JavaScript#History). It has nothing formally to do with *Java*, confusingly—other than being contemporaries and sort-of competitor, thus the name. (Coffee-culture was really big in the 90s!) JavaScript won the race, by every measure, and is ubiquitous on the modern web.
+
+<br><br><br>
 
 <blockquote
 	@attribution="Brendan Eich"
@@ -33,12 +37,11 @@ JavaScript was first created by [Brendan Eich](https://brendaneich.com/2008/04/p
 	@class="add-before"
 	>
 
-The idea was to make something that Web designers, people who may or may not have much programming training, could use to add a little bit of animation or a little bit of smarts to their Web forms and their Web pages.
+The idea was to make something that Web designers, people who may or may not have much programming training, could use to add a little bit of animation or a little bit of smarts to their Web forms and their Web pages.
 
 </blockquote>
 
-Like HTML&thinsp;/&thinsp;CSS, JavaScript was a malleable, *interpreted* (not [*compiled*](https://en.wikipedia.org/wiki/Compiled_language)) language running in the browser—meaning the source code could be seen by anyone, and anyone could borrow or modify it for their needs. You could always [“pop the hood”](/topic/inspector) to see how it worked. And then as our computers—and thus our browsers—became faster and cheaper, JS was used for more and more things.
-<!-- .add-before--3 -->
+Like HTML&thinsp;/&thinsp;CSS, JavaScript was a malleable, *interpreted* (not [*compiled*](https://en.wikipedia.org/wiki/Compiled_language)) language running in the browser—meaning the source code could be seen by anyone, and anyone could borrow or modify it for their needs. You could always [“pop the hood”](/topic/inspector/) to see how it worked. And then as our computers—and thus our browsers—became faster and cheaper, JS was used for more and more things.
 
 Remember that now the tendrils of JavaScript [are almost everywhere](/topic/everything/#its-increasingly-just-js-behind-the-scenes)—running headless on servers, rendering whole sites, talking to hardware, [processing NASA images](https://www.theverge.com/2022/8/18/23206110/james-webb-space-telescope-javascript-jwst-instrument-control), and so on. It’s web technologies, all the way down.
 
