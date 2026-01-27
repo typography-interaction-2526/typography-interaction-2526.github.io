@@ -241,27 +241,24 @@ This used to be *unnecessarily* hard in JavaScript, and was one of the things 
 You will often want to use this on multiple elements—and remember, when in code, [*don’t repeat yourself*](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)*!*
 <!-- .balance -->
 
-- [<letter-bullet @bullet="A" @title="Element: `querySelectorAll()` method – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll)
+- [<cite>Element: `querySelectorAll()` method – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll)
 	Gets multiple elements.
 
-- [<letter-bullet @bullet="F" @title="`forEach()` – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+- [<cite>`forEach()` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 	And “loop” through them.
-	<!-- .link-list .right style="--rows: 3" -->
+<!-- .right .rows--2 -->
 
 So we can use [`querySelectorAll`](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll) to select *multiple* elements—which gives us a [*NodeList*](https://developer.mozilla.org/en-US/docs/Web/API/NodeList) (a kind of [*Array*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array))—and then use a [`forEach`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) *loop* to run the same class for each of them:
-<!-- .balance -->
+<!-- .balance .before--2 -->
 
 <figure
 	@source="intersection-loop/preview/?active=script.js"
-	@style="--lines: 22"
-	@caption="Here we’ve also adjusted the [`rootMargin`](https://www.smashingmagazine.com/2021/07/dynamic-header-intersection-observer/#rootmargin) from the viewport/default, so the elements don’t transition immediately."
+	@style="--lines: 24"
+	@caption="Here we’ve also adjusted the [`rootMargin`](https://www.smashingmagazine.com/2021/07/dynamic-header-intersection-observer/#rootmargin) from the full-viewport default with an inset, so the elements don’t transition immediately."
 	>
 </figure>
 
-<!---
-TODO:
-Add/remove node, manipulate text example?
---->
+<!--- TODO Add/remove node, manipulate text example? --->
 
 ## Some Miscellaneous JS Tips
 
