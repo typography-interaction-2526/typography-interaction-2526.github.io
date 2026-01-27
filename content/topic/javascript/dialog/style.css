@@ -1,0 +1,16 @@
+dialog {
+	color: white;
+	gap: calc(4 * var(--base));
+	inset: 0; /* Fill the viewport! */
+	place-content: center; /* Center the tracks. */
+	place-items: center; /* Center within the tracks. */
+
+	&[open] { display: grid } /* `block` is default, but we can override. */
+}
+
+.close { background-color: tomato; } /* Always have a clear “close” `button`. */
+
+::backdrop {
+	background-color: rgb(0 0 0 / 75%); /* A dark overlay. */
+	backdrop-filter: blur(8px); /* Maybe a little “glassmorphism”? */
+}

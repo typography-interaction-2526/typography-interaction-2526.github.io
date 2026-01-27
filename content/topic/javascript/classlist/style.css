@@ -1,0 +1,11 @@
+section { /* Initial state, without the class. */
+	background-color: gold;
+	padding: calc(var(--base) / 2);
+	transition: all 1s ease-in-out; /* Transition everything. */
+	will-change: transform; /* Improves the aliasing! */
+}
+
+section.highlight { /* When the class is applied with JS! */
+	background-color: aquamarine;
+	transform: rotate(5deg);
+}
