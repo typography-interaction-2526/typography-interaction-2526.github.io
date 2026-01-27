@@ -215,24 +215,24 @@ You could (and used to) do this by [adding/removing classes](#adding-removing-a-
 
 ## Watching for Scrolling
 
-Another very common use for JavaScript is to do something when an element enters or exits the viewport (scrolling into or out of view)—like fading or moving something in. (Remember, using/responding to the viewport is always very *web-y!*&thinsp;)
+Another very common, designer-y use for JavaScript is to do something when an element enters or exits the viewport, scrolling into or out of view—like fading, highlighting, or moving something in. Remember, acknowledging and responding to the viewport is always very *web-y!*
 
-- [<letter-bullet @bullet="N" @title="Intersection Observer API – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
+- [<cite>Intersection Observer API – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
 	Watch for things entering/exiting the viewport.
 
-- [<letter-bullet @bullet="L" @title="`if`…`else` – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+- [<cite>`if`…`else` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
 	Conditional logic blocks, “if this then that.”
-	<!-- .link-list .right style="--rows: 2" -->
+<!-- .right .rows--3 -->
 
-Again we’ll need two states in our CSS—defined with/without a class. But now we’ll make use of the user’s scrolling, instead of a click, to toggle the between them.
+Again we’ll need two states in our CSS, defined with and without a class. But now we’ll make use of the user’s scrolling—instead of a `click` event—to toggle the between the two visual states. Our JS still *only* adds/removes the class!
 
-This used to be *unnecessarily* hard in JavaScript, and was one of the things jQuery was created to help with. Nowadays we can easily use [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to watch the element:
-<!-- .add-before--3 .balance -->
+This used to be *unnecessarily* hard in JavaScript, and was one of the things [jQuery](https://jquery.com/) was created to help with. Nowadays we can easily use [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to watch the element:
+<!-- .before--2 .balance -->
 
 <figure
 	@source="intersection/preview/?active=script.js"
-	@style="--lines: 18"
-	@caption="Note the [`if` / `else`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement, an example of [conditional logic](https://en.wikipedia.org/wiki/Conditional_(computer_programming))!"
+	@style="--lines: 20"
+	@caption="Note the [`if`&thinsp;/&thinsp;`else`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement, an example of [conditional logic](https://en.wikipedia.org/wiki/Conditional_(computer_programming))!"
 	>
 </figure>
 
