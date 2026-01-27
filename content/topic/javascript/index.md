@@ -238,7 +238,7 @@ This used to be *unnecessarily* hard in JavaScript, and was one of the things 
 
 ### Loops
 
-You will often want to use this on multiple elements—and remember, when in code, [*don’t repeat yourself*](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)*!*
+You will often want to use this on multiple elements—and remember, when in code, [*don’t repeat yourself*](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)*!* In JS, when we want to do something over and over we’re talking about [loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration).
 <!-- .balance -->
 
 - [<cite>Element: `querySelectorAll()` method – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll)
@@ -248,7 +248,7 @@ You will often want to use this on multiple elements—and remember, when in c
 	And “loop” through them.
 <!-- .right .rows--2 -->
 
-So we can use [`querySelectorAll`](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll) to select *multiple* elements—which gives us a [*NodeList*](https://developer.mozilla.org/en-US/docs/Web/API/NodeList) (a kind of [*Array*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array))—and then use a [`forEach`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) *loop* to run the same class for each of them:
+We can use [`querySelectorAll`](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll) to select *multiple* elements—which gives us a [*NodeList*](https://developer.mozilla.org/en-US/docs/Web/API/NodeList) (a kind of [*Array*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array))—and then use a [`forEach`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) *loop* to run the same class for each of them:
 <!-- .balance .before--2 -->
 
 <figure
