@@ -253,10 +253,20 @@ So we can use [`querySelectorAll`](https://developer.mozilla.org/en-US/docs/We
 
 <figure
 	@source="intersection-loop/preview/?active=script.js"
-	@style="--lines: 24"
+	@style="--lines: 23"
 	@caption="Here we’ve also adjusted the [`rootMargin`](https://www.smashingmagazine.com/2021/07/dynamic-header-intersection-observer/#rootmargin) from the full-viewport default with an inset, so the elements don’t transition immediately."
 	>
 </figure>
+
+<aside>
+
+<mark>Implementation always subject to change</mark>
+
+Much of our (designer) need for JavaScript’s `IntersectionObserver` is moving fully into CSS with its new *[scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations).*
+
+These are usually a safe *[progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement),* as they’ll just appear static in [older browsers/Firefox](https://caniuse.com/?search=animation-timeline).
+
+</aside>
 
 <!--- TODO Add/remove node, manipulate text example? --->
 

@@ -3,9 +3,8 @@ let highlightBlocks = document.querySelectorAll('section') // Gets all of them.
 
 // Loop through the list, doing this `forEach` one.
 highlightBlocks.forEach((block) => {
-	let sectionObserver = new IntersectionObserver((entries) => {
-		let [entry] = entries
-
+	let sectionObserver = new IntersectionObserver(([entry])=> {
+		// Differentiate coming in/out…
 		if (entry.isIntersecting) {
 			block.classList.add(highlightClass)
 		} else {
