@@ -3,16 +3,16 @@ let button = document.querySelector('#example')
 let modal = document.querySelector('#dialog') // Now one for our `dialog`.
 let closeButton = modal.querySelector('.close') // Only looking within `modal`.
 
-button.onclick = () => { // “Listen” for clicks.
+button.addEventListener('click', () => { // “Listen” for clicks.
 	modal.showModal() // This opens it up.
-}
+})
 
-closeButton.onclick = () => {
+closeButton.addEventListener('click', () => {
 	modal.close() // And this closes it!
-}
+})
 
-modal.onclick = (event) => { // Listen on our `modal` also…
+modal.addEventListener('click', (event) => { // Listen on our `modal`, using the `event`…
 	if (event.target == modal) { // Only if clicks are to itself (the background).
-		modal.close() // Close it then too.
+		modal.close() // Close it too then.
 	}
-}
+})

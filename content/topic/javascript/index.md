@@ -177,7 +177,7 @@ Okay, time for a more practical example: probably the most common thing you wil
 Like with our [*transition*](/topic/advanced-css/#transitions) examples, the element needs two *states* in your CSS: *without* the class and then *with* the class. The JavaScript interaction/event will just switch between them, and our CSS `transition` will smooth out the change. Keep in mind here that the JS doesn’t (and shouldn’t/needn’t) do anything visual, itself! That is still the domain of our styles.
 
 We’ll again [use `querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) to target our element—but now we’ll opt for the more [explicit `addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) to listen for clicks, then modify [the `classList`](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) of a *different* element—switching between our two states:
-<!-- .before--3 -->
+<!-- .before--2 -->
 
 <figure
 	@source="classlist/preview/?active=style.css"
@@ -194,25 +194,24 @@ You can do many, many things with this basic “toggle a class” JS! It’s t
 
 ## Opening a Modal
 
-You might also want to use JavaScript to “open” [a modal `dialog`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) element—which you might use for a menu, an overlay, or a lightbox. (In the software sense, [a *modal* means](https://en.wikipedia.org/wiki/Modal_window) your visitor *must* interact with the `dialog` before they can do anything else.)
+You might also want to use JavaScript to “open” [a modal `dialog`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) element—which you might use for a menu, an overlay, or a lightbox. (In the software sense, [a *modal* means](https://en.wikipedia.org/wiki/Modal_window) your visitor *must* interact with the `dialog` before they can do anything else.)
 
-- [<letter-bullet @bullet="D" @title="`<dialog>`: The Dialog element – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
-	You used to have to write a lot more JS for these!
+- [<cite>`<dialog>`: The Dialog element – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
+	You used to have to write a *lot* more JS for these!
 
-- [<letter-bullet @bullet="B" @title="`::backdrop` – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop)
-	Style the overlays with these.
-	<!-- .link-list .right style="--rows: 2" -->
+- [<cite>`::backdrop` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop)
+	Style the overlays behind them.
+<!-- .right .rows--2 -->
 
-You could (and used to) do this by [adding/removing classes](#adding-removing-a-class), but this new(ish) approach gives us some nice “free” behaviors—making the rest of the page [`inert`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert), adding [a `::backdrop` pseudo-element](https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop), stopping background scrolling, and even listening to <kbd>Esc</kbd> for dismissing/closing the element. It’s a lot of useful behavior without much code:
+You could (and used to) do this by [adding/removing classes](#adding-removing-a-class), but this newer approach gives us some nice “free” behaviors—making the rest of the page [`inert`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert), adding [a `::backdrop` pseudo-element](https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop), stopping background scrolling, and even listening to <kbd>Esc</kbd> for dismissing/closing the element. It’s a lot of useful behavior without much code:
+<!-- .before--2 -->
 
 <figure
-	@source="dialog/preview/?active=script.js"
-	@style="--lines: 20"
+	@source="dialog/preview/?active=script.js&width=75%"
+	@style="--lines: 22"
 	@caption="Note the `style.css` changes to make the `dialog` appear as we want!"
 	>
 </figure>
-
-<!-- TODO Add some kind of if/else to diaglog/modal example -->
 
 ## Watching for Scrolling
 
