@@ -142,7 +142,7 @@ By far the most robust, flexible way to include JavaScript is externally—again
 <script defer src="script.js"></script>
 ```
 
-I’ve never liked this empty-tag syntax, what can you do.
+Michael has always disliked this empty-tag syntax; what can you do.
 <!-- .note -->
 
 This will still run when the document gets to the `<‍script>` (and in its place/order) as before—but the additional `defer` attribute allows it to “see” the HTML (not yet loaded) below it. Without this attribute, it doesn’t know about the rest of the page!
@@ -270,39 +270,52 @@ These are usually a safe *[progressive enhancement](https://en.wikipedia.org/wi
 
 <!--- TODO Add/remove node, manipulate text example? --->
 
-## Some Miscellaneous JS Tips
+## Some Miscellaneous *JS* Tips
 
-Alright, that is a lot. Like we’ve been saying—JavaScript is *A Whole Thing*. Here are some other tips, as you start to explore:
-<!-- .bold .scale--h4 .balance -->
+Alright, that is a lot. Like we’ve been saying—JavaScript is *A Whole Thing.* Here are some other tips, as you start to explore:
+<!-- .intro -->
 
-- Using `alert(yourVariable)` for *telemetry*/*debugging* can quickly be pretty annoying—instead, you can use `console.log(yourVariable)` to show messages in the [DevTools console](/topic/inspector/#the-console).
+- Using `alert(yourVariable)` for *telemetry*/*debugging* can quickly be pretty annoying—instead, you can use `console.log(yourVariable)` to show messages in the [DevTools console](/topic/inspector/#the-console).
 
 	A quick `console.log('Hello world!')` can check if things are plugged in right. The console will also show any JavaScript errors!
 
-	In other languages, these functions are often, ironically, called *print*.<!-- .secondary -->
+	In other languages, these functions are often, ironically, called *print*.<!-- .note -->
 
-- Search on [*Stack Overflow*](https://stackoverflow.com/questions/tagged/javascript)&thinsp;! Someone has likely had your problem, before. Many people don’t really *know* JS (myself included)… so much as they really know how to find things on *SO* (and elsewhere).
+- Search on [*Stack Overflow*](https://stackoverflow.com/questions/tagged/javascript)&thinsp;! (Though it’s… probably [on the way out](https://blog.pragmaticengineer.com/stack-overflow-is-almost-dead/).) Another *person* has likely had your problem, before.
 
-- This brings us back to LLM&thinsp;s, *large language models* (“artificial intelligence”)—tools like [Chat&thinsp;GPT](https://openai.com/blog/chatgpt), [GitHub Copilot](https://github.com/features/copilot), or the [DeepSeek](https://www.deepseek.com/) everyone is in a panic over. These *can* be useful; we use them ourselves. But much like *Stack Overflow*, you have to know what to look for, and need a level of understanding to do this to and to discern the value from the noise/code salad.
+	Many people don’t really *know* JS (Michael included)… so much as they really know how to find things elsewhere on the internet: *Stack Overflow*, [*Codepen*](https://codepen.io/tag/javascript), and so on.
 
-<aside style="margin-block: initial">
+- This brings us back to LLM&NoBreak;s, *large language models* (“artificial intelligence”)—tools like [Chat&NoBreak;sGPT](https://openai.com/blog/chatgpt), [GitHub Copilot](https://github.com/features/copilot), [Claude Code](https://claude.com/product/claude-code), etc.
 
-We don’t want you to treat code from *anywhere* as a [“black box”](https://en.wikipedia.org/wiki/Black_box)—we want you to *understand* it.
+	These *can* be useful; we use them ourselves. But much like *Stack Overflow* or any other resource online, you have to know what to look for—and need a level of understanding to do this to, and to discern the value from the noise/code salad.
+<!-- .balance -->
 
-Copying wholesale from these—or any other source—does not demonstrate your understanding. We’ll remind you of our [syllabus discussion on this](/syllabus/#code-plagiarism). Always attribute and explain to us *what you learned!*
+<aside class="reverse">
+
+<mark>All resources require attribution</mark>
+
+We don’t want you to treat code/examples from *anywhere* as a “[black box](https://en.wikipedia.org/wiki/Black_box)”—we we are here to learn and understand.
+
+Copying wholesale from these tools—or any other source—does not demonstrate your understanding. We’ll remind you of our [class policy on this](/syllabus/#code-plagiarism). Always properly/fully attribute and explain to us what you have learned!
 
 </aside>
 
-- Ignore any examples that have lots of dollar signs, like `$("something").else`—it means this is [jQuery](https://en.wikipedia.org/wiki/JQuery), and so is pretty outdated! (Eric really, *really* doesn’t like jQuery.)
+- Ignore any examples/suggestions that have lots of dollar signs, like `$("something").else`—it means this is [jQuery](https://en.wikipedia.org/wiki/JQuery), and so is very outdated! (And Eric really, *really* doesn’t like jQuery.)
 
-- To quickly get recent/modern, *vanilla* JavaScript results, instead include “*ES&thinsp;6*&thinsp;” in your search—this refers to a more recent, easier-to-use syntax.
+- To quickly get recent/modern, *vanilla* JavaScript results, instead include “*ES&NoBreak;6+*&thinsp;” in your searches and prompts—this refers to a more recent, easier-to-use syntax. Models often now skew/default towards this, but not always!
 
 - Relatedly, if you see “arrow functions” (with `=>`&thinsp;) it is a pretty good sign the answer is relatively recent.
 
-- Like [HTML](/topic/html/#case-white-space-tabs-line-breaks)/[CSS](/topic/css/#ergonomics), JS does not care about whitespace or tabbing. But it *is* [case-sensitive](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#basics)! (The most common JS convention is *camelCase*.)
+	Declaring variables with `let` and `const` (instead of the [older `var`](https://javascript.info/var)&thinsp;) is another good sign.
+
+- Like [HTML](/topic/html/#case-white-space-tabs-line-breaks)/[CSS](/topic/css/#ergonomics), JS does not *really* care about whitespace or tabbing. Use them for your own clarity!
+
+- But it *is* [case-sensitive](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#basics)! So `this` and `This` are *not* the same. (The most common JS convention is *camelCase*.)
+
+- Many new-to-JS problems are caused by unclosed [blocks](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block) and [groupings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Grouping). Akin to HTML’s `<> </>` and CSS’s `{ }`, always mind your matching `{ }` and `( )` in JS!
 
 - You’ll also see a lot of semicolons `;` but secretly you (almost never) actually need them! Declutter your code.
-<!-- .balance .add-after--3 -->
+<!-- .balance -->
 
 <blockquote
 	@attribution="Jeff Atwood, 2007"
