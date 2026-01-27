@@ -146,13 +146,6 @@ The *Preview Zoom* also allows you to approximate views *larger* than your curre
 
 </div>
 
-<style>
-	@container style(--columns: 6) {
-		div.center.left,
-		div.verso.pretty { margin-inline-end: calc(-1 * var(--alley)) }
-	}
-</style>
-
 <figure
 	@caption="The <samp>Device List</samp> is… *ancient* and inaccurate—they don’t account for the browser’s own interface, so they are all too tall!"
 	@source="responsive.png"
@@ -225,7 +218,11 @@ You can use this to test out parts of your code right away, like `document.query
 <div class="center recto">
 
 <!-- TODO Update this! -->
-<figure @source="console.svg"></figure>
+<figure
+	@source="console.svg"
+	style="justify-content: end;"
+	>
+</figure>
 
 </div>
 
@@ -236,3 +233,16 @@ You can use this to test out parts of your code right away, like `document.query
 You can check your variables by printing them out with `console.log('Variable: ' + variableName)`, or even just make sure that part of your code ran with `console.log('Made it here!')`.
 
 </aside>
+
+<style>
+	@container style(--columns: 6) {
+		div.center.left,
+		div.verso.pretty {
+			margin-inline-end: calc(-1 * var(--alley));
+		}
+
+		object[data^="console"] {
+			max-inline-size: calc(100% + var(--alley));
+		}
+	}
+</style>
