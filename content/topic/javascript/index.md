@@ -231,7 +231,7 @@ This used to be *unnecessarily* hard in JavaScript, and was one of the things 
 
 <figure
 	@source="intersection/preview/?active=script.js"
-	@style="--lines: 20"
+	@style="--lines: 18"
 	@caption="Note the [`if`&thinsp;/&thinsp;`else`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement, an example of [conditional logic](https://en.wikipedia.org/wiki/Conditional_(computer_programming))!"
 	>
 </figure>
