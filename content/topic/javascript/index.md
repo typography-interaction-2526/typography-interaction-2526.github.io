@@ -32,7 +32,7 @@ JavaScript was first created by [Brendan Eich](https://brendaneich.com/2008/04/p
 <br><br><br>
 
 <blockquote
-	@attribution="Brendan Eich"
+	@attribution="Brendan Eich, 2008"
 	@citation="https://www.infoworld.com/article/2653798/javascript-creator-ponders-past--future.html"
 	@class="add-before"
 	>
@@ -296,7 +296,7 @@ Copying wholesale from these—or any other source—does not demonstrate your u
 <!-- .balance .add-after--3 -->
 
 <blockquote
-	@attribution="Jeff Atwood"
+	@attribution="Jeff Atwood, 2007"
 	@citation="https://blog.codinghorror.com/the-principle-of-least-power"
 	>
 
