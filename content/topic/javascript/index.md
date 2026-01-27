@@ -4,7 +4,7 @@
 	const week = 17
 </script>
 
-JavaScript is the language/format for adding interactivity to a web <nobr>page—</nobr>based on actions or *events* from the user. Where do we even start with *JS*? (Everyone says *jay-ess*.) It is so massive and often seems unapproachable. So we’ll go through a bit of background, and then start with some very practical examples you might want in your work.
+JavaScript is the language/format for adding interactivity to a web page—based on actions or *events* from the user. Where do we even start with *JS*? (Everyone says *jay-ess*.) It is so massive and often seems unapproachable. So we’ll go through a bit of background, and then start with some very practical examples you might want in your work.
 
 - [<letter-bullet @bullet="B" @title="JavaScript Basics – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
 There are *literally* millions of sites about JS, but let’s start with MDN.
@@ -16,7 +16,7 @@ More MDN.
 It’s like Reddit for code! (Always check the year on answers. Some are *old*&thinsp;!)
 
 - [<letter-bullet @bullet="M" @title="The Modern Javascript Tutorial"></letter-bullet>](https://javascript.info)
-This reference goes very advanced/<wbr>in-depth.
+This reference goes very advanced/in-depth.
 
 - [<letter-bullet @title="Eloquent JavaScript"></letter-bullet>](https://eloquentjavascript.net)
 Also goes deep.
@@ -42,8 +42,6 @@ Like HTML&thinsp;/&thinsp;CSS, JavaScript was a malleable, *interpreted* (not 
 
 Remember that now the tendrils of JavaScript [are almost everywhere](/topic/everything/#its-increasingly-just-js-behind-the-scenes)—running headless on servers, rendering whole sites, talking to hardware, [processing NASA images](https://www.theverge.com/2022/8/18/23206110/james-webb-space-telescope-javascript-jwst-instrument-control), and so on. It’s web technologies, all the way down.
 
-
-
 ## Libraries&thinsp;/&thinsp;Frameworks vs. Plain&thinsp;/&thinsp;&thinsp;Vanilla JS
 
 You’ll often hear folks talk about *libraries* or *frameworks* in the context of JavaScript—one of the ways it is so malleable. These are collections of Javascript code with their own specific purpose, ideas, paradigms, and syntax that expand upon what the language can do (or can do quickly or easily) on its own, *out of the box*.
@@ -65,12 +63,10 @@ Very much [like CSS](/topic/css/#where-css-lives), JavaScript code can live in 
 1. As separate/external `.js` files *(the right way)*, via `src` attributes
 <!-- .all .bold -->
 
-
 ### 1.&emsp;Inline Event Handlers
 
 JS was first added directly in [attributes](/topic/html/#attributes) in HTML tags, just like CSS—but attached and “listening” for [specific events](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes#event_handler_attributes):
 <!-- .add-after -->
-
 
 ```html <!-- style="max-inline-size: var(--layout--page)" -->
 <button onclick="alert('The button was clicked!');">Click here!</button>
@@ -78,7 +74,6 @@ JS was first added directly in [attributes](/topic/html/#attributes) in HTML t
 
 Note the single quotes when nested/inside doubles!
 <!-- .secondary -->
-
 
 This works for very, very simple things, but—for many of the same reasons as inline CSS—is brittle and doesn’t scale with complexity, or across multiple pages. Try writing a whole, elaborate function in there! No good.
 <!-- .add-before--2 -->
@@ -88,8 +83,6 @@ This works for very, very simple things, but—for many of the same reasons as 
 You might see these inline events in old examples/code, but don’t use these now! If you see them, it’s probably an indication the code is outdated (or your developers are feral).
 
 </aside>
-
-
 
 ### 2.&emsp;Wrapped in `<script>` Tags
 
@@ -117,8 +110,6 @@ Since this script isn’t directly *on* an element anymore (as above), we then
 We also store (declare) the element here as a [*variable*](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables), to keep our code readable and reusable. These are a bit like their [CSS counterparts](/topic/responsive/#briefly-css-variables). Ergonomics!
 <!-- .balance .add-after--2 -->
 
-
-
 #### Oh Also, `<noscript>`
 
 Some folks block/disable JavaScript—for performance or accessibility reasons, or to hide advertising/annoyances, [and so on](https://softwareengineering.stackexchange.com/questions/26179/why-do-people-disable-javascript). This is less and less common these days, since so many sites *completely rely* on JS. It isn’t always feasible to replicate your site behavior entirely *without* JS, but you can use a special [`<noscript>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to show content only when scripting is turned off:
@@ -132,8 +123,6 @@ Some folks block/disable JavaScript—for performance or accessibility reasons,
 
 You can test these by [disabling JavaScript](https://developer.chrome.com/docs/devtools/javascript/disable/) in your DevTools.
 <!-- .secondary -->
-
-
 
 ### 3.&emsp;Separate&thinsp;/&thinsp;External `.js` Files
 
@@ -156,7 +145,7 @@ By far the most common, flexible way to include JavaScript is externally—again
 I’ve never liked this empty-tag syntax, what can you do.
 <!-- .secondary -->
 
-This will still run when the document gets to the `<script>` (and in its place/<wbr>order) as before, and the `defer` attribute allows it to “see” the HTML (not yet loaded) below it.
+This will still run when the document gets to the `<script>` (and in its place/order) as before, and the `defer` attribute allows it to “see” the HTML (not yet loaded) below it.
 <!-- .add-before -->
 
 We can then move the script up into our `<head>`, along with our other external files:
@@ -170,9 +159,6 @@ We can then move the script up into our `<head>`, along with our other external
 </figure>
 
 It’s the same JavaScript and behavior as the inline example above—but now moved over into a nice, separate, JS-syntax-highlighted file that can be re-used across pages. [*This is the way.*](https://www.youtube.com/watch?v=Mw7zSQ7ja7Y)
-
-
-
 
 ## Adding&thinsp;/&thinsp;Removing a Class
 
@@ -199,8 +185,6 @@ The class can be toggled on any element in your HTML (or sometimes, even just
 You can do many, many things with this basic “add a class” JS! It’s the basis for much of the interactivity you see online.
 <!-- .scale--h4 .bold .balance .add-before-->
 
-
-
 ## Opening a Modal
 
 You might also want to use JavaScript to “open” [a modal `dialog`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) element—which you might use for a menu, an overlay, or a lightbox. (In the software sense, [a *modal* means](https://en.wikipedia.org/wiki/Modal_window) your visitor *must* interact with the `dialog` before they can do anything else.)
@@ -222,8 +206,6 @@ You could (and used to) do this by [adding/removing classes](#adding-removing-a-
 </figure>
 
 <!-- TODO Add some kind of if/else to diaglog/modal example -->
-
-
 
 ## Watching for Scrolling
 
@@ -248,7 +230,6 @@ This used to be *unnecessarily* hard in JavaScript, and was one of the things 
 	>
 </figure>
 
-
 ### Loops
 
 You will often want to use this on multiple elements—and remember, when in code, [*don’t repeat yourself*](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)*!*
@@ -261,7 +242,7 @@ You will often want to use this on multiple elements—and remember, when in c
 	And “loop” through them.
 	<!-- .link-list .right style="--rows: 3" -->
 
-So we can use [`querySelectorAll`](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll) to select *multiple* <nobr>elements—</nobr>which gives us a [*NodeList*](https://developer.mozilla.org/en-US/docs/Web/API/NodeList) (a kind of [*Array*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array))—and then use a [`forEach`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) *loop* to run the same class for each of them:
+So we can use [`querySelectorAll`](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelectorAll) to select *multiple* elements—which gives us a [*NodeList*](https://developer.mozilla.org/en-US/docs/Web/API/NodeList) (a kind of [*Array*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array))—and then use a [`forEach`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) *loop* to run the same class for each of them:
 <!-- .balance -->
 
 <figure
@@ -271,18 +252,14 @@ So we can use [`querySelectorAll`](https://developer.mozilla.org/en-US/docs/We
 	>
 </figure>
 
-
-
 <!---
 TODO:
 Add/remove node, manipulate text example?
 --->
 
-
-
 ## Some Miscellaneous JS Tips
 
-Alright, that is a lot. Like we’ve been <nobr>saying—</nobr>JavaScript is *A Whole Thing*. Here are some other tips, as you start to explore:
+Alright, that is a lot. Like we’ve been saying—JavaScript is *A Whole Thing*. Here are some other tips, as you start to explore:
 <!-- .bold .scale--h4 .balance -->
 
 - Using `alert(yourVariable)` for *telemetry*/*debugging* can quickly be pretty annoying—instead, you can use `console.log(yourVariable)` to show messages in the [DevTools console](/topic/inspector/#the-console).
@@ -299,7 +276,7 @@ Alright, that is a lot. Like we’ve been <nobr>saying—</nobr>JavaScript is 
 
 We don’t want you to treat code from *anywhere* as a [“black box”](https://en.wikipedia.org/wiki/Black_box)—we want you to *understand* it.
 
-Copying wholesale from <nobr>these—</nobr>or any other <nobr>source—</nobr>does not demonstrate your understanding. We’ll remind you of our [syllabus discussion on this](/syllabus/#code-plagiarism). Always attribute and explain to us *what you learned!*
+Copying wholesale from these—or any other source—does not demonstrate your understanding. We’ll remind you of our [syllabus discussion on this](/syllabus/#code-plagiarism). Always attribute and explain to us *what you learned!*
 
 </aside>
 
