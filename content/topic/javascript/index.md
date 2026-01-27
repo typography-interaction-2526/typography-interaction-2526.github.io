@@ -72,7 +72,7 @@ Very much [like CSS](/topic/css/#where-css-lives), JavaScript code can live in 
 JS was first added directly in [attributes](/topic/html/#attributes) in HTML tags, just like CSS—but attached and “listening” for [specific events](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes#event_handler_attributes):
 <!-- .add-after -->
 
-```html <!-- style="max-inline-size: var(--layout--page)" -->
+```html <!-- .all -->
 <button onclick="alert('The button was clicked!');">Click here!</button>
 ```
 
@@ -119,7 +119,7 @@ We also store (declare) the element here as a [*variable*](https://developer.mo
 Some folks block/disable JavaScript—for performance or accessibility reasons, or to hide advertising/annoyances, [and so on](https://softwareengineering.stackexchange.com/questions/26179/why-do-people-disable-javascript). This is less and less common these days, since so many sites *completely rely* on JS. It isn’t always feasible to replicate your site behavior entirely *without* JS, but you can use a special [`<noscript>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to show content only when scripting is turned off:
 <!-- .add-after .balance -->
 
-```html <!-- style="max-inline-size: var(--layout--page)" -->
+```html <!-- .all -->
 <noscript class="warning">
 	Our site uses JavaScript for some of its functionality, which is disabled in your browser.
 </noscript>

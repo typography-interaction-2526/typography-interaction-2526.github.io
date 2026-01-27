@@ -163,7 +163,7 @@ Most [resets (like ours)](/topic/css/#resets) include a `max-inline-size: 100%` 
 In the past, you would manually set an image size within your HTML via special `width` and `height` attributes:
 <!-- .balance .after -->
 
-```html <!-- style="max-inline-size: var(--layout--page)" -->
+```html <!-- .all -->
 <img src="tim.jpg" alt="Tim Berners-Lee at a computer." width="230" height="150">
 ```
 No units, even.
