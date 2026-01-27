@@ -68,7 +68,7 @@ Very much [like CSS](/topic/css/#where-css-lives), JavaScript code can live in 
 1. As separate/external `.js` files *(the right way)*, via `src=""` attributes
 <!-- .all -->
 
-### 1.&emsp;Inline Event Handlers
+### 1.&emsp;Inline Event Handlers <!-- #inline -->
 
 JS was first added directly in [attributes](/topic/html/#attributes) in HTML tags, just like CSS—but attached and “listening” for [specific events](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes#event_handler_attributes):
 <!-- .add-after -->
@@ -91,7 +91,7 @@ You might see these inline events in old examples/code, but don’t use these no
 
 </aside>
 
-### 2.&emsp;Wrapped in `<‍script>` Tags
+### 2.&emsp;Wrapped in `<‍script>` Tags <!-- #in-html -->
 
 And again like CSS, JavaScript can be enclosed in its own special tag, the [`<‍script>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script). (These are also, somewhat confusingly, called *inline* scripts.) Anything inside the tag should be written in JavaScript syntax and will be executed *right away*—in the order/position of the tag within the HTML document. (This is why you will often see them right before `</body>`, so they can “see” the whole page!)
 
@@ -129,7 +129,7 @@ Some folks block/disable JavaScript—for performance or accessibility reasons,
 You can test these by [disabling JavaScript](https://developer.chrome.com/docs/devtools/javascript/disable/) in your DevTools.
 <!-- .note -->
 
-### 3.&emsp;Separate&thinsp;/&thinsp;External `.js` Files
+### 3.&emsp;Separate&thinsp;/&thinsp;External `.js` Files <!-- #external -->
 
 By far the most robust, flexible way to include JavaScript is externally—again, like CSS. The difference here is that instead of a `<link>` element, we still use a (now empty) `<‍script>` tag, with the addition of a `src="filename.js"` attribute:
 <!-- .after -->
