@@ -51,18 +51,19 @@ You’ll often hear folks talk about *libraries* or *frameworks* in the context 
 
 Things like [jQuery](https://jquery.com) (very old-school, now), [Node](https://nodejs.org/en/), [React](https://reactjs.org), [Vue](https://vuejs.org), [Angular](https://angular.io), [<span class="small-caps">D3</span>](https://d3js.org), and [p5](https://p5js.org) (to name some popular ones) are all written *in* and are interfaced *with* (so controlled by) JavaScript as well. They are often created to do something JavaScript doesn’t yet support on its own (in/famously, *jQuery*) or with a niche use/focus (like data-visualization, with *D3*). There are many, many frameworks and libraries.
 
-When you write JS without libraries, it is usually called *plain* or *vanilla* JavaScript.
-<!-- .scale--h4 .bold -->
+When you write JS without libraries, it is called *plain* or *vanilla* JavaScript.
+<!-- .intro -->
 
 The language has evolved so much that we can do a lot, here, and this is where we’ll start. And while JS does many things, we’ll first just use it in the most simple way—to make our web pages more interactive.
-<!-- .add-before -->
+<!-- .before -->
 
 ## Where Does JS Live?
 
 Very much [like CSS](/topic/css/#where-css-lives), JavaScript code can live in several places:
+<!-- .intro -->
 
-1. *Inline* as attributes
-1. Inside `<script>` elements within HTML documents
+1. *Inline* as attributes on elements
+1. Inside `script` elements within HTML documents <!-- eslint-ignore-line -->
 1. As separate/external `.js` files *(the right way)*, via `src` attributes
 <!-- .all .bold -->
 
@@ -76,12 +77,14 @@ JS was first added directly in [attributes](/topic/html/#attributes) in HTML t
 ```
 
 Note the single quotes when nested/inside doubles!
-<!-- .secondary -->
+<!-- .note -->
 
-This works for very, very simple things, but—for many of the same reasons as inline CSS—is brittle and doesn’t scale with complexity, or across multiple pages. Try writing a whole, elaborate function in there! No good.
-<!-- .add-before--2 -->
+This works for very, very simple things, but—for many of the same reasons as inline CSS—is brittle and doesn’t scale with complexity, or across multiple pages. Try writing a whole, elaborate function in there, let alone an entire framework! No good.
+<!-- .before--2 -->
 
 <aside>
+
+<mark>Use caution: outdated examples abound</mark>
 
 You might see these inline events in old examples/code, but don’t use these now! If you see them, it’s probably an indication the code is outdated (or your developers are feral).
 
