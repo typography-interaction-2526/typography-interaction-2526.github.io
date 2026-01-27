@@ -23,8 +23,13 @@
 	figure:only-child figcaption { display: none }
 </style>
 <script>
-	const active = (new URLSearchParams(window.location.search)).get('active')
+	const params = new URLSearchParams(window.location.search)
+
+	const active = params.get('active')
 	if (active) document.querySelector('ti-preview').setAttribute('current', active)
+
+	const width = params.get('width')
+	if (width) document.querySelector('ti-preview').style.setProperty('--editor-width', width)
 </script>
 <ti-preview base="../">
 	<figure
