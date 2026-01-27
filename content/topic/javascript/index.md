@@ -112,12 +112,12 @@ Since this script isn’t directly *on* an element anymore (as above), we then
 </figure>
 
 We also store (declare) the element here as a [*variable*](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables), to keep our code readable and reusable. These are a bit like their [CSS counterparts](/topic/responsive/#briefly-css-variables). Ergonomics!
-<!-- .balance .after--2 -->
+<!-- .balance .after--3 -->
 
 #### Oh Also, `<noscript>`
 
 Some folks block/disable JavaScript—for performance or accessibility reasons, or to hide advertising/annoyances, [and so on](https://softwareengineering.stackexchange.com/questions/26179/why-do-people-disable-javascript). This is less and less common these days, since so many sites *completely rely* on JS. It isn’t always feasible to replicate your site behavior entirely *without* JS, but you can use a special [`<noscript>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to show content only when scripting is turned off:
-<!-- .add-after .balance -->
+<!-- .after .balance -->
 
 ```html <!-- .all -->
 <noscript class="warning">
@@ -130,39 +130,37 @@ You can test these by [disabling JavaScript](https://developer.chrome.com/docs/d
 
 ### 3.&emsp;Separate&thinsp;/&thinsp;External `.js` Files
 
-By far the most common, flexible way to include JavaScript is externally—again, like CSS. The difference here is that instead of a `<link>` element, we still use a (now empty) `<script>` tag, with the addition of a `src="filename.js"` attribute:
-<!-- .add-after -->
+By far the most common, flexible way to include JavaScript is externally—again, like CSS. The difference here is that instead of a `<link>` element, we still use a (now empty) `<script>` tag, with the addition of a `src="filename.js"` attribute:
+<!-- .after -->
 
-- [<letter-bullet @bullet="Q" @title="Document: `querySelector()` method – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+- [<cite>Document: `querySelector()` method – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 	This is how you target HTML elements in JS.
 
-- [<letter-bullet @title="EventTarget: `addEventListener()` method – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+- [<cite>EventTarget: `addEventListener()` method – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 	And then listen for *events* happening on them.
-	<!-- .link-list .right style="--rows: 3" -->
-
-<!-- ADD QUERYSELECTOR and addEventListener HERE -->
+<!-- .right .rows--4 -->
 
 ```html
 <script defer src="script.js"></script>
 ```
 
 I’ve never liked this empty-tag syntax, what can you do.
-<!-- .secondary -->
+<!-- .note -->
 
 This will still run when the document gets to the `<script>` (and in its place/order) as before, and the `defer` attribute allows it to “see” the HTML (not yet loaded) below it.
-<!-- .add-before -->
+<!-- .before -->
 
 We can then move the script up into our `<head>`, along with our other external files:
-<!-- .add-before--3 .balance -->
+<!-- .before--3 .balance -->
 
 <figure
-	@source="external/preview"
-	@style="--lines: 14"
-	@caption="Stays readable/clean with long documents and lots of files. Where there is one JS file, there are often many."
+	@source="external/preview/?width=75%"
+	@style="--lines: 16"
+	@caption="Stays readable/clean with long documents and lots of files. Where there is one JS file, there are *often* many!"
 	>
 </figure>
 
-It’s the same JavaScript and behavior as the inline example above—but now moved over into a nice, separate, JS-syntax-highlighted file that can be re-used across pages. [*This is the way.*](https://www.youtube.com/watch?v=Mw7zSQ7ja7Y)
+It’s the same JavaScript and behavior as the inline example above—but now moved over into a nice, separate, JS-syntax-highlighted file that can be re-used across pages. [*This is the way*](https://www.youtube.com/watch?v=Mw7zSQ7ja7Y).
 
 ## Adding&thinsp;/&thinsp;Removing a Class
 
