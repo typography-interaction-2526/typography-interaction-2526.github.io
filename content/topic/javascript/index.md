@@ -40,7 +40,7 @@ The idea was to make something that Web designers, people who may or may not hav
 
 </blockquote>
 
-Like HTML&thinsp;/&thinsp;CSS, JavaScript was a malleable, *interpreted* (not [*compiled*](https://en.wikipedia.org/wiki/Compiled_language)) language running in the browser—meaning the source code could be seen by anyone, and anyone could borrow or modify it for their needs. You could always [“pop the hood”](/topic/inspector/) to see how it worked. And then as our computers—and thus our browsers—became faster and cheaper, JS was used for more and more things.
+Like HTML&thinsp;/&thinsp;CSS, JavaScript was a malleable, *interpreted* (not [*compiled*](https://en.wikipedia.org/wiki/Compiled_language)) language running in the browser—meaning the source code could be seen by anyone, and anyone could borrow or modify it for their needs. You could always “[pop the hood](/topic/inspector/)” to see how it worked. And then as our computers—and thus our browsers—became faster and cheaper, JS was used for more and more things.
 
 Remember that now the tendrils of JavaScript [are almost everywhere](/topic/everything/#its-increasingly-just-js-behind-the-scenes)—running headless on servers, rendering whole sites, talking to hardware, [processing NASA images](https://www.theverge.com/2022/8/18/23206110/james-webb-space-telescope-javascript-jwst-instrument-control), and so on. It’s web technologies, all the way down.
 
