@@ -173,8 +173,6 @@ This is just a quicker preview, but isn’t always perfectly accurate—and also
 
 </aside>
 
-<!---
-
 ## The Console
 
 <div class="verso pretty" style="align-self: start">
