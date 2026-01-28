@@ -90,6 +90,7 @@ s {
 :is(sup, sub) { font-size: 66% }
 
 sup {
+	line-height:    initial;
 	vertical-align: text-top;
 
 	&:has(+ sub) {
