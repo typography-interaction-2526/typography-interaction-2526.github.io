@@ -114,20 +114,6 @@ Since this script isn’t directly *on* an element anymore (as above), we then
 We also *declare* (store) the element here as a [*variable*](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables), to keep our code readable and reusable. These are a bit like their [CSS counterparts](/topic/responsive/#briefly-css-variables). Mind your ergonomics!
 <!-- .balance .after--3 -->
 
-#### Oh Also, `<noscript>`
-
-Some folks block/disable JavaScript—for performance or accessibility reasons, or to hide advertising/annoyances, [and so on](https://softwareengineering.stackexchange.com/questions/26179/why-do-people-disable-javascript). This is less and less common these days, since so many sites *completely rely* on JS. It isn’t always feasible to replicate your site behavior entirely *without* JS, but you can use a special [`<noscript>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to show content only when scripting is turned off:
-<!-- .after .balance -->
-
-```html <!-- .all -->
-<noscript class="warning">
-	Our site uses JavaScript for some of its functionality, which is disabled in your browser.
-</noscript>
-```
-
-You can test these by [disabling JavaScript](https://developer.chrome.com/docs/devtools/javascript/disable/) in your DevTools.
-<!-- .note -->
-
 ### 3.&emsp;Separate&thinsp;/&thinsp;External `.js` Files <!-- #external -->
 
 By far the most robust, flexible way to include JavaScript is externally—again, like CSS. The difference here is that instead of a `<link>` element, we still use a (now empty) `<‍script>` tag, with the addition of a `src="filename.js"` attribute:
@@ -158,6 +144,20 @@ We can then move the script up into our `<head>`, along with our other external
 </figure>
 
 It’s the same exact JavaScript and behavior as the inline example above—but now moved over into a nice, separate, JS-syntax-highlighted file that can be re-used across pages. [*This is the way*](https://www.youtube.com/watch?v=Mw7zSQ7ja7Y).
+
+#### Oh Also, `<noscript>`
+
+Some folks block/disable JavaScript—for performance or accessibility reasons, or to hide advertising/annoyances, [and so on](https://softwareengineering.stackexchange.com/questions/26179/why-do-people-disable-javascript). This is less and less common these days, since so many sites *completely rely* on JS. It isn’t always feasible to replicate your site behavior entirely *without* JS, but you can use a special [`<noscript>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to show content only when scripting is turned off:
+<!-- .after .balance -->
+
+```html <!-- .all -->
+<noscript class="warning">
+	Our site uses JavaScript for some of its functionality, which is disabled in your browser.
+</noscript>
+```
+
+You can test these by [disabling JavaScript](https://developer.chrome.com/docs/devtools/javascript/disable/) in your DevTools.
+<!-- .note -->
 
 ## Adding&thinsp;/&thinsp;Removing a Class
 
