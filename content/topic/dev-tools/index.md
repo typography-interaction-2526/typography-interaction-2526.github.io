@@ -215,12 +215,7 @@ You can use this to test out parts of your code right away, like `document.query
 
 <div class="center recto">
 
-<!-- TODO Update this! -->
-<figure
-	@source="console.svg"
-	style="justify-content: end;"
-	>
-</figure>
+<figure @source="console.svg"></figure>
 
 </div>
 
@@ -241,6 +236,7 @@ You can check your variables by printing them out with `console.log('Variable: '
 
 		object[data^="console"] {
 			max-inline-size: calc(100% + var(--alley));
+			justify-self: end;
 		}
 	}
 </style>

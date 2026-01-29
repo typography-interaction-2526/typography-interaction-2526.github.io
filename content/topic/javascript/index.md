@@ -40,15 +40,15 @@ The idea was to make something that Web designers, people who may or may not hav
 
 </blockquote>
 
-Like HTML&thinsp;/&thinsp;CSS, JavaScript was a malleable, *interpreted* (not [*compiled*](https://en.wikipedia.org/wiki/Compiled_language)) language running in the browser—meaning the source code could be seen by anyone, and anyone could borrow or modify it for their needs. You could always “[pop the hood](/topic/inspector/)” to see how it worked. And then as our computers—and thus our browsers—became faster and cheaper, JS was used for more and more things.
+Like HTML/CSS, JavaScript was a malleable, *interpreted* (not [*compiled*](https://en.wikipedia.org/wiki/Compiled_language)) language running in the browser—meaning the source code could be seen by anyone, and anyone could borrow or modify it for their needs. You could always “[pop the hood](/topic/inspector/)” to see how it worked. And then as our computers—and thus our browsers—became faster and cheaper, JS was used for more and more things.
 
 Remember that now the tendrils of JavaScript [are almost everywhere](/topic/everything/#its-increasingly-just-js-behind-the-scenes)—running headless on servers, rendering whole sites, talking to hardware, [processing NASA images](https://www.theverge.com/2022/8/18/23206110/james-webb-space-telescope-javascript-jwst-instrument-control), and so on. It’s web technologies, all the way down.
 
-## Libraries&thinsp;/&thinsp;Frameworks vs. Plain&thinsp;/&thinsp;&thinsp;Vanilla JS
+## Libraries&thinsp;/&thinsp;Frameworks vs. Plain&thinsp;/&thinsp;Vanilla JS
 
 You’ll often hear folks talk about *libraries* or *frameworks* in the context of JavaScript—one of the ways it is so malleable. These are collections of Javascript code with their own specific purpose, ideas, paradigms, and syntax that expand upon what the language can do (or can do quickly or easily) on its own, *out of the box*.
 
-Things like [jQuery](https://jquery.com) (very old-school, now), [Node](https://nodejs.org/en/), [React](https://reactjs.org), [Vue](https://vuejs.org), [Angular](https://angular.io), [<span class="small-caps">D3</span>](https://d3js.org), and [p5](https://p5js.org) (to name some popular ones) are all written *in* and are interfaced *with* (so controlled by) JavaScript as well. They are often created to do something JavaScript doesn’t yet support on its own (in/famously, *jQuery*) or with a niche use/focus (like data-visualization, with *D3*). There are many, many frameworks and libraries.
+Things like [*jQuery*](https://jquery.com) (very old-school, now), [*Node*](https://nodejs.org/en/), [*React*](https://reactjs.org), [*Vue*](https://vuejs.org), [*Angular*](https://angular.io), [*D3*](https://d3js.org), and [*p5*](https://p5js.org) (to name some popular ones) are all written *in* and are interfaced *with* (controlled by) JavaScript as well. They are often created to do something JavaScript doesn’t yet support on its own (<nobr>in/famously</nobr>, *jQuery*) or with a niche use/focus (like data-visualization, with *D3*). There are many, many frameworks and libraries.
 
 When you write JS without libraries, it is called *plain* or *vanilla* JavaScript.
 <!-- .intro -->
