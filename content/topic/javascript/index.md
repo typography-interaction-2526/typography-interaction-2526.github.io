@@ -133,6 +133,9 @@ Michael has always disliked this empty-tag syntax; what can you do.
 This will still run when the document gets to the `<‍script>` (and in its place/order) as before—but the additional `defer` attribute allows it to “see” the HTML (not yet loaded) below it. Without this attribute, it doesn’t know about the rest of the page!
 <!-- .before -->
 
+Prior to (the relatively recent) `defer`, you could wrap logic in a `DOMContentLoaded` or `load` event listener. You’ll likely see this is older examples/suggestions online!
+<!-- .note -->
+
 We can then move the script up into our `<head>`, along with our other external files:
 <!-- .before--2 .balance -->
 
@@ -299,7 +302,9 @@ Copying wholesale from these tools—or any other source—does not demonstrate 
 
 </aside>
 
-- Ignore any examples/suggestions that have lots of dollar signs, like `$("something").else`—it means this is [jQuery](https://en.wikipedia.org/wiki/JQuery), and so is very outdated! (And Eric really, *really* doesn’t like jQuery.)
+- Ignore any examples/suggestions that have lots of dollar signs, like `$("something").else`—it means this is [jQuery](https://en.wikipedia.org/wiki/JQuery), and so is *very* outdated! (And Eric really, *really* doesn’t like jQuery.)
+
+- You’ll also likely see examples/suggestions that wrap some logic in a `DOMContentLoaded` (or `load`) event listener—which will run the contents *after* the whole page is available, no matter where the `<‍script>` element is located in the HTML. But we’ll use [the modern `defer` attribute](#3-separate-external-js-files) to avoid this dance!
 
 - To quickly get recent/modern, *vanilla* JavaScript results, instead include “*ES&NoBreak;6+*&thinsp;” in your searches and prompts—this refers to a more recent, easier-to-use syntax. Models often now skew/default towards this, but not always!
 
