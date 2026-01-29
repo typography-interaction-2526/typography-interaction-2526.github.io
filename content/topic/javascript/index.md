@@ -117,7 +117,7 @@ We also *declare* (store) the element here as a [*variable*](https://developer.
 ### 3.&emsp;Separate&thinsp;/&thinsp;External `.js` Files <!-- #external -->
 
 By far the most robust, flexible way to include JavaScript is externally—again, like CSS. The difference here is that instead of a `<link>` element, we still use a (now empty) `<‍script>` tag, with the addition of a `src="filename.js"` attribute:
-<!-- .after -->
+<!-- .balance -->
 
 - [<cite>`defer` property – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/defer)
 	Needed for `<head>` scripts to “see” your HTML!
@@ -131,7 +131,7 @@ Michael has always disliked this empty-tag syntax; what can you do.
 <!-- .note -->
 
 This will still run when the document gets to the `<‍script>` (and in its place/order) as before—but the additional `defer` attribute allows it to “see” the HTML (not yet loaded) below it. Without this attribute, it doesn’t know about the rest of the page!
-<!-- .before -->
+<!-- .before--2 -->
 
 Prior to (the relatively recent) `defer`, you could wrap logic in a `DOMContentLoaded` or `load` event listener. You’ll likely see this is older examples/suggestions online!
 <!-- .note -->
@@ -148,7 +148,10 @@ We can then move the script up into our `<head>`, along with our other external
 
 It’s the same exact JavaScript and behavior as the inline example above—but now moved over into a nice, separate, JS-syntax-highlighted file that can be re-used across pages. [*This is the way*](https://www.youtube.com/watch?v=Mw7zSQ7ja7Y).
 
-#### Oh Also, `<noscript>`
+The most resilient, easiest way to use JavaScript is in a separate file—just like CSS, for all the same reasons.
+<!-- .intro -->
+
+#### Oh Also, `<noscript>` <!-- .before--3 -->
 
 Some folks block/disable JavaScript—for performance or accessibility reasons, or to hide advertising/annoyances, [and so on](https://softwareengineering.stackexchange.com/questions/26179/why-do-people-disable-javascript). This is less and less common these days, since so many sites *completely rely* on JS. It isn’t always feasible to replicate your site behavior entirely *without* JS, but you can use a special [`<noscript>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript) to show content only when scripting is turned off:
 <!-- .after .balance -->
