@@ -206,7 +206,7 @@ You can do many, many things with this basic “toggle a class” JS! It’s t
 
 ## Opening a Modal
 
-You might also want to use JavaScript to “open” [a modal `<dialog>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) element—which you might use for a menu, an overlay, or a lightbox. (In the software sense, [a *modal* means](https://en.wikipedia.org/wiki/Modal_window) your visitor *must* interact with the `<dialog>` before they can do anything else.)
+You might also want to use JavaScript to “open” [a modal `<dialog>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) element—which you might use for a menu, an overlay, or a lightbox. (In the software sense, [a *modal* means](https://en.wikipedia.org/wiki/Modal_window) your visitor *must* interact with the `<dialog>` before they can do anything else.)
 
 - [<cite>`<dialog>`: The Dialog element – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
 	You used to have to write a *lot* more JS for these!
