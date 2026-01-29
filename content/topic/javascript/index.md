@@ -182,7 +182,7 @@ We’ll again [use `querySelector`](https://developer.mozilla.org/en-US/docs/Web
 <!-- .before--2 -->
 
 <figure
-	@source="classlist/preview/?active=style.css"
+	@source="classlist/preview/?active=style.css&width=75%"
 	@style="--lines: 15"
 	@caption="Note the [camelCase](https://en.wikipedia.org/wiki/Camel_case) variable names, which is the JavaScript convention. Longer, more-descriptive names will help as your code gets more complex."
 	>
@@ -232,7 +232,7 @@ This used to be *unnecessarily* hard in JavaScript, and was one of the things 
 <!-- .before--2 .balance -->
 
 <figure
-	@source="intersection/preview/?active=script.js"
+	@source="intersection/preview/?active=script.js&width=75%"
 	@style="--lines: 18"
 	@caption="Note the [`if`&thinsp;/&thinsp;`else`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement, an example of [conditional logic](https://en.wikipedia.org/wiki/Conditional_(computer_programming))!"
 	>
@@ -254,7 +254,7 @@ We can use [`querySelectorAll`](https://developer.mozilla.org/en-US/docs/Web/AP
 <!-- .balance .before--2 -->
 
 <figure
-	@source="intersection-loop/preview/?active=script.js"
+	@source="intersection-loop/preview/?active=script.js&width=75%"
 	@style="--lines: 23"
 	@caption="Here we’ve also adjusted the [`rootMargin`](https://www.smashingmagazine.com/2021/07/dynamic-header-intersection-observer/#rootmargin) from the full-viewport default with an inset, so the elements don’t transition immediately."
 	>
