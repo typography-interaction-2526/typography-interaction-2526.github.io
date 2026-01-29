@@ -33,6 +33,7 @@
 	 		if (event.metaKey || event.ctrlKey) return
 
 			event.preventDefault()
+			article.classList.add('scrolling') // Will hide menu stuff.
 
 			const header = document.querySelector(`header a[href="${href.split('#')[0]}"]`).closest('header')
 
@@ -99,6 +100,9 @@
 	new IntersectionObserver(
 		([entry]) => article.classList.toggle('visible', entry?.isIntersecting),
 	).observe(article)
+
+	new IntersectionObserver(([entry], observer) =>
+		entry?.isIntersecting && (article.classList.remove('loading'), observer.disconnect())).observe(article)
 
 	new IntersectionObserver(
 		([entry]) => article.classList.toggle('start', entry?.isIntersecting),
@@ -181,7 +185,7 @@
 </style>
 
 <block webc:import="blocks/pages.webc">
-	<article class="end start">
+	<article class="loading">
 		<block
 			webc:import="nav.webc"
 			:@before="true"
