@@ -11,7 +11,7 @@ closeButton.addEventListener('click', () => {
 	modalDialog.close() // And this closes it!
 })
 
-modalDialog.addEventListener('click', (event) => { // Listen on our `modal`, using the `event`…
+modalDialog.addEventListener('click', (event) => { // Listen, now including the `event`…
 	if (event.target == modalDialog) { // Only if clicks are to itself (the background).
 		modalDialog.close() // Close it too then.
 	}
