@@ -92,31 +92,38 @@ You might see these inline events in old examples/code, but don’t use these no
 
 ### 2.&emsp;Wrapped in `<‍script>` Tags <!-- #in-html -->
 
-And again like CSS, JavaScript can be enclosed in its own special tag, the [`<‍script>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script). (These are also, somewhat confusingly, called *inline* scripts.) Anything inside the tag should be written in JavaScript syntax and will be executed *right away*—in the order/position of the tag within the HTML document. (This is why you will often see them right before `</body>`, so they can “see” the whole page!)
+And again like CSS, JavaScript can be enclosed in its own special tag, the [`<‍script>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script).
+<!-- .balance -->
 
 - [<cite>`<‍script>` The Script element – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
 	More minutia on using these in-HTML elements.
 
-- [<cite>Storing the information you need—Variables – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Variables)
-	Variables are always going to make your life easier.
-<!-- .right .rows--3 -->
+- [<cite>Document: `querySelector()` method – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+	This is how you find/specify/target HTML elements in JS.
 
-Since this script isn’t directly *on* an element anymore (as above), we then have to identify the *target* element with [a `querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector), and then *attach* [the `onclick` event handler](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event) to it:
+- [<cite>EventTarget: `addEventListener()` method – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+	And then listen for *events* happening on them—`onclick` is a shorthand.
+<!-- .right .rows--5 -->
+
+These are also often, somewhat confusingly, called *inline* scripts.
+<!-- .note -->
+
+Anything inside the tag should be written in JavaScript syntax and will be executed *right away*—in the order/position of the tag within the HTML document. This is why you will often see them right before `</body>`, so they can “see” the whole page before!
+<!-- .before--2 .balance -->
+
+Since this script isn’t directly *on* an element anymore (as above), we then have to identify the *target* element with [a `querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector), and then *attach* [an `addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) on it, *listening* for [the `click` event](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event):
 <!-- .before--2 .balance -->
 
 <figure
 	@source="element/preview/?width=75%"
-	@style="--lines: 24"
+	@style="--lines: 21"
 	@caption="Note the different `// comment syntax` for JS! And we had to add `cursor: pointer;` for the button in our CSS, to indicate it is actionable. Mind your affordances!"
 	>
 </figure>
 
-We also *declare* (store) the element here as a [*variable*](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables), to keep our code readable and reusable. These are a bit like their [CSS counterparts](/topic/responsive/#briefly-css-variables). Mind your ergonomics!
-<!-- .balance .after--3 -->
-
 ### 3.&emsp;Separate&thinsp;/&thinsp;External `.js` Files <!-- #external -->
 
-By far the most robust, flexible way to include JavaScript is externally—again, like CSS. The difference here is that instead of a `<link>` element, we still use a (now empty) `<‍script>` tag, with the addition of a `src="filename.js"` attribute:
+By far the most robust, flexible way to include JavaScript is externally—again, like CSS. The difference here is that instead of a `<link>` element, we still use a (now empty) `<‍script>` tag, with the addition of a `defer` and `src="filename.js"` attribute:
 <!-- .balance -->
 
 - [<cite>`defer` property – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/HTMLScriptElement/defer)
@@ -169,29 +176,29 @@ You can test these by [disabling JavaScript](https://developer.chrome.com/docs/d
 
 Okay, time for a more practical example: probably the most common thing you will use JS for—especially as we’re starting out—is simply to add or remove (*toggle*) a class from something when the user interacts with your page (such as clicking on a menu).
 
-- [<cite>Document: `querySelector()` method – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
-	This is how you target HTML elements in JS.
-
-- [<cite>EventTarget: `addEventListener()` method – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
-	And then listen for *events* happening on them—`.onclick` is a shorthand.
+- [<cite>Storing the information you need—Variables – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Variables)
+	Variables are always going to make your life easier.
 
 - [<cite>Element: `classList` property – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
-	Controls the CSS classes on an element.
+	Controls the CSS classes on an HTML element.
 <!-- .right .rows--4 -->
 
-Like with our [*transition*](/topic/advanced-css/#transitions) examples, the element needs two *states* in your CSS: *without* the class and then *with* the class. The JavaScript interaction/event will just switch between them, and our CSS `transition` will smooth out the change. Keep in mind here that the JS doesn’t (and shouldn’t/needn’t) do anything visual, itself! That is still the domain of our styles.
+Like with our earlier [*transition*](/topic/advanced-css/#transitions) examples, the element needs two *states* in your CSS: *without* the class and then *with* the class. The JavaScript interaction/event will just switch between them, and our CSS `transition` will smooth out the change. Keep in mind here that the JS doesn’t (and shouldn’t/needn’t) do anything visual, itself! That is still the domain of our styles.
 
-We’ll again [use `querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) to target our element—but now we’ll opt for the more [explicit `addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) to listen for clicks, then modify [the `classList`](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) of a *different* element—switching between our two states:
-<!-- .before--2 -->
+We’ll again [use `querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) to target our elements—but here we’ll store them as [*variables*](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables) to keep our code readable and reusable. These are much like their [CSS counterparts](/topic/responsive/#briefly-css-variables)! Mind your ergonomics.
+<!-- .balance .before--2 -->
+
+Then using our variables, we’ll again add [an `addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) to listen for [a `click`](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event), now modifying [the `classList`](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) (CSS classes) of a *different* element—to switch between our two states:
+<!-- .balance -->
 
 <figure
-	@source="classlist/preview/?active=style.css&width=75%"
-	@style="--lines: 15"
+	@source="classlist/preview/?active=script.js&width=75%"
+	@style="--lines: 12"
 	@caption="Note the [camelCase](https://en.wikipedia.org/wiki/Camel_case) variable names, which is the JavaScript convention. Longer, more-descriptive names will help as your code gets more complex."
 	>
 </figure>
 
-The class can be toggled on any element in your HTML (or sometimes, even just on `document.body` itself)! JavaScript’s `querySelector` takes *any* CSS selector, even other classes. Also you can specifically use `classList.add` and `classList.remove`, if you don’t want or need to separate the on-and-off behavior from `classList.toggle`&thinsp;!
+JavaScript’s `querySelector` takes *any* CSS selector, even other classes—and will return the first matching instance. The `classList` can be modified on any element in your HTML (or sometimes, even just on `document.body` itself)! You can also specifically use `classList.add` and `classList.remove`, if you don’t want or need to separate the on-and-off behavior from `classList.toggle`&thinsp;!
 <!-- .balance -->
 
 You can do many, many things with this basic “toggle a class” JS! It’s the basis for much of the interactivity you see online.
