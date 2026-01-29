@@ -1,3 +1,8 @@
+::backdrop {
+	background-color: rgb(0 0 0 / 66%); /* A dark overlay. */
+	backdrop-filter: blur(1rem); /* Maybe a little “glassmorphism”? */
+}
+
 dialog {
 	background-color: white;
 	border-radius: var(--base);
@@ -8,11 +13,6 @@ dialog {
 	place-self: anchor-center; /* Chrome needs this to center it. */
 
 	&[open] { display: grid } /* `block` is default, but we can override. */
-}
 
-.close { background-color: tomato; } /* Always have a clear “close” `button`! */
-
-::backdrop {
-	background-color: rgb(0 0 0 / 66%); /* A dark overlay. */
-	backdrop-filter: blur(1rem); /* Maybe a little “glassmorphism”? */
+	button { background-color: tomato; } /* Always have a clear “close” `button`! */
 }
