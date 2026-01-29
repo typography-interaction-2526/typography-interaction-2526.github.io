@@ -199,7 +199,7 @@ You can do many, many things with this basic “toggle a class” JS! It’s t
 
 ## Opening a Modal
 
-You might also want to use JavaScript to “open” [a modal `dialog`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) element—which you might use for a menu, an overlay, or a lightbox. (In the software sense, [a *modal* means](https://en.wikipedia.org/wiki/Modal_window) your visitor *must* interact with the `dialog` before they can do anything else.)
+You might also want to use JavaScript to “open” [a modal `<dialog>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) element—which you might use for a menu, an overlay, or a lightbox. (In the software sense, [a *modal* means](https://en.wikipedia.org/wiki/Modal_window) your visitor *must* interact with the `<dialog>` before they can do anything else.)
 
 - [<cite>`<dialog>`: The Dialog element – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
 	You used to have to write a *lot* more JS for these!
@@ -213,8 +213,8 @@ You could (and used to) do this by [adding/removing classes](#adding-removing-a-
 
 <figure
 	@source="dialog/preview/?active=script.js&width=75%"
-	@style="--lines: 22"
-	@caption="Note the `style.css` changes to make the `dialog` appear as we want!"
+	@style="--lines: 16"
+	@caption='The `closedby="any"` attribute watches for <kbd>Esc</kbd> and clicks on the `::backdrop`. Also note the `style.css` changes to make the `dialog` appear as we want!'
 	>
 </figure>
 
@@ -231,7 +231,7 @@ Another very common, designer-y use for JavaScript is to do something when an e
 
 Again we’ll need two states in our CSS, defined with and without a class. But now we’ll make use of the user’s scrolling—instead of a `click` event—to toggle the between the two visual states. Our JS still *only* adds/removes the class!
 
-This used to be *unnecessarily* hard in JavaScript, and was one of the things [jQuery](https://jquery.com/) was created to help with. Nowadays we can easily use [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to watch the element:
+This used to be *unnecessarily* hard in JavaScript, and was one of the things [*jQuery*](https://jquery.com/) was created to help with. Nowadays we can easily use [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to watch the element:
 <!-- .before--2 .balance -->
 
 <figure
