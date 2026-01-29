@@ -421,7 +421,7 @@ This agreement is intended to help us create and maintain a safe, empathetic, an
 
 - For Fall semester, we’re not going to use LLM agents/autocomplete (“artificial intelligence”), nor traditional copy/pasting, nor any other tools where we do not write our own code. We will talk through appropriate, allowed use of these technologies in the Spring.
 
-- We will always [attribute](#attribution) our work when referencing others, tools, or examples.
+- We will always [attribute](#attribution) our work when referencing others, tools, or examples.
 <!-- .screen -->
 
 <aside class="screen">
