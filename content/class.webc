@@ -44,7 +44,7 @@
 	id="students"
 >
 	<li webc:for="student of $data.class">
-		<a :href="`https://${student.github}.github.io`">
+		<a :href="student.landing ? student.landing : `https://${student.github}.github.io`">
 			<cite @text="student.first"></cite>
 		</a>
 	</li>
