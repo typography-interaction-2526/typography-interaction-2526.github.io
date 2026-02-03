@@ -8,8 +8,27 @@
 	<div>
 		<menu webc:if="source && !source.includes(`drive.google.com`)">
 			<li>
-				<a :href="`#${makeNiceId(source)}`">
+				<a
+					:href="`#${makeNiceId(source)}`"
+					title="Link to this example"
+				>
 					<p>#</p>
+				</a>
+			</li>
+			<li webc:if="source.includes(`/preview`)">
+				<a
+					:href="source"
+					title="Open example editor"
+				>
+					<p>&lt;&gt;</p>
+				</a>
+			</li>
+			<li webc:if="source.includes(`/preview`)">
+				<a
+					:href="source.split(`/`)[0]"
+					title="Open example itself"
+				>
+					<p>↗</p>
 				</a>
 			</li>
 		</menu>

@@ -302,10 +302,12 @@ main {
 			}
 
 			> menu {
+				display:                    flex;
+				gap:                        1rcap;
 				inset-block-end:            100%;
 				inset-inline-end:           0;
-				margin-block-end:           1rcap;
 				opacity:                    var(--opacity);
+				padding-block-end:          1rcap;
 				position:                   absolute;
 				transition-delay:           var(--delay, 1s);
 				transition-duration:        var(--transition);
