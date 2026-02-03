@@ -1,8 +1,7 @@
 <figure
-	:id="source && !source.includes(`drive.google.com`) && slugify(source.split(`?`).shift())"
+	:id="source && !source.includes('drive.google.com') && slugify(source.split('/')[0].split('.')[0])"
 	@attributes
 >
-	<!-- TODO Remove extension from `id`! -->
 	<img
 		webc:if="[`.png`, `.gif`, `.jpg`].some(ext => source.endsWith(ext))"
 		:alt="stripTags(markdown(caption))"
