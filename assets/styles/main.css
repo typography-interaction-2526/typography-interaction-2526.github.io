@@ -271,6 +271,82 @@ main {
 			@container style(--columns: 6) { margin-block-start: 2rlh }
 		}
 
+		> div {
+			position: relative;
+
+			&:has(img, object) { inline-size: fit-content }
+
+			img,
+			object,
+			iframe {
+				--height--fallback: calc(var(--lines) * 1rlh - 1rcap);
+
+				block-size:      var(--height, var(--height--fallback));
+				max-block-size:  calc(round(85svh, 1rcap));
+				max-inline-size: 100%;
+			}
+
+			iframe {
+				aspect-ratio: var(--aspect-ratio, 16/9);
+
+				/* Code previews. */
+				&:not([src*="https://"])[src*='/preview'] {
+					inline-size: 100%;
+
+					@media (width < 35em) {
+						aspect-ratio:   1 / 2;
+						block-size:     initial;
+						max-block-size: calc(round(78svh, 1rcap));
+					}
+				}
+			}
+
+			> menu {
+				inset-block-end:            100%;
+				inset-inline-end:           0;
+				margin-block-end:           1rcap;
+				opacity:                    var(--opacity);
+				position:                   absolute;
+				transition-delay:           var(--delay, 1s);
+				transition-duration:        var(--transition);
+				transition-property:        opacity;
+				transition-timing-function: ease-in-out;
+
+				p {
+					--color:     var(--disabled);
+					--underline: initial;
+				}
+			}
+
+			/* Embedded session video/recordings. */
+			&:has(iframe[src*='drive.google.com/file/'][src$='preview']) {
+				iframe { background-color: var(--highlight) }
+
+				+ figcaption::after {
+					color:    var(--note);
+					content:  'You’ll need to be signed in to your New School account to see these in-page.';
+					text-box: trim-both cap alphabetic;
+				}
+
+				/* Hide it in Safari. */
+				@supports (font: -apple-system-body) {
+					display: none;
+
+					+ figcaption::after { content: 'Safari prevents Google Drive embeds—so you’ll need to go to the originals.' }
+				}
+			}
+
+			@media (hover: hover) {
+				--opacity: 0;
+
+				&:hover,
+				&:focus-within {
+					--opacity: 1;
+					--delay:   0s;
+				}
+			}
+		}
+
 		> figcaption {
 			align-items:       baseline;
 			display:           flex;
@@ -291,49 +367,6 @@ main {
 			}
 
 			> span { text-box: trim-both cap alphabetic }
-		}
-
-		img,
-		object,
-		iframe {
-			--height--fallback: calc(var(--lines) * 1rlh - 1rcap);
-
-			block-size:      var(--height, var(--height--fallback));
-			max-block-size:  calc(round(85svh, 1rcap));
-			max-inline-size: 100%;
-		}
-
-		iframe {
-			aspect-ratio: var(--aspect-ratio, 16/9);
-
-			/* Embedded session video/recordings. */
-			&[src*='drive.google.com/file/'][src$='preview'] {
-				background-color: var(--highlight);
-
-				+ figcaption::after {
-					color:    var(--note);
-					content:  'You’ll need to be signed in to your New School account to see these in-page.';
-					text-box: trim-both cap alphabetic;
-				}
-
-				/* Hide it in Safari. */
-				@supports (font: -apple-system-body) {
-					display: none;
-
-					+ figcaption::after { content: 'Safari prevents Google Drive embeds—so you’ll need to go to the originals.' }
-				}
-			}
-
-			/* Code previews. */
-			&:not([src*="https://"])[src*='/preview'] {
-				inline-size: 100%;
-
-				@media (width < 35em) {
-					aspect-ratio:   1 / 2;
-					block-size:     initial;
-					max-block-size: calc(round(78svh, 1rcap));
-				}
-			}
 		}
 
 		&.multiply { img, object, iframe { mix-blend-mode: multiply } }

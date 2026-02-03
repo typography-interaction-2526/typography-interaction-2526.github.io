@@ -5,22 +5,31 @@
 	:id="source && !source.includes(`drive.google.com`) && makeNiceId(source)"
 	@attributes
 >
-	<img
-		webc:if="[`.png`, `.gif`, `.jpg`].some(ext => source.endsWith(ext))"
-		:alt="stripTags(markdown(caption))"
-		:src="source"
-	>
-	<object
-		webc:elseif="source.endsWith(`.svg`)"
-		:alt="stripTags(markdown(caption))"
-		:data="source"
-		type="image/svg+xml"
-	></object>
-	<iframe
-		webc:else
-		:src="source"
-		allowfullscreen
-	></iframe>
+	<div>
+		<menu webc:if="source && !source.includes(`drive.google.com`)">
+			<li>
+				<a :href="`#${makeNiceId(source)}`">
+					<p>#</p>
+				</a>
+			</li>
+		</menu>
+		<img
+			webc:if="[`.png`, `.gif`, `.jpg`].some(ext => source.endsWith(ext))"
+			:alt="stripTags(markdown(caption))"
+			:src="source"
+		>
+		<object
+			webc:elseif="source.endsWith(`.svg`)"
+			:alt="stripTags(markdown(caption))"
+			:data="source"
+			type="image/svg+xml"
+		></object>
+		<iframe
+			webc:else
+			:src="source"
+			allowfullscreen
+		></iframe>
+	</div>
 	<figcaption webc:if="caption || citation">
 		<a
 			webc:if="citation"
@@ -33,8 +42,4 @@
 			@html="markdown(caption)"
 		></span>
 	</figcaption>
-	<!-- TODO Come back to this! -->
-	<!-- <p webc:if="source && !source.includes(`drive.google.com`)">
-		<a :href="`#${slugify(source.split(`?`).shift())}`">#</a>
-		</p> -->
 </figure>
