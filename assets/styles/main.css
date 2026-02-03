@@ -307,7 +307,7 @@ main {
 			aspect-ratio: var(--aspect-ratio, 16/9);
 
 			/* Embedded session video/recordings. */
-			&[src^="https://drive.google.com/file/"][src$="/preview"] {
+			&[src*='drive.google.com/file/'][src$='preview'] {
 				background-color: var(--highlight);
 
 				+ figcaption::after {
