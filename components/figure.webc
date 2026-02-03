@@ -1,5 +1,8 @@
+<script webc:setup>
+	export const makeNiceId = (source) => slugify(source.split('/')[0].split('.')[0])
+</script>
 <figure
-	:id="source && !source.includes('drive.google.com') && slugify(source.split('/')[0].split('.')[0])"
+	:id="source && !source.includes(`drive.google.com`) && makeNiceId(source)"
 	@attributes
 >
 	<img
