@@ -224,7 +224,7 @@ It’s a lot of useful behavior without too much code:
 <figure
 	@source="dialog/preview/?active=script.js&width=75%"
 	@style="--lines: 24"
-	@caption="Note the `style.css` changes to make the `dialog` appear as we want!"
+	@caption="Note the `style.css` changes to make the `dialog` appear as we want. This is all a bit hokey, but better than it used to be!"
 	>
 </figure>
 
