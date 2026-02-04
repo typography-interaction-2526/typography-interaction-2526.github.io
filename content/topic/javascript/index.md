@@ -206,7 +206,7 @@ You can do many, many things with this basic “toggle a class” JS! It’s t
 
 ## Opening a Modal
 
-You might also want to use JavaScript to “open” [a modal `<dialog>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) element—which you might use for a menu, an overlay, or a lightbox. (In the software sense, [a *modal* means](https://en.wikipedia.org/wiki/Modal_window) your visitor *must* interact with the `<dialog>` before they can do anything else.)
+You might also want to use JavaScript to “open” [a modal `<dialog>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) element—which you might use for a menu, an overlay, or a lightbox. (In the software sense, [a *modal* means](https://en.wikipedia.org/wiki/Modal_window) your visitor *must* interact with the `<dialog>` before they can do anything else.)
 
 - [<cite>`<dialog>`: The Dialog element – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
 	You used to have to write a *lot* more JS for these!
@@ -215,7 +215,9 @@ You might also want to use JavaScript to “open” [a modal `<dialog>`](https:
 	Style the overlays behind them.
 <!-- .right .rows--2 -->
 
-You could (and used to) do this by [adding/removing classes](#adding-removing-a-class), but this newer approach gives us some nice “free” behaviors—making the rest of the page [`inert`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert), adding [a `::backdrop` pseudo-element](https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop), stopping background scrolling, and even listening to <kbd>Esc</kbd> for dismissing/closing the element. It’s a lot of useful behavior without much code:
+You could (and used to) do this by [adding/removing classes](#adding-removing-a-class), but this newer element uses JS to toggle an `open` attribute (akin to [`<details>`/`<summary>`](/topic/html/#details-summary)) for the two states. This approach gives us some nice “free”, built-in behaviors: making the rest of the page [`inert`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert), adding [a `::backdrop` pseudo-element](https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop), stopping background scrolling, and even listening to <kbd>Esc</kbd> for dismissing/closing the element.
+
+It’s a lot of useful behavior without much code:
 <!-- .before--2 -->
 
 <figure
