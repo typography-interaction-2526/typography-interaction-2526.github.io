@@ -112,6 +112,11 @@ main {
 					text-box: trim-both cap alphabetic;
 				}
 
+				&:where(:has(> p:first-child > strong:only-child))::before {
+					font-weight:               700;
+					-webkit-text-stroke-width: 0.015em; /* Match `strong` */
+				}
+
 				/* For poking `code` out of lists. */
 				.all { max-inline-size: calc(var(--page) - 5cap) }
 
@@ -155,11 +160,6 @@ main {
 				content:           '—';
 				inset-block-start: 0;
 				inset-inline-end:  calc(100% - var(--right));
-			}
-
-			&:where(:has(> p:first-child > strong:only-child))::before {
-				font-weight:               700;
-				-webkit-text-stroke-width: 0.015em; /* Match `strong` */
 			}
 		}
 	}
