@@ -1,14 +1,13 @@
-html, body { height: 100%; }
+html, body { block-size: 100%; }
 
 body {
 	--base: 1rem;
 
-	align-items: center;
-	display: flex;
-	flex-direction: column;
+	display: grid;
 	font-family: sans-serif;
-	justify-content: center;
 	padding: var(--base);
+	place-content: center;
+	place-items: center;
 	row-gap: var(--base);
 }
 

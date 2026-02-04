@@ -1,9 +1,7 @@
 body {
 	--base: 1rem;
 
-	align-items: center;
-	display: flex;
-	flex-direction: column;
+	display: grid;
 	font-family: sans-serif;
 	padding: var(--base);
 	row-gap: var(--base);
