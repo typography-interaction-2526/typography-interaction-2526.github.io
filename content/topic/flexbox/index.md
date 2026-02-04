@@ -5,7 +5,7 @@
 
 ## A Long Time Coming
 
-[*Flexbox*](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox), short for *flexible boxes*—which folks will often just shorten all the way to *flex*—is a later (mid-2010s, slow adoption) addition to CSS.
+[*Flexbox*](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox), short for *flexible boxes*—which folks will often just shorten all the way to *flex*—is a later (mid-2010s, [slow adoption](https://annairish.github.io/historicizing/history)) addition to CSS.
 
 - [<cite>CSS Flexbox Layout Guide – CSS Tricks</cite>](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 	This page is a classic! It probably bought [Chris Coyier](https://chriscoyier.net) a house.
@@ -19,7 +19,16 @@
 
 *Flex* was created to facilitate and allow CSS layouts that [*the box model*](/topic/box-model/) (despite its `float` and `position`) either made difficult, brittle, or even impossible. It is a *[display](/topic/box-model/#display)* property. It’s extremely useful and widely-used.
 
-And let us tell you—being a web designer was a *whole lot harder* before flex came on the front-end scene. (Hence the “Finally.”) Notice, for instance, that we haven’t talked about any *vertical* centering at all yet—you don’t want to know! And you don’t have to worry about it. Flex encapsulates a lot of practical, helpful design paradigms in its system.
+And let us tell you—being a web designer was [a *whole lot harder*](http://meyerweb.com/eric/thoughts/2009/02/17/wanted-layout-system/) before flex came on the front-end scene. (Hence the “Finally.”) Notice, for instance, that we haven’t talked about any *vertical* centering at all yet—you don’t want to know! And you don’t have to worry about it. Flex encapsulates a lot of practical, helpful design paradigms in its system.
+
+<blockquote
+	@attribution="Elika J. Etemad (Fantasai), 2007"
+	@citation="https://lists.w3.org/Archives/Public/www-style/2007Feb/0137.html"
+	>
+
+I was told that the “flexbox” model would solve the problems, but there hasn't been any progress on that front these past few years…
+
+</blockquote>
 
 ## Main and Cross Axes
 
@@ -276,6 +285,15 @@ Note that the `justify`, `align`, and `gap` properties are also shared (in name 
 
 </aside>
 
+<blockquote
+	@attribution="Fantasai again, 2015"
+	@citation="https://fantasai.inkedblade.net/style/events/flexbox-workshop"
+	>
+
+If we did a Flexbox spec workshop, where we went over the whole spec in excruciating detail and sketched illustrations, who would come?
+
+</blockquote>
+
 ## Item (Child) Properties
 
 Flexbox is *usually* applied on the parent/container. But once you’ve set `display: flex;` on an element, there are also some individual override properties that can be given to its children, *flex items*.
@@ -355,3 +373,16 @@ This is a lot of stuff! Flex can sometimes be tough to wrap one’s head around,
 
 Much of what you look at on the web is laid out in flexbox (and its followup which we keep mentioning, [CSS Grid](/topic/grid/)).
 <!-- .intro -->
+
+<blockquote
+	@attribution="Fantasai, 2017"
+	@citation="https://lists.w3.org/Archives/Public/www-style/2017Dec/0057.html"
+	>
+
+Flexbox is a new layout model for CSS.
+
+The contents of a flex container can be laid out in any direction, can be reordered, can be aligned and justified within their container, and can “flex”their sizes and positions to respond to the available space.
+
+We expect this model to be particularly useful for UI layouts.
+
+</blockquote>
