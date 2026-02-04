@@ -101,13 +101,24 @@ export default (eleventyConfig) => {
 			// TODO Apostrophes!
 			// TODO Inline overrides don’t work (search `#external`)! It is the `section` wrapping.
 			// TODO This has broken `abbr` in headings?
-			permalink: markdownItAnchor.permalink.linkAfterHeader({
-				assistiveText: (title) => `“${title}”`,
-				class: '',
-				style: 'aria-labelledby',
-				symbol: '',
-				wrapper: ['<hgroup>', '</hgroup>'],
-			}),
+			permalink: (slug, opts, state, idx) => {
+				const headingId = state.tokens[idx].attrs.find(([id]) => id === 'id')[1]
+				const headingOpen = state.md.renderer.renderToken(state.tokens, idx, state.options)
+				const headingHtml = state.md.renderer.render([state.tokens[idx + 1]], state.options, state.env)
+				const headingClose = state.md.renderer.renderToken(state.tokens, idx + 2, state.options)
+
+				const token = new state.Token('html_inline', '', 0)
+
+				token.content =
+					`
+					<hgroup>
+						${headingOpen}${headingHtml}${headingClose}
+						<a href="#${headingId}" aria-labelledby="${headingId}"></a>
+					</hgroup>
+					`
+
+				state.tokens.splice(idx, 3, token)
+			},
 			slugify: eleventyConfig.getFilter('slugify'),
 		})
 		.use(markdownItAttrs)
