@@ -220,8 +220,8 @@ You could (and used to) do this by [adding/removing classes](#adding-removing-a-
 
 <figure
 	@source="dialog/preview/?active=script.js&width=75%"
-	@style="--lines: 16"
-	@caption='The `closedby="any"` attribute watches for <kbd>Esc</kbd> and clicks on the `::backdrop`. Also note the `style.css` changes to make the `dialog` appear as we want!'
+	@style="--lines: 24"
+	@caption="Note the `style.css` changes to make the `dialog` appear as we want!"
 	>
 </figure>
 

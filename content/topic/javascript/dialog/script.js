@@ -10,3 +10,11 @@ modalButton.addEventListener('click', () => { // “Listen” for clicks.
 closeButton.addEventListener('click', () => {
 	modalDialog.close() // And this closes it!
 })
+
+// Listen to *all* clicks, now including the `event` parameter…
+document.addEventListener('click', (event) => {
+	// Only clicks on the page itself behind the `dialog`.
+	if (event.target == document.documentElement) {
+		modalDialog.close() // Close it too then.
+	}
+})
