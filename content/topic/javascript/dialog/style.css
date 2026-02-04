@@ -12,12 +12,12 @@ dialog {
 	inset-inline-start: 50%;
 	translate: -50% -50%;
 
+	button { background-color: tomato; } /* Always have a clear “close” `button`! */
+
 	&[open] { display: grid } /* `block` is default, but we can override. */
 
 	&::backdrop {
 		background-color: rgb(0 0 0 / 66%); /* A dark overlay. */
 		pointer-events: none; /* Let clicks pass through to our `document` listener. */
 	}
-
-	button { background-color: tomato; } /* Always have a clear “close” `button`! */
 }
