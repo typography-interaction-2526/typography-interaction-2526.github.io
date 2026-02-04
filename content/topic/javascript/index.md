@@ -287,7 +287,7 @@ These are usually a safe *[progressive enhancement](https://en.wikipedia.org/wi
 Alright, that is a lot. Like we’ve been saying—JavaScript is *A Whole Thing.* Here are some other tips, as you start to explore:
 <!-- .intro -->
 
-- Using `alert(yourVariable)` for *telemetry*/*debugging* can quickly be pretty annoying—instead, you can use `console.log(yourVariable)` to show messages in the [DevTools console](/topic/inspector/#the-console).
+- Using `alert(yourVariable)` for *telemetry*/*debugging* can quickly be pretty annoying—instead, you can use `console.log(yourVariable)` to show messages in the [DevTools console](/topic/dev-tools/#the-console).
 
 	A quick `console.log('Hello world!')` can check if things are plugged in right. The console will also show any JavaScript errors!
 
