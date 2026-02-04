@@ -18,6 +18,7 @@
 			<li webc:if="source.includes(`/preview`)">
 				<a
 					:href="source"
+					target="_blank"
 					title="Open example editor"
 				>
 					<p>&lt;&gt;</p>
@@ -26,6 +27,7 @@
 			<li webc:if="source.includes(`/preview`)">
 				<a
 					:href="source.split(`/`)[0]"
+					target="_blank"
 					title="Open example itself"
 				>
 					<p>↗</p>
