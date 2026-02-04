@@ -319,6 +319,40 @@ Copying wholesale from these tools—or any other source—does not demonstrate 
 
 - You’ll also likely see examples/suggestions that wrap some logic in a `DOMContentLoaded` (or `load`) event listener—which will run the contents *after* the whole page is available, no matter where the `<‍script>` element is located in the HTML. But we’ll use [the modern `defer` attribute](#3-separate-external-js-files) to avoid this dance!
 
+	<div class="all before after">
+
+	<div>
+
+	**Old way**
+
+	```html
+	<script src="script.js"></script>
+	```
+
+	```js
+	document.addEventListener('DOMContentLoaded', () => {
+		console.log('Runs after the page is loaded!')
+	})
+	```
+
+	</div>
+
+	<div class="before">
+
+	**New/better way**
+
+	```html
+	<script defer src="script.js"></script>
+	```
+
+	```js
+	console.log('Runs after the page is loaded!')
+	```
+
+	</div>
+
+	</div>
+
 - To quickly get recent/modern, *vanilla* JavaScript results, instead include “*ES&NoBreak;6+*&thinsp;” in your searches and prompts—this refers to a more recent, easier-to-use syntax. Models often now skew/default towards this, but not always!
 
 - Relatedly, if you see “arrow functions” (with `=>`&thinsp;) it is a pretty good sign the answer is relatively recent.
@@ -342,3 +376,15 @@ Copying wholesale from these tools—or any other source—does not demonstrate 
 Any application that *can* be written in JavaScript, *will* eventually be written in JavaScript.
 
 </blockquote>
+
+<style>
+	@container style(--columns: 6) {
+		ul div.all {
+			align-items:           start;
+			column-gap:            var(--alley);
+			display:               grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			inline-size:           var(--page);
+		}
+	}
+</style>
