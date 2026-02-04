@@ -215,9 +215,10 @@ You might also want to use JavaScript to “open” [a modal `<dialog>`](https:
 	Style the overlays behind them.
 <!-- .right .rows--2 -->
 
-You could (and used to) do this by [adding/removing classes](#adding-removing-a-class), but this newer element uses JS to toggle an `open` attribute (akin to [`<details>`/`<summary>`](/topic/html/#details-summary)) for the two states. This approach gives us some nice “free”, built-in behaviors: making the rest of the page [`inert`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert), adding [a `::backdrop` pseudo-element](https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop), stopping background scrolling, and even listening to <kbd>Esc</kbd> for dismissing/closing the element.
+You could (and used to) do this by [adding/removing classes](#adding-removing-a-class)—but this newer element uses JS to toggle an `open` attribute (akin to [`<details>`/`<summary>`](/topic/html/#details-summary)) for the two states. This approach gives us some nice “free”, built-in behaviors: making the rest of the page [`inert`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert), adding [a `::backdrop` pseudo-element](https://developer.mozilla.org/en-US/docs/Web/CSS/::backdrop), ~~stopping background scrolling~~ (this [still](https://css-tricks.com/prevent-a-page-from-scrolling-while-a-dialog-is-open/) needs CSS!), and even listening to <kbd>Esc</kbd> for dismissing/closing the modal.
+<!-- .balance -->
 
-It’s a lot of useful behavior without much code:
+It’s a lot of useful behavior without too much code:
 <!-- .before--2 -->
 
 <figure
