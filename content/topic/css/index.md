@@ -361,9 +361,14 @@ Importantly, combinators can only target elements top-down, meaning that it can 
 
 For many, *many* years folks have wanted a “parent selector” in CSS—meaning a way to apply a style to a parent/container based on one of its children. This has not been possible before, as we mentioned above.
 
-CSS has [finally added](https://webkit.org/blog/13096/css-has-pseudo-class/) the [`:has()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:has), just in the past couple years. It allows us to write much simpler, logical styles:
+- [<cite>`:has()` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:has)
+	This can *completely* transform and simplify style systems!
+<!-- .right .rows--2 -->
 
-```css <!-- .add-before .add-after -->
+CSS has [finally added](https://webkit.org/blog/13096/css-has-pseudo-class/) the [`:has()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:has), just in the past couple years. It allows us to write much simpler, logical styles:
+<!-- .before -->
+
+```css <!-- .after -->
 div:has(p) { background-color: red; }
 ```
 
@@ -373,6 +378,10 @@ The property is applied *on* the parent (here, the `div`) based on the presence 
 
 While we’re on the subject of cutting-edge additions to CSS—[even more recently](https://caniuse.com/css-nesting) browsers have added support [for *nesting*](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting) selectors.
 <!-- .balance -->
+
+- [<cite>Using CSS nesting – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Nesting/Using)
+	Simplify and make your style relationships more evident!
+<!-- .right .rows--2 -->
 
 This more straightforward style of writing [descendent/child selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator) was popularized by the ubiquitous [SASS extension](https://sass-lang.com)—which improved the ergonomics of CSS ahead of the language incorporating new features.
 <!-- .after--2 -->
