@@ -390,8 +390,26 @@ footer { color: blue; }
 header .child,
 footer .child { color: teal; }
 
-header .another-child,
-footer .another-child { color: aqua; }
+header > .direct-child,
+footer > .direct-child { color: aqua; }
+
+header + .right-after,
+footer + .right-after { color: gray; }
+
+header ~ .following,
+footer ~ .following { color: lime; }
+
+header.with-class,
+footer.with-class { color: cyan; }
+
+header:hover,
+footer:hover { color: navy; }
+
+header::before,
+footer::before { content: 'Nesting?'; }
+
+.parent header,
+.parent footer { color: plum; }
 
 ```
 
@@ -408,9 +426,24 @@ footer {
 
 	.child { color: teal; }
 
-	.another-child { color: aqua; }
+	> .direct-child { color: aqua; }
+
+	+ .right-after { color: gray; }
+
+	~ .following { color: lime; }
+
+	&.with-class { color: cyan; }
+
+	&:hover { color: navy; }
+
+	&::before { content: 'Nesting!'; }
+
+	.parent & { color: plum; }
 }
 ```
+
+Note the `&` [*nesting selector*](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector) which stands in for “parent element.”
+<!-- .note -->
 
 </div>
 
