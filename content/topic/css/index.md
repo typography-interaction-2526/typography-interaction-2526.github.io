@@ -580,6 +580,8 @@ This means that when there is a tie (like two classes applying the same property
 	>
 </figure>
 
+<!-- TODO Add note about cascade layers? -->
+
 ## And Inheritance
 
 To add even more confusion, [some CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance) set on a parent also apply to their children—such as `color` or `font-family`. Most spacing/layout properties, like `width` and `margin` do not. (More on those, next week.)
