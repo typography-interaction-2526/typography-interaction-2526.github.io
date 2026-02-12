@@ -387,8 +387,8 @@ This more straightforward style of writing [descendent/child selectors](https://
 header,
 footer { color: blue; }
 
-header .child,
-footer .child { color: teal; }
+header .any-descendent,
+footer .any-descendent { color: teal; }
 
 header > .direct-child,
 footer > .direct-child { color: aqua; }
@@ -424,7 +424,7 @@ header,
 footer {
 	color: blue;
 
-	.child { color: teal; }
+	.any-descendent { color: teal; }
 
 	> .direct-child { color: aqua; }
 
