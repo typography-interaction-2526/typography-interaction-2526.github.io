@@ -238,15 +238,20 @@ Selectors are used to *target* certain HTML elements within the page. These can 
 
 - [<cite>Selectors – web.dev</cite>](https://web.dev/learn/css/selectors)
 	Google, too.
-<!-- .right .rows--2 -->
+<!-- .right -->
 
 1. Elements (like <nobr>`p` `a` `main`</nobr> etc.)
 1. Classes (written `.class-name`&thinsp;)
 1. Identifiers (and `#some-id`&thinsp;)
+<!-- .after--4 -->
 
 ### 1. By Element Type: `p` `a` `main` etc. <!-- #element .all -->
 
 If you want to change the styles for all instances of a given HTML element, you drop the <nobr>`<` `>`</nobr> from the tag for an element selector. These are called [*type selectors*](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors):
+
+- [<cite>Type selectors – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors)
+	Match by node name.
+<!-- .right -->
 
 <figure
 	@caption="Note that CSS has different `/* comment syntax */` too."
@@ -259,6 +264,10 @@ If you want to change the styles for all instances of a given HTML element, you 
 
 But maybe you don’t want to style all of the paragraphs. You can then use a `class` to [target specific instances](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors). They are  added as an *[attribute](/topic/html/#attributes)* on the element you want to target:
 <!-- .balance -->
+
+- [<cite>Class selectors – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors)
+	Specify/match things that are alike.
+<!-- .right -->
 
 <figure
 	@source="class/preview"
@@ -278,6 +287,10 @@ We’ll talk about how conflicting rules are handled, below.
 You can also use an `id`, which is a kind of [special attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id) that can only be used *once* in an HTML document. These are useful thus useful for targeting singular things—like your navigation, the document title, specific headings, etc:
 <!-- .balance -->
 
+- [<cite>ID selectors – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/ID_selectors)
+	Specify/match singular elements.
+<!-- .right -->
+
 <figure
 	@source="id/preview"
 	style="--lines: 16"
@@ -288,11 +301,18 @@ These are prefixed by `#` in CSS, as with `#title` and `#introduction`. If you 
 
 ## Fancy Selectors
 
-### Combinations and Groups: `selector.selector` <!-- .all -->
+### Compound and lists: `selector.selector` `selector, selector` <!-- .all -->
 
-You can use combinations of the above *elements*, *classes*, and *identifiers* to be even more specific—however, this likely means you just need to rethink your HTML structure. (We’ll unpack *specificity*, below.)
+You can use [compound/combinations](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#compound_selector) of the above *elements*, *classes*, and *identifiers* to be even more specific—however, this likely means you just need to rethink your HTML structure. (We’ll unpack *specificity*, below.)
 
-More commonly, you might apply declarations to multiple selectors, called *group selectors*, with a <nobr>comma-delineated</nobr> [selector list](https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list):
+- [<cite>Compound selector – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#compound_selector)
+	Combine simple selectors to be more specific.
+
+- [<cite>Selector list – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list)
+	This, that, the other.
+<!-- .right .rows--3 -->
+
+More commonly, you might apply declarations to multiple selectors, sometimes called *group selectors*, with a <nobr>comma-delineated</nobr> [selector list](https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list):
 
 <figure
 	@source="group/preview/?active=style.css"
@@ -305,6 +325,10 @@ More commonly, you might apply declarations to multiple selectors, called *group
 You can use the various [attributes](/topic/html/#attributes) as selectors too, using square brackets <nobr>`[` `]`</nobr>. These are usually very similar to using *classes*, but can help you [differentiate things](https://css-tricks.com/attribute-selectors/) like internal and external links, for example:
 <!-- .balance -->
 
+- [<cite>Attribute selectors – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors)
+	Select with other non-`.class`, non-`#id` HTML attributes.
+<!-- .right -->
+
 <figure
 	@source="attribute/preview/?active=style.css"
 	style="--lines: 12"
@@ -314,6 +338,10 @@ You can use the various [attributes](/topic/html/#attributes) as selectors too, 
 ### Pseudo-Classes: `selector:state` `selector:instance` <!-- .all -->
 
 These are [special selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes), added to `element`, `class`, or `id`, separated with `:`, which target unique *states* or *instances* of HTML elements. You’ll often see these used to target [link states](https://web.dev/learn/css/pseudo-classes/#historic-states):
+
+- [<cite>Pseudo-classes – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
+	Select elements in a particular *state*.
+<!-- .right -->
 
 <figure
 	@caption="Note that `:hover` works on any element, not just links!"
@@ -335,6 +363,10 @@ Other common pseudo-Class examples have to do with [counts and positions](https:
 Slightly different the various [pseudo-*elements*](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements), which let you style a particular *part* of an element. You’ll most often see these as `::before` and `::after`, which let us insert things around text—or targeting first letters/lines:
 <!-- .balance -->
 
+- [<cite>Pseudo-elements – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements)
+	Not *quite* elements!
+<!-- .right -->
+
 <figure
 	@caption="Note the difference in `:` for pseudo-selectors and `::` for pseudo-elements."
 	@source="pseudo-element/preview/?active=style.css"
@@ -346,6 +378,10 @@ Slightly different the various [pseudo-*elements*](https://developer.mozilla.org
 
 Last, you will often want to target something based on its relationship to other elements—its *siblings* or its *parents*. For this, CSS has [*combinators*](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators), which let you relate all the various selectors we’ve learned about here together:
 <!-- .balance -->
+
+- [<cite>CSS combinators – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+	Based on HTML relationships.
+<!-- .right -->
 
 <figure
 	@source="combinator/preview/?active=style.css"
@@ -359,20 +395,39 @@ Importantly, combinators can only target elements top-down, meaning that it can 
 
 ### `:has()` Really …Has Changed Things! <!-- .all -->
 
-For many, *many* years folks have wanted a “parent selector” in CSS—meaning a way to apply a style to a parent/container based on one of its children. This has not been possible before, as we mentioned above.
+For many, *many* years folks have wanted a “parent selector” in CSS—meaning a way to apply a style to a parent/container based on one of its children or siblings. This has not been possible before, as we mentioned above.
 
 - [<cite>`:has()` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:has)
 	This can *completely* transform and simplify style systems!
 <!-- .right .rows--2 -->
 
 CSS has [finally added](https://webkit.org/blog/13096/css-has-pseudo-class/) the [`:has()` pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/:has), just in the past couple years. It allows us to write much simpler, logical styles:
-<!-- .before -->
+<!-- .before--2 .after -->
 
-```css <!-- .after -->
+<div class="verso">
+
+```css
 div:has(p) { background-color: red; }
 ```
 
-The property is applied *on* the parent (here, the `div`) based on the presence of the child (the `p`). You can use any selector, in either position. This is *very* powerful, especially with dynamic content. All the major browsers have *[baseline (widely available)](https://web.dev/baseline)* support for it now.
+“All `div`&thinsp;s with a paragraph inside.”
+<!-- .note -->
+
+</div>
+
+<div class="recto">
+
+```css
+div:has(+ ul) { background-color: gold; }
+```
+
+“All `div`&thinsp;s that have `ul` right after”—lets you look “backwards”!
+<!-- .note -->
+
+</div>
+
+Importantly, the property is applied on the *parent* (here, the `div`)—not the selector inside the `:has()`—but is based on its presence. You can use any selector, in either position. This is *very* powerful, especially with dynamic content! All the major browsers have *[baseline (widely available)](https://web.dev/baseline)* support for it now.
+<!-- .before -->
 
 ### Oh Also, Nesting?!
 
