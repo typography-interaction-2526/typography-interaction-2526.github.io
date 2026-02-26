@@ -16,6 +16,8 @@ import pluginToc from '@uncenter/eleventy-plugin-toc'
 
 import stripTags from 'striptags'
 
+import { execSync } from 'child_process'
+
 export default (eleventyConfig) => {
 	// Setup.
 	eleventyConfig.addBundle('css', { toFileDirectory: 'assets' })
@@ -100,7 +102,7 @@ export default (eleventyConfig) => {
 		.use(markdownItAnchor, {
 			// TODO Apostrophes!
 			// TODO Inline overrides don’t work (search `#external`)! It is the `section` wrapping.
-			// TODO This has broken `abbr` in headings?
+			// TODO This has broken `abbr` in headings? Need to wrap in the actual link.
 			permalink: (slug, opts, state, idx) => {
 				const headingId = state.tokens[idx].attrs.find(([id]) => id === 'id')[1]
 				const headingOpen = state.md.renderer.renderToken(state.tokens, idx, state.options)
@@ -203,6 +205,8 @@ export default (eleventyConfig) => {
 
 	// Big, combined, non-root collection. (Sorting is template-side!)
 	eleventyConfig.addCollection('pages', (collection) => collection.getFilteredByGlob('content/*/**/*.md'))
+
+	// eleventyConfig.on('eleventy.after', () => execSync('npx pagefind --site _site --glob "**/*.html"', { encoding: 'utf-8' }))
 
 	// Remainder setup.
 	return {
