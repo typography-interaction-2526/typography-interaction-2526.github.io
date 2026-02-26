@@ -16,8 +16,6 @@ import pluginToc from '@uncenter/eleventy-plugin-toc'
 
 import stripTags from 'striptags'
 
-import { execSync } from 'child_process'
-
 export default (eleventyConfig) => {
 	// Setup.
 	eleventyConfig.addBundle('css', { toFileDirectory: 'assets' })
@@ -205,8 +203,6 @@ export default (eleventyConfig) => {
 
 	// Big, combined, non-root collection. (Sorting is template-side!)
 	eleventyConfig.addCollection('pages', (collection) => collection.getFilteredByGlob('content/*/**/*.md'))
-
-	// eleventyConfig.on('eleventy.after', () => execSync('npx pagefind --site _site --glob "**/*.html"', { encoding: 'utf-8' }))
 
 	// Remainder setup.
 	return {

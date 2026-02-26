@@ -43,7 +43,7 @@
 
 			&:where(.end) svg { rotate: 180deg }
 
-			> :where(a, button) {
+			> a {
 				backdrop-filter:            var(--blur);
 				border-radius:              100%;
 				display:                    grid;
@@ -198,9 +198,4 @@
 			<div @html="inlineSvg('assets/icons/calendar.svg')"></div>
 		</a>
 	</li>
-	<!-- <li class="search">
-		<button aria-label="Search">
-		<div @html="inlineSvg('assets/icons/glass.svg')"></div>
-		</button>
-		</li> -->
 </menu>
