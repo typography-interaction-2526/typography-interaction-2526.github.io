@@ -190,6 +190,12 @@ summary {
 			> cite {
 				background-color: var(--color);
 				color:            var(--background);
+
+				s {
+					--color: color-mix(in srgb, currentcolor, transparent var(--disabled--opacity));
+
+					&::before, &::after { content: '\2009' } /* Thin space. */
+				}
 			}
 		}
 
