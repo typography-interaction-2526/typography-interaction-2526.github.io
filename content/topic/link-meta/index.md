@@ -6,10 +6,10 @@
 
 Beyond rendering directly in browsers themselves, web pages also exist in the contexts of search engines, social media, messaging, and other sharing—and we should give attention to how they appear in these environments, too.
 
-- [<letter-bullet @title="What’s in the Head? – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [<cite>What’s in the Head? – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
 	A general overview from our friends at MDN.
 
-- [<letter-bullet @title="Metadata – web.dev"></letter-bullet>](https://web.dev/learn/html/metadata/)
+- [<cite>Metadata – web.dev</cite>](https://web.dev/learn/html/metadata/)
 	And the folks at Google.
 <!-- .link-list .right style="--rows: 3" -->
 
@@ -34,7 +34,7 @@ We’ve gathered a handful of practices here which adjust and optimize how your 
 
 The first of these is the [*favicon*](https://en.wikipedia.org/wiki/Favicon) (for *favorite icon*)—which appears in the browser’s tabs/address bar, bookmarks, history, and also on search engine entries. This is often a logo—though they don’t always translate down well in size. Sometimes it is its own thing! But it is *always* an important part of the initial impression of your site, and should be carefully considered and constructed.
 
-- [<letter-bullet @bullet="F" @title="How to Favicon in ~~2021~~ 2025"></letter-bullet>](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs)
+- [<cite>How to Favicon in ~~2021~~ 2026</cite>](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs)
 	Pretty good, modern walkthrough.
 <!-- .link-list .right -->
 
@@ -55,7 +55,7 @@ The base favicon format is `.ico`—from ancient, bitmapped [Windows icons](http
 
 You’ll find a lot of scammy, <nobr>ad-ridden</nobr>, <nobr>AI-chumming</nobr>, “favicon generators” out there.
 
-As of writing, we still couldn’t find a *decent* online converter that packages multiple `.ico` dimensions together. So our *manual* way is somewhat… noodly, but we think it is the cleanest, best-practice (for 2025) approach.
+As of writing, we still couldn’t find a *decent* online converter that packages multiple `.ico` dimensions together. So our *manual* way is somewhat… noodly, but we think it is the cleanest, best-practice (for 2026) approach.
 
 </aside>
 
@@ -63,7 +63,7 @@ As of writing, we still couldn’t find a *decent* online converter that package
 
 <div class="verso add-before">
 
-You should draw each size individually, when necessary—*pixel-tuning* each version to land nicely on the pixel grid, so it is legible and crisp at its dimension. You can use Figma’s [pixel preview](https://help.figma.com/hc/en-us/articles/360041065034-Adjust-your-zoom-and-view-options#pixel-preview) (set at *1x*), toggled with <nobr><kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>P</kbd>.</nobr>
+You should draw each size individually, when necessary—*pixel-tuning* each version to land nicely on the pixel grid, so it is legible and crisp at its dimension. You can use Figma’s [pixel preview](https://help.figma.com/hc/en-us/articles/360041065034-Adjust-your-zoom-and-view-options#pixel-preview) (set at *1x*), toggled with <nobr><kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>P</kbd>.</nobr>
 
 Note that these can have transparent backgrounds, and that *HiDPI* ([*2x*/*retina*](https://tomroth.com.au/dpr/)) displays will render their device-native size—so most folks are seeing your `32px` version, these days. Export [a PNG](/topic/images/#image-formats) for each dimension, from Figma, into your project folder.
 
@@ -77,14 +77,14 @@ Note that these can have transparent backgrounds, and that *HiDPI* ([*2x*/*retin
 	>
 </figure>
 
-These can be combined together in an `.ico` with [ImageMagick](https://imagemagick.org)—the appropriately named *Dark Arts* tool at the bottom of every imaging pipeline. (If you’re on a Mac, some version of this is likely already installed; PC&NoBreak;s might need to [download it](https://imagemagick.org/script/download.php#windows)). You’ll run this terminal command, in your project folder:
+These can be combined together in an `.ico` with [ImageMagick](https://imagemagick.org)—the appropriately named *Dark Arts* tool at the bottom of every imaging pipeline. (If you’re on a Mac, some version of this is likely already installed; PC&NoBreak;s might need to [download it](https://imagemagick.org/script/download.php#windows)). You’ll run this terminal command, in your project folder:
 <!-- .add-before--3 .add-after .balance -->
 
 ```shell
 convert 16.png 32.png 64.png -compress zip favicon.ico
 ```
 
-You can open [a terminal](https://code.visualstudio.com/docs/terminal/basics) in VS Code (or separately, from GitHub Desktop) with <nobr><kbd>⌃</kbd> <kbd>`</kbd></nobr>.
+You can open [a terminal](https://code.visualstudio.com/docs/terminal/basics) in VS Code (or separately, from GitHub Desktop) with <nobr><kbd>⌃</kbd> <kbd>`</kbd></nobr>.
 <!-- .secondary .balance -->
 
 #### Linking It
@@ -122,7 +122,7 @@ We’ve omitting the [responsive `viewport` element](/topic/responsive/#viewport
 Oh, Safari. I wish I knew how to quit you.
 <!-- .secondary -->
 
-### Modern SVG&NoBreak;s (Chrome *et al*.)
+### Modern SVG&NoBreak;<small>s</small> (Chrome *et al.*)
 
 Chrome is decidedly better, here. It supports SVG&NoBreak;s for favicons, which gives us the benefit of [the vector format](/topic/images/#image-formats)—resolution independence. One file, no intermediate/terminal steps, for different display sizes and densities. It is still a good practice to draw these at `16×16px`—so you can *pixel-tune* them—then export from Figma, now as an SVG.
 
@@ -226,16 +226,16 @@ We used the same image content as our favicon, here—but with the larger sizes,
 
 As *sharing* contexts became more and more prevalent, other approaches were developed to add additional information around pages in these scenarios—using special `<meta>` tags in the `<head>`.
 
-- [<letter-bullet @title="The Open Graph Protocol"></letter-bullet>](https://ogp.me)
+- [<cite>The Open Graph Protocol</cite>](https://ogp.me)
 	The original spec.
 
-- [<letter-bullet @title="Sharing Debugger - Meta for Developers"></letter-bullet>](https://developers.facebook.com/tools/debug/)
+- [<cite>Sharing Debugger - Meta for Developers</cite>](https://developers.facebook.com/tools/debug/)
 	Check your cards without sharing.
 
-- [<letter-bullet @bullet="M" @title="Hey Meta"></letter-bullet>](https://www.heymeta.com)
+- [<cite>Hey Meta</cite>](https://www.heymeta.com)
 	A simple, decent, non-Meta version.
 
-- [<letter-bullet @bullet="D" @title="Iframely URL Debugger"></letter-bullet>](http://debug.iframely.com)
+- [<cite>Iframely URL Debugger</cite>](http://debug.iframely.com)
 	This one will show you everything.
 <!-- .link-list .right style="--rows: 4" -->
 
@@ -343,19 +343,19 @@ Conceptually, do you want your shared URL to function only as a link? Or somewh
 
 Beyond this, there is a (very, very) [long tail](https://en.wikipedia.org/wiki/Long_tail) of *metadata*/*structured-data* uses. Much of it will depend on the nature of your project/work, and there will be sub-conventions within conventions.
 
-- [<letter-bullet @title="Schema\.org"></letter-bullet>](https://www.schema.org)
+- [<cite>Schema\.org</cite>](https://www.schema.org)
 	Another common structured-data format/collection.
 
-- [<letter-bullet @title="Web App Manifests | MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Web/Manifest)
+- [<cite>Web App Manifests | MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/Manifest)
 	Metadata for apps.
 
-- [<letter-bullet @bullet="D" @title="Intro to How Structured Data Markup Works"></letter-bullet>](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)
+- [<cite>Intro to How Structured Data Markup Works</cite>](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)
 	How Google uses these.
 <!-- .link-list .right style="--rows: 3" -->
 
-After *Open Graph*, the most common structures you might encounter next are probably *Schema.org*, oriented around search engine (Google) snippets—and *Web app manifests* (`manifest.json`), used by [progressive web apps](https://web.dev/progressive-web-apps/). Whether these are necessary will depend on your project! { .four-after }
+After *Open Graph*, the most common structures you might encounter next are probably *Schema.org*, oriented around search engine (Google) snippets—and *Web app manifests* (`manifest.json`), used by [progressive web apps](https://web.dev/progressive-web-apps/). Whether these are necessary will depend on your project!
 
-<aside style="--lines: 5; --emoji: '🤨'">
+<aside>
 
 Not to dig *too* hard into SEO true-believers—but you will find *a lot* of junk out there, suggesting the right combination of `<meta>` elements will yield riches. Take it all with a big grain of salt (and a [patent medicine](https://en.wikipedia.org/wiki/Patent_medicine) chaser).
 
@@ -385,7 +385,7 @@ This specifies your document’s [character encoding](https://www.w3.org/Interna
 Finally, another recent `<head>` quirk: you can specify a [`theme-color`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color), which is used by (some) browsers to tint/color their own UI *around/outside* of the page:
 <!-- .add-after .balance -->
 
-- [<letter-bullet @title="Meta Theme Color and Trickery - CSS-Tricks"></letter-bullet>](https://css-tricks.com/meta-theme-color-and-trickery/) \
+- [<cite>Meta Theme Color and Trickery - CSS-Tricks</cite>](https://css-tricks.com/meta-theme-color-and-trickery/) \
 	A really deep dive.
 <!-- .link-list .right style="--rows: 3" -->
 
