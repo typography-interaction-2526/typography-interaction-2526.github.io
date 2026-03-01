@@ -4,18 +4,16 @@
 	const week = 22
 </script>
 
-Beyond rendering directly in browsers themselves, web pages also exist in the contexts of search engines, social media, messaging, and other <nobr>sharing—</nobr>and we should give attention to how they appear in these environments, too.
+Beyond rendering directly in browsers themselves, web pages also exist in the contexts of search engines, social media, messaging, and other sharing—and we should give attention to how they appear in these environments, too.
 
 - [<letter-bullet @title="What’s in the Head? – MDN"></letter-bullet>](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-	A general overview from our friends at MDN.
+	A general overview from our friends at MDN.
 
 - [<letter-bullet @title="Metadata – web.dev"></letter-bullet>](https://web.dev/learn/html/metadata/)
-	And the folks at Google.
+	And the folks at Google.
 <!-- .link-list .right style="--rows: 3" -->
 
-We’ve gathered a handful of practices here which adjust and optimize how your site appears through these lenses, via special `<link>` and `<meta>` elements that live in your page’s `<head>`. No site is truly complete without considering these!
-
-
+We’ve gathered a handful of practices here which adjust and optimize how your site appears through these lenses, via special `<link>` and `<meta>` elements that live in your page’s `<head>`. No site is truly complete without considering these!
 
 ## Favicons and Touch Images
 
@@ -27,39 +25,37 @@ We’ve gathered a handful of practices here which adjust and optimize how yo
 </figure>
 
 <figure
-	@caption="i&thinsp;OS/Mobile Safari."
+	@caption="i&NoBreak;OS/Mobile Safari."
 	@source="favicon--safari.svg"
 	class="recto"
 	style="justify-self: end"
 	>
 </figure>
 
-The first of these is the [*favicon*](https://en.wikipedia.org/wiki/Favicon) (for *favorite icon*)—which appears in the browser’s tabs/address bar, bookmarks, history, and also on search engine entries. This is often a logo—though they don’t always translate down well in size. Sometimes it is its own thing! But it is *always* an important part of the initial impression of your site, and should be carefully considered and constructed.
+The first of these is the [*favicon*](https://en.wikipedia.org/wiki/Favicon) (for *favorite icon*)—which appears in the browser’s tabs/address bar, bookmarks, history, and also on search engine entries. This is often a logo—though they don’t always translate down well in size. Sometimes it is its own thing! But it is *always* an important part of the initial impression of your site, and should be carefully considered and constructed.
 
-- [<letter-bullet @bullet="F" @title="How to Favicon in ~~2021~~ 2025"></letter-bullet>](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs)
+- [<letter-bullet @bullet="F" @title="How to Favicon in ~~2021~~ 2025"></letter-bullet>](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs)
 	Pretty good, modern walkthrough.
 <!-- .link-list .right -->
 
+### The Humble `favicon.ico` (Safari)
 
-
-### The Humble `favicon.ico` <span class="parens">(</span>Safari<span class="parens">)</span>
-
-The base favicon format is `.ico`—from ancient, bitmapped [Windows icons](https://en.wikipedia.org/wiki/ICO_(file_format)). It is a package/<wbr>directory/<wbr>container format, meaning it can contain several, discrete, raster icon sizes: `16×16px`, `32×32px`, `64×64px`, etc. (We’ll use different elements for our other/larger needs.)
+The base favicon format is `.ico`—from ancient, bitmapped [Windows icons](https://en.wikipedia.org/wiki/ICO_(file_format)). It is a package/directory/container format, meaning it can contain several, discrete, raster icon sizes: `16×16px`, `32×32px`, `64×64px`, etc. (We’ll use different elements for our other/larger needs.)
 <!-- .add-after--2 -->
 
-**These are (unfortunately) still needed today because of several, long-standing browser quirks:**
+**These are (unfortunately) still needed today because of several, long-standing browser quirks:**
 <!-- .balance -->
 
-- Browsers still look for a `favicon.ico` at the root of a domain.
-- These are used, as a default/fallback, if none are specified in your `<head>`.
-- Safari (so namely, your i&thinsp;OS visitor) needs <nobr>them—</nobr>it *still* [doesn’t support SVG favicons](https://caniuse.com/link-icon-svg) (below).
+- Browsers still look for a `favicon.ico` at the root of a domain.
+- These are used, as a default/fallback, if none are specified in your `<head>`.
+- Safari (so namely, your i&NoBreak;OS visitor) needs them—it *still* [doesn’t support SVG favicons](https://caniuse.com/link-icon-svg) (below).
 <!-- .balance -->
 
 <aside>
 
-You’ll find a lot of scammy, <nobr>ad-ridden</nobr>, <nobr>AI-chumming</nobr>, “favicon generators” out there.
+You’ll find a lot of scammy, <nobr>ad-ridden</nobr>, <nobr>AI-chumming</nobr>, “favicon generators” out there.
 
-As of writing, we still couldn’t find a *decent* online converter that packages multiple `.ico` dimensions together. So our *manual* way is somewhat… noodly, but we think it is the cleanest, best-practice (for 2025) approach.
+As of writing, we still couldn’t find a *decent* online converter that packages multiple `.ico` dimensions together. So our *manual* way is somewhat… noodly, but we think it is the cleanest, best-practice (for 2025) approach.
 
 </aside>
 
@@ -67,34 +63,33 @@ As of writing, we still couldn’t find a *decent* online converter that pack
 
 <div class="verso add-before">
 
-You should draw each size individually, when necessary—*pixel-tuning* each version to land nicely on the pixel grid, so it is legible and crisp at its dimension. You can use Figma’s [pixel preview](https://help.figma.com/hc/en-us/articles/360041065034-Adjust-your-zoom-and-view-options#pixel-preview) (set at *1x*), toggled with <kbd>⌘&thinsp;~&thinsp;Ctrl</kbd> <kbd>Shift</kbd> <kbd>P</kbd>.
+You should draw each size individually, when necessary—*pixel-tuning* each version to land nicely on the pixel grid, so it is legible and crisp at its dimension. You can use Figma’s [pixel preview](https://help.figma.com/hc/en-us/articles/360041065034-Adjust-your-zoom-and-view-options#pixel-preview) (set at *1x*), toggled with <nobr><kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>P</kbd>.</nobr>
 
-Note that these can have transparent backgrounds, and that *HiDPI* ([*2x*/*retina*](https://tomroth.com.au/dpr/)) displays will render their device-native size—so most folks are seeing your `32px` version, these days. Export [a PNG](/topic/images/#image-formats) for each dimension, from Figma, into your project folder.
+Note that these can have transparent backgrounds, and that *HiDPI* ([*2x*/*retina*](https://tomroth.com.au/dpr/)) displays will render their device-native size—so most folks are seeing your `32px` version, these days. Export [a PNG](/topic/images/#image-formats) for each dimension, from Figma, into your project folder.
 
 </div>
 
 <figure
-	@caption="Draw an artboard/frame for each size."
+	@caption="Draw an artboard/frame for each size."
 	@source="ico.svg"
 	class="recto add-before"
 	style="align-self: start; margin-block: initial"
 	>
 </figure>
 
-These can be combined together in an `.ico` with <nobr>[ImageMagick](https://imagemagick.org)—</nobr>the appropriately named *Dark Arts* tool at the bottom of every imaging pipeline. (If you’re on a Mac, some version of this is likely already installed; PC&thinsp;s might need to [download it](https://imagemagick.org/script/download.php#windows)). You’ll run this terminal command, in your project folder:
+These can be combined together in an `.ico` with [ImageMagick](https://imagemagick.org)—the appropriately named *Dark Arts* tool at the bottom of every imaging pipeline. (If you’re on a Mac, some version of this is likely already installed; PC&NoBreak;s might need to [download it](https://imagemagick.org/script/download.php#windows)). You’ll run this terminal command, in your project folder:
 <!-- .add-before--3 .add-after .balance -->
 
 ```shell
 convert 16.png 32.png 64.png -compress zip favicon.ico
 ```
 
-You can open a [terminal](https://code.visualstudio.com/docs/terminal/basics) in VS Code (or separately, from GitHub Desktop) with <kbd>⌃&thinsp;~&thinsp;Ctrl</kbd> <kbd>`</kbd> (control + backtick/tilde).
+You can open [a terminal](https://code.visualstudio.com/docs/terminal/basics) in VS Code (or separately, from GitHub Desktop) with <nobr><kbd>⌃</kbd> <kbd>`</kbd></nobr>.
 <!-- .secondary .balance -->
-
 
 #### Linking It
 
-You should still specify/include the resulting `favicon.ico` in your `<head>`, allowing you to organize/<wbr>move it out of the root:
+You should still specify/include the resulting `favicon.ico` in your `<head>`, allowing you to organize/move it out of the root:
 <!-- .add-before .add-after .balance -->
 
 ```html
@@ -105,16 +100,15 @@ You should still specify/include the resulting `favicon.ico` in your `<head>`, a
 </head>
 ```
 
-We’ve omitting the [responsive `viewport` element](/topic/responsive/#viewport-meta-tag) here, for clarity. But your `<head>` should have this along with all your stylesheets and JS. Just the metadata, here.
+We’ve omitting the [responsive `viewport` element](/topic/responsive/#viewport-meta-tag) here, for clarity. But your `<head>` should have this along with all your stylesheets and JS. Just the metadata, here.
 <!-- .secondary .balance style="grid-column: all" -->
 
-
-**A few other (Safari) concerns:**
+**A few other (Safari) concerns:**
 <!-- .add-before--3 -->
 
-- Safari caches these *dramatically*—meaning any changes are not reflected/updated for a very long time. It’s extremely annoying.
-- Safari also doesn’t facilitate detecting [light/dark mode](/topic/responsive/#prefers-color-scheme), so your icon needs to be visible on both a light and dark toolbar/background.
-- Safari still occasionally decides to [*mat*](https://en.wikipedia.org/wiki/Mat_(picture_framing)) icons onto white that it doesn’t think have enough contrast. You can’t prevent or control this! Cool.
+- Safari caches these *dramatically*—meaning any changes are not reflected/updated for a very long time. It’s extremely annoying.
+- Safari also doesn’t facilitate detecting [light/dark mode](/topic/responsive/#prefers-color-scheme), so your icon needs to be visible on both a light and dark toolbar/background.
+- Safari still occasionally decides to [*mat*](https://en.wikipedia.org/wiki/Mat_(picture_framing)) icons onto white that it doesn’t think have enough contrast. You can’t prevent or control this! Cool.
 <!-- .balance -->
 
 <figure
@@ -125,16 +119,14 @@ We’ve omitting the [responsive `viewport` element](/topic/responsive/#viewport
 	>
 </figure>
 
-Oh, Safari. I wish I knew how to quit you.
+Oh, Safari. I wish I knew how to quit you.
 <!-- .secondary -->
 
+### Modern SVG&NoBreak;s (Chrome *et al*.)
 
+Chrome is decidedly better, here. It supports SVG&NoBreak;s for favicons, which gives us the benefit of [the vector format](/topic/images/#image-formats)—resolution independence. One file, no intermediate/terminal steps, for different display sizes and densities. It is still a good practice to draw these at `16×16px`—so you can *pixel-tune* them—then export from Figma, now as an SVG.
 
-### Modern SVG&thinsp;s <span class="parens">(</span>Chrome *et al*.<span class="parens">)</span>
-
-Chrome is decidedly better, here. It supports SVG&thinsp;s for favicons, which gives us the benefit of [the vector format](/topic/images/#image-formats)—resolution independence. One file, no intermediate/<wbr>terminal steps, for different display sizes and densities. It is still a good practice to draw these at `16×16px`—so you can *pixel-tune* them—then export from Figma, now as an SVG.
-
-You should add them to your `<head>` as a [*progressive enhancement*](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement) for Chrome, after the previous `<link>`; Safari will just ignore them:
+You should add them to your `<head>` as [a *progressive enhancement*](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement) for Chrome, after the previous `<link>`; Safari will just ignore them:
 <!-- .add-before .add-after -->
 
 ```html
@@ -148,9 +140,8 @@ You should add them to your `<head>` as a [*progressive enhancement*](https://
 
 #### Responsive Favicons
 
-SVG&thinsp;s have another benefit: since they can include <nobr>self-contained,</nobr> *internal* `<style>` <nobr>elements—we</nobr> can alter/adjust our favicon with `prefers-color-scheme` [(light/dark mode) media queries](/topic/responsive/#prefers-color-scheme)!
+SVG&NoBreak;s have another benefit: since they can include <nobr>self-contained,</nobr> *internal* `<style>` elements—we can alter/adjust our favicon with `prefers-color-scheme` [(light/dark mode) media queries](/topic/responsive/#prefers-color-scheme)!
 <!-- .add-before .add-after -->
-
 
 ```html <!-- style="grid-column: all" -->
 <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -188,20 +179,18 @@ You would export your SVG from Figma, then manually add the `<style>` and `id`, 
 
 <aside>
 
-You may or many not want to do this! It entirely depends on how you are using your favicon. We thought white-on-black was more our *brand*—not the icon form itself—and so didn’t use this method.
+You may or many not want to do this! It entirely depends on how you are using your favicon. We thought white-on-black was more our *brand*—not the icon form itself—and so didn’t use this method.
 
 </aside>
-
-
 
 ### And `apple-touch-icon`
 
 <div class="verso">
 
-When the iPhone (with Mobile Safari) came on the scene in 2007, it added its own tag for <nobr>[*webpage icons*](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)—</nobr>now commonly known as *touch* or *share* icons—visible when adding pages to your home screen and in bookmarks, frequently-visited lists, and messages.
+When the iPhone (with Mobile Safari) came on the scene in 2007, it added its own tag for [*webpage icons*](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)—now commonly known as *touch* or *share* icons—visible when adding pages to your home screen and in bookmarks, frequently-visited lists, and messages.
 <!-- .balance -->
 
-As everyone rushed to… *respond* to the iPhone, this syntax stuck and became the de facto standard—Android and Chrome use the same `rel="apple-touch-icon"` syntax, and for similar uses. In lieu of larger/<wbr>specific images (more on that below), you should think of this as your default *share image*.
+As everyone rushed to… *respond* to the iPhone, this syntax stuck and became the de facto standard—Android and Chrome use the same `rel="apple-touch-icon"` syntax, and for similar uses. In lieu of larger/specific images (more on that below), you should think of this as your default *share image*.
 
 </div>
 
@@ -229,40 +218,34 @@ This should be an opaque (no transparency) PNG, at around `512×512px`. Again, 
 
 <aside>
 
-We used the same image content as our favicon, here—but with the larger sizes, you might want to use this form more distinctly. Think of how these are used/shown differently, and interpret this for your work!
+We used the same image content as our favicon, here—but with the larger sizes, you might want to use this form more distinctly. Think of how these are used/shown differently, and interpret this for your work!
 
 </aside>
 
-
-
 ## Open Graph, Structured Data, Metadata
 
-As *sharing* contexts became more and more prevalent, other approaches were developed to add additional information around pages in these scenarios—using special `<meta>` tags in the `<head>`.
+As *sharing* contexts became more and more prevalent, other approaches were developed to add additional information around pages in these scenarios—using special `<meta>` tags in the `<head>`.
 
 - [<letter-bullet @title="The Open Graph Protocol"></letter-bullet>](https://ogp.me)
 	The original spec.
 
-- [<letter-bullet @title="Sharing Debugger - Meta for Developers"></letter-bullet>](https://developers.facebook.com/tools/debug/)
-	Check your cards without sharing.
+- [<letter-bullet @title="Sharing Debugger - Meta for Developers"></letter-bullet>](https://developers.facebook.com/tools/debug/)
+	Check your cards without sharing.
 
 - [<letter-bullet @bullet="M" @title="Hey Meta"></letter-bullet>](https://www.heymeta.com)
-	A simple, decent, non-Meta version.
+	A simple, decent, non-Meta version.
 
 - [<letter-bullet @bullet="D" @title="Iframely URL Debugger"></letter-bullet>](http://debug.iframely.com)
-	This one will show you everything.
+	This one will show you everything.
 <!-- .link-list .right style="--rows: 4" -->
 
+Here, (ironically, *pre*-Meta) Facebook led the charge—what the iPhone was for the mobile web, Facebook was for sharing. They developed the *Open Graph protocol*, which became the standard and is used now in many (usually, non-Facebook) contexts. ([*Graph*](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) here is used  with the maths meaning.)
 
-Here, (ironically, *pre*-Meta) Facebook led the charge—what the iPhone was for the mobile web, Facebook was for sharing. They developed the *Open Graph protocol*, which became the standard and is used now in many (usually, non-Facebook) contexts. ([*Graph*](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) here is used  with the maths meaning.)
-
-This type of added info, broadly, can be referred to as *structured data* or [*metadata*](https://en.wikipedia.org/wiki/Metadata)—hence Facebook’s name change!
-
-
-
+This type of added info, broadly, can be referred to as *structured data* or [*metadata*](https://en.wikipedia.org/wiki/Metadata)—hence Facebook’s name change!
 
 ### Image
 
-So beyond your *favicon* and *touch* images, you can also specify an `og:image` (*OG* for… *Open Graph*) in your `<head>`. This is often used for more *page-specific* images: the main photo for a news article, the product shot in <nobr>e-commerce,</nobr> and so on. These are generally made visible when sharing a link on Facebook, LinkedIn, Slack, Messages, etc.—where these sites/apps generate a *share card* or *preview* (also sometimes called an [*unfurl*](https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254)) for the URL.
+So beyond your *favicon* and *touch* images, you can also specify an `og:image` (*OG* for… *Open Graph*) in your `<head>`. This is often used for more *page-specific* images: the main photo for a news article, the product shot in <nobr>e-commerce,</nobr> and so on. These are generally made visible when sharing a link on Facebook, LinkedIn, Slack, Messages, etc.—where these sites/apps generate a *share card* or *preview* (also sometimes called an [*unfurl*](https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254)) for the URL.
 
 <!-- TODO COME BACK HERE -->
 
@@ -274,14 +257,14 @@ So beyond your *favicon* and *touch* images, you can also specify an `og:image`
 </figure>
 
 <figure
-	@caption="LinkedIn crops in to ~16:9."
+	@caption="LinkedIn crops in to ~16:9."
 	@source="og-image--crop.svg"
 	class="recto"
 	style="align-self: start"
 	>
 </figure>
 
-These can now be JPG&thinsp;s (for more [photographic content](/topic/images/#image-formats)), or PNGs (again, opaque). Tradition (inertia) suggests Facebook’s original `1200x630px` dimension—but every context/app handles these differently. A better, modern rule-of-thumb is an image *around* `1200px` on the long edge, at its original/best aspect-ratio. I might even do `2000px`, these (HiDPI) days!
+These can now be JPG&NoBreak;s (for more [photographic content](/topic/images/#image-formats)), or PNGs (again, opaque). Tradition (inertia) suggests Facebook’s original `1200x630px` dimension—but every context/app handles these differently. A better, modern rule-of-thumb is an image *around* `1200px` on the long edge, at its original/best aspect-ratio. I might even do `2000px`, these (HiDPI) days!
 
 These are again specified in your `<head>`, now with `<meta>` elements—importantly, with the *full, absolute* URL for the file:
 <!-- .add-after .add-before -->
@@ -297,18 +280,16 @@ These are again specified in your `<head>`, now with `<meta>` elements—importa
 	<!-- The rest of your head… -->
 </head>
 ```
-Note these allow an `alt` text for accessibility, in a separate tag.
+Note these allow an `alt` text for accessibility, in a separate tag.
 <!-- .secondary .balance -->
-
-
 
 ### Title and Description
 
-Open Graph also specifies `og:title` and `og:description` properties. However, we *already* have a `<title>` element—and there was an existing convention around descriptions—which browsers, apps, and search engines continue to use.
+Open Graph also specifies `og:title` and `og:description` properties. However, we *already* have a `<title>` element—and there was an existing convention around descriptions—which browsers, apps, and search engines continue to use.
 
-So we think including redundant `og:` versions for title/description is often unnecessary. ([SEO](https://en.wikipedia.org/wiki/Search_engine_optimization)/*snake-oil* folks might disagree.) If you are worried—or your boss tells you to—you could duplicate the tags. One reason might be to tailor different content (like your description length), for different platforms. But we don’t think it is worth it, most of the time.
+So we think including redundant `og:` versions for title/description is often unnecessary. ([SEO](https://en.wikipedia.org/wiki/Search_engine_optimization)/*snake-oil* folks might disagree.) If you are worried—or your boss tells you to—you could duplicate the tags. One reason might be to tailor different content (like your description length), for different platforms. But we don’t think it is worth it, most of the time.
 
-Again, different apps are going to display and use this information in their own way—so there are no hard rules on length, and you’ll want to check the contexts you care about. Generally, *tweet ([toot](https://joinmastodon.org)?) length* works well—so somewhere around 140 characters. And titles and descriptions should always be plain text—no HTML. You can usually use [entities](https://developer.mozilla.org/en-US/docs/Glossary/Entity) or encoded [non-breaking spaces](/topic/advanced-css/#nobr-and-nbsp), though!
+Again, different apps are going to display and use this information in their own way—so there are no hard rules on length, and you’ll want to check the contexts you care about. Generally, *tweet ([toot](https://joinmastodon.org)?) length* works well—so somewhere around 140 characters. And titles and descriptions should always be plain text—no HTML. You can usually use [entities](https://developer.mozilla.org/en-US/docs/Glossary/Entity) or encoded [non-breaking spaces](/topic/advanced-css/#nobr-and-nbsp), though!
 <!-- .add-before--3 -->
 
 We’ll add in a description, to our `<head>` stack:
@@ -317,7 +298,7 @@ We’ll add in a description, to our `<head>` stack:
 ```html <!-- style="grid-column: all" -->
 <head>
 	<title>Typography & Interaction</title>
-	<meta property="description" content="Typography & Interaction is a year-long, two-semester course in the MPS Communication Design program at Parsons / The New School. The class will provide a rigorous foundation of typographic and interaction principles in the context of digital design.">
+	<meta property="description" content="Typography & Interaction is a year-long, two-semester course in the MPS Communication Design program at Parsons / The New School. The class will provide a rigorous foundation of typographic and interaction principles in the context of digital design.">
 	<link href="assets/favicon.ico" rel="icon" sizes="any">
 	<link href="assets/favicon.svg" rel="icon" type="image/svg+xml">
 	<link href="assets/touch.png"  rel="apple-touch-icon">
@@ -333,22 +314,19 @@ We’ll add in a description, to our `<head>` stack:
 
 <aside>
 
-Google makes its *snippet* from your <nobr>`description`—</nobr>but it might also show other text there, based on your search. It also might decide to show your images, or not! Ultimately, you can only *suggest* these things—with all the metadata, it is up to the other side!
+Google makes its *snippet* from your `description`—but it might also show other text there, based on your search. It also might decide to show your images, or not! Ultimately, you can only *suggest* these things—with all the metadata, it is up to the other side!
 
 </aside>
-
-
-
 
 ### Audio and Video
 
 <div class="verso balance">
 
-Some sharing contexts even let you play audio or video directly, in situ, from a *share card*. This might be useful for sites oriented around media, like *Spotify* or *YouTube*—but keep in mind the user is then *not* visiting the pages themselves, which you might prefer.
+Some sharing contexts even let you play audio or video directly, in situ, from a *share card*. This might be useful for sites oriented around media, like *Spotify* or *YouTube*—but keep in mind the user is then *not* visiting the pages themselves, which you might prefer.
 
-These are specified much like images, with the `og:audio` and `og:video` properties. There are [extra metadata properties](https://ogp.me/#structured) associated with the different types.
+These are specified much like images, with the `og:audio` and `og:video` properties. There are [extra metadata properties](https://ogp.me/#structured) associated with the different types.
 
-Conceptually, do you want your shared URL to function only as a link? Or somewhat <em>as</em> the thing itself?
+Conceptually, do you want your shared URL to function only as a link? Or somewhat *as* the thing itself?
 <!-- .add-before--3 .balance -->
 
 </div>
@@ -361,11 +339,9 @@ Conceptually, do you want your shared URL to function only as a link? Or somew
 	>
 </figure>
 
-
-
 ### Schema and Web App Manifests
 
-Beyond this, there is a (very, very) [long tail](https://en.wikipedia.org/wiki/Long_tail) of *metadata*/<wbr>*structured-data* uses. Much of it will depend on the nature of your project/work, and there will be sub-conventions within conventions.
+Beyond this, there is a (very, very) [long tail](https://en.wikipedia.org/wiki/Long_tail) of *metadata*/*structured-data* uses. Much of it will depend on the nature of your project/work, and there will be sub-conventions within conventions.
 
 - [<letter-bullet @title="Schema\.org"></letter-bullet>](https://www.schema.org)
 	Another common structured-data format/collection.
@@ -377,23 +353,21 @@ Beyond this, there is a (very, very) [long tail](https://en.wikipedia.org/wiki/
 	How Google uses these.
 <!-- .link-list .right style="--rows: 3" -->
 
-After *Open Graph*, the most common structures you might encounter next are probably *Schema.org*, oriented around search engine (Google) snippets—and *Web app manifests* (`manifest.json`), used by [progressive web apps](https://web.dev/progressive-web-apps/). Whether these are necessary will depend on your project! { .four-after }
+After *Open Graph*, the most common structures you might encounter next are probably *Schema.org*, oriented around search engine (Google) snippets—and *Web app manifests* (`manifest.json`), used by [progressive web apps](https://web.dev/progressive-web-apps/). Whether these are necessary will depend on your project! { .four-after }
 
 <aside style="--lines: 5; --emoji: '🤨'">
 
-Not to dig *too* hard into SEO true-believers—but you will find *a lot* of junk out there, suggesting the right combination of `<meta>` elements will yield riches. Take it all with a big grain of salt (and a [patent medicine](https://en.wikipedia.org/wiki/Patent_medicine) chaser).
+Not to dig *too* hard into SEO true-believers—but you will find *a lot* of junk out there, suggesting the right combination of `<meta>` elements will yield riches. Take it all with a big grain of salt (and a [patent medicine](https://en.wikipedia.org/wiki/Patent_medicine) chaser).
 
-You can read up on [what Google actually suggests](https://developers.google.com/search/docs/fundamentals/seo-starter-guide), but otherwise just focus on your content and semantics—your time (and someone’s money) is much better spent there.
+You can read up on [what Google actually suggests](https://developers.google.com/search/docs/fundamentals/seo-starter-guide), but otherwise just focus on your content and semantics—your time (and someone’s money) is much better spent there.
 
 </aside>
-
-
 
 ## Other Things for Your `<head>`
 
 ### `charset`
 
-This usually isn’t *explicitly* needed these days—because browsers assume/default to it—but you might have seen it in our examples and on other sites:
+This usually isn’t *explicitly* needed these days—because browsers assume/default to it—but you might have seen it in our examples and on other sites:
 <!-- .add-after .balance -->
 
 ```html
@@ -403,18 +377,16 @@ This usually isn’t *explicitly* needed these days—because browsers assume/de
 </head>
 ```
 
-This specifies your document’s [character encoding](https://www.w3.org/International/articles/definitions-characters/) as [*<nobr>UTF-8</nobr>*](https://en.wikipedia.org/wiki/UTF-8), a superset of basic [ASCII](https://en.wikipedia.org/wiki/ASCII). Long story (very) short—this allows you to use encoded non-latin characters (and emoji 👋) directly in your HTML! To be thorough/explicit (or if you are seeing weird character junk), you can include this tag.
+This specifies your document’s [character encoding](https://www.w3.org/International/articles/definitions-characters/) as [*<nobr>UTF-8</nobr>*](https://en.wikipedia.org/wiki/UTF-8), a superset of basic [ASCII](https://en.wikipedia.org/wiki/ASCII). Long story (very) short—this allows you to use encoded non-latin characters (and emoji 👋) directly in your HTML! To be thorough/explicit (or if you are seeing weird character junk), you can include this tag.
 <!-- .add-before .balance -->
-
-
 
 ### `theme-color`
 
-Finally, another recent `<head>` quirk: you can specify a [`theme-color`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color), which is used by (some) browsers to tint/color their own UI *around/<wbr>outside* of the page:
+Finally, another recent `<head>` quirk: you can specify a [`theme-color`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color), which is used by (some) browsers to tint/color their own UI *around/outside* of the page:
 <!-- .add-after .balance -->
 
 - [<letter-bullet @title="Meta Theme Color and Trickery - CSS-Tricks"></letter-bullet>](https://css-tricks.com/meta-theme-color-and-trickery/) \
-	A really deep dive.
+	A really deep dive.
 <!-- .link-list .right style="--rows: 3" -->
 
 ```html
@@ -424,10 +396,10 @@ Finally, another recent `<head>` quirk: you can specify a [`theme-color`](https
 </head>
 ```
 
-This changes with pretty much *every* &thinsp;OS release—but as of writing, usually only shows up on Mobile Safari and Mobile Chrome. (Desktop Safari default settings [have it turned off](https://useyourloaf.com/blog/safari-15-theme-color/); Desktop Chrome has never shown it.)
+This changes with pretty much *every* i&NoBreak;OS release—but as of writing, usually only shows up on Mobile Safari and Mobile Chrome. (Desktop Safari default settings [have it turned off](https://useyourloaf.com/blog/safari-15-theme-color/); Desktop Chrome has never shown it.)
 <!-- .add-before--3 -->
 
-Safari tries to infer this color from your `<body>` background (and choses a contrasting UI text color)—but with complicated pages it might guess these wrong. You might also just want to adjust it, based on your design.
+Safari tries to infer this color from your `<body>` background (and choses a contrasting UI text color)—but with complicated pages it might guess these wrong. You might also just want to adjust it, based on your design.
 
 <figure
 	@caption="Safari correctly guessed black for us."
@@ -442,7 +414,5 @@ Safari tries to infer this color from your `<body>` background (and choses a c
 	class="recto"
 	>
 </figure>
-
-
 
 <!-- TODO: rel="preload" example? -->
