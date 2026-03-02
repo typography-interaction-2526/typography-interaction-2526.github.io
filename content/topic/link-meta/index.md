@@ -11,7 +11,7 @@ Beyond rendering directly in browsers themselves, web pages also exist in the co
 
 - [<cite>Metadata – web.dev</cite>](https://web.dev/learn/html/metadata/)
 	And the folks at Google.
-<!-- .link-list .right style="--rows: 3" -->
+<!-- .right .rows--2 -->
 
 We’ve gathered a handful of practices here which adjust and optimize how your site appears through these lenses, via special `<link>` and `<meta>` elements that live in your page’s `<head>`. No site is truly complete without considering these!
 
@@ -36,12 +36,12 @@ The first of these is the [*favicon*](https://en.wikipedia.org/wiki/Favicon) (fo
 
 - [<cite>How to Favicon in ~~2021~~ 2026</cite>](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs)
 	Pretty good, modern walkthrough.
-<!-- .link-list .right -->
+<!-- .right -->
 
 ### The Humble `favicon.ico` (Safari)
 
 The base favicon format is `.ico`—from ancient, bitmapped [Windows icons](https://en.wikipedia.org/wiki/ICO_(file_format)). It is a package/directory/container format, meaning it can contain several, discrete, raster icon sizes: `16×16px`, `32×32px`, `64×64px`, etc. (We’ll use different elements for our other/larger needs.)
-<!-- .add-after--2 -->
+<!-- .after--2 -->
 
 **These are (unfortunately) still needed today because of several, long-standing browser quirks:**
 <!-- .balance -->
@@ -53,15 +53,17 @@ The base favicon format is `.ico`—from ancient, bitmapped [Windows icons](http
 
 <aside>
 
-You’ll find a lot of scammy, <nobr>ad-ridden</nobr>, <nobr>AI-chumming</nobr>, “favicon generators” out there.
+<mark>Warning: this is a trashy internet zone</mark>
 
-As of writing, we still couldn’t find a *decent* online converter that packages multiple `.ico` dimensions together. So our *manual* way is somewhat… noodly, but we think it is the cleanest, best-practice (for 2026) approach.
+You’ll find a lot of really scammy, <nobr>ad-ridden</nobr>, <nobr>AI-[chumming](https://en.wikipedia.org/wiki/Chumming)</nobr>, “favicon generator” sites out there!
+
+As of writing, we still can’t find a decent online converter that combines/packages multiple `.ico` dimensions together. So our *manual* way is somewhat… noodly, but we think it is the cleanest, best-practice (for 2026) approach.
 
 </aside>
 
-#### Making It
+#### Making It <!-- .before--3 -->
 
-<div class="verso add-before">
+<div class="verso before">
 
 You should draw each size individually, when necessary—*pixel-tuning* each version to land nicely on the pixel grid, so it is legible and crisp at its dimension. You can use Figma’s [pixel preview](https://help.figma.com/hc/en-us/articles/360041065034-Adjust-your-zoom-and-view-options#pixel-preview) (set at *1x*), toggled with <nobr><kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>P</kbd>.</nobr>
 
@@ -72,25 +74,25 @@ Note that these can have transparent backgrounds, and that *HiDPI* ([*2x*/*retin
 <figure
 	@caption="Draw an artboard/frame for each size."
 	@source="ico.svg"
-	class="recto add-before"
+	class="recto before"
 	style="align-self: start; margin-block: initial"
 	>
 </figure>
 
 These can be combined together in an `.ico` with [ImageMagick](https://imagemagick.org)—the appropriately named *Dark Arts* tool at the bottom of every imaging pipeline. (If you’re on a Mac, some version of this is likely already installed; PC&NoBreak;s might need to [download it](https://imagemagick.org/script/download.php#windows)). You’ll run this terminal command, in your project folder:
-<!-- .add-before--3 .add-after .balance -->
+<!-- .before--3 .after .balance -->
 
 ```shell
 convert 16.png 32.png 64.png -compress zip favicon.ico
 ```
 
 You can open [a terminal](https://code.visualstudio.com/docs/terminal/basics) in VS Code (or separately, from GitHub Desktop) with <nobr><kbd>⌃</kbd> <kbd>`</kbd></nobr>.
-<!-- .secondary .balance -->
+<!-- .note -->
 
 #### Linking It
 
 You should still specify/include the resulting `favicon.ico` in your `<head>`, allowing you to organize/move it out of the root:
-<!-- .add-before .add-after .balance -->
+<!-- .before .after .balance -->
 
 ```html
 <head>
@@ -101,10 +103,10 @@ You should still specify/include the resulting `favicon.ico` in your `<head>`, a
 ```
 
 We’ve omitting the [responsive `viewport` element](/topic/responsive/#viewport-meta-tag) here, for clarity. But your `<head>` should have this along with all your stylesheets and JS. Just the metadata, here.
-<!-- .secondary .balance style="grid-column: all" -->
+<!-- .note -->
 
 **A few other (Safari) concerns:**
-<!-- .add-before--3 -->
+<!-- .before--3 -->
 
 - Safari caches these *dramatically*—meaning any changes are not reflected/updated for a very long time. It’s extremely annoying.
 - Safari also doesn’t facilitate detecting [light/dark mode](/topic/responsive/#prefers-color-scheme), so your icon needs to be visible on both a light and dark toolbar/background.
@@ -120,14 +122,14 @@ We’ve omitting the [responsive `viewport` element](/topic/responsive/#viewport
 </figure>
 
 Oh, Safari. I wish I knew how to quit you.
-<!-- .secondary -->
+<!-- .note -->
 
 ### Modern SVG&NoBreak;<small>s</small> (Chrome *et al.*)
 
 Chrome is decidedly better, here. It supports SVG&NoBreak;s for favicons, which gives us the benefit of [the vector format](/topic/images/#image-formats)—resolution independence. One file, no intermediate/terminal steps, for different display sizes and densities. It is still a good practice to draw these at `16×16px`—so you can *pixel-tune* them—then export from Figma, now as an SVG.
 
 You should add them to your `<head>` as [a *progressive enhancement*](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement) for Chrome, after the previous `<link>`; Safari will just ignore them:
-<!-- .add-before .add-after -->
+<!-- .before .after -->
 
 ```html
 <head>
@@ -141,7 +143,7 @@ You should add them to your `<head>` as [a *progressive enhancement*](https://de
 #### Responsive Favicons
 
 SVG&NoBreak;s have another benefit: since they can include <nobr>self-contained,</nobr> *internal* `<style>` elements—we can alter/adjust our favicon with `prefers-color-scheme` [(light/dark mode) media queries](/topic/responsive/#prefers-color-scheme)!
-<!-- .add-before .add-after -->
+<!-- .before .after -->
 
 ```html <!-- style="grid-column: all" -->
 <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -161,7 +163,7 @@ SVG&NoBreak;s have another benefit: since they can include <nobr>self-contained,
 ```
 
 You would export your SVG from Figma, then manually add the `<style>` and `id`, in VS Code.
-<!-- .secondary .balance -->
+<!-- .note -->
 
 <figure
 	@caption="Dark mode."
@@ -178,6 +180,8 @@ You would export your SVG from Figma, then manually add the `<style>` and `id`, 
 </figure>
 
 <aside>
+
+<mark></mark>
 
 You may or many not want to do this! It entirely depends on how you are using your favicon. We thought white-on-black was more our *brand*—not the icon form itself—and so didn’t use this method.
 
@@ -201,10 +205,11 @@ As everyone rushed to… *respond* to the iPhone, this syntax stuck and became t
 	style="align-self: start; margin-block: initial"
 	>
 </figure>
+
 <!-- TODO THIS WHEN IT UPDATES -->
 
 This should be an opaque (no transparency) PNG, at around `512×512px`. Again, add it in your `<head>`, below the others:
-<!-- .add-before--3 .balance -->
+<!-- .before--3 .balance -->
 
 ```html
 <head>
@@ -237,7 +242,7 @@ As *sharing* contexts became more and more prevalent, other approaches were deve
 
 - [<cite>Iframely URL Debugger</cite>](http://debug.iframely.com)
 	This one will show you everything.
-<!-- .link-list .right style="--rows: 4" -->
+<!-- .right .rows--4 -->
 
 Here, (ironically, *pre*-Meta) Facebook led the charge—what the iPhone was for the mobile web, Facebook was for sharing. They developed the *Open Graph protocol*, which became the standard and is used now in many (usually, non-Facebook) contexts. ([*Graph*](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) here is used  with the maths meaning.)
 
@@ -267,7 +272,7 @@ So beyond your *favicon* and *touch* images, you can also specify an `og:image`
 These can now be JPG&NoBreak;s (for more [photographic content](/topic/images/#image-formats)), or PNGs (again, opaque). Tradition (inertia) suggests Facebook’s original `1200x630px` dimension—but every context/app handles these differently. A better, modern rule-of-thumb is an image *around* `1200px` on the long edge, at its original/best aspect-ratio. I might even do `2000px`, these (HiDPI) days!
 
 These are again specified in your `<head>`, now with `<meta>` elements—importantly, with the *full, absolute* URL for the file:
-<!-- .add-after .add-before -->
+<!-- .after .before -->
 
 ```html <!-- style="grid-column: all" -->
 <head>
@@ -281,7 +286,7 @@ These are again specified in your `<head>`, now with `<meta>` elements—importa
 </head>
 ```
 Note these allow an `alt` text for accessibility, in a separate tag.
-<!-- .secondary .balance -->
+<!-- .note -->
 
 ### Title and Description
 
@@ -290,10 +295,10 @@ Open Graph also specifies `og:title` and `og:description` properties. However, w
 So we think including redundant `og:` versions for title/description is often unnecessary. ([SEO](https://en.wikipedia.org/wiki/Search_engine_optimization)/*snake-oil* folks might disagree.) If you are worried—or your boss tells you to—you could duplicate the tags. One reason might be to tailor different content (like your description length), for different platforms. But we don’t think it is worth it, most of the time.
 
 Again, different apps are going to display and use this information in their own way—so there are no hard rules on length, and you’ll want to check the contexts you care about. Generally, *tweet ([toot](https://joinmastodon.org)?) length* works well—so somewhere around 140 characters. And titles and descriptions should always be plain text—no HTML. You can usually use [entities](https://developer.mozilla.org/en-US/docs/Glossary/Entity) or encoded [non-breaking spaces](/topic/advanced-css/#nobr-and-nbsp), though!
-<!-- .add-before--3 -->
+<!-- .before--3 -->
 
 We’ll add in a description, to our `<head>` stack:
-<!-- .add-before .add-after -->
+<!-- .before .after -->
 
 ```html <!-- style="grid-column: all" -->
 <head>
@@ -327,7 +332,7 @@ Some sharing contexts even let you play audio or video directly, in situ, from a
 These are specified much like images, with the `og:audio` and `og:video` properties. There are [extra metadata properties](https://ogp.me/#structured) associated with the different types.
 
 Conceptually, do you want your shared URL to function only as a link? Or somewhat *as* the thing itself?
-<!-- .add-before--3 .balance -->
+<!-- .before--3 .balance -->
 
 </div>
 
@@ -351,7 +356,7 @@ Beyond this, there is a (very, very) [long tail](https://en.wikipedia.org/wiki/L
 
 - [<cite>Intro to How Structured Data Markup Works</cite>](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)
 	How Google uses these.
-<!-- .link-list .right style="--rows: 3" -->
+<!-- .right .rows--3 -->
 
 After *Open Graph*, the most common structures you might encounter next are probably *Schema.org*, oriented around search engine (Google) snippets—and *Web app manifests* (`manifest.json`), used by [progressive web apps](https://web.dev/progressive-web-apps/). Whether these are necessary will depend on your project!
 
@@ -368,7 +373,7 @@ You can read up on [what Google actually suggests](https://developers.google.co
 ### `charset`
 
 This usually isn’t *explicitly* needed these days—because browsers assume/default to it—but you might have seen it in our examples and on other sites:
-<!-- .add-after .balance -->
+<!-- .after .balance -->
 
 ```html
 <head>
@@ -378,16 +383,16 @@ This usually isn’t *explicitly* needed these days—because browsers assume/de
 ```
 
 This specifies your document’s [character encoding](https://www.w3.org/International/articles/definitions-characters/) as [*<nobr>UTF-8</nobr>*](https://en.wikipedia.org/wiki/UTF-8), a superset of basic [ASCII](https://en.wikipedia.org/wiki/ASCII). Long story (very) short—this allows you to use encoded non-latin characters (and emoji 👋) directly in your HTML! To be thorough/explicit (or if you are seeing weird character junk), you can include this tag.
-<!-- .add-before .balance -->
+<!-- .before .balance -->
 
 ### `theme-color`
 
 Finally, another recent `<head>` quirk: you can specify a [`theme-color`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color), which is used by (some) browsers to tint/color their own UI *around/outside* of the page:
-<!-- .add-after .balance -->
+<!-- .after .balance -->
 
 - [<cite>Meta Theme Color and Trickery - CSS-Tricks</cite>](https://css-tricks.com/meta-theme-color-and-trickery/) \
 	A really deep dive.
-<!-- .link-list .right style="--rows: 3" -->
+<!-- .right .rows--3 -->
 
 ```html
 <head>
@@ -397,7 +402,7 @@ Finally, another recent `<head>` quirk: you can specify a [`theme-color`](https:
 ```
 
 This changes with pretty much *every* i&NoBreak;OS release—but as of writing, usually only shows up on Mobile Safari and Mobile Chrome. (Desktop Safari default settings [have it turned off](https://useyourloaf.com/blog/safari-15-theme-color/); Desktop Chrome has never shown it.)
-<!-- .add-before--3 -->
+<!-- .before--3 -->
 
 Safari tries to infer this color from your `<body>` background (and choses a contrasting UI text color)—but with complicated pages it might guess these wrong. You might also just want to adjust it, based on your design.
 
