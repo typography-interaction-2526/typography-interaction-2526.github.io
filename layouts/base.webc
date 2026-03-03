@@ -27,6 +27,10 @@
 			:href="`/assets/icons/touch${unitNumber ? '--' + unitNumber : ''}.png`"
 			rel="apple-touch-icon"
 		>
+		<meta
+			:content="`${$data.pkg.homepage}/assets/icons/meta.png`"
+			property="og:image"
+		>
 		<template
 			webc:import="blocks/styles.webc"
 			webc:nokeep
