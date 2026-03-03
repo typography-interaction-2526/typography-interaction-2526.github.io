@@ -4,7 +4,7 @@
 	const week = 22
 </script>
 
-Beyond rendering directly in browsers themselves, web pages also exist in the contexts of search engines, social media, messaging, and other sharing—and we should give attention to how they appear in these environments, too.
+Beyond rendering directly in browsers themselves, web pages also exist in the contexts of search engines, social media, messaging, and other sharing—and as *thorough* designers, we should give attention to how they appear in these environments, too.
 
 - [<cite>What’s in the Head? – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
 	A general overview from our friends at MDN.
@@ -13,7 +13,7 @@ Beyond rendering directly in browsers themselves, web pages also exist in the co
 	And the folks at Google.
 <!-- .right .rows--2 -->
 
-We’ve gathered a handful of practices here which adjust and optimize how your site appears through these lenses, via special `<link>` and `<meta>` elements that live in your page’s `<head>`. No site is truly complete without considering these!
+We’ve gathered a handful of practices here which adjust and optimize how your site appears through these lenses, via special `<link>` and `<meta>` elements that live in your page’s `<head>`. No site is truly complete without considering these! These are the “bow” to “wrap” your work.
 
 ## Favicons and Touch Images
 
@@ -28,44 +28,45 @@ We’ve gathered a handful of practices here which adjust and optimize how your 
 	@caption="i&NoBreak;OS/Mobile Safari."
 	@source="favicon--safari.svg"
 	class="recto"
-	style="justify-self: end"
 	>
 </figure>
 
-The first of these is the [*favicon*](https://en.wikipedia.org/wiki/Favicon) (for *favorite icon*)—which appears in the browser’s tabs/address bar, bookmarks, history, and also on search engine entries. This is often a logo—though they don’t always translate down well in size. Sometimes it is its own thing! But it is *always* an important part of the initial impression of your site, and should be carefully considered and constructed.
+The first of these is the [*favicon*](https://en.wikipedia.org/wiki/Favicon) (a portmanteau for *favorite icon*)—which appears in the browser’s tabs/address bar, bookmarks, history, and also on search engine entries. This is often a logo—though they don’t always translate down well in size. Sometimes it is its own thing! But it is *always* an important part of the initial impression of your site, and should be carefully considered and constructed.
 
 - [<cite>How to Favicon in ~~2021~~ 2026</cite>](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs)
 	Pretty good, modern walkthrough.
 <!-- .right -->
 
-### The Humble `favicon.ico` (Safari)
+### The Humble `favicon.ico`
 
-The base favicon format is `.ico`—from ancient, bitmapped [Windows icons](https://en.wikipedia.org/wiki/ICO_(file_format)). It is a package/directory/container format, meaning it can contain several, discrete, raster icon sizes: `16×16px`, `32×32px`, `64×64px`, etc. (We’ll use different elements for our other/larger needs.)
-<!-- .after--2 -->
+The base favicon format is `.ico`—from ancient, bitmapped [Windows icons](https://en.wikipedia.org/wiki/ICO_(file_format)). It is a package/directory/container format, meaning it can contain several, discrete, [raster](https://en.wikipedia.org/wiki/Raster_graphics) icon sizes: `16×16px`, `32×32px`, `64×64px`, etc.
 
-**These are (unfortunately) still needed today because of several, long-standing browser quirks:**
+We’ll use different elements, later, for our other/larger needs!
+<!-- .note .after--3 -->
+
+**These are still needed/used today because of several, long-standing browser quirks:**
 <!-- .balance -->
 
-- Browsers still look for a `favicon.ico` at the root of a domain.
-- These are used, as a default/fallback, if none are specified in your `<head>`.
-- Safari (so namely, your i&NoBreak;OS visitor) needs them—it *still* [doesn’t support SVG favicons](https://caniuse.com/link-icon-svg) (below).
+- Browsers *still* look for a `favicon.ico` at the root of a domain! You may have noticed [console errors](/topic/dev-tools/#console).
+- These are used as a default/fallback option, if nothing is manually specified in your page `<head>`.
+- Safari (so namely, your i&NoBreak;OS visitors) [only recently added support](https://caniuse.com/link-icon-svg) for the better SVG favicons, detailed [below](#modern-svg-s-chrome-et-al).
 <!-- .balance -->
 
 <aside>
 
-<mark>Warning: this is a trashy internet zone</mark>
+<mark>Caution: entering trashy internet zone</mark>
 
-You’ll find a lot of really scammy, <nobr>ad-ridden</nobr>, <nobr>AI-[chumming](https://en.wikipedia.org/wiki/Chumming)</nobr>, “favicon generator” sites out there!
+You’ll find a lot of really bad, scammy, <nobr>ad-ridden</nobr>, <nobr>AI-[chumming](https://en.wikipedia.org/wiki/Chumming)</nobr>, “favicon generator” sites out there!
 
-As of writing, we still can’t find a decent online converter that combines/packages multiple `.ico` dimensions together. So our *manual* way is somewhat… noodly, but we think it is the cleanest, best-practice (for 2026) approach.
+As of writing, we still can’t find a decent online converter that combines/packages multiple `.ico` dimensions together. So our *manual* way is somewhat noodly, but we think it is the cleanest, best-practice approach.
 
 </aside>
 
-#### Making It <!-- .before--3 -->
+#### 1. Drawing It <!-- .before--3 -->
 
 <div class="verso before">
 
-You should draw each size individually, when necessary—*pixel-tuning* each version to land nicely on the pixel grid, so it is legible and crisp at its dimension. You can use Figma’s [pixel preview](https://help.figma.com/hc/en-us/articles/360041065034-Adjust-your-zoom-and-view-options#pixel-preview) (set at *1x*), toggled with <nobr><kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>P</kbd>.</nobr>
+You should draw each size individually, when necessary—*pixel-tuning*/[nudging](https://help.figma.com/hc/en-us/articles/4404575206295-Set-small-and-big-nudge-values) each version to land nicely on the pixel grid, so it is legible and crisp at its dimension. You can use Figma’s [pixel preview](https://help.figma.com/hc/en-us/articles/360041065034-Adjust-your-zoom-and-view-options#pixel-preview) (set at *1x*), toggled with <nobr><kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>P</kbd>.</nobr>
 
 Note that these can have transparent backgrounds, and that *HiDPI* ([*2x*/*retina*](https://tomroth.com.au/dpr/)) displays will render their device-native size—so most folks are seeing your `32px` version, these days. Export [a PNG](/topic/images/#image-formats) for each dimension, from Figma, into your project folder.
 
@@ -79,24 +80,29 @@ Note that these can have transparent backgrounds, and that *HiDPI* ([*2x*/*retin
 	>
 </figure>
 
-These can be combined together in an `.ico` with [ImageMagick](https://imagemagick.org)—the appropriately named *Dark Arts* tool at the bottom of every imaging pipeline. (If you’re on a Mac, some version of this is likely already installed; PC&NoBreak;s might need to [download it](https://imagemagick.org/script/download.php#windows)). You’ll run this terminal command, in your project folder:
-<!-- .before--3 .after .balance -->
+#### 2. Combining It <!-- .before--3 -->
+
+These separate files can then be combined together in an `.ico` with [ImageMagick](https://imagemagick.org)—the appropriately named *Dark Arts* tool at the bottom of nearly every online imaging pipeline.
+<!-- .before .balance -->
+
+On a Mac, you’ll use your [Terminal](https://support.apple.com/guide/terminal/welcome/mac) to first to install [Homebrew](https://brew.sh/), and then use that to [install ImageMagick](https://imagemagick.org/script/download.php#macos). You can then run this command, in your project folder, which will yield a single `favicon.ico` file:
+<!-- .after .balance -->
 
 ```shell
-convert 16.png 32.png 64.png -compress zip favicon.ico
+magick 16.png 32.png 64.png favicon.ico
 ```
 
-You can open [a terminal](https://code.visualstudio.com/docs/terminal/basics) in VS Code (or separately, from GitHub Desktop) with <nobr><kbd>⌃</kbd> <kbd>`</kbd></nobr>.
+You can open [a terminal](https://code.visualstudio.com/docs/terminal/basics) from VS Code with <nobr><kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>C</kbd></nobr>&thinsp;, or from GitHub Desktop with <nobr><kbd>⌃</kbd> <kbd>`</kbd></nobr>&thinsp;.
 <!-- .note -->
 
-#### Linking It
+#### 3. Linking It <!-- .before--3 -->
 
-You should still specify/include the resulting `favicon.ico` in your `<head>`, allowing you to organize/move it out of the root:
+Even though browsers still look for it in the root, you can instead specify/include the resulting `favicon.ico` in your `<head>`, allowing you to organize/move it elsewhere:
 <!-- .before .after .balance -->
 
 ```html
 <head>
-	<title>Typography and Interaction</title>
+	<title>Typography & Interaction</title>
 	<link href="assets/favicon.ico" rel="icon" sizes="any">
 	<!-- The rest of your head… -->
 </head>
@@ -105,12 +111,12 @@ You should still specify/include the resulting `favicon.ico` in your `<head>`, a
 We’ve omitting the [responsive `viewport` element](/topic/responsive/#viewport-meta-tag) here, for clarity. But your `<head>` should have this along with all your stylesheets and JS. Just the metadata, here.
 <!-- .note -->
 
-**A few other (Safari) concerns:**
+**A few other (…Safari) concerns:**
 <!-- .before--3 -->
 
-- Safari caches these *dramatically*—meaning any changes are not reflected/updated for a very long time. It’s extremely annoying.
-- Safari also doesn’t facilitate detecting [light/dark mode](/topic/responsive/#prefers-color-scheme), so your icon needs to be visible on both a light and dark toolbar/background.
-- Safari still occasionally decides to [*mat*](https://en.wikipedia.org/wiki/Mat_(picture_framing)) icons onto white that it doesn’t think have enough contrast. You can’t prevent or control this! Cool.
+- Safari caches these *dramatically*—meaning any changes are not reflected/updated for a very long time. [It](https://bugs.webkit.org/show_bug.cgi?id=95979) [is](https://bugs.webkit.org/show_bug.cgi?id=75877#c1) [extremely](https://bugs.webkit.org/show_bug.cgi?id=266426) [annoying](https://www.reddit.com/r/MacOS/comments/1bfhhqg/solved_fix_browser_tab_icons_aka_favicons_cache/).
+- It also doesn’t facilitate detecting [light/dark mode](/topic/responsive/#prefers-color-scheme), so your icon needs to be visible on both a light and dark toolbar/background.
+- It still occasionally decides to [*mat*](https://en.wikipedia.org/wiki/Mat_(picture_framing)) some icons that it doesn’t think have enough contrast, adding a white border. You can’t prevent or control this! Cool.
 <!-- .balance -->
 
 <figure
@@ -121,26 +127,24 @@ We’ve omitting the [responsive `viewport` element](/topic/responsive/#viewport
 	>
 </figure>
 
-Oh, Safari. I wish I knew how to quit you.
-<!-- .note -->
+### Modern SVG&NoBreak;<small>s</small>
 
-### Modern SVG&NoBreak;<small>s</small> (Chrome *et al.*)
+Modern browsers now [support SVG&NoBreak;s](https://caniuse.com/link-icon-svg) for favicons, which gives us the benefit of [the vector format](/topic/images/#image-formats)—resolution independence. One file, no intermediate/terminal steps, for different display sizes and densities. It is still a good practice to draw these at `16×16px`—so you can *pixel-tune* them—then export from Figma, now as an SVG.
+<!-- .balance -->
 
-Chrome is decidedly better, here. It supports SVG&NoBreak;s for favicons, which gives us the benefit of [the vector format](/topic/images/#image-formats)—resolution independence. One file, no intermediate/terminal steps, for different display sizes and densities. It is still a good practice to draw these at `16×16px`—so you can *pixel-tune* them—then export from Figma, now as an SVG.
-
-You should add them to your `<head>` as [a *progressive enhancement*](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement) for Chrome, after the previous `<link>`; Safari will just ignore them:
+You should add them to your `<head>` as [a *progressive enhancement*](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement) for Chrome, after the previous `<link>`; older browsers will just ignore them:
 <!-- .before .after -->
 
 ```html
 <head>
-	<title>Typography and Interaction</title>
+	<title>Typography & Interaction</title>
 	<link href="assets/favicon.ico" rel="icon" sizes="any">
 	<link href="assets/favicon.svg" rel="icon" type="image/svg+xml">
 	<!-- The rest of your head… -->
 </head>
 ```
 
-#### Responsive Favicons
+#### Responsive Favicons <!-- .before--3 -->
 
 SVG&NoBreak;s have another benefit: since they can include <nobr>self-contained,</nobr> *internal* `<style>` elements—we can alter/adjust our favicon with `prefers-color-scheme` [(light/dark mode) media queries](/topic/responsive/#prefers-color-scheme)!
 <!-- .before .after -->
@@ -213,7 +217,7 @@ This should be an opaque (no transparency) PNG, at around `512×512px`. Again, 
 
 ```html
 <head>
-	<title>Typography and Interaction</title>
+	<title>Typography & Interaction</title>
 	<link href="assets/favicon.ico" rel="icon" sizes="any">
 	<link href="assets/favicon.svg" rel="icon" type="image/svg+xml">
 	<link href="assets/touch.png"  rel="apple-touch-icon">
