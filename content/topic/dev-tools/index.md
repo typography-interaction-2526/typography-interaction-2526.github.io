@@ -31,7 +31,7 @@ You’ll often hear people (Michael) call it the *Web Inspector*, or just *The 
 In Chrome, you can bring them up by right-clicking on any element/part of a page and clicking <samp>Inspect</samp>&#x202F;:
 
 You can also hit <nobr><kbd>⌘</kbd> <kbd>⌥</kbd> <kbd>I</kbd></nobr>&#x202F;.
-<!-- .secondary -->
+<!-- .note -->
 
 </div>
 
