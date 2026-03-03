@@ -313,7 +313,7 @@ We’ll first be looking for strong concepts—not limited to or by existing con
 
 The Spring semester, and the entire course, end with the Project *Index*, which will be due on May 15.
 
-Students will build a landing page for themselves and their *Typography & Interaction* projects, providing links and context for them. They will update this with their finished projects, and refine it to deliberately and uniquely represent themselves and their work online.
+Students will build a landing page for themselves and their <em @text="course.title"></em> projects, providing links and context for them. They will update this with their finished projects, and refine it to deliberately and uniquely represent themselves and their work online.
 
 We’ll be looking for self-expression within the their now-familiar materials of the web—demonstrating an understanding of HTML, CSS, and JavaScript as a means to manifest a personal taste in this medium.
 <!-- .note -->

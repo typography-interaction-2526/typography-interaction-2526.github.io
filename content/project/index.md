@@ -4,7 +4,7 @@
 	const title = 'Index'
 </script>
 
-Students will create a landing page for their *Typography & Interaction* projects from this year.
+Students will create a landing page for their <em @text="course.title"></em> projects from this year.
 <!-- .intro -->
 
 The goal of this project is to cover, contextualize, contain, and consolidate your work from this course in one place—an *Index*—for what you’ve created here in design and code. This responsive page should contain links to each of your projects, some form of introduction and context around them, and also information about yourself as their creator. It will then function as a “business card” for you as a designer who can code, demonstrating your presence and prowess in this medium.
