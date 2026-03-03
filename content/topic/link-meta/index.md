@@ -5,6 +5,7 @@
 </script>
 
 Beyond rendering directly in browsers themselves, web pages also exist in the contexts of search engines, social media, messaging, and other sharing—and as *thorough* designers, we should give attention to how they appear in these environments, too.
+<!-- .balance -->
 
 - [<cite>What’s in the Head? – MDN</cite>](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
 	A general overview from our friends at MDN.
@@ -13,7 +14,11 @@ Beyond rendering directly in browsers themselves, web pages also exist in the co
 	And the folks at Google.
 <!-- .right .rows--2 -->
 
-We’ve gathered a handful of practices here which adjust and optimize how your site appears through these lenses, via special `<link>` and `<meta>` elements that live in your page’s `<head>`. No site is truly complete without considering these! These are the “bow” to “wrap” your work.
+We’ve gathered a handful of practices here which adjust and optimize how your site appears through these lenses, via special `<link>` and `<meta>` elements that live in your page’s `<head>`.
+<!-- .balance -->
+
+No site is truly complete without considering these! These are the “bow” to “wrap” your work.
+<!-- .intro -->
 
 ## Favicons and Touch Images
 
@@ -82,7 +87,7 @@ Note that these can have transparent backgrounds, and that *HiDPI* ([*2x*/*retin
 
 #### 2. Packaging It <!-- .before--3 -->
 
-These separate files can then be combined together in an `.ico` with [ImageMagick](https://imagemagick.org)—the appropriately named *Dark Arts* tool at the bottom of nearly every online imaging pipeline.
+These separate files can then be combined together in an `.ico` with [ImageMagick](https://imagemagick.org)—the appropriately named *Dark Arts* tool way down at the bottom of nearly every online imaging pipeline.
 <!-- .before .balance -->
 
 On a Mac, you’ll use your [Terminal](https://support.apple.com/guide/terminal/welcome/mac) to first to [install Homebrew](https://brew.sh/), and then use that to [install ImageMagick](https://imagemagick.org/script/download.php#macos). You can then run this command, in your project folder, which will yield a single `favicon.ico` file:
@@ -203,12 +208,10 @@ As everyone rushed to… *respond* to the iPhone, this syntax stuck and became 
 <figure
 	@caption="Safari bookmarks/favorites."
 	@source="touch.svg"
-	class="recto"
-	style="align-self: start; margin-block: initial"
+	class="recto start"
+	style="margin-block: initial"
 	>
 </figure>
-
-<!-- TODO THIS WHEN IT UPDATES -->
 
 This should be an opaque (no transparency) PNG, at around `512×512px`. Again, add it in your `<head>`, below the others:
 <!-- .before--3 .balance -->
@@ -231,9 +234,9 @@ We used the same image *content* as our favicon, here—but with the larger size
 
 </aside>
 
-## Open Graph, Structured Data, Metadata
+## Other *Metadata*
 
-As *sharing* contexts became more and more prevalent, other approaches were developed to add additional information around pages in these scenarios—using special `<meta>` tags in the `<head>`.
+As *sharing* contexts became more and more prevalent online, other approaches were developed to add additional information around pages in these scenarios—using special `<meta>` tags in the `<head>`.
 
 - [<cite>The Open Graph Protocol</cite>](https://ogp.me)
 	The original spec.
@@ -248,15 +251,17 @@ As *sharing* contexts became more and more prevalent, other approaches were deve
 	This one will show you everything.
 <!-- .right .rows--4 -->
 
-Here, (ironically, *pre*-Meta) Facebook led the charge—what the iPhone was for the mobile web, Facebook was for sharing. They developed the *Open Graph protocol*, which became the standard and is used now in many (usually, non-Facebook) contexts. ([*Graph*](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) here is used  with the maths meaning.)
+Here, (ironically, *pre*-Meta) Facebook led the charge—what the iPhone was for the mobile web, Facebook was for sharing. They developed and popularized the *Open Graph protocol*, which became the standard and is used now in many (usually, non-Facebook) contexts. (Here the word [*graph*](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) is used with the mathematical meaning.)
 
-This type of added info, broadly, can be referred to as *structured data* or [*metadata*](https://en.wikipedia.org/wiki/Metadata)—hence Facebook’s name change!
+This type of added info, broadly, can be referred to as *structured data* or *[metadata](https://en.wikipedia.org/wiki/Metadata)*—hence Facebook’s name change!
+<!-- .before--3 .intro .body -->
 
 ### Image
 
-So beyond your *favicon* and *touch* images, you can also specify an `og:image` (*OG* for… *Open Graph*) in your `<head>`. This is often used for more *page-specific* images: the main photo for a news article, the product shot in <nobr>e-commerce,</nobr> and so on. These are generally made visible when sharing a link on Facebook, LinkedIn, Slack, Messages, etc.—where these sites/apps generate a *share card* or *preview* (also sometimes called an [*unfurl*](https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254)) for the URL.
+So beyond your [*favicon* and *touch* images](#favicons-and-touch-images), you can also specify an `og:image` (*OG* for *Open Graph*) in your `<head>`. This is often used for more *page-specific* images: the main photo for a news article, the product shot in <nobr>e-commerce,</nobr> and so on.
 
-<!-- TODO COME BACK HERE -->
+These are generally made visible when sharing a link on Facebook, LinkedIn, Slack, Messages, etc.—where these sites/apps generate a *share card* or *preview* (also sometimes called [an *unfurl*](https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254)) for the URL:
+<!-- .balance -->
 
 <figure
 	@caption="Slack shows the whole image."
@@ -273,10 +278,10 @@ So beyond your *favicon* and *touch* images, you can also specify an `og:image`
 	>
 </figure>
 
-These can now be JPG&NoBreak;s (for more [photographic content](/topic/images/#image-formats)), or PNGs (again, opaque). Tradition (inertia) suggests Facebook’s original `1200x630px` dimension—but every context/app handles these differently. A better, modern rule-of-thumb is an image *around* `1200px` on the long edge, at its original/best aspect-ratio. I might even do `2000px`, these (HiDPI) days!
+These should be JPG&NoBreak;s (for more [photographic content](/topic/images/#image-formats)), or PNG&NoBreak;s (still opaque). Tradition/inertia suggests Facebook’s original `1200px` × `630px` dimension—but every context/app handles these differently. A better, modern rule-of-thumb is an image *around* `1200px` on the long edge, at its original/best aspect-ratio. We might even do `2000px`, these (HiDPI) days!
 
 These are again specified in your `<head>`, now with `<meta>` elements—importantly, with the *full, absolute* URL for the file:
-<!-- .after .before -->
+<!-- .after .before .balance-->
 
 ```html <!-- .all -->
 <head>
@@ -284,8 +289,8 @@ These are again specified in your `<head>`, now with `<meta>` elements—importa
 	<link href="assets/icons/favicon.ico" rel="icon" sizes="any">
 	<link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml">
 	<link href="assets/icons/touch.png"  rel="apple-touch-icon">
-	<meta content="https://typography-interaction-2425.github.io/assets/icons/meta.png" property="og:image">
-	<meta content="Black background with white, modernist text of the site title." property="og:image:alt" >
+	<meta content="https://typography-interaction-2526.github.io/assets/icons/meta.png" property="og:image">
+	<meta content="TKTKTKTK" property="og:image:alt" >
 	<!-- The rest of your head… -->
 </head>
 ```
@@ -296,14 +301,15 @@ Note these allow an `alt` text for accessibility, in a separate tag.
 ### Title and Description
 
 Open Graph also specifies `og:title` and `og:description` properties. However, we *already* have a `<title>` element—and there was an existing convention around descriptions—which browsers, apps, and search engines continue to use.
+<!-- .balance -->
 
-So we think including redundant `og:` versions for title/description is often unnecessary. ([SEO](https://en.wikipedia.org/wiki/Search_engine_optimization)/*snake-oil* folks might disagree.) If you are worried—or your boss tells you to—you could duplicate the tags. One reason might be to tailor different content (like your description length), for different platforms. But we don’t think it is worth it, most of the time.
+We generally think including redundant `og:` versions for title/description is often unnecessary. ([SEO](https://en.wikipedia.org/wiki/Search_engine_optimization)/*snake-oil* folks might disagree.) If you are worried—or your boss tells you to—you could duplicate the tags. One reason might be to tailor different content (like your description length), for different platforms. But we don’t think it is worth it, most of the time!
 
-Again, different apps are going to display and use this information in their own way—so there are no hard rules on length, and you’ll want to check the contexts you care about. Generally, *tweet ([toot](https://joinmastodon.org)?) length* works well—so somewhere around 140 characters. And titles and descriptions should always be plain text—no HTML. You can usually use [entities](https://developer.mozilla.org/en-US/docs/Glossary/Entity) or encoded [non-breaking spaces](/topic/advanced-css/#nobr-and-nbsp), though!
-<!-- .before--3 -->
+Again, different apps are going to display and use this information in their own way—so there are no hard rules on length, and you’ll want to check the contexts you care about. Generally, *tweet-length* ([*toot–length*](https://joinmastodon.org)?) works well—so somewhere around 140 characters.
+<!-- .before--2 .balance -->
 
-We’ll add in a description, to our `<head>` stack:
-<!-- .before .after -->
+We’ll add in a description, to our growing `<head>` stack:
+<!-- .after -->
 
 ```html <!-- .all -->
 <head>
@@ -316,13 +322,18 @@ We’ll add in a description, to our `<head>` stack:
 </head>
 ```
 
+Titles and descriptions should always be plain text—no HTML inside. You can usually use [entities](https://developer.mozilla.org/en-US/docs/Glossary/Entity) or encoded [non-breaking spaces](/topic/advanced-css/#nobr-and-nbsp), though!
+<!-- .note -->
+
 <figure
 	@source="title-description.svg"
 	class="full"
 	>
 </figure>
 
-<aside>
+<aside class="before--3">
+
+<mark>All metadata is only a suggestion</mark>
 
 Google makes its *snippet* from your `description`—but it might also show other text there, based on your search. It also might decide to show your images, or not! Ultimately, you can only *suggest* these things—with all the metadata, it is up to the other side!
 
@@ -332,17 +343,17 @@ Google makes its *snippet* from your `description`—but it might also show othe
 
 <div class="verso balance">
 
-Some sharing contexts even let you play audio or video directly, in situ, from a *share card*. This might be useful for sites oriented around media, like *Spotify* or *YouTube*—but keep in mind the user is then *not* visiting the pages themselves, which you might prefer.
+Some sharing contexts even let you play audio or video directly, in situ, from a *share card*. This might be useful for sites oriented around media, like *Apple Music* or *YouTube*—but keep in mind the user is then *not* visiting the pages themselves, which you might prefer.
 
 These are specified much like images, with the `og:audio` and `og:video` properties. There are [extra metadata properties](https://ogp.me/#structured) associated with the different types.
 
 Conceptually, do you want your shared URL to function only as a link? Or somewhat *as* the thing itself?
-<!-- .before--3 .balance -->
+<!-- .intro -->
 
 </div>
 
 <figure
-	@caption="Messages allows inline media."
+	@caption="Messages allows some inline media."
 	@source="audio-video.svg"
 	class="recto"
 	style="align-self: start; margin-block: initial"
@@ -356,7 +367,7 @@ Beyond this, there is a (very, very) [long tail](https://en.wikipedia.org/wiki/L
 - [<cite>Schema\.org</cite>](https://www.schema.org)
 	Another common structured-data format/collection.
 
-- [<cite>Web App Manifests | MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/Manifest)
+- [<cite>Web App Manifests – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/Manifest)
 	Metadata for apps.
 
 - [<cite>Intro to How Structured Data Markup Works</cite>](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data)
@@ -367,18 +378,22 @@ After *Open Graph*, the most common structures you might encounter next are prob
 
 <aside>
 
-Not to dig *too* hard into SEO true-believers—but you will find *a lot* of junk out there, suggesting the right combination of `<meta>` elements will yield riches. Take it all with a big grain of salt (and a [patent medicine](https://en.wikipedia.org/wiki/Patent_medicine) chaser).
+<mark>Beware of *snake-oil* salespeople</mark>
 
-You can read up on [what Google actually suggests](https://developers.google.com/search/docs/fundamentals/seo-starter-guide), but otherwise just focus on your content and semantics—your time (and someone’s money) is much better spent there.
+You’ll find a lot of true-believer “SEO” junk out there, suggesting the right combination of `<meta>` elements will yield riches. Take it all with a big grain of salt (and a [patent medicine](https://en.wikipedia.org/wiki/Patent_medicine) chaser).
+
+You can read up on [what Google actually suggests](https://developers.google.com/search/docs/fundamentals/seo-starter-guide), but otherwise just focus on your content and semantics—your time (and someone’s money) is much better spent there!
 
 </aside>
-
-## Other Things for Your `<head>`
 
 ### `charset`
 
 This usually isn’t *explicitly* needed these days—because browsers assume/default to it—but you might have seen it in our examples and on other sites:
-<!-- .after .balance -->
+<!-- .balance -->
+
+- [<cite>UTF-8 – Wikipedia</cite>](https://en.wikipedia.org/wiki/UTF-8)
+	The most common, multi-lingual encoding, these days!
+<!-- .right .after -->
 
 ```html <!-- .all -->
 <head>
@@ -390,24 +405,50 @@ This usually isn’t *explicitly* needed these days—because browsers assume/de
 This specifies your document’s [character encoding](https://www.w3.org/International/articles/definitions-characters/) as [*<nobr>UTF-8</nobr>*](https://en.wikipedia.org/wiki/UTF-8), a superset of basic [ASCII](https://en.wikipedia.org/wiki/ASCII). Long story (very) short—this allows you to use encoded non-latin characters (and emoji 👋) directly in your HTML! To be thorough/explicit (or if you are seeing weird character junk), you can include this tag.
 <!-- .before .balance -->
 
-### `theme-color`
+### `robots`
 
-Finally, another recent `<head>` quirk: you can specify a [`theme-color`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color), which is used by (some) browsers to tint/color their own UI *around/outside* of the page:
-<!-- .after .balance -->
+<div class="body">
 
-- [<cite>Meta Theme Color and Trickery - CSS-Tricks</cite>](https://css-tricks.com/meta-theme-color-and-trickery/) \
-	A really deep dive.
-<!-- .right .rows--3 -->
+You can say—well, again, really *suggest*—that your site should not be indexed by search engines with the [“robots tag”]:
+<!-- .balance .after -->
 
 ```html <!-- .all -->
 <head>
-	<meta content="#fcbf04" name="theme-color">
+	<meta name="robots" content="noindex, nofollow">
 	<!-- The rest of your head… -->
 </head>
 ```
 
+Keep in mind though—if it is online, it can be [scraped](https://en.wikipedia.org/wiki/Web_scraping)! [Bad actors](https://www.theverge.com/24067997/robots-txt-ai-text-file-web-crawlers-spiders) (and many [“AI” companies](https://www.404media.co/websites-are-blocking-the-wrong-ai-scrapers-because-ai-companies-keep-making-new-ones/)) have shown this (and other techniques) do not preclude your content from being ingested/reused.
+<!-- .balance .before -->
+
+</div>
+
+- [<cite>`<meta name="robots">` – MDN</cite>](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta/name/robots)
+	Suggest behaviors for ’bots.
+
+- [<cite>`robots.txt` – Wikipedia</cite>](https://en.wikipedia.org/wiki/Robots.txt)
+	Same idea, in a separate file.
+<!-- .right -->
+
+<!-- TODO: rel="preload" example? -->
+
+<!--- This no longer works Safari ≥ 26!
+
+### `theme-color`
+
+Finally, another recent `<head>` quirk: you can specify a [`theme-color`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color), which is used by (some) browsers to tint/color their own UI *around/outside* of the page:
+
+- [<cite>Meta Theme Color and Trickery - CSS-Tricks</cite>](https://css-tricks.com/meta-theme-color-and-trickery/) \
+	A really deep dive.
+
+<head>
+	<meta content="#fcbf04" name="theme-color">
+
+</head>
+```
+
 This changes with pretty much *every* i&NoBreak;OS release—but as of writing, usually only shows up on Mobile Safari and Mobile Chrome. (Desktop Safari default settings [have it turned off](https://useyourloaf.com/blog/safari-15-theme-color/); Desktop Chrome has never shown it.)
-<!-- .before--3 -->
 
 Safari tries to infer this color from your `<body>` background (and choses a contrasting UI text color)—but with complicated pages it might guess these wrong. You might also just want to adjust it, based on your design.
 
@@ -424,5 +465,3 @@ Safari tries to infer this color from your `<body>` background (and choses a con
 	class="recto"
 	>
 </figure>
-
-<!-- TODO: rel="preload" example? -->
