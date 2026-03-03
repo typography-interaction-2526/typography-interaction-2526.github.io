@@ -195,7 +195,7 @@ You can also hit <nobr><kbd>⌘</kbd> <kbd>⌥</kbd> <kbd>J</kbd></nobr> to go r
 
 <figure
 	@caption="The Console opened under Elements/Styles."
-	@source="console.png"
+	@source="console-panel.png"
 	class="shadow before--3 after--3"
 	>
 </figure>
