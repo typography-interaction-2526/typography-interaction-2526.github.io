@@ -49,7 +49,7 @@ We’ll use different elements, later, for our other/larger needs!
 
 - Browsers *still* look for a `favicon.ico` at the root of a domain! You may have noticed [console errors](/topic/dev-tools/#console).
 - These are used as a default/fallback option, if nothing is manually specified in your page `<head>`.
-- Safari (so namely, your i&NoBreak;OS visitors) [only recently added support](https://caniuse.com/link-icon-svg) for the better SVG favicons, detailed [below](#modern-svg-s-chrome-et-al).
+- Safari (so namely, your i&NoBreak;OS visitors) [only recently added support](https://caniuse.com/link-icon-svg) for the better SVG favicons, detailed [below](#modern-svg-s).
 <!-- .balance -->
 
 <aside>
@@ -100,7 +100,7 @@ You can open [a terminal](https://code.visualstudio.com/docs/terminal/basics) fr
 Even though browsers still look for it in the root, you can instead specify/include the resulting `favicon.ico` in your `<head>`, allowing you to organize/move it elsewhere:
 <!-- .before .after .balance -->
 
-```html
+```html <!-- .all -->
 <head>
 	<title>Typography & Interaction</title>
 	<link href="assets/favicon.ico" rel="icon" sizes="any">
@@ -132,10 +132,10 @@ We’ve omitting the [responsive `viewport` element](/topic/responsive/#viewport
 Modern browsers now [support SVG&NoBreak;s](https://caniuse.com/link-icon-svg) for favicons, which gives us the benefit of [the vector format](/topic/images/#image-formats)—resolution independence. One file, no intermediate/terminal steps, for different display sizes and densities. It is still a good practice to draw these at `16×16px`—so you can *pixel-tune* them—then export from Figma, now as an SVG.
 <!-- .balance -->
 
-You should add them to your `<head>` as [a *progressive enhancement*](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement) for Chrome, after the previous `<link>`; older browsers will just ignore them:
-<!-- .before .after -->
+You should add them to your `<head>` as [a *progressive enhancement*](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement), after the previous `<link>`; older browsers will just ignore them:
+<!-- .before .after .balance -->
 
-```html
+```html <!-- .all -->
 <head>
 	<title>Typography & Interaction</title>
 	<link href="assets/favicon.ico" rel="icon" sizes="any">
@@ -147,22 +147,21 @@ You should add them to your `<head>` as [a *progressive enhancement*](https://de
 #### Responsive Favicons <!-- .before--3 -->
 
 SVG&NoBreak;s have another benefit: since they can include <nobr>self-contained,</nobr> *internal* `<style>` elements—we can alter/adjust our favicon with `prefers-color-scheme` [(light/dark mode) media queries](/topic/responsive/#prefers-color-scheme)!
-<!-- .before .after -->
+<!-- .before .after .balance -->
 
-```html <!-- style="grid-column: all" -->
-<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+```html <!-- .all -->
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
 	<style>
+		.background { fill: gainsboro; }
 		.foreground { fill: black; }
-		.background { fill: white; }
 
 		@media (prefers-color-scheme: dark) {
-			.foreground { fill: white; }
 			.background { fill: black; }
+			.foreground { fill: gainsboro; }
 		}
 	</style>
 	<rect class="background" width="32" height="32" rx="2" />
-	<rect class="foreground" x="4" y="8" width="24" height="2" />
-	<path class="foreground" d="M10.4299 22.8988C9.98881 23.3297 9.5169 23.6529 9.01422 23.8683C8.5218 24.0837 7.96269 24.1914 7.3369 24.1914C6.84448 24.1914 6.37771 24.1196 5.93658 23.976C5.50571 23.8324 5.13126 23.6221 4.81324 23.3451C4.49521 23.0578 4.24387 22.7142 4.05921 22.3141C3.87456 21.9037 3.78223 21.437 3.78223 20.9138C3.78223 20.5239 3.84891 20.17 3.98227 19.852C4.11564 19.5237 4.29517 19.2313 4.52086 18.9748C4.75681 18.7081 5.02354 18.4722 5.32105 18.267C5.61855 18.0618 5.92632 17.8823 6.24434 17.7284C5.94684 17.3693 5.69549 17.0103 5.49032 16.6512C5.2954 16.2922 5.19794 15.8715 5.19794 15.3894C5.19794 15.0098 5.27488 14.6661 5.42877 14.3584C5.59291 14.0506 5.80834 13.789 6.07507 13.5736C6.3418 13.3479 6.64443 13.1786 6.98298 13.0658C7.33177 12.9427 7.69083 12.8811 8.06015 12.8811C8.48076 12.8811 8.8706 12.9375 9.22965 13.0504C9.59897 13.1632 9.917 13.3325 10.1837 13.5582C10.4607 13.7736 10.6761 14.0455 10.83 14.3738C10.9942 14.702 11.0762 15.0816 11.0762 15.5125C11.0762 16.1588 10.8865 16.7025 10.5069 17.1436C10.1376 17.5848 9.67591 17.9541 9.12194 18.2516L10.5377 19.9905C10.6505 19.7853 10.7377 19.575 10.7993 19.3595C10.8608 19.1338 10.907 18.9082 10.9377 18.6825H12.8305C12.7792 19.1749 12.6664 19.6519 12.492 20.1136C12.3176 20.5752 12.0765 21.001 11.7687 21.3908L14 23.9914H11.3225L10.4299 22.8988ZM7.39846 19.1441C7.20354 19.2262 7.01375 19.3236 6.82909 19.4365C6.64443 19.5493 6.48029 19.6827 6.33667 19.8366C6.19305 19.9905 6.07507 20.1597 5.98274 20.3444C5.90067 20.529 5.85964 20.7342 5.85964 20.9599C5.85964 21.1548 5.90067 21.3446 5.98274 21.5293C6.07507 21.7037 6.19305 21.8576 6.33667 21.9909C6.48029 22.114 6.64443 22.2166 6.82909 22.2987C7.02401 22.3705 7.22406 22.4064 7.42923 22.4064C7.81907 22.4064 8.15761 22.3192 8.44486 22.1448C8.74236 21.9602 9.01935 21.7242 9.27582 21.437L7.39846 19.1441ZM9.1681 15.3894C9.1681 15.1021 9.06551 14.8559 8.86034 14.6507C8.66542 14.4456 8.4346 14.343 8.16787 14.343C7.90114 14.343 7.67032 14.4353 7.4754 14.62C7.28048 14.7944 7.18302 15.0252 7.18302 15.3124C7.18302 15.6612 7.27535 15.9587 7.46001 16.205C7.64467 16.4512 7.83959 16.7025 8.04476 16.959C8.35253 16.7641 8.61413 16.5538 8.82956 16.3281C9.05525 16.1024 9.1681 15.7895 9.1681 15.3894Z" />
+	<path class="foreground" d="M12.544 15.769C9.79325 17.6473 8.76829 19.3139 8.76829 20.9894C8.76829 23.6702 11.3 25.2222 13.3763 25.2222C14.5151 25.2222 16.2234 24.8519 17.9229 22.5767C15.7591 20.3721 13.8931 18.0441 12.544 15.769ZM19.9203 24.5079C18.5712 26.2275 16.4424 28 13.3763 28C9.70565 28 6 25.1781 6 20.9894C6 17.1799 9.17127 14.6755 11.2738 13.2822C10.5729 11.6508 10.1174 9.96649 10.1174 8.32628C10.1174 5.29277 11.9483 3 14.3925 3C17.187 3 19.4034 5.12522 19.4034 7.81481C19.4034 10.4691 17.0731 12.7972 14.883 14.2787C15.7328 15.7337 17.1257 17.7178 19.3596 20.0723C19.4998 19.7549 19.6312 19.4462 19.7451 19.1552C20.1831 18.0265 20.3408 17.3033 20.3408 17.3033C20.4809 16.6861 21.0241 16.2275 21.6811 16.2275C22.4433 16.2275 23.0653 16.8536 23.0653 17.6208C23.0653 17.7354 23.0477 17.8413 23.0215 17.9383C22.9426 18.291 22.4608 20.1429 21.4358 22.127C22.6886 23.291 24.0464 24.4286 25.4569 25.5044C25.7898 25.7601 26 26.1658 26 26.6155C26 27.3827 25.3868 28 24.6246 28C24.3092 28 24.0201 27.903 23.7924 27.7266C22.4433 26.7037 21.138 25.619 19.9203 24.5079ZM16.6351 7.81481C16.6351 6.63316 15.6364 5.7866 14.3925 5.7866C14.0596 5.7866 13.7442 5.93651 13.4639 6.30688C13.2887 6.53616 12.8769 7.18871 12.8769 8.32628C12.8769 9.13757 13.0521 10.284 13.6391 11.7743C14.3837 11.2363 15.9431 9.99295 16.4774 8.61728C16.5913 8.31746 16.6351 8.05291 16.6351 7.81481Z" />
 </svg>
 ```
 
@@ -170,35 +169,34 @@ You would export your SVG from Figma, then manually add the `<style>` and `id`, 
 <!-- .note -->
 
 <figure
-	@caption="Dark mode."
-	@source="dark.svg"
+	@caption="Light mode."
+	@source="light.svg"
 	class="verso"
 	>
 </figure>
 
 <figure
-	@caption="If we *had* a light mode."
-	@source="light.svg"
+	@caption="If we *had* a separate dark mode."
+	@source="dark.svg"
 	class="recto"
 	>
 </figure>
 
 <aside>
 
-<mark></mark>
+<mark>“Brand” always subject to interpretation</mark>
 
-You may or many not want to do this! It entirely depends on how you are using your favicon. We thought white-on-black was more our *brand*—not the icon form itself—and so didn’t use this method.
+You may or may not want to do this! It entirely depends on how you are using your favicon. We thought *color-per-unit* was more our course “brand,” and didn’t use this method.
 
 </aside>
 
 ### And `apple-touch-icon`
 
-<div class="verso">
+<div class="verso balance">
 
 When the iPhone (with Mobile Safari) came on the scene in 2007, it added its own tag for [*webpage icons*](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html)—now commonly known as *touch* or *share* icons—visible when adding pages to your home screen and in bookmarks, frequently-visited lists, and messages.
-<!-- .balance -->
 
-As everyone rushed to… *respond* to the iPhone, this syntax stuck and became the de facto standard—Android and Chrome use the same `rel="apple-touch-icon"` syntax, and for similar uses. In lieu of larger/specific images (more on that below), you should think of this as your default *share image*.
+As everyone rushed to… *respond* to the iPhone, this syntax stuck and became the de facto standard—meaning that even Windows/Android Chrome use the same `rel="apple-touch-icon"` syntax, and for similar uses. In lieu of larger/specific images (more on that [below](#image)), you should think of this as your default *share image*.
 
 </div>
 
@@ -215,7 +213,7 @@ As everyone rushed to… *respond* to the iPhone, this syntax stuck and became t
 This should be an opaque (no transparency) PNG, at around `512×512px`. Again, add it in your `<head>`, below the others:
 <!-- .before--3 .balance -->
 
-```html
+```html <!-- .all -->
 <head>
 	<title>Typography & Interaction</title>
 	<link href="assets/favicon.ico" rel="icon" sizes="any">
@@ -227,7 +225,9 @@ This should be an opaque (no transparency) PNG, at around `512×512px`. Again, 
 
 <aside>
 
-We used the same image content as our favicon, here—but with the larger sizes, you might want to use this form more distinctly. Think of how these are used/shown differently, and interpret this for your work!
+<mark>One size often does not fit all</mark>
+
+We used the same image *content* as our favicon, here—but with the larger sizes, you might want to use this form more distinctly. Think of how these are used and shown differently, and interpret them best for your work!
 
 </aside>
 
@@ -278,7 +278,7 @@ These can now be JPG&NoBreak;s (for more [photographic content](/topic/images/#i
 These are again specified in your `<head>`, now with `<meta>` elements—importantly, with the *full, absolute* URL for the file:
 <!-- .after .before -->
 
-```html <!-- style="grid-column: all" -->
+```html <!-- .all -->
 <head>
 	<title>Week 22</title>
 	<link href="assets/favicon.ico" rel="icon" sizes="any">
@@ -289,6 +289,7 @@ These are again specified in your `<head>`, now with `<meta>` elements—importa
 	<!-- The rest of your head… -->
 </head>
 ```
+
 Note these allow an `alt` text for accessibility, in a separate tag.
 <!-- .note -->
 
@@ -304,7 +305,7 @@ Again, different apps are going to display and use this information in their own
 We’ll add in a description, to our `<head>` stack:
 <!-- .before .after -->
 
-```html <!-- style="grid-column: all" -->
+```html <!-- .all -->
 <head>
 	<title>Typography & Interaction</title>
 	<meta property="description" content="Typography & Interaction is a year-long, two-semester course in the MPS Communication Design program at Parsons / The New School. The class will provide a rigorous foundation of typographic and interaction principles in the context of digital design.">
@@ -379,7 +380,7 @@ You can read up on [what Google actually suggests](https://developers.google.co
 This usually isn’t *explicitly* needed these days—because browsers assume/default to it—but you might have seen it in our examples and on other sites:
 <!-- .after .balance -->
 
-```html
+```html <!-- .all -->
 <head>
 	<meta charset="utf-8">
 	<!-- The rest of your head… -->
@@ -398,7 +399,7 @@ Finally, another recent `<head>` quirk: you can specify a [`theme-color`](https:
 	A really deep dive.
 <!-- .right .rows--3 -->
 
-```html
+```html <!-- .all -->
 <head>
 	<meta content="#fcbf04" name="theme-color">
 	<!-- The rest of your head… -->
