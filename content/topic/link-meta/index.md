@@ -388,7 +388,7 @@ You can read up on [what Google actually suggests](https://developers.google.co
 
 ### `charset`
 
-This usually isn’t *explicitly* needed these days—because browsers assume/default to it—but you might have seen it in our examples and on other sites:
+This usually isn’t *explicitly* needed these days—because browsers assume/default to it—but you might have seen it in our examples and on other sites. This specifies your document’s [character encoding](https://www.w3.org/International/articles/definitions-characters/) as [*<nobr>UTF-8</nobr>*](https://en.wikipedia.org/wiki/UTF-8), a superset of basic [ASCII](https://en.wikipedia.org/wiki/ASCII):
 <!-- .balance -->
 
 - [<cite>UTF-8 – Wikipedia</cite>](https://en.wikipedia.org/wiki/UTF-8)
@@ -402,14 +402,14 @@ This usually isn’t *explicitly* needed these days—because browsers assume/de
 </head>
 ```
 
-This specifies your document’s [character encoding](https://www.w3.org/International/articles/definitions-characters/) as [*<nobr>UTF-8</nobr>*](https://en.wikipedia.org/wiki/UTF-8), a superset of basic [ASCII](https://en.wikipedia.org/wiki/ASCII). Long story (very) short—this allows you to use encoded non-latin characters (and emoji 👋) directly in your HTML! To be thorough/explicit (or if you are seeing weird character junk), you can include this tag.
+ Long story (very) short—this allows you to use encoded non-latin characters (and emoji 👋) directly in your HTML! To be thorough/explicit (or if you are seeing weird character junk), you can include this tag.
 <!-- .before .balance -->
 
 ### `robots`
 
 <div class="body">
 
-You can say—well, again, really *suggest*—that your site should not be indexed by search engines with the [“robots tag”]:
+You can say—well, again, really *suggest*—that your site should not be indexed by search engines with the so-called “robots tag”:
 <!-- .balance .after -->
 
 ```html <!-- .all -->
@@ -419,7 +419,7 @@ You can say—well, again, really *suggest*—that your site should not be index
 </head>
 ```
 
-Keep in mind though—if it is online, it can be [scraped](https://en.wikipedia.org/wiki/Web_scraping)! [Bad actors](https://www.theverge.com/24067997/robots-txt-ai-text-file-web-crawlers-spiders) (and many [“AI” companies](https://www.404media.co/websites-are-blocking-the-wrong-ai-scrapers-because-ai-companies-keep-making-new-ones/)) have shown this (and other techniques) do not preclude your content from being ingested/reused.
+Keep in mind though—if it is online, it can be [scraped](https://en.wikipedia.org/wiki/Web_scraping)! Many [bad actors](https://www.theverge.com/24067997/robots-txt-ai-text-file-web-crawlers-spiders) (and [“AI” companies](https://www.404media.co/websites-are-blocking-the-wrong-ai-scrapers-because-ai-companies-keep-making-new-ones/)) have shown this—and other techniques, like `robots.txt`—do not preclude your content from being indexed/ingested/reused. The web was a simpler place!
 <!-- .balance .before -->
 
 </div>
