@@ -45,5 +45,11 @@
 			type="module"
 		></script>
 	</head>
-	<body @raw="content"></body>
+	<body>
+		<block webc:import="blocks/warning.webc"></block>
+		<template
+			webc:nokeep
+			@raw="content"
+		></template>
+	</body>
 </html>
