@@ -32,6 +32,7 @@ We’ve gathered a handful of practices here which adjust and optimize how your 
 </figure>
 
 The first of these is the [*favicon*](https://en.wikipedia.org/wiki/Favicon) (a portmanteau for *favorite icon*)—which appears in the browser’s tabs/address bar, bookmarks, history, and also on search engine entries. This is often a logo—though they don’t always translate down well in size. Sometimes it is its own thing! But it is *always* an important part of the initial impression of your site, and should be carefully considered and constructed.
+<!-- .before--3 -->
 
 - [<cite>How to Favicon in ~~2021~~ 2026</cite>](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs)
 	Pretty good, modern walkthrough.
@@ -54,7 +55,7 @@ We’ll use different elements, later, for our other/larger needs!
 
 <aside>
 
-<mark>Caution: entering trashy internet zone</mark>
+<mark>Use Caution: entering trashy internet zone</mark>
 
 You’ll find a lot of really bad, scammy, <nobr>ad-ridden</nobr>, <nobr>AI-[chumming](https://en.wikipedia.org/wiki/Chumming)</nobr>, “favicon generator” sites out there!
 
@@ -66,7 +67,7 @@ As of writing, we still can’t find a decent online converter that combines/pac
 
 <div class="verso before">
 
-You should draw each size individually, when necessary—*pixel-tuning*/[nudging](https://help.figma.com/hc/en-us/articles/4404575206295-Set-small-and-big-nudge-values) each version to land nicely on the pixel grid, so it is legible and crisp at its dimension. You can use Figma’s [pixel preview](https://help.figma.com/hc/en-us/articles/360041065034-Adjust-your-zoom-and-view-options#pixel-preview) (set at *1x*), toggled with <nobr><kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>P</kbd>.</nobr>
+You should draw each size individually, when necessary—*pixel-tuning*/[nudging](https://help.figma.com/hc/en-us/articles/4404575206295-Set-small-and-big-nudge-values) each path to land nicely on the pixel grid, so it is legible and crisp at its dimension. You can use Figma’s [pixel preview](https://help.figma.com/hc/en-us/articles/360041065034-Adjust-your-zoom-and-view-options#pixel-preview) (set at *1x*), toggled with <nobr><kbd>⌘</kbd> <kbd>⇧</kbd> <kbd>P</kbd>.</nobr>
 
 Note that these can have transparent backgrounds, and that *HiDPI* ([*2x*/*retina*](https://tomroth.com.au/dpr/)) displays will render their device-native size—so most folks are seeing your `32px` version, these days. Export [a PNG](/topic/images/#image-formats) for each dimension, from Figma, into your project folder.
 
@@ -75,17 +76,16 @@ Note that these can have transparent backgrounds, and that *HiDPI* ([*2x*/*retin
 <figure
 	@caption="Draw an artboard/frame for each size."
 	@source="ico.svg"
-	class="recto before"
-	style="align-self: start; margin-block: initial"
+	class="recto before start"
 	>
 </figure>
 
-#### 2. Combining It <!-- .before--3 -->
+#### 2. Packaging It <!-- .before--3 -->
 
 These separate files can then be combined together in an `.ico` with [ImageMagick](https://imagemagick.org)—the appropriately named *Dark Arts* tool at the bottom of nearly every online imaging pipeline.
 <!-- .before .balance -->
 
-On a Mac, you’ll use your [Terminal](https://support.apple.com/guide/terminal/welcome/mac) to first to install [Homebrew](https://brew.sh/), and then use that to [install ImageMagick](https://imagemagick.org/script/download.php#macos). You can then run this command, in your project folder, which will yield a single `favicon.ico` file:
+On a Mac, you’ll use your [Terminal](https://support.apple.com/guide/terminal/welcome/mac) to first to [install Homebrew](https://brew.sh/), and then use that to [install ImageMagick](https://imagemagick.org/script/download.php#macos). You can then run this command, in your project folder, which will yield a single `favicon.ico` file:
 <!-- .after .balance -->
 
 ```shell
@@ -103,7 +103,7 @@ Even though browsers still look for it in the root, you can instead specify/incl
 ```html <!-- .all -->
 <head>
 	<title>Typography & Interaction</title>
-	<link href="assets/favicon.ico" rel="icon" sizes="any">
+	<link href="assets/icons/favicon.ico" rel="icon" sizes="any">
 	<!-- The rest of your head… -->
 </head>
 ```
@@ -116,20 +116,20 @@ We’ve omitting the [responsive `viewport` element](/topic/responsive/#viewport
 
 - Safari caches these *dramatically*—meaning any changes are not reflected/updated for a very long time. [It](https://bugs.webkit.org/show_bug.cgi?id=95979) [is](https://bugs.webkit.org/show_bug.cgi?id=75877#c1) [extremely](https://bugs.webkit.org/show_bug.cgi?id=266426) [annoying](https://www.reddit.com/r/MacOS/comments/1bfhhqg/solved_fix_browser_tab_icons_aka_favicons_cache/).
 - It also doesn’t facilitate detecting [light/dark mode](/topic/responsive/#prefers-color-scheme), so your icon needs to be visible on both a light and dark toolbar/background.
-- It still occasionally decides to [*mat*](https://en.wikipedia.org/wiki/Mat_(picture_framing)) some icons that it doesn’t think have enough contrast, adding a white border. You can’t prevent or control this! Cool.
+- It still occasionally decides to [*mat*](https://en.wikipedia.org/wiki/Mat_(picture_framing)) some icons that it doesn’t think have [enough contrast](https://www.reddit.com/r/webdev/comments/1113en7/why_does_my_favicon_have_a_white_border_around_it/), adding a white border. You can’t prevent or control this! Cool.
 <!-- .balance -->
 
 <figure
-	@caption="Safari adds this white!"
-	@source="matte.svg"
-	class="right"
-	style="align-self: start; margin-block: initial"
+	@caption="Safari adds this white border!"
+	@source="mat.svg"
+	class="right start"
+	style="margin-block-start: 1lh; text-align: center;"
 	>
 </figure>
 
 ### Modern SVG&NoBreak;<small>s</small>
 
-Modern browsers now [support SVG&NoBreak;s](https://caniuse.com/link-icon-svg) for favicons, which gives us the benefit of [the vector format](/topic/images/#image-formats)—resolution independence. One file, no intermediate/terminal steps, for different display sizes and densities. It is still a good practice to draw these at `16×16px`—so you can *pixel-tune* them—then export from Figma, now as an SVG.
+Modern browsers now [support SVG&NoBreak;s](https://caniuse.com/link-icon-svg) for favicons, which gives us the benefit of [the vector format](/topic/images/#image-formats)—resolution independence. One file, no intermediate/terminal steps, for different display sizes and densities. It is still a good practice to draw these at `16×16px`—so you can *pixel-tune* them—then export from Figma, now as a `.svg`&thinsp;.
 <!-- .balance -->
 
 You should add them to your `<head>` as [a *progressive enhancement*](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement), after the previous `<link>`; older browsers will just ignore them:
@@ -138,8 +138,8 @@ You should add them to your `<head>` as [a *progressive enhancement*](https://de
 ```html <!-- .all -->
 <head>
 	<title>Typography & Interaction</title>
-	<link href="assets/favicon.ico" rel="icon" sizes="any">
-	<link href="assets/favicon.svg" rel="icon" type="image/svg+xml">
+	<link href="assets/icons/favicon.ico" rel="icon" sizes="any">
+	<link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml">
 	<!-- The rest of your head… -->
 </head>
 ```
@@ -165,11 +165,11 @@ SVG&NoBreak;s have another benefit: since they can include <nobr>self-contained,
 </svg>
 ```
 
-You would export your SVG from Figma, then manually add the `<style>` and `id`, in VS Code.
+You would export your SVG from Figma, then manually add the `<style>` and `.classes`, in VS Code.
 <!-- .note -->
 
 <figure
-	@caption="Light mode."
+	@caption="Default/light mode."
 	@source="light.svg"
 	class="verso"
 	>
@@ -216,16 +216,16 @@ This should be an opaque (no transparency) PNG, at around `512×512px`. Again, 
 ```html <!-- .all -->
 <head>
 	<title>Typography & Interaction</title>
-	<link href="assets/favicon.ico" rel="icon" sizes="any">
-	<link href="assets/favicon.svg" rel="icon" type="image/svg+xml">
-	<link href="assets/touch.png"  rel="apple-touch-icon">
+	<link href="assets/icons/favicon.ico" rel="icon" sizes="any">
+	<link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml">
+	<link href="assets/icons/touch.png"  rel="apple-touch-icon">
 	<!-- The rest of your head… -->
 </head>
 ```
 
 <aside>
 
-<mark>One size often does not fit all</mark>
+<mark>One size rarely fits all</mark>
 
 We used the same image *content* as our favicon, here—but with the larger sizes, you might want to use this form more distinctly. Think of how these are used and shown differently, and interpret them best for your work!
 
@@ -281,10 +281,10 @@ These are again specified in your `<head>`, now with `<meta>` elements—importa
 ```html <!-- .all -->
 <head>
 	<title>Week 22</title>
-	<link href="assets/favicon.ico" rel="icon" sizes="any">
-	<link href="assets/favicon.svg" rel="icon" type="image/svg+xml">
-	<link href="assets/touch.png"  rel="apple-touch-icon">
-	<meta content="https://typography-interaction-2425.github.io/assets/meta.png" property="og:image">
+	<link href="assets/icons/favicon.ico" rel="icon" sizes="any">
+	<link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml">
+	<link href="assets/icons/touch.png"  rel="apple-touch-icon">
+	<meta content="https://typography-interaction-2425.github.io/assets/icons/meta.png" property="og:image">
 	<meta content="Black background with white, modernist text of the site title." property="og:image:alt" >
 	<!-- The rest of your head… -->
 </head>
@@ -309,9 +309,9 @@ We’ll add in a description, to our `<head>` stack:
 <head>
 	<title>Typography & Interaction</title>
 	<meta property="description" content="Typography & Interaction is a year-long, two-semester course in the MPS Communication Design program at Parsons / The New School. The class will provide a rigorous foundation of typographic and interaction principles in the context of digital design.">
-	<link href="assets/favicon.ico" rel="icon" sizes="any">
-	<link href="assets/favicon.svg" rel="icon" type="image/svg+xml">
-	<link href="assets/touch.png"  rel="apple-touch-icon">
+	<link href="assets/icons/favicon.ico" rel="icon" sizes="any">
+	<link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml">
+	<link href="assets/icons/touch.png"  rel="apple-touch-icon">
 	<!-- The rest of your head… -->
 </head>
 ```
