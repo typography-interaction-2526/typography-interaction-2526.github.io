@@ -277,10 +277,10 @@ To wrap up the semester (and course), we’ll round out our knowledge of the web
 - [<cite>iPhone Human Interface Guidelines</cite>](http://coolx.net/board/upload/develop/MobileHIG.pdf)
 	Apple, 2008
 
-- [<cite>Windows Phone 7 UI Design and Interaction Guide</cite>](http://tableless.github.io/exemplos/pdf/guidelines-interface-mobiles/UI%20Design%20and%20Interaction%20Guide%20for%20Windows%20Phone%207%20v2.0.pdf)
+- [<cite>Windows Phone 7 UI Design and Interaction Guide</cite>](http://tableless.github.io/exemplos/pdf/guidelines-interface-mobiles/UI%20Design%20and%20Interaction%20Guide%20for%20Windows%20Phone%207%20v2.0.pdf)
 	Microsoft, 2010
 
-- [<cite>Material Design 1</cite>](https://m1.material.io/)
+- [<cite>Material Design 1</cite>](https://m1.material.io/)
 	Google, 2014
 
 - [<cite><small>i</small>OS Human Interface Guidelines</cite>](https://www.evl.uic.edu/datsoupi/420_14/docs/MobileHIG.pdf)
@@ -289,13 +289,13 @@ To wrap up the semester (and course), we’ll round out our knowledge of the web
 &nbsp;
 <!-- style="margin-block-start: initial" -->
 
-- [<cite>Material Design 3</cite>](https://m3.material.io/)
+- [<cite>Material Design 3</cite>](https://m3.material.io/)
 	Google, 2021 (*ongoing*)
 
 - [<cite>Human Interface Guidelines</cite>](https://developer.apple.com/design/human-interface-guidelines/guidelines/overview/)
 	Apple, 2022 (*ongoing*)
 
-- [<cite>Fluent 2 Design System</cite>](https://www.microsoft.com/design/fluent/)
+- [<cite>Fluent 2 Design System</cite>](https://www.microsoft.com/design/fluent/)
 	Microsoft, 2023 (*ongoing*)
 <!-- #hig-ongoing -->
 
