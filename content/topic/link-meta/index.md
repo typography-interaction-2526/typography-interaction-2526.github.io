@@ -1,6 +1,7 @@
 <script front-matter>
 	const title = 'Puttin’ a <nobr>(Link/Meta)</nobr> Bow on It'
 	const week = 22
+	const meta = true
 </script>
 
 Beyond rendering directly in browsers themselves, web pages also exist in the contexts of search engines, social media, messaging, and other sharing—and as *thorough* designers, we should give attention to how they appear in these environments, too.
