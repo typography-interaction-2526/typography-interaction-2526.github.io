@@ -277,10 +277,10 @@ We’ll add in a description, to our growing `<head>` stack:
 ```html <!-- .all -->
 <head>
 	<title>Typography & Interaction</title>
-	<meta property="description" content="Typography & Interaction is a year-long, two-semester course in the MPS Communication Design program at Parsons / The New School. The class will provide a rigorous foundation of typographic and interaction principles in the context of digital design.">
 	<link href="assets/icons/favicon.ico" rel="icon" sizes="any">
 	<link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml">
 	<link href="assets/icons/touch.png"  rel="apple-touch-icon">
+	<meta property="description" content="Typography & Interaction is a year-long, two-semester course in the MPS Communication Design program at Parsons / The New School. The class will provide a rigorous foundation of typographic and interaction principles in the context of digital design.">
 	<!-- The rest of your head… -->
 </head>
 ```
@@ -317,14 +317,14 @@ These are generally made visible when sharing a link on Facebook, LinkedIn, Slac
 </figure>
 
 <figure
-	@caption="LinkedIn crops in to ~16:9."
+	@caption="LinkedIn crops in to 16:9-ish."
 	@source="og-image--crop.svg"
 	class="recto"
 	style="align-self: start"
 	>
 </figure>
 
-These should be JPG&NoBreak;s (for more [photographic content](/topic/images/#image-formats)), or PNG&NoBreak;s (still opaque). Tradition/inertia suggests Facebook’s original `1200px` × `630px` dimension—but every context/app handles these differently. A better, modern rule-of-thumb is an image *around* `1200px` on the long edge, at its original/best aspect-ratio—with a ~&#x202F;16:9 “safe area” in the middle. We might even do `2000px`, these (HiDPI) days!
+These should be JPG&NoBreak;s (for more [photographic content](/topic/images/#image-formats)), or PNG&NoBreak;s (still opaque). Tradition/inertia suggests Facebook’s original `1200px` × `630px` dimension—but every context/app handles these differently. A better, modern rule-of-thumb is an image *around* `1200px` on the long edge, at its original/best aspect-ratio—with a 16:9-ish “safe area” in the middle for any text. We might even do `2000px`, these (HiDPI) days!
 
 These are again specified in your `<head>`, now with `<meta>` elements—importantly, with the *full, absolute* URL for the file:
 <!-- .after .before .balance-->
@@ -335,6 +335,7 @@ These are again specified in your `<head>`, now with `<meta>` elements—importa
 	<link href="assets/icons/favicon.ico" rel="icon" sizes="any">
 	<link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml">
 	<link href="assets/icons/touch.png"  rel="apple-touch-icon">
+	<meta property="description" content="We’ll properly begin our fifth and final unit, If All You Have Is a Hammer, Everything Looks Like a Nail, with a discussion of last week’s reading.">
 	<meta content="https://typography-interaction-2526.github.io/assets/meta/22.png" property="og:image">
 	<meta content="Pale green background with black, vernacular “Gorton” text of the page title/date." property="og:image:alt" >
 	<!-- The rest of your head… -->
