@@ -35,6 +35,11 @@
 				:content="getDescription($data)"
 				name="description"
 			>
+			<meta
+				webc:if="meta"
+				:content="`${$data.pkg.homepage}/assets/meta/${$data.page.fileSlug}.png`"
+				property="og:image"
+			>
 		</template>
 		<meta
 			webc:else
