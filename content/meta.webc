@@ -18,14 +18,41 @@
 		inline-size: 100vw;
 
 		> section {
+			align-content:    center;
 			background-color: var(--background, var(--background--root));
 			display:          grid;
+			gap:              1cap;
 			padding:          1cap;
-			place-content:    center;
+			text-transform:   uppercase;
+
+			> * { grid-column: initial }
+
+			> hr {
+				background-color: var(--color);
+				block-size:       var(--stroke);
+				border-radius:    calc(var(--stroke) / 2);
+				margin-inline:    calc(-1 * var(--stroke) / 2);
+			}
+
+			> p {
+				--size:   50%;
+				--weight: 700;
+
+				margin-block-start: 1rcap;
+			}
 		}
 	}
 </style>
 <section
 	:style="meta.data.unitNumber ? `--background: var(--background--${meta.data.unitNumber})` : ''">
 	<h1 @html="meta.data.title"></h1>
+	<hr>
+	<p
+		webc:if="meta.data.type === 'project' || meta.data.type == 'week'"
+		@text="displayDate(meta.data.date)"
+	></p>
+	<p
+		webc:elseif="meta.data.page.url === '/'"
+		@text="$data.course.terms.year"
+	></p>
 </section>
