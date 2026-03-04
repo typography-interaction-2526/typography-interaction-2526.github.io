@@ -266,7 +266,7 @@ This type of added info, broadly, can be referred to as *structured data* or *[m
 
 So beyond your [*favicon* and *touch* images](#favicons-and-touch-images), you can also specify an `og:image` (*OG* for *Open Graph*) in your `<head>`. This is often used for more *page-specific* images: the main photo for a news article, the product shot in <nobr>e-commerce,</nobr> and so on.
 
-These are generally made visible when sharing a link on Facebook, LinkedIn, Slack, Messages, etc.—where these sites/apps generate a *share card* or *preview* (also sometimes called [an *unfurl*](https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254)) for the URL:
+These are generally made visible when sharing a link on Facebook, LinkedIn, Slack, Messages, etc.—where these sites/apps generate a *share card* or *preview* (also sometimes called [an *unfurl*](https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254)) for the URL:
 <!-- .balance -->
 
 <figure
@@ -296,7 +296,7 @@ These are again specified in your `<head>`, now with `<meta>` elements—importa
 	<link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml">
 	<link href="assets/icons/touch.png"  rel="apple-touch-icon">
 	<meta content="https://typography-interaction-2526.github.io/assets/icons/meta.png" property="og:image">
-	<meta content="TKTKTKTK" property="og:image:alt" >
+	<meta content="Black background with white, modernist text of the site title." property="og:image:alt" >
 	<!-- The rest of your head… -->
 </head>
 ```

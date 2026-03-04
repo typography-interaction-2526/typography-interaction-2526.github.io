@@ -50,7 +50,7 @@ We’d also now like you to [incorporate metadata](/topic/link-meta) in your pag
 <a :href="course.channel.submit"><cite>Submission Form</cite></a>
 Mid-way through, with more information, layout, and metadata.
 
-Due Mar. 4
+Due Mar. 25
 <!-- .intro -->
 
 </div>
