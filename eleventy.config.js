@@ -14,10 +14,6 @@ import abbreviations from './data/abbreviations.js'
 
 import pluginToc from '@uncenter/eleventy-plugin-toc'
 
-import EleventyPluginOgImage from 'eleventy-plugin-og-image'
-import fs from 'fs'
-import pkg from './package.json' with { type: 'json' }
-
 import stripTags from 'striptags'
 
 import { parse } from 'node-html-parser'
