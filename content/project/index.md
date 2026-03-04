@@ -40,12 +40,15 @@ In this milestone, we’d then like to see additional context provided—for yo
 
 Design-wise, this additional content will likely necessitate more layout considerations. Here we’d like a particular focus on the viewport—this is a contained experience, and we want it to feel considered and deliberate in the browser context.
 
+We’d also now like you to [incorporate metadata](/topic/link-meta) in your page—adding a favicon, `apple-touch-icon`, a description, and so on to further position it in the wider, shared web.
+<!-- .balance -->
+
 </div>
 
 <div class="right">
 
 <a :href="course.channel.submit"><cite>Submission Form</cite></a>
-Mid-way through, with more information and layout.
+Mid-way through, with more information, layout, and metadata.
 
 Due Mar. 4
 <!-- .intro -->
@@ -56,9 +59,9 @@ Due Mar. 4
 
 <div class="body">
 
-Likewise after our [fifth project](/project/5/), we’ll add it to our *Index*, completing the page content.
+Likewise after our [fifth project](/project/5/), we’ll add it to our *Index*, completing the landing page content.
 
-This last milestone should then focus on making the page fully *finished*—refining our styles, editing our content, adding metadata, a favicon, etc. Here too is where we’d like to tastefully incorporate some JavaScript/interactivity, if we haven’t before—again showing a considered and deliberate use of the medium.
+This last milestone should then focus on making the page fully *finished*—refining our styles, proofreading our content, sprucing up our metadata, etc. Here too is where we’d like to tastefully incorporate some JavaScript/interactivity, if we haven’t before—again showing a considered and deliberate use of the medium.
 
 </div>
 
@@ -93,6 +96,8 @@ We won’t be formally presenting this work, as with our other projects, but ar
 - Of course, this will be a live, public URL.
 
 - It should be fluidly responsive, as we do, working on any device.
+
+- “Put a bow on it” with considered, deliberate metadata.
 
 - We’d like to see some JS incorporated, for an interactive flourish.
 <!-- .balance -->
