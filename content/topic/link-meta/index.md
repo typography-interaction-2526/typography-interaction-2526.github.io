@@ -1,5 +1,4 @@
 <script front-matter>
-	const draft = true
 	const title = 'Puttin’ a <nobr>(Link/Meta)</nobr> Bow on It'
 	const week = 22
 </script>
