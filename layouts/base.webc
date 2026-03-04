@@ -35,10 +35,6 @@
 				:content="getDescription($data)"
 				name="description"
 			>
-			<template
-				webc:nokeep
-				@html="ogImage('../layouts/blocks/meta-image.webc', { title })"
-			></template>
 		</template>
 		<link
 			href="/assets/icons/favicon.ico"

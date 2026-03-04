@@ -197,22 +197,6 @@ export default (eleventyConfig) => {
 		wrapper: (toc) => toc,
 	})
 
-	// Dynamic `og:image`.
-	eleventyConfig.addPlugin(EleventyPluginOgImage, {
-		outputDir: 'assets/meta',
-		satoriOptions: {
-			fonts: [
-				{
-					data: fs.readFileSync('./assets/fonts/gorton-digital--regular.otf'),
-					name: 'Gorton Digital',
-					style: 'normal',
-					weight: 400,
-				},
-			],
-		},
-		shortcodeOutput: async (ogImage) => `<meta content="${pkg.homepage}${await ogImage.outputUrl()}" property="og:image">`,
-	})
-
 	// Set up the weeks for date logic.
 	eleventyConfig.addCollection('weeks', (collection) => collection
 		.getFilteredByGlob('content/week/*.md')
