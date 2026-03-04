@@ -25,11 +25,21 @@
 			content="initial-scale=1, width=device-width, viewport-fit=cover"
 			name="viewport"
 		>
-		<title @text="stripTags(addNbsp(markdown(title)))"></title>
-		<meta
-			:content="getDescription($data)"
-			name="description"
+		<title @text="stripTags(addNbsp(markdown(title || course.title)))"></title>
+		<template
+			webc:if="title"
+			webc:nokeep
 		>
+			<!-- TODO Generate /preview metadata? -->
+			<meta
+				:content="getDescription($data)"
+				name="description"
+			>
+			<template
+				webc:nokeep
+				@html="ogImage('../layouts/blocks/meta-image.webc', { title })"
+			></template>
+		</template>
 		<link
 			href="/assets/icons/favicon.ico"
 			rel="icon"
@@ -44,10 +54,6 @@
 		<link
 			:href="`/assets/icons/touch${unitNumber ? '--' + unitNumber : ''}.png`"
 			rel="apple-touch-icon"
-		>
-		<meta
-			:content="`${$data.pkg.homepage}/assets/icons/meta.png`"
-			property="og:image"
 		>
 		<template
 			webc:import="blocks/styles.webc"

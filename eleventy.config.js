@@ -14,6 +14,10 @@ import abbreviations from './data/abbreviations.js'
 
 import pluginToc from '@uncenter/eleventy-plugin-toc'
 
+import EleventyPluginOgImage from 'eleventy-plugin-og-image'
+import fs from 'fs'
+import pkg from './package.json' with { type: 'json' }
+
 import stripTags from 'striptags'
 
 import { parse } from 'node-html-parser'
@@ -191,6 +195,22 @@ export default (eleventyConfig) => {
 		ignoredElements: ['a'],
 		ul: true,
 		wrapper: (toc) => toc,
+	})
+
+	// Dynamic `og:image`.
+	eleventyConfig.addPlugin(EleventyPluginOgImage, {
+		outputDir: 'assets/meta',
+		satoriOptions: {
+			fonts: [
+				{
+					data: fs.readFileSync('./assets/fonts/gorton-digital--regular.otf'),
+					name: 'Gorton Digital',
+					style: 'normal',
+					weight: 400,
+				},
+			],
+		},
+		shortcodeOutput: async (ogImage) => `<meta content="${pkg.homepage}${await ogImage.outputUrl()}" property="og:image">`,
 	})
 
 	// Set up the weeks for date logic.
