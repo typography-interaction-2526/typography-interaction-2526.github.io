@@ -6,7 +6,7 @@
 ## Course Description <!-- .first -->
 
 <em @text="course.title"></em> is a year-long course, divided into two classes, which will provide a rigorous foundation of typographic and interaction principles in the context of digital design. Over both classes, students will acquire and hone the skills they need for success in the field of interactive design.
-<!-- .intro -->
+<!-- .intro data-description -->
 
 ### Fall <!-- .fall .print--break -->
 

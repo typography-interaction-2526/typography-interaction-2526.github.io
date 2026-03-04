@@ -3,7 +3,7 @@
 	<script webc:setup>
 		export const addNbsp = (string) => string.replace(' ', '\u00A0') // Prevent Safari from hiding words.
 
-		export const getDescription = (description, content) => {
+		export const getDescription = ({ content, description }) => {
 			const document = parse(content)
 			const descriptions = document.querySelectorAll('main [data-description]')
 
@@ -27,7 +27,7 @@
 		>
 		<title @text="stripTags(addNbsp(markdown(title)))"></title>
 		<meta
-			:content="getDescription(description, content)"
+			:content="getDescription($data)"
 			name="description"
 		>
 		<link

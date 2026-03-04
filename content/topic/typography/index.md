@@ -13,6 +13,7 @@ Writing gives the impression of things. Conversely, things can give the impressi
 </blockquote>
 
 Typography is the form and structure into which words are manifested into our world. It has a long and storied history, and it’s our job to both understand this history and, from it, how to apply type effectively.
+<!-- data-description -->
 
 ## A Brief History of Typography
 

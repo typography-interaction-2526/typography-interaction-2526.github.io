@@ -327,6 +327,7 @@ With this understanding, the same model exists in nearly all software. (For exa
 ## Our Lens
 
 Learning good, effective design in any medium necessitates knowing it thoroughly and completely, and we’re going strive to do that by truly understanding the web. It is fundamentally a medium of text, and thus a medium of typography—and this semester we will use that as our lens.
+<!-- data-description -->
 
 In your careers, the software, languages, and platforms might be different, and to some extent, are ever-changing–but the design ideas and considerations are analogous and universal. To understand design for the web is to understand interactive design. And in our lives today, to understand interactive design is to understand all design.
 
