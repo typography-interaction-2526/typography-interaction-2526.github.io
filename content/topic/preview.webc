@@ -1,10 +1,12 @@
 <script front-matter>
 	const layout = 'base'
+	const eleventyExcludeFromCollections = true
 	const pagination = {
 		alias: 'example',
 		data: 'examples',
 		size: 1,
 	}
+
 	const permalink = ({ example: { example, topic } }) => `topic/${topic}/${example}/preview/`
 </script>
 

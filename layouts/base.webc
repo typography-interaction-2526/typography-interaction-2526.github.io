@@ -27,7 +27,7 @@
 		>
 		<title @text="stripTags(addNbsp(markdown(title || course.title)))"></title>
 		<template
-			webc:if="title"
+			webc:if="!eleventyExcludeFromCollections"
 			webc:nokeep
 		>
 			<!-- TODO Generate /preview metadata? -->
@@ -36,6 +36,11 @@
 				name="description"
 			>
 		</template>
+		<meta
+			webc:else
+			content="noindex, nofollow"
+			name="robots"
+		>
 		<link
 			href="/assets/icons/favicon.ico"
 			rel="icon"

@@ -1,0 +1,31 @@
+<script front-matter>
+	const layout = 'base'
+	const eleventyExcludeFromCollections = true
+	const pagination = {
+		alias: 'meta',
+		data: 'collections.all',
+		size: 1,
+	}
+
+	const permalink = ({ meta }) => meta.url && `${meta.url}meta.html`
+</script>
+<style>
+	body {
+		--size: 9.66vw;
+
+		block-size:  100vh;
+		display:     grid;
+		inline-size: 100vw;
+
+		> section {
+			background-color: var(--background, var(--background--root));
+			display:          grid;
+			padding:          1cap;
+			place-content:    center;
+		}
+	}
+</style>
+<section
+	:style="meta.data.unitNumber ? `--background: var(--background--${meta.data.unitNumber})` : ''">
+	<h1 @html="meta.data.title"></h1>
+</section>
