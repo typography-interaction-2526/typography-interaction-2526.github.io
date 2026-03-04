@@ -261,54 +261,12 @@ Here, (ironically, *pre*-Meta) Facebook led the charge—what the iPhone was for
 This type of added info, broadly, can be referred to as *structured data* or *[metadata](https://en.wikipedia.org/wiki/Metadata)*—hence Facebook’s name change!
 <!-- .before--3 .intro .body -->
 
-### Image
-
-So beyond your [*favicon* and *touch* images](#favicons-and-touch-images), you can also specify an `og:image` (*OG* for *Open Graph*) in your `<head>`. This is often used for more *page-specific* images: the main photo for a news article, the product shot in <nobr>e-commerce,</nobr> and so on.
-
-These are generally made visible when sharing a link on Facebook, LinkedIn, Slack, Messages, etc.—where these sites/apps generate a *share card* or *preview* (also sometimes called [an *unfurl*](https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254)) for the URL:
-<!-- .balance -->
-
-<figure
-	@caption="Slack shows the whole image."
-	@source="og-image--full.svg"
-	class="verso"
-	>
-</figure>
-
-<figure
-	@caption="LinkedIn crops in to ~16:9."
-	@source="og-image--crop.svg"
-	class="recto"
-	style="align-self: start"
-	>
-</figure>
-
-These should be JPG&NoBreak;s (for more [photographic content](/topic/images/#image-formats)), or PNG&NoBreak;s (still opaque). Tradition/inertia suggests Facebook’s original `1200px` × `630px` dimension—but every context/app handles these differently. A better, modern rule-of-thumb is an image *around* `1200px` on the long edge, at its original/best aspect-ratio. We might even do `2000px`, these (HiDPI) days!
-
-These are again specified in your `<head>`, now with `<meta>` elements—importantly, with the *full, absolute* URL for the file:
-<!-- .after .before .balance-->
-
-```html <!-- .all -->
-<head>
-	<title>Week 22</title>
-	<link href="assets/icons/favicon.ico" rel="icon" sizes="any">
-	<link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml">
-	<link href="assets/icons/touch.png"  rel="apple-touch-icon">
-	<meta content="https://typography-interaction-2526.github.io/assets/icons/meta.png" property="og:image">
-	<meta content="Black background with white, modernist text of the site title." property="og:image:alt" >
-	<!-- The rest of your head… -->
-</head>
-```
-
-Note these allow an `alt` text for accessibility, in a separate tag.
-<!-- .note -->
-
 ### Title and Description
 
-Open Graph also specifies `og:title` and `og:description` properties. However, we *already* have a `<title>` element—and there was an existing convention around descriptions—which browsers, apps, and search engines continue to use.
+Open Graph specifies `og:title` and `og:description` properties. However, we *already* have a `<title>` element—and there was an existing convention around descriptions—which browsers, apps, and search engines continue to use.
 <!-- .balance -->
 
-We generally think including redundant `og:` versions for title/description is often unnecessary. ([SEO](https://en.wikipedia.org/wiki/Search_engine_optimization)/*snake-oil* folks might disagree.) If you are worried—or your boss tells you to—you could duplicate the tags. One reason might be to tailor different content (like your description length), for different platforms. But we don’t think it is worth it, most of the time!
+We generally think including redundant `og:` versions for title/description is unnecessary. ([SEO](https://en.wikipedia.org/wiki/Search_engine_optimization)/*snake-oil* folks might disagree.) If you are worried—or your boss tells you to—you could duplicate the tags. One reason might be to tailor different content (like your description length), for different platforms. But we don’t think it is worth it, most of the time!
 
 Again, different apps are going to display and use this information in their own way—so there are no hard rules on length, and you’ll want to check the contexts you care about. Generally, *tweet-length* ([*toot–length*](https://joinmastodon.org)?) works well—so somewhere around 140 characters.
 <!-- .before--2 .balance -->
@@ -343,6 +301,48 @@ Titles and descriptions should always be plain text—no HTML inside. You can u
 Google makes its *snippet* from your `description`—but it might also show other text there, based on your search. It also might decide to show your images, or not! Ultimately, you can only *suggest* these things—with all the metadata, it is up to the other side!
 
 </aside>
+
+### Image
+
+In addition to your [*favicon* and *touch* images](#favicons-and-touch-images), you can also specify an `og:image` (*OG* for *Open Graph*) in your `<head>`. This is often used for more *page-specific* images: the main photo for a news article, the product shot in <nobr>e-commerce,</nobr> and so on.
+
+These are generally made visible when sharing a link on Facebook, LinkedIn, Slack, Messages, etc.—where these sites/apps generate a *share card* or *preview* (also sometimes called [an *unfurl*](https://medium.com/slack-developer-blog/everything-you-ever-wanted-to-know-about-unfurling-but-were-afraid-to-ask-or-how-to-make-your-e64b4bb9254)) for the URL:
+<!-- .balance -->
+
+<figure
+	@caption="Slack shows the whole image."
+	@source="og-image--full.svg"
+	class="verso"
+	>
+</figure>
+
+<figure
+	@caption="LinkedIn crops in to ~16:9."
+	@source="og-image--crop.svg"
+	class="recto"
+	style="align-self: start"
+	>
+</figure>
+
+These should be JPG&NoBreak;s (for more [photographic content](/topic/images/#image-formats)), or PNG&NoBreak;s (still opaque). Tradition/inertia suggests Facebook’s original `1200px` × `630px` dimension—but every context/app handles these differently. A better, modern rule-of-thumb is an image *around* `1200px` on the long edge, at its original/best aspect-ratio—with a ~&#x202F;16:9 “safe area” in the middle. We might even do `2000px`, these (HiDPI) days!
+
+These are again specified in your `<head>`, now with `<meta>` elements—importantly, with the *full, absolute* URL for the file:
+<!-- .after .before .balance-->
+
+```html <!-- .all -->
+<head>
+	<title>Week 22</title>
+	<link href="assets/icons/favicon.ico" rel="icon" sizes="any">
+	<link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml">
+	<link href="assets/icons/touch.png"  rel="apple-touch-icon">
+	<meta content="https://typography-interaction-2526.github.io/assets/meta/22.png" property="og:image">
+	<meta content="Pale green background with black, vernacular “Gorton” text of the page title/date." property="og:image:alt" >
+	<!-- The rest of your head… -->
+</head>
+```
+
+Note the *full* URL—and that these allow an `og:image:alt` text for better accessibility, in a separate tag.
+<!-- .note -->
 
 ### Audio and Video
 

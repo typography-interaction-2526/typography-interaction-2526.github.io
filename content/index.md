@@ -1,5 +1,6 @@
 <script front-matter>
 	const eleventyComputed = { title: ({ course }) => course.title }
+	const meta = true
 </script>
 
 <div class="balance body">
