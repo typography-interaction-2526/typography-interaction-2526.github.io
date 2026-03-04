@@ -125,12 +125,18 @@ We’ve omitting the [responsive `viewport` element](/topic/responsive/#viewport
 <!-- .balance -->
 
 <figure
-	@caption="Safari adds this white border!"
+	@caption="Safari (…sometimes) adds this white border!"
 	@source="mat.svg"
 	class="right start"
-	style="margin-block-start: 1lh; text-align: center;"
+	style="margin-block-start: 1lh"
 	>
 </figure>
+
+<style>
+	figure.right.start figcaption {
+		margin-inline-start: 1lh;
+	}
+</style>
 
 ### Modern SVG&NoBreak;<small>s</small>
 
