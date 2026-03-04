@@ -3,11 +3,12 @@
 	const eleventyExcludeFromCollections = true
 	const pagination = {
 		alias: 'meta',
+		before: (items) => items.filter(({ url }) => url),
 		data: 'collections.all',
 		size: 1,
 	}
 
-	const permalink = ({ meta }) => meta.url && `${meta.url}meta.html`
+	const permalink = ({ meta }) => `${meta.url}meta.html`
 </script>
 <style>
 	body {
