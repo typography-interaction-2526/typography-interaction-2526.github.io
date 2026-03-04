@@ -1,9 +1,8 @@
-<script front-matter>
-	const addNbsp = (string) => string.replace(' ', '\u00A0') // Prevent Safari from hiding words.
-</script>
-
 <!doctype html>
 <html lang="en">
+	<script webc:setup>
+		export const addNbsp = (string) => string.replace(' ', '\u00A0') // Prevent Safari from hiding words.
+	</script>
 	<head>
 		<meta charset="utf-8">
 		<meta
