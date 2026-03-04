@@ -16,6 +16,8 @@ import pluginToc from '@uncenter/eleventy-plugin-toc'
 
 import stripTags from 'striptags'
 
+import { parse } from 'node-html-parser'
+
 export default (eleventyConfig) => {
 	// Setup.
 	eleventyConfig.addBundle('css', { toFileDirectory: 'assets' })
@@ -163,6 +165,8 @@ export default (eleventyConfig) => {
 		.replace(/(\w{3})/, (month) => month === 'May' ? month : month + '.'))
 
 	eleventyConfig.addFilter('inlineSvg', async (svg) => (await image(svg, { dryRun: true, formats: ['svg'] }))?.svg?.[0]?.buffer?.toString())
+
+	eleventyConfig.addFilter('parse', (content) => parse(content))
 
 	// Transform words for faux-italics.
 	eleventyConfig.addTransform('italicSpans', function(html) {

@@ -2,6 +2,22 @@
 <html lang="en">
 	<script webc:setup>
 		export const addNbsp = (string) => string.replace(' ', '\u00A0') // Prevent Safari from hiding words.
+
+		export const getDescription = (description, content) => {
+			const document = parse(content)
+			const descriptions = document.querySelectorAll('main [data-description]')
+
+			return stripTags(
+				description
+					? description
+					: descriptions.length
+						? descriptions.map((node) => node.textContent).join(' ')
+						: document.querySelector('main p') || '',
+			)
+				.trim()
+				.replace(/\s+/g, ' ') // Collapse white space.
+				.replace(/:$/, '.') // Fix ending colons.
+		}
 	</script>
 	<head>
 		<meta charset="utf-8">
@@ -10,6 +26,10 @@
 			name="viewport"
 		>
 		<title @text="stripTags(addNbsp(markdown(title)))"></title>
+		<meta
+			:content="getDescription(description, content)"
+			name="description"
+		>
 		<link
 			href="/assets/icons/favicon.ico"
 			rel="icon"
