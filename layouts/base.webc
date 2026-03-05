@@ -37,7 +37,7 @@
 			>
 			<meta
 				webc:if="meta"
-				:content="`${$data.pkg.homepage}/assets/meta/${$data.page.fileSlug ? $data.page.fileSlug : 'index'}.png`"
+				:content="$data.pkg.homepage + $data.page.url + 'meta.png'"
 				property="og:image"
 			>
 		</template>
