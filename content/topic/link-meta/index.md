@@ -286,7 +286,7 @@ We’ll add in a description, to our growing `<head>` stack:
 </head>
 ```
 
-Titles and descriptions should always be plain text—no HTML inside. You can use *encoded* Unicode symbols though, even [non-breaking spaces](/topic/advanced-css/#white-space-nowrap-nobr-and-nbsp:~:text=On%C2%A0a%20Mac,easier%20to%C2%A0read.) via <nobr><kbd>⌥</kbd> <kbd>Space</kbd></nobr>&#x202F;!
+Titles and descriptions should always be plain text—no HTML inside. You can use use [HTML character/entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references#:~:text=All%20named%20character%20entity%20references) (like [`&nbsp;` for ragging](/topic/advanced-css/#white-space-nowrap-nobr-and-nbsp:~:text=You%20can%20also%20use%20a%C2%A0manual%20%26nbsp%3B%20character/%E2%80%8Bentity%20reference%20between%C2%A0words)) and most [*encoded* Unicode symbols](https://unicode-explorer.com), though!
 <!-- .note -->
 
 <figure
