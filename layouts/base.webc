@@ -29,8 +29,12 @@
 			webc:nokeep
 		>
 			<!-- TODO Generate /preview metadata? -->
-			<meta
+			<!-- <meta
 				:content="getDescription($data)"
+				name="description"
+				> -->
+			<meta
+				content="Entity: &amp; Encoded: &, Entity: &nbsp;, Encoded:   and the \u00A0"
 				name="description"
 			>
 			<meta
