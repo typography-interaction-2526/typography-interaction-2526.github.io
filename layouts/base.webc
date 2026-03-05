@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="en">
 	<script webc:setup>
-		export const addNbsp = (string) => string.replace(' ', '\u00A0') // Prevent Safari from hiding words.
-
 		export const getDescription = ({ content, description }) => {
 			const document = parse(content)
 			const descriptions = document.querySelectorAll('main [data-description]')
@@ -25,7 +23,7 @@
 			content="initial-scale=1, width=device-width, viewport-fit=cover"
 			name="viewport"
 		>
-		<title @text="stripTags(addNbsp(markdown(title || course.title)))"></title>
+		<title @html="stripTags(title || course.title)"></title>
 		<template
 			webc:if="!eleventyExcludeFromCollections"
 			webc:nokeep
