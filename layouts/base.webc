@@ -15,6 +15,8 @@
 				.trim()
 				.replace(/\s+/g, ' ') // Collapse white space.
 				.replace(/:$/, '.') // Fix ending colons.
+				.replace(/&nbsp;/g, '\u00A0') // Decode entity so Eleventy doesn’t `&amp;` it.
+
 		}
 	</script>
 	<head>
@@ -30,7 +32,7 @@
 		>
 			<!-- TODO Generate /preview metadata? -->
 			<meta
-				:content="getDescription($data).replaceAll('&amp;nbsp;', '&nbsp;')"
+				:content="getDescription($data)"
 				name="description"
 			>
 			<meta
