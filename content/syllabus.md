@@ -292,7 +292,7 @@ To wrap up the semester (and course), we’ll round out our knowledge of the web
 - [<cite>Material Design 3</cite>](https://m3.material.io/)
 	Google, 2021 (*ongoing*)
 
-- [<cite>Human Interface Guidelines</cite>](https://developer.apple.com/design/human-interface-guidelines/guidelines/overview/)
+- [<cite>Human Interface Guidelines</cite>](https://developer.apple.com/design/human-interface-guidelines)
 	Apple, 2022 (*ongoing*)
 
 - [<cite>Fluent 2 Design System</cite>](https://www.microsoft.com/design/fluent/)
