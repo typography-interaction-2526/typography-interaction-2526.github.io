@@ -15,7 +15,8 @@
 				.trim()
 				.replace(/\s+/g, ' ') // Collapse white space.
 				.replace(/:$/, '.') // Fix ending colons.
-				.replace(/&nbsp;/g, '\u00A0') // Decode entity so Eleventy doesn’t `&amp;` it.
+				.replace(/&amp;/g, '\u0026') // Decode entity so Eleventy doesn’t `&amp;` it twice.
+				.replace(/&nbsp;/g, '\u00A0') // Same.
 
 		}
 	</script>
