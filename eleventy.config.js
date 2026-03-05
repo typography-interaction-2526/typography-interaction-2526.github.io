@@ -18,6 +18,10 @@ import stripTags from 'striptags'
 
 import { parse } from 'node-html-parser'
 
+import { readdir, readFile } from 'fs/promises'
+import { resolve, join } from 'path'
+import puppeteer from 'puppeteer'
+
 export default (eleventyConfig) => {
 	// Setup.
 	eleventyConfig.addBundle('css', { toFileDirectory: 'assets' })
@@ -207,6 +211,41 @@ export default (eleventyConfig) => {
 
 	// Big, combined, non-root collection. (Sorting is template-side!)
 	eleventyConfig.addCollection('pages', (collection) => collection.getFilteredByGlob('content/*/**/*.md'))
+
+	// Save `meta.html` to `meta.png` for dynamic `og:image`.
+	eleventyConfig.on('eleventy.after', async ({ dir }) => {
+		if (process.env.ELEVENTY_RUN_MODE !== 'build') return
+
+		const output = resolve(dir.output)
+		const entries = await readdir(output, { recursive: true, withFileTypes: true })
+		const files = entries
+			.filter((entry) => entry.isFile() && entry.name === 'meta.html')
+			.map((entry) => join(entry.parentPath, entry.name))
+
+		const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] })
+
+		for (const file of files) {
+			const page = await browser.newPage()
+
+			await page.setRequestInterception(true)
+
+			page.on('request', async (req) => {
+				try {
+					const body = await readFile(join(output, new URL(req.url()).pathname))
+					await req.respond({ body, status: 200 })
+				} catch {
+					await req.abort()
+				}
+			})
+
+			await page.setViewport({ height: 2000, width: 2000  })
+			await page.goto(`http://localhost/${file.replace(output, '').replace(/\\/g, '/')}`, { waitUntil: 'networkidle0' })
+			await page.screenshot({ path: file.replace('meta.html', 'meta.png') })
+			await page.close()
+		}
+
+		await browser.close()
+	})
 
 	// Remainder setup.
 	return {
