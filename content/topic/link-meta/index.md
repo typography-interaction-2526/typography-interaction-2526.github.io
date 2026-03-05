@@ -286,7 +286,7 @@ We’ll add in a description, to our growing `<head>` stack:
 </head>
 ```
 
-Titles and descriptions should always be plain text—no HTML inside. You can usually use [entities](https://developer.mozilla.org/en-US/docs/Glossary/Entity) or encoded [non-breaking spaces](/topic/advanced-css/#nobr-and-nbsp), though!
+Titles and descriptions should always be plain text—no HTML inside. You can use *encoded* Unicode symbols though, even [non-breaking spaces](/topic/advanced-css/#white-space-nowrap-nobr-and-nbsp:~:text=On%C2%A0a%20Mac,easier%20to%C2%A0read.) via <nobr><kbd>⌥</kbd> <kbd>Space</kbd></nobr>&#x202F;!
 <!-- .note -->
 
 <figure
