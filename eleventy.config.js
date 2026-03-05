@@ -19,7 +19,7 @@ import stripTags from 'striptags'
 import { parse } from 'node-html-parser'
 
 import { readdir, readFile } from 'fs/promises'
-import { resolve, join } from 'path'
+import { resolve, join, dirname } from 'path'
 import puppeteer from 'puppeteer'
 
 export default (eleventyConfig) => {
@@ -222,29 +222,33 @@ export default (eleventyConfig) => {
 			.filter((entry) => entry.isFile() && entry.name === 'meta.html')
 			.map((entry) => join(entry.parentPath, entry.name))
 
-		const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] })
+		const browser = await puppeteer.launch({
+			args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--disable-gpu', '--disable-accelerated-2d-canvas'],
+		})
 
-		for (const file of files) {
-			const page = await browser.newPage()
+		try {
+			await Promise.all(files.map(async (file) => {
+				const page = await browser.newPage()
 
-			await page.setRequestInterception(true)
+				await page.setRequestInterception(true)
 
-			page.on('request', async (req) => {
-				try {
-					const body = await readFile(join(output, new URL(req.url()).pathname))
-					await req.respond({ body, status: 200 })
-				} catch {
-					await req.abort()
-				}
-			})
+				page.on('request', async (req) => {
+					try {
+						const body = await readFile(join(output, new URL(req.url()).pathname))
+						await req.respond({ body, status: 200 })
+					} catch {
+						await req.abort()
+					}
+				})
 
-			await page.setViewport({ height: 2000, width: 2000  })
-			await page.goto(`http://localhost/${file.replace(output, '').replace(/\\/g, '/')}`, { waitUntil: 'networkidle0' })
-			await page.screenshot({ path: file.replace('meta.html', 'meta.png') })
-			await page.close()
+				await page.setViewport({ deviceScaleFactor: 2, height: 1000, width: 1000 })
+				await page.goto(`http://localhost/${file.replace(output + '/', '')}`, { waitUntil: 'load' })
+				await page.screenshot({ path: join(dirname(file), 'meta.png') })
+				await page.close()
+			}))
+		} finally {
+			await browser.close()
 		}
-
-		await browser.close()
 	})
 
 	// Remainder setup.
