@@ -9,8 +9,8 @@
 				description
 					? description
 					: descriptions.length
-						? descriptions.map((node) => node.textContent).join(' ')
-						: document.querySelector('main p') || '',
+						? descriptions.map((node) => node.innerHTML).join(' ')
+						: document.querySelector('main p')?.innerHTML || '',
 			)
 				.trim()
 				.replace(/\s+/g, ' ') // Collapse white space.
@@ -29,12 +29,8 @@
 			webc:nokeep
 		>
 			<!-- TODO Generate /preview metadata? -->
-			<!-- <meta
-				:content="getDescription($data)"
-				name="description"
-				> -->
 			<meta
-				content="Entity: &amp; Encoded: &, Entity: &nbsp;, Encoded:   and the \u00A0"
+				:content="getDescription($data).replaceAll('&amp;nbsp;', '&nbsp;')"
 				name="description"
 			>
 			<meta
