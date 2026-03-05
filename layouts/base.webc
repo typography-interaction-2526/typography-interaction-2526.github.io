@@ -36,7 +36,6 @@
 				name="description"
 			>
 			<meta
-				webc:if="meta"
 				:content="$data.pkg.homepage + $data.page.url + 'meta.png'"
 				property="og:image"
 			>
