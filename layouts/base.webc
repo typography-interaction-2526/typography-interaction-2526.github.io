@@ -3,21 +3,21 @@
 	<script webc:setup>
 		export const getDescription = ({ content, description }) => {
 			const document = parse(content)
+
 			const descriptions = document.querySelectorAll('main [data-description]')
 
-			return stripTags(
-				description
-					? description
-					: descriptions.length
-						? descriptions.map((node) => node.innerHTML).join(' ')
-						: document.querySelector('main p')?.innerHTML || '',
-			)
+			const descriptionHtml = description
+				? description
+				: descriptions.length
+					? [...descriptions].map((node) => node.innerHTML).join(' ')
+					: document.querySelector('main p')?.innerHTML || ''
+
+			return stripTags(descriptionHtml)
 				.trim()
 				.replace(/\s+/g, ' ') // Collapse white space.
 				.replace(/:$/, '.') // Fix ending colons.
 				.replace(/&amp;/g, '\u0026') // Decode entity so Eleventy doesn’t `&amp;` it twice.
 				.replace(/&nbsp;/g, '\u00A0') // Same.
-
 		}
 	</script>
 	<head>
