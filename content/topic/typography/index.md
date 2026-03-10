@@ -438,23 +438,50 @@ When in doubt, [*The Elements of Typographic Style*](https://readings.design/PDF
 
 Where does one find typefaces? From *foundries*, again referencing the days when making type involved casting actual metal. While most computers now come with many good ones, there are many other places to get fonts. Here are some that we like:
 
-- [Adobe Fonts](https://fonts.google.com/)
-- [Comercial Type](https://commercialtype.com/)
-- [Dinamo](https://abcdinamo.com/)
-- [Forgotten Shapes](https://forgotten-shapes.com/)
-- [Google Fonts](https://fonts.google.com/) (free!)
-- [Grilli Type](https://www.grillitype.com/)
-- [Indian Type Foundry](https://www.indiantypefoundry.com/)/[Fontshare](https://www.fontshare.com/) (free!)
-- [Klim](https://klim.co.nz/)
-- [Lineto](https://lineto.com/)
-- [Matthew Hinders-Anderson](https://wehtt.am/fonts/) (free for non-commercial!)
-- [MCKL](https://mckltype.com/)
-- [Order](https://order.design/otf)
-- [Typographer](https://typographer.com) (free for students!)
-- [Typotheque](https://www.typotheque.com/)
+- [<cite>Adobe Fonts</cite>](https://fonts.google.com/)
+- [<cite>Comercial Type</cite>](https://commercialtype.com/)
+- [<cite>Dinamo</cite>](https://abcdinamo.com/)
+- [<cite>Forgotten Shapes</cite>](https://forgotten-shapes.com/)
+- [<cite>Grilli Type</cite>](https://www.grillitype.com/)
+- [<cite>Indian Type Foundry</cite>](https://www.indiantypefoundry.com/)
+- [<cite>Klim</cite>](https://klim.co.nz/)
+- [<cite>Lineto</cite>](https://lineto.com/)
+- [<cite>MCKL</cite>](https://mckltype.com/)
+- [<cite>Order</cite>](https://order.design/otf)
+- [<cite>Typotheque</cite>](https://www.typotheque.com/)
+<!-- .left .before--2 -->
+
+<!-- BREAK -->
+
+- [<cite>Google Fonts</cite>](https://fonts.google.com/)
+	Free! And popular/huge.
+- [<cite>Fontshare</cite>](https://www.fontshare.com/)
+	Free! From *Indian Type Foundry*, left.
+- [<cite>Matthew Hinders-Anderson</cite>](https://wehtt.am/fonts/)
+	Free for non-commercial!
+- [<cite>Typographer</cite>](https://typographer.com)
+	Free for students!
+<!-- .middle .after -->
 
 While not a type foundry itself, we include (and will use) *Google Fonts* resource because of its vast array of open-source typefaces. *Adobe Fonts* is similar, but requires a paid subscription.
 <!-- .note -->
+
+<!-- <style>
+	ul.all {
+		column-gap:            var(--alley);
+		grid-auto-columns:     minmax(0, 1fr);
+
+		@container style(--columns: 6) {
+			--count: 16;
+
+			grid-auto-flow:        column;
+			grid-template-columns: initial;
+			grid-template-rows:    repeat(calc(var(--count) / 2), min-content);
+
+			> li { max-inline-size: 24ch } /* TODO Adjust this for the names? */
+		}
+	}
+</style> -->
 
 <aside>
 
