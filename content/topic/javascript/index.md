@@ -82,7 +82,7 @@ Note the single quotes when nested/inside doubles!
 This works for very, very simple things, but—for many of the same reasons as inline CSS—is brittle and doesn’t scale with complexity, or across multiple pages. Try writing a whole, elaborate function in there, let alone an entire framework! No good.
 <!-- .before--2 -->
 
-<aside>
+<aside id="outdated">
 
 <mark>Use caution: outdated examples abound</mark>
 
