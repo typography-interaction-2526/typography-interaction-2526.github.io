@@ -59,12 +59,13 @@ main {
 	}
 
 	/* Default to body width. */
-	:where(&, section) > * { grid-column: body }
+	:where(&, details, section) > * { grid-column: body }
 
 	/* Limit paragraphs (inside things), sameish. */
 	:where(p) { max-inline-size: 49ch }
 
 	/* Containers. */
+	details,
 	div,
 	dl,
 	ol,
@@ -77,7 +78,7 @@ main {
 	}
 
 	/* Subgridded `section`. */
-	section {
+	details, section {
 		grid-column:           all;
 		grid-template-columns: subgrid;
 	}
@@ -226,23 +227,26 @@ main {
 
 	/* TODO More structure here! */
 	details {
-		display: grid;
-		row-gap: inherit;
-
 		&:where(:not(:first-child)), &:where(:not(:last-child)) + * { margin-block-start: 1rlh }
 
-		&[open]::details-content {
-			--size:   var(--size--h2);
-			--weight: 500;
+		> summary { grid-column: all }
 
-			display: grid;
-			row-gap: 3rlh;
+		ul {
+			margin-block-start: initial;
+			row-gap:            1rlh;
 		}
 
-		/* TODO Baseline grid is off, here. */
-		> p:first-of-type { margin-block-start: calc(1cap - 1rcap) }
+		&[open]::details-content {
+			display:               grid;
+			grid-column:           all;
+			grid-template-columns: subgrid;
+			row-gap:               inherit;
+		}
 
-		> ul { row-gap: 1rlh }
+		&:not([open]) { row-gap: initial }
+
+		/* TODO Baseline grid is off, here. */
+		> summary + * { margin-block-start: 1rlh }
 	}
 
 	/* Tables for the grade breakdown. */
