@@ -494,7 +494,7 @@ Relatedly, there has been much discussion and developments in our field (and ot
 
 Here’s what we’re going to say about this: tools like the conspicuous [Chat&NoBreak;GPT](https://openai.com/blog/chatgpt), [Claude Code](https://claude.com/product/claude-code), [Cursor’s IDE](https://cursor.com/en), or [GitHub Copilot](https://github.com/features/copilot) are known to often generate wrong or unnecessarily verbose code. This, combined with the fact that their results are derived from copyrighted and/or legally questionable sources—usually without permission or attribution—means the use of these tools continues to be fraught, at best.
 
-We think you first need to write code yourself to understand the medium. Copying/adapting from Chat&NoBreak;GPT/Copilot is no different from anywhere else ([see above](#code-plagiarism)) and is ultimately a disservice to your education. These are always to be treated like any other tools at our disposal—as *aides* to our understanding, not *shortcuts* around learning. ~~We think you know the difference.~~
+We think you first need to write code yourself to understand the medium. Copying/adapting code from LLM&NoBreak;s is no different from anywhere else ([see above](#code-plagiarism)) and is ultimately a disservice to your education. These are always to be treated like any other tools at our disposal—as *aides* to our understanding, not *shortcuts* around learning. ~~We think you know the difference.~~
 
 After [our](/week/22/#lets-talk-about-ai-again) [continued](/week/23/#ai) [discussions](/week/24/#ai-for-the-last-time) around this, unpacking what that means:
 <!-- .note -->
@@ -511,14 +511,18 @@ After [our](/week/22/#lets-talk-about-ai-again) [continued](/week/23/#ai) [discu
 
 - Your questions there should clearly demonstrate the tool is being used to *aid your understanding*, not as a *shortcut*.
 
+	Think: these are questions you would ask your instructors. <!-- .note -->
+
 - If you cannot furnish a link to your “conversation” and questions, you cannot use the tool nor its output.
 
 - Students will attest to their understanding of this, and agree to use the tools only in this prescribed manner.
 
-- Any indication that LLM&NoBreak;s are being used outside of these rules will be considered [academic dishonesty](https://docs.google.com/document/d/175hXxUbLI8Jy7NEtbeoyX3Va_MQzXzgxzFUjj7hSkSU), which will be reported (and result in a failing grade).
-<!-- .balance style="margin-block-start: initial" -->
+- Any other uses/edge-cases require prior instructor approval.
 
-**The LLM is there to help answer your questions, not write your code.**
+- Finally, any indication that LLM&NoBreak;s are being used outside of these rules will be considered [academic dishonesty](https://docs.google.com/document/d/175hXxUbLI8Jy7NEtbeoyX3Va_MQzXzgxzFUjj7hSkSU), which will be reported (and result in a failing grade).
+<!-- .balance style="row-gap: 3rcap; margin-block-start: initial" -->
+
+**The LLM is there to help answer your questions—not write your code&#x202F;/&thinsp;do your work.**
 <!-- .balance -->
 
 </details>
@@ -527,7 +531,7 @@ After [our](/week/22/#lets-talk-about-ai-again) [continued](/week/23/#ai) [discu
 
 <mark>Detailed “AI” policy now in effect</mark>
 
-This elucidated, agreed-upon approach here is what we will be adhering to for the remainder of the course.
+This elucidated, agreed-upon approach is what we will be adhering to for the remainder of the course.
 
 </aside>
 
