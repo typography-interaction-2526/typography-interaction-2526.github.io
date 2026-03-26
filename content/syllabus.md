@@ -503,7 +503,7 @@ After [our](/week/22/#lets-talk-about-ai-again) [continued](/week/23/#ai) [discu
 
 - LLM&NoBreak;s can only be used in “ask” mode, and then only via their own web/app “conversation” interfaces.
 
-- This means any/all “agent” use is be forbidden—including IDE and other integrations (such as *Claude Code* or *GitHub Copilot*).
+- This means any/all “agent” use is be forbidden—including IDE/CLI and other integrations (such as *Claude Code* or *GitHub Copilot*).
 
 - You are still expected to *write* your code—you are not just copying/pasting the LLM output and commenting on it.
 
@@ -515,7 +515,7 @@ After [our](/week/22/#lets-talk-about-ai-again) [continued](/week/23/#ai) [discu
 
 - Students will attest to their understanding of this, and agree to use the tools only in this prescribed manner.
 
-- Any indication that LLM&NoBreak;s are used outside of these rules will be considered [academic dishonesty](https://docs.google.com/document/d/175hXxUbLI8Jy7NEtbeoyX3Va_MQzXzgxzFUjj7hSkSU), which will be reported (and result in a failing grade).
+- Any indication that LLM&NoBreak;s are being used outside of these rules will be considered [academic dishonesty](https://docs.google.com/document/d/175hXxUbLI8Jy7NEtbeoyX3Va_MQzXzgxzFUjj7hSkSU), which will be reported (and result in a failing grade).
 <!-- .balance -->
 
 **The LLM is there to help answer your questions, not write your code.**
