@@ -231,11 +231,6 @@ main {
 
 		> summary { grid-column: all }
 
-		ul {
-			margin-block-start: initial;
-			row-gap:            1rlh;
-		}
-
 		&[open]::details-content {
 			display:               grid;
 			grid-column:           all;
