@@ -509,14 +509,14 @@ After [our](/week/22/#lets-talk-about-ai-again) [continued](/week/23/#ai) [discu
 
 - In the [attribution](#attribution) for each LLM use, you must include a link to the actual, corresponding “conversation” with your questions.
 
-- Your questions there should clearly demonstrate the tool is being used to *aid your understanding*, not as a shortcut.
+- Your questions there should clearly demonstrate the tool is being used to *aid your understanding*, not as a *shortcut*.
 
 - If you cannot furnish a link to your “conversation” and questions, you cannot use the tool nor its output.
 
 - Students will attest to their understanding of this, and agree to use the tools only in this prescribed manner.
 
 - Any indication that LLM&NoBreak;s are being used outside of these rules will be considered [academic dishonesty](https://docs.google.com/document/d/175hXxUbLI8Jy7NEtbeoyX3Va_MQzXzgxzFUjj7hSkSU), which will be reported (and result in a failing grade).
-<!-- .balance -->
+<!-- .balance style="margin-block-start: initial" -->
 
 **The LLM is there to help answer your questions, not write your code.**
 <!-- .balance -->
