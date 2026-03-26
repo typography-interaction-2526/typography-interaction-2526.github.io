@@ -14,6 +14,7 @@ export default [
 	{ abbr: 'CD',      title: 'Communication Design' },
 	{ abbr: 'CERN',    title: 'European Organization for Nuclear Research' },
 	{ abbr: 'CMS',     title: 'Content Management System' },
+	{ abbr: 'CLI',     title: 'Command Line Interface' },
 	{ abbr: 'CRN',     title: 'Course Registration Number, probably' },
 	{ abbr: 'CRT',     title: 'Cathode Ray Tube' },
 	{ abbr: 'CSS',     title: 'Cascading Style Sheets' },
