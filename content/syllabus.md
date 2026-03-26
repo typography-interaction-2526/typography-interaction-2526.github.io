@@ -492,9 +492,44 @@ Copying, pasting, or autocompleting code in the absence of an attribution and ex
 <!-- This link is broken in print! Underline. -->
 Relatedly, there has been much discussion and developments in our field (and others) around [*large language models*](https://en.wikipedia.org/wiki/Large_language_model), a.k.a. “artificial intelligence.”
 
-Here’s what we’re going to say about this: tools like the conspicuous [Chat&NoBreak;GPT](https://openai.com/blog/chatgpt), [Cursor’s IDE](https://cursor.com/en), or [GitHub Copilot](https://github.com/features/copilot) are known to often generate wrong or unnecessarily verbose code. This, combined with the fact that their results are derived from copyrighted and/or legally questionable sources—usually without permission or attribution—means the use of these tools continues to be fraught, at best.
+Here’s what we’re going to say about this: tools like the conspicuous [Chat&NoBreak;GPT](https://openai.com/blog/chatgpt), [Claude Code](https://claude.com/product/claude-code), [Cursor’s IDE](https://cursor.com/en), or [GitHub Copilot](https://github.com/features/copilot) are known to often generate wrong or unnecessarily verbose code. This, combined with the fact that their results are derived from copyrighted and/or legally questionable sources—usually without permission or attribution—means the use of these tools continues to be fraught, at best.
 
-We think you first need to write code yourself to understand the medium. Copying/adapting from Chat&NoBreak;GPT/Copilot is no different from anywhere else ([see above](#code-plagiarism)) and is ultimately a disservice to your education. These are always to be treated like any other tools at our disposal—as *aides* to your understanding, not *shortcuts* around learning. We think you know the difference.
+We think you first need to write code yourself to understand the medium. Copying/adapting from Chat&NoBreak;GPT/Copilot is no different from anywhere else ([see above](#code-plagiarism)) and is ultimately a disservice to your education. These are always to be treated like any other tools at our disposal—as *aides* to our understanding, not *shortcuts* around learning. ~~We think you know the difference.~~
+
+After [our](/week/22/#lets-talk-about-ai-again) [continued](/week/23/#ai) [discussions](/week/24/#ai-for-the-last-time) around this, unpacking what that means:
+<!-- .note -->
+
+#### “Aides to our understanding”
+
+- LLM&NoBreak;s can only be used in “ask” mode, and then only via their own web/app “conversation” interfaces.
+
+- This means any/all “agent” use is be forbidden—including IDE and other integrations (such as *GitHub Copilot* or *Claude Code*).
+
+- You are still be expected to *write* your code—you are not just copying/pasting the LLM output and commenting on it.
+
+- In the [attribution](#attribution) for each LLM use, you must include a link to the actual, corresponding “conversation” with your questions.
+
+- Your questions there should clearly demonstrate the tool is being used to *aid your understanding*, not as a shortcut.
+
+- If you cannot furnish a link to your “conversation” and questions, you cannot use the tool nor its output.
+
+- Students will attest to their understanding of this, and agree to use the tools only in this prescribed manner.
+
+- Any indication that LLM&NoBreak;s are used outside of these rules will be considered [academic dishonesty](https://docs.google.com/document/d/175hXxUbLI8Jy7NEtbeoyX3Va_MQzXzgxzFUjj7hSkSU), which will be reported (and result in a failing grade).
+<!-- .balance -->
+
+**The LLM is there to help answer your questions, not write your code.**
+<!-- .balance -->
+
+</details>
+
+<aside class="reverse">
+
+<mark>Detailed “AI” policy now in effect</mark>
+
+This elucidated, agreed-upon approach here is what we will be adhering to for the remainder of the course.
+
+</aside>
 
 ### Recording Sessions <!-- .print--break -->
 
