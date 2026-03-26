@@ -503,9 +503,9 @@ After [our](/week/22/#lets-talk-about-ai-again) [continued](/week/23/#ai) [discu
 
 - LLM&NoBreak;s can only be used in “ask” mode, and then only via their own web/app “conversation” interfaces.
 
-- This means any/all “agent” use is be forbidden—including IDE and other integrations (such as *GitHub Copilot* or *Claude Code*).
+- This means any/all “agent” use is be forbidden—including IDE and other integrations (such as *Claude Code* or *GitHub Copilot*).
 
-- You are still be expected to *write* your code—you are not just copying/pasting the LLM output and commenting on it.
+- You are still expected to *write* your code—you are not just copying/pasting the LLM output and commenting on it.
 
 - In the [attribution](#attribution) for each LLM use, you must include a link to the actual, corresponding “conversation” with your questions.
 
