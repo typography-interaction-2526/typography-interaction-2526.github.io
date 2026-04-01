@@ -100,6 +100,8 @@ We won’t be formally presenting this work, as with our other projects, but ar
 - “Put a bow on it” with considered, deliberate metadata.
 
 - We’d like to see some JS incorporated, for an interactive flourish.
+
+- **“AI”/&thinsp;LLM use must adhere to our [“ask-mode” policy](/syllabus/#aides-to-our-understanding).**
 <!-- .balance -->
 
 Everything else is up to you. Make it yours!
