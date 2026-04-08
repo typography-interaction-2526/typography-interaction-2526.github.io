@@ -635,6 +635,22 @@ main {
 		/* TODO `role` instead? */
 	}
 
+	.quote {
+		--color: var(--note);
+
+		padding-inline-start: 1rlh;
+		position:             relative;
+
+		&::before {
+			background-color: var(--color);
+			border-radius:    calc(var(--stroke) / 2);
+			content:          '';
+			inline-size:      var(--stroke);
+			inset:            calc(-1 * var(--stroke) / 2);
+			position:         absolute;
+		}
+	}
+
 	.shadow { filter: drop-shadow(0 0.5rlh 1rlh rgb(0 0 0 / 25%)) }
 
 	/* Manual column placements. */
