@@ -23,7 +23,7 @@ JavaScript is the language/format for adding interactivity to a web page—based
 	Also goes deep.
 <!-- .right .rows--5 -->
 
-Going back to [a very early analogy](/topic/everything/#even-things-that-aren-t-web-pages-are-web-page-like), JavaScript is the *muscles* of the web. Like [HTML](/topic/html/) (the *bones*) and [CSS](/topic/css/) (the *skin*), it is ultimately still just text that is parsed by our browsers. Like CSS, it can live within HTML documents, but is usually saved separately with the extension `.js`&thinsp;.
+Going back to [a very early analogy](/topic/everything/#even-things-that-aren-t-web-pages-are-web-page-like), JavaScript is the *muscles* of the web. Like [HTML](/topic/html/) (the *bones*) and [CSS](/topic/css/) (the *skin*), it is ultimately still just text that is parsed by our browsers. Like CSS, it can live within HTML documents, but is usually saved separately with the extension `.js`&#x202F;.
 <!-- .before--3 -->
 
 JavaScript was first created by [Brendan Eich](https://brendaneich.com/2008/04/popularity/) over just *10 days* in 1995, and has been through a myriad of evolutions, paths, missteps, and enhancements [since then](https://en.wikipedia.org/wiki/JavaScript#History). It has nothing formally to do with *Java*, confusingly—other than being contemporaries and sort-of competitor, thus the name. (Coffee-culture was really big in the 90s!) JavaScript won the race, by every measure, and is ubiquitous on the modern web.
