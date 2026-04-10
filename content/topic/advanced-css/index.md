@@ -51,6 +51,8 @@ Importantly, this creates a new *stacking context*—which means things with `po
 	>
 </figure>
 
+<!-- TODO: scroll-behavior: smooth; example! -->
+
 ### `text-overflow` / `-webkit-line-clamp`
 
 You can also *excerpt* text (perhaps on a landing page) with the `text-overflow` (for a single line) or `-webkit-line-clamp` (for multiple lines) properties—which will add [an ellipsis](https://en.wikipedia.org/wiki/Ellipsis) <samp>…</samp> where the text overflows. Only do this when the full text is available on a subsequent page:
