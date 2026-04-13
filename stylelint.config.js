@@ -88,6 +88,7 @@ export default {
 		'@stylistic/selector-list-comma-newline-after': 'always-multi-line',
 		'@stylistic/selector-list-comma-space-after': 'always-single-line',
 		'@stylistic/string-quotes': 'single',
+		'logical-css/require-logical-properties': [true, { ignore: ['overflow-y', 'overflow-x'] }],
 		'media-feature-name-no-vendor-prefix': null,
 		'order/order': [
 			'custom-properties',
@@ -96,6 +97,5 @@ export default {
 			'at-rules',
 		],
 		'order/properties-alphabetical-order': true,
-		'logical-css/require-logical-properties': [true, { ignore: ['overflow-y', 'overflow-x'] }],
 	},
 }
