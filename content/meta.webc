@@ -44,8 +44,7 @@
 		}
 	}
 </style>
-<section
-	:style="meta.data.unitNumber ? `--background: var(--background--${meta.data.unitNumber})` : ''">
+<section :style="meta.data.unitNumber ? `--background: var(--background--${meta.data.unitNumber})` : ''">
 	<h1 @html="meta.data.title"></h1>
 	<hr>
 	<p
