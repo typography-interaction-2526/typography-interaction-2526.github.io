@@ -96,6 +96,6 @@ export default {
 			'at-rules',
 		],
 		'order/properties-alphabetical-order': true,
-		'plugin/use-logical-properties-and-values': [true, { ignore: ['overflow-y', 'overflow-x'] }],
+		'logical-css/require-logical-properties': [true, { ignore: ['overflow-y', 'overflow-x'] }],
 	},
 }

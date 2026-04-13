@@ -1,6 +1,6 @@
 <!--- The `selector()` breaks inside `webc:scoped`, and we probably want these outside cascade layers. --->
 <style webc:bucket="unlayered">
-	/* stylelint-disable plugin/use-logical-properties-and-values -- For old browsers! */
+	/* stylelint-disable logical-css/require-logical-properties -- For old browsers! */
 	#warning {
 		animation:        show-warning 0.5s 2s forwards;
 		backdrop-filter:  blur(0.25em);
