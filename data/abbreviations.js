@@ -1,4 +1,5 @@
 export default [
+	{ abbr: 'AI',      title: '“Artificial Intelligence,” strong emphasis on the former' },
 	{ abbr: 'a11y',    title: 'Accessibility' },
 	{ abbr: 'A11y',    title: 'Accessibility' },
 	{ abbr: 'AM',      title: 'In the morning' },
