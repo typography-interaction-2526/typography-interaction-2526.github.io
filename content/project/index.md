@@ -15,7 +15,7 @@ The goal of this project is to cover, contextualize, contain, and consolidate yo
 
 To start, we’ll create a `username.github.io` repo. This is a special name that GitHub will make [directly available](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site) at `https://username.github.io/`, as a parent/index to your existing project repos/subfolders.
 
-For this initial milestone, we want a aesthetic and functional MVP (*Minimum Viable Product*)—meaning it is not at all done, but it *works*—and can be “launched.” In our context, this means it has semantic HTML with at least your name, links to each of your three projects, and is responsively styled in CSS. Here we want to see some basic color, typography, and spacing/hierarchy considerations—make it look nice!
+For this initial milestone, we want an aesthetic and functional MVP (*Minimum Viable Product*)—meaning it is not at all done, but it *works—*<wbr>and can be “launched.” In our context, this means it has semantic HTML with at least your name, links to each of your three projects, and is responsively styled in CSS. Here we want to see some basic color, typography, and spacing/hierarchy considerations—make it look nice!
 <!-- .balance -->
 
 </div>
