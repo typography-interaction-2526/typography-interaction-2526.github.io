@@ -13,11 +13,11 @@ export default {
 		zoomAlt: 'https://newschool.zoom.us/my/mfehrenbach',
 	},
 	logistics: {
-		fall:   'PMCD 5001, <nobr>CRN 4253/9023</nobr>',
-		room:   '63 Fifth Avenue, Room 620',
+		fall:   'PMCD 5001, <nobr>CRN 4253&#x202F;/&thinsp;9023</nobr>',
+		room:   '63 Fifth Avenue, Room Nº 620',
 		school: 'The New School, Parsons, MPS CD',
-		spring: 'PMCD 5002, <nobr>CRN 3992/9589</nobr>',
-		time:   'Wednesdays, <nobr>4–6:40pm</nobr>',
+		spring: 'PMCD 5002, <nobr>CRN 3992&#x202F;/&thinsp;9589</nobr>',
+		time:   'Wednesdays, <nobr>4–6:40&thinsp;pm</nobr>',
 	},
 	syllabus: {
 		fall:   '/assets/PMCD_5001_F25.pdf',
