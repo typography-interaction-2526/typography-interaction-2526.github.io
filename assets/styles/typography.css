@@ -14,8 +14,6 @@ th {
 	margin-inline-start: calc(-1 * var(--left));
 	overflow-wrap:       break-word;
 	text-box:            trim-both cap alphabetic; /* 🥹 */
-
-	/* TODO Firefox warning message! */
 }
 
 /* “Headings.” */
