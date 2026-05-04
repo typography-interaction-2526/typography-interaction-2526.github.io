@@ -3,6 +3,7 @@ export default [
 	{ abbr: 'a11y',    title: 'Accessibility' },
 	{ abbr: 'A11y',    title: 'Accessibility' },
 	{ abbr: 'AM',      title: 'In the morning' },
+	{ abbr: 'AMA',     title: 'Ask Me Anything (from Reddit)' },
 	{ abbr: 'API',     title: 'Application Program Interface' },
 	{ abbr: 'ARIA',    title: 'Accessible Rich Internet Applications' },
 	{ abbr: 'ARPA',    title: 'Advanced Research Projects Agency' },
