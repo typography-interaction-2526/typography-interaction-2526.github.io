@@ -75,17 +75,17 @@ PR&NoBreak;<sub>s</sub> (Pull Requests)
 
 ## Working on Software
 
-We also only barely “dipped our toes” into project management, roadmapping, working with devs, and all the other stuff that exists *around* the work of making digital things. A few highlights:
+We also only barely “dipped our toes” into project management, roadmapping, working with devs, and all the other [“soft skills”](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Soft_skills) stuff that exists *around* the work of making digital things. A few highlights:
 <!-- .balance -->
 
 Agile
 : A popular way to structure software project management. Many product teams will use [*Agile*](https://www.atlassian.com/agile) methodology as a way of prioritizing tasks—working in so-called *sprints* or *cycles* (often two weeks) to deliver features incrementally rather than all at once.
 
-	One way that Agile is practiced is with a [*kanban* board](https://www.atlassian.com/agile/kanban/boards) (from the [Japanese](https://en.wikipedia.org/wiki/Kanban)), a visual way of organizing tasks into discrete phases of work so that team members understand where different *stories* (or *tickets*, *tasks*, or *issues*) are in the queue.
+	One way that Agile is practiced is with a [*kanban* board](https://www.atlassian.com/agile/kanban/boards) (from the [Japanese system](https://en.wikipedia.org/wiki/Kanban)), a visual way of organizing tasks into discrete phases of work so that team members understand where different *stories* (or *tickets*, *tasks*, or *issues*) are in the queue.
 
-	[Many](https://www.atlassian.com/) [tools](https://linear.app/) [are](https://clickup.com) built around this mindset! It’s a bit like our roadmapping exercise.<!-- .note -->
+	[Many](https://www.atlassian.com/) [tools](https://linear.app/) are built around [this](http://asana.com/) [mindset](https://clickup.com)! It’s a bit like our roadmapping exercise.<!-- .note -->
 
-Annotating (née Redlining)
+Annotating
 : Often a completed design in Figma isn’t enough for [*handoff*](https://uxplanet.org/a-complete-guide-to-executing-a-great-design-to-development-handoff-4bd545be9416) to a developer for implementation. There can be ambiguities in your design that *you* may have thought through, but need more explanation than the visual provides on its own. This could be how you expect an element to behave responsively, or maybe you have a specific dimension in mind, or you want to describe it in motion.
 
 	*Annotating* (you used to hear it called [*redlining*](https://www.uxbeginner.com/glossary/redlining/)—not to be confused with [its other meaning](https://en.wikipedia.org/wiki/Redlining)) is a term for when you *mark up* your designs with information—key measurements or other important behaviors/traits. This forms the *spec* that a dev should implement.
@@ -104,14 +104,14 @@ Technical (and Design) Debt
 
 	[*Technical debt*](https://www.atlassian.com/agile/software-development/technical-debt) (or the analogous *design debt*) is the accumulation of these short-term decisions—where you have postponed doing it the right way. Like other forms of debt, these often *compound* over time—if you don’t pay them down or address them as you move forward.
 
-	In this lens, it might be helpful to think of “AI”/LLM&NoBreak;s as credit cards. They’ll let you spend quickly, but you’ll have to pay the debt eventually! <!-- .note -->
+	In this lens, it might be helpful to think of “AI”/LLM&NoBreak;s as *credit cards*. They’ll let you spend quickly, but you’ll have to pay the debt eventually! <!-- .note -->
 
 	Richard Scarry [understood](https://miro.medium.com/v2/resize:fit:2000/format:webp/0*iFaxYkoSpxX5gOPE.jpeg). <!-- .note -->
 
 Dogfooding
 : Often the best way—or at least the *first* way—to make sure your product is up to snuff is by using and testing it *yourself*. This term is called [*dogfooding*](https://www.nytimes.com/2022/11/14/business/dogfooding.html), or *eating your own dog food*. (There are debates on the [etymology](https://www.computer.org/csdl/magazine/so/2006/03/s3005/13rRUygBwg0).) It’s got to be good enough for you, before it is good enough for anyone else! (Or for dogs.)
 
-	A famous example is Apple, when pushing desktop publishing in 1980, [outlawing typewriters internally](https://archive.org/details/Apple_Memo_No_Typewriters).
+	A famous example is Apple, when pushing desktop publishing in 1980, [outlawing typewriters internally](https://archive.org/details/Apple_Memo_No_Typewriters/page/n1/mode/2up). <!-- .note -->
 
 <figure
 	@citation="https://xkcd.com/1332/"
@@ -129,12 +129,14 @@ This is big, always-evolving topic—and one that should permeate all the others
 A11y
 : [*A11y*](https://www.a11yproject.com/) is a catch-all term for [accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility). This is shorthand for ensuring that your product is as inclusive as possible—for folks with different disabilities—often estimated to be [around 15%](https://www.un.org/development/desa/disabilities/resources/factsheet-on-persons-with-disabilities.html) of the world’s population.
 
-	You might also see this kind of abbreviation (numeronym) for [*i18n*](https://en.wikipedia.org/wiki/Internationalization_and_localization), for *internationalization*. <!-- .note -->
+	You will often see this kind of abbreviation (numeronym) for [*i18n*](https://en.wikipedia.org/wiki/Internationalization_and_localization), for *internationalization*. <!-- .note -->
 
 Web Content Accessibility Guidelines (WCAG)
-: When in doubt, refer to the *Web Content Accessibility Guidelines*—which are codified and published (after [*much* debate](https://github.com/w3c/wcag3/issues)) by the W3C. We’re still working under [WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/), but there is [a draft now for 3.0](https://w3c.github.io/wcag3/guidelines/).
+: When in doubt, you can refer to the *Web Content Accessibility Guidelines*—which are codified and published (after [*much* debate](https://github.com/w3c/wcag3/issues)) by the W3C. We’re still working under [WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/), but there is [a draft now for 3.0](https://w3c.github.io/wcag3/guidelines/).
 
-	They are not perfect, but are a useful framework—most easily understood as a series of *success criteria* (for example, [1.4.1 Color Use](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color)). An accessibility design/build should meet these goals!
+	They are not perfect, but are a useful framework—most easily understood as a series of *success criteria* that your work should “pass.” An accessibile design/build should meet these goals!
+
+	A great example: [1.4.1 *Use of Color*](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color). <!-- .note -->
 
 ARIA labels
 : While the best and most-basic way of writing accessible websites is to start with semantic DOM elements, sometimes there isn’t an appropriate one—this is where [*ARIA*](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) (*Accessible Rich Internet Applications*) labels come in.
@@ -148,7 +150,7 @@ ARIA labels
 	These are particularly important for us as designers, where our aesthetic proclivities might lean towards making our designs *harder* to access—by using icons, slight colors, etc.
 
 VoiceOver / TalkBack / Narrator
-: These are platform-specific, commonly-used assistive technologies: Apple’s [*VoiceOver*](https://www.apple.com/accessibility/vision/), Google’s (Android) [*TalkBack*](https://support.google.com/accessibility/android/topic/3529932?hl=en&ref_topic=9078845&sjid=8833292709650514472-NA), and Microsoft’s [*Narrator*](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1).
+: These are platform-specific, commonly-used assistive technologies that are available in each OS: Apple’s [*VoiceOver*](https://www.apple.com/accessibility/vision/), Google’s (Android) [*TalkBack*](https://support.google.com/accessibility/android/topic/3529932?hl=en&ref_topic=9078845&sjid=8833292709650514472-NA), and Microsoft’s [*Narrator*](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1).
 
 	[Many disabled folks](https://webaim.org/projects/screenreadersurvey9/) use other screen-readers (namely [JAWS](https://www.freedomscientific.com/products/software/jaws/) and [NVDA](https://www.nvaccess.org/download/)), but these are a good, built-in start. <!-- .note -->
 
@@ -175,7 +177,7 @@ VoiceOver / TalkBack / Narrator
 
 ## Approaches and Frameworks
 
-If you remember back to [*What Is Code?*](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/), software (and the web) is awash with different approaches, concepts, and *opinions*—and their resulting execution and frameworks. Some things worth mentioning:
+If you remember back to [*What Is Code?*](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/), software (and the web) is awash with competing approaches, concepts, and *opinions*—and their resulting execution and frameworks. Some things worth mentioning:
 <!-- .balance -->
 
 Open Source / FOSS
@@ -183,30 +185,30 @@ Open Source / FOSS
 
 	This means the code is [*licensed*](https://en.wikipedia.org/wiki/Software_license) such that you can use and modify it, free of charge. This is sometimes sponsored by software companies, but often is [one or a few](https://www.nytimes.com/2024/04/03/technology/prevent-cyberattack-linux.html) dedicated *maintainers* who keep the proverbial lights on.
 
-Multi-Page Apps (MPA&NoBreak;s) vs. Single-Page Apps (SPA&NoBreak;s)
-: For most of you, everything you’ve done this year could be called a *multi-page app*—meaning just that your websites (products) have been comprised of discrete, separate HTMLpages. Remember that the web started as simple *MPA*, though the term didn’t exist yet!
+Multi-Page Apps (MPA&NoBreak;<sub>s</sub>) <sub>vs.</sub> Single-Page Apps (SPA&NoBreak;<sub>s</sub>)
+: Much of what we’ve done this year could be called a *multi-page app*—meaning just that your websites (products) have been comprised of discrete, separate HTML pages. Remember that the web started as simple *MPA*, though the term didn’t exist yet!
 
 	As the capabilities, uses, and needs of the web grew it became more *app-like*—with complicated interactions, changes, and *state* within a single “page.” [*Frameworks*](/topic/everything/#these-days-apps-are-often-web-pages-too) (like [React](https://react.dev) or later, [Vue](https://vuejs.org)) were created to facilitate this behavior, via JavaScript—creating a more dynamic experience within one browser session.
 
-	It’ll always depend on the project! But remember that at the end of the day, the browser is always still showing you HTML (from somewhere), styled by CSS (from somewhere), maybe enlivened by JavaScript (from somewhere). There are a lot of ways at that. Your audience won’t know.
+	It’ll always depend on the project! But remember that at the end of the day, the browser is always still showing you HTML (from somewhere), styled by CSS (from somewhere), maybe enlivened by JavaScript (from somewhere). There are a lot of ways at that. Your audience won’t know (or care).
 
 	The line here is getting even blurrier—when you hear things like [*server-side rendering (SSR)*](https://www.sanity.io/glossary/server-side-rendering) and even [*partial hydration*](https://ajcwebdev.com/what-is-partial-hydration/). <!-- .note -->
 
 Bootstrap
-: The framework *du jour* for a long time—[Bootstrap](https://getbootstrap.com/) was created by Twitter (back when it was Twitter) as a way of quickly creating web apps. Because frameworks have to have opinions to work (think back to [*The Web’s Grain*](https://frankchimero.com/blog/2015/the-webs-grain/)) the downside is that many websites created using this have a certain “made with Bootstrap” vibe. (Nowadays, you might see [Radix](https://www.radix-ui.com/) and [`shadcn/ui`](https://ui.shadcn.com/).)
+: The framework *du jour* for a long time—[Bootstrap](https://getbootstrap.com/) was created by Twitter (back when it was Twitter) as a way of quickly creating web apps. Because frameworks have to have opinions to work (think back to [*The Web’s Grain*](https://frankchimero.com/blog/2015/the-webs-grain/)) the downside is that many websites created using this have a certain “made with Bootstrap” vibe.
+
+	Nowadays, you might see [Radix](https://www.radix-ui.com/) and [`shadcn/ui`](https://ui.shadcn.com/). Look familiar?
 
 	In a small environment you’ll likely be working with an existing ([*legacy*](https://en.wikipedia.org/wiki/Legacy_system)) framework or component library of some sort, so understanding these trade-offs is important. Familiarity (and speed) vs. personality!
 
 ### In CSS Land…
 
-SASS / SCSS
+SASS  (`.SCSS`&hairsp;)
 : As you may have noticed, writing CSS can be repetitive and tiresome!
 
-	Back in 2006, some (*very* opinionated) folks developed [*SASS*](https://sass-lang.com/) (*Syntactically Awesome Style Sheets*)—which is a CSS preprocessor. It is its own language/syntax (mostly based on CSS) which gets *compiled* (processed) into normal CSS, which your browser understands. [*SASS*](https://sass-lang.com/documentation/syntax) is a slightly different—but much more popular—variant of *SASS*. (When people say *SASS*, they usually mean *SCSS*!)
+	Way back in 2006, some (*very* opinionated) folks developed [*SASS*](https://sass-lang.com/) (*Syntactically Awesome Style Sheets*)—which is a CSS preprocessor that extends the language with helpful tools. It is its own [syntax](https://sass-lang.com/documentation/syntax) (mostly based on CSS) which gets *compiled* (processed) into normal CSS, which your browser understands. It is *very* commonly included in frameworks/build tools!
 
-	Recently, *much* of the utility/need for SASS has been obviated by CSS adopting similar features, like [parent selectors (`:has`)](/topic/css/#has-has-changed-things), [custom properties (variables)](/topic/responsive/#briefly-css-variables) and [CSS nesting](/topic/css/#oh-also-nesting).
-
-	This very course site is the first thing we’ve built in more than a *decade* that doesn’t use (because it didn’t need) SASS! <!-- .note -->
+	Recently, *much* of the utility/need for SASS has been obviated by CSS adopting similar features, like [parent selectors (`:has`)](/topic/css/#has-really-has-changed-things), [custom properties (variables)](/topic/responsive/#briefly-css-variables) and [CSS nesting](/topic/css/#oh-also-nesting).
 
 BEM
 : You might have also noticed that coming up with CSS class names can be difficult, as well—and only gets worse as your projects get larger. [*BEM*](https://en.bem.info/methodology/) (*Block, Element, Modifier*) is a commonly-used nomenclature methodology/practice to deal with this (and also avoid [*specificity*](/topic/css/#specificity) problems).
@@ -225,6 +227,6 @@ Tailwinds (Atomic / Utility CSS)
 	@caption="As if you needed another thing to worry about!"
 	@citation="https://xkcd.com/2347"
 	@source="https://imgs.xkcd.com/comics/dependency_2x.png"
-	@style="--lines: 16; grid-column: two-start / four-end"
+	@style="--lines: 16; grid-column: four-start / six-end"
 	>
 </figure>
