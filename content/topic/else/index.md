@@ -17,7 +17,6 @@ Each of these could be full classes themselves. We hope this quick overview (a
 	@citation="https://xkcd.com/1597/"
 	@source="https://imgs.xkcd.com/comics/git_2x.png"
 	@style="--lines: 16"
-	class="invert"
 	>
 </figure>
 
@@ -47,9 +46,22 @@ PR&thinsp;s (Pull Requests)
 	@citation="https://xkcd.com/1459/"
 	@source="https://imgs.xkcd.com/comics/documents_2x.png"
 	@style="--lines: 16; justify-self: end"
-	class="invert recto"
+	class="recto multiply documents"
 	>
 </figure>
+
+<style>
+	figure.documents div {
+		&::before {
+			background-color: white;
+			border-radius:    0.1rem;
+			content:          '';
+			inset:            0;
+			inset-block-end:  9.5%;
+			position:         absolute;
+		}
+	}
+</style>
 
 ## Working on Software
 
@@ -95,7 +107,7 @@ Dogfooding
 	@citation="https://xkcd.com/1332/"
 	@source="https://imgs.xkcd.com/comics/slippery_slope_2x.png"
 	@style="--lines: 13; justify-self: center"
-	class="center invert"
+	class="center"
 	>
 </figure>
 
@@ -134,9 +146,22 @@ VoiceOver / TalkBack / Narrator
 	@citation="https://xkcd.com/927"
 	@source="https://imgs.xkcd.com/comics/standards_2x.png"
 	@style="--lines: 11; justify-self: end"
-	class="recto invert"
+	class="recto multiply standards"
 	>
 </figure>
+
+<style>
+	figure.standards div {
+		&::before {
+			background-image:  linear-gradient(to right, white 28%, transparent 28%, transparent 30%, white 30%, white 70%, transparent 70%, transparent 72%, white 72%);
+			border-radius:     0.1rem;
+			content:           '';
+			inset:             0;
+			inset-block-start: 13.5%;
+			position:          absolute;
+		}
+	}
+</style>
 
 ## Approaches and Frameworks
 
@@ -191,6 +216,5 @@ Tailwinds (Atomic / Utility CSS)
 	@citation="https://xkcd.com/2347"
 	@source="https://imgs.xkcd.com/comics/dependency_2x.png"
 	@style="--lines: 16; grid-column: two-start / four-end"
-	class="invert"
 	>
 </figure>
