@@ -505,7 +505,7 @@ But one must learn how to use the grid; it is an art that requires practice.
 		position: relative;
 
 		&::before {
-			content:           '••';
+			content:           '••' / '';
 			font-size:         75%;
 			inset-block-start: -1em;
 			text-align:        center;

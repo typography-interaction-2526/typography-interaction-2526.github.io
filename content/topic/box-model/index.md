@@ -750,7 +750,7 @@ stacked box model is a bit too simple.</code>
 
 		&::before {
 			-webkit-text-stroke-width: 0.03em;
-			content:                   '°';
+			content:                   '°' / '';
 			font-size:                 66%;
 			inset-block-start:         -0.45em;
 			inset-inline-start:        0.1em;

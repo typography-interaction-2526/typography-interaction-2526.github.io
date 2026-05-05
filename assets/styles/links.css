@@ -205,7 +205,7 @@ summary {
 		}
 	}
 
-	details[open] :where(summary) { --icon: '−' }
+	details[open] :where(summary) { --icon: '−' / 'Minus sign' }
 
 	:is(li, p):where(:has(> a > cite)) {
 		padding-block-start: calc(1rcap - 1cap); /* Back on baseline. */

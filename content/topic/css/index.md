@@ -700,7 +700,7 @@ This proposal tries to soften the tension between the author and the reader.
 
 		&::before {
 			-webkit-text-stroke-width: 0.03em;
-			content:                   '°';
+			content:                   '°' / '';
 			font-size:                 66%;
 			inset-block-start:         -0.45em;
 			inset-inline-start:        0.1em;

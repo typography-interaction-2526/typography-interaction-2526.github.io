@@ -158,7 +158,7 @@ main {
 
 		> :where(dt, li) {
 			&::before {
-				content:           '—';
+				content:           '—' / '';
 				inset-block-start: 0;
 				inset-inline-end:  calc(100% - var(--right));
 			}
