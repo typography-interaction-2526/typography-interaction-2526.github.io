@@ -258,7 +258,12 @@ Multi-Page Apps (MPA&NoBreak;<small>s</small>) <small>vs.</small> Single-Page Ap
 
 	Keep in mind you can do a lot by [just stringing HTML pages together](https://blog.jim-nielsen.com/2026/small-html-pages/)! Especially with nice [View Transitions](https://developer.chrome.com/docs/web-platform/view-transitions), these days.<!-- .note -->
 
-	The line here is getting even blurrier—when you hear things like [*server-side rendering (SSR)*](https://www.sanity.io/glossary/server-side-rendering) and even [*partial hydration*](https://ajcwebdev.com/what-is-partial-hydration/). <!-- .note -->
+Static <small>vs.</small> dynamic sites
+: Similarly, as some of you came up against in your last project—our free [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages) hosting is *static*, meaning that only you can change your pages, in code.
+
+	This works for [some things](https://about.gitlab.com/blog/ssg-overview-gitlab-pages-part-1-dynamic-x-static/), but many sites use server-side languages (PHP, Ruby, Go, Next.JS, Node, etc.) that communicate with databases (My&NoBreak;SQL, Postgres, etc.). These are how most sites are made *dynamic*—constructing pages, storing information, responding to visitor requests, allowing sign-in, and so on.
+
+	The line here is getting even blurrier—when you hear things like [*server-side rendering (SSR)*](https://www.sanity.io/glossary/server-side-rendering) and [*partial hydration*](https://ajcwebdev.com/what-is-partial-hydration/)—which blend static and dynamic elements together.
 
 UI frameworks & Component libraries
 : These are all created to simplify building web apps, by not “reinventing the wheel.” But because frameworks have to be opinionated to work (think back to [*The Web’s Grain*](https://frankchimero.com/blog/2015/the-webs-grain/)), a downside is that many websites that use these have a boring sameness to them.
