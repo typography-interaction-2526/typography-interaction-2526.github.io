@@ -47,10 +47,14 @@ Many of these topics could be full classes themselves. We hope this quick overv
 		}
 
 		dd {
-			grid-column:           all;
+			grid-column: body;
+
+			&:has(p) {
+				grid-column:           all;
 			grid-template-columns: subgrid;
 
 			> * { grid-column: body }
+			}
 		}
 	}
 </style>
@@ -218,7 +222,7 @@ VoiceOver / TalkBack / Narrator
 
 	[Many disabled folks](https://webaim.org/projects/screenreadersurvey9/) use other screen-readers (namely [JAWS](https://www.freedomscientific.com/products/software/jaws/) and [NVDA](https://www.nvaccess.org/download/)), but these are a good, built-in start. <!-- .note -->
 
-## “AI” / LLM<small>s</small> IRL
+## “AI”/&thinsp;LLM<small>s</small> IRL
 
 <figure
 	@citation="https://xkcd.com/3126"
@@ -244,10 +248,32 @@ VoiceOver / TalkBack / Narrator
 We know we’ve all talked *a lot* about “AI”/&thinsp;LLM&NoBreak;s this year, and have hopefully learned from this. We’ve discussed [“ask” and “agent” modes](https://devblogs.microsoft.com/dotnet/ask-mode-vs-agent-mode/); these are some additional concepts we’d want you to know about (though it’s all changing):
 <!-- .balance -->
 
+Tokens
+: The very basic text unit of LLM&NoBreak;s. It’s maybe easiest to think of *tokens* akin to *words*, but [sometimes split smaller](https://learn.microsoft.com/en-us/dotnet/ai/conceptual/understanding-tokens), with semantic meaning. These are the inputs and outputs of the models—and also how usage is priced/limited.
+
+Context window
+: Somewhat like [RAM](https://en.wikipedia.org/wiki/Random-access_memory), the *working* memory of a model—how many *tokens* it can [consider or “remember”](https://www.ibm.com/think/topics/context-window) at a time. Larger *context windows* are generally better/more accurate, but have a higher cost!
+
+	Importantly, context windows are not *persistent* memory—each session starts from scratch, and does not “remember” previous conversations or prompts (because it’d be too expensive). This is why providing enough (and consistent) *context* becomes critical.
+
+`AGENTS.md` & `SKILLS.md`
+: Think of these like your `README.md` [but for coding agents](https://agents.md)—a <nobr>pre-written</nobr> set of instructions, included in a repo, that add that *context* for LLM&NoBreak;s prior to any prompting. (Anthropic/*Claude* calls theirs… `CLAUDE.md`&#x202F;.) These are also usually hierarchical, such that you can have different instructions for different folders.
+
+	This idea is being taken even further with [`SKILLS.md`](https://agentskills.io)—abstracting out instructions that tell an agent how to perform a specific, narrow task, often with references and examples included.
+
+	The language here is always evolving, but the idea is that the LLM has any necessary context “baked in” to every prompt! <!-- .note -->
+
 *Oneshotting*
-: Or [*one-shot prompting*]((https://www.ibm.com/think/topics/one-shot-prompting)), a term borrowed from [video game culture](https://www.theatlantic.com/culture/archive/2025/02/oneshotted-going-online/681774/). In an LLM context, this is the goal of getting an elaborate-but-right response on the first try, from a single prompt. Contrast this with [prompt-chaining](https://www.ibm.com/think/topics/prompt-chaining), or follow-up prompting, and other forms of *steering*.
+: Or [*one-shot prompting*]((https://www.ibm.com/think/topics/one-shot-prompting)), a term borrowed from [video game culture](https://www.theatlantic.com/culture/archive/2025/02/oneshotted-going-online/681774/). In an LLM mindset, this is the goal of getting an elaborate-but-right response on the first try, from a single prompt. Contrast this with [prompt-chaining](https://www.ibm.com/think/topics/prompt-chaining), or follow-up prompting, and other forms of *steering*.
 
 	Nobody serious cares about this or works this way! <!-- .note -->
+
+*Plan-then-Execute*
+: At the other end of the prompting spectrum—completely separating out the [planning phase](https://self.md/concepts/plan-mode/) for agents. (*Claude* and *Copilot* [call](https://claudeai.dev/docs/mechanics/foundation/plan-mode/) [this](https://code.visualstudio.com/docs/copilot/agents/planning) “plan mode.”) The first conversation/session is just to come up with the *plan* (often as a `PLAN.md` task-list); only later it will be *executed*.
+
+	You might do this because of complexity (executing many steps), cost (constraining token use), time/delegation (go get lunch while it executes!), or safety (prevent damaging output/tool use).
+
+	This is also a form of [*dry run* testing](https://en.wikipedia.org/wiki/Dry_run_(testing))—always a good idea! <!-- .note -->
 
 MCP
 : Introduced by Anthropic but now widely adopted, the [*Model Context Protocol*](https://en.wikipedia.org/wiki/Model_Context_Protocol) is a specified way for LLM&NoBreak;s to “talk” to other tools/programs/systems—beyond what they were originally trained with.
