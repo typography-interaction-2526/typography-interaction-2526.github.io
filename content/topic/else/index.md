@@ -168,7 +168,7 @@ Technical (and Design) Debt
 
 	[*Technical debt*](https://www.atlassian.com/agile/software-development/technical-debt) (or the analogous *design debt*) is the accumulation of these short-term decisions—where you have postponed doing it the right way. Like other forms of debt, these often *compound* over time—if you don’t pay them down or address them as you move forward.
 
-	In this lens, it might be helpful to think of “AI”/LLM&NoBreak;s as *credit cards*. They’ll let you spend quickly, but you’ll have to pay the debt eventually! <!-- .note -->
+	In this lens, it might be helpful to think of “AI”/&thinsp;LLM&NoBreak;s as *credit cards*. They’ll let you spend quickly, but you’ll have to pay the debt eventually! <!-- .note -->
 
 	Richard Scarry [understood](https://miro.medium.com/v2/resize:fit:2000/format:webp/0*iFaxYkoSpxX5gOPE.jpeg). <!-- .note -->
 
@@ -217,6 +217,42 @@ VoiceOver / TalkBack / Narrator
 : These are platform-specific, commonly-used assistive technologies that are available in each OS: Apple’s [*VoiceOver*](https://www.apple.com/accessibility/vision/), Google’s (Android) [*TalkBack*](https://support.google.com/accessibility/android/topic/3529932?hl=en&ref_topic=9078845&sjid=8833292709650514472-NA), and Microsoft’s [*Narrator*](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1).
 
 	[Many disabled folks](https://webaim.org/projects/screenreadersurvey9/) use other screen-readers (namely [JAWS](https://www.freedomscientific.com/products/software/jaws/) and [NVDA](https://www.nvaccess.org/download/)), but these are a good, built-in start. <!-- .note -->
+
+## “AI” / LLM<small>s</small> IRL
+
+<figure
+	@citation="https://xkcd.com/3126"
+	@source="https://imgs.xkcd.com/comics/disclaimer_2x.png"
+	@style="--lines: 15; grid-column: two-start / four-end"
+	class="multiply disclaimer"
+	>
+</figure>
+
+<style>
+	figure.disclaimer div {
+		&::before {
+			background-color: white;
+			border-radius:    0.1rem;
+			content:          '';
+			inset:            0;
+			inset-block-end:  14%;
+			position:         absolute;
+		}
+	}
+</style>
+
+We know we’ve all talked *a lot* about “AI”/&thinsp;LLM&NoBreak;s this year, and have hopefully learned from this. We’ve discussed [“ask” and “agent” modes](https://devblogs.microsoft.com/dotnet/ask-mode-vs-agent-mode/); these are some additional concepts we’d want you to know about (though it’s all changing):
+<!-- .balance -->
+
+*Oneshotting*
+: Or [*one-shot prompting*]((https://www.ibm.com/think/topics/one-shot-prompting)), a term borrowed from [video game culture](https://www.theatlantic.com/culture/archive/2025/02/oneshotted-going-online/681774/). In an LLM context, this is the goal of getting an elaborate-but-right response on the first try, from a single prompt. Contrast this with [prompt-chaining](https://www.ibm.com/think/topics/prompt-chaining), or follow-up prompting, and other forms of *steering*.
+
+	Nobody serious cares about this or works this way! <!-- .note -->
+
+MCP
+: Introduced by Anthropic but now widely adopted, the [*Model Context Protocol*](https://en.wikipedia.org/wiki/Model_Context_Protocol) is a specified way for LLM&NoBreak;s to “talk” to other tools/programs/systems—beyond what they were originally trained with.
+
+	Think of it somewhat like an [standardized API](https://modelcontextprotocol.io/docs/getting-started/intro) for these other applications—letting an LLM “plug into” and work with your data and context elsewhere—like in [Figma](https://www.figma.com/mcp-catalog/), [Notion](https://developers.notion.com/guides/mcp/overview), [Google](https://docs.cloud.google.com/mcp/overview), etc.
 
 ## Approaches and Frameworks
 
