@@ -49,7 +49,7 @@ Branches
 Merges
 : You might use these branches to develop a new feature, or to fix a bug, before you [*merge*](https://www.atlassian.com/git/tutorials/using-branches/git-merge) these back into `main`. Sometimes, someone else will have edited the same lines of code you were working on, in the meantime, and you’ll have to resolve a [*merge conflict*](https://www.youtube.com/watch?v=HosPml1qkrg)—deciding whose work to take. (It can get messy.)
 
-PR&NoBreak;<sub>s</sub> (Pull Requests)
+PR&NoBreak;<small>s</small> (Pull Requests)
 : When you are working on big software projects/repos with multiple people—and when you don’t want to break `main` with hasty merges—you *push* your code up to GitHub and [open a *pull request*](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) (everyone says *P&#x202F;-&thinsp;R*). This shows all your combined commits together, and allows your team [to review](https://www.youtube.com/watch?v=rgbCcBNZcdQ&pp=ygUOInB1bGwgcmVxdWVzdCI%3D) and approve your whole batch of work before you merge into `main`.
 
 <figure
@@ -96,8 +96,6 @@ Bus Factor / Bus Count
 : On small product teams, certain individuals may be the only ones who understand how a certain feature works or is implemented. The phrase [*bus factor*](https://en.wikipedia.org/wiki/Bus_factor) (or *bus count*) is used in the lens of risk management—to make sure the product/team can continue if anyone gets “hit by a bus.”
 
 	Always try to avoid a *bus count* of one! Not just because of actual busses (and life stuff), but to distribute knowledge and understanding (and stress) among your team.
-
-<!-- Markdown! You fool. -->
 
 Technical (and Design) Debt
 : Very often, products have to make trade-offs between design or code quality to meet deadlines, or to handle [*scope creep*](https://asana.com/resources/what-is-scope-creep). These decisions sometimes come at the expense of either side—sacrificing the most nuanced design, or giving up on the most pristine, sturdy code. Often the short-term wins over the long-term.
@@ -185,7 +183,7 @@ Open Source / FOSS
 
 	This means the code is [*licensed*](https://en.wikipedia.org/wiki/Software_license) such that you can use and modify it, free of charge. This is sometimes sponsored by software companies, but often is [one or a few](https://www.nytimes.com/2024/04/03/technology/prevent-cyberattack-linux.html) dedicated *maintainers* who keep the proverbial lights on.
 
-Multi-Page Apps (MPA&NoBreak;<sub>s</sub>) <sub>vs.</sub> Single-Page Apps (SPA&NoBreak;<sub>s</sub>)
+Multi-Page Apps (MPA&NoBreak;<small>s</small>) <small>vs.</small> Single-Page Apps (SPA&NoBreak;<small>s</small>)
 : Much of what we’ve done this year could be called a *multi-page app*—meaning just that your websites (products) have been comprised of discrete, separate HTML pages. Remember that the web started as simple *MPA*, though the term didn’t exist yet!
 
 	As the capabilities, uses, and needs of the web grew it became more *app-like*—with complicated interactions, changes, and *state* within a single “page.” [*Frameworks*](/topic/everything/#these-days-apps-are-often-web-pages-too) (like [React](https://react.dev) or later, [Vue](https://vuejs.org)) were created to facilitate this behavior, via JavaScript—creating a more dynamic experience within one browser session.
