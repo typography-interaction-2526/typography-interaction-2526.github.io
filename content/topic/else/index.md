@@ -16,6 +16,8 @@ Many of these topics could be full classes themselves. We hope this quick overv
 
 </aside>
 
+## Git/&hairsp;GitHub and Collaboration
+
 <figure
 	@caption="There is always an [*xkcd*](https://xkcd.com/)."
 	@citation="https://xkcd.com/1597/"
@@ -26,7 +28,11 @@ Many of these topics could be full classes themselves. We hope this quick overv
 </figure>
 
 <style>
-	figure { margin-block-start: 4rlh }
+	hgroup + figure {
+		margin-block-end:   2rlh;
+		margin-block-start: 1rlh;
+		order:              -1;
+	}
 
 	dl {
 		margin-block-start: calc(2rlh);
@@ -35,8 +41,6 @@ Many of these topics could be full classes themselves. We hope this quick overv
 		dt:not(:first-child) { margin-block-start: 2rlh }
 	}
 </style>
-
-## Git/&hairsp;GitHub and Collaboration
 
 Our old friend GitHub (and the underlying technology, [Git](https://git-scm.com)) are robust, industry-standard tools for version control and working together on code. But to some extent, we barely scratched the surface! These are some other important Git/GitHub concepts:
 <!-- .balance -->
@@ -53,6 +57,8 @@ Merges
 
 PR&NoBreak;<small>s</small> (Pull Requests)
 : When you are working on big software projects/repos with multiple people—and when you don’t want to break `main` with hasty merges—you *push* your code up to GitHub and [open a *pull request*](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) (everyone says *P&#x202F;-&thinsp;R*). This shows all your combined commits together, and allows your team [to review](https://www.youtube.com/watch?v=rgbCcBNZcdQ&pp=ygUOInB1bGwgcmVxdWVzdCI%3D) and approve your whole batch of work before you merge into `main`.
+
+## Working on Software
 
 <figure
 	@citation="https://xkcd.com/1459/"
@@ -74,8 +80,6 @@ PR&NoBreak;<small>s</small> (Pull Requests)
 		}
 	}
 </style>
-
-## Working on Software
 
 We also only barely “dipped our toes” into project management, roadmapping, working with devs, and all the other [“soft skills”](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Soft_skills) stuff that exists *around* the work of making digital things. A few highlights:
 <!-- .balance -->
@@ -113,6 +117,8 @@ Dogfooding
 
 	A famous example is Apple, when pushing desktop publishing in 1980, [outlawing typewriters internally](https://archive.org/details/Apple_Memo_No_Typewriters/page/n1/mode/2up). <!-- .note -->
 
+## Accessibility
+
 <figure
 	@citation="https://xkcd.com/1332/"
 	@source="https://imgs.xkcd.com/comics/slippery_slope_2x.png"
@@ -120,8 +126,6 @@ Dogfooding
 	class="center"
 	>
 </figure>
-
-## Accessibility
 
 This is big, always-evolving topic—and one that should permeate all the others. We’ve mentioned it in passing, but know that it is a discipline unto itself and that *you* can be an advocate for it:
 <!-- .balance -->
@@ -154,6 +158,8 @@ VoiceOver / TalkBack / Narrator
 
 	[Many disabled folks](https://webaim.org/projects/screenreadersurvey9/) use other screen-readers (namely [JAWS](https://www.freedomscientific.com/products/software/jaws/) and [NVDA](https://www.nvaccess.org/download/)), but these are a good, built-in start. <!-- .note -->
 
+## Approaches and Frameworks
+
 <figure
 	@citation="https://xkcd.com/927"
 	@source="https://imgs.xkcd.com/comics/standards_2x.png"
@@ -174,8 +180,6 @@ VoiceOver / TalkBack / Narrator
 		}
 	}
 </style>
-
-## Approaches and Frameworks
 
 If you remember back to [*What Is Code?*](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/), software (and the web) is awash with competing approaches, concepts, and *opinions*—and their resulting execution and frameworks. Some things worth mentioning:
 <!-- .balance -->
@@ -228,5 +232,6 @@ Tailwind (Utility / Atomic CSS)
 	@citation="https://xkcd.com/2347"
 	@source="https://imgs.xkcd.com/comics/dependency_2x.png"
 	@style="--lines: 16; grid-column: four-start / six-end"
+	class="before--3"
 	>
 </figure>
