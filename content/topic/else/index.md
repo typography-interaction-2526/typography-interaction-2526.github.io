@@ -188,7 +188,7 @@ Multi-Page Apps (MPA&NoBreak;<small>s</small>) <small>vs.</small> Single-Page Ap
 
 	As the capabilities, uses, and needs of the web grew it became more *app-like*—with complicated interactions, changes, and *state* within a single “page.” [*Frameworks*](/topic/everything/#these-days-apps-are-often-web-pages-too) (like [React](https://react.dev) or later, [Vue](https://vuejs.org)) were created to facilitate this behavior, via JavaScript—creating a more dynamic experience within one browser session.
 
-	It’ll always depend on the project! But remember that at the end of the day, the browser is always still showing you HTML (from somewhere), styled by CSS (from somewhere), maybe enlivened by JavaScript (from somewhere). There are a lot of ways at that. Your audience won’t know (or care).
+	The right approach will always depend on the project! But remember that at the end of the day, the browser is always still showing you HTML (from somewhere), styled by CSS (from somewhere), maybe enlivened by JavaScript (from somewhere). There are a lot of ways at that. Your audience won’t know (or care).
 
 	The line here is getting even blurrier—when you hear things like [*server-side rendering (SSR)*](https://www.sanity.io/glossary/server-side-rendering) and even [*partial hydration*](https://ajcwebdev.com/what-is-partial-hydration/). <!-- .note -->
 
@@ -213,13 +213,13 @@ BEM
 
 	It follows [the pattern](https://en.bem.info/methodology/naming-convention/) `.block__element--modifier` in classnames—and these double separators (`__` and `--`) are sometimes seen even in non-*BEM-y* contexts. Any system is better than no system!
 
-Tailwinds (Atomic / Utility CSS)
+Tailwind (Utility / Atomic CSS)
 
-: On the other end of the spectrum—an alternative approach to CSS naming—following a [*utility class*](https://css-irl.info/a-year-of-utility-classes/) methodology.
+: On the other end of the spectrum—an alternative approach to CSS naming—is following a [*utility class*](https://css-irl.info/a-year-of-utility-classes/), [*atomic*](https://acss.io) methodology.
 
-	This uses many, many small, descriptive or directly-property-mapped names (like `.red` or `.flex`) across any elements. This approach is sometimes [*kleenexed*](https://en.wikipedia.org/wiki/Generic_trademark) as [atomic CSS](https://acss.io) or [Tailwinds](https://tailwindcss.com).
+	These use many, many small, descriptive or directly-property-mapped class names (think `.red` or `.flex`&#x202F;) across any elements, all in HTML. This approach is now [*kleenexed*](https://en.wikipedia.org/wiki/Generic_trademark) as [*Tailwind*](https://tailwindcss.com)—the most popular utility framework. Styling there is done entirely by applying the existing vocabulary in your HTML, not writing CSS!
 
-	Your instructors wrote our [own <em>atomic</em> CSS library](https://uxdesign.cc/tools-not-rules-9daef895aab7#3234), baking-in/formalizing MoMA’s brand, that we called [Sol](https://www.moma.org/artists/3528). It seemed like a good idea at the time!<!-- .note -->
+	Your instructors wrote our [own <em>atomic</em> CSS library](https://uxdesign.cc/tools-not-rules-9daef895aab7#3234) at MoMA that we called [Sol](https://www.moma.org/artists/3528), baking-in/formalizing the brand. It seemed like a good idea at the time! <!-- .note -->
 
 <figure
 	@caption="As if you needed another thing to worry about!"
