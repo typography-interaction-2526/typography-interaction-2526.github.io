@@ -38,8 +38,8 @@ td:first-child {
 	em {
 		padding: initial;
 
-		&::before { content: '“' }
-		&::after { content: '”' }
+		&::before { content: '“' / '' }
+		&::after { content: '”' / '' }
 
 		/* Negates the `skew`. */
 		span { display: contents }
