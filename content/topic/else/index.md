@@ -256,12 +256,14 @@ Multi-Page Apps (MPA&NoBreak;<small>s</small>) <small>vs.</small> Single-Page Ap
 
 	The right approach will always depend on the project! But remember that at the end of the day, the browser is always still showing you HTML (from somewhere), styled by CSS (from somewhere), maybe enlivened by JavaScript (from somewhere). There are a lot of ways at that. Your audience won’t know (or care).
 
+	Keep in mind you can do a lot by [just stringing HTML pages together](https://blog.jim-nielsen.com/2026/small-html-pages/)! Especially with nice [View Transitions](https://developer.chrome.com/docs/web-platform/view-transitions), these days.<!-- .note -->
+
 	The line here is getting even blurrier—when you hear things like [*server-side rendering (SSR)*](https://www.sanity.io/glossary/server-side-rendering) and even [*partial hydration*](https://ajcwebdev.com/what-is-partial-hydration/). <!-- .note -->
 
-Bootstrap
-: The framework *du jour* for a long time—[Bootstrap](https://getbootstrap.com/) was created by Twitter (back when it was Twitter) as a way of quickly creating web apps. Because frameworks have to have opinions to work (think back to [*The Web’s Grain*](https://frankchimero.com/blog/2015/the-webs-grain/)) the downside is that many websites created using this have a certain “made with Bootstrap” vibe.
+UI frameworks & Component libraries
+: These are all created to simplify building web apps, by not “reinventing the wheel.” But because frameworks have to be opinionated to work (think back to [*The Web’s Grain*](https://frankchimero.com/blog/2015/the-webs-grain/)), a downside is that many websites that use these have a boring sameness to them.
 
-	Nowadays, you might see [Radix](https://www.radix-ui.com/) and [`shadcn/ui`](https://ui.shadcn.com/). Look familiar?
+	The framework *du jour* for a long time was [Bootstrap](https://getbootstrap.com/) (created by Twitter, back when it was Twitter). Nowadays, you might see [Radix](https://www.radix-ui.com/), [`shadcn/ui`](https://ui.shadcn.com/), [MUI](https://mui.com/), [Chakra UI](https://chakra-ui.com/). Starting to look familiar?
 
 	In a small environment you’ll likely be working with an existing ([*legacy*](https://en.wikipedia.org/wiki/Legacy_system)) framework or component library of some sort, so understanding these trade-offs is important. Familiarity (and speed) vs. personality!
 
