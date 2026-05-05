@@ -35,10 +35,23 @@ Many of these topics could be full classes themselves. We hope this quick overv
 	}
 
 	dl {
-		margin-block-start: calc(2rlh);
-		text-wrap:          balance;
+		grid-column:           all;
+		grid-template-columns: subgrid;
+		margin-block-start:    calc(2rlh);
+		text-wrap:             balance;
 
-		dt:not(:first-child) { margin-block-start: 2rlh }
+		dt {
+			grid-column: body;
+
+			&:not(:first-child) { margin-block-start: 2rlh }
+		}
+
+		dd {
+			grid-column:           all;
+			grid-template-columns: subgrid;
+
+			> * { grid-column: body }
+		}
 	}
 </style>
 
@@ -97,6 +110,53 @@ Annotating
 	*Annotating* (you used to hear it called [*redlining*](https://www.uxbeginner.com/glossary/redlining/)—not to be confused with [its other meaning](https://en.wikipedia.org/wiki/Redlining)) is a term for when you *mark up* your designs with information—key measurements or other important behaviors/traits. This forms the *spec* that a dev should implement.
 
 	Figma’s [*Dev Mode*](https://www.figma.com/dev-mode/) is aimed at this problem! <!-- .note -->
+
+Markdown
+: We’ve encountered some [*Markdown*](https://en.wikipedia.org/wiki/Markdown) in our project `README.md` files (that’s the `.md`)—but it is worth calling out specifically, as it has really become the [*lingua franca*](https://en.wikipedia.org/wiki/Lingua_franca) for lightweight markup online. Its [simple syntax](https://www.markdownguide.org/cheat-sheet/) is designed to keep plain text files readable, but allow basic formatting and structure when rendered out to HTML:
+
+	<div class="before" style="grid-column: verso">
+
+	**`.md`**
+
+	```markdown <!-- style="inline-size: initial" -->
+	# A first-level heading
+
+	Some **text** in a *paragraph*.
+
+	With [links](#anchor) and `some code`.
+
+	1. Lists
+	1. Are Quite
+	1. Simple
+
+	> As are `blockquote`.
+	```
+
+	</div>
+
+	<div class="before after" style="grid-column: recto">
+
+	`.html`
+
+	```html
+	<h1>A first-level heading</h1>
+	<p>Some <strong>text</strong> in a <em>paragraph</em>.</p>
+	<p>With <a href="#anchor">links</a> and <code>some code</code>.</p>
+	<ol>
+		<li>Lists</li>
+		<li>Are Quite</li>
+		<li>Simple</li>
+	</ol>
+	<blockquote>
+		<p>As are <code>blockquote</code>.
+	</blockquote>
+	```
+
+	</div>
+
+	Often when you use WYSIWYG text formatting tools, it is really Markdown “under the hood”—and is commonly used in code, documentation, messaging, and now in LLM input and output.
+
+	The entire course site is written in Markdown! <!-- .note -->
 
 Bus Factor / Bus Count
 : On small product teams, certain individuals may be the only ones who understand how a certain feature works or is implemented. The phrase [*bus factor*](https://en.wikipedia.org/wiki/Bus_factor) (or *bus count*) is used in the lens of risk management—to make sure the product/team can continue if anyone gets “hit by a bus.”
