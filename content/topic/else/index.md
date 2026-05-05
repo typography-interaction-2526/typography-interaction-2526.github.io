@@ -26,6 +26,8 @@ Many of these topics could be full classes themselves. We hope this quick overv
 </figure>
 
 <style>
+	figure { margin-block-start: 4rlh }
+
 	dl {
 		margin-block-start: calc(2rlh);
 		text-wrap:          balance;
@@ -55,7 +57,7 @@ PR&NoBreak;<small>s</small> (Pull Requests)
 <figure
 	@citation="https://xkcd.com/1459/"
 	@source="https://imgs.xkcd.com/comics/documents_2x.png"
-	@style="--lines: 16; justify-self: end"
+	@style="--lines: 16; justify-self: center"
 	class="recto multiply documents"
 	>
 </figure>
