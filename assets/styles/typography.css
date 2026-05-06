@@ -68,7 +68,13 @@ em {
 			transform: skew(-15deg) translateX(0.1em);
 		}
 
-		/* TODO Trailing `)` can still wrap in Safari! */
+		/* Fix trailing punctuation wrapping in Safari! */
+		@supports (font: -apple-system-body) {
+			&:last-of-type::after {
+				content:   ' ';
+				font-size: 0.05em;
+			}
+		}
 	}
 }
 
