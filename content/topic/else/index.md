@@ -272,7 +272,7 @@ Context window
 *Plan-then-Execute*
 : At the other end of the prompting spectrum—completely separating out the [planning phase](https://self.md/concepts/plan-mode/) for agents. (*Claude* and *Copilot* [call](https://claudeai.dev/docs/mechanics/foundation/plan-mode/) [this](https://code.visualstudio.com/docs/copilot/agents/planning) “plan mode.”) The first conversation/session is just to come up with the *plan* (often as a `PLAN.md` task-list); only later it will be *executed*.
 
-	You might do this because of complexity (executing many steps), cost (constraining token use), time/delegation (go get lunch while it executes!), or safety (prevent damaging output/tool use).
+	You might do this because of complexity (executing many steps), cost (constraining token use), time/delegation (go get lunch while it executes!), or safety (prevent damaging output/tool use).
 
 	This is also a form of [*dry run* testing](https://en.wikipedia.org/wiki/Dry_run_(testing))—always a good idea! <!-- .note -->
 
