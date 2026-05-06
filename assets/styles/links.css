@@ -84,7 +84,7 @@ summary {
 		/* TODO Fix this with opacity `color-mix`! */
 
 		/* Use background for active highlight, as it might wrap. */
-		&::after { content: initial }
+		&::after { all: unset }
 
 		&:where(:not(s)):active { background-color: var(--highlight) }
 
