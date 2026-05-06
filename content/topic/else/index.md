@@ -197,7 +197,7 @@ This is big, always-evolving topic—and one that should permeate all the others
 A11y
 : [*A11y*](https://www.a11yproject.com/) is a catch-all term for [accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility). This is shorthand for ensuring that your product is as inclusive as possible—for folks with different disabilities—often estimated to be [around 15%](https://www.un.org/development/desa/disabilities/resources/factsheet-on-persons-with-disabilities.html) of the world’s population.
 
-	You will often see this kind of abbreviation (numeronym) for [*i18n*](https://en.wikipedia.org/wiki/Internationalization_and_localization), for *internationalization*. <!-- .note -->
+	You will often see this kind of abbreviation ([numeronym](https://en.wikipedia.org/wiki/Numeronym)) for [*i18n*](https://en.wikipedia.org/wiki/Internationalization_and_localization), for *internationalization*. <!-- .note -->
 
 Web Content Accessibility Guidelines (WCAG)
 : When in doubt, you can refer to the *Web Content Accessibility Guidelines*—which are codified and published (after [*much* debate](https://github.com/w3c/wcag3/issues)) by the W3C. We’re still working under [WCAG 2.2](https://www.w3.org/WAI/standards-guidelines/wcag/), but there is [a draft now for 3.0](https://w3c.github.io/wcag3/guidelines/).
