@@ -11,7 +11,7 @@ Our *30* (!) weeks here together is both a long time and also nowhere near en
 
 <aside>
 
-<mark>Follow links for more information</mark>
+<mark>Follow all links for more information</mark>
 
 Many of these topics could be full classes themselves. We hope this quick overview (and *copious* linking) can be an introduction if you want to go deeper.
 
@@ -178,7 +178,7 @@ Technical (and Design) Debt
 	Richard Scarry [understood](https://miro.medium.com/v2/resize:fit:2000/format:webp/0*iFaxYkoSpxX5gOPE.jpeg). <!-- .note -->
 
 *Dogfooding*
-: Often the best way—or at least the *first* way—to make sure your product is up to snuff is by using and testing it *yourself*. This term is called [*dogfooding*](https://www.nytimes.com/2022/11/14/business/dogfooding.html), or *eating your own dog food*. (There are debates on the [etymology](https://www.computer.org/csdl/magazine/so/2006/03/s3005/13rRUygBwg0).) It’s got to be good enough for you, before it is good enough for anyone else! (Or for dogs.)
+: Often the best way—or at least the *first* way—to make sure your product is up to snuff is by using and testing it *yourself*. This term is called [*dogfooding*](https://www.nytimes.com/2022/11/14/business/dogfooding.html), or *eating your own dog food*. (There are debates on the [etymology](https://www.computer.org/csdl/magazine/so/2006/03/s3005/13rRUygBwg0).) It’s got to be good enough for you, before it is good enough for anyone else! (Or for dogs.)
 
 	A famous example is Apple, when pushing desktop publishing in 1980, [outlawing typewriters internally](https://archive.org/details/Apple_Memo_No_Typewriters/page/n1/mode/2up). <!-- .note -->
 
@@ -354,7 +354,7 @@ BEM
 
 	It follows [the pattern](https://en.bem.info/methodology/naming-convention/) `.block__element--modifier` in classnames—and these double separators (`__` and `--`) are sometimes seen even in non-*BEM-y* contexts. Any system is better than no system!
 
-Tailwind (Utility / Atomic CSS)
+Tailwind (Utility / Atomic CSS)
 
 : On the other end of the spectrum—an alternative approach to CSS naming—is following a [*utility class*](https://css-irl.info/a-year-of-utility-classes/), [*atomic*](https://acss.io) methodology.
 
