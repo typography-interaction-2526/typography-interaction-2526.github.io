@@ -6,7 +6,8 @@
 
 ## There’s always more to it
 
-Our *30* weeks here together is both a long time and also nowhere near enough—this is a *Great Big Thing*, our broad field. So we put together some mini-topics here that we didn’t get to, but still think are important!
+Our *30* (!) weeks here together is both a long time and also nowhere near enough—this is a *Great Big Thing*, our broad field. So we put together some mini-topics here that we didn’t get to, but still think are important!
+<!-- .balance -->
 
 <aside>
 
@@ -281,7 +282,7 @@ MCP
 	Think of it somewhat like an [standardized API](https://modelcontextprotocol.io/docs/getting-started/intro) for these other applications—letting an LLM “plug into” and work with your data and context elsewhere—like in [Figma](https://www.figma.com/mcp-catalog/), [Notion](https://developers.notion.com/guides/mcp/overview), [Google](https://docs.cloud.google.com/mcp/overview), etc.
 
 So how do all these things even work, anyway…
-: It’s *extremely* complicated! And way beyond the scope of today (and even our own understanding). We’ll point you to a few fun explainer videos: about [algorithmic](https://www.youtube.com/watch?v=R9OHn5ZF4Uo) [training](https://www.youtube.com/watch?v=wvWpdrfoEv0) (pre-[*transformer*](https://en.wikipedia.org/wiki/Transformer_(deep_learning)), the *T* in *ChatGPT*) and then [a brief intro to LLM&NoBreak;s](https://www.youtube.com/watch?v=LPZh9BOjkQs) (with [a whole *deep learning* series](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) after). You can also [visualize the basic process](https://animatedllm.github.io).
+: It’s *extremely* complicated! And way beyond the scope of today (and even our own understanding). We’ll point you to a few fun explainer videos: about [algorithmic](https://www.youtube.com/watch?v=R9OHn5ZF4Uo) [training](https://www.youtube.com/watch?v=wvWpdrfoEv0) (pre-[*transformer*](https://en.wikipedia.org/wiki/Transformer_(deep_learning)), the *T* in *ChatGPT*) and then [a brief intro to LLM&NoBreak;s](https://www.youtube.com/watch?v=LPZh9BOjkQs) (with [a whole *deep learning* series](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) after). You can also [visualize the basic process](https://animatedllm.github.io), step-by-step.
 
 	To some extent, it’s only really knowable in a very broad sense—the scope of the maths/models and the scale of compute is truly incredible. <!-- .note -->
 
