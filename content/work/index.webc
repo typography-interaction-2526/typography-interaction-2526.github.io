@@ -7,40 +7,44 @@
 <script @text="`const images = ${JSON.stringify(images)}`"></script>
 
 <script>
-	window.reveal = (img) => img.classList.remove('fade')
+	const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5)
 
-	let pool = images.toSorted(() => Math.random() - 0.5)
-	let last
-
-	document.getElementById('images').innerHTML = pool.splice(0, 20).map((src) => `<img class="fade" onload="reveal(this)" src="${src}">`).join('')
-
-	// refill pool with images not currently shown, shuffled
+	let queue = shuffle(images), queueIndex = 0
 	const next = () => {
-		if (!pool.length) {
-			const shown = new Set([...document.getElementById('images').querySelectorAll('img')].map((i) => i.getAttribute('src')))
-			pool = images.filter((src) => !shown.has(src)).toSorted(() => Math.random() - 0.5)
-		}
-		return pool.pop()
+		if (queueIndex >= queue.length) { queue = shuffle(images); queueIndex = 0 }
+		return queue[queueIndex++]
 	}
 
-	setInterval(() => {
-		const imgs = [...document.getElementById('images').querySelectorAll('img')].filter((i) => i !== last)
-		const img = imgs[Math.floor(Math.random() * imgs.length)]
-		last = img
+	const grid = document.getElementById('images')
+	Array.from({ length: 20 }).forEach(() => grid.insertAdjacentHTML('beforeend', `<img class="fade" src="${next()}">`))
+	const tiles = [...grid.children]
+
+	// Paint the faded state first, then remove to trigger fade-in
+	requestAnimationFrame(() => tiles.forEach((img) => img.classList.remove('fade')))
+
+	let lastPick = -1
+
+	const swap = () => {
+		let pick
+		do { pick = Math.floor(Math.random() * 20) } while (pick === lastPick)
+		lastPick = pick
+
+		const img = tiles[pick]
 		img.classList.add('fade')
-		img.addEventListener('transitionend', () => { img.src = next() }, { once: true })
-	}, 1000)
+		img.addEventListener('transitionend', () => {
+			img.src = next()
+			img.classList.remove('fade')
+			img.addEventListener('transitionend', () => setTimeout(swap, 1000), { once: true })
+		}, { once: true })
+	}
+
+	Promise
+		.all(tiles.map((img) => new Promise((resolve) => img.addEventListener('transitionend', resolve, { once: true }))))
+		.then(() => setTimeout(swap, 1000))
 </script>
 
 <style>
 	body { background-color: black }
-
-	img {
-		opacity:    100%;
-		transition: opacity 500ms;
-	}
-
-	img.fade { opacity: 0% }
 
 	#images {
 		block-size:            100vh;
@@ -48,6 +52,16 @@
 		grid-template-columns: repeat(5, 1fr);
 		grid-template-rows:    repeat(4, 1fr);
 		inline-size:           100vw;
+		place-items:           stretch;
+
+		img {
+			object-fit: cover;
+			opacity:    100%;
+			overflow:   clip;
+			transition: opacity 1s ease-in-out;
+
+			&.fade { opacity: 0% }
+		}
 	}
 </style>
 
