@@ -1,0 +1,11 @@
+<script front-matter>
+	const layout = 'base'
+	const title = '’25–26'
+
+</script>
+
+<script @text="`const images = ${JSON.stringify(images)}`"></script>
+
+<script>
+	console.log(images)
+</script>
