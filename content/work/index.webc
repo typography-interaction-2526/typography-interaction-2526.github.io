@@ -23,26 +23,32 @@
 
 	let lastPick = null
 
-	const swap = async () => {
+	const swap = async (src = next()) => {
 		let pick
 		do { pick = Math.floor(Math.random() * tiles.length) } while (pick === lastPick)
 		lastPick = pick
 
 		const img = tiles[pick]
-
 		img.classList.add('fade')
 
 		await onTransitionEnd(img)
-		img.src = next()
+		img.src = src
 		img.classList.remove('fade')
 
 		await onTransitionEnd(img)
-		setTimeout(swap, 1000)
+
+		const nextSrc = next()
+		new Image().src = nextSrc
+		setTimeout(() => swap(nextSrc), 1000)
 	}
 
 	Promise
 		.all(tiles.map(onTransitionEnd))
-		.then(() => setTimeout(swap, 1000))
+		.then(() => {
+			const src = next()
+			new Image().src = src
+			setTimeout(() => swap(src), 1000)
+		})
 </script>
 
 <style>
@@ -60,7 +66,7 @@
 			object-fit: cover;
 			opacity:    100%;
 			overflow:   clip;
-			transition: opacity 1s ease-in-out;
+			transition: opacity 500ms ease-in-out;
 
 			&.fade { opacity: 0% }
 		}
