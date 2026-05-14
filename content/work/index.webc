@@ -9,20 +9,27 @@
 <script>
 	window.reveal = (img) => img.classList.remove('fade')
 
-	const picked = images.toSorted(() => Math.random() - 0.5).slice(0, 20)
+	let pool = images.toSorted(() => Math.random() - 0.5)
+	let last
 
-	document.getElementById('images').innerHTML = picked.map((src) => `<img class="fade" onload="reveal(this)" src="${src}">`).join('')
+	document.getElementById('images').innerHTML = pool.splice(0, 20).map((src) => `<img class="fade" onload="reveal(this)" src="${src}">`).join('')
+
+	// refill pool with images not currently shown, shuffled
+	const next = () => {
+		if (!pool.length) {
+			const shown = new Set([...document.getElementById('images').querySelectorAll('img')].map((i) => i.getAttribute('src')))
+			pool = images.filter((src) => !shown.has(src)).toSorted(() => Math.random() - 0.5)
+		}
+		return pool.pop()
+	}
 
 	setInterval(() => {
-		const imgs = [...document.getElementById('images').querySelectorAll('img')]
+		const imgs = [...document.getElementById('images').querySelectorAll('img')].filter((i) => i !== last)
 		const img = imgs[Math.floor(Math.random() * imgs.length)]
-
+		last = img
 		img.classList.add('fade')
-
-		img.addEventListener('transitionend', () => {
-			img.src = images[Math.floor(Math.random() * images.length)]
-		}, { once: true })
-	}, 3000)
+		img.addEventListener('transitionend', () => { img.src = next() }, { once: true })
+	}, 1000)
 </script>
 
 <style>
