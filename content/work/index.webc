@@ -1,7 +1,7 @@
 <script front-matter>
 	const layout = 'base'
 	const title = '’25–26'
-
+	const description = 'All our work for the year.'
 </script>
 
 <script @text="`const images = ${JSON.stringify(images)}`"></script>
