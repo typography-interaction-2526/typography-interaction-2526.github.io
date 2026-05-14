@@ -9,3 +9,17 @@
 <script>
 	console.log(images)
 </script>
+
+<style>
+	body { background-color: black }
+
+	#images {
+		block-size:            100vh;
+		display:               grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows:    repeat(4, 1fr);
+		inline-size:           100vw;
+	}
+</style>
+
+<div id="images"></div>
