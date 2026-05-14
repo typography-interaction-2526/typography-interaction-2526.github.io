@@ -7,13 +7,33 @@
 <script @text="`const images = ${JSON.stringify(images)}`"></script>
 
 <script>
+	window.reveal = (img) => img.classList.remove('fade')
+
 	const picked = images.toSorted(() => Math.random() - 0.5).slice(0, 20)
 
-	document.getElementById('images').innerHTML = picked.map((src) => `<img src="${src}">`).join('')
+	document.getElementById('images').innerHTML = picked.map((src) => `<img class="fade" onload="reveal(this)" src="${src}">`).join('')
+
+	setInterval(() => {
+		const imgs = [...document.getElementById('images').querySelectorAll('img')]
+		const img = imgs[Math.floor(Math.random() * imgs.length)]
+
+		img.classList.add('fade')
+
+		img.addEventListener('transitionend', () => {
+			img.src = images[Math.floor(Math.random() * images.length)]
+		}, { once: true })
+	}, 3000)
 </script>
 
 <style>
 	body { background-color: black }
+
+	img {
+		opacity:    100%;
+		transition: opacity 500ms;
+	}
+
+	img.fade { opacity: 0% }
 
 	#images {
 		block-size:            100vh;
