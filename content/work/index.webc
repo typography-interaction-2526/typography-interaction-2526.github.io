@@ -9,15 +9,23 @@
 <script>
 	const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5)
 
-	const gen = (function* () { while (true) yield* shuffle(images) })()
-	const next = () => gen.next().value
-
 	const grid = document.getElementById('images')
-	Array.from({ length: 20 }).forEach(() => grid.insertAdjacentHTML('beforeend', `<img class="fade" src="${next()}">`))
+	shuffle(images).slice(0, 20).forEach((src) => grid.insertAdjacentHTML('beforeend', `<img class="fade" src="${src}">`))
 	const tiles = [...grid.children]
 
 	// Paint the faded state first, then remove to trigger fade-in
 	requestAnimationFrame(() => tiles.forEach((img) => img.classList.remove('fade')))
+
+	// Each cycle: non-visible shuffled first, then only still-visible last
+	const gen = (function* () {
+		while (true) {
+			const showing = new Set(tiles.map((t) => t.getAttribute('src')))
+			yield* shuffle(images.filter((s) => !showing.has(s)))
+			for (const src of shuffle([...showing]))
+				if (tiles.some((tile) => tile.getAttribute('src') === src)) yield src
+		}
+	})()
+	const next = () => gen.next().value
 
 	const onTransitionEnd = (element) => new Promise((resolve) => element.addEventListener('transitionend', resolve, { once: true }))
 
