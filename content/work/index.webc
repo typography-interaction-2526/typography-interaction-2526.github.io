@@ -127,13 +127,11 @@
 				opacity:         100%;
 				overflow:        clip;
 				position:        absolute;
-				transition:      opacity 500ms ease-in-out, display 500ms allow-discrete;
+				transition:      opacity 500ms ease-in-out;
 
 				&.fade { opacity: 0% }
 
 				@container (height = 0) { display: none }
-
-				@starting-style { opacity: 0% }
 			}
 		}
 
