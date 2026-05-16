@@ -9,21 +9,31 @@
 <script>
 	const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5)
 
-	const tiles = [...document.querySelectorAll('img')].filter((image) => getComputedStyle(image).display !== 'none')
+	const tiles = [...document.querySelectorAll('img')]
 
-	shuffle(images).slice(0, tiles.length).forEach((src, index) => tiles[index].src = src)
+	// Re-evaluated on each call; some tiles are display:none at small sizes
+	const visible = () => tiles.filter((image) => getComputedStyle(image).display !== 'none')
+
+	let visibleTiles = visible()
+	shuffle(images).slice(0, visibleTiles.length).forEach((src, index) => visibleTiles[index].src = src)
+
+	// On resize, sync visible set and lazily populate any newly-revealed tiles
+	window.addEventListener('resize', () => {
+		visibleTiles = visible()
+		visibleTiles.filter((image) => !image.src).forEach((image) => image.src = next())
+	})
 
 	// Paint the faded state first, then remove to trigger fade-in
-	requestAnimationFrame(() => tiles.forEach((img) => img.classList.remove('fade')))
+	requestAnimationFrame(() => visibleTiles.forEach((img) => img.classList.remove('fade')))
 
 	// Each cycle: non-visible shuffled first, then only still-visible last
 	// — the second batch may have been swapped out by the time we reach it, so skip those
 	const gen = (function* () {
 		while (true) {
-			const showing = new Set(tiles.map((tile) => tile.getAttribute('src')))
+			const showing = new Set(visibleTiles.map((tile) => tile.getAttribute('src')))
 			yield* shuffle(images.filter((src) => !showing.has(src)))
 			for (const src of shuffle([...showing]))
-				if (tiles.some((tile) => tile.getAttribute('src') === src)) yield src
+				if (visibleTiles.some((tile) => tile.getAttribute('src') === src)) yield src
 		}
 	})()
 	const next = () => gen.next().value
@@ -35,10 +45,10 @@
 	const swap = async (src = next()) => {
 		// No same tile twice in a row
 		let pick
-		do { pick = Math.floor(Math.random() * tiles.length) } while (pick === lastPick)
+		do { pick = Math.floor(Math.random() * visibleTiles.length) } while (pick === lastPick)
 		lastPick = pick
 
-		const img = tiles[pick]
+		const img = visibleTiles[pick]
 		img.classList.add('fade')
 
 		await onTransitionEnd(img)
@@ -54,7 +64,7 @@
 
 	// Wait for all initial fade-ins, then begin swapping
 	Promise
-		.all(tiles.map(onTransitionEnd))
+		.all(visibleTiles.map(onTransitionEnd))
 		.then(() => {
 			const src = next()
 			new Image().src = src
