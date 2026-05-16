@@ -18,9 +18,20 @@
 	shuffle(images).slice(0, visibleTiles.length).forEach((src, index) => visibleTiles[index].src = src)
 
 	// On resize, sync visible set and lazily populate any newly-revealed tiles
+	let resizeTimer
+
 	window.addEventListener('resize', () => {
-		visibleTiles = visible()
-		visibleTiles.filter((image) => !image.src).forEach((image) => image.src = next())
+		clearTimeout(resizeTimer)
+
+		resizeTimer = setTimeout(() => {
+			visibleTiles = visible()
+
+			const newTiles = visibleTiles.filter((image) => !image.src)
+
+			newTiles.forEach((image) => image.src = next())
+			// Double rAF: browser must paint opacity:0 before transitioning away from it
+			requestAnimationFrame(() => requestAnimationFrame(() => newTiles.forEach((image) => image.classList.remove('fade'))))
+		}, 250)
 	})
 
 	// Paint the faded state first, then remove to trigger fade-in
@@ -38,7 +49,11 @@
 	})()
 	const next = () => gen.next().value
 
-	const onTransitionEnd = (element) => new Promise((resolve) => element.addEventListener('transitionend', resolve, { once: true }))
+	const onTransitionEnd = (element) => new Promise((resolve) => {
+		const done = () => { clearTimeout(fallback); resolve() }
+		const fallback = setTimeout(done, 600) // in case transition never fires (display:none, class already removed, etc.)
+		element.addEventListener('transitionend', done, { once: true })
+	})
 
 	let lastPick = null
 
