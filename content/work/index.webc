@@ -63,11 +63,23 @@
 	body { background-color: black }
 
 	#images {
+		--visible: 10;
+
+		--screen: 100dvw / 100dvh;
+		--images: 512 / 360;
+
+		--ideal: sqrt(var(--visible) / (var(--screen)) * (var(--images))); /* Accounting for ratios. */
+		--round: round(nearest, var(--ideal), 1); /* Whole rows. */
+		--rows:  max(1, var(--round)); /* Always at least one. */
+
+		--width:   calc(100dvh / var(--rows) * var(--images));
+
 		block-size:            100vh;
 		display:               grid;
-		grid-template-columns: repeat(5, 1fr);
-		grid-template-rows:    repeat(4, 1fr);
+		grid-template-columns: repeat(auto-fit, minmax(var(--width), 1fr));
+		grid-template-rows:    repeat(var(--rows), 1fr);
 		inline-size:           100vw;
+		overflow:              clip;
 		place-items:           stretch;
 
 		img {
@@ -78,6 +90,8 @@
 
 			&.fade { opacity: 0% }
 		}
+
+		@media (width > 480px) and (height > 480px) { --visible: 20 }
 	}
 </style>
 
