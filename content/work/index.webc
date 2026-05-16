@@ -9,26 +9,27 @@
 <script>
 	const shuffle = (array) => [...array].sort(() => Math.random() - 0.5)
 
-	const allTiles = [...document.querySelectorAll('img')]
-	const getVisibleTiles = () => allTiles.filter((tile) => getComputedStyle(tile).display !== 'none')
+	const getVisibleTiles = () => [...document.querySelectorAll('img')].filter((tile) => getComputedStyle(tile).display !== 'none')
 
 	let visibleTiles = getVisibleTiles()
 	let resizeTimer
 	let lastPickedIndex = null
 
-	// Initial fill — tiles already have .fade in the DOM.
-	shuffle(images).slice(0, visibleTiles.length).forEach((src, i) => visibleTiles[i].src = src)
+	shuffle(images).slice(0, visibleTiles.length).forEach((src, index) => visibleTiles[index].src = src)
 
 	// Yields non-visible images first, then re-yields ones still on screen.
 	const sourceGenerator = (function* () {
 		while (true) {
 			const onScreen = new Set(visibleTiles.map((tile) => tile.getAttribute('src')))
+
 			yield* shuffle(images.filter((src) => !onScreen.has(src)))
+
 			for (const src of shuffle([...onScreen]))
 				// Skip if this tile got swapped out before we reached it.
 				if (visibleTiles.some((tile) => tile.getAttribute('src') === src)) yield src
 		}
 	})()
+
 	const nextSource = () => sourceGenerator.next().value
 
 	// Resolves on transitionend, with a fallback for when no transition fires.
@@ -43,11 +44,14 @@
 	// On resize, sync the visible set and populate any newly-revealed tiles.
 	window.addEventListener('resize', () => {
 		clearTimeout(resizeTimer)
+
 		resizeTimer = setTimeout(() => {
 			visibleTiles = getVisibleTiles()
+
 			visibleTiles.filter((tile) => !tile.src).forEach((tile) => {
 				tile.classList.add('fade')
 				tile.src = nextSource()
+
 				whenReady(tile).then(() => tile.classList.remove('fade'))
 			})
 		}, 250)
@@ -57,13 +61,18 @@
 		// Pick a tile, but never the same one twice in a row.
 		let pickedIndex
 		do { pickedIndex = Math.floor(Math.random() * visibleTiles.length) } while (pickedIndex === lastPickedIndex)
+
 		lastPickedIndex = pickedIndex
 
 		const tile = visibleTiles[pickedIndex]
+
 		tile.classList.add('fade')
+
 		await onTransitionEnd(tile)
+
 		tile.src = src
 		tile.classList.remove('fade')
+
 		await onTransitionEnd(tile)
 
 		queueNext()
@@ -71,7 +80,9 @@
 
 	const queueNext = () => {
 		const src = nextSource()
+
 		new Image().src = src // Preload during the 1s gap.
+
 		setTimeout(() => swap(src), 1000)
 	}
 
@@ -80,55 +91,54 @@
 
 	// Once all initial images are decoded, begin swapping.
 	Promise.all(visibleTiles.map(whenReady)).then(queueNext)
-
 </script>
 
 <style>
-body { background-color: black }
+	body { background-color: black }
 
-#images {
-	--visible: 12;
+	#images {
+		--visible: 12;
 
-	--screen: 100dvw / 100dvh;
-	--images: 512 / 360;
+		--screen: 100dvw / 100dvh;
+		--images: 512 / 360;
 
-	--ideal:   sqrt(var(--visible) / (var(--screen)) * (var(--images))); /* Accounting for ratios. */
-	--rows:    max(1, round(nearest, var(--ideal), 1)); /* Whole rows, always at least one. */
-	--columns: max(1, round(down, var(--visible) / var(--rows), 1)); /* Same for columns. */
+		--ideal:   sqrt(var(--visible) / (var(--screen)) * (var(--images))); /* Accounting for ratios. */
+		--rows:    max(1, round(nearest, var(--ideal), 1)); /* Whole rows, always at least one. */
+		--columns: max(1, round(down, var(--visible) / var(--rows), 1)); /* Same for columns. */
 
-	block-size:            100vh;
-	display:               grid;
-	grid-template-columns: repeat(var(--columns), 1fr);
-	grid-template-rows:    repeat(var(--rows), 1fr);
-	inline-size:           100vw;
-	overflow:              clip;
-	place-items:           stretch;
+		block-size:            100vh;
+		display:               grid;
+		grid-template-columns: repeat(var(--columns), 1fr);
+		grid-template-rows:    repeat(var(--rows), 1fr);
+		inline-size:           100vw;
+		overflow:              clip;
+		place-items:           stretch;
 
-	li {
-		all:            unset; /* Clear type stuff. */
-		container-type: size;
-		position:       relative;
+		li {
+			all:            unset; /* Clear type stuff. */
+			container-type: size;
+			position:       relative;
 
-		img {
-			block-size:      100%;
-			inline-size:     100%;
-			object-fit:      cover;
-			object-position: top;
-			opacity:         100%;
-			overflow:        clip;
-			position:        absolute;
-			transition:      opacity 500ms ease-in-out, display 500ms allow-discrete;
+			img {
+				block-size:      100%;
+				inline-size:     100%;
+				object-fit:      cover;
+				object-position: top;
+				opacity:         100%;
+				overflow:        clip;
+				position:        absolute;
+				transition:      opacity 500ms ease-in-out, display 500ms allow-discrete;
 
-			&.fade { opacity: 0% }
+				&.fade { opacity: 0% }
 
-			@container (height = 0) { display: none }
+				@container (height = 0) { display: none }
 
-			@starting-style { opacity: 0% }
+				@starting-style { opacity: 0% }
+			}
 		}
-	}
 
-	@media (width > 480px) and (height > 480px) { --visible: 20 }
-}
+		@media (width > 480px) and (height > 480px) { --visible: 20 }
+	}
 </style>
 
 <ul id="images">
