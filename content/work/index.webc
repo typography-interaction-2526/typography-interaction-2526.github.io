@@ -7,129 +7,128 @@
 <script @text="`const images = ${JSON.stringify(images)}`"></script>
 
 <script>
-	const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5)
+	const shuffle = (array) => [...array].sort(() => Math.random() - 0.5)
 
-	const tiles = [...document.querySelectorAll('img')]
+	const allTiles = [...document.querySelectorAll('img')]
+	const getVisibleTiles = () => allTiles.filter((tile) => getComputedStyle(tile).display !== 'none')
 
-	// Re-evaluated on each call; some tiles are display:none at small sizes
-	const visible = () => tiles.filter((image) => getComputedStyle(image).display !== 'none')
-
-	let visibleTiles = visible()
-	shuffle(images).slice(0, visibleTiles.length).forEach((src, index) => visibleTiles[index].src = src)
-
-	// On resize, sync visible set and lazily populate any newly-revealed tiles
+	let visibleTiles = getVisibleTiles()
 	let resizeTimer
+	let lastPickedIndex = null
 
-	window.addEventListener('resize', () => {
-		clearTimeout(resizeTimer)
+	// Initial fill — tiles already have .fade in the DOM.
+	shuffle(images).slice(0, visibleTiles.length).forEach((src, i) => visibleTiles[i].src = src)
 
-		resizeTimer = setTimeout(() => {
-			visibleTiles = visible()
-
-			const newTiles = visibleTiles.filter((image) => !image.src)
-
-			newTiles.forEach((image) => image.src = next())
-			// Double rAF: browser must paint opacity:0 before transitioning away from it
-			requestAnimationFrame(() => requestAnimationFrame(() => newTiles.forEach((image) => image.classList.remove('fade'))))
-		}, 250)
-	})
-
-	// Paint the faded state first, then remove to trigger fade-in
-	requestAnimationFrame(() => visibleTiles.forEach((img) => img.classList.remove('fade')))
-
-	// Each cycle: non-visible shuffled first, then only still-visible last
-	// — the second batch may have been swapped out by the time we reach it, so skip those
-	const gen = (function* () {
+	// Yields non-visible images first, then re-yields ones still on screen.
+	const sourceGenerator = (function* () {
 		while (true) {
-			const showing = new Set(visibleTiles.map((tile) => tile.getAttribute('src')))
-			yield* shuffle(images.filter((src) => !showing.has(src)))
-			for (const src of shuffle([...showing]))
+			const onScreen = new Set(visibleTiles.map((tile) => tile.getAttribute('src')))
+			yield* shuffle(images.filter((src) => !onScreen.has(src)))
+			for (const src of shuffle([...onScreen]))
+				// Skip if this tile got swapped out before we reached it.
 				if (visibleTiles.some((tile) => tile.getAttribute('src') === src)) yield src
 		}
 	})()
-	const next = () => gen.next().value
+	const nextSource = () => sourceGenerator.next().value
 
+	// Resolves on transitionend, with a fallback for when no transition fires.
 	const onTransitionEnd = (element) => new Promise((resolve) => {
-		const done = () => { clearTimeout(fallback); resolve() }
-		const fallback = setTimeout(done, 600) // in case transition never fires (display:none, class already removed, etc.)
-		element.addEventListener('transitionend', done, { once: true })
+		const fallback = setTimeout(resolve, 600)
+		element.addEventListener('transitionend', () => (clearTimeout(fallback), resolve()), { once: true })
 	})
 
-	let lastPick = null
+	// Resolves once the tile's current src is decoded and paintable.
+	const whenReady = (tile) => tile.decode().catch(() => {})
 
-	const swap = async (src = next()) => {
-		// No same tile twice in a row
-		let pick
-		do { pick = Math.floor(Math.random() * visibleTiles.length) } while (pick === lastPick)
-		lastPick = pick
+	// On resize, sync the visible set and populate any newly-revealed tiles.
+	window.addEventListener('resize', () => {
+		clearTimeout(resizeTimer)
+		resizeTimer = setTimeout(() => {
+			visibleTiles = getVisibleTiles()
+			visibleTiles.filter((tile) => !tile.src).forEach((tile) => {
+				tile.classList.add('fade')
+				tile.src = nextSource()
+				whenReady(tile).then(() => tile.classList.remove('fade'))
+			})
+		}, 250)
+	})
 
-		const img = visibleTiles[pick]
-		img.classList.add('fade')
+	const swap = async (src) => {
+		// Pick a tile, but never the same one twice in a row.
+		let pickedIndex
+		do { pickedIndex = Math.floor(Math.random() * visibleTiles.length) } while (pickedIndex === lastPickedIndex)
+		lastPickedIndex = pickedIndex
 
-		await onTransitionEnd(img)
-		img.src = src
-		img.classList.remove('fade')
+		const tile = visibleTiles[pickedIndex]
+		tile.classList.add('fade')
+		await onTransitionEnd(tile)
+		tile.src = src
+		tile.classList.remove('fade')
+		await onTransitionEnd(tile)
 
-		await onTransitionEnd(img)
-
-		const nextSrc = next()
-		new Image().src = nextSrc // preload during the 1s gap
-		setTimeout(() => swap(nextSrc), 1000)
+		queueNext()
 	}
 
-	// Wait for all initial fade-ins, then begin swapping
-	Promise
-		.all(visibleTiles.map(onTransitionEnd))
-		.then(() => {
-			const src = next()
-			new Image().src = src
-			setTimeout(() => swap(src), 1000)
-		})
+	const queueNext = () => {
+		const src = nextSource()
+		new Image().src = src // Preload during the 1s gap.
+		setTimeout(() => swap(src), 1000)
+	}
+
+	// Fade each tile in as soon as its image decodes, in parallel.
+	visibleTiles.forEach((tile) => whenReady(tile).then(() => tile.classList.remove('fade')))
+
+	// Once all initial images are decoded, begin swapping.
+	Promise.all(visibleTiles.map(whenReady)).then(queueNext)
+
 </script>
 
 <style>
-	body { background-color: black }
+body { background-color: black }
 
-	#images {
-		--visible: 12;
+#images {
+	--visible: 12;
 
-		--screen: 100dvw / 100dvh;
-		--images: 512 / 360;
+	--screen: 100dvw / 100dvh;
+	--images: 512 / 360;
 
-		--ideal:   sqrt(var(--visible) / (var(--screen)) * (var(--images))); /* Accounting for ratios. */
-		--rows:    max(1, round(nearest, var(--ideal), 1)); /* Whole rows, always at least one. */
-		--columns: max(1, round(down, var(--visible) / var(--rows), 1)); /* Same for columns. */
+	--ideal:   sqrt(var(--visible) / (var(--screen)) * (var(--images))); /* Accounting for ratios. */
+	--rows:    max(1, round(nearest, var(--ideal), 1)); /* Whole rows, always at least one. */
+	--columns: max(1, round(down, var(--visible) / var(--rows), 1)); /* Same for columns. */
 
-		block-size:            100vh;
-		display:               grid;
-		grid-template-columns: repeat(var(--columns), 1fr);
-		grid-template-rows:    repeat(var(--rows), 1fr);
-		inline-size:           100vw;
-		overflow:              clip;
-		place-items:           stretch;
+	block-size:            100vh;
+	display:               grid;
+	grid-template-columns: repeat(var(--columns), 1fr);
+	grid-template-rows:    repeat(var(--rows), 1fr);
+	inline-size:           100vw;
+	overflow:              clip;
+	place-items:           stretch;
 
-		li {
-			all:            unset; /* Clear type stuff. */
-			container-type: size;
-			position:       relative;
+	li {
+		all:            unset; /* Clear type stuff. */
+		container-type: size;
+		position:       relative;
 
-			img {
-				block-size:      100%;
-				inline-size:     100%;
-				object-fit:      cover;
-				object-position: top;
-				overflow:        clip;
-				position:        absolute;
-				transition:      opacity 500ms ease-in-out;
+		img {
+			block-size:      100%;
+			inline-size:     100%;
+			object-fit:      cover;
+			object-position: top;
+			opacity:         100%;
+			overflow:        clip;
+			position:        absolute;
+			transition:      opacity 500ms ease-in-out, display 500ms allow-discrete;
 
-				&.fade { opacity: 0% }
+			&.fade { opacity: 0% }
 
-				@container (height = 0) { display: none }
-			}
+			@container (height = 0) { display: none }
+
+			@starting-style { opacity: 0% }
 		}
-
-		@media (width > 480px) and (height > 480px) { --visible: 20 }
 	}
+
+	@media (width > 480px) and (height > 480px) { --visible: 20 }
+}
 </style>
 
 <ul id="images">
