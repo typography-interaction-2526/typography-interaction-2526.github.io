@@ -96,15 +96,13 @@
 		--screen: 100dvw / 100dvh;
 		--images: 512 / 360;
 
-		--ideal: sqrt(var(--visible) / (var(--screen)) * (var(--images))); /* Accounting for ratios. */
-		--round: round(nearest, var(--ideal), 1); /* Whole rows. */
-		--rows:  max(1, var(--round)); /* Always at least one. */
-
-		--width: calc(100dvh / var(--rows) * var(--images));
+		--ideal:   sqrt(var(--visible) / (var(--screen)) * (var(--images))); /* Accounting for ratios. */
+		--rows:    max(1, round(nearest, var(--ideal), 1)); /* Whole rows, always at least one. */
+		--columns: max(1, round(down, var(--visible) / var(--rows), 1)); /* Same for columns. */
 
 		block-size:            100vh;
 		display:               grid;
-		grid-template-columns: repeat(auto-fit, minmax(var(--width), 1fr));
+		grid-template-columns: repeat(var(--columns), 1fr);
 		grid-template-rows:    repeat(var(--rows), 1fr);
 		inline-size:           100vw;
 		overflow:              clip;
