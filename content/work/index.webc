@@ -9,10 +9,9 @@
 <script>
 	const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5)
 
-	const grid = document.getElementById('images')
-	// Take the first 20 from one shuffle for the initial grid
-	shuffle(images).slice(0, 20).forEach((src) => grid.insertAdjacentHTML('beforeend', `<img class="fade" src="${src}">`))
-	const tiles = [...grid.children]
+	const tiles = [...document.querySelectorAll('img')].filter((image) => getComputedStyle(image).display !== 'none')
+
+	shuffle(images).slice(0, tiles.length).forEach((src, index) => tiles[index].src = src)
 
 	// Paint the faded state first, then remove to trigger fade-in
 	requestAnimationFrame(() => tiles.forEach((img) => img.classList.remove('fade')))
@@ -67,7 +66,7 @@
 	body { background-color: black }
 
 	#images {
-		--visible: 10;
+		--visible: 12;
 
 		--screen: 100dvw / 100dvh;
 		--images: 512 / 360;
@@ -76,7 +75,7 @@
 		--round: round(nearest, var(--ideal), 1); /* Whole rows. */
 		--rows:  max(1, var(--round)); /* Always at least one. */
 
-		--width:   calc(100dvh / var(--rows) * var(--images));
+		--width: calc(100dvh / var(--rows) * var(--images));
 
 		block-size:            100vh;
 		display:               grid;
@@ -86,17 +85,32 @@
 		overflow:              clip;
 		place-items:           stretch;
 
-		img {
-			object-fit: cover;
-			opacity:    100%;
-			overflow:   clip;
-			transition: opacity 500ms ease-in-out;
+		li {
+			all:            unset; /* Clear type stuff. */
+			container-type: size;
+			position:       relative;
 
-			&.fade { opacity: 0% }
+			img {
+				block-size:      100%;
+				inline-size:     100%;
+				object-fit:      cover;
+				object-position: top;
+				overflow:        clip;
+				position:        absolute;
+				transition:      opacity 500ms ease-in-out;
+
+				&.fade { opacity: 0% }
+
+				@container (height = 0) { display: none }
+			}
 		}
 
 		@media (width > 480px) and (height > 480px) { --visible: 20 }
 	}
 </style>
 
-<div id="images"></div>
+<ul id="images">
+	<li webc:for="n of [...Array(20)]">
+		<img class="fade">
+	</li>
+</ul>
