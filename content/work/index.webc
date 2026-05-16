@@ -10,6 +10,7 @@
 	const shuffle = (arr) => [...arr].sort(() => Math.random() - 0.5)
 
 	const grid = document.getElementById('images')
+	// Take the first 20 from one shuffle for the initial grid
 	shuffle(images).slice(0, 20).forEach((src) => grid.insertAdjacentHTML('beforeend', `<img class="fade" src="${src}">`))
 	const tiles = [...grid.children]
 
@@ -17,10 +18,11 @@
 	requestAnimationFrame(() => tiles.forEach((img) => img.classList.remove('fade')))
 
 	// Each cycle: non-visible shuffled first, then only still-visible last
+	// — the second batch may have been swapped out by the time we reach it, so skip those
 	const gen = (function* () {
 		while (true) {
-			const showing = new Set(tiles.map((t) => t.getAttribute('src')))
-			yield* shuffle(images.filter((s) => !showing.has(s)))
+			const showing = new Set(tiles.map((tile) => tile.getAttribute('src')))
+			yield* shuffle(images.filter((src) => !showing.has(src)))
 			for (const src of shuffle([...showing]))
 				if (tiles.some((tile) => tile.getAttribute('src') === src)) yield src
 		}
@@ -32,6 +34,7 @@
 	let lastPick = null
 
 	const swap = async (src = next()) => {
+		// No same tile twice in a row
 		let pick
 		do { pick = Math.floor(Math.random() * tiles.length) } while (pick === lastPick)
 		lastPick = pick
@@ -46,10 +49,11 @@
 		await onTransitionEnd(img)
 
 		const nextSrc = next()
-		new Image().src = nextSrc
+		new Image().src = nextSrc // preload during the 1s gap
 		setTimeout(() => swap(nextSrc), 1000)
 	}
 
+	// Wait for all initial fade-ins, then begin swapping
 	Promise
 		.all(tiles.map(onTransitionEnd))
 		.then(() => {
