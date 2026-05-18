@@ -29,7 +29,7 @@
 	document.addEventListener('click', (event) => {
 		const href = event.target.getAttribute('href')
 
-		if (href.startsWith('/') && !href.endsWith('.pdf')) {
+		if (href && href.startsWith('/') && !href.endsWith('.pdf')) {
 	 		if (event.metaKey || event.ctrlKey) return
 
 			event.preventDefault()
