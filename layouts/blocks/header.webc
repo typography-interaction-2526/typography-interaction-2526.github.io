@@ -88,12 +88,15 @@
 	}
 
 	/* Darken breaks with undocumented pseudo-selector: https://github.com/11ty/webc/pull/96 */
-	:host-context(header + ul > li):has(a > p:only-child) a::before {
+	:host-context(header + ul > li):has(a > p:only-child) a::before,
+	:host#the-end a::before {
 		background-color: var(--disabled);
 		content:          '';
 		inset:            0;
 		position:         absolute;
 	}
+
+	:host#the-end a { opacity: revert-layer }
 
 	/* Fake line match above. */
 	:host-context(li:has(#winter-break)):has(a:not([href])) {
