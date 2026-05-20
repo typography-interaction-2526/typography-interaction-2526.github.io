@@ -155,16 +155,27 @@
 </svg>
 <menu webc:root="override">
 	<li
-		webc:if="($data.page.url !== thisWeek.url) && !thisWeekIsAfter($data)"
+		webc:if="($data.page.url !== '/')"
 		class="this"
 	>
 		<a
-			:href="thisWeek.url"
-			aria-label="This week"
+			aria-label="Home"
+			href="/"
 		>
 			<div @html="inlineSvg('assets/icons/calendar.svg')"></div>
 		</a>
 	</li>
+	<!-- <li
+		webc:if="($data.page.url !== thisWeek.url) && !thisWeekIsAfter($data)"
+		class="this"
+		>
+		<a
+		:href="thisWeek.url"
+		aria-label="This week"
+		>
+		<div @html="inlineSvg('assets/icons/calendar.svg')"></div>
+		</a>
+		</li> -->
 	<li
 		webc:if="current || before"
 		class="start"
@@ -187,15 +198,15 @@
 			<div @html="inlineSvg('assets/icons/arrow.svg')"></div>
 		</a>
 	</li>
-	<li
+	<!-- <li
 		webc:if="($data.page.url !== thisWeek.url) && thisWeekIsAfter($data)"
 		class="this"
-	>
-		<a
-			:href="thisWeek.url"
-			aria-label="This week"
 		>
-			<div @html="inlineSvg('assets/icons/calendar.svg')"></div>
+		<a
+		:href="thisWeek.url"
+		aria-label="This week"
+		>
+		<div @html="inlineSvg('assets/icons/calendar.svg')"></div>
 		</a>
-	</li>
+		</li> -->
 </menu>
