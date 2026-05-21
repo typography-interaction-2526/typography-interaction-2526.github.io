@@ -32,6 +32,8 @@
 		if (href && href.startsWith('/') && !href.endsWith('.pdf')) {
 	 		if (event.metaKey || event.ctrlKey) return
 
+			if (href == '/work') return
+
 			event.preventDefault()
 			article.classList.add('scrolling') // Will hide menu stuff.
 
