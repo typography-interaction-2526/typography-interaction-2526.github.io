@@ -5,14 +5,27 @@
 </script>
 
 <style>
-	div {
-		grid-template-columns: minmax(auto, max-content);
+	div.left { @container style(--columns: 1) { margin-block-start: 2rcap } }
 
-		button { inline-size: initial }
+	div.sticky {
+		inline-size: fit-content;
 
-		> p { margin-block-start: initial }
+		> * {
+			inline-size:  initial;
+			justify-self: stretch;
+		}
 
-		&.left { @container style(--columns: 1) { margin-block-start: 2rcap } }
+		> p {
+			margin-block-start: initial;
+
+			> a {
+				inline-size: initial;
+
+				&[href='/work'] { --icon: '→' }
+			}
+		}
+
+		> button { margin-block-start: -1cap }
 	}
 
 	#students {
@@ -34,10 +47,11 @@
 
 <div class="left">
 	<div class="sticky">
+		<p><a href="https://docs.google.com/document/d/1En_aoZwgi3slvnv18JRrc-xucbYeG75tMyGsg1nFcA4"><cite>Who We Are</cite></a></p>
+		<p><a href="/work"><cite>Our Work</cite></a></p>
 		<button id="shuffle">
 			<p>Shuffle</p>
 		</button>
-		<p><a href="https://docs.google.com/document/d/1En_aoZwgi3slvnv18JRrc-xucbYeG75tMyGsg1nFcA4"><cite>Who We Are</cite></a></p>
 	</div>
 </div>
 <ul
