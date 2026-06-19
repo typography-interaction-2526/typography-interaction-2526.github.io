@@ -1,4 +1,6 @@
+*.md linguist-vendored=false
+*.md linguist-generated=false
 *.md linguist-documentation=false
-*.md linguist-detectable
+*.md linguist-detectable=true
 *.md linguist-language=ecmarkup
 *.webc linguist-language=html
