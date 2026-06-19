@@ -1,3 +1,4 @@
+*.md linguist-documentation=false
 *.md linguist-detectable
 *.md linguist-language=ecmarkup
 *.webc linguist-language=html
