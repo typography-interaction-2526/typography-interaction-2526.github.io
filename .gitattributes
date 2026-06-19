@@ -1,5 +1,3 @@
-*.md linguist-vendored=false
-*.md linguist-generated=false
-*.md linguist-documentation=false
-*.md linguist-detectable=true
+content/*.md linguist-documentation=false
+content/*.md linguist-language=ecmarkup
 *.webc linguist-language=html
