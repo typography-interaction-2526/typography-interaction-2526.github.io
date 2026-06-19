@@ -1,10 +1,11 @@
-# Override GitHub ignoring markdown as a language so that the repo shows correct statistics
+# Override GitHub ignoring markdown for language stats.
 *.md linguist-vendored=false
 *.md linguist-generated=false
 *.md linguist-documentation=false
 *.md linguist-detectable=true
-README.md linguist-detectable=false
 
-# content/*.md linguist-documentation=false
-# content/*.md linguist-language=ecmarkup
+# These have so much non-MD stuff, easier to read without the default preview.
+content/*.md linguist-language=ecmarkup
+
+# Treat these as HTML.
 # *.webc linguist-language=html
