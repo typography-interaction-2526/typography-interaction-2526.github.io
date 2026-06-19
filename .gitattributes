@@ -4,8 +4,8 @@
 *.md linguist-documentation=false
 *.md linguist-detectable=true
 
-# These have so much non-MD stuff, easier to read without the default preview.
+# These have so much non-Markdown stuff, easier to read without the default preview.
 content/*.md linguist-language=ecmarkup
 
 # Treat these as HTML.
-# *.webc linguist-language=html
+*.webc linguist-language=html
