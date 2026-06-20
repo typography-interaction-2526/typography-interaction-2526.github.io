@@ -5,7 +5,7 @@
 `gorton-digital--medium.otf` \
 `gorton-digital--regular.otf`
 
-These are based on [the revival work](https://github.com/drdnar/GortonDigital) done by [@drdnar](https://github.com/drdnar):
+These are based on [the revival work](https://github.com/drdnar/GortonDigital), done by [N. E. Bartgis](https://github.com/drdnar):
 
 > These typefaces are free to use for non-commercial purposes.
 >
