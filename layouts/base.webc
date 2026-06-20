@@ -82,5 +82,6 @@
 			webc:nokeep
 			@raw="content"
 		></template>
+		<block webc:import="blocks/footer.webc"></block>
 	</body>
 </html>
