@@ -15,7 +15,7 @@ I’ve [forked the repo](https://github.com/mfehrenbach/GortonDigital) and have 
 
 <br>
 
-# *OCR B*
+# *OCR-B*
 
 ## Original
 
