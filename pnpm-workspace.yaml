@@ -1,0 +1,4 @@
+allowBuilds:
+  dprint: true
+  puppeteer: true
+  sharp: true
