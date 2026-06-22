@@ -61,7 +61,7 @@
 		</div>
 		<p>CC BY-NC-SA 4.0</p>
 	</a>
-	<a :href="$data.course.channel.github">
+	<a :href="`${$data.course.channel.github}/${$data.pkg.name}`">
 		<p>Source code</p>
 	</a>
 </footer>
