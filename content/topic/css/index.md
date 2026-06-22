@@ -178,7 +178,7 @@ It's *much* easier to understand how it all comes together if you keep the code 
 
 <mark>In this house, our styles are external</mark>
 
-You might see inline or in-HTML styles elsewhere. But we shouldn’t see them in your code! They are a sign something has gone wrong—and that you (or your [resource](https://typography-interaction-2526.github.io/syllabus/#code-plagiarism)) don’t understand.
+You might see inline or in-HTML styles elsewhere. But we shouldn’t see them in your code! They are a sign something has gone wrong—and that you (or your [resource](/syllabus/#code-plagiarism)) don’t understand.
 
 </aside>
 
@@ -672,7 +672,7 @@ Often, when you are working towards your own design, you will find yourself figh
 This means you have to write everything yourself, but you have more control and aren’t building on unknown foundations. And things should be (more) consistent, across browsers and platforms.
 <!-- .after--2 -->
 
-Here is a [simple, modern one](https://typography-interaction-2526.github.io/assets/reset.css) for your `<head>`:
+Here is a [simple, modern one](/assets/reset.css) for your `<head>`:
 
 ```html <!-- .all -->
 <link href="https://typography-interaction-2526.github.io/assets/reset.css" rel="stylesheet">

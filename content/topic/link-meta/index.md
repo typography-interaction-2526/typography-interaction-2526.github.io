@@ -336,7 +336,7 @@ These are again specified in your `<head>`, now with `<meta>` elements—importa
 	<link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml">
 	<link href="assets/icons/touch.png"  rel="apple-touch-icon">
 	<meta property="description" content="We’ll properly begin our fifth and final unit, If&nbsp;All You Have Is a&nbsp;Hammer, Everything Looks Like a&nbsp;Nail, with a&nbsp;discussion of last week’s&nbsp;reading.">
-	<meta content="https://typography-interaction-2526.github.io/assets/meta/22.png" property="og:image">
+	<meta content="https://typography-interaction-2526.github.io/week/22/meta.png" property="og:image">
 	<meta content="Pale green background with black, vernacular “Gorton” text of the page title/date." property="og:image:alt" >
 	<!-- The rest of your head… -->
 </head>
