@@ -29,6 +29,9 @@ importers:
       '@uncenter/eleventy-plugin-toc':
         specifier: ^2.1.1
         version: 2.1.2
+      fast-glob:
+        specifier: ^3.3.3
+        version: 3.3.3
       markdown-it:
         specifier: ^14.1.1
         version: 14.2.0
@@ -90,9 +93,6 @@ importers:
       eslint-plugin-sort-keys-plus:
         specifier: ^1.5.0
         version: 1.5.0
-      fast-glob:
-        specifier: ^3.3.3
-        version: 3.3.3
       jsonc-eslint-parser:
         specifier: ^2.4.0
         version: 2.4.2
