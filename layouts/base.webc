@@ -47,6 +47,10 @@
 			name="robots"
 		>
 		<link
+			href="#license"
+			rel="license"
+		>
+		<link
 			href="/assets/icons/favicon.ico"
 			rel="icon"
 			sizes="64x64"
