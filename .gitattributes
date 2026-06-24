@@ -1,11 +1,12 @@
-# These have so much non-Markdown stuff, easier to read without the default preview.
-content/**/*.md linguist-language=ecmarkup
-
 # Override GitHub ignoring markdown for language stats.
 *.md linguist-vendored=false
 *.md linguist-generated=false
 *.md linguist-documentation=false
 *.md linguist-detectable=true
+
+# These have so much non-Markdown stuff, easier to read without the default preview.
+# content/**/*.md linguist-language=ecmarkup
+# TODO Breaks language bar-graph!
 
 # Treat these as HTML.
 *.webc linguist-language=html
