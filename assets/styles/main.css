@@ -8,8 +8,7 @@ main {
 		minmax(0, 1fr)
 		[ all-end aside-end body-end middle-end five-end four-end intro-end left-end one-end recto-end right-end six-end three-end two-end verso-end ];
 	overflow:            clip;
-	padding-block-end:   var(--end);
-	padding-block-start: var(--start);
+	padding-block:       var(--start);
 	padding-inline:      var(--gutter);
 	position:            relative;
 	row-gap:             3rcap;
@@ -653,16 +652,19 @@ main {
 
 	.shadow { filter: drop-shadow(0 0.5rlh 1rlh rgb(0 0 0 / 25%)) }
 
-	> .license {
+	/* License info. */
+	> footer {
 		--inset: 4rcap;
 
-		inset-block-start:  calc(var(--end) / 2);
-		margin-block-start: calc(var(--end) / 2 - 3rcap);
-		margin-inline-end:  var(--inset);
-		max-inline-size:    80ch;
-		position:           relative;
+		margin-block-start: calc(var(--end) - 3rcap);
+		max-inline-size:    initial;
+		padding-inline-end: var(--inset);
 
-		a { white-space: nowrap }
+		> p {
+			max-inline-size: initial;
+
+			> a { white-space: nowrap }
+		}
 
 		@container style(--tablet) { --inset: calc(2rcap + var(--gutter--base)) }
 	}

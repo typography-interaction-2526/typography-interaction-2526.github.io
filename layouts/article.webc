@@ -232,7 +232,9 @@
 				webc:nokeep
 				@html="content"
 			></template>
-			<p class="all note license">Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> for personal and educational, non-commercial use. The <a :href="`${$data.course.channel.github}/${$data.pkg.name}`">source code</a> is also available!</p>
+			<footer class="all note">
+				<p>Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> for personal and educational, non-commercial use. The <a :href="`${$data.course.channel.github}/${$data.pkg.name}`">source code</a> is also available!</p>
+			</footer>
 		</main>
 		<block
 			webc:import="nav.webc"
