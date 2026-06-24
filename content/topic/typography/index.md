@@ -424,7 +424,7 @@ Another common mistake is misusing [apostrophes and quotations](https://cmosshop
 &ldquo;These are better, clearer, opening/closing quotes.&rdquo;
 <!-- style="--size: var(--size--h3)" -->
 
-A third mistake is to use characters rather than mathematical symbols. This common practice started when typewriters where the norm which only had a limited characters set. This excuse no longer applies! For example:
+A third mistake is to use characters rather than mathematical symbols. This common practice started when typewriters were the norm which only had a limited characters set. This excuse no longer applies! For example:
 <!-- style="margin-block-start: 2rlh" -->
 
 9 x 5&ensp;→&ensp;9 × 5<br>
