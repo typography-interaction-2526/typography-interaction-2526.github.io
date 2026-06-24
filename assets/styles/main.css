@@ -653,6 +653,20 @@ main {
 
 	.shadow { filter: drop-shadow(0 0.5rlh 1rlh rgb(0 0 0 / 25%)) }
 
+	> .license {
+		--inset: 4rcap;
+
+		inset-block-start:  calc(var(--end) / 2);
+		margin-block-start: calc(var(--end) / 2 - 3rcap);
+		margin-inline-end:  var(--inset);
+		max-inline-size:    80ch;
+		position:           relative;
+
+		a { white-space: nowrap }
+
+		@container style(--tablet) { --inset: calc(2rcap + var(--gutter--base)) }
+	}
+
 	/* Manual column placements. */
 	:where(.all, .aside, .body, .middle, .five, .four, .left, .one, .recto, .right, .six, .three, .two, .verso) {
 		grid-row: span var(--rows, 1);
