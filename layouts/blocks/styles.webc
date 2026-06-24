@@ -1,3 +1,8 @@
+<style webc:bucket="base">
+/* License information is available in our repo: */
+/* https://github.com/typography-interaction-2526/typography-interaction-2526.github.io/ */
+
+</style>
 <link
 	webc:bucket="base"
 	href="../../assets/styles/variables.css"
