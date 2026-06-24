@@ -44,4 +44,12 @@ export default {
 	date: (data) => getWeek(data)?.date,
 	unit: (data) => getWeek(data)?.unit,
 	unitNumber: (data) => getWeek(data)?.unitNumber,
+
+
+	// Some derived/global ones.
+	license: {
+		name: 'CC BY-NC-SA 4.0',
+		url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+	},
+	repo: (data) => `${data.course.channel.github}/${data.pkg.name}`,
 }

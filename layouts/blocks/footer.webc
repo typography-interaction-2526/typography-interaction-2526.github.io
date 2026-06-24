@@ -22,12 +22,12 @@
 	id="footer"
 >
 	<a
-		href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+		:href="$data.license.url"
 		rel="license"
 	>
-		<p><span webc:import="badges.webc"></span> CC BY-NC-SA 4.0</p>
+		<p><span webc:import="badges.webc"></span> <nobr @text="$data.license.name"></nobr></p>
 	</a>
-	<a :href="`${$data.course.channel.github}/${$data.pkg.name}`">
+	<a :href="$data.repo">
 		<p>Source code</p>
 	</a>
 </footer>
