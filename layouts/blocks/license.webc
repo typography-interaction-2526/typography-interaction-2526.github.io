@@ -23,5 +23,5 @@
 	<p><span webc:import="badges.webc"></span> <a :href="$data.repo + '#use-and-re-use'">Licensed</a> under <a
 			:href="$data.license.url"
 			rel="license"
-		><nobr @text="$data.license.name"></nobr></a> for personal and educational, non-commercial use. <a :href="`${$data.repo}/tree/main/${$data.page.inputPath.replace('./', '')}`">Source code</a> also available!</p>
+		><nobr @text="$data.license.name"></nobr></a> for personal and educational, non-commercial use. <a :href="`${$data.repo}/tree/main/${$data.page.inputPath.replace('./', '')}?plain=1`">Source code</a> also available!</p>
 </footer>
