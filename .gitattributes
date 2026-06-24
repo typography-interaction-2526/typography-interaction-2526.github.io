@@ -5,7 +5,7 @@
 *.md linguist-detectable=true
 
 # These have so much non-Markdown stuff, easier to read without the default preview.
-content/*.md linguist-language=ecmarkup
+content/**/*.md linguist-language=ecmarkup
 
 # Treat these as HTML.
 *.webc linguist-language=html
