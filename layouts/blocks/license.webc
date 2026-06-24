@@ -1,0 +1,23 @@
+<style webc:scoped>
+	:host {
+		--inset: 4rcap;
+
+		margin-block-start: calc(var(--end) - 3rcap);
+		max-inline-size:    initial;
+		padding-inline-end: var(--inset);
+
+		> p {
+			max-inline-size: initial;
+
+			> a { white-space: nowrap }
+		}
+
+		@container style(--tablet) { --inset: calc(2rcap + var(--gutter--base)) }
+	}
+</style>
+<footer
+	webc:root="override"
+	class="all note"
+>
+	<p>Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> for personal and educational, non-commercial use. The <a :href="`${$data.course.channel.github}/${$data.pkg.name}/tree/main/${$data.page.inputPath.replace('./', '')}`">source code</a> is also available!</p>
+</footer>
