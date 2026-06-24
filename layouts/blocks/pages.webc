@@ -164,3 +164,4 @@
 		></block>
 	</li>
 </ul>
+<block webc:import="footer.webc"></block>
