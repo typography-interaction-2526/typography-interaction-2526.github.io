@@ -329,7 +329,7 @@ Copying wholesale from these tools—or any other source—does not demonstrate 
 	<script src="script.js"></script>
 	```
 
-	```js
+	```javascript
 	document.addEventListener('DOMContentLoaded', () => {
 		console.log('Runs after the page is loaded!')
 	})
@@ -345,7 +345,7 @@ Copying wholesale from these tools—or any other source—does not demonstrate 
 	<script defer src="script.js"></script>
 	```
 
-	```js
+	```javascript
 	console.log('Runs after the page is loaded!')
 	```
 
