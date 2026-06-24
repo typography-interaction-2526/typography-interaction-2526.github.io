@@ -1,0 +1,37 @@
+<style webc:scoped>
+	:host {
+		align-items:       center;
+		block-size:        1cap;
+		display:           inline-flex;
+		gap:               0.2em;
+		margin-inline-end: 0.2em;
+
+		> svg {
+			block-size:        calc(1cap + var(--stroke) * 2);
+			fill:              currentcolor;
+			inset-block-start: var(--stroke);
+			position:          relative;
+		}
+	}
+</style>
+<span
+	webc:root="override"
+	aria-label="Creative Commons badges"
+>
+	<svg
+		webc:nokeep
+		@html="inlineSvg('assets/icons/cc.svg')"
+	></svg>
+	<svg
+		webc:nokeep
+		@html="inlineSvg('assets/icons/cc--by.svg')"
+	></svg>
+	<svg
+		webc:nokeep
+		@html="inlineSvg('assets/icons/cc--nc.svg')"
+	></svg>
+	<svg
+		webc:nokeep
+		@html="inlineSvg('assets/icons/cc--sa.svg')"
+	></svg>
+</span>

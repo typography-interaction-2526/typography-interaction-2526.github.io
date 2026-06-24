@@ -14,26 +14,7 @@
 		text-transform:  uppercase;
 		white-space:     nowrap;
 
-		a {
-			display:        flex;
-			gap:            1rcap;
-			mix-blend-mode: screen;
-
-			> * { opacity: 50% }
-
-			div {
-				align-items: center;
-				block-size: 1cap;
-				display:    flex;
-				gap:        0.2em;
-
-				img {
-					block-size:     calc(1cap + var(--stroke) * 3);
-					filter:         invert(1);
-					max-block-size: initial;
-				}
-			}
-		}
+		p { opacity: 50% }
 	}
 </style>
 <footer
@@ -41,25 +22,7 @@
 	id="footer"
 >
 	<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
-		<div aria-label="Creative Commons badges">
-			<img
-				alt=""
-				src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
-			>
-			<img
-				alt=""
-				src="https://mirrors.creativecommons.org/presskit/icons/by.svg"
-			>
-			<img
-				alt=""
-				src="https://mirrors.creativecommons.org/presskit/icons/nc.svg"
-			>
-			<img
-				alt=""
-				src="https://mirrors.creativecommons.org/presskit/icons/sa.svg"
-			>
-		</div>
-		<p>CC BY-NC-SA 4.0</p>
+		<p><span webc:import="badges.webc"></span> CC BY-NC-SA 4.0</p>
 	</a>
 	<a :href="`${$data.course.channel.github}/${$data.pkg.name}`">
 		<p>Source code</p>
