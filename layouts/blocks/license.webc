@@ -19,5 +19,5 @@
 	webc:root="override"
 	class="all note"
 >
-	<p><span webc:import="badges.webc"></span> Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> for personal and educational, non-commercial use. <a :href="`${$data.course.channel.github}/${$data.pkg.name}/tree/main/${$data.page.inputPath.replace('./', '')}`">Source code</a> also available!</p>
+	<p><span webc:import="badges.webc"></span> <a :href="`${$data.course.channel.github}/${$data.pkg.name}#use-and-re-use`">Licensed</a> under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> for personal and educational, non-commercial use. <a :href="`${$data.course.channel.github}/${$data.pkg.name}/tree/main/${$data.page.inputPath.replace('./', '')}`">Source code</a> also available!</p>
 </footer>
