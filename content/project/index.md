@@ -4,6 +4,8 @@
 	const title = 'Index'
 </script>
 
+<a style="display: none" href="?plain=1">View plain!</a>
+
 Students will create a landing page for their <em @text="course.title"></em> projects from this year.
 <!-- .intro -->
 
