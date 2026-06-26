@@ -4,7 +4,12 @@
 	const title = 'Index'
 </script>
 
-<a style="display: none" href="?plain=1">View plain!</a>
+[This “Markdown” is best viewed as code!](index.md?plain=1)
+
+[This “Markdown” is best viewed as code!](#?plain=1)
+
+> [!IMPORTANT]
+> This “Markdown” is best [viewed as code](index.md?plain=1)!
 
 Students will create a landing page for their <em @text="course.title"></em> projects from this year.
 <!-- .intro -->

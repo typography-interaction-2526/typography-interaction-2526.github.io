@@ -160,7 +160,6 @@ summary {
 		&:where(summary, button) {
 			--gap: 1cap;
 
-			-webkit-user-select: none;
 			user-select:         none;
 
 			/* `before` to not foul link tap area. */
