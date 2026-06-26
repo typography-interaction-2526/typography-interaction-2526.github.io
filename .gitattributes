@@ -1,7 +1,6 @@
-# Override GitHub ignoring markdown for language stats.
-*.md linguist-detectable=true
+# Override GitHub ignoring Markdown for language stats.
+*.md linguist-detectable
 *.md linguist-documentation=false
-*.md linguist-language=markdown
 
 # These have so much non-Markdown stuff, easier to read without the default preview.
 # content/**/*.md linguist-language=ecmarkup
