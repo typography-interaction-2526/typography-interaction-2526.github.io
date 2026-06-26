@@ -2,12 +2,11 @@
 # *.md linguist-detectable
 # *.md linguist-documentation=false
 
-# Hide language graph entirely?
+# Hide language graph entirely, since we can only have Markdown with preview.
 * linguist-vendored
 
 # These have so much non-Markdown stuff, easier to read without the default preview.
 content/**/*.md linguist-language=ecmarkup
 
-
 # Treat these as HTML.
-# *.webc linguist-language=html
+*.webc linguist-language=html
