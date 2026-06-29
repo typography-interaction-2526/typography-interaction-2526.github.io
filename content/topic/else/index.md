@@ -115,7 +115,7 @@ Annotating
 
 	Figma’s [*Dev Mode*](https://www.figma.com/dev-mode/) is aimed at this problem! <!-- .note -->
 
-Markdown
+Markdown <!-- #markdown -->
 : We’ve encountered some [*Markdown*](https://en.wikipedia.org/wiki/Markdown) in our project `README.md` files (that’s the `.md`)—but it is worth calling out specifically, as it has really become the [*lingua franca*](https://en.wikipedia.org/wiki/Lingua_franca) for lightweight markup online. Its [simple syntax](https://www.markdownguide.org/cheat-sheet/) is designed to keep plain text files readable, but allow basic formatting and structure when rendered out to HTML:
 
 	<div class="before" style="grid-column: verso">
@@ -160,7 +160,7 @@ Markdown
 
 	Often when you use WYSIWYG text formatting tools, it is really Markdown “under the hood”—and is commonly used in code, documentation, messaging, and now in LLM input and output.
 
-	The entire course site is written in Markdown! <!-- .note -->
+	The <a :href="`${$data.repo}/tree/main/content`">entire course site</a> is written in Markdown! <!-- .note -->
 
 Bus Factor / Bus Count
 : On small product teams, certain individuals may be the only ones who understand how a certain feature works or is implemented. The phrase [*bus factor*](https://en.wikipedia.org/wiki/Bus_factor) (or *bus count*) is used in the lens of risk management—to make sure the product/team can continue if anyone gets “hit by a bus.”

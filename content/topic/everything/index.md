@@ -312,7 +312,7 @@ This “JavaScript everywhere” movement means that the tendrils of the web can
 
 <mark>Only resort to JS when necessary</mark>
 
-Even this very course site is (mostly) static HTML and CSS—but it is compiled [using JavaScript](https://www.11ty.dev)!
+Even <a :href="$data.repo">this very course site</a> is (mostly) static HTML and CSS—but it is compiled [using JavaScript](https://www.11ty.dev)!
 
 </aside>
 
