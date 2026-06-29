@@ -36,6 +36,8 @@ For our inline uses, we landed on [Matthew Skala’s](https://ansuz.sooke.bc.ca)
 
 <br>
 
+---
+
 ### Build
 
 You’ll need some basic familiarity with [the command line](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line), here!
@@ -50,9 +52,13 @@ Everything is assembled by [a static site generator (SSG)](https://en.wikipedia
 
 - **For “production” deployment:** the site is automatically built/served on [GitHub Pages](https://docs.github.com/en/pages), via [an action/workflow](.github/workflows/build-deploy.yaml) when there are commits pushed up to our `main` branch. (This just does the local build process, but inside [a *virtual machine*](https://en.wikipedia.org/wiki/Virtual_machine).) This *usually* takes [a couple minutes](https://github.com/typography-interaction-2526/typography-interaction-2526.github.io/actions), depending on the vagaries of GitHub [these days](https://mrshu.github.io/github-statuses/).
 
+<br>
+
+---
+
 #### Some other “advanced” (and possibly clever) things to note
 
-There is [a *long* year year](https://github.com/typography-interaction-2526/typography-interaction-2526.github.io/commits) of work, adjustments, and noodling in here—and [an elaborate config file](/eleventy.config.js) to match. But some specific things to call out:
+There is [a *long* year year](https://github.com/typography-interaction-2526/typography-interaction-2526.github.io/commits) of work, adjustments, and noodling in here—and [an elaborate config file](/eleventy.config.js) to match. But some specific things to call out:
 
 - Our templating is done in Zach’s scrappy, experimental [*WebC*](https://www.11ty.dev/docs/languages/webc/) language, which we love! This gives us some basic compilation logic, via HTML `webc:` attributes, that *Eleventy* then uses to put our pages together when built.
 
@@ -67,8 +73,11 @@ There is [a *long* year year](https://github.com/typography-interaction-2526/ty
 - We also use its `<style webc:scoped>` for some block/component-specific styles, [in-situ](layouts/blocks/header.webc#L12). It’s worth noting some quirks here though:
 
 	- Since they’re in-template, style changes will only update with a rebuild—and depending on what they’re used for (ex: something on every page), this makes them much less ergonomic than using separate stylesheets (which quickly live-reload).
+
 	- It did not like the recent [`@supports selector()`](layouts/blocks/warning.webc#L1).
+
 	- While its `:host` selector scoping/replacement works fine [with nesting](layouts/blocks/header.webc#L21) and even some [`&:pseudo-class`](layouts/blocks/header.webc#L61) use, we couldn’t figure out [`&.compound-selectors`](/layouts/blocks/nav.webc#L17).
+
 	- There *is* [a `:host(.selector)`](https://github.com/11ty/webc/pull/96) syntax for this, but it doesn’t save you much from `:host.selector` repetition. The [`:host-context(.parent)`](layouts/blocks/header.webc#L90) however is *very* handy, since `.parent :host` doesn’t replace the latter, nested one!
 
 - A few “in-content” elements are under [`/components`](/components/). *Eleventy* picks these up *within* our Markdown `.md` files (more on this next), via its [`htmlTemplateEngine`](https://www.11ty.dev/docs/config/#default-template-engine-for-html-files) option. This replaces/builds [`<figure>` elements](/components/figure.webc) from some [markup attributes](content/topic/everything/index.md#L21-L26), for example.
