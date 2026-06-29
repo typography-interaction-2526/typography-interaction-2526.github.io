@@ -36,6 +36,8 @@ For our inline uses, we landed on [Matthew Skala’s](https://ansuz.sooke.bc.ca)
 
 ## Build
 
+**We teach our students how to design and build web pages *via* a web page. This is more complex than what we cover in class, but should be thought of as an extension of our course material!**
+
 You’ll need some basic familiarity with [the command line](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line), here!
 
 We’re using [`pnpm`](https://pnpm.io) as our [*package manager*](https://en.wikipedia.org/wiki/Package_manager), to pull in our [build dependencies](package.json)—the various libraries the site uses. In your terminal, run `pnpm install` once in the repo directory to grab what we need!
@@ -108,11 +110,13 @@ Our actual course [content](/content/) is mostly written in [Markdown](https://e
 
 - Our *many* [code example blocks](https://typography-interaction-2526.github.io/topic/javascript/#intersection) are put together with a few tricks:
 
-	- The [raw example code itself]((content/topic/javascript/intersection)) lives within its [topic folder](content/topic/).
+	- The [raw example code itself]((content/topic/javascript/intersection/)) lives within its [topic folder](content/topic/).
 
 	- *Eleventy* [passes these through](eleventy.config.js#L47-L48) on build, so they’re always available [untouched](https://typography-interaction-2526.github.io/topic/javascript/intersection/).
 
-	- We also render [a preview page](https://typography-interaction-2526.github.io/topic/javascript/intersection/preview/?active=script.js&width=75%) out, which wraps the examples in our custom [`ti-preview` web component](https://github.com/typography-interaction-2425/ti-preview). This enables in-browser editing, with a live preview, via [CodeMirror](https://codemirror.net/)!
+	- We also render [a preview page](https://typography-interaction-2526.github.io/topic/javascript/intersection/preview/?active=script.js&width=75%) out, which wraps the examples in our custom [`ti-preview` web component](https://github.com/typography-interaction-2425/ti-preview).
+
+		**This enables in-browser editing, with a live preview, via [CodeMirror](https://codemirror.net/)!**
 
 	- These previews are then [included in-page](content/topic/javascript/index.md#L247-L251) in `iframe`, via the [`figure.webc` component](components/figure.webc#L48-L52).
 
