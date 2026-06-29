@@ -48,7 +48,7 @@ Everything is assembled by [a static site generator (SSG)](https://en.wikipedia
 
 - **For “local” development on your machine:** running `pnpm serve` in the repo directory starts *Eleventy*, which compiles everything everything to a `_site` folder. This directory is then served at `http://localhost/`. Changing any source content/files will recompile and should live reload any page in your browser, *usually* within a few seconds.
 
-- **For “production” deployment:** the site is automatically built/served on [GitHub Pages](https://docs.github.com/en/pages), via [an action/workflow](.github/workflows/build-deploy.yaml) when there are commits pushed up to our `main` branch. (This just does the local build process, but inside [a *virtual machine*](https://en.wikipedia.org/wiki/Virtual_machine).) This *usually* takes [a couple minutes](/actions), depending on the vagaries of GitHub [these days](https://mrshu.github.io/github-statuses/).
+- **For “production” deployment:** the site is automatically built/served on [GitHub Pages](https://docs.github.com/en/pages), via [an action/workflow](.github/workflows/build-deploy.yaml) when there are commits pushed up to our `main` branch. (This just does the local build process, but inside [a *virtual machine*](https://en.wikipedia.org/wiki/Virtual_machine).) This *usually* takes [a couple minutes](https://github.com/typography-interaction-2526/typography-interaction-2526.github.io/actions), depending on the vagaries of GitHub [these days](https://mrshu.github.io/github-statuses/).
 
 <br>
 
