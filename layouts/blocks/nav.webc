@@ -32,7 +32,6 @@
 		inset-block-start: 100%;
 	}
 </style>
-
 <nav
 	webc:root="override"
 	class="screen"

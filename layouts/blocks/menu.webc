@@ -6,7 +6,6 @@
 	export const thisWeekIsAfter = (data) =>
 		data.page?.url !== '/project/index/' && (!data.week || data.week < thisWeek.data.week)
 </script>
-
 <style webc:scoped>
 	:host {
 		--diameter: 2rcap;

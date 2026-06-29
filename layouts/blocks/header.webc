@@ -8,7 +8,6 @@
 			: ''
 	}
 </script>
-
 <style webc:scoped>
 	:host {
 		--size: var(--size--h1);
@@ -106,7 +105,6 @@
 		> a { opacity: var(--disabled--opacity) }
 	}
 </style>
-
 <header
 	webc:root="override"
 	:id="!item && slugify(title || unit?.[0].data.unit)"

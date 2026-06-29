@@ -46,7 +46,6 @@
 		return undefined
 	}
 </script>
-
 <style webc:scoped>
 	:host {
 		> li {
@@ -91,7 +90,6 @@
 	/* For the `nav.webc` scroll tracks. */
 	:host-context(body >) { overflow: clip }
 </style>
-
 <ul webc:root="override">
 	<li
 		webc:for="item of [...$data.collections.root]"
