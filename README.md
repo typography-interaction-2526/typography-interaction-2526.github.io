@@ -40,7 +40,9 @@ You’ll need some basic familiarity with [the command line](https://developer.m
 
 We’re using [`pnpm`](https://pnpm.io) as our [*package manager*](https://en.wikipedia.org/wiki/Package_manager), to pull in our [build dependencies](package.json)—the various libraries the site uses. In your terminal, run `pnpm install` once in the repo directory to grab what we need!
 
-### *Eleventy*
+<br>
+
+### *Eleventy* as the engine
 
 Everything is assembled by [a static site generator (SSG)](https://en.wikipedia.org/wiki/Static_site_generator)—which takes our [source content](content/) and compiles out finished [HTML](https://typography-interaction-2526.github.io/topic/html/), [CSS](https://typography-interaction-2526.github.io/topic/css/), and [JavaScript](https://typography-interaction-2526.github.io/topic/javascript/). We’re using [Zach Leatherman’s](https://www.zachleat.com/) sturdy and venerable [*Eleventy*](https://www.11ty.dev/) for this task.
 
@@ -50,21 +52,19 @@ Everything is assembled by [a static site generator (SSG)](https://en.wikipedia
 
 <br>
 
-### Some other “advanced” (and possibly clever) things to note
+There is [a *looong* year year](https://github.com/typography-interaction-2526/typography-interaction-2526.github.io/commits) of work, adjustments, and noodling in here—and [an elaborate config file](/eleventy.config.js) to match. But some other specific, “advanced,” possibly-clever things to call out:
 
-There is [a *long* year year](https://github.com/typography-interaction-2526/typography-interaction-2526.github.io/commits) of work, adjustments, and noodling in here—and [an elaborate config file](/eleventy.config.js) to match. But some specific things to call out:
+### *WebC* for templating
 
-- Our templating is done in Zach’s scrappy, experimental [*WebC*](https://www.11ty.dev/docs/languages/webc/) language, which we love! This gives us some basic compilation logic, via HTML `webc:` attributes, that *Eleventy* then uses to put our pages together when built.
-
-	We prefer this over [*Liquid*](https://www.11ty.dev/docs/languages/liquid/) primarily for its all-in-HTML syntax, and JavaScript extensibility! And are still rooting for it.
+Our templating is done in Zach’s scrappy, experimental [*WebC*](https://www.11ty.dev/docs/languages/webc/) language, which we love! This gives us some basic compilation logic, via HTML `webc:` attributes, that *Eleventy* then uses to put our pages together when built. We prefer this over [*Liquid*](https://www.11ty.dev/docs/languages/liquid/) for its all-in-HTML syntax, and JavaScript extensibility! And are still rooting for it.
 
 - Our base templates are in [`/layouts`](/layouts/), with some re-used/structured [blocks inside](/layouts/blocks/). With our… let’s say, “non-traditional” [site structure](https://typography-interaction-2526.github.io), individual page [`article.webc`](/layouts/article.webc) are looped through [`pages.webc`](/layouts/blocks/pages.webc) to make our endless vertical “stacked” list on each page.
 
-- WebC also gives us “only on build” scripts via `<‍script webc:setup>`, like [a `getDescription` function](layouts/base.webc#L3-L22) for specifying metadata from within our content, or other [localized](components/figure.webc#L2) [one-off](layouts/blocks/header.webc#L2-L19) [things](layouts/blocks/menu.webc#L2-L4) you don’t want to promote as global functions/filters. You have to remember to `export`, though!
+- *WebC* also gives us “only on build” scripts via `<‍script webc:setup>`, like [a `getDescription` function](layouts/base.webc#L3-L22) for specifying metadata from within our content, or other [localized](components/figure.webc#L2) [one-off](layouts/blocks/header.webc#L2-L19) [things](layouts/blocks/menu.webc#L2-L4) you don’t want to promote as global functions/filters. You have to remember to `export`, though!
 
-	For folks familiar with [*Astro*](https://astro.build/), this reminded us a lot of their Node-side [“component scripts”](https://docs.astro.build/en/basics/astro-components/#the-component-script) paradigm.
+	*For folks familiar with [*Astro*](https://astro.build/), this reminded us a lot of their Node-side [“component scripts”](https://docs.astro.build/en/basics/astro-components/#the-component-script) paradigm.*
 
-- We also use its `<style webc:scoped>` for some block/component-specific styles, [in-situ](layouts/blocks/header.webc#L12). It’s worth noting some quirks here though:
+- We also use its `<style webc:scoped>` for some block/component-specific styles, [in-situ](layouts/blocks/header.webc#L12). It’s worth noting some quirks here though:
 
 	- Since they’re in-template, style changes will only update with a rebuild—and depending on what they’re used for (ex: something on every page), this makes them much less ergonomic than using separate stylesheets (which quickly live-reload).
 
@@ -74,11 +74,21 @@ There is [a *long* year year](https://github.com/typography-interaction-2526/ty
 
 	- There *is* [a `:host(.selector)`](https://github.com/11ty/webc/pull/96) syntax for this, but it doesn’t save you much from `:host.selector` repetition. The [`:host-context(.parent)`](layouts/blocks/header.webc#L90) however is *very* handy, since `.parent :host` doesn’t replace the latter, nested one!
 
-- Following [Miriam Suzanne’s](https://www.miriamsuzanne.com/2024/07/06/buckets-layers/) clear-eyed pattern, we gather our [(plain ol’ CSS) stylesheets](assets/styles/) together using [`webc:bucket`](layouts/blocks/styles.webc), importing them into [cascade layers](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) via *Eleventy’s* [Bundle plugin `getBundleFileUrl`](https://www.11ty.dev/docs/plugins/bundle/). The component-scoped styles are in-page, via `getBundle`.
+- Following [Miriam Suzanne’s](https://www.miriamsuzanne.com/2024/07/06/buckets-layers/) clear-eyed pattern, we gather our [(plain ol’ CSS) stylesheets](assets/styles/) together using [`webc:bucket`](layouts/blocks/styles.webc), importing them into [cascade layers](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) via [*Eleventy’s* Bundle plugin](https://www.11ty.dev/docs/plugins/bundle/) `getBundleFileUrl`. The component-scoped styles are in-page, via `getBundle`.
 
 - A few “in-content” elements are under [`/components`](/components/). *Eleventy* picks these up *within* our Markdown `.md` files (more on this next), via its [`htmlTemplateEngine`](https://www.11ty.dev/docs/config/#default-template-engine-for-html-files) option. This replaces/builds [`<figure>` elements](/components/figure.webc) from some [markup attributes](content/topic/everything/index.md#L21-L26), for example.
 
-- Our actual course [content](/content/) is mostly written in [Markdown](https://en.wikipedia.org/wiki/Markdown), of which [we are fans](https://typography-interaction-2526.github.io/topic/else/#markdown). We add a number of [`markdown-it` plugins](eleventy.config.js#L99) to enrich the structure/output, further.
+- We add HTML-syntax highlighting for `.webc` files [to VS Code](.vscode/settings.json#L6-L9) and [on GitHub](.gitattributes#L12), since [it *is* HTML](https://github.com/11ty/webc#its-html).
+
+<br>
+
+### Content-wise, Markdown “plus”
+
+Our actual course [content](/content/) is mostly written in [Markdown](https://en.wikipedia.org/wiki/Markdown), of which [we are fans](https://typography-interaction-2526.github.io/topic/else/#markdown). We’re broadly trying to balance the ergonomics of Markdown with layout needs—we’re designers here, after all.
+
+- Since all these Markdown shenanigans don’t play well with GitHub’s [more limited](https://github.github.com/gfm/) syntax/preview, we’ve got that disabled via our [`.gitattributes` file](.gitattributes#L5)—mapping these to [`Ecmarkup`](https://tc39.es/ecmarkup/) offers a decent blend of Markdown and HTML highlighting, sans preview.
+
+	*The `* linguist-documentation` there turns off the then-inaccurate language graph—hopefully with no other side-effects!*
 
 <br>
 
