@@ -25,8 +25,8 @@ jobs:
         node-version: '22'
     - name: Install dependencies and build
       run: |
-        npm ci
-        npm run build
+        pnpm ci
+        pnpm build
     - name: Upload output
       uses: actions/upload-pages-artifact@v3
     - name: Deploy Pages
