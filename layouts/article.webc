@@ -225,7 +225,7 @@
 				<figure
 					webc:if="$data.video"
 					:citation="`https://drive.google.com/file/d/${$data.video}`"
-					:source="`https://drive.google.com/file/d/${$data.video}/preview`"
+				:source="`https://drive.google.com/file/d/${$data.video}/preview`"
 				></figure>
 			</section>
 			<template

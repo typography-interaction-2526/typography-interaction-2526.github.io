@@ -76,7 +76,7 @@ Our templating is done in Zach’s scrappy, experimental [*WebC*](https://www.11
 
 - Following [Miriam Suzanne’s](https://www.miriamsuzanne.com/2024/07/06/buckets-layers/) clear-eyed pattern, we gather our [(plain ol’ CSS) stylesheets](assets/styles/) together using [`webc:bucket`](layouts/blocks/styles.webc), importing them into [cascade layers](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) via [*Eleventy’s* Bundle plugin](https://www.11ty.dev/docs/plugins/bundle/) `getBundleFileUrl`. The component-scoped styles are in-page, via `getBundle`.
 
-- A few “in-content” elements are under [`/components`](/components/). *Eleventy* picks these up *within* our Markdown `.md` files (more on this next), via its [`htmlTemplateEngine`](https://www.11ty.dev/docs/config/#default-template-engine-for-html-files) option. This replaces/builds [`<figure>` elements](/components/figure.webc) from some [markup attributes](content/topic/everything/index.md#L21-L26), for example.
+- A few “in-content” elements are under [`/components`](/components/). *Eleventy* picks these up *within* our Markdown `.md` files (more on this next), via its [`htmlTemplateEngine`](https://www.11ty.dev/docs/config/#default-template-engine-for-html-files) option. The trick here is [a *single* `@html=content`](layouts/article.webc#L233), which does the processing! This replaces/builds [`<figure>` elements](/components/figure.webc) from some [markup attributes](content/topic/everything/index.md#L21-L26), for example.
 
 - We add HTML-syntax highlighting for `.webc` files [to VS Code](.vscode/settings.json#L6-L9) and [on GitHub](.gitattributes#L2), since [it *is* HTML](https://github.com/11ty/webc#its-html).
 
@@ -106,6 +106,17 @@ Our actual course [content](/content/) is mostly written in [Markdown](https://e
 
 	*The `* linguist-documentation` there turns off the then-inaccurate language graph—hopefully with no other side effects!*
 
+- Our *many* [code example blocks](https://typography-interaction-2526.github.io/topic/javascript/#intersection) are put together with a few tricks:
+
+	- The [raw example code itself]((content/topic/javascript/intersection)) lives within its [topic folder](content/topic/).
+
+	- *Eleventy* [passes these through](eleventy.config.js#L47-L48) on build, so they’re always available [untouched](https://typography-interaction-2526.github.io/topic/javascript/intersection/).
+
+	- We also render [a preview page](https://typography-interaction-2526.github.io/topic/javascript/intersection/preview/?active=script.js&width=75%) out, which wraps the examples in our custom [`ti-preview` web component](https://github.com/typography-interaction-2425/ti-preview). This enables in-browser editing, with a live preview, via [CodeMirror](https://codemirror.net/)!
+
+	- These previews are then [included in-page](content/topic/javascript/index.md#L247-L251) in `iframe`, via the [`figure.webc` component](components/figure.webc#L48-L52).
+
+	- We also “intercept” any [fenced code blocks](content/topic/javascript/index.md#L328-L329) in our Markdown, via the [`pre.webc` component](components/pre.webc)—so even these are editable (and share syntax highlighting), though without the output preview.
 <br>
 
 *More to come, here!*
