@@ -54,11 +54,24 @@ Everything is assembled by [a static site generator (SSG)](https://en.wikipedia
 
 There is [a *long* year year](https://github.com/typography-interaction-2526/typography-interaction-2526.github.io/commits) of work, adjustments, and noodling in here—and [an elaborate config file](/eleventy.config.js) to match. But some specific things to call out:
 
-- Our templating is done in Zach’s experimental [*WebC*](https://www.11ty.dev/docs/languages/webc/) language, which we still love! This gives us some basic compilation logic, via HTML `webc:` attributes, that *Eleventy* then uses to put our pages together when built.
+- Our templating is done in Zach’s scrappy, experimental [*WebC*](https://www.11ty.dev/docs/languages/webc/) language, which we love! This gives us some basic compilation logic, via HTML `webc:` attributes, that *Eleventy* then uses to put our pages together when built.
+
+	We prefer this over [*Liquid*](https://www.11ty.dev/docs/languages/liquid/) primarily for its all-in-HTML syntax, and JavaScript extensibility! And are still rooting for it.
 
 - Our base templates are in [`/layouts`](/layouts/), with some re-used/structured [blocks inside](/layouts/blocks/). With our… let’s say, “non-traditional” [site structure](https://typography-interaction-2526.github.io), individual page [`article.webc`](/layouts/article.webc) are looped through [`pages.webc`](/layouts/blocks/pages.webc) to make our endless vertical “stacked” list on each page.
 
-- A few “in-content” elements are under [`/components`](/components/). *Eleventy* picks these up *within* our Markdown `.md` files (more on this next), via its [`htmlTemplateEngine`](https://www.11ty.dev/docs/config/#default-template-engine-for-html-files) option. This replaces/builds [`<figure>` elements](/components/figure.webc) from some [markup attributes](content/topic/everything/index.md#L21-L27), for example.
+- WebC also gives us “only on build” scripts via `<‍script webc:setup>`, like [a `getDescription` function](layouts/base.webc#L3-L22) for specifying metadata from within our content, or other [localized](components/figure.webc#L2) [one-off](layouts/blocks/header.webc#L2-L19) [things](layouts/blocks/menu.webc#L2-L4) you don’t want to promote as global functions/filters. You have to remember to `export`, though!
+
+	For folks familiar with [*Astro*](https://astro.build/), this reminded us a lot of their Node-side [“component scripts”](https://docs.astro.build/en/basics/astro-components/#the-component-script) paradigm.
+
+- We also use its `<style webc:scoped>` for some block/component-specific styles, [in-situ](layouts/blocks/header.webc#L12). It’s worth noting some quirks here though:
+
+	- Since they’re in-template, style changes will only update with a rebuild—and depending on what they’re used for (ex: something on every page), this makes them much less ergonomic than using separate stylesheets (which quickly live-reload).
+	- It did not like the recent [`@supports selector()`](layouts/blocks/warning.webc#L1).
+	- While its `:host` selector scoping/replacement works fine [with nesting](layouts/blocks/header.webc#L21) and even some [`&:pseudo-class`](layouts/blocks/header.webc#L61) use, we couldn’t figure out [`&.compound-selectors`](/layouts/blocks/nav.webc#L17).
+	- There *is* [a `:host(.selector)`](https://github.com/11ty/webc/pull/96) syntax for this, but it doesn’t save you much from `:host.selector` repetition. The [`:host-context(.parent)`](layouts/blocks/header.webc#L90) however is *very* handy, since `.parent :host` doesn’t replace the latter, nested one!
+
+- A few “in-content” elements are under [`/components`](/components/). *Eleventy* picks these up *within* our Markdown `.md` files (more on this next), via its [`htmlTemplateEngine`](https://www.11ty.dev/docs/config/#default-template-engine-for-html-files) option. This replaces/builds [`<figure>` elements](/components/figure.webc) from some [markup attributes](content/topic/everything/index.md#L21-L26), for example.
 
 - Our actual course [content](/content/) is mostly written in [Markdown](https://en.wikipedia.org/wiki/Markdown), of which [we are fans](https://typography-interaction-2526.github.io/topic/else/#markdown). We add a number of [`markdown-it` plugins](eleventy.config.js#L99) to enrich the structure/output, further.
 
