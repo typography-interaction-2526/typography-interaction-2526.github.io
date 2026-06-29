@@ -2,32 +2,41 @@ name: Automatic build/deploy
 on:
   push:
     branches: [main]
-  # Allow manual triggering
   workflow_dispatch:
+
 permissions:
-  contents: write
+  contents: read
   id-token: write
-  pages:    write
+  pages: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 jobs:
   github-pages:
     name:    GitHub Pages
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
-    runs-on: ubuntu-latest
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v4
-    - name: Setup Pages
-      id:   pages
-      uses: actions/configure-pages@v5
-    - uses: actions/setup-node@v4
-      with:
-        node-version: '22'
-    - name: Install dependencies and build
-      run: |
-        pnpm ci
-        pnpm build
-    - name: Upload output
-      uses: actions/upload-pages-artifact@v3
-    - name: Deploy Pages
-      uses: actions/deploy-pages@v4
+      - name: Checkout repo…
+        uses: actions/checkout@v6
+      - name: Install pnpm…
+        uses: pnpm/action-setup@v6
+      - name: Install Node…
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: package.json
+          cache: pnpm
+      - name: Install dependencies and build
+        run: |
+          pnpm install
+          pnpm build
+      - name: Setup Pages…
+        uses: actions/configure-pages@v6
+      - name: Upload output…
+        uses: actions/upload-pages-artifact@v5
+      - name: Deploy Pages!
+        uses: actions/deploy-pages@v5
