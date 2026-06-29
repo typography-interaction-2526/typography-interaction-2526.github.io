@@ -12,7 +12,7 @@ It is taught by [@mfehrenbach](https://github.com/mfehrenbach), [@rijkvanzanten]
 
 ## Use and Re-use
 
-In the original spirit of the open web, this repo (and the course content within) is made <samp>Public</samp> (&thinsp;[*“source available”*](https://en.wikipedia.org/wiki/Source-available_software)&thinsp;) for personal and educational, non-commercial use under the [CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/). The included fonts remain [licensed](assets/fonts/LICENSE.md) per their creators. Such as one might consider this “software,” it’s provided as-is and without any warranty. (I’ve got enough to worry about.)
+In the original spirit of the open web, this repo (and the course content within) is made <kbd>Public</kbd> (&thinsp;[*“source available”*](https://en.wikipedia.org/wiki/Source-available_software)&thinsp;) for personal and educational, non-commercial use under the [CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/). The included fonts remain [licensed](assets/fonts/LICENSE.md) per their creators. Such as one might consider this “software,” it’s provided as-is and without any warranty. (I’ve got enough to worry about.)
 
 **We’ve added some explanation and notes, below. We hope you can learn from it!**
 
@@ -38,17 +38,17 @@ For our inline uses, we landed on [Matthew Skala’s](https://ansuz.sooke.bc.ca)
 
 ### Build
 
-You’ll need some familiarity with [the command line](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line), here!
+You’ll need some basic familiarity with [the command line](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line), here!
 
-We’re using [`pnpm`](https://pnpm.io) as our [*package manager*](https://en.wikipedia.org/wiki/Package_manager), to pull in our [build dependencies](package.json)—the various libraries the site uses. In your terminal, run `pnpm install` once in the repo directory to grab what we need!
+We’re using [`pnpm`](https://pnpm.io) as our [*package manager*](https://en.wikipedia.org/wiki/Package_manager), to pull in our [build dependencies](package.json)—the various libraries the site uses. In your terminal, run `pnpm install` once in the repo directory to grab what we need!
 
 #### *Eleventy*
 
-Everything is assembled by [a 	static site generator (SSG)](https://en.wikipedia.org/wiki/Static_site_generator)—which takes our [source content](content/) and compiles out finished HTML, CSS, and JavaScript. We’re using [Zach Leatherman’s](https://www.zachleat.com/) sturdy and venerable [*Eleventy*](https://www.11ty.dev/) for this task.
+Everything is assembled by [a static site generator (SSG)](https://en.wikipedia.org/wiki/Static_site_generator)—which takes our [source content](content/) and compiles out finished HTML, CSS, and JavaScript. We’re using [Zach Leatherman’s](https://www.zachleat.com/) sturdy and venerable [*Eleventy*](https://www.11ty.dev/) for this task.
 
-- **For “local” development on your machine**, running `pnpm serve` in the repo directory starts *Eleventy*, which compiles everything everything to a `_site` folder. This directory is then served at `http://localhost/`. Changing any source content/files will recompile and should live reload any page in your browser, *usually* within a few seconds.
+- **For “local” development on your machine:** running `pnpm serve` in the repo directory starts *Eleventy*, which compiles everything everything to a `_site` folder. This directory is then served at `http://localhost/`. Changing any source content/files will recompile and should live reload any page in your browser, *usually* within a few seconds.
 
-- **For “production” deployment**, the site is automatically built/served on [GitHub Pages](https://docs.github.com/en/pages), via [an action/workflow](.github/workflows/build-deploy.yaml) when there are commits pushed up to our `main` branch. (This just does the local build process, but inside a [*virtual machine*](https://en.wikipedia.org/wiki/Virtual_machine)”!) This *usually* takes a [couple minutes](/actions), depending on the vagaries of GitHub [these days](https://mrshu.github.io/github-statuses/).
+- **For “production” deployment:** the site is automatically built/served on [GitHub Pages](https://docs.github.com/en/pages), via [an action/workflow](.github/workflows/build-deploy.yaml) when there are commits pushed up to our `main` branch. (This just does the local build process, but inside [a *virtual machine*](https://en.wikipedia.org/wiki/Virtual_machine).) This *usually* takes [a couple minutes](/actions), depending on the vagaries of GitHub [these days](https://mrshu.github.io/github-statuses/).
 
 <br>
 
