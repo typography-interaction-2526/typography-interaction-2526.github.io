@@ -84,11 +84,23 @@ Our templating is done in Zach’s scrappy, experimental [*WebC*](https://www.11
 
 ### Content-wise, Markdown “plus”
 
-Our actual course [content](/content/) is mostly written in [Markdown](https://en.wikipedia.org/wiki/Markdown), of which [we are fans](https://typography-interaction-2526.github.io/topic/else/#markdown). We’re broadly trying to balance the ergonomics of Markdown with layout needs—we’re designers here, after all.
+Our actual course [content](/content/) is mostly written in [Markdown](https://en.wikipedia.org/wiki/Markdown), of which [we are fans](https://typography-interaction-2526.github.io/topic/else/#markdown). Here we’re broadly trying to balance the ergonomics of Markdown with layout needs—we’re designers, after all.
+
+- For better/consistent syntax highlighting (and since we prefer [dynamic JS](https://www.11ty.dev/docs/data-frontmatter/#front-matter-formats) for these, anyway), we use [custom front-matter options](eleventy.config.js#L30-L33)—so you’ll see `<script front-matter>` [starting out content](content/week/1.md#L1-L5).
+
+- We add a number of [`markdown-it` plugins](eleventy.config.js#L99) to enrich the structure/output, further. A couple to call out:
+
+	- We add `<abbr>` automatically via [`markdown-it-abbr`](https://github.com/markdown-it/markdown-it-abbr)—[preprocessing](eleventy.config.js#L143) a common [set of abbreviations](data/abbreviations.js) appended to all the Markdown, so the same list is shared across pages. Try hovering over [any acronym](https://typography-interaction-2526.github.io/#:~:text=SCHOOL%2C%20PARSONS%2C%20MPS-,CD,-PMCD%C2%A05001%2C) on the site!
+
+	- We use [Arve Seljebu’s](https://arve.dev/) popular [`markdown-it-attrs`](https://github.com/arve0/markdown-it-attrs) to decorate our Markdown with classes and IDs. The default curly-bracket `{ .class }` syntax has poor highlighting though, so instead we use [HTML comments](index.md#L24) for these! The built-in `leftDelimiter`/`rightDelimiter` [options](https://github.com/arve0/markdown-it-attrs#usage) don’t allow this though, so we [preprocess them](eleventy.config.js#L146-L149) ourselves.
+
+		*This has another nice side effect of hiding these in Markdown previews!*
+
+	- Our own custom [`markdownRagging` function](eleventy.config.js#L62-L97), for better line-breaks—keeping articles/short words from dangling, not starting lines on em-dashes, breaking after slashes, and preventing (short) orphans, of course. *Typography* is in our course title, after all.
 
 - Since all these Markdown shenanigans don’t play well with GitHub’s [more limited](https://github.github.com/gfm/) syntax/preview, we’ve got that disabled via our [`.gitattributes` file](.gitattributes#L5)—mapping these to [`Ecmarkup`](https://tc39.es/ecmarkup/) offers a decent blend of Markdown and HTML highlighting, sans preview.
 
-	*The `* linguist-documentation` there turns off the then-inaccurate language graph—hopefully with no other side-effects!*
+	*The `* linguist-documentation` there turns off the then-inaccurate language graph—hopefully with no other side effects!*
 
 <br>
 
