@@ -18,17 +18,15 @@ In the original spirit of the open web, this repo (and the course content withi
 
 <br>
 
-## Colophon
+## Type
 
-### Type
-
-#### *Gorton*
+### *Gorton*
 
 The site is set almost entirely in [*Gorton*](https://en.wikipedia.org/wiki/Gorton_(typeface)), inspired in no small part by [Marcin Wichary’s ode](https://aresluna.org/the-hardest-working-font-in-manhattan/) and the very city around our campus. The close symbiosis of its form to its means of production echoes a recurring theme of our course: the two are never far apart.
 
 After “shopping” among the various [recreations](https://aresluna.org/the-hardest-working-font-in-manhattan/recreations/), we settled on [N. E. Bartgis’](https://github.com/drdnar) cut [*GortonDigital*](https://github.com/drdnar/GortonDigital) for its charm (and lowercase). Like many *Gortons*, it lacks an italic; we fake ours as you would with [a pantograph](https://en.wikipedia.org/wiki/Pantograph#:~:text=condense%2C%20extend%2C%20and-,slant%20the%20design,-%28mathematically%2C%20these%20are), with a simple [`skew()`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/skew). (Students: *do as we say, not as we do!*&#x202F;) As we used it over the year, we’ve also added some additional characters and [tweaked it to taste](https://github.com/drdnar/GortonDigital/pull/8). This all feels appropriate to this vernacular, ever-evolving typeface.
 
-#### *OCR-B*
+### *OCR-B*
 
 For our `<code>`, we were drawn to another typeface intimately linked to its tools and technology—Adrian Frutiger’s similarly once-ubiquitous [*OCR-B*](https://en.wikipedia.org/wiki/OCR-B).
 
@@ -36,15 +34,13 @@ For our inline uses, we landed on [Matthew Skala’s](https://ansuz.sooke.bc.ca)
 
 <br>
 
----
-
-### Build
+## Build
 
 You’ll need some basic familiarity with [the command line](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line), here!
 
 We’re using [`pnpm`](https://pnpm.io) as our [*package manager*](https://en.wikipedia.org/wiki/Package_manager), to pull in our [build dependencies](package.json)—the various libraries the site uses. In your terminal, run `pnpm install` once in the repo directory to grab what we need!
 
-#### *Eleventy*
+### *Eleventy*
 
 Everything is assembled by [a static site generator (SSG)](https://en.wikipedia.org/wiki/Static_site_generator)—which takes our [source content](content/) and compiles out finished [HTML](https://typography-interaction-2526.github.io/topic/html/), [CSS](https://typography-interaction-2526.github.io/topic/css/), and [JavaScript](https://typography-interaction-2526.github.io/topic/javascript/). We’re using [Zach Leatherman’s](https://www.zachleat.com/) sturdy and venerable [*Eleventy*](https://www.11ty.dev/) for this task.
 
@@ -54,9 +50,7 @@ Everything is assembled by [a static site generator (SSG)](https://en.wikipedia
 
 <br>
 
----
-
-#### Some other “advanced” (and possibly clever) things to note
+### Some other “advanced” (and possibly clever) things to note
 
 There is [a *long* year year](https://github.com/typography-interaction-2526/typography-interaction-2526.github.io/commits) of work, adjustments, and noodling in here—and [an elaborate config file](/eleventy.config.js) to match. But some specific things to call out:
 
