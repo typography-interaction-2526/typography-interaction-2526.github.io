@@ -14,6 +14,8 @@ It is taught by [@mfehrenbach](https://github.com/mfehrenbach), [@rijkvanzanten]
 
 In the original spirit of the open web, this repo (and the course content within) is made <kbd>Public</kbd> (&thinsp;[*“source available”*](https://en.wikipedia.org/wiki/Source-available_software)&thinsp;) for personal and educational, non-commercial use under the [CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/). The included fonts remain [licensed](assets/fonts/LICENSE.md) per their creators. Such as one might consider this “software,” it’s provided as-is and without any warranty. (I’ve got enough to worry about.)
 
+<br>
+
 **We’ve added some explanation, notes, and loads of links (as is custom), below. We hope you can learn from it!**
 
 <br>
@@ -37,6 +39,8 @@ For our inline uses, we landed on [Matthew Skala’s](https://ansuz.sooke.bc.ca)
 ## Build
 
 **We teach our students how to design and build web pages *via* a web page. This is more complex than what we cover in class, but should be thought of as an extension of our course material!**
+
+<br>
 
 You’ll need some basic familiarity with [the command line](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line), here!
 
@@ -114,13 +118,14 @@ Our actual course [content](/content/) is mostly written in [Markdown](https://e
 
 	- *Eleventy* [passes these through](eleventy.config.js#L47-L48) on build, so they’re always available [untouched](https://typography-interaction-2526.github.io/topic/javascript/intersection/).
 
-	- We also render [a preview page](https://typography-interaction-2526.github.io/topic/javascript/intersection/preview/?active=script.js&width=75%) out, which wraps the examples in our custom [`ti-preview` web component](https://github.com/typography-interaction-2425/ti-preview).
+	- We also render [a preview page](https://typography-interaction-2526.github.io/topic/javascript/intersection/preview/?active=script.js&width=75%) out, which wraps the examples in our custom [`ti-preview` web component](https://github.com/typography-interaction-2425/ti-preview).
 
 		**This enables in-browser editing, with a live preview, via [CodeMirror](https://codemirror.net/)!**
 
-	- These previews are then [included in-page](content/topic/javascript/index.md#L247-L251) in `iframe`, via the [`figure.webc` component](components/figure.webc#L48-L52).
+	- These previews are then [included in-page](content/topic/javascript/index.md#L247-L252) in `iframe`, via the [`figure.webc` component](components/figure.webc#L48-L52).
 
-	- We also “intercept” any [fenced code blocks](content/topic/javascript/index.md#L328-L329) in our Markdown, via the [`pre.webc` component](components/pre.webc)—so even these are editable (and share syntax highlighting), though without the output preview.
+	- We also “intercept” any [fenced code blocks](content/topic/javascript/index.md#L328-L330) in our Markdown, via the [`pre.webc` component](components/pre.webc)—so even these are editable (and share syntax highlighting), though without the output preview.
+
 <br>
 
 *More to come, here!*
