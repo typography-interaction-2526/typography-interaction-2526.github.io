@@ -1,12 +1,8 @@
-# Override GitHub ignoring Markdown for language stats.
-# *.md linguist-detectable
-# *.md linguist-documentation=false
-
-# Hide language graph entirely, since we can only have Markdown with preview.
-* linguist-vendored
+# Treat these as HTML.
+*.webc linguist-language=html
 
 # These have so much non-Markdown stuff, easier to read without the default preview.
 content/**/*.md linguist-language=ecmarkup
 
-# Treat these as HTML.
-*.webc linguist-language=html
+# Hide language graph entirely, since we can only have Markdown counted with preview.
+* linguist-documentation
