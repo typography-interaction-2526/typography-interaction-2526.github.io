@@ -50,13 +50,13 @@ Everything is assembled by [a static site generator (SSG)](https://en.wikipedia
 
 - **For “production” deployment:** the site is automatically built/served on [GitHub Pages](https://docs.github.com/en/pages), via [an action/workflow](.github/workflows/build-deploy.yaml) when there are commits pushed up to our `main` branch. (This just does the local build process, but inside [a *virtual machine*](https://en.wikipedia.org/wiki/Virtual_machine).) This *usually* takes [a couple minutes](https://github.com/typography-interaction-2526/typography-interaction-2526.github.io/actions), depending on the vagaries of GitHub [these days](https://mrshu.github.io/github-statuses/).
 
-<br>
-
 There is [a *looong* year year](https://github.com/typography-interaction-2526/typography-interaction-2526.github.io/commits) of work, adjustments, and noodling in here—and [an elaborate config file](/eleventy.config.js) to match. But some other specific, “advanced,” possibly-clever things to call out:
+
+<br>
 
 ### *WebC* for templating
 
-Our templating is done in Zach’s scrappy, experimental [*WebC*](https://www.11ty.dev/docs/languages/webc/) language, which we love! This gives us some basic compilation logic, via HTML `webc:` attributes, that *Eleventy* then uses to put our pages together when built. We prefer this over [*Liquid*](https://www.11ty.dev/docs/languages/liquid/) for its all-in-HTML syntax, and JavaScript extensibility! And are still rooting for it.
+Our templating is done in Zach’s scrappy, experimental [*WebC*](https://www.11ty.dev/docs/languages/webc/) language, which we love! This gives us some basic compilation logic, via HTML `webc:` attributes, that *Eleventy* then uses to put our pages together when built. We prefer this over [*Liquid*](https://www.11ty.dev/docs/languages/liquid/) for its all-in-HTML syntax, and JavaScript extensibility! And are still rooting for it.
 
 - Our base templates are in [`/layouts`](/layouts/), with some re-used/structured [blocks inside](/layouts/blocks/). With our… let’s say, “non-traditional” [site structure](https://typography-interaction-2526.github.io), individual page [`article.webc`](/layouts/article.webc) are looped through [`pages.webc`](/layouts/blocks/pages.webc) to make our endless vertical “stacked” list on each page.
 
@@ -78,7 +78,7 @@ Our templating is done in Zach’s scrappy, experimental [*WebC*](https://www.11
 
 - A few “in-content” elements are under [`/components`](/components/). *Eleventy* picks these up *within* our Markdown `.md` files (more on this next), via its [`htmlTemplateEngine`](https://www.11ty.dev/docs/config/#default-template-engine-for-html-files) option. This replaces/builds [`<figure>` elements](/components/figure.webc) from some [markup attributes](content/topic/everything/index.md#L21-L26), for example.
 
-- We add HTML-syntax highlighting for `.webc` files [to VS Code](.vscode/settings.json#L6-L9) and [on GitHub](.gitattributes#L12), since [it *is* HTML](https://github.com/11ty/webc#its-html).
+- We add HTML-syntax highlighting for `.webc` files [to VS Code](.vscode/settings.json#L6-L9) and [on GitHub](.gitattributes#L2), since [it *is* HTML](https://github.com/11ty/webc#its-html).
 
 <br>
 
@@ -86,19 +86,23 @@ Our templating is done in Zach’s scrappy, experimental [*WebC*](https://www.11
 
 Our actual course [content](/content/) is mostly written in [Markdown](https://en.wikipedia.org/wiki/Markdown), of which [we are fans](https://typography-interaction-2526.github.io/topic/else/#markdown). Here we’re broadly trying to balance the ergonomics of Markdown with layout needs—we’re designers, after all.
 
-- For better/consistent syntax highlighting (and since we prefer [dynamic JS](https://www.11ty.dev/docs/data-frontmatter/#front-matter-formats) for these, anyway), we use [custom front-matter options](eleventy.config.js#L30-L33)—so you’ll see `<script front-matter>` [starting out content](content/week/1.md#L1-L5).
+- For better/consistent syntax highlighting (and since we prefer [dynamic JS](https://www.11ty.dev/docs/data-frontmatter/#front-matter-formats) for these, anyway), we use [custom front-matter options](eleventy.config.js#L30-L33)—so you’ll see `<script front-matter>` [starting out](content/week/1.md#L1-L5) the content.
 
-- We add a number of [`markdown-it` plugins](eleventy.config.js#L99) to enrich the structure/output, further. A couple to call out:
+- We add a number of [`markdown-it` plugins](eleventy.config.js#L99) to enrich the structure/output, further. A few to call out:
 
-	- We add `<abbr>` automatically via [`markdown-it-abbr`](https://github.com/markdown-it/markdown-it-abbr)—[preprocessing](eleventy.config.js#L143) a common [set of abbreviations](data/abbreviations.js) appended to all the Markdown, so the same list is shared across pages. Try hovering over [any acronym](https://typography-interaction-2526.github.io/#:~:text=SCHOOL%2C%20PARSONS%2C%20MPS-,CD,-PMCD%C2%A05001%2C) on the site!
+	- To use *WebC’s* [dynamic properties](https://www.11ty.dev/docs/languages/webc/#dynamic-attributes-and-properties) within Markdown (like [`@text=`](content/syllabus.md#L8)), we use [`@mdit-vue/plugin-component`](https://github.com/mdit-vue/mdit-vue/tree/main/packages/plugin-component) to allow them to pass through. Vue’s shorthand [attribute](https://vuejs.org/guide/essentials/template-syntax.html#shorthand)/[event](https://vuejs.org/guide/components/events.html) syntax is very similar!
 
-	- We use [Arve Seljebu’s](https://arve.dev/) popular [`markdown-it-attrs`](https://github.com/arve0/markdown-it-attrs) to decorate our Markdown with classes and IDs. The default curly-bracket `{ .class }` syntax has poor highlighting though, so instead we use [HTML comments](index.md#L24) for these! The built-in `leftDelimiter`/`rightDelimiter` [options](https://github.com/arve0/markdown-it-attrs#usage) don’t allow this though, so we [preprocess them](eleventy.config.js#L146-L149) ourselves.
+		*This also allows `<custom-component>` names in `.md`, which otherwise would be rendered as strings prior to *WebC* seeing them!*
 
-		*This has another nice side effect of hiding these in Markdown previews!*
+	- We add `<abbr>` automatically via [`markdown-it-abbr`](https://github.com/markdown-it/markdown-it-abbr)—[preprocessing](eleventy.config.js#L143) a common [set of abbreviations](data/abbreviations.js) appended to all the Markdown, so the same list is shared across pages. Try hovering over [any acronym](https://typography-interaction-2526.github.io/#:~:text=SCHOOL%2C%20PARSONS%2C%20MPS-,CD,-PMCD%C2%A05001%2C) on the site!
 
-	- Our own custom [`markdownRagging` function](eleventy.config.js#L62-L97), for better line-breaks—keeping articles/short words from dangling, not starting lines on em-dashes, breaking after slashes, and preventing (short) orphans, of course. *Typography* is in our course title, after all.
+	- We use [Arve Seljebu’s](https://arve.dev/) popular [`markdown-it-attrs`](https://github.com/arve0/markdown-it-attrs) to decorate our Markdown with classes and IDs. The default curly-bracket `{ .class }` syntax has poor highlighting though (and hurts our designer-eyes), so instead we use [HTML comments](index.md#L24) for these! The built-in `leftDelimiter`/`rightDelimiter` [options](https://github.com/arve0/markdown-it-attrs#usage) don’t allow this though, so we [preprocess them](eleventy.config.js#L146-L149) ourselves.
 
-- Since all these Markdown shenanigans don’t play well with GitHub’s [more limited](https://github.github.com/gfm/) syntax/preview, we’ve got that disabled via our [`.gitattributes` file](.gitattributes#L5)—mapping these to [`Ecmarkup`](https://tc39.es/ecmarkup/) offers a decent blend of Markdown and HTML highlighting, sans preview.
+		*This has another nice side effect of hiding these decorators in normal Markdown previews!*
+
+	- Our own custom [`markdownRagging` function](eleventy.config.js#L62-L97), for better line-breaks—keeping articles/short words from dangling, not starting lines on em-dashes, breaking after slashes, and preventing (short) orphans, of course. *Typography* is in our course title, after all.
+
+- Since all these Markdown shenanigans don’t play well with GitHub’s [more limited](https://github.github.com/gfm/) syntax and preview, we’ve got that disabled via our [`.gitattributes` file](.gitattributes#L5)—mapping these to [`Ecmarkup`](https://tc39.es/ecmarkup/) offers a decent blend of Markdown and HTML highlighting, sans preview.
 
 	*The `* linguist-documentation` there turns off the then-inaccurate language graph—hopefully with no other side effects!*
 
