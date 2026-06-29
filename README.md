@@ -74,6 +74,8 @@ There is [a *long* year year](https://github.com/typography-interaction-2526/ty
 
 	- There *is* [a `:host(.selector)`](https://github.com/11ty/webc/pull/96) syntax for this, but it doesn’t save you much from `:host.selector` repetition. The [`:host-context(.parent)`](layouts/blocks/header.webc#L90) however is *very* handy, since `.parent :host` doesn’t replace the latter, nested one!
 
+- Following [Miriam Suzanne’s](https://www.miriamsuzanne.com/2024/07/06/buckets-layers/) clear-eyed pattern, we gather our [(plain ol’ CSS) stylesheets](assets/styles/) together using [`webc:bucket`](layouts/blocks/styles.webc), importing them into [cascade layers](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) via *Eleventy’s* [Bundle plugin `getBundleFileUrl`](https://www.11ty.dev/docs/plugins/bundle/). The component-scoped styles are in-page, via `getBundle`.
+
 - A few “in-content” elements are under [`/components`](/components/). *Eleventy* picks these up *within* our Markdown `.md` files (more on this next), via its [`htmlTemplateEngine`](https://www.11ty.dev/docs/config/#default-template-engine-for-html-files) option. This replaces/builds [`<figure>` elements](/components/figure.webc) from some [markup attributes](content/topic/everything/index.md#L21-L26), for example.
 
 - Our actual course [content](/content/) is mostly written in [Markdown](https://en.wikipedia.org/wiki/Markdown), of which [we are fans](https://typography-interaction-2526.github.io/topic/else/#markdown). We add a number of [`markdown-it` plugins](eleventy.config.js#L99) to enrich the structure/output, further.
