@@ -120,7 +120,7 @@ Our actual course [content](/content/) is mostly written in [Markdown](https://e
 
 	- We also render a [preview page](https://typography-interaction-2526.github.io/topic/javascript/intersection/preview/?active=script.js&width=75%) out, which wraps the examples in our custom [`ti-preview` web component](https://github.com/typography-interaction-2425/ti-preview).
 
-		**This enables in-browser editing, with a live preview, via [CodeMirror](https://codemirror.net/)! This has been *really* helpful, in-class.**
+		**This enables in-browser editing, with a live preview, via [CodeMirror](https://codemirror.net/)! These have been *really* helpful in-class, for quick little demos.**
 
 	- These previews are then included [in-page](content/topic/javascript/index.md#L247-L252) in `iframe`, via the [`figure.webc`](components/figure.webc#L48-L52) component.
 
@@ -133,15 +133,13 @@ Our actual course [content](/content/) is mostly written in [Markdown](https://e
 
 	- We have *Eleventy* compile a sidecar [`/meta.html`](https://typography-interaction-2526.github.io/topic/link-meta/meta) for each page, via the simple [`meta.webc`](content/meta.webc) layout.
 
-	- This shares the [`base.webc`](layouts/base.webc) parent layout, with access to the site’s common stylesheets, and is set to [`noindex`](https://developers.google.com/search/docs/crawling-indexing/block-indexing) so it won’t show up in search.
+	- This shares the [`base.webc`](layouts/base.webc) parent layout, with access to the site’s common stylesheets, and is set to [`noindex`](https://developers.google.com/search/docs/crawling-indexing/block-indexing) so it won’t show up in search.
 
-	- After build, we use [*Puppeteer*](https://pptr.dev/) to launch a headless browser that takes a [screenshot](eleventy.config.js#L216-L252) of this page—saving it as [`/meta.png`](https://typography-interaction-2526.github.io/topic/link-meta/meta.png) alongside. This is then what the page [`<meta>` element](layouts/base.webc#L39-L42) uses, in our `<head>`!
+	- After build, we use [*Puppeteer*](https://pptr.dev/) to launch a headless browser that takes a [screenshot](eleventy.config.js#L216-L252) of this page—saving it as [`/meta.png`](https://typography-interaction-2526.github.io/topic/link-meta/meta.png) alongside. This is then what the page [`<meta>` element](layouts/base.webc#L39-L42) uses, in our `<head>`!
 
 		*You could also then delete the HTML, but it was nice to have the artifacts in testing!*
 
-- We have an informal [“no Adobe software”](https://en.wikipedia.org/wiki/Adobe_Inc.#Criticisms) policy in our classroom. So the “official” [syllabus PDF](https://typography-interaction-2526.github.io/assets/PMCD_5002_S26.pdf) we have to submit is similarly created from the site itself—using [`print.css`](assets/styles/print.css) overrides and the same [`syllabus.md`](content/syllabus.md) for [the page](https://typography-interaction-2526.github.io/syllabus/).
-
-	[Everything, indeed, is a webpage.](https://typography-interaction-2526.github.io/topic/everything/)
+- We have an informal [“no Adobe software”](https://en.wikipedia.org/wiki/Adobe_Inc.#Criticisms) policy in our classroom. So the “official” [syllabus PDF](https://typography-interaction-2526.github.io/assets/PMCD_5002_S26.pdf) we have to submit is similarly created from the site itself—using [`print.css`](assets/styles/print.css) overrides and the same [`syllabus.md`](content/syllabus.md) for [the page](https://typography-interaction-2526.github.io/syllabus/). ([Everything](https://typography-interaction-2526.github.io/topic/everything/), indeed, is a webpage.)
 
 	*This could likely be automatically generated (and even checked-in) on build, as well. Maybe next year!*
 
