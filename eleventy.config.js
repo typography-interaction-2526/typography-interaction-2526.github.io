@@ -262,6 +262,5 @@ export default (eleventyConfig) => {
 			layouts: '../layouts',
 		},
 		htmlTemplateEngine: 'webc',
-		markdownTemplateEngine: false,
 	}
 }

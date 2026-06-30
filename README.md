@@ -94,7 +94,7 @@ Our actual course [content](/content/) is mostly written in [*Markdown*](https:/
 
 - For better/consistent syntax highlighting (and since we prefer [dynamic JS](https://www.11ty.dev/docs/data-frontmatter/#front-matter-formats) for these, anyway), we use [custom front-matter options](eleventy.config.js#L30-L33)—so you’ll see `<script front-matter>` [starting out](content/week/1.md#L1-L5) the content.
 
-- We also enable the `html` [option](eleventy.config.js#L56) for [`markdown-it`](https://github.com/markdown-it/markdown-it/tree/master#init-with-presets-and-options), which lets you intermingle tags and *Markdown* as needed—for more layout and semantic options. Any unindented *Markdown* syntax [inside](content/syllabus.md#L461-L469) of these is still conveniently [parsed](https://typography-interaction-2526.github.io/syllabus/#attribution)!
+- We also enable the `html` [option](eleventy.config.js#L56) for [`markdown-it`](https://github.com/markdown-it/markdown-it/tree/master#init-with-presets-and-options), which lets you intermingle tags and *Markdown* as needed—for more layout and semantic options. Any *Markdown* syntax [inside](content/syllabus.md#L461-L469) of these is still conveniently [parsed](https://typography-interaction-2526.github.io/syllabus/#attribution)! You lose syntax highlighting if it is indented, but it’ll still be converted to HTML.
 
 - This also facilitates easy, in-page CSS overrides—as a `<style>` tag [in the `.md`](content/week/6.md#L32-L37) is unlayered, and will “beat” any of the common ones, above.
 
