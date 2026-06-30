@@ -574,7 +574,7 @@ main {
 		--weight: 700;
 
 		/* Optically match the `h3`. */
-		-webkit-text-stroke-width: 0.02em;
+		-webkit-text-stroke-width: 0.015em;
 
 		code, small { -webkit-text-stroke-width: 0.01em }
 	}
