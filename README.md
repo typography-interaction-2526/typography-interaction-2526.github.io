@@ -126,6 +126,18 @@ Our actual course [content](/content/) is mostly written in [Markdown](https://e
 
 	- We also “intercept” any [fenced code blocks](content/topic/javascript/index.md#L328-L330) in our Markdown, via the [`pre.webc`](components/pre.webc) component—so even these are editable (and share syntax highlighting), though without the output preview.
 
+
+### Miscellanea
+
+- We generate automatic [`og:image`](https://typography-interaction-2526.github.io/topic/link-meta/#image) on build, using the same stack of web technologies above:
+
+	- We have *Eleventy* compile a sidecar [`/meta.html`](https://typography-interaction-2526.github.io/topic/link-meta/meta) for each page, via the simple [`meta.webc`](content/meta.webc) layout.
+
+	- This shares the [`base.webc`](layouts/base.webc) parent layout, with access to the site’s common stylesheets, and is set to [`noindex`](https://developers.google.com/search/docs/crawling-indexing/block-indexing) so it won’t show up in search.
+
+	- After build, we use [*Puppeteer*](https://pptr.dev/) to launch a headless browser that takes a [screenshot](eleventy.config.js#L216-L252) of this page—saving it as [`/meta.png`](https://typography-interaction-2526.github.io/topic/link-meta/meta.png) alongside. This is then what the page [`<meta>` element](layouts/base.webc#L39-L42) uses, in our `<head>`!
+
+		*You could also then delete the HTML, but it was nice to have the artifacts in testing!*
 <br>
 
 *More to come, here!*
