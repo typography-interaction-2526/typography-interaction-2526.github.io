@@ -166,7 +166,7 @@
 				:where(dd, dt, figcaption, p, td, th, main li:not(:has(ol, p, section, ul))) a:where(:not(:has(cite))) {
 					--underline: initial;
 
-					text-decoration-color:     var(--color);
+					text-decoration-color:     inherit;
 					text-decoration-line:      underline;
 					text-decoration-skip-ink:  none;
 					text-decoration-thickness: var(--stroke);

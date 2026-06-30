@@ -494,12 +494,12 @@ Relatedly, there has been much discussion and developments in our field (and ot
 
 Here’s what we’re going to say about this: tools like the conspicuous [Chat&NoBreak;GPT](https://openai.com/blog/chatgpt), [Claude Code](https://claude.com/product/claude-code), [Cursor’s IDE](https://cursor.com/en), or [GitHub Copilot](https://github.com/features/copilot) are known to often generate wrong or unnecessarily verbose code. This, combined with the fact that their results are derived from copyrighted and/or legally questionable sources—usually without permission or attribution—means the use of these tools continues to be fraught, at best.
 
-We think you first need to write code yourself to understand the medium. Copying/adapting code from LLM&NoBreak;s is no different from anywhere else ([see above](#code-plagiarism)) and is ultimately a disservice to your education. These are always to be treated like any other tools at our disposal—as *aides* to our understanding, not *shortcuts* around learning. ~~We think you know the difference.~~
+We think you first need to write code yourself to understand the medium. Copying/adapting code from LLM&NoBreak;s is no different from anywhere else ([see above](#code-plagiarism)) and is ultimately a disservice to your education. These are always to be treated like any other tools at our disposal—as *aides* to our understanding, not *shortcuts* around learning. ~~We think you know the difference.~~<!-- .screen -->
 
 After [our](/week/22/#lets-talk-about-ai-again) [continued](/week/23/#ai) [discussions](/week/24/#ai-for-the-last-time) around this, unpacking what that means:
-<!-- .note -->
+<!-- .note .screen -->
 
-#### “Aides to our understanding”
+#### “Aides to our understanding” <!-- .screen -->
 
 - LLM&NoBreak;s can only be used in “ask” mode, and then only via their own web/app “conversation” interfaces.
 

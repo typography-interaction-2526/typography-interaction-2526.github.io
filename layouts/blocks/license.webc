@@ -17,7 +17,7 @@
 </style>
 <footer
 	webc:root="override"
-	class="all note"
+	class="all note screen"
 	id="license"
 >
 	<p><span webc:import="badges.webc"></span> <a :href="$data.repo + '#use-and-re-use'">Licensed</a> under <a
