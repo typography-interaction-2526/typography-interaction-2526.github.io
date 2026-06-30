@@ -82,33 +82,39 @@ Our templating is done in Zach’s scrappy, experimental [*WebC*](https://www.11
 
 - Following [Miriam Suzanne’s](https://www.miriamsuzanne.com) clear-eyed [pattern](https://www.miriamsuzanne.com/2024/07/06/buckets-layers/), we gather our (plain ol’ CSS) [stylesheets](assets/styles/) together using [`webc:bucket`](layouts/blocks/styles.webc), importing them into [cascade layers](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) via *Eleventy’s* [Bundle plugin](https://www.11ty.dev/docs/plugins/bundle/) `getBundleFileUrl`. The component-scoped styles are in-page, via `getBundle`.
 
-- A few “in-content” elements are under [`/components`](/components/). *Eleventy* picks these up *within* our Markdown `.md` files (more on this next), via its [`htmlTemplateEngine`](https://www.11ty.dev/docs/config/#default-template-engine-for-html-files) option. The trick here is a [*single* `@html=content`](layouts/article.webc#L233), which does the processing! This replaces/builds [`<figure>` elements](/components/figure.webc) from some [markup attributes](content/topic/everything/index.md#L21-L26), for example.
+- A few “in-content” elements are under [`/components`](/components/). *Eleventy* picks these up *within* our *Markdown* `.md` files (more on this next), via its [`htmlTemplateEngine`](https://www.11ty.dev/docs/config/#default-template-engine-for-html-files) option. The trick here is a [*single* `@html=content`](layouts/article.webc#L233), which does the processing! This replaces/builds [`<figure>` elements](/components/figure.webc) from some [markup attributes](content/topic/everything/index.md#L21-L26), for example.
 
 - We add HTML-syntax highlighting for `.webc` files [to VS Code](.vscode/settings.json#L6-L9) and [on GitHub](.gitattributes#L2), since [it *is* HTML](https://github.com/11ty/webc#its-html).
 
 <br>
 
-### Content-wise, Markdown “plus”
+### Content-wise, *Markdown* “plus”
 
-Our actual course [content](/content/) is mostly written in [Markdown](https://en.wikipedia.org/wiki/Markdown), of which [we are fans](https://typography-interaction-2526.github.io/topic/else/#markdown). Here we’re broadly trying to balance the ergonomics of Markdown with layout needs—we’re designers, after all.
+Our actual course [content](/content/) is mostly written in [*Markdown*](https://en.wikipedia.org/wiki/Markdown), of which [we are fans](https://typography-interaction-2526.github.io/topic/else/#markdown). Here we’re broadly trying to balance the ergonomics of *Markdown* with layout needs—we’re designers, after all.
 
 - For better/consistent syntax highlighting (and since we prefer [dynamic JS](https://www.11ty.dev/docs/data-frontmatter/#front-matter-formats) for these, anyway), we use [custom front-matter options](eleventy.config.js#L30-L33)—so you’ll see `<script front-matter>` [starting out](content/week/1.md#L1-L5) the content.
 
-- We add a number of [`markdown-it` plugins](eleventy.config.js#L99) to enrich the structure/output, further. A few to call out:
+- We also enable the `html` [option](eleventy.config.js#L56) for [`markdown-it`](https://github.com/markdown-it/markdown-it/tree/master#init-with-presets-and-options), which lets you intermingle tags and *Markdown* as needed—for more layout and semantic options. Any unindented *Markdown* syntax [inside](content/syllabus.md#L461-L469) of these is still conveniently [parsed](https://typography-interaction-2526.github.io/syllabus/#attribution)!
 
-	- To use *WebC’s* [dynamic properties](https://www.11ty.dev/docs/languages/webc/#dynamic-attributes-and-properties) within Markdown (like [`@text=`](content/syllabus.md#L8)), we use [`@mdit-vue/plugin-component`](https://github.com/mdit-vue/mdit-vue/tree/main/packages/plugin-component) to allow them to pass through. Vue’s shorthand [attribute](https://vuejs.org/guide/essentials/template-syntax.html#shorthand)/[event](https://vuejs.org/guide/components/events.html) syntax is very similar!
+- This also facilitates easy, in-page CSS overrides—as a `<style>` tag [in the `.md`](content/week/6.md#L32-L37) is unlayered, and will “beat” any of the common ones, above.
+
+	It’s also handy for [“one-off” styles](content/topic/box-model#L747-L767) that only really make sense in the context of specific content, and don’t feel like they warrant being “promoted”—akin to the scoped styles.
+
+- We also add a number of [`markdown-it` plugins](eleventy.config.js#L99) to enrich the structure/output, further. A few to call out:
+
+	- To use *WebC’s* [dynamic properties](https://www.11ty.dev/docs/languages/webc/#dynamic-attributes-and-properties) within *Markdown* (like [`@text=`](content/syllabus.md#L8)), we use [`@mdit-vue/plugin-component`](https://github.com/mdit-vue/mdit-vue/tree/main/packages/plugin-component) to allow them to pass through. Vue’s shorthand [attribute](https://vuejs.org/guide/essentials/template-syntax.html#shorthand)/[event](https://vuejs.org/guide/components/events.html) syntax is very similar!
 
 		*This also allows `<custom-component>` names in `.md`, which otherwise would be rendered as strings prior to *WebC* seeing them!*
 
 	- We add `<abbr>` automatically via [`markdown-it-abbr`](https://github.com/markdown-it/markdown-it-abbr)—[preprocessing](eleventy.config.js#L143) a common [set of abbreviations](data/abbreviations.js) appended to all the Markdown, so the same list is shared across pages. Try hovering over [any acronym](https://typography-interaction-2526.github.io/#:~:text=SCHOOL%2C%20PARSONS%2C%20MPS-,CD,-PMCD%C2%A05001%2C) on the site!
 
-	- We use [Arve Seljebu’s](https://arve.dev/) popular [`markdown-it-attrs`](https://github.com/arve0/markdown-it-attrs) to decorate our Markdown with classes and IDs. The default curly-bracket `{ .class }` syntax has poor highlighting though (and hurts our designer-eyes), so instead we use [HTML comments](index.md#L24) for these! The built-in `leftDelimiter`/`rightDelimiter` [options](https://github.com/arve0/markdown-it-attrs#usage) don’t allow this though, so we [preprocess them](eleventy.config.js#L146-L149) ourselves.
+	- We use [Arve Seljebu’s](https://arve.dev/) popular [`markdown-it-attrs`](https://github.com/arve0/markdown-it-attrs) to decorate our *Markdown* with classes and IDs. The default curly-bracket `{ .class }` syntax has poor highlighting though (and hurts our designer-eyes), so instead we use [HTML comments](index.md#L24) for these! The built-in `leftDelimiter`/`rightDelimiter` [options](https://github.com/arve0/markdown-it-attrs#usage) don’t allow this though, so we [preprocess them](eleventy.config.js#L146-L149) ourselves.
 
-		*This has another nice side effect of hiding these decorators in normal Markdown previews!*
+		*This has another nice side effect of hiding these decorators in normal *Markdown* previews!*
 
 	- Our own custom [`markdownRagging` function](eleventy.config.js#L62-L97), for better line-breaks—keeping articles/short words from dangling, not starting lines on em-dashes, breaking after slashes, and preventing (short) orphans, of course. *Typography* is in our course title, after all.
 
-- Since all these Markdown shenanigans don’t play well with GitHub’s [more limited](https://github.github.com/gfm/) syntax and preview, we’ve got that disabled via our [`.gitattributes` file](.gitattributes#L5)—mapping these to [`Ecmarkup`](https://tc39.es/ecmarkup/) offers a decent blend of Markdown and HTML highlighting, sans preview.
+- Since all these *Markdown* shenanigans don’t play well with GitHub’s [more limited](https://github.github.com/gfm/) syntax and preview, we’ve got that disabled via our [`.gitattributes` file](.gitattributes#L5)—mapping these to [`Ecmarkup`](https://tc39.es/ecmarkup/) offers a decent blend of *Markdown* and HTML highlighting, sans preview.
 
 	*The `* linguist-documentation` there turns off the then-inaccurate language graph—hopefully with no other side effects!*
 
@@ -124,8 +130,10 @@ Our actual course [content](/content/) is mostly written in [Markdown](https://e
 
 	- These previews are then included [in-page](content/topic/javascript/index.md#L247-L252) in `iframe`, via the [`figure.webc`](components/figure.webc#L48-L52) component.
 
-	- We also “intercept” any [fenced code blocks](content/topic/javascript/index.md#L328-L330) in our Markdown, via the [`pre.webc`](components/pre.webc) component—so even these are editable (and share syntax highlighting), though without the output preview.
+	- We also “intercept” any [fenced code blocks](content/topic/javascript/index.md#L328-L330) in our *Markdown*, via the [`pre.webc`](components/pre.webc) component—so even these are editable (and share syntax highlighting), though without the output preview.
 
+
+<br>
 
 ### Miscellanea
 
