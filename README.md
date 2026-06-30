@@ -68,13 +68,13 @@ There is a [*looong* year year](https://github.com/typography-interaction-2526/
 
 Our templating is done in Zach’s scrappy, experimental [*WebC*](https://www.11ty.dev/docs/languages/webc/) language, which we love! This gives us some basic compilation logic, via HTML `webc:` attributes, that *Eleventy* then uses to put our pages together when built. We prefer this over [*Liquid*](https://www.11ty.dev/docs/languages/liquid/) for its all-in-HTML syntax, and JavaScript extensibility! And are still rooting for it.
 
-- Our base templates are in [`/layouts`](/layouts/), with some re-used/structured [blocks inside](/layouts/blocks/). With our… let’s say, “non-traditional” [site structure](https://typography-interaction-2526.github.io), individual page [`article.webc`](/layouts/article.webc) are looped through [`pages.webc`](/layouts/blocks/pages.webc) to make our endless vertical “stacked” list on each page.
+- Our base templates are in [`/layouts`](/layouts/), with some re-used/structured [blocks inside](/layouts/blocks/). With our… let’s say, “non-traditional” [site structure](https://typography-interaction-2526.github.io), individual page [`article.webc`](/layouts/article.webc) are looped through [`pages.webc`](/layouts/blocks/pages.webc) to make our vertical “stacked” list on each page.
 
 - *WebC* also gives us “only on build” scripts via `<‍script webc:setup>`, like a [`getDescription` function](layouts/base.webc#L3-L22) for specifying metadata from within our content, or other [localized](components/figure.webc#L2) [one-off](layouts/blocks/header.webc#L2-L19) [things](layouts/blocks/menu.webc#L2-L4) you don’t want to promote as global functions/filters. You have to remember to `export`, though!
 
 	*For folks familiar with [*Astro*](https://astro.build/), this reminded us a lot of their Node-side [“component scripts”](https://docs.astro.build/en/basics/astro-components/#the-component-script) paradigm.*
 
-- We also use its `<style webc:scoped>` for some block/component-specific styles, [in-situ](layouts/blocks/header.webc#L12). It’s worth noting some quirks here though:
+- We also use its `<style webc:scoped>` for some block/component-specific styles, [in-situ](layouts/blocks/header.webc#L12). It’s worth noting some quirks here:
 
 	- Since they’re in-template, style changes will only update with a rebuild—and depending on what they’re used for (ex: something on every page), this makes them much less ergonomic than using separate stylesheets (which quickly live-reload).
 
@@ -84,7 +84,7 @@ Our templating is done in Zach’s scrappy, experimental [*WebC*](https://www.11
 
 	- There *is* a [`:host(.selector)`](https://github.com/11ty/webc/pull/96) syntax for this, but it doesn’t save you much from `:host.selector` repetition. The [`:host-context(.parent)`](layouts/blocks/header.webc#L90) however is *very* handy, since `.parent :host` doesn’t replace the latter, nested one!
 
-- Following [Miriam Suzanne’s](https://www.miriamsuzanne.com) clear-eyed [pattern](https://www.miriamsuzanne.com/2024/07/06/buckets-layers/), we gather our (plain ol’ CSS) [stylesheets](assets/styles/) together using [`webc:bucket`](layouts/blocks/styles.webc), importing them into [cascade layers](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) via *Eleventy’s* [Bundle plugin](https://www.11ty.dev/docs/plugins/bundle/) `getBundleFileUrl`. The component-scoped styles are in-page, via `getBundle`.
+- Following [Miriam Suzanne’s](https://www.miriamsuzanne.com) clear-eyed [pattern](https://www.miriamsuzanne.com/2024/07/06/buckets-layers/), we gather our (plain ol’ CSS) [stylesheets](assets/styles/) together using [`webc:bucket`](layouts/blocks/styles.webc), importing them into [cascade layers](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) via *Eleventy’s* [Bundle plugin](https://www.11ty.dev/docs/plugins/bundle/) `getBundleFileUrl`. The component-scoped styles are in-page, via `getBundle`.
 
 - A few “in-content” elements are under [`/components`](/components/). *Eleventy* picks these up *within* our *Markdown* `.md` files (more on this next), via its [`htmlTemplateEngine`](https://www.11ty.dev/docs/config/#default-template-engine-for-html-files) option. The trick here is a [*single* `@html=content`](layouts/article.webc#L233), which does the processing! This replaces/builds [`<figure>` elements](/components/figure.webc) from some [markup attributes](content/topic/everything/index.md#L21-L26), for example.
 
@@ -98,11 +98,11 @@ Our actual course [content](/content/) is mostly written in [*Markdown*](https:/
 
 - For better/consistent syntax highlighting (and since we prefer [dynamic JS](https://www.11ty.dev/docs/data-frontmatter/#front-matter-formats) for these, anyway), we use [custom front-matter options](eleventy.config.js#L30-L33)—so you’ll see `<script front-matter>` [starting out](content/week/1.md#L1-L5) the content.
 
-- We also enable the `html` [option](eleventy.config.js#L56) for [`markdown-it`](https://github.com/markdown-it/markdown-it/tree/master#init-with-presets-and-options), which lets you intermingle tags and *Markdown* as needed—for more layout and semantic options. Any *Markdown* syntax [inside](content/syllabus.md#L461-L469) of these is still conveniently [parsed](https://typography-interaction-2526.github.io/syllabus/#attribution)! You lose syntax highlighting if it is indented, but it’ll still be converted to HTML.
+- We also enable the [`html` option](eleventy.config.js#L56) for [`markdown-it`](https://github.com/markdown-it/markdown-it/tree/master#init-with-presets-and-options), which lets you intermingle tags and *Markdown* as needed—for more layout and semantic options. Any *Markdown* syntax [inside](content/syllabus.md#L461-L469) of these is still conveniently [parsed](https://typography-interaction-2526.github.io/syllabus/#attribution)! You lose syntax highlighting if it is indented, but it’ll still be converted to HTML.
 
 - This also facilitates easy, in-page CSS overrides—as a `<style>` tag [in the `.md`](content/week/6.md#L32-L37) is unlayered, and will “beat” any of the common ones, above.
 
-	It’s also handy for [“one-off” styles](content/topic/box-model#L747-L767) that only really make sense in the context of specific content, and don’t feel like they warrant being “promoted”—akin to the scoped styles.
+	It’s also handy for [“one-off” styles](content/topic/box-model#L747-L767) that only really make sense in the context of specific content, and don’t feel like they warrant being “promoted”—akin to the block/component-scoped styles.
 
 - We also add a number of [`markdown-it` plugins](eleventy.config.js#L99) to enrich the structure/output, further. A few to call out:
 
@@ -112,7 +112,7 @@ Our actual course [content](/content/) is mostly written in [*Markdown*](https:/
 
 	- We add `<abbr>` automatically via [`markdown-it-abbr`](https://github.com/markdown-it/markdown-it-abbr)—[preprocessing](eleventy.config.js#L143) a common [set of abbreviations](data/abbreviations.js) appended to all the Markdown, so the same list is shared across pages. Try hovering over [any acronym](https://typography-interaction-2526.github.io/#:~:text=SCHOOL%2C%20PARSONS%2C%20MPS-,CD,-PMCD%C2%A05001%2C) on the site!
 
-	- We use [Arve Seljebu’s](https://arve.dev/) popular [`markdown-it-attrs`](https://github.com/arve0/markdown-it-attrs) to decorate our *Markdown* with classes and IDs. The default curly-bracket `{ .class }` syntax has poor highlighting though (and hurts our designer-eyes), so instead we use [HTML comments](index.md#L24) for these! The built-in `leftDelimiter`/`rightDelimiter` [options](https://github.com/arve0/markdown-it-attrs#usage) don’t allow this though, so we [preprocess them](eleventy.config.js#L146-L149) ourselves.
+	- We use [Arve Seljebu’s](https://arve.dev/) popular [`markdown-it-attrs`](https://github.com/arve0/markdown-it-attrs) to decorate our *Markdown* with classes and IDs. The default curly-bracket `{ .class }` syntax has poor highlighting though (and hurts our designer-eyes), so instead we use [HTML comments](index.md#L24) for these! The built-in `leftDelimiter`/`rightDelimiter` [options](https://github.com/arve0/markdown-it-attrs#usage) don’t allow this, so we [preprocess them](eleventy.config.js#L146-L149) ourselves.
 
 		*This has another nice side effect of hiding these decorators in normal *Markdown* previews!*
 
@@ -151,7 +151,7 @@ Our actual course [content](/content/) is mostly written in [*Markdown*](https:/
 
 		*You could also then delete the HTML, but it was nice to have the artifacts in testing!*
 
-- We have an informal [“no Adobe software”](https://en.wikipedia.org/wiki/Adobe_Inc.#Criticisms) policy in our classroom. So the “official” [syllabus PDF](https://typography-interaction-2526.github.io/assets/PMCD_5002_S26.pdf) we have to submit is similarly created from the site itself—using [`print.css`](assets/styles/print.css) overrides and the same [`syllabus.md`](content/syllabus.md) for [the page](https://typography-interaction-2526.github.io/syllabus/). ([Everything](https://typography-interaction-2526.github.io/topic/everything/), indeed, is a webpage.)
+- We have an informal [“no Adobe software”](https://en.wikipedia.org/wiki/Adobe_Inc.#Criticisms) policy in our classroom. So the “official” [syllabus PDF](https://typography-interaction-2526.github.io/assets/PMCD_5002_S26.pdf) we have to submit is similarly created from the site itself—using [`print.css`](assets/styles/print.css) overrides and the same [`syllabus.md`](content/syllabus.md) for [the page](https://typography-interaction-2526.github.io/syllabus/). ([Everything](https://typography-interaction-2526.github.io/topic/everything/), indeed, is a webpage.)
 
 	*This could likely be automatically generated (and even checked-in) on build, as well. Maybe next year!*
 
