@@ -50,13 +50,13 @@ We’re using [`pnpm`](https://pnpm.io) as our [*package manager*](https://en.wi
 
 ### *Eleventy* as the engine
 
-Everything is assembled by [a static site generator (SSG)](https://en.wikipedia.org/wiki/Static_site_generator)—which takes our [source content](content/) and compiles out finished [HTML](https://typography-interaction-2526.github.io/topic/html/), [CSS](https://typography-interaction-2526.github.io/topic/css/), and [JavaScript](https://typography-interaction-2526.github.io/topic/javascript/). We’re using [Zach Leatherman’s](https://www.zachleat.com/) sturdy and venerable [*Eleventy*](https://www.11ty.dev/) for this task.
+Everything is assembled by a [static site generator (SSG)](https://en.wikipedia.org/wiki/Static_site_generator)—which takes our [source content](content/) and compiles out finished [HTML](https://typography-interaction-2526.github.io/topic/html/), [CSS](https://typography-interaction-2526.github.io/topic/css/), and [JavaScript](https://typography-interaction-2526.github.io/topic/javascript/). We’re using [Zach Leatherman’s](https://www.zachleat.com/) sturdy and venerable [*Eleventy*](https://www.11ty.dev/) for this task.
 
 - **For “local” development on your machine:** running `pnpm serve` in the repo directory starts *Eleventy*, which compiles everything everything to a `_site` folder. This directory is then served at `http://localhost/`. Changing any source content/files will recompile and should live reload any page in your browser, *usually* within a few seconds.
 
-- **For “production” deployment:** the site is automatically built/served on [GitHub Pages](https://docs.github.com/en/pages), via [an action/workflow](.github/workflows/build-deploy.yaml) when there are commits pushed up to our `main` branch. (This just does the local build process, but inside [a *virtual machine*](https://en.wikipedia.org/wiki/Virtual_machine).) This *usually* takes [a couple minutes](https://github.com/typography-interaction-2526/typography-interaction-2526.github.io/actions), depending on the vagaries of GitHub [these days](https://mrshu.github.io/github-statuses/).
+- **For “production” deployment:** the site is automatically built/served on [GitHub Pages](https://docs.github.com/en/pages), via an [action/workflow](.github/workflows/build-deploy.yaml) when there are commits pushed up to our `main` branch. (This just does the local build process, but inside a [*virtual machine*](https://en.wikipedia.org/wiki/Virtual_machine).) This *usually* takes a [couple minutes](https://github.com/typography-interaction-2526/typography-interaction-2526.github.io/actions), depending on the vagaries of GitHub [these days](https://mrshu.github.io/github-statuses/).
 
-There is [a *looong* year year](https://github.com/typography-interaction-2526/typography-interaction-2526.github.io/commits) of work, adjustments, and noodling in here—and [an elaborate config file](/eleventy.config.js) to match. But some other specific, “advanced,” possibly-clever things to call out:
+There is a [*looong* year year](https://github.com/typography-interaction-2526/typography-interaction-2526.github.io/commits) of work, adjustments, and noodling in here—and an [elaborate config file](/eleventy.config.js) to match. But some other specific, “advanced,” possibly-clever things to call out:
 
 <br>
 
@@ -66,7 +66,7 @@ Our templating is done in Zach’s scrappy, experimental [*WebC*](https://www.11
 
 - Our base templates are in [`/layouts`](/layouts/), with some re-used/structured [blocks inside](/layouts/blocks/). With our… let’s say, “non-traditional” [site structure](https://typography-interaction-2526.github.io), individual page [`article.webc`](/layouts/article.webc) are looped through [`pages.webc`](/layouts/blocks/pages.webc) to make our endless vertical “stacked” list on each page.
 
-- *WebC* also gives us “only on build” scripts via `<‍script webc:setup>`, like [a `getDescription` function](layouts/base.webc#L3-L22) for specifying metadata from within our content, or other [localized](components/figure.webc#L2) [one-off](layouts/blocks/header.webc#L2-L19) [things](layouts/blocks/menu.webc#L2-L4) you don’t want to promote as global functions/filters. You have to remember to `export`, though!
+- *WebC* also gives us “only on build” scripts via `<‍script webc:setup>`, like a [`getDescription` function](layouts/base.webc#L3-L22) for specifying metadata from within our content, or other [localized](components/figure.webc#L2) [one-off](layouts/blocks/header.webc#L2-L19) [things](layouts/blocks/menu.webc#L2-L4) you don’t want to promote as global functions/filters. You have to remember to `export`, though!
 
 	*For folks familiar with [*Astro*](https://astro.build/), this reminded us a lot of their Node-side [“component scripts”](https://docs.astro.build/en/basics/astro-components/#the-component-script) paradigm.*
 
@@ -78,11 +78,11 @@ Our templating is done in Zach’s scrappy, experimental [*WebC*](https://www.11
 
 	- While its `:host` selector scoping/replacement works fine [with nesting](layouts/blocks/header.webc#L21) and even some [`&:pseudo-class`](layouts/blocks/header.webc#L61) use, we couldn’t figure out [`&.compound-selectors`](/layouts/blocks/nav.webc#L17).
 
-	- There *is* [a `:host(.selector)`](https://github.com/11ty/webc/pull/96) syntax for this, but it doesn’t save you much from `:host.selector` repetition. The [`:host-context(.parent)`](layouts/blocks/header.webc#L90) however is *very* handy, since `.parent :host` doesn’t replace the latter, nested one!
+	- There *is* a [`:host(.selector)`](https://github.com/11ty/webc/pull/96) syntax for this, but it doesn’t save you much from `:host.selector` repetition. The [`:host-context(.parent)`](layouts/blocks/header.webc#L90) however is *very* handy, since `.parent :host` doesn’t replace the latter, nested one!
 
-- Following [Miriam Suzanne’s](https://www.miriamsuzanne.com/2024/07/06/buckets-layers/) clear-eyed pattern, we gather our [(plain ol’ CSS) stylesheets](assets/styles/) together using [`webc:bucket`](layouts/blocks/styles.webc), importing them into [cascade layers](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) via [*Eleventy’s* Bundle plugin](https://www.11ty.dev/docs/plugins/bundle/) `getBundleFileUrl`. The component-scoped styles are in-page, via `getBundle`.
+- Following [Miriam Suzanne’s](https://www.miriamsuzanne.com) clear-eyed [pattern](https://www.miriamsuzanne.com/2024/07/06/buckets-layers/), we gather our (plain ol’ CSS) [stylesheets](assets/styles/) together using [`webc:bucket`](layouts/blocks/styles.webc), importing them into [cascade layers](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Cascade_layers) via *Eleventy’s* [Bundle plugin](https://www.11ty.dev/docs/plugins/bundle/) `getBundleFileUrl`. The component-scoped styles are in-page, via `getBundle`.
 
-- A few “in-content” elements are under [`/components`](/components/). *Eleventy* picks these up *within* our Markdown `.md` files (more on this next), via its [`htmlTemplateEngine`](https://www.11ty.dev/docs/config/#default-template-engine-for-html-files) option. The trick here is [a *single* `@html=content`](layouts/article.webc#L233), which does the processing! This replaces/builds [`<figure>` elements](/components/figure.webc) from some [markup attributes](content/topic/everything/index.md#L21-L26), for example.
+- A few “in-content” elements are under [`/components`](/components/). *Eleventy* picks these up *within* our Markdown `.md` files (more on this next), via its [`htmlTemplateEngine`](https://www.11ty.dev/docs/config/#default-template-engine-for-html-files) option. The trick here is a [*single* `@html=content`](layouts/article.webc#L233), which does the processing! This replaces/builds [`<figure>` elements](/components/figure.webc) from some [markup attributes](content/topic/everything/index.md#L21-L26), for example.
 
 - We add HTML-syntax highlighting for `.webc` files [to VS Code](.vscode/settings.json#L6-L9) and [on GitHub](.gitattributes#L2), since [it *is* HTML](https://github.com/11ty/webc#its-html).
 
@@ -114,17 +114,17 @@ Our actual course [content](/content/) is mostly written in [Markdown](https://e
 
 - Our *many* [code example blocks](https://typography-interaction-2526.github.io/topic/javascript/#intersection) are put together with a few tricks:
 
-	- The [raw example code itself]((content/topic/javascript/intersection/)) lives within its [topic folder](content/topic/).
+	- The [raw example code]((content/topic/javascript/intersection/)) itself lives within its [topic folder](content/topic/).
 
-	- *Eleventy* [passes these through](eleventy.config.js#L47-L48) on build, so they’re always available [untouched](https://typography-interaction-2526.github.io/topic/javascript/intersection/).
+	- *Eleventy* [passes](eleventy.config.js#L47-L48) these through on build, so they’re always available [untouched](https://typography-interaction-2526.github.io/topic/javascript/intersection/).
 
-	- We also render [a preview page](https://typography-interaction-2526.github.io/topic/javascript/intersection/preview/?active=script.js&width=75%) out, which wraps the examples in our custom [`ti-preview` web component](https://github.com/typography-interaction-2425/ti-preview).
+	- We also render a [preview page](https://typography-interaction-2526.github.io/topic/javascript/intersection/preview/?active=script.js&width=75%) out, which wraps the examples in our custom [`ti-preview` web component](https://github.com/typography-interaction-2425/ti-preview).
 
 		**This enables in-browser editing, with a live preview, via [CodeMirror](https://codemirror.net/)!**
 
-	- These previews are then [included in-page](content/topic/javascript/index.md#L247-L252) in `iframe`, via the [`figure.webc` component](components/figure.webc#L48-L52).
+	- These previews are then included [in-page](content/topic/javascript/index.md#L247-L252) in `iframe`, via the [`figure.webc`](components/figure.webc#L48-L52) component.
 
-	- We also “intercept” any [fenced code blocks](content/topic/javascript/index.md#L328-L330) in our Markdown, via the [`pre.webc` component](components/pre.webc)—so even these are editable (and share syntax highlighting), though without the output preview.
+	- We also “intercept” any [fenced code blocks](content/topic/javascript/index.md#L328-L330) in our Markdown, via the [`pre.webc`](components/pre.webc) component—so even these are editable (and share syntax highlighting), though without the output preview.
 
 <br>
 
