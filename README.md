@@ -139,7 +139,9 @@ Our actual course [content](/content/) is mostly written in [Markdown](https://e
 
 		*You could also then delete the HTML, but it was nice to have the artifacts in testing!*
 
-- We have an informal [“no Adobe software”](https://en.wikipedia.org/wiki/Adobe_Inc.#Criticisms) policy in our classroom. So the “official” [syllabus PDF](assets/PMCD_5002_S26.pdf) we have to submit is similarly created from the site itself—using [`print.css`](assets/styles/print.css) overrides and the same [`syllabus.md`](content/syllabus.md) for [the page](https://typography-interaction-2526.github.io/syllabus/). [Everything, indeed, is a webpage.](https://typography-interaction-2526.github.io/topic/everything/)
+- We have an informal [“no Adobe software”](https://en.wikipedia.org/wiki/Adobe_Inc.#Criticisms) policy in our classroom. So the “official” [syllabus PDF](https://typography-interaction-2526.github.io/assets/PMCD_5002_S26.pdf) we have to submit is similarly created from the site itself—using [`print.css`](assets/styles/print.css) overrides and the same [`syllabus.md`](content/syllabus.md) for [the page](https://typography-interaction-2526.github.io/syllabus/).
+
+	[Everything, indeed, is a webpage.](https://typography-interaction-2526.github.io/topic/everything/)
 
 	*This could likely be automatically generated (and even checked-in) on build, as well. Maybe next year!*
 
